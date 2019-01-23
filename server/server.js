@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const http = require('http');
@@ -9,7 +10,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use('/api',api);
 
-app.set('port',3000);
+const port = process.env.port || 3000;
+
+app.set('port',port);
 
 app.get('/test',(req,res)=> {
     res.json({message: "test successful"});
@@ -17,4 +20,4 @@ app.get('/test',(req,res)=> {
 
 const server = http.createServer(app);
 
-server.listen(3000,()=> console.log('API running on localhost:3000'));
+server.listen(port,()=> console.log(`API running on localhost:${process.env.port}`));
