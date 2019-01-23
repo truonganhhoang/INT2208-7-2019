@@ -20,4 +20,4 @@ app.get('/test',(req,res)=> {
 
 const server = http.createServer(app);
 
-server.listen(port,()=> console.log(`API running on localhost:${process.env.port}`));
+server.listen(port,()=> console.log(`API running on localhost:${port}`));
