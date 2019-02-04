@@ -1,5 +1,9 @@
-Nhóm 5
+Nhóm 5:
 =======
+- Nguyễn Cảnh Hoàng
+- Nguyễn Đức Lộc
+- Đinh Sỹ Hào
+- Đào Đức Khiêm
 ## App Mua Bán Hàng Online
 
 Chức Năng:
