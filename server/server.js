@@ -1,3 +1,4 @@
+
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -17,6 +18,9 @@ app.set('port',port);
 app.get('/test',(req,res)=> {
     res.json({message: "test successful"});
 });
+
+
+
 
 const server = http.createServer(app);
 
