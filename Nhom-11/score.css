@@ -1,97 +1,122 @@
-* {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<title> Bóng đá </title>
+		<meta name="description" content="Kết quả 5 giải đấu hàng đầu châu Âu" />
+		<meta name="keyword" content="bong da, ket qua, lich thi dau" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="normalize.css" />
+		<link rel="stylesheet" href="score.css" />
+		
+	</head>
+	<body>
+		<div id="container">
+			
+			<div id="Menu">
+	  
+			  <ul>
+				<li>
+				  <a href="#"> Anh </a>
+				  <ul class="SubMenu">
+					<li><a href="#"> Lịch thi đấu </a></li>
+					<li><a href="#"> Bảng xếp hạng </a></li>
+					<li><a href="#"> Kết quả </a></li>
+				  </ul>
+				</li>
+				<li>
+				  <a href="#"> Tây Ban Nha </a>
+				  <ul class="SubMenu">
+					<li><a href="#"> Lịch thi đấu </a></li>
+					<li><a href="#"> Bảng xếp hạng </a></li>
+					<li><a href="#"> Kết quả </a></li>
+				  </ul>
+				</li>
+				<li>
+				  <a href="#"> Đức </a>
+				  <ul class="SubMenu">
+					<li><a href="#"> Lịch thi đấu </a></li>
+					<li><a href="#"> Bảng xếp hạng </a></li>
+					<li><a href="#"> Kết quả </a></li>
+				  </ul>
+				</li>
+				<li>
+				  <a href="#"> Ý </a>
+				  <ul class="SubMenu">
+					<li><a href="#"> Lịch thi đấu </a></li>
+					<li><a href="#"> Bảng xếp hạng </a></li>
+					<li><a href="#"> Kết quả </a></li>
+				  </ul>
+				</li>
+				<li>
+				  <a href="#"> Pháp </a>
+				  <ul class="SubMenu">
+					<li><a href="#"> Lịch thi đấu </a></li>
+					<li><a href="#"> Bảng xếp hạng </a></li>
+					<li><a href="#"> Kết quả </a></li>
+				  </ul> 
+				</li>
+			  </ul>
+		
+			</div>
+			<div id="header">
+				<div id="logo">
+					<img src="logo.png"  width="1425px" height="120px" />
+				</div>
+				<div id="slogan">
+					<p>
+						Tổng hợp kết quả 5 giải đấu bóng đá hàng đầu châu Âu
+					</p>
+				</div>
+			</div>
+			
+			<div id="league">
+				<h2 id="head"> 	EPL </h2>
+				<ul>
+					<li>
+						<a href="#"> Arsenal <u>2-1</u> Cardiff City </a>
+					</li>
+					<li>
+						<a> Manchester United <u href="#">2-2</u> Burnley </a>
+					</li>
+					<li>
+						<a> Liverpool <u href="#">1-1</u> Leicester City </a>
+					</li>
+					<li>
+						<a> Chelsea <u>0-4</u> AFC Bournemouth </a>
+					</li>
+				</ul>
+			</div>
+			<div id="rank">
+				<h2> Bảng xếp hạng</h2>
+				<table style="width:100%">
+					<tr>
+						<th>Hạng</th>
+						<th>Đội bóng</th>
+						<th>Hiệu số</th> 
+						<th>Điểm</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Liverpool</td>
+						<td>44</td> 
+						<td>65</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Manchester City</td>
+						<td>48</td> 
+						<td>62</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
 
-body {
-  font-weight: 300;
-  color: #333;
-  line-height: 1.254;
-  margin: 0 50px 0 50px;
-  padding: 0;
-}
 
-a {
-	text-decoration: none;
-	color: #3b8bba;
-	transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-}
 
-a:hover, a:visited {
-	color: #265778
-}
- 
- 
- #container {
-	position: relative;
-	margin: 0;
-	padding: 0;
- }
- #Menu ul {
-	list-style-type: none;
-	background: #333;
-	text-align: center;
-}
 
-#Menu ul li {
-	display: inline-table;
-	width: 250px;
-	height: 40px;
-	line-height: 40px;
-	position: relative;
-}
 
-#Menu ul li a {
-	color: #fff;
-	display: block;
-	text-decoration: none;
-}
 
-#Menu ul li a:hover {
-	background-color: #454545;
-}
-#Menu ul li > .SubMenu {
-	display: none;
-	position: absolute;
-	padding: 0;
-}
-#Menu ul li:hover .SubMenu {
-	display: block;
-}
- 
-#header {
-	text-align: center;
-}
-#heađer #slogan {
-	color: #8997a0;
-	font-size: 0.8em;
-}
-#header #logo {
-
-}
-#league { 
-	float: left;
-	width: 70%;
-}
-#league #head{
-}
-#league ul {
-	text-align: center;
-}
-#league ul li {
-	display: table;
-}
-#league ul li p {
-	width: 1000px;
-	display: inline-table;
-	background-color: #e5e5e5;
-}
-#rank{
-	float: right;
-	width: 25%;
-}
 
 
