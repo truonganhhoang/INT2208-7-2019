@@ -28,4 +28,4 @@
 <br>
 <br>
 
-<p>Simple app, just response</p>
+<p>Simple app, just response.</p>
