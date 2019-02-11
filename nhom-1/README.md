@@ -27,7 +27,9 @@
 
 
 <h3>Change log</h3>
-<h4>Demo:</h4>
+
+
+<h4>(11/2/2019) Demo:</h4>
 
 <p>Đăng ký, đăng nhập:</p>
 
@@ -41,5 +43,21 @@
 
 <br>
 <br>
+
+<h4>(11/2/2019)Định hướng phát triển: </h4>
+<h5>Phương thức thực hiện: mô hình phát triển phần mềm Scrum</h5>
+<ul>
+    <li>Product Owner,Scrum Master: Phan Phương Nam</li>
+    <li>Development Team: Phan Phương Nam, Phạm Thị Thảo Nguyên, Phạm Thị Như Quỳnh, Trần Anh Dũng </li>
+</ul>
+<h5>Product backlog:</h5>
+<ol>
+    <li>hệ thống lưu trữ thông tin user, trang đăng kí đăng nhập và nav bar điều hướng</li>
+    <li>trang user profile và kết bạn</li>
+    <li>trang news feed và tính năng tìm kiếm</li>
+    <li>trang chat messenger giữa bạn bè</li>
+    <li>còn cập nhật sau...</li>
+</ol>
+
 
 <p>Simple app, just response.</p>
