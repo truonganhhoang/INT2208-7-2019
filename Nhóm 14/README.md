@@ -1,5 +1,4 @@
-
-### Tên ứng dụng: Trao đổi thông tin hàng hóa
+﻿### Tên ứng dụng: Trao đổi thông tin hàng hóa
 ### Nhóm: 14
 ### Thành viên:
     * Nguyễn Văn Tuấn
