@@ -19,11 +19,11 @@ Môn CNPM năm 2019
 
 *Đối tượng 
   
-	Người có nhu cầu học từ vựng tiếng anh, bận rộn...
+	Người có nhu cầu học từ vựng tiếng anh học sinh sinh viên hoặc người đã đi làm
 
 *Mô tả sản phẩm
   
-	1 trang web cho phép người dùng học từ vựng theo chủ đề với nội dung tiếng anh tiếng việt và hình ảnh minh họa có thể thêm từ và tự tạo chủ đề
+	1 trang web cho phép người dùng học từ vựng theo chủ đề với nội dung Tiếng Anh, Tiếng Việt có thể thêm từ và tự tạo chủ đề
   
-	Web hỗ trợ người dùng kiểm tra từ, phát âm tiếng anh, kiểm tra phát âm, 	tra từ điển.
-  (bên trên là những gì bọn em đặt ra trong quá trình làm có thể 	xảy ra sự cố sản phẩm ko như mô tả bên trên.)
+	Web hỗ trợ người dùng kiểm tra từ, phát âm tiếng anh, kiểm tra phát âm, tra từ điển.
+  (bên trên là những gì bọn em đặt ra trong quá trình làm có thể xảy ra sự cố sản phẩm ko như mô tả bên trên.)
