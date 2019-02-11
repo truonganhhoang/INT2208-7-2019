@@ -2,7 +2,7 @@ Nhóm 18
 Tên ứng dụng : Web quản lí bán hàng.
 Thành viên: 
  - Nguyễn Ngọc Minh
- - Nguyễn Quang Khải
+ - Nguyễn Văn Khải
  - Nguyễn Hữu Nam
  - Đặng Quang Liêm
  - Nguyễn Khắc Ngọc
