@@ -1,3 +1,2 @@
 # INT2208-7-2019
 Môn CNPM năm 2019
-Ứng dụng web bán hàng online, mỗi khách hàng sử dụng một tài khoản có thể đăng nhập/đăng xuất.Có thể tìm kiếm các mặt hàng theo các tiêu chí như tên, hãng, shop,... Khách hàng có thể tìm kiếm, thanh toán và chọn thời gian ship hàng....
