@@ -19,9 +19,6 @@ app.get('/test',(req,res)=> {
     res.json({message: "test successful"});
 });
 
-
-
-
 const server = http.createServer(app);
 
 server.listen(port,()=> console.log(`API running on localhost:${port}`));
