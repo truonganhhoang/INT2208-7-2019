@@ -11,11 +11,11 @@
     
 * Phác thảo các màn hình chính của ứng dụng.
     * Màn hình khởi đầu.
-    <img src="https://github.com/niits/INT2208-7-2019/blob/master/Nhom-9/res/img/1.png">
+    <img src="https://github.com/niits/INT2208-7-2019/blob/master/nhom-9/res/img/1.png">
     * Màn hình khi đang làm bài thi.
-    <img src="https://github.com/niits/INT2208-7-2019/blob/master/Nhom-9/res/img/2.png">
+    <img src="https://github.com/niits/INT2208-7-2019/blob/master/nhom-9/res/img/2.png">
     * Màn hình hiển thị kết quả.
-    <img src="https://github.com/niits/INT2208-7-2019/blob/master/Nhom-9/res/img/3.png">
+    <img src="https://github.com/niits/INT2208-7-2019/blob/master/nhom-9/res/img/3.png">
 * Một số tài liệu về các công nghệ có thể dùng đến (do chưa thống nhất về kế hoạch phát triển).
     * [HTML](https://www.w3.org/html/)
     * [JavaScript](https://developer.mozilla.org/vi/docs/Web/JavaScript)
