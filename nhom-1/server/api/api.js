@@ -7,7 +7,7 @@ const FacebookStrategy = require('passport-facebook');
 
 require('dotenv').config();
 
-const url = process.env.urlMongodb;
+const url = process.env.URL_MONGODB;
 const dbName = 'admin';
 
 router.get('/test',(req,res)=> {
@@ -36,8 +36,8 @@ router.get('/connect',(req,res)=> {
 });
 
 passport.use(new FacebookStrategy({
-    clientID: '416965632377394',
-    clientSecret: '35704218815eb603ea3073ddedef9275',
+    clientID: process.env.FACEBOOK_CLIENTID,
+    clientSecret: process.env.FACEBOOK_CLIENTSECRET,
     callbackURL: "http://localhost:3000/api/auth/callback"},
     function(accessToken, refreshToken, profile,cb) {
         console.log(profile);
