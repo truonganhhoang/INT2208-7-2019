@@ -2,6 +2,8 @@ const User = require('./user.model');
 const express = require('express');
 const router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
+const passport = require('passport');
+const FacebookStrategy = require('passport-facebook');
 
 require('dotenv').config();
 
@@ -32,5 +34,20 @@ router.get('/connect',(req,res)=> {
         }
     })
 });
+
+passport.use(new FacebookStrategy({
+    clientID: '416965632377394',
+    clientSecret: '35704218815eb603ea3073ddedef9275',
+    callbackURL: "http://localhost:3000/api/auth/callback"},
+    function(accessToken, refreshToken, profile,cb) {
+        console.log(profile);
+    }
+));
+
+router.get('/auth', passport.authenticate('facebook'));
+
+router.get('/auth/callback', 
+    passport.authenticate('facebook'),
+    function(req,res) {console.log('success')});
 
 module.exports = router;
