@@ -13,7 +13,6 @@
 			<li>Vũ Đức Minh</li>
 			<li>Nguyễn Đức Hiếu</li>
 			<li>Hoàng Duy Tùng</li>
-			<li>Trần Anh Dũng</li>
 		</ul>
 			<h2>
 			Tên sản phẩm : <i>ToeicFun</i>
@@ -42,4 +41,18 @@
 					<li>JavaScript</li>
 					<li>Và một ngôn ngữ backend bất kì</li>
 			</ul>
+	    <h2>Nhóm thực hiện theo quy trình Scrum</h2>
+	    <ul>
+		    <li>User Story : Khách hàng có thể học và luyện tập từ vựng toeic</li>
+		    <li>Pruduct Backlog : Nhóm sẽ học công nghệ web , tích hợp databases để hoàn thiện sản phẩm</li>
+		    <li>Sprint : chu kì thứ nhất (khoảng 1-2 tuần ) nhóm sẽ thực hiện thiết kế giao diện của sản phẩm</li>
+	    </ul>
+	    <h3>Một số vị trí trong Scrum</h3>
+	    <ul>
+		    <li>Scrum Master : Hoàng Cao Phi</li>
+		    <li>Product Owner : Vũ Đức Minh</li>
+		    <li>Development Team : cả nhóm</li>
+	    </ul>
+	    <h3>Quy trình họp hành : nhóm sẽ tổ chức cuộc họp ngắn 15 phút mỗi ngày và cuộc họp một vài tiếng trước mỗi Sprint</h3>
+	    
 </html>
