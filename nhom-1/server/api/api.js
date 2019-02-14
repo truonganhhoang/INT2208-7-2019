@@ -38,16 +38,23 @@ router.get('/connect',(req,res)=> {
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_CLIENTID,
     clientSecret: process.env.FACEBOOK_CLIENTSECRET,
-    callbackURL: "http://localhost:3000/api/auth/callback"},
+    callbackURL: 'http://localhost:3000/api/auth/facebook/callback',
+    profileFields: ['id', 'displayName', 'photos', 'email'],
+    enableProof:true
+    },
     function(accessToken, refreshToken, profile,cb) {
         console.log(profile);
     }
 ));
 
-router.get('/auth', passport.authenticate('facebook'));
+router.get('/auth/facebook', passport.authenticate('facebook'));
 
-router.get('/auth/callback', 
-    passport.authenticate('facebook'),
-    function(req,res) {console.log('success')});
+
+router.get('/auth/facebook/callback',
+    passport.authenticate('facebook',{successRedirect:'http://localhost:4200',failureRedirect:'http://localhost:4200'}),
+    (req,res)=>{
+        res.json({"hello":"success"});
+    }
+);
 
 module.exports = router;

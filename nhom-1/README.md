@@ -59,5 +59,17 @@
     <li>còn cập nhật sau...</li>
 </ol>
 
+</h4>Text</h4>:
+1. 10h tối
+2. User model: 
+   {
+       username: unique
+       password: bcrypt
+       ngaythangnamsinh:
+       name:
+       gen:
+       imageUrl: 
+   }
+3. token: JWT, passport
 
 <p>Simple app, just response.</p>
