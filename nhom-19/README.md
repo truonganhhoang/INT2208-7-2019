@@ -15,6 +15,7 @@
 <img src="https://i.imgur.com/Sa1Gk7S.png">
 <img src="https://i.imgur.com/HGCMyZr.png">
 <img src="https://i.imgur.com/BpxUBcz.png">
+
 # Quy trình được chọn: Scrum
 <ol type="a">
   <li> Định nghĩa:<p>Scrum là một quy trình quản lý và phát triển theo phương pháp phát triển linh hoạt (Agile) tập trung đặc biệt vào việc quản lý các công việc trong một môi trường phát triển theo nhóm. Về cơ bản Scrum được bắt nguồn từ các hoạt động xảy ra trong 1 vòng tuần hoàn.</p></li>
