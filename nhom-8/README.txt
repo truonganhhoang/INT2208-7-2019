@@ -14,7 +14,8 @@ Chức năng:
 	
 							SCRUM
 							
-	• Mô tả: Đây là quy trình quản lý và phát triển theo phương pháp phát triển linh hoạt (Agile) phổ biến nhất hiện nay. Scrum tin 		tưởng vào việc trao quyền cho nhóm phát triển và làm việc theo nhóm nhỏ (từ 7-9 người). 
+	• Mô tả: Đây là quy trình quản lý và phát triển theo phương pháp phát triển linh hoạt (Agile) phổ biến nhất hiện nay. 
+	Scrum tin tưởng vào việc trao quyền cho nhóm phát triển và làm việc theo nhóm nhỏ (từ 7-9 người). 
 	• Vai trò :
 		1. Scrum Master: Bùi Văn Bảo.
 		2. Product owner: 
