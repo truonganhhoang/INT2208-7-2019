@@ -27,3 +27,21 @@ Chức Năng:
 
 5. Phản hồi đánh giá.
 6. Nhắn tin trao đổi.
+
+## Quy trình phát triển Scrum:
+### Các công đoạn trong một sprint (vòng lặp):
+1) Đề ra các mục tiêu cần hoàn thành.
+2) Lập danh sách công việc và phân chia công việc.
+3) Kiểm thử.
+4) Cải tiến.
+### Thời hạn của một sprint:
+- Một sprint kéo dài 2 tuần và các công việc bắt buộc phải dừng lại khi sprint kết thúc để đánh giá mức độ hoàn thiện, giải quyết các vấn đề phát sinh và cải thiện khả năng làm việc của cả nhóm.
+
+### Danh sách chức năng:
+- Tạo cơ sở dữ liệu với các cấu trúc dữ liệu và phương thức nhập xuất dữ liệu phù hợp.
+- Tạo chức năng đăng ký, đăng nhập, đăng xuất tài khoản, lưu thông tin vào cơ sở dữ liệu.
+- Xử lý dữ liệu trong quá trình đặt hàng và thanh toán  (thay đổi các thông tin về số lượng hàng hóa, tình trạng gói hàng, số tiền trong các tài khoản thực hiện giao dịch).
+- Tạo chức năng phân loại danh mục và tìm kiếm mặt hàng.
+- Tạo chức năng nhắn tin trao dổi giữa giữa các tài khoản
+
+**Dự kiến mỗi chức năng sẽ ứng với mục tiếu chính của một sprint**
