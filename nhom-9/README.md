@@ -26,14 +26,18 @@
 ## Tìm hiểu về quy trình Scrum
 * Phân chia công việc trong nhóm Scrum:
     * Scrum Master (Quân): hướng các hoạt động của nhóm theo quy trình
-    * (Tạm dịch) Người sở hữu sản phẩm - Product Owner (Nam): quản lý tạo tác (Product Backlog)
+    * (Tạm dịch) Người sở hữu sản phẩm - Product Owner (Nam): quản lý tạo tác (Backlog)
     * Nhóm phát triển - Scrum Team (Quân, Trung, Nam, Nghĩa, Thành). Chia đầu việc theo công nghệ (dự kiến):
         * HTML & CSS: Quân, Trung, Nam
         * JavaScript: Nghĩa, Nam
         * Materialize: Trung, Nam
         * Firebase: Thành
 ## Mô tả kế hoạch
-* Tuần 2:
-    * Product Owner đưa tạo tác sản phẩm (product backlog) cho nhóm phát triển
-    <img src="https://github.com/niits/INT2208-7-2019/blob/master/nhom-9/res/img/product_backlog.png">
-    * Đặc tả:
+* Tuần 3:
+    * Product Owner đưa tạo tác được chọn (srpint backlog) cho nhóm phát triển:
+    <img src="https://github.com/niits/INT2208-7-2019/blob/master/nhom-9/res/img/sprint_backlog.png">
+    * Đặc tả sprint 1:
+    <img src="https://github.com/niits/INT2208-7-2019/blob/master/nhom-9/res/img/requirement1.png">
+    (Bản vẽ được vẽ lại bằng tay từ ý tưởng của bạn Trung)
+    
+
