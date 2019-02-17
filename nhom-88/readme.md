@@ -30,5 +30,5 @@
 
 # Hình ảnh
 
-![img1](https://i.imgur.com/2kTfscE.png)
+![img1](https://i.imgur.com/zye9qEh.png)
 
