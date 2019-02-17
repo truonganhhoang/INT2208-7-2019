@@ -1,7 +1,9 @@
 ## Nhóm 88
 
 
-### Ứng dụng Gifuet
+### Ứng dụng Tweet
+
+* Thể loại: Mạng xã hội
 
 ### Thành viên trong nhóm
 
@@ -16,8 +18,16 @@
 
 ### Mô tả chức năng app
 
-- [x] Cập nhật gif hot trong ngày
-- [x] Tìm kiếm gif
-- [x] Tìm kiếm nâng cao: Tìm kiếm bằng ảnh (image == (dùng thư viện nhận diện ảnh) ==> search)
+- [x] Đăng ký
+- [x] Đăng nhập
+- [x] Đăng tweet
+- [x] Tìm kiếm tweet
+
+
 ... update
+
+
+# Hình ảnh
+
+![img1](https://i.imgur.com/2kTfscE.png)
 

@@ -1,73 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Image Search App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-        body {
-            width: 80%;
-            margin: 2em auto 0 auto;
-        }
-        
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0 4px;
-        }
-        /* Create four equal columns that sits next to each other */
-        
-        .column {
-            flex: 25%;
-            max-width: 25%;
-            padding: 10px 10px;
-        }
-        
-        .column img {
-            margin-top: 8px;
-            vertical-align: middle;
-        }
-    </style>
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+
+
+    <header>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-archway"> Uetter</i>
+            </a>
+        </nav>
+    </header>
+
+
 </head>
 
-<h1>Image Search App</h1>
-<form>
-    <input class="u-full-width" type="text" id="searchTern" name="searchTurn">
-    <button class="button-primary" type="submit">Search</button>
-
-</form>
-
-<div class="row">
-    <div class="column">
-        <img src="https://www.w3schools.com/w3images/wedding.jpg">
-        <img src="https://www.w3schools.com/w3images/rocks.jpg">
-        <img src="https://www.w3schools.com/w3images/falls2.jpg">
-        <img src="https://www.w3schools.com/w3images/paris.jpg">
-        <img src="https://www.w3schools.com/w3images/nature.jpg">
-        <img src="https://www.w3schools.com/w3images/mist.jpg">
-        <img src="https://www.w3schools.com/w3images/paris.jpg">
-    </div>
-    <div class="column">
-        <img src="https://www.w3schools.com/w3images/underwater.jpg">
-        <img src="https://www.w3schools.com/w3images/ocean.jpg">
-        <img src="https://www.w3schools.com/w3images/wedding.jpg">
-        <img src="https://www.w3schools.com/w3images/mountainskies.jpg">
-        <img src="https://www.w3schools.com/w3images/rocks.jpg">
-        <img src="https://www.w3schools.com/w3images/underwater.jpg">
-    </div>
-</div>
-
-
-
-<script src="main.js"></script>
-
-
 <body>
+    <div class="container">
 
+
+        <div class="login">
+
+            <div class="jumbotron">
+                <h1 class="display-4">Hello, world!</h1>
+
+                <!-- Login -->
+
+                <form>
+                    <div class="form-row align-items-center">
+
+                        <div class="col-auto">
+                            <label class="sr-only" for="inlineFormInputGroup">Mail</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">@</div>
+                                </div>
+                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <label class="sr-only" for="inlineFormInput">Password</label>
+                            <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Your password">
+                        </div>
+                        <div class="col-auto">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                                <label class="form-check-label" for="autoSizingCheck">
+                                 Remember
+                              </label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mb-2">Login</button>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+
+                </form>
+
+                <h2 class="displau-4">
+                    Create a new account <br> It's free and always will be
+                </h2>
+                <form class="needs-validation" id="register" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom01">First name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name" value="Mark" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom02">Last name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name" value="Otto" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustomUsername">Username</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                </div>
+                                <input type="text" class="form-control" id="userName" name="userName" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Please choose a username.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                              Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Register</button>
+                </form>
+
+            </div>
+
+
+
+        </div>
+
+        <main>
+            <form class="mew-form">
+
+                <label for="name">Name</label>
+                <input class="u-full-width" type="text" id="name" name="name">
+
+                <label for="content">Content</label>
+                <textarea class="u-full-width" type="text" id="content" name="content"></textarea>
+
+                <button class="button-primary">Sent</button>
+            </form>
+
+            <div class="loading">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </main>
+
+        <script src="client.js"></script>
+        <!-- Bootstrap-->
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/popper.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    </div>
 </body>
+
 
 </html>
