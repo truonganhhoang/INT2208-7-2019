@@ -22,6 +22,7 @@
 - [x] Đăng nhập
 - [x] Đăng tweet
 - [x] Tìm kiếm tweet
+- [] Đăng ảnh
 
 
 ... update
