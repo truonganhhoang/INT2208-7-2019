@@ -36,6 +36,6 @@ Môn CNPM năm 2019
 		-Development Team: 4 thành viên trong nhóm
 		
 	#Tóm tắt kế hoạch thực hiện:
-		-Tuần 1-4: Tìm hiểu các công nghệ cần dùng cho phần mềm, hoàn thành giao diện
-		-Tuần 5-8: Hoàn thành phần chủ đề theo từ vựng và tra từ điển
+		-Tuần 1-4: Tìm hiểu các công nghệ cần dùng cho phần mềm, hoàn thành giao diện.
+		-Tuần 5-8: Hoàn thành phần chủ đề theo từ vựng và tra từ điển.
 		-Tuần 9-12: Hoàn thành phần kiểm tra từ, soát lỗi và hoàn thiện sản phẩm.
