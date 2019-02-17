@@ -15,3 +15,25 @@
 <img src="https://i.imgur.com/Sa1Gk7S.png">
 <img src="https://i.imgur.com/HGCMyZr.png">
 <img src="https://i.imgur.com/BpxUBcz.png">
+# Quy trình được chọn: Scrum
+- Định nghĩa: 
+Scrum là một quy trình quản lý và phát triển theo phương pháp phát triển linh hoạt (Agile) tập trung đặc biệt vào việc quản lý các công việc trong một môi trường phát triển theo nhóm. Về cơ bản Scrum được bắt nguồn từ các hoạt động xảy ra trong 1 vòng tuần hoàn.
+- Phân công vai trò:
++ Product owner: 1 người
+Là người chịu trách nhiệm về sự thành công của dự án, người định nghĩa các yêu cầu và đánh giá cuối cùng đầu ra của các nhà phát triển phần mềm.
++ Scrum Master: 1 người
+Master là người chịu trách nhiệm thiết lập nhóm, thiết lập cuộc họp trong các giai đoạn phát triển và loại bỏ các vật cản ảnh hưởng đến sự phát triển.
++ Scrum Development Team: 2 hoặc 3 người
+Team quản lý công việc của họ và tổ chức công việc nhằm hoàn thành các giai đoạn hoặc chu kỳ phát triển.
+- Tóm tắt kế hoạch thực hiện:
++ Tuần thứ 5: hoàn thành phiên bản web 1.0 tra được các từ đơn
++ Tuần thứ 7: phiên bản 2.0 tra được đoạn văn
++ Tuần thứ 9: phiên bản 3.0 cho phép người dùng đăng nhập để thêm, sửa, xóa kho từ
++ Tuần thứ 12-13: phiên bản 4.0 có thêm các đường link dẫn đến các khóa học tiếng Anh 
+Mỗi phiên bản được đưa ra đều thông qua quá trình như sau: 
+•	Mỗi một giai đoạn lặp lại của một scrum được biết đến như là Sprint
+•	Product backlog là một danh sách bao gồm các mô tả chi tiết để hoàn thành sản phẩm cuối cùng
+•	Trong mỗi Sprint, các mục hàng đầu của Product backlog được chọn và chuyển thành Sprint backlog
+•	Nhóm làm việc trên sprint backlog đã được mô tả
+•	Nhóm kiểm tra cho công việc hàng ngày
+•	Vào cuối các sprint, nhóm sẽ phát hành các tính năng của sản phẩm
