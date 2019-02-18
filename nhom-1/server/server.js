@@ -6,11 +6,11 @@ const http = require('http');
 const passport = require('passport');
 const FacebookStrategy = require('passport-facebook');
 const app = express();
-const api = require('./api/api.js');
+const auth = require('./auth/auth.js');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
-app.use('/api',api);
+app.use('/auth',auth);
 
 
 const port = process.env.PORT || 3000;
