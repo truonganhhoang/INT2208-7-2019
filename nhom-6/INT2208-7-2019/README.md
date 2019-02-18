@@ -10,7 +10,7 @@
 ### 2. Tên ứng dụng: N6Shop
 
 ### 3. Thành phần ứng dụng:
-####3.1 Các mặt hàng
+#### 3.1 Các mặt hàng
 * Tên mặt hàng
 * Giá bán
 * Số lượng
