@@ -14,9 +14,10 @@
 * Hoàng Trần Long Nhật
 
 
+
 ### Nhóm người dùng
 
-* Ứng dụng giải trí cho người trẻ tuổi
+* Ứng dụng giải trí cho người trẻ tuổi.
 
 
 ### Mô tả chức năng app
@@ -40,7 +41,7 @@
 
 ### Scrum
 
-#### Vòng lặpScrum
+#### Vòng lặp Scrum
 
 * Mỗi ngày chat nhóm thảo luận việc càn làm, đã làm.
 * Thực hiện theo product backlog, sprint backlog.
@@ -48,10 +49,8 @@
 #### Kế hoạch
 
 * Tuần học 1 - 3
-    * Tìm hiểu công nghệ cần thiết để hoàn thành back-end cơ bản
+    * Tìm hiểu công nghệ cần thiết để hoàn thành back-end cơ bản.
 
 * Tuần 4
-    * Làm giao diện cơ bản
-
-
+    * Làm giao diện cơ bản.
 
