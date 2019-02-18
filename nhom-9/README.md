@@ -33,11 +33,17 @@
         * Materialize: Trung, Nam
         * Firebase: Thành
 ## Mô tả kế hoạch
-* Tuần 3:
-    * Product Owner đưa tạo tác được chọn (srpint backlog) cho nhóm phát triển:
+* Tuần 3 - 4:
+    * Product Owner đưa tạo tác cho nhóm phát triển:
     <img src="https://github.com/niits/INT2208-7-2019/blob/master/nhom-9/res/img/sprint_backlog.png">
-    * Đặc tả sprint 1:
-    <img src="https://github.com/niits/INT2208-7-2019/blob/master/nhom-9/res/img/requirement1.png">
-    (Bản vẽ được vẽ lại bằng tay từ ý tưởng của bạn Trung)
     
+    * Nhóm phát triển thực đặc tả sprint 1:
+    <img src="https://github.com/niits/INT2208-7-2019/blob/master/nhom-9/res/img/requirement1.png">
+    
+    (Bản vẽ được vẽ lại bằng tay từ ý tưởng của bạn Trung)
 
+* Tuần 5 - 7:
+    * Thực hiện sprint 2
+    
+* Tuần 8 - 11:
+    * Thực hiện sprint 3
