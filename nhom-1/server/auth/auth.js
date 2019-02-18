@@ -1,3 +1,8 @@
+/**
+ * File này dành cho việc authentication, tạo user, đăng nhập
+ */
+
+
 require('dotenv').config();
 const express = require('express');
 const router = express.Router();
@@ -43,6 +48,9 @@ const userSchema = new Schema({
 
 const User = mongoose.model('User',userSchema);
 
+/**
+ * Tạo thử user admin
+ */
 router.get('/admin',(req,res)=>{
     User.findOne({username:'admin'},(err,docs)=>{
         if (!err) {
@@ -65,6 +73,12 @@ router.get('/admin',(req,res)=>{
     });
 });
 
+/**
+ * check username có valid không.
+ * trả về 1 object (json) có 2 biến: state và valid
+ * state false -> connect với server lỗi, 
+ * valid: true nếu tên user này dùng được, false nếu đã tồn tại
+ */
 router.post('/checkvaliduser',(req,res)=>{
     User.findOne({username:req.body.username},(err,doc)=>{
         if (!err) {
@@ -88,6 +102,12 @@ router.post('/checkvaliduser',(req,res)=>{
     });
 });
 
+
+/**
+ * tạo user mới,
+ * trả về object: state true nếu tạo user thành công, false nếu lỗi
+ * một object user lồng trong object trả về cung cấp 3 field: username,name,gender
+ */
 router.post('/createuser',(req,res)=>{
     const user = new User();
     user.username = req.body.username;
