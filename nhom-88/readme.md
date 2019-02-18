@@ -40,9 +40,18 @@
 
 ### Scrum
 
+#### Vòng lặpScrum
+
+* Mỗi ngày chat nhóm thảo luận việc càn làm, đã làm.
+* Thực hiện theo product backlog, sprint backlog.
+
+#### Kế hoạch
+
 * Tuần học 1 - 3
     * Tìm hiểu công nghệ cần thiết để hoàn thành back-end cơ bản
 
 * Tuần 4
-    * Làm giao diện cơ
+    * Làm giao diện cơ bản
+
+
 
