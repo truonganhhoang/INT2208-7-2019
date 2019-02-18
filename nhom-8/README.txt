@@ -14,7 +14,7 @@
 
 *Ðối tượng: 
 	Những người có nhu cầu tìm tài liệu trong quá trình ôn thi Đại học như học sinh, giáo viên...
-
+	
 *Chức năng: 
 	- Chia sẻ tài liệu theo chủ đề.
 	- Trao đổi thông tin qua bình luận.
@@ -23,12 +23,12 @@
 	
 *Quy trình phát triển phần mềm: Scrum
 
-	Mô tả: 
+	Mô tả:
 		Đây là quy trình quản lý và phát triển theo phương pháp phát triển linh hoạt (Agile) phổ biến nhất hiện nay. Scrum tin tưởng vào việc trao quyền cho nhóm phát triển và làm việc theo nhóm nhỏ (từ 7-9 người). 
 
 	Vai trò:
 		-Product Owner: Bùi Văn Bảo
-		-Scrum Master:
+		-Scrum Master: Vũ Đức Dũng
 		-Development Team: 4 thành viên trong nhóm
 		
 	Product Backlog:
