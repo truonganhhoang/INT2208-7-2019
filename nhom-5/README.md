@@ -8,10 +8,9 @@ Nhóm 5:
 
 Tên ứng dụng: **OrderOnline**
 
-Nhóm người dùng:
-    Hướng tới hầu hết mọi người ở mọi lứa tuổi, đặc biệt là những người có ít thời gian rảnh rỗi hoặc ngắt quãng khiến việc mua, chọn đồ trở nên khó khăn. Ứng dụng cho phép đặt mua các sản phẩm được bày bán trên trang một cách nhanh chóng và tiện lợi.
+Nhóm người dùng: mọi người.
 
-Chức Năng:
+Chức năng:
 1. Hiển thị các mặt hàng bao gồm hình ảnh và giá của sản phẩm có sao đánh giá kèm theo.
 
 ![Image](image_demo/background.png)
@@ -37,11 +36,11 @@ Chức Năng:
 ### Thời hạn của một sprint:
 - Một sprint kéo dài 2 tuần và các công việc bắt buộc phải dừng lại khi sprint kết thúc để đánh giá mức độ hoàn thiện, giải quyết các vấn đề phát sinh và cải thiện khả năng làm việc của cả nhóm.
 
-### Danh sách chức năng:
+### Danh sách công việc:
 - Tạo cơ sở dữ liệu với các cấu trúc dữ liệu và phương thức nhập xuất dữ liệu phù hợp.
 - Tạo chức năng đăng ký, đăng nhập, đăng xuất tài khoản, lưu thông tin vào cơ sở dữ liệu.
 - Xử lý dữ liệu trong quá trình đặt hàng và thanh toán  (thay đổi các thông tin về số lượng hàng hóa, tình trạng gói hàng, số tiền trong các tài khoản thực hiện giao dịch).
 - Tạo chức năng phân loại danh mục và tìm kiếm mặt hàng.
 - Tạo chức năng nhắn tin trao dổi giữa giữa các tài khoản
 
-**Dự kiến mỗi chức năng sẽ ứng với mục tiếu chính của một sprint**
+**Dự kiến mỗi công việc sẽ là mục tiếu chính của một sprint**
