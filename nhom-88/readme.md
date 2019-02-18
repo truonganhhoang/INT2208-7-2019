@@ -1,15 +1,18 @@
 ## Nhóm 88
 
 
-### Ứng dụng Tweet
+## Ứng dụng Tweet
 
-* Thể loại: Mạng xã hội
+### Thể loại
+
+* Mạng xã hội
 
 ### Thành viên trong nhóm
 
 * Phạm Minh Đức
 * Phùng Xuân Vượng
 * Hoàng Trần Long Nhật
+
 
 ### Nhóm người dùng
 
@@ -22,13 +25,24 @@
 - [x] Đăng nhập
 - [x] Đăng tweet
 - [x] Tìm kiếm tweet
-- [] Đăng ảnh
+- [ ] Đăng ảnh
 
 
 ... update
 
 
-# Hình ảnh
+### Hình ảnh
 
 ![img1](https://i.imgur.com/zye9qEh.png)
+
+
+## Quy trình làm việc
+
+### Scrum
+
+* Tuần học 1 - 3
+    * Tìm hiểu công nghệ cần thiết để hoàn thành back-end cơ bản
+
+* Tuần 4
+    * Làm giao diện cơ
 

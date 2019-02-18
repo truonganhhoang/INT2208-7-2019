@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+
 
     <!-- Bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -26,49 +26,48 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="page-container">
+
+        <div id="dashboard">
+            <form>
 
 
-        <div class="login">
+                <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInputGroup">Mail</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">@</div>
+                        </div>
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInput">Password</label>
+                    <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Your password">
+                </div>
+                <div class="col-auto">
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                        <label class="form-check-label" for="autoSizingCheck">
+                             Remember
+                          </label>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="button" id="tweet-submit">Login</button>
+                </div>
+
+
+
+            </form>
+        </div>
+
+        <div id="main">
 
             <div class="jumbotron">
                 <h1 class="display-4">Hello, world!</h1>
 
                 <!-- Login -->
-
-                <form>
-                    <div class="form-row align-items-center">
-
-                        <div class="col-auto">
-                            <label class="sr-only" for="inlineFormInputGroup">Mail</label>
-                            <div class="input-group mb-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">@</div>
-                                </div>
-                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <label class="sr-only" for="inlineFormInput">Password</label>
-                            <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Your password">
-                        </div>
-                        <div class="col-auto">
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-                                <label class="form-check-label" for="autoSizingCheck">
-                                 Remember
-                              </label>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <button type="submit" class="btn btn-primary mb-2">Login</button>
-                        </div>
-                    </div>
-
-                    <hr class="my-4">
-
-
-                </form>
 
                 <h2 class="displau-4">
                     Create a new account <br> It's free and always will be
@@ -89,6 +88,8 @@
                                 Looks good!
                             </div>
                         </div>
+                    </div>
+                    <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <label for="validationCustomUsername">Username</label>
                             <div class="input-group">
@@ -96,6 +97,18 @@
                                     <span class="input-group-text" id="inputGroupPrepend">@</span>
                                 </div>
                                 <input type="text" class="form-control" id="userName" name="userName" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Please choose a username.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustomUsername">Username</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend">*</span>
+                                </div>
+                                <input type="text" class="form-control" id="password" name="password" placeholder="Password" aria-describedby="inputGroupPrepend" required>
                                 <div class="invalid-feedback">
                                     Please choose a username.
                                 </div>
@@ -114,7 +127,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-primary" type="submit">Register</button>
+                    <button class="button" id="tweet-submit" type="submit">Register</button>
                 </form>
 
             </div>
@@ -143,6 +156,7 @@
         </main>
 
         <script src="client.js"></script>
+        <script src="register.js"></script>
         <!-- Bootstrap-->
         <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="js/popper.min.js"></script>
