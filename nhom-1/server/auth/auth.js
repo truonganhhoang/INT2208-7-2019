@@ -144,12 +144,6 @@ router.post('/createuser',(req,res)=>{
 
 
 
-
-
-
-
-
-
 //test
 
 passport.use(new FacebookStrategy({
