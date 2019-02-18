@@ -23,7 +23,7 @@
 **Nhóm sẽ thực hiện theo áp dụng quy trình Scrum vào dự án**
 - User Story : Khách hàng hay người sử dụng sẽ tùy chọn sử dụng các tính năng,khóa học có trên trang web và có thể đưa lại ý kiến phản hồi ở những khóa học .
 - Product Backlog : Nhóm sẽ training những công nghệ <technical> cần thiết để hoàn thiện giao diện , tính năng sao cho phù hợp nhất với phản hồi của người dùng , tối ưu database , tích hợp API
--Sprint : Nhóm sẽ thực hiện 1 chu kì trong khoảng 1-2 tuần để thực hiện các quá trình như thiết kế, code , testing để tại ra các sản phẩm ở cuối mỗi Sprint , Chu kì đầu tiên của nhóm là sẽ hoàn thành giao diện thô demo sản phẩm.
+- Sprint : Nhóm sẽ thực hiện 1 chu kì trong khoảng 1-2 tuần để thực hiện các quá trình như thiết kế, code , testing để tại ra các sản phẩm ở cuối mỗi Sprint , Chu kì đầu tiên của nhóm là sẽ hoàn thành giao diện thô demo sản phẩm.
 
 
 **Vị trí (role) của các thành viên trong nhóm để thực hiện dự án dựa trên quy trình Scrum**
@@ -32,4 +32,5 @@
 - Development Team : Cả nhóm sẽ thực hiện
 
 **Sprint Planning Meeting : nhóm sẽ họp trước khi bắt đầu mỗi Sprint để thống nhất công việc (user story) cần làm**
+
 **Daily Meeting : Nhóm sẽ họp nhanh 20 phút để nắm được tình hình dự án để xem lại quá trình làm project của nhóm**
