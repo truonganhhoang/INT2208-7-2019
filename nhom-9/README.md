@@ -28,9 +28,8 @@
     * Scrum Master (Quân): hướng các hoạt động của nhóm theo quy trình
     * (Tạm dịch) Người sở hữu sản phẩm - Product Owner (Nam): quản lý tạo tác (Backlog)
     * Nhóm phát triển - Scrum Team (Quân, Trung, Nam, Nghĩa, Thành). Chia đầu việc theo công nghệ (dự kiến):
-        * HTML & CSS: Quân, Trung, Nam
-        * JavaScript: Nghĩa, Nam
-        * Materialize: Trung, Nam
+        * HTML & CSS & Materialize: Quân, Trung, Nam
+        * JavaScript: Nghĩa, Nam.
         * Firebase: Thành
 ## Mô tả kế hoạch
 * Tuần 3 - 4:
