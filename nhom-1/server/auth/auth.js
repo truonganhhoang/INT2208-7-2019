@@ -2,11 +2,9 @@
  * File này dành cho việc authentication, tạo user, đăng nhập
  */
 
-
 require('dotenv').config();
 const express = require('express');
 const router = express.Router();
-const MongoClient = require('mongodb').MongoClient;
 const passport = require('passport');
 const FacebookStrategy = require('passport-facebook');
 const mongoose = require('mongoose');
