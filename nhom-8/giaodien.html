@@ -2,24 +2,29 @@
 <html lang = "vi">
 <head>
 	<meta charset ="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Thi tốt Đại học</title>
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="giaodien.css">
-	<script src="bootstrap/js/jquery.min.js"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 
 	<header class="container-fluid">
-		<a class="navbar-brand" href="#">Logo</a>
+		<div class="row">
 		
-		<form class="navbar-form navbar-left">
-			<div class="form-group">
-			  <input type="text" class="form-control" placeholder="Tìm kiếm đề thi">
-			</div>
-			<button type="button" class="btn btn-default navbar-btn">Search</button>
-		 </form>
-		 <button type="button" class="btn btn-default navbar-btn">Sign in</button>
+			<a class="navbar-brand" href="#">Logo</a>
+		
+			<form class="navbar-form navbar-left">
+				<div class="form-group">
+				<input type="text" class="form-control" placeholder="Tìm kiếm đề thi">
+				</div>
+				<button type="button" class="btn btn-default navbar-btn">Search</button>
+			</form>
+			
+			<button type="button" class="btn btn-default navbar-btn">Sign in</button>
+		</div>
 	</header>
 		
 	<nav class="navbar navbar-default ">
@@ -31,8 +36,6 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  
-		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -46,10 +49,6 @@
 				<li><a href="#">Tiếng Anh</a></li>
 				<li><a href="#">Tiếng Pháp</a></li>
 				<li><a href="#">Tiếng Nhật</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="#">Separated link</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="#">One more separated link</a></li>
 			  </ul>
 			</li>
 			<li class="dropdown">
@@ -58,10 +57,6 @@
 				<li><a href="#">Vật Lý</a></li>
 				<li><a href="#">Hóa Học</a></li>
 				<li><a href="#">Sinh Học</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="#">Separated link</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="#">One more separated link</a></li>
 			  </ul>
 			</li>
 			<li class="dropdown">
@@ -70,10 +65,6 @@
 				<li><a href="#">Lịch Sử</a></li>
 				<li><a href="#">Địa Lý</a></li>
 				<li><a href="#">Công Dân</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="#">Separated link</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="#">One more separated link</a></li>
 			  </ul>
 			</li>
 			<li><a href="#">Video</a></li>
@@ -90,11 +81,33 @@
 	</section>
 	
 	<section> 
-		<div class = "row">
-			<div class = "col-md-3"><p><u> Đề thi mới:</u></p></div>
-			<div class = "col-md-3"><p><u> Đề thi mới:</u></p></div>
-			<div class = "col-md-3"><p><u> Đề thi mới:</u></p></div>
-			<div class = "col-md-3"><p><u> Đề thi mới:</u></p></div>
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-3">
+				<a href="de.jpg" class="thumbnail">
+				  <p style="text-align:center">Đề thi</p> 
+				  <img src="de.jpg" alt="de1" style="width:150px;height:150px">
+				</a>
+			  </div>
+			  <div class="col-md-3">
+				<a href="de.jpg" class="thumbnail">
+				  <p style="text-align:center">Đề thi</p>
+				  <img src="de.jpg" alt="de2" style="width:150px;height:150px">
+				</a>
+			  </div>
+			  <div class="col-md-3">
+				<a href="de.jpg" class="thumbnail">
+				  <p style="text-align:center">Đề thi</p> 
+				  <img src="de.jpg" alt="de3" style="width:150px;height:150px">
+				</a>
+			  </div>
+			  <div class="col-md-3">
+				<a href="de.jpg" class="thumbnail">
+				  <p style="text-align:center">Đề thi</p> 
+				  <img src="de.jpg" alt="de1" style="width:150px;height:150px">
+				</a>
+			  </div>
+			</div>
 		</div>
 	</section>
 	
@@ -105,6 +118,7 @@
 			</div>
 		</div>
 	</section>
+	
 
 	<footer class ="bs-docs-footer">
 		<div class="container">
