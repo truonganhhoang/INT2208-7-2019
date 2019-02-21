@@ -3,8 +3,6 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const http = require('http');
-const passport = require('passport');
-const FacebookStrategy = require('passport-facebook');
 const app = express();
 const auth = require('./auth/auth.js');
 
