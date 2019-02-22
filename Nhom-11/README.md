@@ -13,6 +13,8 @@
    - Bên dưới của giao diện chính, là kết quả trận đấu vừa mới kết thúc và được cập nhật.  
 ###    Giao diện cơ bản của trang web:
 ![alt](Interface.png)
+###    Giao diện cơ bản của từng giải đấu:
+![alt](Premier-league.png)
    ## SCRUM
 ### Vai trò:
 -	Product Owner: Người dùng
