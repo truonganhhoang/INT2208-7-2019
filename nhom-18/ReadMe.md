@@ -1,4 +1,4 @@
-#Nhóm 18
+# Nhóm 18
 ## Thành viên: 
  - Nguyễn Ngọc Minh
  - Nguyễn Văn Khải
@@ -6,10 +6,10 @@
  - Đặng Quang Liêm
  - Nguyễn Khắc Ngọc
 
-##Tên ứng dụng:
+## Tên ứng dụng:
  - Web quản lí bán hàng.
 
-##Chức năng:
+## Chức năng:
 - Admin:
  - Đăng bán sản phầm.
 - Người sử dụng mua hàng:
@@ -18,8 +18,8 @@
  - Sử dụng tài khoản đã đăng kí.
  - Tìm kiếm sản phẩm theo tên sản phẩm, giá tiền,...
   
-##Quy trình phát triển:
-###RUP - Rational Unified Process:
+## Quy trình phát triển:
+### RUP - Rational Unified Process:
 - Các bước:
  - Phân tích yêu cầu.
  - Thiết kế.
