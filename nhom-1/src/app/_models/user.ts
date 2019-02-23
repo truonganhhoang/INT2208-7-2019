@@ -2,7 +2,8 @@
     id: number;
     username: string;
     password: string;
-    firstName: string;
-    lastName: string;
+    name: string;
+    gender: boolean;
+    birthday: Date;
     token: string;
 }
