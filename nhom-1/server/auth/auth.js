@@ -105,7 +105,8 @@ router.post('/createuser',(req,res)=>{
             valid:false
         });
         return;
-    }   
+    }
+
     const user = new User();
     user.username = req.body.username;
     user.password = bcrypt.hashSync(req.body.password,Number(process.env.SALT_ROUND));
@@ -183,39 +184,6 @@ router.post('/login',(req,res)=>{
         }
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-//test
-
-/**
- * Tạo thử user admin
- */
-// router.get('/admin',(req,res)=>{
-//     const user = new User();
-//     user.username = 'admin';
-//     user.password = bcrypt.hashSync('123456',Number(process.env.SALT_ROUND));
-//     user.birthday = new Date(1999,8,16);
-//     user.gender = true;
-//     user.name = 'Nam Phan';
-//     user.save((err,data)=>{
-//         if (!err) {
-//             res.send(data);
-//         } else {
-//             res.send(err);
-//         }
-//     });
-// });
 
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_CLIENTID,
