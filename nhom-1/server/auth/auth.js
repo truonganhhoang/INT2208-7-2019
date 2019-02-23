@@ -71,10 +71,10 @@ router.post('/checkvaliduser',(req,res)=>{
         return;
     }     
     User.findOne({username:req.body.username},(err,doc)=>{
-        if (!err) {
+        if (err) {
             res.json({
                 state:false,
-                valid:true
+                valid:false
             });
         } else {
             if (!doc) {

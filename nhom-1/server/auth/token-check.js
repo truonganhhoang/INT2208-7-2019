@@ -9,7 +9,7 @@ var middleware_TokenCheck = function(req,res,next) {
         if (!valid) {
             res.json({
                 state:true,
-                valid:true
+                valid:false
             });
         } else {
             next();
