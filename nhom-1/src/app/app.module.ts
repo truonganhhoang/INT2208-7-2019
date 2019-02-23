@@ -12,7 +12,8 @@ import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';;
 import { MessengerComponent } from './messenger/messenger.component'
-
+;
+import { MessageComponent } from './message/message.component'
 @NgModule({
     imports: [
         BrowserModule,
@@ -26,7 +27,8 @@ import { MessengerComponent } from './messenger/messenger.component'
         HomeComponent,
         LoginComponent,
         RegisterComponent,
-        MessengerComponent    ],
+        MessengerComponent ,
+        MessageComponent   ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
