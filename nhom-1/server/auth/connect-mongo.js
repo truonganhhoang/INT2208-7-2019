@@ -10,6 +10,7 @@ function sleep(milliseconds) {
 }
 
 var tryConnect = function(mongoose) {
+    const url = process.env.URL_MONGODB;
     if (mongoose.connection.readyState===0) {
         mongoose.connect(process.env.URL_MONGODB,{useNewUrlParser:true});
     } else return true;

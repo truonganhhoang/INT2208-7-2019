@@ -18,7 +18,7 @@ const tryConnect = require('./connect-mongo');
 const url = process.env.URL_MONGODB;
 const secret = process.env.TOKEN_SECRET;
 
-mongoose.connect(process.env.URL_MONGODB,{useNewUrlParser:true});
+mongoose.connect(url,{useNewUrlParser:true});
 
 
 const Schema = mongoose.Schema;
@@ -53,7 +53,7 @@ const User = mongoose.model('User',userSchema);
 
 router.post('/test',(req,res)=>{
     console.log(User);
-})
+});
 
 
 /**
@@ -71,10 +71,10 @@ router.post('/checkvaliduser',(req,res)=>{
         return;
     }     
     User.findOne({username:req.body.username},(err,doc)=>{
-        if (!err) {
+        if (err) {
             res.json({
                 state:false,
-                valid:true
+                valid:false
             });
         } else {
             if (!doc) {

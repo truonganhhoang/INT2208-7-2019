@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -21,5 +20,9 @@ app.get('/test',(req,res)=> {
 });
 
 const server = http.createServer(app);
+
+require('./messenger/socket')(server);
+
+
 
 server.listen(port,()=> console.log(`API running on localhost:${port}`));
