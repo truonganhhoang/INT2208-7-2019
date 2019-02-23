@@ -8,7 +8,8 @@ var middleware_TokenCheck = function(req,res,next) {
         var valid = jwt.verify(token,process.env.TOKEN_SECRET);
         if (!valid) {
             res.json({
-                state:false
+                state:true,
+                valid:true
             });
         } else {
             next();
@@ -16,7 +17,8 @@ var middleware_TokenCheck = function(req,res,next) {
         
     } else {
         res.json({
-            state:false
+            state:true,
+            valid:false
         });
     }
 }

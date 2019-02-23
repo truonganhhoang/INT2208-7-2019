@@ -18,7 +18,7 @@ const tryConnect = require('./connect-mongo');
 const url = process.env.URL_MONGODB;
 const secret = process.env.TOKEN_SECRET;
 
-mongoose.connect(process.env.URL_MONGODB,{useNewUrlParser:true});
+mongoose.connect(url,{useNewUrlParser:true});
 
 
 const Schema = mongoose.Schema;
@@ -53,7 +53,7 @@ const User = mongoose.model('User',userSchema);
 
 router.post('/test',(req,res)=>{
     console.log(User);
-})
+});
 
 
 /**
@@ -145,7 +145,6 @@ router.post('/login',(req,res)=>{
         });
         return;
     }
-    console.log(mongo);
     User.findOne({username:req.body.username},(err,docs)=>{
         console.log(err);
         if (err) {
