@@ -39,7 +39,6 @@
             <mat-radio-button value="true">Male</mat-radio-button>
             <mat-radio-button value="false">Female</mat-radio-button>
           </mat-radio-group>
-        <!-- <input type="text" formControlName="gender" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }" /> -->
         <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
             <div *ngIf="f.gender.errors.required">Gender is required</div>
         </div>

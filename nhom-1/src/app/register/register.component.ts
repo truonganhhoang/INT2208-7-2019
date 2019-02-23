@@ -50,8 +50,14 @@ export class RegisterComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 data => {
-                    this.alertService.success('Registration successful', true);
-                    this.router.navigate(['/login']);
+                    if (data.state) {
+                        this.alertService.success('Registration successful', true);
+                        this.router.navigate(['/login']);
+                    }
+                    else {
+                        this.alertService.error('Username is already taken');
+                        this.loading = false;
+                    }
                 },
                 error => {
                     this.alertService.error(error);
