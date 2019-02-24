@@ -35,6 +35,7 @@
 ### Hình ảnh
 
 ![img1](https://i.imgur.com/zye9qEh.png)
+![img2](https://i.imgur.com/vcd8ttQ.png)
 
 
 ## Quy trình làm việc
