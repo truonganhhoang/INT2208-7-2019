@@ -140,6 +140,7 @@ router.post('/createuser',(req,res)=>{
  */
 router.post('/login',(req,res)=>{
     if (!tryConnect(mongoose)) {
+        console.log('this one touched');
         res.json({
             state:false,
             valid:false
@@ -147,7 +148,7 @@ router.post('/login',(req,res)=>{
         return;
     }
     User.findOne({username:req.body.username},(err,docs)=>{
-        console.log(err);
+        console.log(err===true);
         if (err) {
             //nếu kết nối với server bị lỗi., trả về state false
             res.json({

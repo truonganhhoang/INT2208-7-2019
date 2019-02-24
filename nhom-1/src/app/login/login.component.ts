@@ -51,7 +51,11 @@ export class LoginComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 data => {
-                    if (!data.token) {
+                    if (!data.state) {
+                        this.alertService.error("Server error");
+                        this.loading = false;
+                    }
+                    else if (!data.token) {
                         this.alertService.error("Username or password is incorrect");
                         this.loading = false;
                     }
