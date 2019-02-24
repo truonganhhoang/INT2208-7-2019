@@ -25,12 +25,12 @@
     <div class="form-group">
         <label for="birthday">Date of birth</label> <br>
 
-        <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="birthday" [ngClass]="{ 'is-invalid': submitted && f.birthday.errors }">
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date" class="form-control" formControlName="birthday" [ngClass]="{ 'is-invalid': submitted && f.birthday.errors }">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
 
         <div *ngIf="submitted && f.birthday.errors" class="invalid-feedback">
-            <div *ngIf="f.birthday.errors.required">Date of birth is required</div>
+            <div *ngIf="f.birthday.errors.required">Invalid date of birth</div>
         </div>
     </div>
     <div class="form-group">
