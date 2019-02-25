@@ -12,6 +12,7 @@
 ## Quy trình phát triển phần mềm: Scrum
 ### Vai trò:
   * Product Owner: Dương Thu Hà
+  * Scrum Master: Đỗ Minh Anh
   * Development Team: 4 thành viên trong nhóm	
 ### Tóm tắt kế hoạch thực hiện:
   * Tuần 1-4: Tìm hiểu các công nghệ cần dùng cho phần mềm, hoàn thành giao diện.
