@@ -7,6 +7,11 @@
 
 * Mạng xã hội
 
+
+### Phiên bản
+
+* Lastest: https://uettor.herokuapp.com
+
 ### Thành viên trong nhóm
 
 * Phạm Minh Đức
