@@ -1,5 +1,5 @@
 .container-fluid{
-	border-top: solid 20px #2a2730;
+	border-top: 20px #2a2730;
 	background-color:#eff1e6;
 }
 .navbar-default{
@@ -41,5 +41,5 @@ h3{
     background-color: #2a2730;
 }
 .navbar {
-	padding-left: 240px;
+	padding-left: 140px;
 }
