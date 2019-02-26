@@ -7,6 +7,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const tryConnect = require('./../auth/connect-mongo');
 const multer = require('multer');
+const tokenCheck = require('./token-check');
 
 var fileHandlerMiddleware = multer({dest:'./data/avatar/'});
 

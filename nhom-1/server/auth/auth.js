@@ -25,7 +25,6 @@ const userSchema = new Schema({
     username:{
         type:String,
         required:true,
-        unique:true
     },
     password:{
         type:String,
@@ -37,9 +36,11 @@ const userSchema = new Schema({
     },
     birthday: Date,
     gender: Boolean,
-    imageUrl: { 
-        type:String,
-        default:''
+    avatar: { 
+        url: {type:String,
+            default:''},
+        imgType: {type:String,
+            default:''}
     },
     joinDay: {
         type: Date,
