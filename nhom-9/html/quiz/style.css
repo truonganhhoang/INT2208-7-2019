@@ -1,0 +1,14 @@
+.btn-primary {
+    margin: 2%;
+}
+.btn-info{
+    margin: 0.5%;
+    margin-bottom: 3%;
+}
+.navbar-custom {
+    background-color: #3c5fe7;
+}
+
+.navbar-custom .navbar-brand {
+    color: #ecf0f1;
+}
