@@ -15,7 +15,7 @@ export class UserProfileComponent implements OnInit {
   ngOnInit() {
   }
 
-  onUpload($event: any,image:any) {
+  onUpload($event: any) {
     this.file=$event.target.files[0];
   }
 
