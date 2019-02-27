@@ -17,7 +17,7 @@
 * Phạm Minh Đức
 * Phùng Xuân Vượng
 * Hoàng Trần Long Nhật
-
+* Trương Việt Hoàng
 
 
 ### Nhóm người dùng
@@ -45,18 +45,47 @@
 
 ## Quy trình làm việc
 
-### Scrum
 
-#### Vòng lặp Scrum
 
-* Mỗi ngày chat nhóm thảo luận việc càn làm, đã làm.
-* Thực hiện theo product backlog, sprint backlog.
+### Kế hoạch thực hiện theo quy trình Scrum
 
-#### Kế hoạch
 
-* Tuần học 1 - 3
-    * Tìm hiểu công nghệ cần thiết để hoàn thành back-end cơ bản.
+#### Vai trò
 
-* Tuần 4
-    * Làm giao diện cơ bản.
+* Product Owner: Phùng Xuân Vượng
+* ScrumMaster: Phạm Minh Đức
+* Nhóm phát triển:
+    * Phạm Minh Đức
+    * Phùng Xuân Vượng
+    * Hoàng Trần Long Nhật
+    * Trương Việt Hoàng
+
+#### Product backlogs
+
+##### 2 tuần tới
+
+- [x] Đăng tweet cơ bản.
+- [x] Gửi và lưu dữ liệu từ client lên cơ sở dữ liệu(csdl) và gửi dữ liệu từ csdl về client.
+- [ ] Đăng ký, đăng nhập (xử lý phía backen)
+- [ ] Hoàn thiện giao diện: Đăng ký, đăng nhập, Màn hình chính
+
+#### Sprint backlog
+
+- [ ] Tìm hiểu công nghệ mongodb để tạo các cơ sở dữ liệu cho việc lưu tài khoản thành viên
+- [ ] Tìm hiểu reactjs để xử lý thông tin lấy từ server
+- [ ] Thực hiện code sau khi tìm hiểu công nghệ
+
+
+#####  Change log
+
+###### V1.0
+
+- [x] Đăng tweet, gửi dữ liệu lưu trên cơ sỡ dữ liệu
+- [x] Lấy 5 tweet mới nhất trả về client
+
+##### V1.1
+
+- [x] 27/2/2019: Cập nhật thanh navigator
+- [ ] 27-2 - 4/3: Chức năng đăng ký tài khoản
+
 
