@@ -36,7 +36,7 @@
  - Tích hợp: sau khi tạo ra được app bán hàng chạy được và có các chức năng cơ bản thì cùng góp ý để tích hợp thêm những tính    năng hữu ích khác hoàn thiện sản phẩm hơn.
  - Bảo trì: 
 
-##Product Backlog:
+## Product Backlog:
  - Tìm hiểu thêm về HTML, CSS, Bootstrap, PHP.
  - Xây dựng giao diện cho cửa sổ home, cửa sổ quản lí của chủ shop, cửa sổ login logout.
  - Thiết kế Database cho ứng dụng web của nhóm.
