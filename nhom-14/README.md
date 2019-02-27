@@ -19,6 +19,7 @@
 #### Tài liệu về các công nghệ có thể dùng đến:
 >* HTML
 >* CSS
+>* Bootstrap
 
 #### Quy trình: Scrum
 >* Scrum Master: Nguyễn Văn Tuấn
