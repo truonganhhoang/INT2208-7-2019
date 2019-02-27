@@ -6,10 +6,11 @@ require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 //const passport = require('passport');
-const mongoose = require('mongoose');
+const mongoose = require('./../database/mongoose-connect');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const tryConnect = require('./connect-mongo');
+const tryConnect = require('../database/connect-mongo');
+const userSchema = require('./../model/user.model')
 
 //const FacebookStrategy = require('passport-facebook');
 
@@ -19,40 +20,9 @@ const secret = process.env.TOKEN_SECRET;
 mongoose.connect(url,{useNewUrlParser:true});
 
 
-const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
-    username:{
-        type:String,
-        required:true,
-    },
-    password:{
-        type:String,
-        required:true
-    },
-    name: {
-        type: String,
-        required:true
-    },
-    birthday: Date,
-    gender: Boolean,
-    avatar: { 
-        url: {type:String,
-            default:''},
-        imgType: {type:String,
-            default:''}
-    },
-    joinDay: {
-        type: Date,
-        default: Date.now
-    }
-});
 
 const User = mongoose.model('User',userSchema);
-
-router.post('/test',(req,res)=>{
-    console.log(User);
-});
 
 
 /**
@@ -147,7 +117,6 @@ router.post('/login',(req,res)=>{
         return;
     }
     User.findOne({username:req.body.username},(err,docs)=>{
-        console.log(err===true);
         if (err) {
             //nếu kết nối với server bị lỗi., trả về state false
             res.json({
