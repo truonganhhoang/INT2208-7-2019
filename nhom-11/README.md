@@ -15,22 +15,31 @@
 ![alt](Interface.png)
 ###    Giao diện cơ bản của từng giải đấu:
 ![alt](Premier-league.png)
-   ## SCRUM
-### Vai trò:
--	Product Owner: Người dùng
--	Scrum Master: 
--	Team Development: 4 thành viên trong nhóm
-### Product backlog:
+   # SCRUM
+## Vai trò:
+###	Product Owner: Cả nhóm
+   - Định hình và đưa ra yêu cầu về tính năng sản phẩm.
+###	Scrum Master: Dương
+   - Đảm bảo sự vận hành của nhóm
+###	Team Development: cả nhóm
+   - Tạo ra sản phẩm dựa trên Product backlog.
+## Product backlog:
 -	Lịch thi đấu và kết quả các trận đấu gần đây: thời gian diễn ra, tỷ số , thống kê, …
 -	Thông tin về giải đấu: lịch thi đấu, bảng xếp hạng, kết quả, …
 -	Thông tin về đội bóng: huấn luyện viên, sân vận động, cầu thủ, …
 -	Highlights & một vài thông tin bên lề.
 -	Hỗ trợ và tương tác với người dung ( có thể không làm ).
-### Tuần 1-4:
--	**Kế hoạch:** Hoàn thành tính năng xem lịch thi đấu và kết quả.
-### Tuần 4-8:
--	**Kế hoạch:**
-### Tuần 8-12:
--	**Kế hoạch:**
-
+## Tuần 1-4:
+-	**Kế hoạch:** Học bootstrap và hoàn thành giao diện trang chính.
+-  **Công việc:**
+   - Tự học HTML, CSS, JS, và Bootstrap.
+   - Sử dụng kiến thức học được tạo giao diện trang chính.
+## Tuần 5-6:
+-	**Kế hoạch:** Hoàn thành chức năng xem lịch thi đấu và kết quả các trận gần nhất, học và tìm hiểu về MySQL và NodeJS.
+-  **Công việc:**
+   - Tạo giao diện bảng thống kê trận đấu.
+   - Tìm kiếm dữ liệu sử dụng tạm thời để đưa vào bảng thống kê.
+   - Sửa lại giao diện chính: Thêm logo web, slogan.
+   - Tìm hiểu về ứng dụng của NodeJS và cách sử dụng. 
+   - Học trước về MySQL để chuẩn bị cho kế hoạch tiếp theo.
 
