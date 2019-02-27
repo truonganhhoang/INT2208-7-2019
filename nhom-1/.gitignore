@@ -44,3 +44,6 @@ Thumbs.db
 
 # env file
 .env
+
+#imageData
+/data

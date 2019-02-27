@@ -5,15 +5,13 @@
 require('dotenv').config();
 const express = require('express');
 const router = express.Router();
-const MongoClient = require('mongodb').MongoClient;
-const passport = require('passport');
-const FacebookStrategy = require('passport-facebook');
+//const passport = require('passport');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const bodyParser = require('body-parser');
 const tryConnect = require('./connect-mongo');
 
+//const FacebookStrategy = require('passport-facebook');
 
 const url = process.env.URL_MONGODB;
 const secret = process.env.TOKEN_SECRET;
@@ -186,26 +184,26 @@ router.post('/login',(req,res)=>{
     });
 });
 
-passport.use(new FacebookStrategy({
-    clientID: process.env.FACEBOOK_CLIENTID,
-    clientSecret: process.env.FACEBOOK_CLIENTSECRET,
-    callbackURL: 'http://localhost:3000/auth/facebook/callback',
-    profileFields: ['id', 'displayName', 'photos', 'email'],
-    enableProof:true
-    },
-    function(accessToken, refreshToken, profile,cb) {
-        console.log(profile);
-    }
-));
+// passport.use(new FacebookStrategy({
+//     clientID: process.env.FACEBOOK_CLIENTID,
+//     clientSecret: process.env.FACEBOOK_CLIENTSECRET,
+//     callbackURL: 'http://localhost:3000/auth/facebook/callback',
+//     profileFields: ['id', 'displayName', 'photos', 'email'],
+//     enableProof:true
+//     },
+//     function(accessToken, refreshToken, profile,cb) {
+//         console.log(profile);
+//     }
+// ));
 
-router.get('/facebook', passport.authenticate('facebook'));
+// router.get('/facebook', passport.authenticate('facebook'));
 
 
-router.get('/facebook/callback',
-    passport.authenticate('facebook',{successRedirect:'http://localhost:4200',failureRedirect:'http://localhost:4200'}),
-    (req,res)=>{
-        res.json({"hello":"success"});
-    }
-);
+// router.get('/facebook/callback',
+//     passport.authenticate('facebook',{successRedirect:'http://localhost:4200',failureRedirect:'http://localhost:4200'}),
+//     (req,res)=>{
+//         res.json({"hello":"success"});
+//     }
+// );
 
 module.exports = router;
