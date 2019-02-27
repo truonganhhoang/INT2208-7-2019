@@ -1,9 +1,11 @@
 ﻿import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import { AlertService, UserService, AuthenticationService } from '@app/_services';
+import { environment } from '@environments/environment';
+import { AlertService, UserService} from '@app/_services';
 
 @Component({templateUrl: 'register.component.html'})
 export class RegisterComponent implements OnInit {
@@ -14,12 +16,12 @@ export class RegisterComponent implements OnInit {
     constructor(
         private formBuilder: FormBuilder,
         private router: Router,
-        private authenticationService: AuthenticationService,
         private userService: UserService,
-        private alertService: AlertService
+        private alertService: AlertService,
+        private http: HttpClient
     ) { 
         // redirect to home if already logged in
-        if (this.authenticationService.currentUserValue) { 
+        if (this.userService.currentUserValue) { 
             this.router.navigate(['/']);
         }
     }
@@ -46,7 +48,7 @@ export class RegisterComponent implements OnInit {
         }
 
         this.loading = true;
-        this.userService.register(this.registerForm.value)
+        this.http.post<any>(`${environment.apiUrl}/auth/createuser`, this.registerForm.value)
             .pipe(first())
             .subscribe(
                 data => {
