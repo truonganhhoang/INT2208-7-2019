@@ -19,15 +19,15 @@
  - Tìm kiếm sản phẩm theo tên sản phẩm, giá tiền,...
   
 ## Quy trình phát triển:
-### RUP - Rational Unified Process:
-- Các bước:
+##### Các bước:
  - Phân tích yêu cầu.
  - Thiết kế.
  - Xây dựng.
  - Kiểm thử.
  - Tích hợp.
  - Bảo trì.
-- Phân công nhiệm vụ:
+
+##### Phân công nhiệm vụ:
  - Mọi người học thêm Database để áp dụng vào sản phẩm.
  - Thiết kế giao diện: 1 người.
  - Code giao diện: 2 người.
@@ -35,3 +35,11 @@
  - Kiểm thử: Mọi người làm phần nào phải chịu trách nhiệm kiểm thử phần đó.
  - Tích hợp: sau khi tạo ra được app bán hàng chạy được và có các chức năng cơ bản thì cùng góp ý để tích hợp thêm những tính    năng hữu ích khác hoàn thiện sản phẩm hơn.
  - Bảo trì: 
+
+##Product Backlog:
+ - Tìm hiểu thêm về HTML, CSS, Bootstrap, PHP.
+ - Xây dựng giao diện cho cửa sổ home, cửa sổ quản lí của chủ shop, cửa sổ login logout.
+ - Thiết kế Database cho ứng dụng web của nhóm.
+ - Tạo được quy trình đặt hàng.
+ - Tạo chức năng tìm kiếm sản phẩm theo tên.
+
