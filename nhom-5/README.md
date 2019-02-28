@@ -43,4 +43,14 @@ Chức năng:
 - Tạo chức năng phân loại danh mục và tìm kiếm mặt hàng.
 - Tạo chức năng nhắn tin trao dổi giữa giữa các tài khoản
 
-**Dự kiến mỗi công việc sẽ là mục tiếu chính của một sprint**
+**Product Owner: Đào Đức Khiêm**
+- tạo product backlog
+- sắp sếp công việc theo thứ tự ưu tiên từ trên xuống dưới
+- viết product backlog rõ ràng chi tiết dễ hiểu
+**Scrum Master: Nguyễn Đức Lộc**
+- Đánh giá khối lượng công việc của từng công việc trong product-backlog.
+- Tạo sprint-backlog hợp lý với khả năng của nhóm.
+- Phân công công việc phù hợp cho từng người trong nhóm phát triển tùy thuộc theo khả năng.
+- Theo dõi tiến độ làm việc của thành viên và điều chỉnh công việc cho hợp lý.
+**Development Team: Nguyễn Cảnh Hoàng, Đinh Sỹ Hào**
+- Thiết kế cơ sở dữ liệu, và viết mã cho phần mềm.
