@@ -26,21 +26,17 @@
       <li> Scrum Development Team: Trịnh Thị Thảo và Nguyễn Thị Huyền Trang
         <p>Team quản lý công việc và tổ chức công việc nhằm hoàn thành các giai đoạn hoặc chu kỳ phát triển.</p></li>
   </ul>
-  <h3>Tóm tắt kế hoạch thực hiện:</h3>
-  <ul type="disc">
-    <li> Tuần thứ 5: hoàn thành phiên bản web 1.0 tra được các từ đơn</li>
-    <li> Tuần thứ 7: phiên bản 2.0 tra được đoạn văn</li>
-    <li> Tuần thứ 9: phiên bản 3.0 cho phép người dùng đăng nhập để thêm, sửa, xóa kho từ</li>
-    <li> Tuần thứ 12-13: phiên bản 4.0 có thêm các đường link dẫn đến các khóa học tiếng Anh</li>
-  </br>
-    <p>Mỗi phiên bản được đưa ra đều thông qua quá trình như sau:</p>
-     <ul type="circle">
-        <li>  Mỗi một giai đoạn lặp lại của một scrum được biết đến như là Sprint</li>
-        <li>  Product backlog là một danh sách bao gồm các mô tả chi tiết để hoàn thành sản phẩm cuối cùng</li>
-        <li> 	Trong mỗi Sprint, các mục hàng đầu của Product backlog được chọn và chuyển thành Sprint backlog</li>
-        <li> 	Nhóm làm việc trên sprint backlog đã được mô tả</li>
-        <li> 	Nhóm kiểm tra cho công việc hàng ngày</li>
-        <li> 	Vào cuối các sprint, nhóm sẽ phát hành các tính năng của sản phẩm</li>
-     </ul>
-  </ul>
-
+  
+ ## Product backlog:
+ -  Thiết kế giao diện.
+ -	Xây dựng database.
+ -	Xây dựng chức năng tra từ đơn.
+ -	Xây dựng chức năng tra câu.
+ -	Thêm chức năng phát âm.
+ -  Thêm danh sách khóa học.
+ ## Sprint backlog 1:
+ -	**Kế hoạch:**  Hoàn thành giao diện trang chính.
+ -  **Công việc:**
+    - Tự học HTML, CSS, JS, và Bootstrap.
+     - Sử dụng kiến thức học được tạo giao diện trang chính.
+     - Tạo 3 tab trên giao diện.
