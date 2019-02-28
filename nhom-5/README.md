@@ -34,7 +34,7 @@ Chức năng:
 3) Kiểm thử.
 4) Cải tiến.
 ### Thời hạn của một sprint:
-- Một sprint kéo dài 2 tuần và các công việc bắt buộc phải dừng lại khi sprint kết thúc để đánh giá mức độ hoàn thiện, giải quyết các vấn đề phát sinh và cải thiện khả năng làm việc của cả nhóm.
+- Một sprint kéo dài 1 tuần và các công việc bắt buộc phải dừng lại khi sprint kết thúc để đánh giá mức độ hoàn thiện, giải quyết các vấn đề phát sinh và cải thiện khả năng làm việc của cả nhóm.
 
 ### Danh sách công việc:
 - Tạo cơ sở dữ liệu với các cấu trúc dữ liệu và phương thức nhập xuất dữ liệu phù hợp.
@@ -47,10 +47,12 @@ Chức năng:
 - tạo product backlog
 - sắp sếp công việc theo thứ tự ưu tiên từ trên xuống dưới
 - viết product backlog rõ ràng chi tiết dễ hiểu
-**Scrum Master: Nguyễn Đức Lộc**
+
+**Scrum master: Nguyễn Đức Lộc**
 - Đánh giá khối lượng công việc của từng công việc trong product-backlog.
 - Tạo sprint-backlog hợp lý với khả năng của nhóm.
 - Phân công công việc phù hợp cho từng người trong nhóm phát triển tùy thuộc theo khả năng.
 - Theo dõi tiến độ làm việc của thành viên và điều chỉnh công việc cho hợp lý.
+
 **Development Team: Nguyễn Cảnh Hoàng, Đinh Sỹ Hào**
 - Thiết kế cơ sở dữ liệu, và viết mã cho phần mềm.
