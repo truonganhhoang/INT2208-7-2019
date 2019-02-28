@@ -47,6 +47,7 @@ Chức năng:
 - tạo product backlog
 - sắp sếp công việc theo thứ tự ưu tiên từ trên xuống dưới
 - viết product backlog rõ ràng chi tiết dễ hiểu
+- trong quy trình suy nghĩ để loại bỏ những hạng mục không cần thiết.
 
 **Scrum master: Nguyễn Đức Lộc**
 - Đánh giá khối lượng công việc của từng công việc trong product-backlog.
