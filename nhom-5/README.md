@@ -55,5 +55,8 @@ Chức năng:
 - Phân công công việc phù hợp cho từng người trong nhóm phát triển tùy thuộc theo khả năng.
 - Theo dõi tiến độ làm việc của thành viên và điều chỉnh công việc cho hợp lý.
 
-**Development Team: Nguyễn Cảnh Hoàng, Đinh Sỹ Hào**
-- Thiết kế cơ sở dữ liệu, và viết mã cho phần mềm.
+**Development Team: Nguyễn Cảnh Hoàng, Đinh Sỹ Hào, Nguyễn Đức Lộc, Đào Đức Khiêm**
+- Viết mã cho phần mềm.
+- Hoàn thiện từng chức năng theo yêu cầu về chất lượng và thời hạn đã đề ra trong sprint.
+- kiểm thử sản phẩm.
+- Viết hướng dẫn sử dụng.
