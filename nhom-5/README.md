@@ -49,7 +49,7 @@ Chức năng:
 - viết product backlog rõ ràng chi tiết dễ hiểu
 - trong quy trình suy nghĩ để loại bỏ những hạng mục không cần thiết.
 
-**Scrum master: Nguyễn Đức Lộc**
+**Scrum Master: Nguyễn Đức Lộc**
 - Đánh giá khối lượng công việc của từng công việc trong product-backlog.
 - Tạo sprint-backlog hợp lý với khả năng của nhóm.
 - Phân công công việc phù hợp cho từng người trong nhóm phát triển tùy thuộc theo khả năng.
