@@ -3,8 +3,10 @@
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/" *ngIf="currentUser">Home</a>
         <a class="nav-item nav-link" routerLink="{{currentUser.username}}" *ngIf="currentUser">Profile</a>
-        <a class="nav-item nav-link" routerLink="/login" *ngIf="!currentUser">Login</a>
         <a class="nav-item nav-link" (click)="logout()" *ngIf="currentUser">Logout</a>
+
+        <a class="nav-item nav-link" routerLink="/login" *ngIf="!currentUser">Login</a>
+        <a class="nav-item nav-link" routerLink="/register" *ngIf="!currentUser">Register</a>
     </div>
 </nav>
 
