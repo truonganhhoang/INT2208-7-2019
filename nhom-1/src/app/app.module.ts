@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatNativeDateModule, MatInputModule } from '@angular/material';
 
 import { AppComponent }  from './app.component';
@@ -30,6 +31,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
         MatRadioModule,
         MatDatepickerModule,
         MatButtonModule,
+        MatCardModule,
         MatNativeDateModule, MatInputModule,
     ],
     declarations: [
