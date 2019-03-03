@@ -12,9 +12,7 @@ const appRoutes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'messenger', component: MessengerComponent, canActivate:[AuthGuard]},
-    { path: 'user', component: UserProfileComponent},
-    // otherwise redirect to home
-    { path: '**', redirectTo: '' }
+    { path: '**',  component: UserProfileComponent}
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

@@ -36,6 +36,10 @@ export class UserService {
         return this.http.delete(`${environment.apiUrl}/users/${id}`);
     }
 
+    checkvalid(username: string) {
+        return this.http.post<any>(`${environment.apiUrl}/auth/checkvaliduser`, ({username}));
+    }
+
     public get currentUserValue(): User {
         return this.currentUserSubject.value;
     }
@@ -46,6 +50,7 @@ export class UserService {
                 // login successful if there's a jwt token in the response
                 if (user && user.token) {
                     // store user details and jwt token in local storage to keep user logged in between page refreshes
+                    user.username = username;
                     localStorage.setItem('currentUser', JSON.stringify(user));
                     this.currentUserSubject.next(user);
                 }
