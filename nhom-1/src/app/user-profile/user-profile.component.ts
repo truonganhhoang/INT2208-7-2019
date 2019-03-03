@@ -23,7 +23,7 @@ export class UserProfileComponent implements OnInit {
             .subscribe(
                 data => {
                     if (data.valid) {
-                        this.router.navigate([''])
+                        this.router.navigate(['notfound'])
                     }
                 }
             );

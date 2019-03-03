@@ -16,9 +16,9 @@ import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { MessengerComponent } from './messenger/messenger.component';
-import { MessageComponent } from './message/message.component';;
-import { UserProfileComponent } from './user-profile/user-profile.component'
-
+import { MessageComponent } from './message/message.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 @NgModule({
     imports: [
         BrowserModule,
@@ -38,7 +38,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component'
         RegisterComponent,
         MessengerComponent ,
         MessageComponent ,
-        UserProfileComponent  ],
+        UserProfileComponent ,
+        NotFoundComponent ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
     ],
