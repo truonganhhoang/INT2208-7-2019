@@ -5,7 +5,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material';
+import { MatNativeDateModule, MatInputModule } from '@angular/material';
 
 import { AppComponent }  from './app.component';
 import { routing }        from './app.routing';
@@ -28,7 +28,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
         BrowserAnimationsModule,
         MatRadioModule,
         MatDatepickerModule,
-        MatNativeDateModule
+        MatNativeDateModule, MatInputModule,
     ],
     declarations: [
         AppComponent,

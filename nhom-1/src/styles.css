@@ -7,3 +7,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-radio-button ~ .mat-radio-button {
     margin-left: 16px;
   }
+
+.form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
