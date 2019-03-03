@@ -5,12 +5,27 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const tryConnect = require('./../auth/connect-mongo');
+const tryConnect = require('../database/connect-mongo');
 const multer = require('multer');
+const tokenCheck = require('./token-check');
+const userSchema = require('./../model/user.model');
 
-var fileHandlerMiddleware = multer({dest:'./data/avatar/'});
+const User = mongoose.model('User',userSchema);
 
-router.post('/imageUpload',fileHandlerMiddleware.single('avatar'),(req,res)=>{
+var avatarHandlerMiddleware = multer({dest:'./data/avatar/'});
+
+router.get('/userinfo',tokenCheck,(req,res)=>{
+
+});
+
+
+
+
+
+
+
+
+router.post('/avatarupload',avatarHandlerMiddleware.single('avatar'),(req,res)=>{
     console.log(req.file);
 })
 

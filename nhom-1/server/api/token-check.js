@@ -12,6 +12,7 @@ var middleware_TokenCheck = function(req,res,next) {
                 valid:false
             });
         } else {
+            req.body.username=valid.user;
             next();
         }
         
