@@ -6,7 +6,7 @@
 	* Bùi Văn Bảo
 	* Vũ Quốc Trưởng
 	* Vũ Ðức Dũng
-	* Lê Thành Vinh
+	* Trịnh Đức Anh
 	
 ## Web:
 
@@ -30,11 +30,11 @@
 
 ### Vai trò:
 	- Product Owner: Bùi Văn Bảo  
-		Nhiệm vụ: Xây dựng, hiệu chỉnh và duy trì Product Backlog, tạo các cuộc họp, bàn luận, định hướng và thông qua Sprint Backlog. Chịu trách nhiệm về sản phẩm.
+		Nhiệm vụ: Xây dựng, hiệu chỉnh và duy trì Product Backlog, tạo các cuộc họp, bàn luận, định hướng và thông qua Sprint Backlog. Chịu trách nhiệm về sản phẩm.  
 	- Scrum Master: Vũ Quốc Trưởng  
-		Nhiệm vụ: Hỗ trợ Product Owner tạo và triển khai Product Backlog, hỗ trợ quản lý trong dự án. Tổ chức các cuộc họp, quan sát, hỗ trợ giúp nhóm làm việc hiệu suất hơn, nhanh chóng đạt được mục tiêu Sprint.
+		Nhiệm vụ: Hỗ trợ Product Owner tạo và triển khai Product Backlog, hỗ trợ quản lý trong dự án. Tổ chức các cuộc họp, quan sát, hỗ trợ giúp nhóm làm việc hiệu suất hơn, nhanh chóng đạt được mục tiêu Sprint.  
 	- Development Team: 4 thành viên trong nhóm 
-		Nhiệm vụ: Hiểu rõ yêu cầu, phân tích, thiết kế, coding sản phẩm. Sửa lỗi và đóng góp cải tiến sản phẩm, chịu trách nhiệm với công việc của mình về chất lượng, thời hạn hoàn thành.
+		Nhiệm vụ: Hiểu rõ yêu cầu, phân tích, thiết kế, coding sản phẩm. Sửa lỗi và đóng góp cải tiến sản phẩm, chịu trách nhiệm với công việc của mình về chất lượng, thời hạn hoàn thành.  
 	
 ### Product Backlog:
 	1. Cập nhật các đề thi thử của các trường Đại học và Trung học phổ thông.  
