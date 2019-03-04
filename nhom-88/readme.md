@@ -59,6 +59,7 @@
     * Phùng Xuân Vượng
     * Hoàng Trần Long Nhật
     * Trương Việt Hoàng
+    * Phan Huy Hoàng
 
 #### Product backlogs
 
@@ -68,6 +69,7 @@
 - [x] Gửi và lưu dữ liệu từ client lên cơ sở dữ liệu(csdl) và gửi dữ liệu từ csdl về client.
 - [ ] Đăng ký, đăng nhập (xử lý phía backen)
 - [ ] Hoàn thiện giao diện: Đăng ký, đăng nhập, Màn hình chính
+- [ ] Giao diện trang cá nhân
 
 #### Sprint backlog
 
@@ -87,5 +89,6 @@
 
 - [x] 27/2/2019: Cập nhật thanh navigator
 - [ ] 27-2 - 4/3: Chức năng đăng ký tài khoản
+- [ ]
 
 
