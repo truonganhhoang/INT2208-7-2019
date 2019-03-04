@@ -12,11 +12,12 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-default navbar-fixed-top">
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav nav-tabs" id="mytab" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="tab-matchinfo" data-toggle="tab" href="#content-matchinfo" role="tab"
+                <li class="nav-item active">
+                    <a class="nav-link" id="tab-matchinfo" data-toggle="tab" href="#content-matchinfo" role="tab"
                         aria-controls="content-matchinfo" aria-selected="false">Match Info</a>
                 </li>
                 <li class="nav-item">
@@ -27,13 +28,17 @@
                     <a class="nav-link" id="tab-statistics" data-toggle="tab" href="#content-statistics" role="tab"
                         aria-controls="content-statistics" aria-selected="true">Statistics</a>
                 </li>
-                <li><a a class="nav-link" id="tab-lineups" data-toggle="tab" href="#content-lineups" role="tab"
-                        aria-controls="content-lineups" aria-selected="true">Line-ups</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tab-lineups" data-toggle="tab" href="#content-lineups" role="tab"
+                        aria-controls="content-lineups" aria-selected="true">Line-ups</a>
+                </li>
             </ul>
         </div>
     </nav>
+
+
     <div class="tab-content" id="mytabcontent">
-        <div class="tab-pane fade show active" id="content-matchinfo" role="tabpanel" aria-labelledby="tab-matchinfo">
+        <div class="tab-pane active" id="content-matchinfo" role="tabpanel" aria-labelledby="tab-matchinfo">
             <div class="container">
                 <div class="blog-header">
                     <div class="col-xs-12 col-sm-12 col-md-8">
