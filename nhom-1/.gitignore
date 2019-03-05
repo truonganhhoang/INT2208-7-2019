@@ -46,4 +46,4 @@ Thumbs.db
 .env
 
 #imageData
-/data
+src/assets/data

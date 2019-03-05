@@ -18,22 +18,18 @@ var userSchema = new Schema({
     },
     birthday: Date,
     gender: Boolean,
-    avatar: { 
-        url: {type:String,
-            default:''},
-        imgType: {type:String,
-            default:''}
-    },
+    avatarUrl: String,
     joinDay: {
         type: Date,
         default: Date.now
     }, 
     threads: {
-        type: [threadSchema],
+        type: [String],
         default: []
     },
     friends: {
-        type: [String]
+        type: [String],
+        default: []
     }
 });
 

@@ -40,7 +40,7 @@ export class UserProfileComponent implements OnInit {
     uploadFile() {
         let fileData = new FormData();
         fileData.append('avatar',this.file);
-        this.httpClient.post('http://localhost:3000/api/imageUpload',fileData).subscribe((value)=>console.log(value));
+        this.httpClient.post('http://localhost:3000/api/avatarupload',fileData).subscribe((value)=>console.log(value));
         console.log('uploading');
     }
 }

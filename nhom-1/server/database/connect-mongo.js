@@ -11,14 +11,12 @@ function sleep(milliseconds) {
 
 var tryConnect = function(mongoose) {
     if (mongoose.connection.readyState===0) {
-        console.log('I run  it');
         mongoose.connect(process.env.URL_MONGODB,{useNewUrlParser:true});
     } else return true;
     for (var i=0;i<10;i++) {
         if (mongoose.connection.readyState===1) return true;
         sleep(500);
         mongoose.connect(process.env.URL_MONGODB,{useNewUrlParser:true});
-        console.log('I run  the loop');
     }
     return false;
 }

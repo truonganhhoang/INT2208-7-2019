@@ -3,17 +3,27 @@ require('dotenv').config();
 const jwt = require('jsonwebtoken');
 
 var middleware_TokenCheck = function(req,res,next) {
-    if (req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer') {
-        var token = req.headers.authorization.split(' ')[1] | null;
+    if (req.headers.authorization && req.headers.authorization.split(' ')[0] == 'Bearer') {
+        var token = req.headers.authorization.split(' ')[1];
+        if (!token) {
+            res.json({
+                state:true,
+                valid:false
+            });
+            return;
+        }
         var valid = jwt.verify(token,process.env.TOKEN_SECRET);
         if (!valid) {
             res.json({
                 state:true,
                 valid:false
             });
+            return;
         } else {
-            req.body.username=valid.user;
+            req.body.username=valid.username;
+            req.username=valid.username;
             next();
+            return;
         }
         
     } else {
@@ -21,6 +31,7 @@ var middleware_TokenCheck = function(req,res,next) {
             state:true,
             valid:false
         });
+        return;
     }
 }
 

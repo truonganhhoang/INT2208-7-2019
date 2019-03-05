@@ -5,20 +5,19 @@
 require('dotenv').config();
 const express = require('express');
 const router = express.Router();
-//const passport = require('passport');
 const mongoose = require('./../database/mongoose-connect');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const tryConnect = require('../database/connect-mongo');
-const userSchema = require('./../model/user.model')
+const userSchema = require('./../model/user.model');
 
+//const passport = require('passport');
 //const FacebookStrategy = require('passport-facebook');
 
 const url = process.env.URL_MONGODB;
 const secret = process.env.TOKEN_SECRET;
 
 mongoose.connect(url,{useNewUrlParser:true});
-
 
 
 
