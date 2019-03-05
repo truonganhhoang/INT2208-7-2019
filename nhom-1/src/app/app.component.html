@@ -1,14 +1,11 @@
-﻿<!-- nav -->
-<nav class="navbar navbar-expand navbar-dark bg-dark">
-    <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/" *ngIf="currentUser">Home</a>
-        <a class="nav-item nav-link" routerLink="{{currentUser.username}}" *ngIf="currentUser">Profile</a>
-        <a class="nav-item nav-link" (click)="logout()" *ngIf="currentUser">Logout</a>
+﻿<mat-toolbar color="primary">
+    <button style="outline: none" mat-button routerLink="/" *ngIf="currentUser">Home</button>
+    <button style="outline: none" mat-button routerLink="{{currentUser.username}}" *ngIf="currentUser">Profile</button>
+    <button style="outline: none" mat-button (click)="logout()" *ngIf="currentUser">Logout</button>
 
-        <a class="nav-item nav-link" routerLink="/login" *ngIf="!currentUser">Login</a>
-        <a class="nav-item nav-link" routerLink="/register" *ngIf="!currentUser">Register</a>
-    </div>
-</nav>
+    <button style="outline: none" mat-button routerLink="/login" *ngIf="!currentUser">Login</button>
+    <button style="outline: none" mat-button routerLink="/register" *ngIf="!currentUser">Register</button>
+</mat-toolbar>
 
 <!-- main app container -->
 <div class="jumbotron">

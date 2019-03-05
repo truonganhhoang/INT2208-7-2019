@@ -7,6 +7,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatNativeDateModule, MatInputModule } from '@angular/material';
 
 import { AppComponent }  from './app.component';
@@ -32,6 +34,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
         MatDatepickerModule,
         MatButtonModule,
         MatCardModule,
+        MatGridListModule,
+        MatToolbarModule,
         MatNativeDateModule, MatInputModule,
     ],
     declarations: [

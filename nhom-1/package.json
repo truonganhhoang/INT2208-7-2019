@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve | node server/server.js",
+    "start": "ng serve --host 0.0.0.0 | node server/server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
