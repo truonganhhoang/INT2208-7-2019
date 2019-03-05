@@ -21,6 +21,7 @@ var storage = multer.diskStorage({
 
 var avatarHandlerMiddleware = multer({storage: storage});
 
+
 router.post('/userdetail',tokenCheck,(req,res)=>{
     User.findOne({username: req.body.username},(err,doc)=>{
         if (err) {
@@ -103,7 +104,7 @@ router.post('/avatarupload',tokenCheck,avatarHandlerMiddleware.single('avatar'),
             state:true
         });
     });
-})
+});
 
 
 

@@ -5,9 +5,9 @@ module.exports = function(server) {
     io.on('connection',(socket)=>{
         console.log('connected');
         socket.on('login',(data)=>{
-            socket.join('ROOM1');
-            console.log(data);
-            console.log(' joined room');
+            let room = gen(data.user1,data.user2);
+            socket.join(room);
+            console.log('Joined room ',room);
         });
         socket.on('add message',(data)=>{
             socket.to('ROOM1').emit('new message',data);
