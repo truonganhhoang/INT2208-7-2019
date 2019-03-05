@@ -1,29 +1,29 @@
 .container-fluid{
-	border-top: 20px #2a2730;
-	background-color:#eff1e6;
+	padding-right: 0px;
+    padding-left: 0px;
 }
-.navbar-default{
-	background : none;
-}
-.navbar-nav {
-    padding-right: 55px;
+.container{
+	margin-top: 10%;
 }
 .nav>li>a {
     padding: 14px 40px;
 }
 .navbar-form {
-    padding: 4px 310px;
+    padding-left: 35%;
 }
 .navbar-brand {
 	margin-top: -30px;
 	padding-left: 50px;
 }
-.row{
-	    margin-top: 30px;
+.btn {
+	border-radius: 10px;
+}
+.navbar{
+    margin-bottom: 50px;
 }
 .form-control {
 	text-align: center;
-	padding: 6px 100px;
+	padding: 6px 15%;
 	border-radius: 10px;
 }
 h3{
@@ -34,12 +34,39 @@ h3{
 	color: #0f0465;
 }
 .bs-docs-footer {
-    padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 100px;
     color: #99979c;
     background-color: #2a2730;
 }
-.navbar {
-	padding-left: 140px;
+.topnav {
+    position: absolute;
+    right: 30px;
+    top: 16px;
+    padding-bottom: 13px;
+    z-index: 99;
+}
+#header{
+	height:90px;
+	background-color: #2a2730;
+}
+#logo{
+	padding-top: 20px;
+}
+#panner{
+    width: 130%;
+}
+.sidebar{
+	border: 1px solid black;
+	background-color: ghostwhite;	
+
+}
+#menu{
+	padding-left: 0px;
+	width: 23%;
+
+}
+ul {
+    margin-top: 3%;
+    margin-bottom: 10px;
 }
