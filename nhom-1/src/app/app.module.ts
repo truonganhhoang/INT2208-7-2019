@@ -9,6 +9,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatIconModule } from '@angular/material/icon';
 import { MatNativeDateModule, MatInputModule } from '@angular/material';
 
 import { AppComponent }  from './app.component';
@@ -36,6 +40,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
         MatCardModule,
         MatGridListModule,
         MatToolbarModule,
+        MatSidenavModule,
+        MatListModule,
+        MatTabsModule,
+        MatIconModule,
         MatNativeDateModule, MatInputModule,
     ],
     declarations: [

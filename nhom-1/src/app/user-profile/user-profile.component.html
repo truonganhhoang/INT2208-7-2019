@@ -1,10 +1,39 @@
-<mat-card>
-    <mat-card-header>
-        <div mat-card-avatar style="background-image:url('https://material.angular.io/assets/img/examples/shiba1.jpg'); background-size:contain"></div>
-        <mat-card-title>{{username}}</mat-card-title>
-        <mat-card-subtitle>{{username}}</mat-card-subtitle>
-    </mat-card-header>
-</mat-card>
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened style="width: 185px">
+        <mat-card>
+                <div mat-card-avatar style="background-image:url('https://material.angular.io/assets/img/examples/shiba1.jpg'); height: 150px; width: 150px; background-size: contain"></div>
+                <mat-card-title style="margin-top: 20px">{{user.name}}</mat-card-title>
+                <mat-card-subtitle>{{user.username}}</mat-card-subtitle>
+        </mat-card>
 
-<input type="file" (change)="onUpload($event,image)" accept="image/*" name="avatar">
-<button type="button" class="btn btn-primary" (click)="uploadFile()">Upload</button>
+        <mat-list>
+            <mat-list-item>
+                <button mat-button style="width:100%; text-align: left; outline: none">
+                    Add friend
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button style="width:100%; text-align: left; outline: none">
+                    Message
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button style="width:100%; text-align: left; outline: none">
+                    Follow
+                </button>
+            </mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content style="height: 1000px">
+        <mat-tab-group style="margin-left: 40px">
+            <mat-tab label="Posts"> Content 0 </mat-tab>
+            <mat-tab label="Photos"> Content 1 </mat-tab>
+            <mat-tab label="Info"> Content 2 </mat-tab>
+            <mat-tab label="Friends"> Content 3 </mat-tab>
+        </mat-tab-group>
+        <!-- <input type="file" (change)="onUpload($event,image)" accept="image/*" name="avatar">
+        <button type="button" class="btn btn-primary" (click)="uploadFile()">Upload</button> -->
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

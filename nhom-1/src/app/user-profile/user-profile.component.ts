@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router'
 import { UserService } from '@app/_services'
+import { User } from '@app/_models';
 
 @Component({
   selector: 'app-user-profile',
@@ -11,15 +12,15 @@ import { UserService } from '@app/_services'
 export class UserProfileComponent implements OnInit {
 
     file: any;
-    username: string;
+    user: User;
 
     constructor(
         private httpClient: HttpClient,
         private router: Router,
         private userService: UserService
     ) {
-        this.username = this.router.url.substring(1);
-        this.userService.checkvalid(this.username)
+        var username = this.router.url.substring(1);
+        this.userService.checkvalid(username)
             .subscribe(
                 data => {
                     if (data.valid) {
@@ -27,6 +28,13 @@ export class UserProfileComponent implements OnInit {
                     }
                 }
             );
+        this.userService.get(username)
+            .subscribe(
+                data => {
+                    this.user = data.user;
+                    console.log(this.user);
+                }
+            )
     }
 
 

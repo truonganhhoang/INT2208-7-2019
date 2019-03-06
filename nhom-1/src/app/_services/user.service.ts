@@ -20,8 +20,8 @@ export class UserService {
         return this.http.get<User[]>(`${environment.apiUrl}/users`);
     }
 
-    getById(id: number) {
-        return this.http.get(`${environment.apiUrl}/users/${id}`);
+    get(username: string) {
+        return this.http.get<any>(`${environment.apiUrl}/api/user`, {params: {'username': username}});
     }
 
     register(user: User) {
