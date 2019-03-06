@@ -89,6 +89,6 @@
 
 - [x] 27/2/2019: Cập nhật thanh navigator
 - [ ] 27-2 - 4/3: Chức năng đăng ký tài khoản
-- [ ]
+
 
 
