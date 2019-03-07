@@ -28,14 +28,32 @@ p.text-md-center.mt-2.small-text-course {
     padding-bottom: 52%;
 } 
 
-p.back-tittle {
+p.back-title {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 500;
     font-size: -webkit-xxx-large;
+    animation: turnright 1.8s forwards;
+    transition: 0.6s;
 }
 
+@-webkit-keyframes turnright {
+    0% {
+        transform: translateX(-3000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
 nav.navbar.navbar-light.bg-faded {
     background-color: transparent;
+}
+
+nav.navbar.navbar-light.bg-faded.fixed-nav.navbar-fixed-top {
+    background-color: rgba(0,188,212,1);
+    transition: 0.5s;
+    height: 12%;
 }
 html,body{
     width: 100%;
@@ -85,17 +103,44 @@ li.nav-item.active a.nav-link.btn.btn-outline-secondary {
 .background-title {
     width: 100%;
     height: 100%;
+    position: relative;
+}
+.background-title .background-images{
+    width: 100%;
+    height: 87%;
     background-image: url(images/background.jpg);
     background-size: cover;
     background-position: center center;
-    position: relative;
-    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: showup 5s forwards;
+    transition-timing-function: cubic-bezier(.17,.83,1,.38) ;
+   
+}
+@-webkit-keyframes showup {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .button-discover a{
     padding : 2%;
     margin-top: 5%;
     font-size: 17px;
     font-weight: 500;
+    animation: turn-on 3s forwards;
+    transition: 0.6s
+}
+@-webkit-keyframes turn-on {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .button-discover a.btn.btn-danger.lookingfor {
