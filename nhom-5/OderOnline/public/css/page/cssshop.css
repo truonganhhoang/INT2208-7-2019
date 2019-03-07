@@ -1,0 +1,120 @@
+
+nav{
+    padding: 10px;
+    background: linear-gradient(-180deg,#f53d2d,#753a88);
+    color: white;
+
+}
+.navbar {
+    font-family: Montserrat, sans-serif;
+
+    margin-bottom: 0;
+
+    border: 0;
+    font-size: 11px ;
+    letter-spacing: 3px;
+    opacity: 1;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #d5d5d5 !important;
+
+}
+.navbar-nav li a:hover {
+    color: #1b4b72 !important;
+}
+.navbar-nav li.active a {
+    color: #fff !important;
+
+
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+
+}
+
+a:hover {
+    text-decoration: none;
+    color: #d5d5d5 !important;
+
+}
+
+a:active {
+    text-decoration: none;
+
+}
+.loaisp a:visited{
+    background-color: #1b6d85 !important;
+
+}
+
+.user{
+    margin-top: -10px;
+}
+#logout{
+
+    position: relative;
+
+}
+.info{
+
+
+}
+.carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */
+    width: 100%; /* Set width to 100% */
+    height: 500px !important;
+    margin: auto;
+}
+.carousel-caption h3 {
+    color: #fff !important;
+}
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+.shopping{
+    padding: 8px;
+    border: 1px solid #1b6d85;
+    border-radius: 3px;
+
+
+}
+.newproduct{
+    height: 250px !important;
+    max-width: 250px !important;
+}
+.caption,.body{
+
+}
+.giohang{
+    float: right;
+    margin-top: 1px;
+    padding: 10px;
+
+}
+.li-cart{
+    color: #1b6d85 !important;
+    letter-spacing: 0 !important;
+}
+.li-empty{
+    padding: 15px;
+
+}
+.li-empty-text{
+    color: #23527c;
+    letter-spacing: 0;
+    font-size: 11px;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
