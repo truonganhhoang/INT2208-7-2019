@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    
 </header>
 
 <body>
@@ -56,30 +57,31 @@
             <div class="card-header">
               <h5 class="display-6" id="quiz_content"></h5>
             </div>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="row">
-          <div class="col-6">
-            <div class="row">
-              <button class="btn btn-primary" id="btnA"></button>
+            <div class="card-body">
+              <div class="row">
+              <div class="col-6">
+                <!-- <div class="row"> -->
+                  <!-- <button class="btn btn-primary" id="btnA"></button> -->
+                  <label class="quiz-container" id="btnA"><input type="radio" name="choices" value="A"><span class="checkmark"></span></label>
+                <!-- </div> -->
+                <!-- <div class="row"> -->
+                  <label class="quiz-container" id="btnC"><input type="radio" name="choices" value="C"><span class="checkmark"></span></label>
+                <!-- </div> -->
+              </div>
+              <div class="col-6">
+                <!-- <div class="row"> -->
+                  <label class="quiz-container" id="btnB"><input type="radio" name="choices" value="B"><span class="checkmark"></span></label>
+                <!-- </div> -->
+                <!-- <div class="row"> -->
+                  <label class="quiz-container" id="btnD"><input type="radio" name="choices" value="D"><span class="checkmark"></span></label>
+                <!-- </div> -->
+              </div>
+              </div>
             </div>
-            <div class="row">
-              <button class="btn btn-primary" id="btnC"></button>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="row">
-              <button class="btn btn-primary" id="btnB"></button>
-            </div>
-            <div class="row">
-              <button class="btn btn-primary" id="btnD"></button>
-            </div>
-          </div>
-          </div>
-        </div>
+          </div>      
       </div>
-    </div>    
+    </div>
+  </div>    
 </div>
 
 
