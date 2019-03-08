@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</header>
+
+<body>
+<nav class="navbar navbar-custom">
+    <a href="#" class="navbar-brand">
+        <img src="logo.jpg" alt="logo" style="width:40px">
+    </a>
+</nav>
+<div class="row">
+    <div class="col-md-3">
+      <div class="row-12 bg-light">
+        <img src="../logo.jpg" alt="This image can not be displayed" class="img-fluid img-thumbnail max-width: 100% height: auto rounded-circle">
+      </div>
+      <div class="row bg-light" style="text-align: center">
+        <div class="col-md-2"></div>
+        <div class="col col-md-8 text-md-center">
+          <div class="card">
+            <div class="card-header">Total Score: </div>
+            <div class="card-body">100/100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="row text-md-center">
+        <div class="button btn btn-link"><a href="quiz1.html">Quiz 1</a></div>
+        <div class="button btn btn-link"><a href="quiz2.html">Quiz 2</a></div>
+        <div class="button btn btn-link"><a href="quiz3.html">Quiz 3</a></div>
+        <div class="button btn btn-link"><a href="quiz4.html">Quiz 4</a></div>
+        <div class="button btn btn-link"><a href="quiz5.html">Quiz 5</a></div>
+        <div class="button btn btn-link"><a href="quiz6.html">Quiz 6</a></div>
+        <div class="button btn btn-link"><a href="quiz7.html">Quiz 7</a></div>
+        <div class="button btn btn-link"><a href="quiz8.html">Quiz 8</a></div>
+        <div class="button btn btn-link"><a href="quiz9.html">Quiz 9</a></div>
+        <div class="button btn btn-link"><a href="quiz10.html">Quiz 10</a></div>
+      </div>
+        <div class="button btn btn-primary">Previous</div>
+        <div class="button btn btn-primary">Next</div>
+      <div class="row text-md-center">
+        
+      </div>
+      <div class="container">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="display-6" id="quiz_content"></h5>
+            </div>
+            <div class="card-body">
+              <div class="row">
+              <div class="col-6">
+                <!-- <div class="row"> -->
+                  <!-- <button class="btn btn-primary" id="btnA"></button> -->
+                  <label class="quiz-container" id="btnA"><input type="radio" name="choices" value="A"><span class="checkmark"></span></label>
+                <!-- </div> -->
+                <!-- <div class="row"> -->
+                  <label class="quiz-container" id="btnC"><input type="radio" name="choices" value="C"><span class="checkmark"></span></label>
+                <!-- </div> -->
+              </div>
+              <div class="col-6">
+                <!-- <div class="row"> -->
+                  <label class="quiz-container" id="btnB"><input type="radio" name="choices" value="B"><span class="checkmark"></span></label>
+                <!-- </div> -->
+                <!-- <div class="row"> -->
+                  <label class="quiz-container" id="btnD"><input type="radio" name="choices" value="D"><span class="checkmark"></span></label>
+                <!-- </div> -->
+              </div>
+              </div>
+            </div>
+          </div>      
+      </div>
+    </div>
+  </div>    
+</div>
+
+
+<script>
+  var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+  var quiz_content, btnA, btnB, btnC, btnD;
+  var questions = [
+    [ "Sự phân công lao động xã hội làm cho sản xuất hàng hoá có tính chất gì?", 
+    "Tính xã hội.", "Tính tư nhân.", "Tính xã hội và tính tư nhân.", "Tính trừu tượng và tính cụ thể." ],
+    [ "Sự tách biệt tương đối giữa những chủ thể sản xuất làm cho lao động sản xuất hàng hoá có tính chất nào sau đây?", 
+    "Tính xã hội.", "Tính tư nhân", "Tính xã hội và tính tư nhân", "Tính trừu tượng và tính cụ thể." ],
+    [ "What is 7 x 3?", "21", "24", "25", "A" ],
+    [ "What is 8 / 2?", "10", "2", "4", "C" ]
+  ];
+  function _(x){
+    return document.getElementById(x);
+  }
+  function renderQuestion(){
+    test = _("test");
+    if(pos >= questions.length){
+      test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+      _("test_status").innerHTML = "Test Completed";
+      pos = 0;
+      correct = 0;
+      return false;
+    }
+    _("quiz_content").innerHTML = "Câu: "+(pos+1)+" / "+questions.length + "<br>" + questions[pos][0];
+    quiz_content = questions[pos][0];    
+    btnA = _("btnA");
+    btnB = _("btnB");
+    btnC = _("btnC");
+    btnD = _("btnD");
+    btnA.innerHTML += questions[pos][1];
+    btnB.innerHTML += questions[pos][2];
+    btnC.innerHTML += questions[pos][3];
+    btnD.innerHTML += questions[pos][4];
+    test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+  }
+  function checkAnswer(){
+    choices = document.getElementsByName("choices");
+    for(var i=0; i<choices.length; i++){
+      if(choices[i].checked){
+        choice = choices[i].value;
+      }
+    }
+    if(choice == questions[pos][4]){
+      correct++;
+    }
+    pos++;
+    renderQuestion();
+  }
+  window.addEventListener("load", renderQuestion, false);
+  </script>
+</body>
+</html>
