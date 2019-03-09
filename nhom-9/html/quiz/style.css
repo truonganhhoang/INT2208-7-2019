@@ -1,5 +1,6 @@
 .btn-primary {
-    margin: 2%;
+    margin: 0.25%;
+    font-size: 16.5px
 }
 .btn-info{
     margin: 0.5%;
@@ -12,7 +13,9 @@
 .navbar-custom .navbar-brand {
     color: #ecf0f1;
 }
-
+.row{
+    margin: 2%;
+}
 .quiz-container {
 display: block;
 position: relative;
