@@ -1,4 +1,3 @@
-var status ;
 var currentQuiz = 0;
 var questions = [
     ["Sự phân công lao động xã hội làm cho sản xuất hàng hoá có tính chất gì?",
@@ -35,7 +34,8 @@ function renderQuestion() {
 };
 
 $(document).ready(function () {
-    status = new Array(10).fill(false);
+    var answerStatus = new Array(10).fill(false);
+	console.log(answerStatus.length);
     renderQuestion();
     $('#prev').click(function () {
         currentQuiz = (currentQuiz + 9) % 10;
@@ -48,16 +48,16 @@ $(document).ready(function () {
         renderQuestion();
     });
     $("input[name='optradio']").change(function () {
-        if(this.id==questions[currentQuiz][5]) status[currentQuiz]=true;
-        else status[currentQuiz]=false;
+        if(this.id==questions[currentQuiz][5]) answerStatus[currentQuiz]=true;
+        else answerStatus[currentQuiz]=false;
     });
     $("button[id='submit']").click( function(){
-        var totalScore = 0;
-        console.log(status.length);
-        for(var i =0;i<status.length; i++){
-            if(status[i])console.log("Câu số "+ String(i+1) +" Đúng");
-            else console.log("Câu số "+ String(i+1) +" Sai");
+        let totalScore = 0;
+        console.log(answerStatus.length);
+        for(var i =0;i<answerStatus.length; i++){
+            if(answerStatus[i] == true) totalScore = totalScore+1;
         }
-        console.log(totalScore);
+        $('#scores').text(String(10*totalScore)+'/100');
+        alert("Điểm số của bạn là: "+ String(10*totalScore));
     })
 })
