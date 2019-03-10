@@ -19,6 +19,11 @@ export class UserProfileComponent implements OnInit {
         private router: Router,
         private userService: UserService
     ) {
+        this.user = new User;
+    }
+
+
+    ngOnInit() {
         var username = this.router.url.substring(1);
         this.userService.checkvalid(username)
             .subscribe(
@@ -35,10 +40,6 @@ export class UserProfileComponent implements OnInit {
                     console.log(this.user);
                 }
             )
-    }
-
-
-    ngOnInit() {
     }
 
     onUpload($event: any) {
