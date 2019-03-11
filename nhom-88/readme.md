@@ -18,6 +18,7 @@
 * Phùng Xuân Vượng
 * Hoàng Trần Long Nhật
 * Trương Việt Hoàng
+* Phan Huy Hoàng
 
 
 ### Nhóm người dùng
@@ -88,7 +89,7 @@
 ##### V1.1
 
 - [x] 27/2/2019: Cập nhật thanh navigator
-- [ ] 27-2 - 4/3: Chức năng đăng ký tài khoản
+- [x] 27-2 - 4/3: Chức năng đăng ký tài khoản
 
 
 
