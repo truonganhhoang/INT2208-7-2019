@@ -17,3 +17,6 @@
 .navbar-custom .navbar-brand {
     color: #ecf0f1;
 }
+.btn {
+  border-radius:0;
+}
