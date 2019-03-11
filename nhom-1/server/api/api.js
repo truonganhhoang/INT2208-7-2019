@@ -22,10 +22,14 @@ var storage = multer.diskStorage({
 var avatarHandlerMiddleware = multer({storage: storage});
 
 
-router.get('/checkfriend',tokenCheck,);
+router.get('/checkfriend',tokenCheck,(req,res)=>{
+
+});
 
 router.get('/addfriend', tokenCheck, (req,res)=>{
     let fr_id = req.query.username;
+    let user_id = req.body.username;
+    
 
 });
 

@@ -9,7 +9,7 @@ import { UserService } from '@app/_services';
 export class HomeComponent implements OnInit, OnDestroy {
     currentUser: User;
     currentUserSubscription: Subscription;
-    users: User[] = [];
+    // users: User[] = [];
 
     constructor(
         private userService: UserService
@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        this.loadAllUsers();
+        // this.loadAllUsers();
     }
 
     ngOnDestroy() {
@@ -28,15 +28,15 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.currentUserSubscription.unsubscribe();
     }
 
-    deleteUser(id: number) {
-        this.userService.delete(id).pipe(first()).subscribe(() => {
-            this.loadAllUsers()
-        });
-    }
+    // deleteUser(id: number) {
+    //     this.userService.delete(id).pipe(first()).subscribe(() => {
+    //         this.loadAllUsers()
+    //     });
+    // }
 
-    private loadAllUsers() {
-        this.userService.getAll().pipe(first()).subscribe(users => {
-            this.users = users;
-        });
-    }
+    // private loadAllUsers() {
+    //     this.userService.getAll().pipe(first()).subscribe(users => {
+    //         this.users = users;
+    //     });
+    // }
 }

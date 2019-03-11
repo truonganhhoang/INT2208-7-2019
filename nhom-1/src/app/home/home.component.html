@@ -1,15 +1,15 @@
 ﻿<h1>Hi {{currentUser.firstName}}!</h1>
 <p>You're logged in with Angular 7!!</p>
-<h3>All registered users:</h3>
-<ul>
+<h3>You are: {{currentUser.username}}</h3>
+<!-- <ul>
     <li *ngFor="let user of users">
-        {{user.username}} ({{user.firstName}} {{user.lastName}})
-        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+        {{users.username}} ({{users.firstName}} {{users.lastName}}) - 
+         <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
     </li>
-</ul>
+</ul> -->
 
-<form class="example-form">
+<!-- <form class="example-form">
     <mat-form-field class="example-full-width">
       <textarea matInput placeholder="What are you thinking?"></textarea>
     </mat-form-field>
-</form>
+</form> -->
