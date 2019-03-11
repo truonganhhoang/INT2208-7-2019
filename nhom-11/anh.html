@@ -26,7 +26,6 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="score.html">Trang chủ</a></li>
 						<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Các giải đấu <span class="caret"></span></a>
 							<ul class="dropdown-menu">
@@ -59,23 +58,22 @@
 		<img src="premier-league-bg.jpg" alt="ngoai hang anh" class="center img-responsive" >&nbsp&nbsp
 		
 	<!--/Toolbar -->
-		<div id="toolbar">
-		    <div class="wrapper text-center">
-		        <div class="btn-group">
-		            <button type="button" class="btn">Bảng xếp hạng</button>
-		            <button type="button" class="btn">Lịch thi đấu - Kết quả</button>
-		        </div>
-		    </div>
-		</div>
+	    <div>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs nav-justified " role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+            data-toggle="tab">Bảng xếp hạng</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+            data-toggle="tab">Lịch thi đấu</a></li>
+        <li role="presentation"><a href="#profile2" aria-controls="profile2" role="tab"
+        	data-toggle="tab">Kết quả</a></li>
+      </ul>
 
-	<!--/Table -->
-		<div class="container">
-			<div class="blog-header">
-				<h3 class="blog-title">Bảng xếp hạng Premier League</h3>
-			</div>
-		</div>
-		<div class="col-md-10">
-			<table class="table table-striped">
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+			<div class="col-md-10">
+				<table class="table table-striped">&nbsp
 				<tr>
 				  <th class="col-md-1">Pos</th>
 				  <th class="col-md-5">Club</th>
@@ -99,8 +97,45 @@
 				<tr>
 					<th>4</th><th>Manchester United</th><th>5</th><th>3</th><th>0</th><th>2</th><th>10</th><th>9</th>
 				</tr>
+				</table>
+			</div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">
+          	<div class="panel panel-default">
+			  <!-- Default panel contents -->
+			  <div class="panel-heading" align="center"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>  Vòng 1  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+				<table class="table">
+				<tr>
+				  <th class="col-xs-4"><p align="center">HOME</p></th>
+				  <th class="col-xs-4"><p align="center">Thời gian</p></th>
+				  <th class="col-xs-4"><p align="center">AWAY</p></th>
+				</tr>
+				<tr>
+					<th><p align="center">Liverpool</p></th><th><p align="center">22:00</p></th><th><p align="center">Manchester City</p></th>
+				</tr>
 			</table>
-		</div>
+			</div>
+			</div>
+		<div role="tabpanel" class="tab-pane" id="profile2">
+          	<div class="panel panel-default">
+			  <!-- Default panel contents -->
+			  <div class="panel-heading" align="center"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>  Vòng 4  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+				<table class="table">
+				<tr>
+				  <th class="col-xs-4"><p align="center">HOME</p></th>
+				  <th class="col-xs-4"><p align="center">Tỉ số</p></th>
+				  <th class="col-xs-4"><p align="center">AWAY</p></th>
+				</tr>
+				<tr>
+					<th><p align="center">Liverpool</p></th><th><p align="center">2 - 1</p></th><th><p align="center">Manchester City</p></th>
+				</tr>
+			</table>
+			</div>
+			</div>
+  </div>
+  
+
+	
 
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
