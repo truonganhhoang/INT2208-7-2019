@@ -73,3 +73,12 @@ ul {
 .btn-default {
 	background-color: #349ac7;
 }
+#N8-1 {
+	position: absolute;
+  	border: 1px solid black;
+  	width: 270px;
+  	height: 400px;
+  	top: 550px;
+  	left: 90px;
+	text-align:center;
+}
