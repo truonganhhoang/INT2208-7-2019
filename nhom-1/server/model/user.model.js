@@ -18,7 +18,10 @@ var userSchema = new Schema({
     },
     birthday: Date,
     gender: Boolean,
-    avatarUrl: String,
+    avatarUrl: {
+        type:String,
+        default:'assets/data/default/useravatar_default.png'
+    },
     joinDay: {
         type: Date,
         default: Date.now

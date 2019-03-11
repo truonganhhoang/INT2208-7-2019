@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-var alertSchema = new Schema({
+var notifySchema = new Schema({
     type: {
         type:String,
         default: ''
@@ -14,4 +14,4 @@ var alertSchema = new Schema({
 
 
 
-module.exports = alertSchema;
+module.exports = notifySchema;
