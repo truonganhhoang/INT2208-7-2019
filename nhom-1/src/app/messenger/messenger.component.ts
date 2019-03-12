@@ -25,6 +25,9 @@ export class MessengerComponent implements OnInit {
       user1: this.userService.currentUserValue.username,
       user2: 'namphan'
     });
+    this.socket.on('hello',(data)=>{
+      console.log(data);
+    });
     
   }
   disconnect() {

@@ -23,7 +23,14 @@ app.get('/test',(req,res)=> {
 
 const server = http.createServer(app);
 
-require('./messenger/socket')(server);
+const io = require('socket.io')(server);
+
+require('./messenger/messenger-socket')(io);
+require('./notification/notification-socket')(io);
+
+app.get('/sendTo',(req,res) => {
+    io.to('namphan_admin_roomchat').emit('hello','well');
+});
 
 
 

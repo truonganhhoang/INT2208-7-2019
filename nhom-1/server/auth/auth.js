@@ -17,6 +17,8 @@ const userSchema = require('./../model/user.model');
 const url = process.env.URL_MONGODB;
 const secret = process.env.TOKEN_SECRET;
 
+mongoose.set('useCreateIndex', true);
+
 mongoose.connect(url,{useNewUrlParser:true});
 
 
@@ -108,7 +110,6 @@ router.post('/createuser',(req,res)=>{
  */
 router.post('/login',(req,res)=>{
     if (!tryConnect(mongoose)) {
-        console.log('this one touched');
         res.json({
             state:false,
             valid:false

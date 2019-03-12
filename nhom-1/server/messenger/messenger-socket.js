@@ -1,7 +1,6 @@
 const gen = require('./generate-room');
 
-module.exports = function(server) {
-    const io = require('socket.io')(server);
+module.exports = function(io) {
     io.on('connection',(socket)=>{
         console.log('connected');
         socket.on('login',(data)=>{
@@ -17,4 +16,4 @@ module.exports = function(server) {
             console.log('leave');
         });
     });
-}
+};
