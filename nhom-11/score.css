@@ -14,4 +14,10 @@ body {
 	margin-right: auto;
 	
 }
+.content {
+    display: none;
+}
+.back {
+    display: none;
+}
 

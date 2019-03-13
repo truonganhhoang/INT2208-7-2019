@@ -70,7 +70,7 @@
       </ul>
 
       <!-- Tab panes -->
-      <div class="tab-content">
+    <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="home">
 			<div class="col-md-10">
 				<table class="table table-striped">&nbsp
@@ -102,20 +102,68 @@
         </div>
         <div role="tabpanel" class="tab-pane" id="profile">
           	<div class="panel panel-default">
-			  <!-- Default panel contents -->
-			  <div class="panel-heading" align="center"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>  Vòng 1  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+			  <div class="content-holder">
+		
+				
+				<div class="content" id="content-1" data-id='1' style="display: block;">
+			  	<div class="panel-heading" align="center">  Vòng 1  </div>
 				<table class="table">
-				<tr>
-				  <th class="col-xs-4"><p align="center">HOME</p></th>
-				  <th class="col-xs-4"><p align="center">Thời gian</p></th>
-				  <th class="col-xs-4"><p align="center">AWAY</p></th>
-				</tr>
-				<tr>
-					<th><p align="center">Liverpool</p></th><th><p align="center">22:00</p></th><th><p align="center">Manchester City</p></th>
-				</tr>
-			</table>
+					<tr>
+					  <th class="col-xs-4"><p align="center">HOME</p></th>
+					  <th class="col-xs-4"><p align="center">Thời gian</p></th>
+					  <th class="col-xs-4"><p align="center">AWAY</p></th>
+					</tr>
+					<tr>
+						<th><p align="center"><img src="Logo/liverpool.png" alt="score+" width="auto" height="20px"> Liverpool</p></th><th><p align="center">22:00</p></th><th><p align="center">Manchester City <img src="Logo/mc.png" alt="score+" width="auto" height="20px"></p></th>
+					</tr>
+					<tr>
+						<th><p align="center"><img src="Logo/liverpool.png" alt="score+" width="auto" height="20px"> Liverpool</p></th><th><p align="center">22:00</p></th><th><p align="center">Manchester City <img src="Logo/mc.png" alt="score+" width="auto" height="20px"></p></th>
+					</tr>
+				</table>
+				</div>
+			
+
+				<div class="content" id="content-2" data-id='2' >
+				  <div class="panel-heading" align="center">  Vòng 2  </div>
+					<table class="table">
+					<tr>
+					  <th class="col-xs-4"><p align="center">HOME</p></th>
+					  <th class="col-xs-4"><p align="center">Thời gian</p></th>
+					  <th class="col-xs-4"><p align="center">AWAY</p></th>
+					</tr>
+					<tr>
+						<th><p align="center"><img src="Logo/liverpool.png" alt="score+" width="auto" height="20px"> Liverpool</p></th><th><p align="center">22:00</p></th><th><p align="center">Manchester City <img src="Logo/mc.png" alt="score+" width="auto" height="20px"></p></th>
+					</tr>
+					<tr>
+						<th><p align="center"><img src="Logo/liverpool.png" alt="score+" width="auto" height="20px"> Liverpool</p></th><th><p align="center">22:00</p></th><th><p align="center">Manchester City <img src="Logo/mc.png" alt="score+" width="auto" height="20px"></p></th>
+					</tr>
+
+				</table>
+				</div>
+
+				<div class="content" id="content-3" data-id='3' >
+				  <div class="panel-heading" align="center">  Vòng 3  </div>
+					<table class="table">
+					<tr>
+					  <th class="col-xs-4"><p align="center">HOME</p></th>
+					  <th class="col-xs-4"><p align="center">Thời gian</p></th>
+					  <th class="col-xs-4"><p align="center">AWAY</p></th>
+					</tr>
+					<tr>
+						<th><p align="center"><img src="Logo/liverpool.png" alt="score+" width="auto" height="20px"> Liverpool</p></th><th><p align="center">22:00</p></th><th><p align="center">Manchester City <img src="Logo/mc.png" alt="score+" width="auto" height="20px"></p></th>
+					</tr>
+					<tr>
+						<th><p align="center"><img src="Logo/liverpool.png" alt="score+" width="auto" height="20px"> Liverpool</p></th><th><p align="center">22:00</p></th><th><p align="center">Manchester City <img src="Logo/mc.png" alt="score+" width="auto" height="20px"></p></th>
+					</tr>
+
+				</table>
+				</div>
 			</div>
+				<button type="button" class="back">Back</button>
+			    <button type="button" class="next">Next</button>
 			</div>
+		</div>
+
 		<div role="tabpanel" class="tab-pane" id="profile2">
           	<div class="panel panel-default">
 			  <!-- Default panel contents -->
@@ -127,18 +175,49 @@
 				  <th class="col-xs-4"><p align="center">AWAY</p></th>
 				</tr>
 				<tr>
-					<th><p align="center">Liverpool</p></th><th><p align="center">2 - 1</p></th><th><p align="center">Manchester City</p></th>
+					<th><p align="center"><img src="Logo/liverpool.png" alt="score+" width="auto" height="20px"> Liverpool</p></th><th><p align="center">2 - 1</p></th><th><p align="center">Manchester City <img src="Logo/mc.png" alt="score+" width="auto" height="20px"></p></th>
 				</tr>
 			</table>
 			</div>
 			</div>
-  </div>
+  		</div>
   
-
-	
+  	</div>
 
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+
+
+		<!--Hàm script cho 2 nút next và previous-->
+		<script>
+			$('body').on('click', '.next', function() { 
+			    var id = $('.content:visible').data('id');
+			    var nextId = $('.content:visible').data('id')+1;
+			    $('[data-id="'+id+'"]').hide();
+			    $('[data-id="'+nextId+'"]').show();
+			    
+			    if($('.back:hidden').length == 1){
+			        $('.back').show();
+			    }
+			    
+			    if(nextId == 4){
+			        $('.content-holder').hide();
+			        $('.end').show();
+			    }
+			});
+
+			$('body').on('click', '.back', function() { 
+			    var id = $('.content:visible').data('id');
+			    var prevId = $('.content:visible').data('id')-1;
+			    $('[data-id="'+id+'"]').hide();
+			    $('[data-id="'+prevId+'"]').show();
+			    
+			    if(prevId == 1){
+			        $('.back').hide();
+			    }    
+			});
+
+		</script>
 	</body>
 </html>
 
