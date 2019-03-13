@@ -1,0 +1,232 @@
+.StaticLoggedOutHomePage {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100%;
+}
+.StaticLoggedOutHomePage-content {
+    background-color: #fff;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -moz-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+.StaticLoggedOutHomePage-buttonSignup, .StaticLoggedOutHomePage-buttonLogin {
+    display: block;
+    margin-bottom: 16px;
+}
+.StaticLoggedOutHomePage-cell {
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+}
+.StaticLoggedOutHomePage-communicationBlock {
+    background: #1da1f2;
+    overflow: hidden;
+    position: relative;
+}
+.StaticLoggedOutHomePage-login {
+    left: 0;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+.StaticLoggedOutHomePage-signupBlock {
+    max-width: 350px;
+    color: black;
+    font-size: 45px;
+    margin-bottom: 8px;
+    
+}
+.StaticLoggedOutHomePage-getStartedBlock, .StaticLoggedOutHomePage-signupHeader {
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 16px auto;
+}
+
+.EdgeButton, .EdgeButton:visited {
+    border-radius: 100px;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+
+}
+.StaticLoggedOutHomePage-signupTitle {
+    font-size: 27px;
+    line-height: 32px;
+    font-style:sans-serif;
+    font-weight:bold;
+}
+.StaticLoggedOutHomePage-noSignupForm .StaticLoggedOutHomePage-signupSubtitle {
+    margin-top: 48px;
+}
+.StaticLoggedOutHomePage-signupSubtitle {
+    color: #14171a;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 16px auto;
+}
+h2 {
+    color: #66757f;
+    font-size: 22px;
+    line-height: 22px;
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+html,body {
+    background: #e6ecf0;
+    color: #14171a;
+    font-size: 14px;
+    line-height: 20px;
+    overflow-y: scroll;
+    display:block;
+    min-height: 100%;
+    height:100%;
+    margin:0;
+}
+.EdgeButton--primary {
+    background-color: #1da1f2;
+    border: 1px solid #1da1f2;
+    color: #fff;
+}
+.EdgeButton--medium {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 6px 16px;
+}
+
+.EdgeButton--secondary {
+    background-color: #fff;
+    border: 1px solid #1da1f2;
+    color: #1da1f2;
+}
+.StaticLoggedOutHomePage-communicationBlock .twitterIcon-bird {
+    height: 140vh;
+    right: -80vh;
+    top: -20vh;
+}
+.StaticLoggedOutHomePage-communicationBlock .twitterIcon-bird {
+    max-width: none;
+    position: absolute;
+}
+.StaticLoggedOutHomePage-communicationContent {
+    max-width: 440px;
+}
+.StaticLoggedOutHomePage-communicationItem {
+    color: #fff;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 48px auto;
+    position: relative;
+}
+.StaticLoggedOutHomePage-communicationItem .Icon {
+    font-size: 35px;
+    margin-right: 16px;
+}
+.StreamsFooter--fixed {
+    width: 100%;
+    bottom: 0;
+}
+.StaticLoggedOutHomePage .StreamsFooter {
+    position: static;
+}
+.StreamsFooter {
+    border-top: 1px solid #e6ecf0;
+    padding: 11px 0;
+    position: fixed;
+    background-color: #fff;
+    bottom: -10%;
+    width: 100%;
+    z-index: 2;
+}
+.StaticLoggedOutHomePage .StreamsFooter-list {
+    background: #fff;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: auto;
+}
+.StreamsFooter-list {
+    margin: 0 auto;
+    text-align: center;
+    width: 890px;
+}
+ol, ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.StreamsFooter-item {
+    display: inline-block;
+    padding: 0 9px 0 9px;
+}
+li {
+    text-align: inherit;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx){
+    body {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+.fas,.far{
+    margin-right:20px;
+
+}
+
