@@ -1,12 +1,12 @@
 .card {
-    padding-top: 4%;
+    padding-top: 6%;
 }
 
 .btn-primary {
-    margin-top: 1%;
+    margin-top: 3%;
     margin-left: 2%;
     margin-right: 2%;
-    margin-bottom: 40%;
+    margin-bottom: 20%;
 }
 
 .navbar-custom {
@@ -16,4 +16,7 @@
 
 .navbar-custom .navbar-brand {
     color: #ecf0f1;
+}
+.btn {
+  border-radius:0;
 }
