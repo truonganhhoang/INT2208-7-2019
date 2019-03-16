@@ -6,6 +6,9 @@ var notifySchema = new Schema({
         type:String,
         default: ''
     },
+    payload: {
+        type: Schema.Types.Mixed
+    },
     date: {
         type: Date,
         default: Date.now

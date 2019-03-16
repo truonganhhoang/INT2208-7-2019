@@ -27,10 +27,6 @@ require('./notification/notification-socket')(io,app);
 const auth = require('./auth/auth');
 const api = require('./api/api')(io);
 
-app.get('/sendTo',(req,res) => {
-    io.to('namphan_admin_roomchat').emit('hello','well');
-});
-
 
 app.use('/auth',auth);
 app.use('/api',api);

@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const friendSchema = require('./friend.model');
+const notifySchema = require('./notify.model');
 
 var userSchema = new Schema({
     username:{
@@ -32,6 +33,10 @@ var userSchema = new Schema({
     },
     friends: {
         type: [friendSchema],
+        default: []
+    },
+    notifies: {
+        type: [notifySchema],
         default: []
     }
 });
