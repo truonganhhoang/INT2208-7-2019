@@ -19,7 +19,21 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 }
 
-.example-full-width {
-  width: 100%;
+.profile-avatar:hover button{
+  visibility:visible !important;
+}
 
+.profile-avatar{
+  height: 165px !important;
+  width: 165px !important;
+  background-size: cover;
+}
+
+.profile-sideButton{
+  text-align: left !important;
+  width:100%;
+}
+
+.mat-button{
+  outline: none !important;
 }
