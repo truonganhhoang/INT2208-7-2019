@@ -1,2 +1,31 @@
-﻿<h1>Hi {{currentUser.firstName}}!</h1>
-<p>You're logged in with Angular 7!!</p>
+﻿<mat-card style="margin-top: 20px;">
+    <div mat-card-avatar style="background-image:url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+     height: 45px; width: 45px; background-size: contain">
+    </div>
+    <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="What are you thingking?" style=" resize: none;"></textarea>
+    </mat-form-field>
+    <button mat-button style="width:10%;outline: none;">Share</button>
+</mat-card>
+
+<!--bai dang-->
+<mat-card style="margin-top: 20px;">
+    <div mat-card-avatar style="background-image:url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+     height: 45px; width: 45px; background-size: contain">
+     <mat-card-title style="margin-left: 60px; font-size: 15px;">nguyen</mat-card-title>
+    </div>
+    <mat-card style="height: 150px;margin-top: 10px; background-color: whitesmoke;">
+        The (click) to the left of the equals sign identifies the button's
+         click event as the target of the binding. The text in quotes to the 
+         right of the equals sign is the template statement, 
+         which responds to the click event by calling the component's onClickMe method.
+    </mat-card>
+    <hr>
+    <button mat-button style="width:10%;outline: none;">Like</button> 
+    <button mat-button style="width:10%;outline: none;">Comment</button>
+    <hr>
+    <textarea matInput placeholder="Your comment" style=" resize: none;"></textarea>
+</mat-card>
+
+
+

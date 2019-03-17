@@ -9,7 +9,7 @@ import { UserService } from '@app/_services';
 export class HomeComponent implements OnInit, OnDestroy {
     currentUser: User;
     currentUserSubscription: Subscription;
-    users: User[] = [];
+    // users: User[] = [];
 
     constructor(
         private userService: UserService
