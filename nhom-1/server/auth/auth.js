@@ -111,7 +111,8 @@ router.post('/login',(req,res)=>{
                     res.json({
                         state:true,
                         token: jwt.sign({
-                            username: docs.username
+                            username: docs.username,
+                            name: docs.name
                         },
                         secret, {expiresIn:'7 days'}
                         )
