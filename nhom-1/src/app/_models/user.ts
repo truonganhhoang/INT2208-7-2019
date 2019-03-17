@@ -6,4 +6,5 @@
     gender: boolean;
     birthday: Date;
     token: string;
+    avatarUrl: string;
 }

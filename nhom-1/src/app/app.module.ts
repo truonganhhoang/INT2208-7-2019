@@ -13,7 +13,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatNativeDateModule, MatInputModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent }  from './app.component';
 import { routing }        from './app.routing';
@@ -25,7 +27,7 @@ import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { MessengerComponent } from './messenger/messenger.component';
 import { MessageComponent } from './message/message.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserProfileComponent, EditProfileDialog, UpdateAvatarDialog } from './user-profile/user-profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 @NgModule({
     imports: [
@@ -44,7 +46,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
         MatListModule,
         MatTabsModule,
         MatIconModule,
+        MatDialogModule,
         MatNativeDateModule, MatInputModule,
+        FormsModule,
     ],
     declarations: [
         AppComponent,
@@ -52,10 +56,13 @@ import { NotFoundComponent } from './not-found/not-found.component';
         HomeComponent,
         LoginComponent,
         RegisterComponent,
-        MessengerComponent ,
-        MessageComponent ,
-        UserProfileComponent ,
+        MessengerComponent,
+        MessageComponent,
+        UserProfileComponent, EditProfileDialog, UpdateAvatarDialog,
         NotFoundComponent ],
+    entryComponents: [
+        EditProfileDialog, UpdateAvatarDialog,
+    ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
     ],
