@@ -41,10 +41,7 @@
 			<h3>This is your dictionary</h3>
 			<form class="form-inline" action="demo1.php" method="post">
 				
-	      			<input id='key' type="text" name='key' placeholder="Type to search..." autocomplete="off" value="<?php 
-  					if(isset($_POST['key']))
-					echo $_POST['key'];
-  				?>">
+	      			<input id='key' type="text" name='key' placeholder="Type to search..." autocomplete="off" >
 	      	
 	        		<input type="submit" value="Search">
 	        	</div>
@@ -56,7 +53,7 @@
 			<div class="col-sm-2" ></div>
   			<div class="col-sm-8" id="expl">
   				<h3>Search Results for: </h3>
-  				<h2 id="eng">
+  				<h2>
   					<?php 
   					if(isset($_POST['key']))
 					echo $_POST['key'];
@@ -68,7 +65,10 @@
 				   $db = new PDO("sqlite:dictionaries.db");
 				   if(!$db){
 				      echo $db->lastErrorMsg();
-				   	} 
+				   } else {
+				     // echo "Opened database successfully \n\n";
+				   }
+
 				   if(isset($_POST['key'])){
 					    if(strcasecmp( $_POST['key'], '' ) == 0){
 					  
@@ -79,13 +79,14 @@
 				   $sql = "SELECT * from tbl_edict where word like " . "'" . $s ."';";
 				 
 				   $ret = $db->query($sql);
-				   $t=0;
+				   
 				   while($row = $ret->fetch(\PDO::FETCH_ASSOC) ){
-				    $t++;
+				    
 				      echo "Explain  ". $row['detail'] ."\n";
 				   }
-					if($t==0)
-						echo "Sorry, we didn't find any word that match your search.";
+				if($row==0){
+					 echo "Sorry, we didn't find any word that match your search.";
+				}
 				   
 				   }
 				}
@@ -116,7 +117,11 @@
 			</div>
 	</footer>
 
- <script>
+
+
+</body>
+</html>
+<script>
 $(document).ready(function(){
  
  $('#key').typeahead({
@@ -138,6 +143,4 @@ $(document).ready(function(){
  });
  
 });
-
-</body>
-</html>
+</script>
