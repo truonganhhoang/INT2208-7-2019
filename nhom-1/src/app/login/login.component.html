@@ -1,20 +1,22 @@
-﻿<h2>Login</h2>
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
+﻿<mat-card style="margin-top: 20px;">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
+        <h2>Login</h2>
 
-    <mat-form-field class="full-width">
-        <input matInput placeholder="Username" formControlName="username" required/>
-        <mat-error *ngIf="f.username.hasError('required')">Username is required</mat-error>
-    </mat-form-field>
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Username" formControlName="username" required/>
+            <mat-error *ngIf="f.username.hasError('required')">Username is required</mat-error>
+        </mat-form-field>
 
-    <mat-form-field class="full-width">
-        <input type="password" matInput placeholder="Password" formControlName="password" required/>
-        <mat-error *ngIf="f.password.hasError('required')">Password is required</mat-error>
-    </mat-form-field> <br> <br>
-    
-    <div class="form-group">
-        <button [disabled]="loading" mat-flat-button color="primary">
-            Login
-        </button>
-        <button routerLink="/register" mat-button color="link">Register</button>
-    </div>
-</form>
+        <mat-form-field class="full-width">
+            <input type="password" matInput placeholder="Password" formControlName="password" required/>
+            <mat-error *ngIf="f.password.hasError('required')">Password is required</mat-error>
+        </mat-form-field> <br> <br>
+        
+        <div class="form-group">
+            <button [disabled]="loading" mat-flat-button color="primary">
+                Login
+            </button>
+            <button routerLink="/register" mat-button color="link">Register</button>
+        </div>
+    </form>
+</mat-card>

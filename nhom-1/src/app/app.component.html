@@ -1,13 +1,13 @@
 ﻿<mat-toolbar color="primary" role="heading" style="position: sticky; top:0; z-index: 1000;">
-    <button style="outline: none" mat-button routerLink="/" *ngIf="currentUser">
+    <button mat-button routerLink="/" *ngIf="currentUser">
         <mat-icon style="margin-bottom: 5px">home</mat-icon>
         Home
     </button>
-    <button style="outline: none" mat-button routerLink="{{currentUser.username}}" *ngIf="currentUser">Profile</button>
-    <button style="outline: none" mat-button (click)="logout()" *ngIf="currentUser">Logout</button>
+    <button mat-button routerLink="{{currentUser.username}}" *ngIf="currentUser">Profile</button>
+    <button mat-button (click)="logout()" *ngIf="currentUser">Logout</button>
 
-    <button style="outline: none" mat-button routerLink="/login" *ngIf="!currentUser">Login</button>
-    <button style="outline: none" mat-button routerLink="/register" *ngIf="!currentUser">Register</button>
+    <button mat-button routerLink="/login" *ngIf="!currentUser">Login</button>
+    <button mat-button routerLink="/register" *ngIf="!currentUser">Register</button>
     
 </mat-toolbar>
 

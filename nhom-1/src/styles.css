@@ -19,13 +19,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 }
 
-.example-full-width {
-  width: 100%;
-
-}
-
 .profile-avatar:hover button{
-  visibility:visible !important; 
+  visibility:visible !important;
 }
 
 .profile-avatar{
@@ -37,5 +32,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .profile-sideButton{
   text-align: left !important;
   width:100%;
+}
+
+.mat-button{
   outline: none !important;
 }
