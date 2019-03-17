@@ -28,7 +28,6 @@ export class UserProfileComponent implements OnInit {
     ) {
         this.user = new User;
         this.isMyProfile = false;
-        this.default = "https://material.angular.io/assets/img/examples/shiba1.jpg";
     }
 
 
@@ -65,7 +64,7 @@ export class UserProfileComponent implements OnInit {
 
     updateAvatarDialog(): void {
         const updateAvatarDialogRef = this.dialog.open(UpdateAvatarDialog, {
-            data: this.default
+            data: this.user.avatarUrl
         });
 
         updateAvatarDialogRef.afterClosed().subscribe(result => {
