@@ -2,7 +2,7 @@
     <mat-sidenav mode="side" opened style="width: 200px">
         <mat-card>
                 <div class="profile-avatar" mat-card-avatar [style.backgroundImage]="'url('+ user.avatarUrl +')'">
-                    <button mat-flat-button color="primary" *ngIf="isMyProfile" style="margin: 100px 45px; visibility: hidden"  (click)="updateAvatarDialog()">
+                    <button mat-flat-button color="primary" *ngIf="isMyProfile" style="margin: 100px 45px; visibility: hidden;"  (click)="updateAvatarDialog()">
                         Update
                     </button>
                 </div>
@@ -12,7 +12,7 @@
 
         <mat-list *ngIf="!isMyProfile">
             <mat-list-item>
-                <button mat-button class="profile-sideButton">
+                <button mat-button class="profile-sideButton" (click)="sendFriendRequest()">
                     Add Friend
                 </button>
             </mat-list-item>

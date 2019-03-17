@@ -42,6 +42,8 @@ module.exports = function (io) {
         let friendId = req.query.username;
         let userId = req.body.username;
 
+
+        //delete from user
         User.findOne({username: userId},(err,doc)=>{
             if (err) {
                 res.json({state: false});
@@ -55,18 +57,19 @@ module.exports = function (io) {
                     break;
                 }
             }
-            doc.friends = doc.friends.splice(pointer,1);
+            doc.friends.splice(pointer,1);
             n = doc.notifies.length;
             let isFound = false;
             for (let i = 0; i < n; i++) {
-                if (doc.notifies[i].type == 'wait for accept') {
+                if (doc.notifies[i].type == 'friend request') {
                     if (doc.notifies[i].username == friendId) {
                         pointer = i;
                         isFound = true;
+                        break;
                     }
                 }
             }
-            if (isFound) doc.notifies = doc.notifies.splice(pointer,1);
+            if (isFound) doc.notifies.splice(pointer,1);
 
             doc.save((err)=>{
                 if (err) {
@@ -75,7 +78,10 @@ module.exports = function (io) {
                     res.json({state: true});
                 }
             });
+
+            //delete from other side
         });
+
 
     });
 
@@ -100,14 +106,15 @@ module.exports = function (io) {
             n = doc.notifies.length;
             let isFound = false;
             for (let i = 0; i < n; i++) {
-                if (doc.notifies[i].type == 'wait for accept') {
+                if (doc.notifies[i].type == 'friend request') {
                     if (doc.notifies[i].username == friendId) {
                         pointer = i;
                         isFound = true;
+                        break;
                     }
                 }
             }
-            if (isFound) doc.notifies = doc.notifies.splice(pointer,1);
+            if (isFound) doc.notifies.splice(pointer,1);
 
             doc.save((err)=>{
                 if (err) {
@@ -129,7 +136,7 @@ module.exports = function (io) {
         //create notify data
         let notifyData = new Notify({
             type: 'friend request',
-            sender: userId
+            payload: {sender: userId}
         });
 
         //update in receiver
@@ -137,51 +144,74 @@ module.exports = function (io) {
             username: userId,
             relationType: 'wait for accept'
         });
-
-        User.findOneAndUpdate(
-            {username: friendId},
-            {
-                friends: friends.push(friendTypeInReceiver),
-                notifies: notifies.unshift(notifyData).slice(0,50)
-            }, (err,doc) => {
-                if (err) {
-                    res.json({state:false});
-                    return;
-                }
-                if (!doc) {
-                    res.json({state:false});
-                    return;
-                }
-            }
-        );
-
-
-        //update in sender
         let friendTypeInSender = new Friend({
             username: friendId,
             relationType: 'sent request'
         });
 
-        User.findOneAndUpdate(
-            {username:userId},
-            {
-                friends: friends.push(friendTypeInSender)
-            }, (err,doc) => {
+        User.findOne(
+            {username: friendId},
+            (err,doc) => {
+
+                console.log(err);
+                console.log(doc);
                 if (err) {
-                    res.json({
-                        state: false
-                    });
+                    res.json({state: false});
+                    //run here
                     return;
                 }
+                if (!doc) {
+                    res.json({state: false});
+                    return;
+                }
+                doc.friends.push(friendTypeInReceiver);
+                doc.notifies.unshift(notifyData);
+
+                if (doc.notifies.length > 50) {
+                    doc.notifies.pop();                
+                }
+                
+                doc.save((err)=>{
+                    if (err) {
+                        res.json({state:false});
+                        return;
+                    }
+                    if (!doc) {
+                        res.json({state:false});
+                        return;
+                    }
+                });
+
+                User.findOne(
+                    {username: userId},
+                    (err,doc) => {
+                        if (err) {
+                            res.json({state: false});
+                            return;
+                        }
+                        if (!doc) {
+                            res.json({state:false});
+                            return;
+                        }
+                        doc.friends.push(friendTypeInSender);
+                        doc.save((err)=>{
+                            if (err) {
+                                res.json({state:false});
+                                return;
+                            }
+                            if (!doc) {
+                                res.json({state:false});
+                                return;
+                            }
+                            res.json({state:true});
+                            io.to(gen(friendId)).emit('notify', notifyData);
+                        });
+                    }
+                );
             }
         );
-    
-        res.json({state: true});
-    
-        //notify to notification room of user
-
-        io.to(gen(friendId)).emit('notify', notifyData);
     });
+
 
     router.get('/notify', tokenCheck,(req,res)=> { 
         User.findOne({username: req.body.username}, (err,doc)=>{

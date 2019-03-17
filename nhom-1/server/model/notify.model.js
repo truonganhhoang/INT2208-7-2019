@@ -7,7 +7,8 @@ var notifySchema = new Schema({
         default: ''
     },
     payload: {
-        type: Schema.Types.Mixed
+        type: Schema.Types.Mixed,
+        default: {}
     },
     date: {
         type: Date,

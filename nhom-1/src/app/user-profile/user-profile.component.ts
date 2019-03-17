@@ -71,6 +71,10 @@ export class UserProfileComponent implements OnInit {
             console.log(result);
         });
     }
+
+    sendFriendRequest(): void {
+
+    }
 }
 
 @Component({
