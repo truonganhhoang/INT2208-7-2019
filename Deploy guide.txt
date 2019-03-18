@@ -1,0 +1,168 @@
+## HƯỚNG DẪN DEPLOY LARAVEL PROJECT BẰNG heroku ##
+
+Đầu tiên các thím lên https://www.heroku.com/ đăng ký tài khoản nha.
+Rồi các thím tiện tay tải heroku CLI về.
+
+1. Đăng nhập vào heroku trên command line
+	Đầu tiên mở command line lên rồi cd tới thư mục project laravel nha.
+	Gõ lệnh này sau khi các thím ở thư mục laravel project rồi.
+	
+		$ heroku login
+	
+	Gõ cái này vô xong nó bắt ấn một nút gì đó mở để mở browser ra
+	rồi mình ấn vô cái login là ok.
+
+	
+2. Tạo một file có tên là Procfile
+	Ừ thì theo hướng dẫn của nó bắt tạo file này (Chắc là cũng quan trọng @@)
+	Gõ vào command line như sau:
+	
+		$ echo web: vendor/bin/heroku-php-apache2 public/ > Procfile
+	
+	Vô coi lại trong project có file Procfile được tạo ra với nội dung
+	
+		web: vendor/bin/heroku-php-apache2 public/
+		
+	là OK.
+
+	
+	
+3. Chuyển thư thư mục project thành thư mục .git
+	Tới bước này thì trong máy cần tải git nha.
+	Thím nào chưa quen lắm với git thì cứ lần lượt gõ mấy cái này vào .
+
+		$ git init 
+		
+		$ git add .
+		
+		$ git commit -m "nguoi theo huong hoa may mu giang loi"
+		
+		$ git push heroku master
+
+	
+4. Tạo một app trên heroku
+
+	Phần này mình app_name của mình là nguoitheohuonghoa,
+	các thím nên đặt tên khác để đỡ bị đụng hàng nha!
+	
+		$ heroku create nguoitheohuonghoa
+	
+	
+5. Cài đặt buildpacks cho heroku thành php
+	Ừ thì vì laravel nó là framework của php nên tất nhiên là đổi thành php rồi :v.
+	
+		$ heroku buildpacks:set heroku/php
+
+	
+6. Cấu hình và cài đặt key
+	Chạy cái sau để tạo và lấy key ngẫu nhiên.
+	
+		$ php artisan key:generate --show
+	
+	Rồi sau đó cấu hình key cho app của các thím.
+	
+		$ heroku config:set APP_KEY=<key_bên_trên_cop_cả_nhé>
+
+	
+7. Chạy thử app thôi :3!!!
+	
+	$ heroku open
+	
+	Nếu project laravel của các thím chạy đúng thì trên app sẽ hiển thị
+	ra kết quả, còn nếu project của các thím có dùng mySQL database thì 
+	nó sẽ bị lỗi 500 ERROR.
+	
+	
+## THÊM MYSQL DATABASE VÔ APP ##
+
+	Tại vì mySQL server tại máy của các thím là ở local trong khi app muốn host lên thì
+tất nhiên là nó phải ONLINE rồi :v. Cách xử lý ở đây là mình dùng một mySQL server online 
+có database của mình trên đó :3.
+	Cái mình dùng trong bài này là db4free
+
+8. Tạo tài khoản db4free
+	Online chắc chắn là phải có tài khoản nhỉ :v.
+	
+
+9. Cấu hình lại database tới phpMyAdmin của db4free
+	Sau khi đăng ký và xác nhận xong các thím về trang chủ của nó ấn vô cái phpMyAdmin
+	Rồi nó bắt đăng nhập
+	Xong vào đó tạo một cái database dùng tên là tên database trên local của các thím.
+	
+	Sau đó đi tới config/database.php trong project và sửa đoạn sau:
+	
+	
+		'mysql' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', 'db4free.net'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'your_database_name from_db4free'),
+            'username' => env('DB_USERNAME', 'your_db4free_username'),
+            'password' => env('DB_PASSWORD', 'your_db4free_password'),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
+
+		
+	Sửa file này xong thì tất nhiên là phải commit lại và push lên rồi 
+	
+		$ git add .
+	
+		$ git commit -m "lan suong khoi phoi phai dua buoc ai xa roi~~"
+		
+		$ git push heroku master
+
+		
+10. Import database vô cái app
+	Cuối cùng cũng xong rồi đấy :v 
+	
+		$ heroku run php artisan migrate
+		
+	xong rồi vô cái phpMyAdmin trên db4free chọn database của các thím và drop hết đi
+	rồi import lại file sql vào bảng đó là thành công
+	
+	Để chạy thử thì đừng quên
+	
+		$ heroku open
+		
+
+11. Fix lỗi 404 not found nginx 
+	Tưởng hết rồi mà vẫn còn à :3. 
+	Phần này dành cho ai mà hiển thị được app rồi nhưng mà chỉ được trang chủ còn
+	toàn bộ route khác thì bị dính lỗi "404 error nginx" (Đen như blackpanther :v)
+	
+	Tạo một file nginx_app.conf với nội dung như sau:
+		
+		
+		location / {
+			# try to serve file directly, fallback to rewrite
+			try_files $uri @rewriteapp;
+		}
+
+		location @rewriteapp {
+			# rewrite all to app.php
+			rewrite ^(.*)$ /index.php/$1 last;
+		}
+		location ~ ^/(app|app_dev|config)\.php(/|$) {
+			try_files @heroku-fcgi @heroku-fcgi;
+			internal;
+		}
+		
+		
+		nhớ là nginx_app.conf chứ không phải là nginx_app.conf.txt nha :v
+	
+		Có thể làm theo cách sau:
+			Chuột phải chọn New Text Docuemt rồi copy paste đoạn kia vào.
+			Save lại và để tên là "nginx_app.conf" trong dấu nháy kép thì sẽ lưu được <3.
+		
+	Và sửa Procfile lại như sau: (Đó quan trọng lắm nên phải sửa :v)
+	
+		$ echo web: vendor/bin/heroku-php-nginx -C nginx_app.conf /public > Procfile
+		
+	 
+		
+## Tham khảo tại https://medium.com/@Oriechinedu/how-to-host-a-laravel-app-with-mysql-database-on-heroku-ab56b08be735 ##
