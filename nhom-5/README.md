@@ -44,10 +44,10 @@ Chức năng:
 - Tạo chức năng nhắn tin trao dổi giữa giữa các tài khoản
 
 **Product Owner: Đào Đức Khiêm**
-- tạo product backlog
-- sắp sếp công việc theo thứ tự ưu tiên từ trên xuống dưới
-- viết product backlog rõ ràng chi tiết dễ hiểu
-- trong quy trình suy nghĩ để loại bỏ những hạng mục không cần thiết.
+- Tạo product backlog
+- Sắp sếp công việc theo thứ tự ưu tiên từ trên xuống dưới
+- Viết product backlog rõ ràng chi tiết dễ hiểu
+- Trong quy trình suy nghĩ để loại bỏ những hạng mục không cần thiết.
 
 **Scrum Master: Nguyễn Đức Lộc**
 - Đánh giá khối lượng công việc của từng công việc trong product-backlog.
@@ -58,5 +58,15 @@ Chức năng:
 **Development Team: Nguyễn Cảnh Hoàng, Đinh Sỹ Hào, Nguyễn Đức Lộc, Đào Đức Khiêm**
 - Viết mã cho phần mềm.
 - Hoàn thiện từng chức năng theo yêu cầu về chất lượng và thời hạn đã đề ra trong sprint.
-- kiểm thử sản phẩm.
+- Kiểm thử sản phẩm.
 - Viết hướng dẫn sử dụng.
+
+**User stories:**
+- Là một người mua hàng, tôi muốn nhìn thấy các mặt hàng để tôi có thể xem và lựa chọn.
+- Là một người mua hàng, tôi muốn tiến hành đặt hàng ngay trên hệ thống bao gồm cả thanh toán online.
+- Là quản trị viên của shop bán hàng, tôi muốn kiểm tra đơn hàng của khách hàng.
+- Là quản trị viên của shop bán hàng, tôi muốn thêm, sửa, xóa các sản phẩm.
+- Là một người mua hàng, tôi có thể tìm kiếm thứ tôi muốn mua trên hệ thống.
+- Là một người mua hàng, tôi muốn có một tài khoản lưu thông tin của tôi để không phải nhập lại nhiều lần.
+- Là một người mua hàng, tôi có thể đánh giá sản phẩm sau khi nhận hàng từ shop.
+
