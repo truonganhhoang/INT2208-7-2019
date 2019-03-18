@@ -70,3 +70,4 @@ Chức năng:
 - Là một người mua hàng, tôi muốn có một tài khoản lưu thông tin của tôi để không phải nhập lại nhiều lần.
 - Là một người mua hàng, tôi có thể đánh giá sản phẩm sau khi nhận hàng từ shop.
 
+**Link demo sản phẩm:** [tại đây](nguoitheohuonghoa.herokuapp.com)
