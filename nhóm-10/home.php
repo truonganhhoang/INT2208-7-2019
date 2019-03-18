@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +24,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><img src="imgg/logo.png"></a>
+				<a class="navbar-brand" href="#home"><img src="imgg/logo.png"></a>
 			</div>
 			<div class="collapse navbar-collapse" id="navbar-collapse-main">
 				<ul class="nav navbar-nav navbar-right">
@@ -39,9 +40,12 @@
 		<div class="landing-text">
 			<h1>UDict</h1>
 			<h3>This is your dictionary</h3>
-			<form class="form-inline" action="demo1.php" method="post">
+			<form class="form-inline" action="home.php" method="post">
 				
-	      			<input id='key' type="text" name='key' placeholder="Type to search..." autocomplete="off" >
+	      			<input id='key' type="text" name='key' placeholder="Type to search..." autocomplete="off" value="<?php 
+  					if(isset($_POST['key']))
+					echo $_POST['key'];
+  				?>">
 	      	
 	        		<input type="submit" value="Search">
 	        	</div>
@@ -65,30 +69,27 @@
 				   $db = new PDO("sqlite:dictionaries.db");
 				   if(!$db){
 				      echo $db->lastErrorMsg();
-				   } else {
-				     // echo "Opened database successfully \n\n";
-				   }
-
+				   } 
 				   if(isset($_POST['key'])){
 					    if(strcasecmp( $_POST['key'], '' ) == 0){
-					  
+					  echo "Sorry, we didn't find any word that match your search.";
 						}
-				   else
-				   {
-				   	$s= $_POST["key"] ;
-				   $sql = "SELECT * from tbl_edict where word like " . "'" . $s ."';";
-				 
-				   $ret = $db->query($sql);
-				   
-				   while($row = $ret->fetch(\PDO::FETCH_ASSOC) ){
-				    
-				      echo "Explain  ". $row['detail'] ."\n";
-				   }
-				if($row==0){
-					 echo "Sorry, we didn't find any word that match your search.";
-				}
-				   
-				   }
+					   else
+					   {
+					   $q= $_POST["key"] ;
+					  
+					 	$s=trim($q);
+					 	 $sql = "SELECT * from tbl_edict where word like " . "'" . $s ."';";
+					   $ret = $db->query($sql);
+					   $t=0;
+					   while($row = $ret->fetch(\PDO::FETCH_ASSOC) ){
+					    $t++;
+					      echo "Explain  ". $row['detail'] ."\n";
+					   }
+						if($t==0||$s=='')
+							echo "Sorry, we didn't find any word that match your search.";
+					   
+					   }
 				}
 				
 				?>
@@ -121,26 +122,3 @@
 
 </body>
 </html>
-<script>
-$(document).ready(function(){
- 
- $('#key').typeahead({
-  source: function(query, result)
-  {
-   $.ajax({
-    url:"fetch.php",
-    method:"POST",
-    data:{query:query},
-    dataType:"json",
-    success:function(data)
-    {
-     result($.map(data, function(item){
-      return item;
-     }));
-    }
-   })
-  }
- });
- 
-});
-</script>
