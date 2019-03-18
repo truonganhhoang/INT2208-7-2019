@@ -1,0 +1,22 @@
+.top{
+    height: 30px;
+
+    background-color: #1b6d85;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.head{
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 5px;
+
+}
+
+button[type='submit']{
+    border-radius: 5px;
+    position: relative;
+    left: 42%;
+    margin-top: 10px;
+}

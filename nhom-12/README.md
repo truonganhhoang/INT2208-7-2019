@@ -54,6 +54,6 @@
 	    		Trực tiếp sản xuất ứng dụng,không có ai chịu trách nghiệm quản lý nhóm, vậy nên kết quả công việc thuộc về toàn bộ nhóm. Nhóm sẽ lập kế hoạch thực hiện các hạng mục Product Backlog trong từng Sprint. Nhóm phải thường xuyên trao đổi thường xuyên với Product Owner để đảm bảo công việc luôn đi đúng hướng.
 	    	</li></br>
 	    </ul>
-	    <p>- Product Backlog, Sprint Backlog của nhóm được đặt ở: https://github.com/meomen/Scrum-Nhom12/issues </p>
+	    <p>- Product Backlog, Sprint Backlog của nhóm được đặt ở: https://github.com/HoangCaoPhi/ToeicFun </p>
 	</body>
 </html>

@@ -2,7 +2,6 @@
 ## Nhóm-1
 
 <h1 style="">Response App</h1>
-<h3>Một thứ luôn "phản hồi" và "tương tác" với bạn"...</h3>
 
 <p>Response App là một mạng xã hội dạng nhỏ (group) phục vụ cho một mục đích nhỏ, với những tính năng cơ bản, giao diện đơn giản dễ nhìn.</p>
 
@@ -26,10 +25,10 @@
 </ol>
 
 
-<h3>Change log</h3>
+<h3>Changelog</h3>
 
 
-<h4>(11/2/2019) Demo:</h4>
+<h4>(11/2/2019)Demo:</h4>
 
 <p>Đăng ký, đăng nhập:</p>
 
@@ -52,13 +51,15 @@
 </ul>
 <h5>Product backlog:</h5>
 <ol>
-    <li>hệ thống lưu trữ thông tin user, trang đăng kí đăng nhập và nav bar điều hướng</li>
-    <li>trang user profile và kết bạn</li>
-    <li>trang news feed và tính năng tìm kiếm</li>
-    <li>trang chat messenger giữa bạn bè</li>
-    <li>còn cập nhật sau...</li>
+    <li>Hệ thống lưu trữ thông tin user, trang đăng kí đăng nhập và nav bar điều hướng</li>
+    <li>Trang user profile và kết bạn</li>
+    <li>Trang news feed và tính năng tìm kiếm</li>
+    <li>Trang chat messenger giữa bạn bè</li>
+    <li>Còn cập nhật sau...</li>
 </ol>
 
+
+//nháp
 </h4>Text</h4>:
 1. 10h tối
 2. User model: 
@@ -71,5 +72,6 @@
        imageUrl: 
    }
 3. token: JWT, passport
+//
 
-<p>Simple app, just response.</p>
+

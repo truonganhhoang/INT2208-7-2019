@@ -1,0 +1,10 @@
+<mat-card>
+    <mat-card-header>
+        <div mat-card-avatar style="background-image:url('https://material.angular.io/assets/img/examples/shiba1.jpg'); background-size:contain"></div>
+        <mat-card-title>{{username}}</mat-card-title>
+        <mat-card-subtitle>{{username}}</mat-card-subtitle>
+    </mat-card-header>
+</mat-card>
+
+<input type="file" (change)="onUpload($event,image)" accept="image/*" name="avatar">
+<button type="button" class="btn btn-primary" (click)="uploadFile()">Upload</button>
