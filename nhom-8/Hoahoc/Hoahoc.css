@@ -3,19 +3,18 @@
     padding-left: 0px;
 }
 #header{
-	height: 200px;
+	height:90px;
 	background-color: #2a2730;
 }
 #monhoa{
-	padding-left: 80px;
-	padding-top: 20px;
+	padding-top: 15%;
 }
 h2{
 	text-transform : uppercase;
 	font-weight: bold;
 	font-family: -webkit-body;
-	padding-left :300px;
-	padding-top: 350px;
+	padding-left :38%;
+	padding-top: 60%;
 	color: #0f0465;
 }
 h3{
@@ -23,9 +22,9 @@ h3{
 	font-family: -webkit-body;
 	
 }
-.col-md-11{
+#chuthuong{
 	font-family: -webkit-body;
-	font-size: 24px;
+	font-size: 22px;
 }
 .btn-default {
 	color: #fff;
@@ -46,4 +45,9 @@ h3{
 }
 body{
 	font-size: 20px;
+	background-color: #DDDDDD;
+}
+#binhluan{
+	padding-top: 60%;
+	padding-left: 40%;
 }
