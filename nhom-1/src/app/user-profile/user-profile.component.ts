@@ -73,7 +73,7 @@ export class UserProfileComponent implements OnInit {
     }
 
     sendFriendRequest(): void {
-
+        
     }
 }
 

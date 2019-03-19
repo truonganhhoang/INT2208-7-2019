@@ -43,43 +43,81 @@ module.exports = function (io) {
         let userId = req.body.username;
 
 
-        //delete from user
-        User.findOne({username: userId},(err,doc)=>{
+        User.findOne({username: friendId},(err,doc)=>{
             if (err) {
-                res.json({state: false});
+                res.json({state:false});
                 return;
             }
-            let pointer = 0;
+            if (!doc) {
+                res.json({state:false});
+            }
+
             let n = doc.friends.length;
+            let isFound = false;
+            let pointer = 0;
             for (let i = 0; i < n; i++) {
-                if (doc.friends[i].username == friendId) {
+                if (doc.friends[i].username == userId) {
                     pointer = i;
+                    isFound = true;
                     break;
                 }
             }
-            doc.friends.splice(pointer,1);
-            n = doc.notifies.length;
-            let isFound = false;
-            for (let i = 0; i < n; i++) {
-                if (doc.notifies[i].type == 'friend request') {
-                    if (doc.notifies[i].username == friendId) {
+            
+            if (isFound) {
+                doc.friends.splice(pointer,1);
+            } else {
+                res.json({state:false});
+                return;
+            }
+
+            User.findOne({username: userId},(err,doc)=>{
+                if (err) {
+                    res.json({state: false});
+                    return;
+                }
+                if (!doc) {
+                    res.json({state:false});
+                    return;
+                }
+
+                let pointer = 0;
+                let isFound = false;
+                let n = doc.friends.length;
+                for (let i = 0; i < n; i++) {
+                    if (doc.friends[i].username == friendId) {
                         pointer = i;
                         isFound = true;
                         break;
                     }
                 }
-            }
-            if (isFound) doc.notifies.splice(pointer,1);
-
-            doc.save((err)=>{
-                if (err) {
-                    res.json({state: false});
+                if (isFound) {
+                    doc.friends.splice(pointer,1);
                 } else {
-                    res.json({state: true});
+                    res.json({state:false});
+                    return;
                 }
+                n = doc.notifies.length;
+                isFound = false;
+                for (let i = 0; i < n; i++) {
+                    if (doc.notifies[i].type == 'friend request') {
+                        if (doc.notifies[i].username == friendId) {
+                            pointer = i;
+                            isFound = true;
+                            break;
+                        }
+                    }
+                }
+                if (isFound) doc.notifies.splice(pointer,1);
+    
+                doc.save((err)=>{
+                    if (err) {
+                        res.json({state: false});
+                    } else {
+                        res.json({state: true});
+                    }
+                });
             });
 
-            //delete from other side
         });
 
 
@@ -90,42 +128,78 @@ module.exports = function (io) {
         let userId = req.body.username;
 
         //update
-        User.findOne({username: userId},(err,doc)=>{
+
+        User.findOne({username: friendId},(err,doc)=> {
             if (err) {
-                res.json({state: false});
+                res.json({state:false});
                 return;
             }
-            let pointer = 0;
+            if (!doc) {
+                res.json({state:false});
+                return;
+            }
+
+            let notifyData = new Notify({
+                type: 'friend accepted',
+                payload: {
+                    sender: userId
+                }
+            });
+
+            doc.notifies.unshift(notifyData);
+            if (doc.notifies.length > 50) {
+                doc.notifies.pop();                
+            }
+
             let n = doc.friends.length;
             for (let i = 0; i < n; i++) {
-                if (doc.friends[i].username == friendId) {
+                if (doc.friends[i].username == userId) {
                     doc.friends[i].relationType = 'friend';
-                    break;
                 }
             }
-            n = doc.notifies.length;
-            let isFound = false;
-            for (let i = 0; i < n; i++) {
-                if (doc.notifies[i].type == 'friend request') {
-                    if (doc.notifies[i].username == friendId) {
-                        pointer = i;
-                        isFound = true;
+
+            io.to(gen(friendId)).emit('notify', notifyData);
+
+            User.findOne({username: userId},(err,doc)=>{
+                if (err) {
+                    res.json({state: false});
+                    return;
+                }
+                if (!doc2) {
+                    res.json({state:false});
+                    return;
+                }
+                let pointer = 0;
+                let n = doc.friends.length;
+                for (let i = 0; i < n; i++) {
+                    if (doc.friends[i].username == friendId) {
+                        doc.friends[i].relationType = 'friend';
                         break;
                     }
                 }
-            }
-            if (isFound) doc.notifies.splice(pointer,1);
-
-            doc.save((err)=>{
-                if (err) {
-                    res.json({state: false});
-                } else {
-                    res.json({state: true});
+                n = doc.notifies.length;
+                let isFound = false;
+                for (let i = 0; i < n; i++) {
+                    if (doc.notifies[i].type == 'friend request') {
+                        if (doc.notifies[i].payload.sender == friendId) {
+                            pointer = i;
+                            isFound = true;
+                            break;
+                        }
+                    }
                 }
+                if (isFound) doc.notifies.splice(pointer,1);
+    
+                doc.save((err)=>{
+                    if (err) {
+                        res.json({state: false});
+                    } else {
+                        res.json({state: true});
+                    }
+                });
             });
         });
 
-        //notify to the one who has been accepted
     });
 
 
