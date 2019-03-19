@@ -3,7 +3,7 @@ var pool = mysql.createPool({
 
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'newpass',
     database: 'quiz-db'
 
 });
