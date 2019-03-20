@@ -2,9 +2,15 @@
     <div mat-card-avatar style="background-image:url('https://material.angular.io/assets/img/examples/shiba1.jpg');
      height: 45px; width: 45px; background-size: contain">
     </div>
-    <mat-form-field class="full-width">
-        <textarea matInput placeholder="What are you thingking?" style=" resize: none;overflow-y:hidden;"></textarea>
+    <mat-form-field class="full-width" [style.fontSize]="fontSize.value">
+        <mat-label>What are you thingking?</mat-label>
+        <textarea  matInput
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="10" style="overflow-y:hidden;" placeholder="What are you thinking?"></textarea>
     </mat-form-field>
+    <hr>
     <button mat-button style="width:10%;">Share</button>
 </mat-card>
 
@@ -24,7 +30,11 @@
     <button mat-button style="width:10%;">Like</button>
     <button mat-button style="width:10%;">Comment</button>
     <hr>
-    <textarea matInput placeholder="Your comment" style=" resize: none; overflow-y:hidden;"></textarea>
+    <textarea matInput cdkTextareaAutosize
+    #autosize="cdkTextareaAutosize"
+    cdkAutosizeMinRows="1"
+    cdkAutosizeMaxRows="10"placeholder="Your comment"
+     style="overflow-y:hidden; background-color:whitesmoke; border-radius: 5px;"></textarea>
 </mat-card>
 
 
