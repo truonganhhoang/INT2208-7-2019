@@ -3,7 +3,7 @@
         <mat-icon style="margin-bottom: 5px">home</mat-icon>
         Home
     </button>
-    <button mat-button routerLink="{{currentUser.username}}" *ngIf="currentUser">Profile</button>
+    <button mat-button routerLink="users/{{currentUser.username}}" *ngIf="currentUser">Profile</button>
     <button mat-button (click)="logout()" *ngIf="currentUser">Logout</button>
 
     <button mat-button routerLink="/login" *ngIf="!currentUser">Login</button>

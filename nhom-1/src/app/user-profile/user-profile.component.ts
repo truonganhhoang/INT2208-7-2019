@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, ViewChild } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 import { UserService } from '@app/_services';
@@ -23,6 +23,7 @@ export class UserProfileComponent implements OnInit {
 
     constructor(
         private router: Router,
+        private route: ActivatedRoute,
         private userService: UserService,
         private dialog: MatDialog
     ) {
@@ -32,24 +33,27 @@ export class UserProfileComponent implements OnInit {
 
 
     ngOnInit() {
-        var username = this.router.url.substring(1);
-        if (this.userService.currentUserValue)
-            this.isMyProfile = (username == this.userService.currentUserValue.username);
-        this.userService.checkvalid(username)
-            .subscribe(
-                data => {
-                    if (data.valid) {
-                        this.router.navigate(['notfound'])
+        this.route.params.subscribe(param => {
+            var username = param['username'];
+            console.log(username);
+            if (this.userService.currentUserValue)
+                this.isMyProfile = (username == this.userService.currentUserValue.username);
+            this.userService.checkvalid(username)
+                .subscribe(
+                    data => {
+                        if (data.valid) {
+                            this.router.navigate(['notfound'])
+                        }
                     }
-                }
-            );
-        this.userService.get(username)
-            .subscribe(
-                data => {
-                    this.user = data.user;
-                    console.log(this.user);
-                }
-            )
+                );
+            this.userService.get(username)
+                .subscribe(
+                    data => {
+                        this.user = data.user;
+                        console.log(this.user);
+                    }
+                )
+            })
     }
 
     editProfileDialog(): void {
