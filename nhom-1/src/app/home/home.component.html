@@ -2,6 +2,7 @@
     <div mat-card-avatar style="background-image:url('https://material.angular.io/assets/img/examples/shiba1.jpg');
      height: 45px; width: 45px; background-size: contain">
     </div>
+    <br>
     <mat-form-field class="full-width" [style.fontSize]="fontSize.value">
         <mat-label>What are you thingking?</mat-label>
         <textarea  matInput
@@ -27,14 +28,14 @@
          which responds to the click event by calling the component's onClickMe method.
     </mat-card>
     <hr>
-    <button mat-button style="width:10%;">Like</button>
-    <button mat-button style="width:10%;">Comment</button>
+    <button mat-button style="width:50%;">Like</button>
+    <button mat-button style="width:50%;">Comment</button>
     <hr>
     <textarea matInput cdkTextareaAutosize
     #autosize="cdkTextareaAutosize"
     cdkAutosizeMinRows="1"
     cdkAutosizeMaxRows="10"placeholder="Your comment"
-     style="overflow-y:hidden; background-color:whitesmoke; border-radius: 5px;"></textarea>
+     style="overflow-y:hidden; border-radius: 5px;"></textarea>
 </mat-card>
 
 
