@@ -5,11 +5,10 @@
     <br>
     <mat-form-field class="full-width" [style.fontSize]="fontSize.value">
         <mat-label>What are you thingking?</mat-label>
-        <textarea  matInput
-        cdkTextareaAutosize
+        <textarea  matInput cdkTextareaAutosize
         #autosize="cdkTextareaAutosize"
-        cdkAutosizeMinRows="1"
-        cdkAutosizeMaxRows="10" style="overflow-y:hidden;" placeholder="What are you thinking?"></textarea>
+        cdkAutosizeMinRows="1" 
+        style="overflow-y:hidden;" placeholder="What are you thinking?"></textarea>
     </mat-form-field>
     <hr>
     <button mat-button style="width:10%;">Share</button>
@@ -34,8 +33,8 @@
     <textarea matInput cdkTextareaAutosize
     #autosize="cdkTextareaAutosize"
     cdkAutosizeMinRows="1"
-    cdkAutosizeMaxRows="10"placeholder="Your comment"
-     style="overflow-y:hidden; border-radius: 5px;"></textarea>
+    placeholder="Your comment"
+    style="overflow-y:hidden; border-radius: 5px;"></textarea>
 </mat-card>
 
 
