@@ -3,8 +3,8 @@ var pool = mysql.createPool({
 
     host: 'localhost',
     user: 'root',
-    password: 'newpass',
-    database: 'quiz-db'
+    password: '',
+    database: ''
 
 });
 module.exports = pool;
