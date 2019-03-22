@@ -1,5 +1,5 @@
 var mysql = require('mysql');
-var connection = mysql.createPool({
+var pool = mysql.createPool({
 
     host: 'localhost',
     user: 'root',
@@ -7,4 +7,4 @@ var connection = mysql.createPool({
     database: 'quiz-db'
 
 });
-module.exports = connection;
+module.exports = pool;
