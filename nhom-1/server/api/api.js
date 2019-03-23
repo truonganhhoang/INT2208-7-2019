@@ -37,6 +37,31 @@ module.exports = function (io) {
 
     var savePictureHandlerMiddleware = multer({ storage: storagePicture });
 
+
+    router.get('/search', (req,res)=>{
+        let searchQuery = req.query.q;
+        let regex = new RegExp("(.)*"+searchQuery+"(.)*","g");
+        User.find(
+            {$or:[{username: regex},{name: regex}]},
+            (err,docs)=>{
+                if (err) {
+                    res.json({state:false});
+                    return;
+                }
+                res.json({
+                    state:true,
+                    results: docs.map(obj=>{
+                        return {
+                            username: obj.username,
+                            name: obj.name,
+                            avatarUrl: obj.avatarUrl,
+                            gender: obj.gender
+                        }
+                    })
+                });
+            }
+        );
+    });
     
     router.get('/rejectfriend', tokenCheck, (req,res)=> {
         let friendId = req.query.username;
@@ -129,7 +154,6 @@ module.exports = function (io) {
 
             });
         });
-
 
     });
 
