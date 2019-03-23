@@ -1,0 +1,31 @@
+.forgotPasswordH1 {
+    position: relative;
+    font-size: 20px;
+    top: 10px;
+    color: #696060;
+}
+
+.forgotForm {
+    position: relative;
+    top: 50px;
+    left: 400px;
+}
+
+.forgotInputForm {
+    width: 400px;
+    border-style: solid;
+    border-color: #01A9DB;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.forgotButton {
+    background-color: #01A9DB;
+    border-color: #01A9DB;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px
+}
