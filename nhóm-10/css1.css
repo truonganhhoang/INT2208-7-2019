@@ -1,0 +1,29 @@
+
+input {
+	position: relative;
+	display: inline-block;
+	font-size: 20px;
+	transition: .5s;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    position: relative;
+    border-radius: 25px 25px 25px 25px;
+    height: 41px;
+    width: 90px;
+    min-width: 90px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    background: #23415C;
+    color: #fff;
+    left: -5px;
+    box-shadow: 0 0 0 7px #23415C;
+}
+input[type="submit"]:hover{
+	background-color: #EE9584;
+}
