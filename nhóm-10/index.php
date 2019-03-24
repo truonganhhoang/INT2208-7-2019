@@ -75,7 +75,7 @@
 	<div style="background-color: #E7E9E9;">
       	<div class="row" >
         	<div class="col-sm-2" ></div>
-        	<div class="col-sm-8" id="expl" style="padding-top: 15px;"  >
+        	<div class="col-sm-8" style="padding-top: 15px;"  >
         		<div style="text-align: center;">
           		<?php
 				$text1="";
