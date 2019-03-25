@@ -12,7 +12,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script> 
    <link rel="stylesheet" href="cssmoi.css" type ="text/css">
-   <link rel="stylesheet" type="text/css" href="css1.css">
   <link rel="stylesheet" href="theme.css" type="text/css"> 
 </head>
 
@@ -25,14 +24,14 @@
       </button>
       <div class="collapse navbar-collapse text-center justify-content-center" id="navbar15">
         <ul class="navbar-nav">
-          <li class="nav-item mx-2"> <a class="nav-link" href="lythuyet1.php">Gammar</a> </li>
+          <li class="nav-item mx-2"> <a class="nav-link" href="lythuyet1.php">Grammar</a> </li>
           <li class="nav-item mx-2"> <a class="nav-link" href="#">HangMan Game</a> </li>
           <li class="nav-item mx-2"> <a class="nav-link navbar-brand mr-0 text-white" href="homemoi.php"><i class="fa d-inline fa-lg fa-stop-circle-o"></i>
               <b>UDict</b></a> </li>
           <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Explore</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="index.php">Translate</a><a class="dropdown-item" href="#">Speech</a></div>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href="About.php">About us</a></li>
         </ul>
       </div>
     </div>
@@ -113,7 +112,7 @@
           		</div>
         		
         	</div>
-        	<div class="fb-comments" data-href="http://localhost/homemoi.php" data-width="900px" data-numposts="5"></div>
+        	<div class="fb-comments" data-href="http://localhost/nhom10/index.php" data-width="900px" data-numposts="5"></div>
         	<div class="col-sm-2" ></div>
         	</div>
     	</div>
@@ -130,9 +129,9 @@
         <div class="col-md-12 text-center d-md-flex align-items-center"> <i class="d-block fa fa-stop-circle fa-2x mr-md-5 text-primary"></i>
           <ul class="nav mx-md-auto d-flex justify-content-center">
             <li class="nav-item"> <a class="nav-link active" href="homemoi.php">Home</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="lythuyet1.php">Gammar</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="lythuyet1.php">Grammar</a> </li>
             <li class="nav-item"> <a class="nav-link" href="#">HangMan</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="About.php">About</a> </li>
           </ul>
           <div class="row">
             <div class="col-md-12 d-flex align-items-center justify-content-md-between justify-content-center my-2"> <a href="#">

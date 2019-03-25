@@ -49,9 +49,7 @@ html, body {
 	padding-top: 15px;
 
 }
-#header h1,h5 {
-	font-size: 400%;
-}
+
 @media (max-width: 769px) {
 	#expl {
 		font-size: 16px;
