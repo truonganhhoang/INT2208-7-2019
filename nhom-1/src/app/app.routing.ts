@@ -14,7 +14,8 @@ const appRoutes: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'messenger', component: MessengerComponent, canActivate:[AuthGuard]},
     { path: 'notfound', component: NotFoundComponent },
-    { path: '**',  component: UserProfileComponent }
+    { path: 'users/:username',  component: UserProfileComponent },
+    { path: '**',  component: NotFoundComponent }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

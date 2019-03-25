@@ -62,7 +62,8 @@ export class RegisterComponent implements OnInit {
                     }
                 },
                 error => {
-                    this.alertService.error(error);
+                    this.alertService.error("Server error");
+                    console.log(error);
                     this.loading = false;
                 });
     }

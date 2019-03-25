@@ -1,9 +1,41 @@
-﻿<h1>Hi {{currentUser.firstName}}!</h1>
-<p>You're logged in with Angular 7!!</p>
-<h3>All registered users:</h3>
-<ul>
-    <li *ngFor="let user of users">
-        {{user.username}} ({{user.firstName}} {{user.lastName}})
-        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
-    </li>
-</ul>
+﻿﻿<mat-card style="width: 90%; margin: 20px auto;">
+    <div mat-card-avatar style="background-image:url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+     height: 45px; width: 45px; background-size: contain">
+    </div>
+    <br>
+    <mat-form-field class="full-width" [style.fontSize]="fontSize.value">
+        <mat-label>What are you thingking?</mat-label>
+        <textarea  matInput cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1" 
+        style="overflow-y:hidden;" placeholder="What are you thinking?"></textarea>
+    </mat-form-field>
+    <hr>
+    <button mat-button style="width:10%;">Share</button>
+</mat-card>
+
+<!--bai dang-->
+<mat-card style="width: 90%; margin: 20px auto;">
+    <div mat-card-avatar style="background-image:url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+     height: 45px; width: 45px; background-size: contain">
+     <mat-card-title style="margin-left: 60px; font-size: 15px;">nguyen</mat-card-title>
+    </div>
+    <mat-card style="height: 150px;margin-top: 10px; background-color: whitesmoke;">
+        The (click) to the left of the equals sign identifies the button's
+         click event as the target of the binding. The text in quotes to the 
+         right of the equals sign is the template statement, 
+         which responds to the click event by calling the component's onClickMe method.
+    </mat-card>
+    <hr>
+    <button mat-button style="width:50%;">Like</button>
+    <button mat-button style="width:50%;">Comment</button>
+    <hr>
+    <textarea matInput cdkTextareaAutosize
+    #autosize="cdkTextareaAutosize"
+    cdkAutosizeMinRows="1"
+    placeholder="Your comment"
+    style="overflow-y:hidden; border-radius: 5px;"></textarea>
+</mat-card>
+
+
+

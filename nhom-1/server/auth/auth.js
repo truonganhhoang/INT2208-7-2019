@@ -17,6 +17,8 @@ const userSchema = require('./../model/user.model');
 const url = process.env.URL_MONGODB;
 const secret = process.env.TOKEN_SECRET;
 
+mongoose.set('useCreateIndex', true);
+
 mongoose.connect(url,{useNewUrlParser:true});
 
 
@@ -31,13 +33,6 @@ const User = mongoose.model('User',userSchema);
  * valid: true nếu tên user này dùng được, false nếu đã tồn tại
  */     
 router.post('/checkvaliduser',(req,res)=>{
-    if (!tryConnect(mongoose)) {
-        res.json({
-            state:false,
-            valid:false
-        });
-        return;
-    }     
     User.findOne({username:req.body.username},(err,doc)=>{
         if (err) {
             res.json({
@@ -67,13 +62,6 @@ router.post('/checkvaliduser',(req,res)=>{
  * một object user lồng trong object trả về cung cấp 3 field: username,name,gender
  */
 router.post('/createuser',(req,res)=>{
-    if (!tryConnect(mongoose)) {
-        res.json({
-            state:false,
-            valid:false
-        });
-        return;
-    }
 
     const user = new User();
     user.username = req.body.username;
@@ -107,14 +95,7 @@ router.post('/createuser',(req,res)=>{
  * là username và password, password này lưu ý là chưa hash chưa làm gì cả
  */
 router.post('/login',(req,res)=>{
-    if (!tryConnect(mongoose)) {
-        console.log('this one touched');
-        res.json({
-            state:false,
-            valid:false
-        });
-        return;
-    }
+    
     User.findOne({username:req.body.username},(err,docs)=>{
         if (err) {
             //nếu kết nối với server bị lỗi., trả về state false
@@ -130,7 +111,8 @@ router.post('/login',(req,res)=>{
                     res.json({
                         state:true,
                         token: jwt.sign({
-                            username: docs.username
+                            username: docs.username,
+                            name: docs.name
                         },
                         secret, {expiresIn:'7 days'}
                         )

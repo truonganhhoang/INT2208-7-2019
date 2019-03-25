@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as io from 'socket.io-client';
+import { UserService } from '@app/_services';
 
 @Component({
   selector: 'app-messenger',
@@ -8,7 +9,9 @@ import * as io from 'socket.io-client';
 })
 export class MessengerComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private userService: UserService
+  ) { }
 
   socket:any;
 
@@ -17,8 +20,15 @@ export class MessengerComponent implements OnInit {
   
   connect() {
     this.socket = io('http://localhost:3000');
-    this.socket.emit('login','NAM');
-
+    console.log(this.userService.currentUserValue);
+    this.socket.emit('login',{
+      user1: this.userService.currentUserValue.username,
+      user2: 'namphan'
+    });
+    this.socket.on('hello',(data)=>{
+      console.log(data);
+    });
+    
   }
   disconnect() {
     this.socket.disconnect();

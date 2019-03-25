@@ -1,23 +1,24 @@
-﻿<!-- nav -->
-<nav class="navbar navbar-expand navbar-dark bg-dark">
-    <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/" *ngIf="currentUser">Home</a>
-        <a class="nav-item nav-link" routerLink="{{currentUser.username}}" *ngIf="currentUser">Profile</a>
-        <a class="nav-item nav-link" (click)="logout()" *ngIf="currentUser">Logout</a>
+﻿<mat-toolbar color="primary" role="heading" style="position: sticky; top:0; z-index: 1000;">
+    <button mat-button routerLink="/" *ngIf="currentUser">
+        <mat-icon style="margin-bottom: 5px">home</mat-icon>
+        Home
+    </button>
+    <button mat-button routerLink="users/{{currentUser.username}}" *ngIf="currentUser">Profile</button>
+    <button mat-button (click)="logout()" *ngIf="currentUser">Logout</button>
 
-        <a class="nav-item nav-link" routerLink="/login" *ngIf="!currentUser">Login</a>
-        <a class="nav-item nav-link" routerLink="/register" *ngIf="!currentUser">Register</a>
-    </div>
-</nav>
+    <button mat-button routerLink="/login" *ngIf="!currentUser">Login</button>
+    <button mat-button routerLink="/register" *ngIf="!currentUser">Register</button>
+    
+</mat-toolbar>
 
 <!-- main app container -->
-<div class="jumbotron">
+
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 offset-sm-3">
+            <div class="col-sm-10 offset-sm-1">
                 <alert></alert>
                 <router-outlet></router-outlet>
             </div>
         </div>
     </div>
-</div>
+

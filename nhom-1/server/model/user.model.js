@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const threadSchema = require('./thread.model');
+const friendSchema = require('./friend.model');
+const notifySchema = require('./notify.model');
 
 var userSchema = new Schema({
     username:{
         type:String,
-        required:true,
+        required:true
     },
     password:{
         type:String,
@@ -18,7 +19,10 @@ var userSchema = new Schema({
     },
     birthday: Date,
     gender: Boolean,
-    avatarUrl: String,
+    avatarUrl: {
+        type:String,
+        default:'assets/data/default/useravatar_default.png'
+    },
     joinDay: {
         type: Date,
         default: Date.now
@@ -28,10 +32,16 @@ var userSchema = new Schema({
         default: []
     },
     friends: {
-        type: [String],
+        type: [friendSchema],
+        default: []
+    },
+    notifies: {
+        type: [notifySchema],
         default: []
     }
 });
+
+userSchema.index({username:1});
 
 
 module.exports = userSchema;

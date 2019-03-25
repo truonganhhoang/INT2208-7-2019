@@ -7,16 +7,14 @@ var middleware_TokenCheck = function(req,res,next) {
         var token = req.headers.authorization.split(' ')[1];
         if (!token) {
             res.json({
-                state:true,
-                valid:false
+                state:false,
             });
             return;
         }
         var valid = jwt.verify(token,process.env.TOKEN_SECRET);
         if (!valid) {
             res.json({
-                state:true,
-                valid:false
+                state:false,
             });
             return;
         } else {
@@ -28,8 +26,7 @@ var middleware_TokenCheck = function(req,res,next) {
         
     } else {
         res.json({
-            state:true,
-            valid:false
+            state:false,
         });
         return;
     }
