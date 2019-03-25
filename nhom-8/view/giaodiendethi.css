@@ -1,0 +1,91 @@
+.container{
+    margin-top: 3%;
+    width: 100%
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 14;
+}
+.nav>li>a {
+    padding: 14px 40px;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #000000;
+}
+.navbar-brand {
+    margin-top: -30px;
+    padding-left: 50px;
+}
+.btn {
+    border-radius: 10px;
+}
+.navbar{
+    margin-bottom: 50px;
+}
+#bs-example-navbar-collapse-1{
+    background-color: #efebeb;
+}
+.navbar-inverse .navbar-form {
+    border-color: #101010;
+    display: flex !important;
+    justify-content: center;
+}
+.form-control {
+    text-align: center;
+    padding: 1% 10%;
+    border-radius: 10px;
+}
+h3{
+    text-transform : uppercase;
+    font-weight: bold;
+    font-family: -webkit-body;
+    padding-top :3%;
+    color: #0f0465;
+}
+.bs-docs-footer {
+    padding-bottom: 20px;
+    margin-top: 100px;
+    color: #99979c;
+    background-color: #2a2730;
+    padding-top: 1px;
+}
+.topnav {
+    position: absolute;
+    right: 30px;
+    top: 16px;
+    padding-bottom: 13px;
+    z-index: 99;
+}
+#header{
+    height:90px;
+    background-color: #2a2730;
+}
+#logo{
+    padding-top: 20px;
+}
+#main{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 150px;
+}
+.center_div{
+    padding: 0px 20%;
+    margin: 0 auto;
+    width:90% /* value of your choice which suits your alignment */
+}
+.dropdown-menu>li>a {
+    text-align: center;
+    padding: 5px 20px;
+}
+.dropdown-menu {
+    width: 100%;
+}
+.wraptocenter{
+    margin:0 auto;
+    display: block;
+    width:680px;
+    height:1000px;
+    border: 2px solid;
+}
+.text-center{
+    padding-top: 20px;
+}
