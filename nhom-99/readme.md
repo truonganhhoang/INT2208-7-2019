@@ -5,8 +5,7 @@
 
 **Một vài hình ảnh:** 
 - Trang chủ:                    
-![1](https://user-images.githubusercontent.com/43178187/52537125-98e48180-2d95-11e9-9209-24337b9efb95.png) 
-
+![web01](https://user-images.githubusercontent.com/41587478/53711061-e921a180-3e72-11e9-9c99-c859f3bf159f.png)
 
 - Giao diện học:                 
 ![2](https://user-images.githubusercontent.com/43178187/52537126-997d1800-2d95-11e9-9cf3-2c9a585319a1.png)
