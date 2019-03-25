@@ -61,13 +61,4 @@ Chức năng:
 - Kiểm thử sản phẩm.
 - Viết hướng dẫn sử dụng.
 
-**User stories:**
-- Là một người mua hàng, tôi muốn nhìn thấy các mặt hàng để tôi có thể xem và lựa chọn.
-- Là một người mua hàng, tôi muốn tiến hành đặt hàng ngay trên hệ thống bao gồm cả thanh toán online.
-- Là quản trị viên của shop bán hàng, tôi muốn kiểm tra đơn hàng của khách hàng.
-- Là quản trị viên của shop bán hàng, tôi muốn thêm, sửa, xóa các sản phẩm.
-- Là một người mua hàng, tôi có thể tìm kiếm thứ tôi muốn mua trên hệ thống.
-- Là một người mua hàng, tôi muốn có một tài khoản lưu thông tin của tôi để không phải nhập lại nhiều lần.
-- Là một người mua hàng, tôi có thể đánh giá sản phẩm sau khi nhận hàng từ shop.
-
-**Link demo sản phẩm:** [tại đây](nguoitheohuonghoa.herokuapp.com)
+**Link demo sản phẩm:** [tại đây](http://nguoitheohuonglieu.herokuapp.com/)
