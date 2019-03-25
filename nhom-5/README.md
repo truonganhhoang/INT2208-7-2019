@@ -61,4 +61,4 @@ Chức năng:
 - Kiểm thử sản phẩm.
 - Viết hướng dẫn sử dụng.
 
-**Link demo sản phẩm:** [tại đây](http://nguoitheohuonglieu.herokuapp.com/)
+**Link demo sản phẩm:** <a href="http://nguoitheohuonglieu.herokuapp.com/" target="_blank">tại đây</a>
