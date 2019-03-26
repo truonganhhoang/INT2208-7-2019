@@ -2,9 +2,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { first } from 'rxjs/operators';
 
-import { environment } from '@environments/environment';
 import { AlertService, UserService} from '@app/_services';
 
 @Component({templateUrl: 'register.component.html'})
@@ -48,8 +46,7 @@ export class RegisterComponent implements OnInit {
         }
 
         this.loading = true;
-        this.http.post<any>(`${environment.apiUrl}/auth/createuser`, this.registerForm.value)
-            .pipe(first())
+        this.userService.register(this.registerForm.value)
             .subscribe(
                 data => {
                     if (data.state) {

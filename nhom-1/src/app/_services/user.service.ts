@@ -16,21 +16,21 @@ export class UserService {
         this.currentUser = this.currentUserSubject.asObservable();
     }
 
-    // getAll() {
-    //     return this.http.get<User[]>(`${environment.apiUrl}/users`);
-    // }
-
     get(username: string) {
-        return this.http.get<any>(`${environment.apiUrl}/api/user`, {params: {'username': username}});
+        return this.http.get<any>(`${environment.apiUrl}/api/userdetail`, {params: {'username': username}});
     }
 
-    // register(user: User) {
-    //     return this.http.post<any>(`${environment.apiUrl}/auth/createuser`, user);
-    // }
+    register(user: User) {
+        return this.http.post<any>(`${environment.apiUrl}/auth/createuser`, user);
+    }
 
-    // update(user: User) {
-    //     return this.http.put(`${environment.apiUrl}/users/${user.id}`, user);
-    // }
+    updateProfile(user: User) {
+        return this.http.post(`${environment.apiUrl}/api/modify`, user);
+    }
+
+    updateAvatar(avt: FormData) {
+        return this.http.post(`${environment.apiUrl}/api/avatarupload`, avt)
+    }
 
     // delete(id: number) {
     //     return this.http.delete(`${environment.apiUrl}/users/${id}`);

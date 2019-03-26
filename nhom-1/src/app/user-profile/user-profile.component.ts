@@ -2,11 +2,10 @@ import { Component, OnInit, Inject, ViewChild } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { UserService } from '@app/_services';
 import { User } from '@app/_models';
-import { ReadVarExpr } from '@angular/compiler';
-import { supportsWebAnimations } from '@angular/animations/browser/src/render/web_animations/web_animations_driver';
 
 @Component({
     selector: 'app-user-profile',
@@ -35,7 +34,6 @@ export class UserProfileComponent implements OnInit {
     ngOnInit() {
         this.route.params.subscribe(param => {
             var username = param['username'];
-            console.log(username);
             if (this.userService.currentUserValue)
                 this.isMyProfile = (username == this.userService.currentUserValue.username);
             this.userService.checkvalid(username)
@@ -50,29 +48,20 @@ export class UserProfileComponent implements OnInit {
                 .subscribe(
                     data => {
                         this.user = data.user;
-                        console.log(this.user);
                     }
                 )
             })
     }
 
     editProfileDialog(): void {
-        const editProfileDialogRef = this.dialog.open(EditProfileDialog, {
+        this.dialog.open(EditProfileDialog, {
             data: this.user
-        });
-
-        editProfileDialogRef.afterClosed().subscribe(result => {
-            console.log(result);
         });
     }
 
     updateAvatarDialog(): void {
-        const updateAvatarDialogRef = this.dialog.open(UpdateAvatarDialog, {
+        this.dialog.open(UpdateAvatarDialog, {
             data: this.user.avatarUrl
-        });
-
-        updateAvatarDialogRef.afterClosed().subscribe(result => {
-            console.log(result);
         });
     }
 
@@ -86,15 +75,39 @@ export class UserProfileComponent implements OnInit {
     templateUrl: 'edit-profile-dialog.html',
 })
 export class EditProfileDialog {
+    form: FormGroup;
 
     constructor(
+        private userService: UserService,
+        private formBuilder: FormBuilder,
         public dialogRef: MatDialogRef<EditProfileDialog>,
         @Inject(MAT_DIALOG_DATA) public data: User
-    ) {
-        console.log(data.username)
+    ) {}
+
+    ngOnInit() {
+        this.form = this.formBuilder.group({
+            name: [this.data.name, Validators.required],
+            birthday: [this.data.birthday, Validators.required],
+            gender: [this.data.gender, Validators.required]
+        });
     }
 
+    // convenience getter for easy access to form fields
+    get f() { return this.form.controls; }
+    
     onNoClick(): void {
+        this.dialogRef.close();
+    }
+
+    submit() {
+        if (this.form.invalid) 
+            return;
+        this.userService.updateProfile(this.form.value)
+            .subscribe(
+                (value) => {
+                    window.location.reload();
+                }
+            );
         this.dialogRef.close();
     }
 }
@@ -109,12 +122,12 @@ export class UpdateAvatarDialog {
     file: any;
 
     constructor(
+        private userService: UserService,
         private httpClient: HttpClient,
         public dialogRef: MatDialogRef<UpdateAvatarDialog>,
         @Inject(MAT_DIALOG_DATA) public data: string
     ) {
         this.previewUrl = data;
-        console.log(data);
     }
 
     onUpload($event: any) {
@@ -125,8 +138,12 @@ export class UpdateAvatarDialog {
     submit() {
         let fileData = new FormData();
         fileData.append('avatar', this.file);
-        this.httpClient.post('http://localhost:3000/api/avatarupload', fileData).subscribe((value) => console.log(value));
-        console.log('uploading');
+        this.userService.updateAvatar(fileData)
+            .subscribe(
+                (value) => {
+                    window.location.reload();
+                }
+            );
         this.dialogRef.close();
     }
 
