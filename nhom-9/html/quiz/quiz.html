@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./script.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</header>
+
+<body>
+  <nav class="navbar navbar-custom">
+    <a href="/nhom-9/html/dashboard/dashboard.html" class="navbar-brand">
+      <img src="../logo.jpg" alt="logo" style="margin-right:20px" width="40px" height="40px">
+      Quizs
+    </a>
+  </nav>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="row-12 bg-light">
+        <img src="../mina.jpg" alt="This image can not be displayed"
+          class="img-fluid img-thumbnail max-width: 100% height: auto rounded-circle">
+      </div>
+      <div class="row bg-light" style="text-align: center">
+        <div class="col-md-2"></div>
+        <div class="col col-md-8 text-md-center">
+          <div class="card">
+            <div class="card-header">Total Score: </div>
+            <div class="card-body" id="scores">0/100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9 ali">
+      <div class="row justify-content-center">
+        <div class="btn btn-lg btn-primary" id="1" onclick="changeQuizTo(this.id)">Quiz 1</a></div>
+        <div class="btn btn-lg btn-primary" id="2" onclick="changeQuizTo(this.id)">Quiz 2</a></div>
+        <div class="btn btn-lg btn-primary" id="3" onclick="changeQuizTo(this.id)">Quiz 3</a></div>
+        <div class="btn btn-lg btn-primary" id="4" onclick="changeQuizTo(this.id)">Quiz 4</a></div>
+        <div class="btn btn-lg btn-primary" id="5" onclick="changeQuizTo(this.id)">Quiz 5</a></div>
+        <div class="btn btn-lg btn-primary" id="6" onclick="changeQuizTo(this.id)">Quiz 6</a></div>
+        <div class="btn btn-lg btn-primary" id="7" onclick="changeQuizTo(this.id)">Quiz 7</a></div>
+        <div class="btn btn-lg btn-primary" id="8" onclick="changeQuizTo(this.id)">Quiz 8</a></div>
+        <div class="btn btn-lg btn-primary" id="9" onclick="changeQuizTo(this.id)">Quiz 9</a></div>
+        <div class="btn btn-lg btn-primary" id="10" onclick="changeQuizTo(this.id)">Quiz 10</a></div>
+      </div>
+      <div class="container">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header text-md-left">
+              <h5 class="display-6" id="quiz_content"></h5>
+            </div>
+            <div class="card-body text-md-left">
+              <div class="col-12">
+                <div class="radio">
+                  <label><input type="radio" name="optradio" id="A">
+                    <span id="checkboxA"></span>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="optradio" id="B">
+                    <span id="checkboxB"></span>
+                  </label>
+                </div>
+              <div class="radio">
+                <label><input type="radio" name="optradio" id="C">
+                  <span id="checkboxC"></span>
+                </label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="optradio" id="D">
+                  <span id="checkboxD"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 text-md-left"><button class="btn btn-lg btn-primary" id="prev">Previus </button></div>
+            <div class="col-md-6 text-md-right"><button class="btn btn-lg btn-primary" id="next">Next </button></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-md-right"><button class="btn btn-lg btn-success" id="submit">Submit</button></div>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html>

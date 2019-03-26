@@ -50,3 +50,19 @@
     
 * Tuần 8 - 11:
     * Thực hiện sprint 3.
+# Tuần 3:
+## Product backlog:
+* Xây dựng màn hình giao diện.
+* Xây dựng bộ câu hỏi và chức năng vào thi trên máy khách.
+
+* Đưa chức năng làm bài thi lên máy chủ.
+* Cập nhật ngân hàng câu hỏi.
+
+* Cập nhật chức năng đăng nhập, đăng kí trên máy chủ.
+* Tạo hồ sơ người dùng.
+
+* Cho phép người dùng chia sẻ thành tích cá nhâ qua mạng xã hội.
+* Cho phép người dùng đóng góp câu hỏi trên máy chủ.
+## Sprint backlog - sprint-1:
+* Tìm hiểu về Bootstrap
+* Chia bố cục trang web

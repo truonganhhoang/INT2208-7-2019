@@ -1,0 +1,22 @@
+.card {
+    padding-top: 6%;
+}
+
+.btn-primary {
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 20%;
+}
+
+.navbar-custom {
+    background-color: #3c5fe7;
+    margin-bottom: 1%;
+}
+
+.navbar-custom .navbar-brand {
+    color: #ecf0f1;
+}
+.btn {
+  border-radius:0;
+}
