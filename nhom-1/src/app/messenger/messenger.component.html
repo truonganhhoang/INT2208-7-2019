@@ -1,7 +1,7 @@
 
-<div style="overflow-y:scroll; height:500px">
-  
-</div>
+<mat-list style="overflow-y:scroll; height:500px">
+  <app-message *ngFor="let message of messages" [message]="message"></app-message>
+</mat-list>
 
-<button class="btn btn-primary" (click)="connect()">Connect</button>
-<button class="btn btn-primary" (click)="disconnect()">Disconnect</button>
+<input type="text" (keydown.enter)="sendMessage($event)">
+
