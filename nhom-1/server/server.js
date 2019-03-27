@@ -22,7 +22,6 @@ const server = http.createServer(app);
 const io = require('socket.io')(server);
 
 require('./messenger/messenger-socket')(io);
-require('./notification/notification-socket')(io,app);
 
 const auth = require('./auth/auth');
 const api = require('./api/api')(io);
