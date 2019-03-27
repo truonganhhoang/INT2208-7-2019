@@ -1,19 +1,39 @@
 <mat-sidenav-container style="margin-top:20px">
     <mat-sidenav mode="side" opened style="width: 200px">
         <mat-card>
-                <div class="profile-avatar" *ngIf="user.avatarUrl" mat-card-avatar [style.backgroundImage]="'url('+ user.avatarUrl +')'">
-                    <button mat-flat-button color="primary" *ngIf="isMyProfile" style="margin: 100px 45px; visibility: hidden;"  (click)="updateAvatarDialog()">
-                        Update
-                    </button>
-                </div>
-                <mat-card-title style="margin-top: 20px">{{user.name}}</mat-card-title>
-                <mat-card-subtitle>{{user.username}}</mat-card-subtitle>
+            <div class="profile-avatar" *ngIf="user.avatarUrl" mat-card-avatar [style.backgroundImage]="'url('+ user.avatarUrl +')'">
+                <button mat-flat-button color="primary" *ngIf="isMyProfile" style="margin: 100px 45px; visibility: hidden;"  (click)="updateAvatarDialog()">
+                    Update
+                </button>
+            </div>
+            <mat-card-title style="margin-top: 20px">{{user.name}}</mat-card-title>
+            <mat-card-subtitle>{{user.username}}</mat-card-subtitle>
         </mat-card>
 
         <mat-list *ngIf="!isMyProfile">
-            <mat-list-item>
-                <button mat-button class="profile-sideButton" (click)="sendFriendRequest()">
+            <mat-list-item *ngIf="relation==false">
+                <button mat-button class="profile-sideButton" (click)="addFriend()">
                     Add Friend
+                </button>
+            </mat-list-item>
+            <mat-list-item *ngIf="relation=='friend'">
+                <button mat-button class="profile-sideButton" (click)="rejectFriend()">
+                    Unfriend
+                </button>
+            </mat-list-item>
+            <mat-list-item *ngIf="relation=='sent request'">
+                <button mat-button class="profile-sideButton" (click)="rejectFriend()">
+                    Cancel Friend Request
+                </button>
+            </mat-list-item>
+            <mat-list-item *ngIf="relation=='wait for accept'">
+                <button mat-button class="profile-sideButton" (click)="rejectFriend()">
+                    Reject Friend Request
+                </button>
+            </mat-list-item>
+            <mat-list-item *ngIf="relation=='wait for accept'">
+                <button mat-button class="profile-sideButton" (click)="acceptFriend()">
+                    Accept Friend Request
                 </button>
             </mat-list-item>
             <mat-list-item>
@@ -62,7 +82,19 @@
                     </mat-list>
                 </mat-card>
             </mat-tab>
-            <mat-tab label="Friends"> Content 3 </mat-tab>
+            <mat-tab label="Friends" *ngIf="isMyProfile">
+                <mat-grid-list cols="2" rowHeight="100px">
+                    <mat-grid-tile *ngFor="let friend of friends">
+                        <mat-card mat-button style="width: 90%; height: 90%;" routerLink="../{{friend.username}}">
+                            <mat-card-header>
+                                <div mat-card-avatar [style.backgroundImage]="'url('+ friend.avatarUrl +')'" style="background-size: contain"></div>
+                                <mat-card-title>{{friend.name}}</mat-card-title>
+                                <mat-card-subtitle>{{friend.username}}</mat-card-subtitle>
+                            </mat-card-header>
+                        </mat-card>
+                    </mat-grid-tile>
+                  </mat-grid-list>
+            </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>
 

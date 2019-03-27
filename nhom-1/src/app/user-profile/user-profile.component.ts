@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { UserService } from '@app/_services';
 import { User } from '@app/_models';
+import { stringify } from '@angular/core/src/util';
 
 @Component({
     selector: 'app-user-profile',
@@ -16,7 +17,9 @@ export class UserProfileComponent implements OnInit {
 
     file: any;
     user: User;
+    friends: Array<User>;
     isMyProfile: boolean;
+    relation: string;
     default: string;
     sideNavButton: [];
 
@@ -48,10 +51,35 @@ export class UserProfileComponent implements OnInit {
                 .subscribe(
                     data => {
                         this.user = data.user;
-                        console.log(this.user);
+                        this.getFriends();
+                        this.getRelation();
                     }
-                )
-            })
+                );
+            });
+    }
+
+    getFriends() {
+        if (!this.isMyProfile) return;
+        this.friends = new Array<User>();
+        this.user.friends.forEach(friend => {
+            this.userService.get(friend.username)
+                .subscribe(
+                    data => {
+                        this.friends.push(data.user);
+                    }
+                );
+        });
+    }
+
+    getRelation() {
+        if (this.isMyProfile) return;
+        this.userService.checkFriend(this.user.username)
+            .subscribe(
+                data => {
+                    this.relation = data.isFriend;
+                    console.log(this.relation);
+                }
+            );
     }
 
     getGender(): string {
@@ -78,8 +106,34 @@ export class UserProfileComponent implements OnInit {
         });
     }
 
-    sendFriendRequest(): void {
-        
+    addFriend(): void {
+        this.userService.addFriend(this.user.username)
+            .subscribe(
+                data => {
+                    console.log(data);
+                    this.getRelation();
+                }
+            )
+    }
+
+    rejectFriend(): void {
+        this.userService.rejectFriend(this.user.username)
+            .subscribe(
+                data => {
+                    console.log(data);
+                    this.getRelation();
+                }
+            )
+    }
+
+    acceptFriend(): void {
+        this.userService.acceptFriend(this.user.username)
+            .subscribe(
+                data => {
+                    console.log(data);
+                    this.getRelation();
+                }
+            )
     }
 }
 

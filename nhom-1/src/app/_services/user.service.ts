@@ -18,9 +18,13 @@ export class UserService {
 
     get(username: string) {
         if (username == this.currentUserValue.username)
-            return this.http.get<any>(`${environment.apiUrl}/api/userdetail`, {params: {'username': username}});
+            return this.http.get<any>(`${environment.apiUrl}/api/userdetail`);
         else
             return this.http.get<any>(`${environment.apiUrl}/api/user`, {params: {'username': username}});
+    }
+
+    checkFriend(username: string) {
+        return this.http.get<any>(`${environment.apiUrl}/api/checkfriend`, {params: {'username': username}});
     }
 
     register(user: User) {
@@ -35,9 +39,17 @@ export class UserService {
         return this.http.post(`${environment.apiUrl}/api/avatarupload`, avt)
     }
 
-    // delete(id: number) {
-    //     return this.http.delete(`${environment.apiUrl}/users/${id}`);
-    // }
+    addFriend(username: string) {
+        return this.http.get<any>(`${environment.apiUrl}/api/requestfriend`, {params: {'username': username}});
+    }
+
+    rejectFriend(username: string) {
+        return this.http.get<any>(`${environment.apiUrl}/api/rejectfriend`, {params: {'username': username}});
+    }
+
+    acceptFriend(username: string) {
+        return this.http.get<any>(`${environment.apiUrl}/api/acceptfriend`, {params: {'username': username}});
+    }
 
     checkvalid(username: string) {
         return this.http.post<any>(`${environment.apiUrl}/auth/checkvaliduser`, ({username}));

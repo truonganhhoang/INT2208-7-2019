@@ -369,12 +369,12 @@ module.exports = function (io) {
                             });
                             return;
                         }
-                        res.json({
-                            state: true,
-                            isFriend: false
-                        });
-                        return;
                     }
+                    res.json({
+                        state: true,
+                        isFriend: false
+                    });
+                    return;
                 }
             }
         });
