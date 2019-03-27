@@ -17,7 +17,10 @@ export class UserService {
     }
 
     get(username: string) {
-        return this.http.get<any>(`${environment.apiUrl}/api/userdetail`, {params: {'username': username}});
+        if (username == this.currentUserValue.username)
+            return this.http.get<any>(`${environment.apiUrl}/api/userdetail`, {params: {'username': username}});
+        else
+            return this.http.get<any>(`${environment.apiUrl}/api/user`, {params: {'username': username}});
     }
 
     register(user: User) {

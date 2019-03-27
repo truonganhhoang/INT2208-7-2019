@@ -48,9 +48,22 @@ export class UserProfileComponent implements OnInit {
                 .subscribe(
                     data => {
                         this.user = data.user;
+                        console.log(this.user);
                     }
                 )
             })
+    }
+
+    getGender(): string {
+        if (this.user.gender)
+            return 'Male';
+        return 'Female';
+    }
+
+    getBirthday(): string {
+        if (!this.user.birthday) return 'Unknown';
+        let birthday = new Date(this.user.birthday);
+        return birthday.toDateString();
     }
 
     editProfileDialog(): void {
@@ -123,7 +136,6 @@ export class UpdateAvatarDialog {
 
     constructor(
         private userService: UserService,
-        private httpClient: HttpClient,
         public dialogRef: MatDialogRef<UpdateAvatarDialog>,
         @Inject(MAT_DIALOG_DATA) public data: string
     ) {

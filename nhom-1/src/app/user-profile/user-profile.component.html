@@ -48,10 +48,20 @@
     </mat-sidenav>
 
     <mat-sidenav-content style="height: 800px">
-        <mat-tab-group style="margin-left: 40px">
+        <mat-tab-group>
             <mat-tab label="Posts"> Content 0 </mat-tab>
             <mat-tab label="Photos"> Content 1 </mat-tab>
-            <mat-tab label="Info"> Content 2 </mat-tab>
+            <mat-tab label="Info">
+                <mat-card>
+                    <mat-list>
+                        <mat-list-item>Full name: {{user.name}}</mat-list-item>
+                        <mat-divider></mat-divider>
+                        <mat-list-item>Birthday: {{getBirthday()}}</mat-list-item>
+                        <mat-divider></mat-divider>
+                        <mat-list-item>Gender: {{getGender()}}</mat-list-item>
+                    </mat-list>
+                </mat-card>
+            </mat-tab>
             <mat-tab label="Friends"> Content 3 </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>
