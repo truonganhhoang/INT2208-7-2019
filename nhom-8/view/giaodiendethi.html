@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang = "vi">
+<head>
+	<meta charset ="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hoctot.vn</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="giaodiendethi.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div id="header">
+			<header class="container-fluid">
+				
+				<div id = "logo">
+					<a class="navbar-brand" href="#" onclick="location.href='/index.html';">
+						<img src="../images/hoctot.png" alt="" style="auto">
+					</a>
+				</div>
+
+				
+				<ul class="nav nav-pills pull-right">
+					<li><a href="#" onclick="change()" style ="color:#dddddd">Sign in</a></li>
+					<script> 
+						function change(){
+							window.location.assign('/signin.html')
+						}
+					</script>
+				</ul>
+				<div class="container center_div">
+					<form class="navbar-form">
+						<input type="text" class="form-control" placeholder="Tìm kiếm tài liệu & đề thi...">
+						<button type="search" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+					</form>
+				</div>
+
+			</header>
+		</div>
+
+
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a href="/index.html"><span class="glyphicon glyphicon-home"></span>  Trang chủ </a></li>
+				<li><a href="#">Toán</a></li>
+				<li><a href="#">Ngữ Văn</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ngoại Ngữ <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Tiếng Anh</a></li>
+						<li><a href="#">Tiếng Pháp</a></li>
+						<li><a href="#">Tiếng Nhật</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Khoa học Tự Nhên<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Vật Lý</a></li>
+						<li><a href="#">Hóa Học</a></li>
+						<li><a href="#">Sinh Học</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Khoa học Xã hội<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Lịch Sử</a></li>
+						<li><a href="#">Địa Lý</a></li>
+						<li><a href="#">Công Dân</a></li>		
+					</ul>
+				</li>
+				<li><a href="#">Video</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav>
+
+
+	<div role="main" id="main">
+		<div class="container-fluid">
+			<section>
+				<div>
+					<a href="../images/de.jpg" >
+						<img src="../images/de.jpg" class="wraptocenter">
+					</a>
+				</div>
+				<div class="text-center">
+					<a href="../images/de.jpg" class="btn btn-primary btn-lg" download = "de thi">
+						Download <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+					</a>
+				</div>
+			</section>
+		</div>
+	</div>
+
+
+	<footer class ="bs-docs-footer">
+		<div class="container">
+			<p><strong>Chia sẻ tài liệu ôn thi Đại học</strong></p>
+			<p><strong>Design by Nhóm 8</strong></p>
+			<p><strong> Chúc các bạn thi tốt!</strong></p>
+		</div>
+	</footer>
+
+</body>
+</html>
