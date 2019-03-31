@@ -12,7 +12,8 @@ class LoginController extends Controller
 {
     //
     public function getLogin(){
-        return view('login.loginV2');
+        $slide = [];
+        return view('login.loginv3',compact('slide'));
     }
 
     public function postLogin(Request $request){
@@ -26,11 +27,17 @@ class LoginController extends Controller
             $rm = false;
         }
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password],$rm)) {
+            if(Auth::id() == 1)
+            {
+                return redirect('/admin');
+            }
+            else{
+                //dd("thang cong");
+                $email = Auth::user();
+                return redirect('/')->with(['data'=>$email]);
+                //$cookie = cookie($request->email,$request->password,3600);
+            }
 
-            //dd("thang cong");
-            $email = Auth::user();
-            return redirect('/')->with(['data'=>$email]);
-            //$cookie = cookie($request->email,$request->password,3600);
         }
         else{
             return back()->withInput()->with('error',"Tài khoản hoặc mật khẩu không chính xác");
@@ -40,8 +47,11 @@ class LoginController extends Controller
 
     }
     public function logOut(){
+
         Auth::logout();
-        DB::table('cart')->where('id_type', '=', 1)->delete();
+
+        DB::table('cart')->where('drops', '=', 1)->delete();
+
         return redirect('/');
     }
 }

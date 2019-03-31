@@ -15,10 +15,14 @@
 
 
     <link rel="stylesheet" href="{{asset('css/page/cssshop.css')}}">
+    <link rel="stylesheet" href="{{asset('css/footer/footermap.css')}}">
+    <link rel="stylesheet" href="{{asset('css/login/cssLogin.css')}}">
+    <link rel="stylesheet" href="{{asset('css/page/profile.css')}}">
+    @yield('css')
 
 </head>
 <body>
-<nav class="navbar navbar-inverse" >
+<nav class="navbar navbar-inverse" style="position: relative">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -26,13 +30,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a  class="navbar-brand aHead" href="{{route('home')}}">OderOnline</a>
+            <a  class="navbar-brand aHead" href="{{route('home')}}"><img class="img-fluid" src="{{asset('img/Logo/logo.png')}}" style="height: 100px;width: 100px;position: relative;bottom: 200%"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a  href="#"><i class="fas fa-home"></i>Home</a></li>
-                <li class="dropdown loaisp">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fab fa-product-hunt"></i>Sản phẩm
+                <li><a  href="#"><i class="fas fa-home"></i>Trang chủ</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle type-product" data-toggle="dropdown" href="#"><i class="fab fa-product-hunt"></i>Sản phẩm
                         <ul class="dropdown-menu">
                             @foreach($prod as $sp)
                                 <li><a href="{{route('sp',$sp->id)}}" style="color:#1b4b72 !important;">{{$sp->name}}</a></li>
@@ -41,10 +45,10 @@
                         </ul>
                     </a>
                 </li>
-                <li><a  href="#"><i class="far fa-hand-point-right"></i>Giới thiệu</a></li>
+            <!--    <li><a  href="#"><i class="far fa-hand-point-right"></i>Giới thiệu</a></li> -->
                 <li><a  href="https://www.facebook.com/hatblack"><i class="fab fa-facebook"></i>Liên hệ</a></li>
             </ul>
-            <form class="navbar-form navbar-left" method="get" action="{{route('searchall')}}">
+            <form class="navbar-form navbar-left search-form" method="get" action="{{route('searchall')}}">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search" size="30" name="key">
                     <div class="input-group-btn">
@@ -54,25 +58,25 @@
                     </div>
                 </div>
             </form>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav  navbar-right user-logged" >
                 @if (\Illuminate\Support\Facades\Auth::check())
-                    <div class="dropdown info">
+                    <div class="dropdown">
                         <span class="glyphicon glyphicon-user" style="margin-right: 10px"></span><span class="dropdown-toggle" id="email" data-toggle="dropdown"><a style="color: whitesmoke"  href="#">{{\Illuminate\Support\Facades\Auth::user()->name}}<span class="caret"></span></a></span>
-                        <ul class="dropdown-menu" style="background: linear-gradient(-180deg,#1d68a7,#999999);opacity: 0.9;font-family: Arial;font-size: 11px !important;letter-spacing: 2px;">
+                        <ul class="dropdown-menu" style="background:#1b4b72;font-size: 11px !important;letter-spacing: 2px;">
 
                             <li><a class="black" href="#">Đơn hàng</a></li>
-                            <li><a class="black" href="#">Thông tin cá nhân</a></li>
-                            <li><a class="black" href="#">St</a></li>
+                            <li><a class="black" href="{{route('profile_user',\Illuminate\Support\Facades\Auth::id())}}}">Thông tin cá nhân</a></li>
+                            <li><a class="black" href="#"></a></li>
                             <li class="divider"></li>
                             <li class="dropdown-header"></li>
-                            <li><a class="black" href="{{route('out')}}">Log Out</a></li>
+                            <li><a class="black" href="{{route('logout')}}">Đăng xuất</a></li>
                         </ul>
 
                     <!-- <span class="glyphicon glyphicon-log-out"></span><a id="logout" href="{{route('out')}}">LogOut</a>-->
                     </div>
                     <div class="giohang dropdown">
                         <span class="dropdown-toggle" data-toggle="dropdown"><a style="color: whitesmoke !important;" href="#"><i class="fas fa-cart-arrow-down fa-lg"></i></a></span>
-                        <ul class="dropdown-menu listProduct" style="background: white;">
+                        <ul class="dropdown-menu list-in-cart" style="background: white;">
                             @if(count($cart)==0)
                                 <li class="li-empty">
                                     <p class="li-empty-text"><i style="margin-right: 5px" class="fas fa-sad-tear fa-lg"></i>Danh sách rỗng</p>
@@ -80,24 +84,33 @@
                             @endif
                             @foreach($cart as $c)
 
-                                <li class="row li-cart">
+                                <li class="row li-cart" style="position: relative">
                                     <div class="col-sm-4">
-                                        <img src="img/product/{{$c->img}}" style="height: 50px;width: 50px;padding-left: 3px">
+                                        <img src="/img/product/{{$c->img}}" style="height: 50px;width: 50px;padding-left: 3px">
                                     </div>
-                                    <div class="col-sm-7">
+                                    <div class="col-sm-6">
                                         <div class="li-name">
                                             <p style="font-size: 11px">{{$c->name}}</p>
                                         </div>
                                         <div class="li-price">
-                                            @if($c->sale_price != 0)
-                                            <p style="font-size: 11px;margin-top: -5px">{{$c->sale_price}}</p>
+                                            @if($c->amount > 1)
+                                                @if($c->sale_price != 0)
+                                                    <p style="font-size: 11px;margin-top: -5px">{{$c->sale_price * $c->amount }} SL:{{$c->amount}}</p>
+                                                @else
+                                                    <p style="font-size: 11px;margin-top: -5px">{{$c->unit_price *$c->amount}} SL:{{$c->amount}}</p>
+                                                @endif
                                             @else
-                                                <p style="font-size: 11px;margin-top: -5px">{{$c->unit_price}}</p>
+                                                @if($c->sale_price != 0)
+                                                    <p style="font-size: 11px;margin-top: -5px">{{$c->sale_price  }}</p>
+                                                @else
+                                                    <p style="font-size: 11px;margin-top: -5px">{{$c->unit_price }}</p>
+                                                @endif
                                             @endif
+
                                         </div>
                                     </div>
-                                    <div class="col-sm-1" style="position: absolute; left: 80%">
-                                        <a href="#"><i class="fas fa-trash"></i></a>
+                                    <div class="col-sm-1" style="position: absolute; left: 75%;top:5%;">
+                                        <a href="{{route('dropItem',$c->id_type)}}"><i class="fas fa-trash"></i></a>
                                     </div>
 
 
@@ -111,65 +124,70 @@
                         </ul>
                     </div>
                 @else
-                    <li><a href="{{route('reguser')}}" target="_parent"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="{{route('userlogin')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="{{route('reguser')}}" target="_parent"><span class="glyphicon glyphicon-user"></span>Đăng kí</a></li>
+                        <li><a href="{{route('login')}}" target="_parent"><span class="glyphicon glyphicon-log-in"></span>Đăng nhập</a></li>
                 @endif
 
             </ul>
         </div>
     </div>
 </nav>
-@section('sl')
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        @foreach($slide as $sl)
-            @if($sl->id == 1)
-                <li data-target="#myCarousel" data-slide-to="{{$sl->id}}" class="active"></li>
-            @else
-                <li data-target="#myCarousel" data-slide-to="{{$sl->id}}"></li>
-            @endif
-        @endforeach
-
-
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-        @foreach($slide as $sl)
-            @if($sl->id == 1)
-                <div class="item active">
-                    <img src="img/slide/{{$sl->image}}@yield('slide')" alt="New York" width="1200" height="300">
-                    <div class="carousel-caption">
-                        <h3>{{$sl->tenbanh}}</h3>
-                        <p>{{$sl->dacdiem}}</p>
-                    </div>
-                </div>
-            @else
-                <div class="item">
-                    <img src="img/slide/{{$sl->image}}" alt="New York" width="1200" height="300">
-                    <div class="carousel-caption">
-                        <h3>{{$sl->tenbanh}}</h3>
-                        <p>{{$sl->dacdiem}}</p>
-                    </div>
-                </div>
-            @endif
-        @endforeach
-
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-
-    </div>
-</div>
-@show
+@yield('sl')
 @yield('content')
-@yield('script')
+
+<footer id="myFooter" style="background: linear-gradient(90deg, rgb(0, 62, 82) 50%, rgb(13, 109, 133) 87%, rgb(26, 156, 183) 100%);">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h5>Get started</h5>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sign up</a></li>
+                    <li><a href="#">Downloads</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5>About us</h5>
+                <ul>
+                    <li><a href="#">Company Information</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5>Support</h5>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help desk</a></li>
+                    <li><a href="#">Forums</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5>Legal</h5>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Here we use the Google Embed API to show Google Maps. -->
+        <!-- In order for this to work in your project you will need to generate a unique API key.  -->
+        <!-- <iframe id="map-container" frameborder="0" style="border:0"
+                 src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOwg_06VPwokRYv534QaPC8g&key=AIzaSyBdJm9Amm4KALkKlZObWn40dcpRyH119zg" >
+         </iframe>-->
+    </div>
+    <div class="social-networks">
+        <a href="#" class="twitter"><i class="fab fa-twitter fa-lg"></i></a>
+        <a href="#" class="facebook"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="#" class="google"><i class="fab fa-google-plus fa-lg"></i></a>
+    </div>
+    <div class="footer-copyright">
+        <p>© 2019 Copyright </p>
+    </div>
+</footer>
+
 </body>
 
+@yield('script')
 
