@@ -134,3 +134,9 @@ Route::get('/reset',function (){
 Route::get('/forgot-password',function (){
    return view('auth.passwords.email');
 })->name('forgot_pw');
+
+// Review Post Routes...
+Route::prefix('details')->group(function () {
+    Route::get('user','Auth\Review@getReviewForm')->name('getReview');
+    Route::post('puser','Auth\Review@postReviewForm')->name('postReview');
+});

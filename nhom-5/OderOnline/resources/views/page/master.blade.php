@@ -34,7 +34,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a  href="#"><i class="fas fa-home"></i>Trang chủ</a></li>
+                <li><a  href="{{route('home')}}"><i class="fas fa-home"></i>Trang chủ</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle type-product" data-toggle="dropdown" href="#"><i class="fab fa-product-hunt"></i>Sản phẩm
                         <ul class="dropdown-menu">

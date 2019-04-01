@@ -105,7 +105,7 @@
                     <div class="col-sm-3 products-sale" style="margin-bottom: 20px">
                         <div class="single-item">
                             <div class="single-item-header">
-                                <a href="#"><img  class="img-fluid newproduct" src="img/product/{{$sp->image}}" alt=""></a>
+                                <a href="{{route('details',[$sp->id_type,$sp->id])}}"><img  class="img-fluid newproduct" src="img/product/{{$sp->image}}" alt=""></a>
                             </div>
                             <div class="body">
                                 <p class="single-item-title">{{$sp->name}}</p>

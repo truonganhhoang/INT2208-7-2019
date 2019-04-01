@@ -6,6 +6,8 @@ use App\Cart;
 use App\products;
 use App\slide;
 use App\User;
+use App\Rates;
+use App\customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -97,7 +99,22 @@ class PageController extends Controller
         $slide = slide::all();
         $product = products::where('id',$id)->get();
         $type_product = products::where('id_type',$id_type)->paginate(5);
-        return view('page.details',compact('slide','product','type_product'));
+        $rates = Rates::where('product_id',$id)->get();
+        $auth_rate = null;
+        $rated_customer = array();
+        $star = round(DB::table('rates')->where('product_id',$id)->avg('rate'),3);
+        foreach ($rates as $rate) {
+            $rated_customer[$rate['customer_id']] = (customer::where('id', $rate['customer_id']))->get()[0]['name'];
+            if (Auth::id() == $rate['customer_id'])
+                $auth_rate = $rate;
+        }
+        if ($auth_rate == null) {
+            $auth_rate['product_id'] = $id;
+            $auth_rate['customer_id'] = Auth::id();
+            $auth_rate['rate'] = 0;
+            $auth_rate['content'] = '';
+        }
+        return view('page.details',compact('slide','product','type_product','star','rates','auth_rate','rated_customer'));
     }
     public function profile($id){
         $slide = [];
@@ -121,7 +138,7 @@ class PageController extends Controller
         ]);
         return back();
     }
-    public  function putPw($id,Request $req){
+    public function putPw($id,Request $req){
         $user = User::where('id',$id)->value('password');
 
 
@@ -168,4 +185,5 @@ class PageController extends Controller
 
 
     }
+
 }

@@ -20,7 +20,7 @@
                     <div class="col-sm-3" style="margin-bottom: 15px">
                         <div class="single-item">
                             <div class="single-item-header">
-                                <a href="#"><img  class="img-fluid newproduct" src="img/product/{{$pro->image}}" alt=""></a>
+                                <a href="{{route('details',[$pro->id_type,$pro->id])}}"><img class="img-fluid newproduct" src="img/product/{{$pro->image}}" alt=""></a>
                             </div>
                             <div class="body">
                                 <p class="single-item-title">{{$pro->name}}</p>
