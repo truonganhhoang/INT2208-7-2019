@@ -13,6 +13,7 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script> 
    <link rel="stylesheet" href="cssmoi.css" type ="text/css">
   <link rel="stylesheet" href="theme.css" type="text/css"> 
+  <link rel="shortcut icon" type="image/ico" href="imgg/avv.ico"/>
 </head>
 
 <body class="w-100">

@@ -13,7 +13,7 @@
    	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script> 
    	<link rel="stylesheet" href="cssmoi.css" type ="text/css">
   	<link rel="stylesheet" href="theme.css" type="text/css"> 
-  	<link rel="stylesheet" type="text/css" href="css1.css">
+    <link rel="shortcut icon" type="image/ico" href="imgg/avv.ico"/>
 </head>
 
 
@@ -49,7 +49,7 @@
         <ul class="navbar-nav">
           <li class="nav-item mx-2 active"> <a class="nav-link" href="lythuyet1.php">Grammar</a> </li>
           <li class="nav-item mx-2"> <a class="nav-link" href="Hangman.php">HangMan Game</a> </li>
-          <li class="nav-item mx-2"> <a class="nav-link navbar-brand mr-0 text-white" href="homemoi.php"><i class="fa d-inline fa-lg fa-stop-circle-o"></i>
+          <li class="nav-item mx-2"> <a class="nav-link navbar-brand mr-0 " href="homemoi.php"><i class="fa d-inline fa-lg fa-stop-circle-o"></i>
               <b>UDict</b></a> </li>
           <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle " href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Explore</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item " href="index.php">Translate</a><a class="dropdown-item" href="#">Speech</a></div>
@@ -60,7 +60,23 @@
     </div>
   </nav>
 
-
+<div class="py-2 text-center" id="header">
+        <div class="mx-auto">
+          <h1 class="w-100" > UDict</h1>
+          <h5 >This is my dictionary</h5>
+          <form class="form-inline d-flex justify-content-center" action="homemoi.php" method="post">
+            <div class="input-group input-group-sm" > 
+              <input type="text" class="form-control form-control-lg" name="key" value="<?php 
+            if(isset($_POST['key']))
+          echo $_POST['key'];
+          ?>" id="form3" placeholder="Type and search..." autocomplete="off">
+              <div class="input-group-append"  id="submit"><button class="btn btn-block btn-outline-primary " type="submit" ><i class="fa fa-search fa-fw"></i>
+                  <font face="FontAwesome">Search</font>
+                </button></div>
+            </div>
+          </form>
+        </div>
+      </div>
 
 	<div class="content" style= "background: #A8B5BE;">
 		<div class="row">
@@ -80,12 +96,12 @@
         		
         			<input type="submit" name ="submit" value="Search" >
         		</form> 
-        		<div class="fb-comments" data-href="http://localhost/homemoi.php" data-width="900px" data-numposts="5"></div>     		
+        		<div class="fb-comments" data-href="http://localhost/lythuyet1.php" data-width="900px" data-numposts="5"></div>     		
 			</div>
 			
 
 
-  			<div class="col-sm-9" style="padding: 1em; " >
+  			<div class="col-sm-9" style="padding: 1em;font-size: xx-small;" >
   				
   					<?php
 						$servername = "localhost";
@@ -151,7 +167,7 @@
       		</div>
     	</div>
   	</div>
-  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  	
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
@@ -179,6 +195,4 @@
 		});
 
 	</script>
-  	<script src="js/speakmoi.js"></script>
-
 </html>
