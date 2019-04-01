@@ -78,3 +78,13 @@ display: block;
     border-radius: 50%;
     background: white;
 }
+#a_5 {
+    font-size: 20px;
+    float: right;
+    color: #ffffff;
+    padding: 0 15px 0 0;
+}
+#a_5:hover {
+    color: #e6e6e6;
+    text-decoration: none;
+}

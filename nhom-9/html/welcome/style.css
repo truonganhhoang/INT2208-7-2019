@@ -20,3 +20,14 @@
 .btn {
   border-radius:0;
 }
+#a_1 {
+	font-size: 20px;
+	float: right;
+	color: #ffffff;
+	padding: 0 15px 0 0;
+}
+#a_1:hover {
+	color: #e6e6e6;
+	text-decoration: none;
+}
+
