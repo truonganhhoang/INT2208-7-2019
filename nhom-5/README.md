@@ -12,20 +12,18 @@ Nhóm người dùng: mọi người.
 
 Chức năng:
 1. Hiển thị các mặt hàng bao gồm hình ảnh và giá của sản phẩm có sao đánh giá kèm theo.
-
-![Image](image_demo/background.png)
+![Image](image_demo/trang_chu.png)
 
 2. Chức năng tìm kiếm mặt hàng.
-3. Tạo tài khoản, đăng nhập và đăng xuất.
+![Image](image_demo/search.png)
+![Image](product_type_4.png)
 
+3. Tạo tài khoản, đăng nhập và đăng xuất.
 ![Image](image_demo/register_an_account.png)
+![Image](image_demo/login.png)
 
 4. Tiến hành đặt hàng, thanh toán và vận chuyển.
-
-![Image](image_demo/account.png)
-
 5. Phản hồi đánh giá.
-6. Nhắn tin trao đổi.
 
 ## Quy trình phát triển Scrum:
 ### Các công đoạn trong một sprint (vòng lặp):
@@ -61,4 +59,4 @@ Chức năng:
 - Kiểm thử sản phẩm.
 - Viết hướng dẫn sử dụng.
 
-**Link demo sản phẩm:** <a href="http://nguoitheohuonglieu.herokuapp.com/" target="_blank">tại đây</a>
+**Link demo sản phẩm:** [tại đây](http://oderonline.herokuapp.com/){target="_blank"}
