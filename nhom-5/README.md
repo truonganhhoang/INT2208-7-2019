@@ -16,7 +16,7 @@ Chức năng:
 
 2. Chức năng tìm kiếm mặt hàng.
 ![Image](image_demo/search.png)
-![Image](product_type_4.png)
+![Image](image_demo/product_type_4.png)
 
 3. Tạo tài khoản, đăng nhập và đăng xuất.
 ![Image](image_demo/register_an_account.png)
@@ -59,4 +59,4 @@ Chức năng:
 - Kiểm thử sản phẩm.
 - Viết hướng dẫn sử dụng.
 
-**Link demo sản phẩm:** [tại đây](http://oderonline.herokuapp.com/){target="_blank"}
+**Link demo sản phẩm:** [tại đây](http://oderonline.herokuapp.com/){target="_blank" rel="noopener"}
