@@ -1,0 +1,59 @@
+<mat-sidenav-container style="margin-top:20px">
+    <mat-sidenav mode="side" opened style="width: 200px">
+        <mat-card>
+                <div class="profile-avatar" *ngIf="user.avatarUrl" mat-card-avatar [style.backgroundImage]="'url('+ user.avatarUrl +')'">
+                    <button mat-flat-button color="primary" *ngIf="isMyProfile" style="margin: 100px 45px; visibility: hidden;"  (click)="updateAvatarDialog()">
+                        Update
+                    </button>
+                </div>
+                <mat-card-title style="margin-top: 20px">{{user.name}}</mat-card-title>
+                <mat-card-subtitle>{{user.username}}</mat-card-subtitle>
+        </mat-card>
+
+        <mat-list *ngIf="!isMyProfile">
+            <mat-list-item>
+                <button mat-button class="profile-sideButton" (click)="sendFriendRequest()">
+                    Add Friend
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="profile-sideButton">
+                    Message
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="profile-sideButton">
+                    Follow
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="profile-sideButton">
+                    Block
+                </button>
+            </mat-list-item>
+        </mat-list>
+
+        <mat-list *ngIf="isMyProfile">
+            <mat-list-item>
+                <button mat-button class="profile-sideButton" (click)="editProfileDialog()">
+                    Edit Profile
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="profile-sideButton">
+                    Change Password
+                </button>
+            </mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content style="height: 800px">
+        <mat-tab-group style="margin-left: 40px">
+            <mat-tab label="Posts"> Content 0 </mat-tab>
+            <mat-tab label="Photos"> Content 1 </mat-tab>
+            <mat-tab label="Info"> Content 2 </mat-tab>
+            <mat-tab label="Friends"> Content 3 </mat-tab>
+        </mat-tab-group>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
