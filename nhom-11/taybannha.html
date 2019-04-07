@@ -1,233 +1,291 @@
 <!DOCTYPE html>
 <html lang="vi">
-	<head>
-		<title> Bóng đá </title>
-		<meta name="description" content="Kết quả 5 giải đấu hàng đầu châu Âu" />
-		<meta name="keyword" content="bong da, ket qua, lich thi dau" />
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="normalize.css" />
-		<link rel="stylesheet" href="score.css" />
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
-	</head>
-	
-	<body>
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a href="score.html"><img src="Logoweb.png" alt="score+"></a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Các giải đấu <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="anh.html">Premier League</a></li>
-								<li><a href="#">La Liga</a></li>
-								<li><a href="italia.html">Series A</a></li>
-								<li><a href="phap.html">Ligue I</a></li>
-								<li><a href="duc.html">BundesLiga</a></li>						
-							</ul>
-						</li>
-						<li><a href="#">Tin tức</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Bên lề</a></li>
-								<li><a href="#">Highlights</a></li>
-								<li><a href="#"></a></li>
-								<li role="separator" class="divider"></li>
-								<li class="dropdown-header">Nav header</li>
-								<li><a href="#">Separated link</a></li>
-								<li><a href="#">One more separated link</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div><!--/.nav-collapse -->
-			</div>
-		</nav>
-	
-	<!--/Logo League -->
-		<img src="LogoGiaiDau/laliga.jpg" width="300px" height="50px" alt="la liga" class="center img-responsive" >&nbsp&nbsp
-		
-	<ul class="nav nav-tabs nav-justified " role="tablist">
-        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
-            data-toggle="tab">Bảng xếp hạng</a></li>
-        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
-            data-toggle="tab">Lịch thi đấu - Kết quả</a></li>
-      </ul>
 
-      <!-- Tab panes -->
-    <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="home">
-			<div class="col-md-10">
-				<table class="table table-striped">&nbsp
-				<tr>
-				  <th class="col-md-1"><p>Vị trí</p></th>
-				  <th class="col-md-5"><p>Câu lạc bộ</p></th>
-				  <th class="col-md-1"><p align="center">Trận</p></th>
-				  <th class="col-md-1"><p align="center">Thắng</p></th>
-				  <th class="col-md-1"><p align="center">Hòa</p></th>
-				  <th class="col-md-1"><p align="center">Thua</p></th>
-				  <th class="col-md-1"><p align="center">+/-</p></th>
-				  <th class="col-md-1"><p align="center">Điểm</p></th>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td><img src="LogoCLB/La Liga/barcelona.png" alt="score+" width="auto" height="20px"> F.C Barcelona</td><td align="center">5</td><td align="center">4</td><td align="center">1</td><td align="center">0</td><td align="center">10</td><td align="center">15</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td><img src="LogoCLB/La Liga/atleticomadrid.png" alt="score+" width="auto" height="20px"> Atletico Madrid</td><td align="center">5</td><td align="center">4</td><td align="center">0</td><td align="center">1</td><td align="center">12</td><td align="center">12</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td><img src="LogoCLB/La Liga/real.png" alt="score+" width="auto" height="20px"> Real Madrid</td><td align="center">5</td><td align="center">3</td><td align="center">1</td><td align="center">1</td><td align="center">8</td><td align="center">10</td>
-				</tr>
-				<tr>
-					<td>4</td><td><img src="LogoCLB/La Liga/getafe.png" alt="score+" width="auto" height="20px"> Getafe</td><td align="center">5</td><td align="center">3</td><td align="center">0</td><td align="center">2</td><td align="center">10</td><td align="center">9</td>
-				</tr>
-				</table>
-			</div>
+<head>
+    <title> Bóng đá </title>
+    <meta name="description" content="Kết quả 5 giải đấu hàng đầu châu Âu" />
+    <meta name="keyword" content="bong da, ket qua, lich thi dau" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="score.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="score.html"><img src="Logoweb.png" alt="score+"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">Các giải đấu <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Premier League</a></li>
+                            <li><a href="#">La Liga</a></li>
+                            <li><a href="#">Series A</a></li>
+                            <li><a href="#">Ligue I</a></li>
+                            <li><a href="#">BundesLiga</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Bên lề</a></li>
+                            <li><a href="#">Highlights</a></li>
+                            <li><a href="#"></a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <div role="tabpanel" class="tab-pane" id="profile">
+    </nav>
 
-          	 <ul class="nav nav-tabs nav-justified " role="tablist">
-		        <li role="presentation" class="active"><a href="#r1" aria-controls="round" role="tab"
-		            data-toggle="tab">Vòng 1</a></li>
-		        <li role="presentation"><a href="#r2" aria-controls="round" role="tab"
-		            data-toggle="tab">Vòng 2</a></li>
-		        <li role="presentation"><a href="#r3" aria-controls="round" role="tab"
-		            data-toggle="tab">Vòng 3</a></li>
-		        <li role="presentation"><a href="#r4" aria-controls="round" role="tab"
-		            data-toggle="tab">Vòng 4</a></li>
-		        <li role="presentation"><a href="#r5" aria-controls="round" role="tab"
-		            data-toggle="tab">Vòng 5</a></li>
-		        <li role="presentation"><a href="#r6" aria-controls="round" role="tab"
-		            data-toggle="tab">Vòng 6</a></li>
-		        <li role="presentation"><a href="#r7" aria-controls="round" role="tab"
-		            data-toggle="tab">Vòng 7</a></li>
-		        <li role="presentation"><a href="#r8" aria-controls="round" role="tab"
-		            data-toggle="tab">Vòng 8</a></li>
-		        <li role="presentation"><a href="#r9" aria-controls="round" role="tab"
-		            data-toggle="tab">Vòng 9</a></li>
-		        <li role="presentation"><a href="#r10" aria-controls="round" role="tab"
-		            data-toggle="tab">Vòng 10</a></li>
-		      </ul>
+    <!--/Logo League -->
+    <img src="premier-league-bg.jpg" alt="ngoai hang anh" class="center img-responsive">&nbsp&nbsp
+
+    <!--/Toolbar -->
+    <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs nav-justified " role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+                    data-toggle="tab">Bảng xếp hạng</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Lịch thi
+                    đấu - Kết quả</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+                <div class="col-md-10">
+                    <table class="table table-striped">&nbsp
+                        <tr>
+                            <th class="col-md-1">Pos</th>
+                            <th class="col-md-5">Club</th>
+                            <th class="col-md-1">M</th>
+                            <th class="col-md-1">W</th>
+                            <th class="col-md-1">D</th>
+                            <th class="col-md-1">L</th>
+                            <th class="col-md-1">+/-</th>
+                            <th class="col-md-1">Points</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="Logo/liverpool.png" alt="score+" width="auto" height="25px"> Liverpool</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>10</td>
+                            <td align="center">15</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="Logo/mc.png" alt="score+" width="auto" height="20px"> Manchester City</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>12</td>
+                            <td align="center">12</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><img src="Logo/arsenal.png" alt="score+" width="auto" height="20px"> Arsenal</td>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>8</td>
+                            <td align="center">10</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><img src="Logo/mu.png" alt="score+" width="auto" height="20px"> Manchester United</td>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>10</td>
+                            <td align="center">9</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile">
+                <div class="content-holder">
+                    <div class="content" id="content-1" data-id='1' style="display: block;">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" align="center"> Vòng 1 </div>
+                            <table class="table">
+                                <tr>
+                                    <th class="col-xs-4">
+                                        <p align="center">HOME</p>
+                                    </th>
+                                    <th class="col-xs-4">
+                                        <p align="center"></p>
+                                    </th>
+                                    <th class="col-xs-4">
+                                        <p align="center">AWAY</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td align="center"><img src="Logo/liverpool.png" alt="score+" width="auto"
+                                            height="20px"> Liverpool</td>
+                                    <td align="center"> 5 - 1 </td>
+                                    <td align="center">Manchester City <img src="Logo/mc.png" alt="score+" width="auto"
+                                            height="20px"></td>
+                                </tr>
+                                <tr>
+                                    <td align="center"><img src="Logo/arsenal.png" alt="score+" width="auto"
+                                            height="20px"> Arsenal</td>
+                                    <td align="center"> 4 - 3 </td>
+                                    <td align="center">Manchester United <img src="Logo/mu.png" alt="score+"
+                                            width="auto" height="20px"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
 
 
-		      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="r1">
-			<table class="table">
-					<tr>
-					  <th class="col-xs-4"><p align="center">HOME</p></th>
-					  <th class="col-xs-4"><p align="center"></p></th>
-					  <th class="col-xs-4"><p align="center">AWAY</p></th>
-					</tr>
-					<tr>
-						<td align="center"><img src="LogoCLB/La Liga/barcelona.png" alt="score+" width="auto" height="20px"> F.C Barcelona</td><td align="center"> 5 - 1 </td><td align="center"><img src="LogoCLB/La Liga/real.png" alt="score+" width="auto" height="20px"> Real Madrid</td>
-					</tr>
-					<tr>
-						<td align="center"><img src="LogoCLB/La Liga/getafe.png" alt="score+" width="auto" height="20px"> Getafe</td><td align="center"> 4 - 3 </td><td align="center"><img src="LogoCLB/La Liga/atleticomadrid.png" alt="score+" width="auto" height="20px"> Atletico Madrid</td>
-					</tr>
-				</table>
-			</div>
-        
-        <div role="tabpanel" class="tab-pane" id="r2">
-			<table class="table">
-					<tr>
-					  <th class="col-xs-4"><p align="center">HOME</p></th>
-					  <th class="col-xs-4"><p align="center"></p></th>
-					  <th class="col-xs-4"><p align="center">AWAY</p></th>
-					</tr>
-					<tr>
-						<td align="center"><img src="LogoCLB/La Liga/atleticomadrid.png" alt="score+" width="auto" height="20px"> Atletico Madrid</td><td align="center">20:00</td><td align="center"><img src="LogoCLB/La Liga/barcelona.png" alt="score+" width="auto" height="20px"> F.C Barcelona</td>
-					</tr>
-					<tr>
-						<td align="center"><img src="LogoCLB/La Liga/real.png" alt="score+" width="auto" height="20px"> Real Madrid</td><td align="center">21:00</td><td align="center"><img src="LogoCLB/La Liga/getafe.png" alt="score+" width="auto" height="20px"> Getafe</td>
-					</tr>
-				</table>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="r3">
-			<p>Chưa có dữ liệu mới nhất</p>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="r4">
-			<p>Chưa có dữ liệu mới nhất</p>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="r5">
-			<p>Chưa có dữ liệu mới nhất</p>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="r6">
-			<p>Chưa có dữ liệu mới nhất</p>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="r7">
-			<p>Chưa có dữ liệu mới nhất</p>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="r8">
-			<p>Chưa có dữ liệu mới nhất</p>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="r9">
-			<p>Chưa có dữ liệu mới nhất</p>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="r10">
-			<p>Chưa có dữ liệu mới nhất</p>
-		</div>
-	</div>
+                    <div class="content" id="content-2" data-id='2'>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" align="center"> Vòng 2 </div>
+                            <table class="table">
+                                <tr>
+                                    <th class="col-xs-4">
+                                        <p align="center">HOME</p>
+                                    </th>
+                                    <th class="col-xs-4">
+                                        <p align="center"></p>
+                                    </th>
+                                    <th class="col-xs-4">
+                                        <p align="center">AWAY</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td align="center"><img src="Logo/liverpool.png" alt="score+" width="auto"
+                                            height="20px"> Liverpool</td>
+                                    <td align="center">20:00</td>
+                                    <td align="center">Arsenal <img src="Logo/arsenal.png" alt="score+" width="auto"
+                                            height="20px" </td> </tr> <tr>
+                                    <td align="center"><img src="Logo/mu.png" alt="score+" width="auto" height="20px">
+                                        Manchester United</td>
+                                    <td align="center">21:00</td>
+                                    <td align="center">Manchester City <img src="Logo/mc.png" alt="score+" width="auto"
+                                            height="20px"></td>
+                                </tr>
 
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="content" id="content-3" data-id='3'>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" align="center"> Vòng 3 </div>
+                            <table class="table">
+                                <tr>
+                                    <th class="col-xs-4">
+                                        <p align="center">HOME</p>
+                                    </th>
+                                    <th class="col-xs-4">
+                                        <p align="center"></p>
+                                    </th>
+                                    <th class="col-xs-4">
+                                        <p align="center">AWAY</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td align="center"><img src="Logo/arsenal.png" alt="score+" width="auto"
+                                            height="20px"> Arsenal</td>
+                                    <td align="center">22:00</td>
+                                    <td align="center">Manchester City <img src="Logo/mc.png" alt="score+" width="auto"
+                                            height="20px"></td>
+                                </tr>
+                                <tr>
+                                    <td align="center"><img src="Logo/mu.png" alt="score+" width="auto" height="20px">
+                                        Manchester United</td>
+                                    <td align="center">23:00</td>
+                                    <td align="center">Liverpool <img src="Logo/liverpool.png" alt="score+" width="auto"
+                                            height="20px"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <button type="button" class="back"><span class="glyphicon glyphicon-chevron-left"
+                            aria-hidden="true"></span></button>
+                    <button type="button" class="next"><span class="glyphicon glyphicon-chevron-right"
+                            aria-hidden="true"></span></button>
+
+                </div>
+
+                <div class="end" data-id='4'>
+                    <p>Chưa có dữ liệu mới nhất</p>
+                    <button type="button" class="edit-previous"><span class="glyphicon glyphicon-chevron-left"
+                            aria-hidden="true"></span></button>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 
 
-		<!--Hàm script cho 2 nút next và previous
-		<script>
-			$('body').on('click', '.next', function() { 
-			    var id = $('.content:visible').data('id');
-			    var nextId = $('.content:visible').data('id')+1;
-			    $('[data-id="'+id+'"]').hide();
-			    $('[data-id="'+nextId+'"]').show();
-			    
-			    if($('.back:hidden').length == 1){
-			        $('.back').show();
-			    }
-			    
-			    if(nextId == 4){
-			    
-			        $('.content-holder').hide();
-        			$('.end').show();
-			    }
-			});
+        <!--Hàm script cho 2 nút next và previous-->
+        <script>
+            $('body').on('click', '.next', function () {
+                var id = $('.content:visible').data('id');
+                var nextId = $('.content:visible').data('id') + 1;
+                $('[data-id="' + id + '"]').hide();
+                $('[data-id="' + nextId + '"]').show();
 
-			$('body').on('click', '.back', function() { 
-			    var id = $('.content:visible').data('id');
-			    var prevId = $('.content:visible').data('id')-1;
-			    $('[data-id="'+id+'"]').hide();
-			    $('[data-id="'+prevId+'"]').show();
-			    
-			    if(prevId == 1){
-			        $('.back').hide();
-			    }    
-			});
-			$('body').on('click', '.edit-previous', function() { 
-			    $('.end').hide();
-			    $('.content-holder').show();
-			    $('#content-3').show();
-			});
+                if ($('.back:hidden').length == 1) {
+                    $('.back').show();
+                }
 
-		</script> -->
-	</body>
+                if (nextId == 4) {
+
+                    $('.content-holder').hide();
+                    $('.end').show();
+                }
+            });
+
+            $('body').on('click', '.back', function () {
+                var id = $('.content:visible').data('id');
+                var prevId = $('.content:visible').data('id') - 1;
+                $('[data-id="' + id + '"]').hide();
+                $('[data-id="' + prevId + '"]').show();
+
+                if (prevId == 1) {
+                    $('.back').hide();
+                }
+            });
+            $('body').on('click', '.edit-previous', function () {
+                $('.end').hide();
+                $('.content-holder').show();
+                $('#content-3').show();
+            });
+
+        </script>
+</body>
+
 </html>
-
-
-
-
-
-
-
-
