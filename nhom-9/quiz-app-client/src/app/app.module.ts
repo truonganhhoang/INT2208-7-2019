@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
+import { AuthGuard } from './_guards/auth.guard';
+import { AuthenticationService, UserService, AlertService } from './_services';
 
 import { AppComponent } from './app.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
@@ -7,6 +11,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardTestComponent } from './dashboard-test/dashboard-test.component';
+import { routing } from './app.routing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -18,9 +25,20 @@ import { DashboardTestComponent } from './dashboard-test/dashboard-test.componen
     DashboardTestComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    // RouterModule,
+    ReactiveFormsModule,
+    FormsModule,
+
+    routing
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    AuthenticationService,
+    UserService,
+    AlertService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
