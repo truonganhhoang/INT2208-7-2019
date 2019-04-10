@@ -9,6 +9,10 @@ var messengerRoomSchema = new Schema({
     thread: {
         type: String,
         default: ''
+    },
+    lastMessage: {
+        type: Date,
+        default: Date.now
     }
 });
 

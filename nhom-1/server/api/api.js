@@ -1,41 +1,66 @@
+require('dotenv').config();
+const express = require('express');
+const router = express.Router();
+const mongoose = require('mongoose');
+const multer = require('multer');
+const tokenCheck = require('./token-check');
+const userSchema = require('./../model/user.model');
+const friendSchema = require('./../model/friend.model');
+const notifySchema = require('./../model/notify.model');
+const messengerRoom = require('./../model/messenger-room.model');
+const gen = require('./generate-room');
+
+const User = mongoose.model('User', userSchema);
+const Friend = mongoose.model('Friend', friendSchema);
+const Notify = mongoose.model('Notify', notifySchema);
+const MessengerRoom = mongoose.model('MessengerRoom', messengerRoom);
+
+var storageAvatar = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './src/assets/data/avatar/');
+    },
+    filename: function (req, file, cb) {
+        cb(null, req.username);
+    }
+});
+
+var storagePicture = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './src/assets/data/picture/');
+    },
+    filename: function (req, file, cb) {
+        cb(null, req.username + '_' + String(Date.now()))
+    }
+});
+
+var saveAvatarHandlerMiddleware = multer({ storage: storageAvatar });
+
+var savePictureHandlerMiddleware = multer({ storage: storagePicture });
 
 module.exports = function (io) {
-    require('dotenv').config();
-    const express = require('express');
-    const router = express.Router();
-    const mongoose = require('mongoose');
-    const multer = require('multer');
-    const tokenCheck = require('./token-check');
-    const userSchema = require('./../model/user.model');
-    const friendSchema = require('./../model/friend.model');
-    const notifySchema = require('./../model/notify.model');
-    const gen = require('./generate-room');
 
-    const User = mongoose.model('User', userSchema);
-    const Friend = mongoose.model('Friend', friendSchema);
-    const Notify = mongoose.model('Notify', notifySchema);
-
-    var storageAvatar = multer.diskStorage({
-        destination: function (req, file, cb) {
-            cb(null, './src/assets/data/avatar/');
-        },
-        filename: function (req, file, cb) {
-            cb(null, req.username);
-        }
+    router.get('/createroom',(req,res)=>{
+        
     });
 
-    var storagePicture = multer.diskStorage({
-        destination: function (req, file, cb) {
-            cb(null, './src/assets/data/picture/');
-        },
-        filename: function (req, file, cb) {
-            cb(null, req.username + '_' + String(Date.now()))
-        }
+    router.get('/getlistchat', (req,res)=>{
+        let user = req.body.username;
+        let searchQuery = user;
+        let regex = new RegExp("(.)*"+searchQuery+"(.)*","g");
+        MessengerRoom.find({id: regex}, 
+            (err,docs) => {
+                if (err) {
+                    res.json({state: false});
+                    return;
+                }
+                res.json({
+                    state: true,
+                    list: docs
+                });
+            }
+        );
+
     });
-
-    var saveAvatarHandlerMiddleware = multer({ storage: storageAvatar });
-
-    var savePictureHandlerMiddleware = multer({ storage: storagePicture });
 
 
     router.get('/search', (req,res)=>{
@@ -329,7 +354,7 @@ module.exports = function (io) {
         );
     });
 
-
+    
     router.get('/notify', tokenCheck,(req,res)=> { 
         User.findOne({username: req.body.username}, (err,doc)=>{
             if (err) {

@@ -1,7 +1,10 @@
-
-<mat-list style="overflow-y:scroll; height:500px">
-  <app-message *ngFor="let message of messages" [message]="message"></app-message>
-</mat-list>
-
-<input type="text" (keydown.enter)="sendMessage($event)">
-
+<div style="margin-top: 50px">
+    <div class="row">
+        <div class="col-3">
+            <app-chatlist></app-chatlist>
+        </div>
+        <div class="col-9">
+            <app-chatbox></app-chatbox>
+        </div>
+    </div>
+</div>

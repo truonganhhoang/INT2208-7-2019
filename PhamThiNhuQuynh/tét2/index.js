@@ -5,11 +5,7 @@ function time_off(date){
 
     var time = timeNow.getTime()-date.getTime();
 
-    console.log(timeNow.toDateString());
-    console.log(date.toDateString());
-    console.log(time);
     time =(time/1000);
-    console.log(time);
     if(time < 60 )
     {
         return "vừa xong";
@@ -17,28 +13,28 @@ function time_off(date){
     }
     else if(time >= 60 && time < 3600)
     {
-        return "Khoảng"+Math.floor(time/60)+ "phút";
+        return "Khoảng"+Math.floor(time/60)+ " phút trước";
     }
     
     else if((time)/3600 >=1  && (time)/3600 < 24)
     {
-        return "Khoảng " +Math.floor(time/3600)+" giờ";
+        return "Khoảng " +Math.floor(time/3600)+" giờ trước";
     }
     else if((time)/86400 >=1 && (time)/86400 <= 7 )
     {
-        return "Khoảng "+ Math.floor(time/86400)+ " ngày";
+        return "Khoảng "+ Math.floor(time/86400)+ " ngày trước";
     }
     else{
-        return date.getDate()+" Th"+(date.getMonth()+1)+", "+date.getFullYear()+" luc "+date.getHours()+":"+date.getMinutes();
+        return date.getDate()+" Th"+(date.getMonth()+1)+", "+date.getFullYear()+" lúc "+date.getHours()+":"+date.getMinutes();
     }
 
 }
 
 var date = new Date();
-date.setDate(06);
-date.setMonth(02);
+date.setDate(01);
+date.setMonth(03);
 date.setFullYear(2019);
-date.setHours(15);
+date.setHours(12);
 date.setMinutes(05);
 date.setSeconds(10);
 date.setMilliseconds(120);

@@ -28,7 +28,11 @@ import { RegisterComponent } from './register';
 import { MessengerComponent } from './messenger/messenger.component';
 import { MessageComponent } from './message/message.component';
 import { UserProfileComponent, EditProfileDialog, UpdateAvatarDialog } from './user-profile/user-profile.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundComponent } from './not-found/not-found.component';;
+import { ChatboxComponent } from './chatbox/chatbox.component';
+import { ChatlistComponent } from './chatlist/chatlist.component';
+import { ChatlistItemComponent } from './chatlist-item/chatlist-item.component';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -59,7 +63,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
         MessengerComponent,
         MessageComponent,
         UserProfileComponent, EditProfileDialog, UpdateAvatarDialog,
-        NotFoundComponent ],
+        NotFoundComponent ,
+        ChatlistComponent,
+        ChatboxComponent,
+        ChatlistItemComponent
+    ],
     entryComponents: [
         EditProfileDialog, UpdateAvatarDialog,
     ],
