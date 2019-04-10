@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as io from 'socket.io-client';
-import { UserService } from '@app/_services';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-messenger',
@@ -9,29 +9,16 @@ import { UserService } from '@app/_services';
 })
 export class MessengerComponent implements OnInit {
 
-  constructor(
-    private userService: UserService
-  ) { }
+  constructor(private route: ActivatedRoute) {
 
-  socket:any;
+  }
+
 
   ngOnInit() {
+    this.route.queryParams.subscribe(params=>{
+      if (params.u) console.log('true');
+      else console.log('false');
+    });
   }
   
-  connect() {
-    this.socket = io('http://localhost:3000');
-    console.log(this.userService.currentUserValue);
-    this.socket.emit('login',{
-      user1: this.userService.currentUserValue.username,
-      user2: 'namphan'
-    });
-    this.socket.on('hello',(data)=>{
-      console.log(data);
-    });
-    
-  }
-  disconnect() {
-    this.socket.disconnect();
-  }
-
 }

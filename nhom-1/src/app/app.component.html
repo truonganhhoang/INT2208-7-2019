@@ -4,6 +4,7 @@
         Home
     </button>
     <button mat-button routerLink="users/{{currentUser.username}}" *ngIf="currentUser">Profile</button>
+    <button mat-button routerLink="messenger" *ngIf="currentUser">Messenger</button>
     <button mat-button (click)="logout()" *ngIf="currentUser">Logout</button>
 
     <button mat-button routerLink="/login" *ngIf="!currentUser">Login</button>

@@ -1,10 +1,29 @@
 <h1 mat-dialog-title>Edit Profile</h1>
 <div mat-dialog-content>
-    <mat-form-field>
-        <input matInput placeholder="New name" value="{{data.name}}">
-    </mat-form-field>
+    <form [formGroup]="form" class="form">
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Your name" formControlName="name" required/>
+            <mat-error *ngIf="f.name.hasError('required')">Your name is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="birthday" required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="f.birthday.hasError('required')">Invalid date of birth</mat-error>
+        </mat-form-field> <br>
+
+        <div class="form-group">
+            <mat-label>Gender</mat-label> <br>
+            <mat-radio-group formControlName="gender" required>
+                <mat-radio-button color="primary" value="true">Male</mat-radio-button>
+                <mat-radio-button value="false">Female</mat-radio-button>
+            </mat-radio-group>
+            <mat-error *ngIf="submitted && f.gender.hasError('required')">Gender is required</mat-error>
+        </div>
+    </form>
 </div>
 <div mat-dialog-actions>
-    <button mat-flat-button cdkFocusInitial color="primary">Ok</button>
+    <button mat-flat-button cdkFocusInitial color="primary" (click)="submit()">Ok</button>
     <button mat-button (click)="onNoClick()">Discard</button>
 </div>

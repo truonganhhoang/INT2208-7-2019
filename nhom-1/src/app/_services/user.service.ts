@@ -16,25 +16,40 @@ export class UserService {
         this.currentUser = this.currentUserSubject.asObservable();
     }
 
-    // getAll() {
-    //     return this.http.get<User[]>(`${environment.apiUrl}/users`);
-    // }
-
     get(username: string) {
-        return this.http.get<any>(`${environment.apiUrl}/api/user`, {params: {'username': username}});
+        if (username == this.currentUserValue.username)
+            return this.http.get<any>(`${environment.apiUrl}/api/userdetail`);
+        else
+            return this.http.get<any>(`${environment.apiUrl}/api/user`, {params: {'username': username}});
     }
 
-    // register(user: User) {
-    //     return this.http.post<any>(`${environment.apiUrl}/auth/createuser`, user);
-    // }
+    checkFriend(username: string) {
+        return this.http.get<any>(`${environment.apiUrl}/api/checkfriend`, {params: {'username': username}});
+    }
 
-    // update(user: User) {
-    //     return this.http.put(`${environment.apiUrl}/users/${user.id}`, user);
-    // }
+    register(user: User) {
+        return this.http.post<any>(`${environment.apiUrl}/auth/createuser`, user);
+    }
 
-    // delete(id: number) {
-    //     return this.http.delete(`${environment.apiUrl}/users/${id}`);
-    // }
+    updateProfile(user: User) {
+        return this.http.post(`${environment.apiUrl}/api/modify`, user);
+    }
+
+    updateAvatar(avt: FormData) {
+        return this.http.post(`${environment.apiUrl}/api/avatarupload`, avt)
+    }
+
+    addFriend(username: string) {
+        return this.http.get<any>(`${environment.apiUrl}/api/requestfriend`, {params: {'username': username}});
+    }
+
+    rejectFriend(username: string) {
+        return this.http.get<any>(`${environment.apiUrl}/api/rejectfriend`, {params: {'username': username}});
+    }
+
+    acceptFriend(username: string) {
+        return this.http.get<any>(`${environment.apiUrl}/api/acceptfriend`, {params: {'username': username}});
+    }
 
     checkvalid(username: string) {
         return this.http.post<any>(`${environment.apiUrl}/auth/checkvaliduser`, ({username}));

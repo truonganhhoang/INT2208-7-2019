@@ -1,7 +1,10 @@
-
-<div style="overflow-y:scroll; height:500px">
-  
+<div style="margin-top: 50px">
+    <div class="row">
+        <div class="col-3">
+            <app-chatlist></app-chatlist>
+        </div>
+        <div class="col-9">
+            <app-chatbox></app-chatbox>
+        </div>
+    </div>
 </div>
-
-<button class="btn btn-primary" (click)="connect()">Connect</button>
-<button class="btn btn-primary" (click)="disconnect()">Disconnect</button>
