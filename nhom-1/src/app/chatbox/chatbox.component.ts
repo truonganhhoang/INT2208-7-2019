@@ -21,16 +21,16 @@ export class ChatboxComponent implements OnInit, AfterViewChecked {
   
   ngOnInit() {
     this.socket = io('http://localhost:3000');
+    this.socket.on('new message', (data)=>{
+      let message = new Message(data);
+      this.messages.push(message);
+    });
     this.socket.emit('join chat room',{
       user1: this.userService.currentUserValue.username,
       user2: 'namphan'
     });
 
     //this.socket.join(this.genRoom(this.userService.currentUserValue.username,'namphan'));
-    this.socket.on('new message', (data)=>{
-      let message = new Message(data);
-      this.messages.push(message);
-    });
   }
 
   ngAfterViewChecked() {

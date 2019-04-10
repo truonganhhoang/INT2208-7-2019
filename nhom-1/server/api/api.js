@@ -8,7 +8,8 @@ const userSchema = require('./../model/user.model');
 const friendSchema = require('./../model/friend.model');
 const notifySchema = require('./../model/notify.model');
 const messengerRoom = require('./../model/messenger-room.model');
-const gen = require('./generate-room');
+const genNoti = require('./generate-room-notification');
+const genChatRoom = require('./../messenger/generate-room-chat');
 
 const User = mongoose.model('User', userSchema);
 const Friend = mongoose.model('Friend', friendSchema);
@@ -39,14 +40,21 @@ var savePictureHandlerMiddleware = multer({ storage: storagePicture });
 
 module.exports = function (io) {
 
-    router.get('/createroom',(req,res)=>{
+    router.get('/createroom', tokenCheck, (req,res)=>{
+        let user1 = req.body.username;
+        let user2 = req.query.username;
+        
         
     });
 
-    router.get('/getlistchat', (req,res)=>{
+    router.get('/threadchat', tokenCheck, (req,res)=>{
+        
+    });
+
+    router.get('/getlistchat', tokenCheck, (req,res)=>{
         let user = req.body.username;
         let searchQuery = user;
-        let regex = new RegExp("(.)*"+searchQuery+"(.)*","g");
+        let regex = new RegExp("(.)*_"+searchQuery+"_(.)*","g");
         MessengerRoom.find({id: regex}, 
             (err,docs) => {
                 if (err) {
@@ -226,7 +234,7 @@ module.exports = function (io) {
                     res.json({state:false});
                     return;
                 }
-                io.to(gen(friendId)).emit('notify', notifyData);
+                io.to(genNoti(friendId)).emit('notify', notifyData);
                 User.findOne({username: userId},(err,doc)=>{
                     if (err) {
                         res.json({state: false});
@@ -346,7 +354,7 @@ module.exports = function (io) {
                                 return;
                             }
                             res.json({state:true});
-                            io.to(gen(friendId)).emit('notify', notifyData);
+                            io.to(genNoti(friendId)).emit('notify', notifyData);
                         });
                     }
                 );

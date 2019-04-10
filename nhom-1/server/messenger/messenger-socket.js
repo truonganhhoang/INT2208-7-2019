@@ -1,5 +1,5 @@
 require('dotenv').config();
-const gen = require('./generate-room');
+const gen = require('./generate-room-chat');
 const mongoose = require('mongoose');
 
 module.exports = function(io) {
