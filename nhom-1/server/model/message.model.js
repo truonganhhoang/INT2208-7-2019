@@ -15,6 +15,10 @@ var messageSchema = new Schema({
     },
     receiver: {
         type: String
+    },
+    receiverRead:{
+        type: Boolean,
+        default: false
     }
 });
 

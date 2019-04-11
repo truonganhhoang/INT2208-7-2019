@@ -13,10 +13,14 @@ export class MessengerComponent implements OnInit {
 
   }
 
+  paramValue: String;
+
 
   ngOnInit() {
     this.route.queryParams.subscribe(params=>{
-      if (params.u) console.log('true');
+      if (params.u) {
+        this.paramValue = params.u;
+      }
       else console.log('false');
     });
   }

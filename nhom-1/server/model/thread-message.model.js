@@ -7,10 +7,6 @@ var threadMessageSchema = new Schema({
         type: [messageSchema],
         default: []
     },
-    author: {
-        type: [String],
-        default: ''
-    }, 
     previous: {
         type: String,
         default: ''
