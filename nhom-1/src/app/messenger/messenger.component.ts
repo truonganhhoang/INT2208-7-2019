@@ -9,19 +9,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MessengerComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) {
-
-  }
+  constructor(
+    private route: ActivatedRoute,
+    )
+  {}
 
   paramValue: String;
-
 
   ngOnInit() {
     this.route.queryParams.subscribe(params=>{
       if (params.u) {
         this.paramValue = params.u;
       }
-      else console.log('false');
     });
   }
   

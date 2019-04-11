@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
 import * as io from 'socket.io-client';
 import { UserService } from '@app/_services';
-import { Message } from '../_models/message.model'
+import { Message } from '../_models/message.model';
+import genRoomChat from './../common/generate-chatroom';
 
 @Component({
   selector: 'app-chatbox',
@@ -50,7 +51,4 @@ export class ChatboxComponent implements OnInit, AfterViewChecked {
     $event.target.value="";
   }
 
-  genRoom(username1,username2) {
-    return username1 > username2 ? username1.concat('_'+username2) : username2.concat('_'+username1+'_roomchat');
-  }
 }

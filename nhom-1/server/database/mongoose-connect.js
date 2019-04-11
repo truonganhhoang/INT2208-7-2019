@@ -4,6 +4,12 @@ const mongoose = require('mongoose');
 
 const url = process.env.URL_MONGODB;
 
-mongoose.connect(url,{useNewUrlParser:true});
+mongoose.set('useCreateIndex', true);
+
+mongoose.connect(url,{useNewUrlParser:true},(err)=>{
+    if (err) {
+        console.log(err);
+    }
+});
 
 module.exports = mongoose;

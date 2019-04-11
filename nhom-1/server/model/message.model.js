@@ -2,6 +2,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 var messageSchema = new Schema({
+    typeOfMessage: {
+        type: String,
+        default: 'text'
+    },
+    imgUrl: {
+        type: String,
+        default: ''
+    },
     content: {
         type: String,
         default: ''
@@ -16,7 +24,7 @@ var messageSchema = new Schema({
     receiver: {
         type: String
     },
-    receiverRead:{
+    receiverReadState:{
         type: Boolean,
         default: false
     }

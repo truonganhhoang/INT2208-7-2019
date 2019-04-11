@@ -9,12 +9,13 @@ const friendSchema = require('./../model/friend.model');
 const notifySchema = require('./../model/notify.model');
 const messengerRoom = require('./../model/messenger-room.model');
 const genNoti = require('./generate-room-notification');
-const genChatRoom = require('./../messenger/generate-room-chat');
+const messageThread = require('./../model/thread-message.model');
 
 const User = mongoose.model('User', userSchema);
 const Friend = mongoose.model('Friend', friendSchema);
 const Notify = mongoose.model('Notify', notifySchema);
 const MessengerRoom = mongoose.model('MessengerRoom', messengerRoom);
+const MessengerThread = mongoose.model('MessengerThread', messageThread);
 
 var storageAvatar = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -43,19 +44,57 @@ module.exports = function (io) {
     router.get('/createroom', tokenCheck, (req,res)=>{
         let user1 = req.body.username;
         let user2 = req.query.username;
-        
-        
+
+        let thread = new MessengerThread();
+        thread.save((err, doc)=>{
+            if (err) {
+                res.json({
+                    state: false
+                });
+                return;
+            }
+            let room = new MessengerRoom();
+            room.authors = [];
+            room.authors.push(user1);
+            room.authors.push(user2);
+            room.thread = doc._id;
+            room.save((err, doc)=>{
+                if (err) {
+                    res.json({
+                        state: false
+                    });
+                    return;
+                }
+                res.json({
+                    state: true,
+                    room: {
+                        _id: doc._id,
+                        thread: doc.thread
+                    }
+                });
+            });
+        });
     });
 
     router.get('/threadchat', tokenCheck, (req,res)=>{
-        
+        threadId = req.query.thread;
+        MessengerThread.findById(threadId, (err,doc)=>{
+            if (err) {
+                res.json({
+                    state: false
+                });
+                return;
+            }
+            res.json({
+                state: true,
+                thread: doc
+            });
+        });
     });
 
     router.get('/getlistchat', tokenCheck, (req,res)=>{
         let user = req.body.username;
-        let searchQuery = user;
-        let regex = new RegExp("(.)*_"+searchQuery+"_(.)*","g");
-        MessengerRoom.find({id: regex}, 
+        MessengerRoom.find({authors: user}, 
             (err,docs) => {
                 if (err) {
                     res.json({state: false});
@@ -380,6 +419,24 @@ module.exports = function (io) {
                 }
             }
         });
+    });
+
+    router.post('/modify-password', tokenCheck, (req,res)=> {
+        let newPassword = req.body.password;
+        let hashedPassword = bcrypt.hashSync(newPassword,Number(process.env.SALT_ROUND));
+
+        User.findOneAndUpdate({ username: req.body.username }, { password: hashedPassword }, (err, doc) => {
+            if (err) {
+                res.json({
+                    state: false
+                });
+            } else {
+                res.json({
+                    state: true
+                });
+            }
+        });
+
     });
 
     router.post('/modify', tokenCheck, (req, res) => {

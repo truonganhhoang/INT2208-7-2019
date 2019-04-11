@@ -5,6 +5,7 @@ const http = require('http');
 const app = express();
 const cors = require('cors');
 const mqttMessengerServer = require('./messenger/messenger-mqtt');
+const mongoose = require('./database/mongoose-connect');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
