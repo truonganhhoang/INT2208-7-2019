@@ -125,39 +125,61 @@
 
 		      <div class="tab-content">
 
-        	<div role="tabpanel" class="tab-pane active" id="r1">
-			<table class="table">
-					<tr>
-					  <th class="col-xs-4"><p align="center">HOME</p></th>
-					  <th class="col-xs-4"><p align="center"></p></th>
-					  <th class="col-xs-4"><p align="center">AWAY</p></th>
-					</tr>
-					<tr>
-						<td align="center"><img src="LogoCLB/Bundesliga/bayern-munich.png" alt="score+" width="auto" height="20px"> Bayern Munchen</td><td align="center"> 5 - 1 </td><td align="center"><img src="LogoCLB/Bundesliga/monchengladbach.png" alt="score+" width="auto" height="20px"> Monchengladbach</td>
-					</tr>
-					<tr>
-						<td align="center"><img src="LogoCLB/Bundesliga/dortmund.png" alt="score+" width="auto" height="20px"> Dortmund</td><td align="center"> 4 - 3 </td><td align="center"><img src="LogoCLB/Bundesliga/leipzig.png" alt="score+" width="auto" height="20px"> Leipzig</td>
-					</tr>
-				</table>
-			</div>
-			<div role="tabpanel" class="tab-pane" id="r2">
-			<table class="table">
-					<tr>
-					  <th class="col-xs-4"><p align="center">HOME</p></th>
-					  <th class="col-xs-4"><p align="center"></p></th>
-					  <th class="col-xs-4"><p align="center">AWAY</p></th>
-					</tr>
-					<tr>
-						<td align="center"><img src="LogoCLB/Bundesliga/bayern-munich.png" alt="score+" width="auto" height="20px"> Bayern Munchen</td><td align="center">20:00</td><td align="center"><img src="LogoCLB/Bundesliga/dortmund.png" alt="score+" width="auto" height="20px"> Dortmund</td>
-					</tr>
-					<tr>
-						<td align="center"><img src="LogoCLB/Bundesliga/monchengladbach.png" alt="score+" width="auto" height="20px"> Monchengladbach</td><td align="center">21:00</td><td align="center"><img src="LogoCLB/Bundesliga/leipzig.png" alt="score+" width="auto" height="20px"> Leipzig</td>
-					</tr>
-				</table>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="r3">
-			<p>Chưa có dữ liệu mới nhất</p>
-		</div>
+						<div role="tabpanel" class="tab-pane active" id="r1">
+								<table class="table">
+										<tr>
+										  <th class="col-xs-4"><p align="center">HOME</p></th>
+										  <th class="col-xs-4"><p align="center"></p></th>
+										  <th class="col-xs-4"><p align="center">AWAY</p></th>
+										</tr>
+										<tr>
+											<%results[0].forEach(function(rows){%>
+													<tr>
+														<td><p align="center"><img src="<%=rows.homeLogo%>" width="auto" height="20px">&nbsp&nbsp<%=rows.homeTeam%></p></td>
+														<td><p align="center"><%=rows.result%></p></td>
+														<td><p align="center"><img src="<%=rows.awayLogo%>" width="auto" height="20px">&nbsp&nbsp<%=rows.awayTeam%></p></td>
+													</tr>
+												<%})%>
+										</tr>
+								</table>
+						</div>
+
+		        <div role="tabpanel" class="tab-pane" id="r2">
+								<table class="table">
+										<tr>
+										  <th class="col-xs-4"><p align="center">HOME</p></th>
+										  <th class="col-xs-4"><p align="center"></p></th>
+										  <th class="col-xs-4"><p align="center">AWAY</p></th>
+										</tr>
+										<tr>
+											<%results[2].forEach(function(rows){%>
+													<tr>
+														<td><p align="center"><img src="<%=rows.homeLogo%>" width="auto" height="20px">&nbsp&nbsp<%=rows.homeTeam%></p></td>
+														<td><p align="center"><%=rows.result%></p></td>
+														<td><p align="center"><img src="<%=rows.awayLogo%>" width="auto" height="20px">&nbsp&nbsp<%=rows.awayTeam%></p></td>
+													</tr>
+												<%})%>
+										</tr>
+								</table>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="r3">
+							<table class="table">
+									<tr>
+									  <th class="col-xs-4"><p align="center">HOME</p></th>
+									  <th class="col-xs-4"><p align="center"></p></th>
+									  <th class="col-xs-4"><p align="center">AWAY</p></th>
+									</tr>
+									<tr>
+										<%results[1].forEach(function(rows){%>
+												<tr>
+													<td><p align="center"><img src="<%=rows.homeLogo%>" width="auto" height="20px">&nbsp&nbsp<%=rows.homeTeam%></p></td>
+													<td><p align="center"><%=rows.result%></p></td>
+													<td><p align="center"><img src="<%=rows.awayLogo%>" width="auto" height="20px">&nbsp&nbsp<%=rows.awayTeam%></p></td>
+												</tr>
+											<%})%>
+									</tr>
+								</table>
+						</div>
 		<div role="tabpanel" class="tab-pane" id="r4">
 			<p>Chưa có dữ liệu mới nhất</p>
 		</div>

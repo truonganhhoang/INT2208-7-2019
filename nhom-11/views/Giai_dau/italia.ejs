@@ -127,52 +127,61 @@
 
 
 		      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="r1">
-			<table class="table">
-					<tr>
-					  <th class="col-xs-4"><p align="center">HOME</p></th>
-					  <th class="col-xs-4"><p align="center"></p></th>
-					  <th class="col-xs-4"><p align="center">AWAY</p></th>
-					</tr>
-					<tr>
-						<td align="center"><img src="LogoCLB/Series A/AC Milan.png" alt="score+" width="auto" height="20px"> AC Milan</td><td align="center"> 5 - 1 </td><td align="center">Inter <img src="LogoCLB/Series A/Internazionale.png" alt="score+" width="auto" height="20px"></td>
-					</tr>
-					<tr>
-						<td align="center"><img src="LogoCLB/Series A/Juventus.png" alt="score+" width="auto" height="20px"> Juventus</td><td align="center"> 4 - 3 </td><td align="center">Napoli <img src="LogoCLB/Series A/Napoli.png" alt="score+" width="auto" height="20px"></td>
-					</tr>
-				</table>
-			</div>
+						<div role="tabpanel" class="tab-pane active" id="r1">
+								<table class="table">
+										<tr>
+										  <th class="col-xs-4"><p align="center">HOME</p></th>
+										  <th class="col-xs-4"><p align="center"></p></th>
+										  <th class="col-xs-4"><p align="center">AWAY</p></th>
+										</tr>
+										<tr>
+											<%results[0].forEach(function(rows){%>
+													<tr>
+														<td><p align="center"><img src="<%=rows.homeLogo%>" width="auto" height="20px">&nbsp&nbsp<%=rows.homeTeam%></p></td>
+														<td><p align="center"><%=rows.result%></p></td>
+														<td><p align="center"><img src="<%=rows.awayLogo%>" width="auto" height="20px">&nbsp&nbsp<%=rows.awayTeam%></p></td>
+													</tr>
+												<%})%>
+										</tr>
+								</table>
+						</div>
 
-        <div role="tabpanel" class="tab-pane" id="r2">
-			<table class="table">
-					<tr>
-					  <th class="col-xs-4"><p align="center">HOME</p></th>
-					  <th class="col-xs-4"><p align="center"></p></th>
-					  <th class="col-xs-4"><p align="center">AWAY</p></th>
-					</tr>
-					<tr>
-						<td align="center"><img src="LogoCLB/Series A/Juventus.png" alt="score+" width="auto" height="20px"> Juventus</td><td align="center">20:00</td><td align="center">AC Milan <img src="LogoCLB/Series A/AC Milan.png" alt="score+" width="auto" height="20px"</td>
-					</tr>
-					<tr>
-						<td align="center"><img src="LogoCLB/Series A/Napoli.png" alt="score+" width="auto" height="20px"> Napoli</td><td align="center">21:00</td><td align="center">Inter <img src="LogoCLB/Series A/Internazionale.png" alt="score+" width="auto" height="20px"></td>
-					</tr>
-				</table>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="r3">
-			<table class="table">
-					<tr>
-					  <th class="col-xs-4"><p align="center">HOME</p></th>
-					  <th class="col-xs-4"><p align="center"></p></th>
-					  <th class="col-xs-4"><p align="center">AWAY</p></th>
-					</tr>
-					<tr>
-						<td align="center"><img src="LogoCLB/Series A/Juventus.png" alt="score+" width="auto" height="20px"> Juventus</td><td align="center">22:00</td><td align="center">Inter <img src="LogoCLB/Series A/Internazionale.png" alt="score+" width="auto" height="20px"></td>
-					</tr>
-					<tr>
-						<td align="center"><img src="LogoCLB/Series A/Napoli.png" alt="score+" width="auto" height="20px"> Napoli</td><td align="center">23:00</td><td align="center">AC Milan <img src="LogoCLB/Series A/AC Milan.png" alt="score+" width="auto" height="20px"></td>
-					</tr>
-					</table>
-		</div>
+		        <div role="tabpanel" class="tab-pane" id="r2">
+								<table class="table">
+										<tr>
+										  <th class="col-xs-4"><p align="center">HOME</p></th>
+										  <th class="col-xs-4"><p align="center"></p></th>
+										  <th class="col-xs-4"><p align="center">AWAY</p></th>
+										</tr>
+										<tr>
+											<%results[2].forEach(function(rows){%>
+													<tr>
+														<td><p align="center"><img src="<%=rows.homeLogo%>" width="auto" height="20px">&nbsp&nbsp<%=rows.homeTeam%></p></td>
+														<td><p align="center"><%=rows.result%></p></td>
+														<td><p align="center"><img src="<%=rows.awayLogo%>" width="auto" height="20px">&nbsp&nbsp<%=rows.awayTeam%></p></td>
+													</tr>
+												<%})%>
+										</tr>
+								</table>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="r3">
+							<table class="table">
+									<tr>
+									  <th class="col-xs-4"><p align="center">HOME</p></th>
+									  <th class="col-xs-4"><p align="center"></p></th>
+									  <th class="col-xs-4"><p align="center">AWAY</p></th>
+									</tr>
+									<tr>
+										<%results[1].forEach(function(rows){%>
+												<tr>
+													<td><p align="center"><img src="<%=rows.homeLogo%>" width="auto" height="20px">&nbsp&nbsp<%=rows.homeTeam%></p></td>
+													<td><p align="center"><%=rows.result%></p></td>
+													<td><p align="center"><img src="<%=rows.awayLogo%>" width="auto" height="20px">&nbsp&nbsp<%=rows.awayTeam%></p></td>
+												</tr>
+											<%})%>
+									</tr>
+								</table>
+						</div>
 		<div role="tabpanel" class="tab-pane" id="r4">
 			<p>Chưa có dữ liệu mới nhất</p>
 		</div>
