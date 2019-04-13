@@ -7,13 +7,26 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<title>UDict</title>
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-   	<link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-   	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script> 
-   	<link rel="stylesheet" href="cssmoi.css" type ="text/css">
-  	<link rel="stylesheet" href="theme.css" type="text/css"> 
+ 
+   <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script> 
+   <link rel="stylesheet" href="cssmoi.css" type ="text/css">
+  <link rel="stylesheet" href="theme.css" type="text/css"> 
     <link rel="shortcut icon" type="image/ico" href="imgg/avv.ico"/>
+    <style type="text/css">
+     
+      .content p {
+        font-size: 18px;
+      }
+      .content h2 {
+        font-size: 30px;
+      }
+      .content h3 {
+        font-size: 25px;
+      }
+    </style>
 </head>
 
 
@@ -47,8 +60,8 @@
       </button>
       <div class="collapse navbar-collapse text-center justify-content-center" id="navbar15">
         <ul class="navbar-nav">
-          <li class="nav-item mx-2 active"> <a class="nav-link" href="lythuyet1.php">Grammar</a> </li>
-          <li class="nav-item mx-2"> <a class="nav-link" href="Hangman.php">HangMan Game</a> </li>
+          <li class="nav-item mx-2"> <a class="nav-link" href="lythuyet1.php" style="color: white;">Grammar</a> </li>
+          <li class="nav-item mx-2 "> <a class="nav-link" href="Hangman.php" >HangMan Game</a> </li>
           <li class="nav-item mx-2"> <a class="nav-link navbar-brand mr-0 " href="homemoi.php"><i class="fa d-inline fa-lg fa-stop-circle-o"></i>
               <b>UDict</b></a> </li>
           <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle " href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Explore</a>
@@ -70,7 +83,7 @@
             if(isset($_POST['key']))
           echo $_POST['key'];
           ?>" id="form3" placeholder="Type and search..." autocomplete="off">
-              <div class="input-group-append"  id="submit"><button class="btn btn-block btn-outline-primary " type="submit" ><i class="fa fa-search fa-fw"></i>
+              <div class="input-group-append"  id="submit"><button class="btn btn-block btn-outline-primary " type="submit"  ><i class="fa fa-search fa-fw"></i>
                   <font face="FontAwesome">Search</font>
                 </button></div>
             </div>
@@ -94,7 +107,7 @@
 
         			</select>
         		
-        			<input type="submit" name ="submit" value="Search" >
+        			<input type="submit" name ="submit" value="Search" class="btn btn-block btn-outline-primary" 
         		</form> 
         		<div class="fb-comments" data-href="http://localhost/lythuyet1.php" data-width="900px" data-numposts="5"></div>     		
 			</div>
@@ -120,7 +133,7 @@
 						
 						// Câu query lấy dữ liệu
 						if (isset($_POST['submit'])){
-							if($_POST['mucc']==0) echo"chọn lại";
+							if($_POST['mucc']==0) echo"<p>chọn lại</p>";
 							else{
 						 	$query = "select lythuyet from congthuc where TT= " .$_POST['mucc'] ;
   						 	$ret = $dbc->query($query);
@@ -168,8 +181,9 @@
     	</div>
   	</div>
   	
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 	<script>
 		$(document).ready(function(){
