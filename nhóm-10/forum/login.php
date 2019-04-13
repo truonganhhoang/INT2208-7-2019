@@ -21,7 +21,7 @@
   <div id="test"></div>
   <script async="" defer="" crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v3.2&amp;appId=296191771278805&amp;autoLogAppEvents=1" style=""></script>
   <nav class="navbar bg-primary navbar-dark">
-    <div class="container"> <a class="navbar-brand" href="#">
+    <div class="container"> <a class="navbar-brand" href=\homemoi.php>
         <i class="fa d-inline fa-lg fa-circle"></i>
         <b> UDict</b>
       </a>

@@ -27,7 +27,7 @@
 
 <body >
   <nav class="navbar bg-primary navbar-dark">
-    <div class="container"> <a class="navbar-brand" href="#">
+    <div class="container"> <a class="navbar-brand" href=\homemoi.php>
         <i class="fa d-inline fa-lg fa-circle"></i>
         <b> UDict</b>
       </a>
@@ -36,15 +36,16 @@
       </a>
       <div class="row">
         <div class="col-md-12">
-          <?php 
+             <?php 
             session_start(); 
             if (isset($_SESSION['username'])) {
                echo '<a class="navbar-brand" href="#"> <i class="fa d-inline fa-lg fas fa-user"></i>&nbsp;'.$_SESSION["username"];
+               echo  '<a class="navbar-brand" href="/forum/logoutt.php"><i class="fa fa-user  fa-sign-out"></i><i class="fa d-inline fa-lg fa-lg-out"></i>&nbsp;Logout</a></div>';
             } 
             else
-            echo  '<a class="navbar-brand" href=\forum/login.php> <i class="fa d-inline fa-lg fa-sign-in"></i>&nbsp;Login'; ?>
+            echo  '<a class="navbar-brand" href="login.php"> <i class="fa d-inline fa-lg fa-sign-in"></i>&nbsp;Login'; ?>
             </a>
-          <a class="navbar-brand" href="/forum/logoutt.php"><i class="fa fa-user  fa-sign-out"></i><i class="fa d-inline fa-lg fa-lg-out"></i>&nbsp;Logout</a></div>
+         
       </div>
     </div>
   </nav>
@@ -74,7 +75,7 @@
         replytopost($_GET['cid'], $_GET['scid'], $_GET['tid']);
       }
       else {
-          echo "<p>please login first or <a href='/forum/regest.html'>click here</a> to register.</p>";
+          echo "<p>please login first or <a href='/forum/regest.php'>click here</a> to register.</p>";
         }
       ?>
     </div>
