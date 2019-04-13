@@ -443,24 +443,15 @@
 									<th>Hiệu số</th>
 									<th>Điểm</th>
 								</tr>
+								<%i=1%>
+								<%results.forEach(function(rows){%>
 								<tr>
-									<td>1</td>
-									<td>Liverpool</td>
-									<td>44</td>
-									<td>65</td>
+									<td><%=i++%></td>
+									<td><%=rows.doibong%></td>
+									<td><%=rows.hieuso%></td>
+									<td><%=rows.diem%></td>
 								</tr>
-								<tr>
-									<td>2</td>
-									<td>Manchester City</td>
-									<td>48</td>
-									<td>62</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>Manchester City</td>
-									<td>48</td>
-									<td>62</td>
-								</tr>
+								<%})%>
 							</table>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="profile">
