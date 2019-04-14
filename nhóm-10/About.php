@@ -30,7 +30,8 @@
           <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Explore</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item " href="index.php">Translate</a><a class="dropdown-item" href="#">Speech</a></div>
           </li>
-          <li class="nav-item"><a class="nav-link active" href="About.php">About us</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="About.php">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href=\forum/ > Forum</a></li>
         </ul>
       </div>
     </div>
@@ -62,8 +63,8 @@
           <a href="homemoi.php">tra từ điển</a>
           đến
           <a href="lythuyet1.php">học ngữ pháp Tiếng Anh</a>
-          , và thậm chí 
-          <a href="#">kiểm tra từ vựng.</a>
+          , <a href="Hangman.php">học từ vựng qua game HangMan </a>và thậm chí 
+          <a href=\forum/ >đặt câu hỏi và cùng thảo luận trên diễn đàn </a>
           <br>
           <h3 style="text-align: center;"><a href="homemoi.php">Cùng học Tiếng Anh với UDict!</a></h3>
           <br>

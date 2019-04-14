@@ -35,6 +35,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item " href="index.php">Translate</a><a class="dropdown-item" href="#">Speech</a></div>
           </li>
           <li class="nav-item"><a class="nav-link " href="About.php">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href=\forum/ > Forum</a></li>
         </ul>
       </div>
     </div>
@@ -69,7 +70,7 @@
   </div>
   <div class="row">
     <div class="col-sm-1"></div>
-     <div class="col-sm-10"><div id="viet" style="color: black;text-align: left;background-color: #A0E7D6;padding: 10px;outline: 15px solid  #A0E7D6;margin-top: 15px;">
+     <div class="col-sm-10"><div id="viet" style="color: black;text-align: left;background-color: lightblue;padding: 10px;outline: 15px solid  lightblue;margin-top: 15px;margin-bottom: 15px; ">
     </div></div>
       <div class="col-sm-1"></div>
   </div>
