@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2019 at 08:21 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.1
+-- Generation Time: Apr 14, 2019 at 11:24 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -71,7 +71,7 @@ CREATE TABLE `vong2` (
 --
 
 INSERT INTO `vong2` (`homeTeam`, `awayTeam`, `result`, `homeLogo`, `awayLogo`) VALUES
-('Amiens', 'Montpellier', '1 - 2', 'LogoCLB\\Ligue 1\\Amiens.png', 'LogoCLB\\Ligue 1\\Montepellier.png'),
+('Amiens', 'Montpellier', '1 - 2', 'LogoCLB\\Ligue 1\\Amiens.png', 'LogoCLB\\Ligue 1\\Montpellier.png'),
 ('Caen', 'Nice', '1 - 1', 'LogoCLB\\Ligue 1\\Caen.png', 'LogoCLB\\Ligue 1\\Nice.png'),
 ('Dijon', 'Nantes', '2 - 0', 'LogoCLB\\Ligue 1\\Dijon.png', 'LogoCLB\\Ligue 1\\Nantes.png'),
 ('Guingamp', 'PSG', '1 - 3', 'LogoCLB\\Ligue 1\\Guingamp.png', 'LogoCLB\\Ligue 1\\PSG.png'),
@@ -111,6 +111,16 @@ INSERT INTO `vong3` (`homeTeam`, `awayTeam`, `result`, `homeLogo`, `awayLogo`) V
 ('Nice', 'Dijon', '0 - 4', 'LogoCLB\\Ligue 1\\Nice.png', 'LogoCLB\\Ligue 1\\Dijon.png'),
 ('PSG', 'Angers', '3 - 1', 'LogoCLB\\Ligue 1\\PSG.png', 'LogoCLB\\Ligue 1\\Angers.png'),
 ('Toulouse', 'Nimes', '1 - 0', 'LogoCLB\\Ligue 1\\Toulouse.png', 'LogoCLB\\Ligue 1\\Nimes.png');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `vong2`
+--
+ALTER TABLE `vong2`
+  ADD PRIMARY KEY (`homeTeam`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
