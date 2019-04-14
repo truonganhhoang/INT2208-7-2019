@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-
+<?php
+ include ('hangmandb.php');
+?>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,36 +39,42 @@
       </div>
     </div>
   </nav>
-  <script language="javascript" src="Hangman.js"></script>
+<!-- <script language="javascript" src="Hangman.js"></script> -->
   <div class="row">
     <div class="col-sm-1">
     </div>
-
     <div class="col-sm-5" style="background-color: lightblue;">
    <h3>Hangman</h3>
-    <p>Use the alphabet below to guess the word, or click hint to get a clue. </p>
+    <p>Use the alphabet below to guess the word. </p>
     <div id="buttons">
     </div>  
   </div>
   <div class="col-sm-5" style="background-color: lightblue;">
-    <p id="catagoryName"></p>
+    <p style="font-size: 30px;">Topic: </p><h5 id="catagoryName" style="font-size: 30px;"></h5>
+
     <div id="hold">
     </div>
     <p id="mylives"></p>
-    <p id="clue">Clue </p>  
+  
      <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
     <div class="container">
-      <button id="hint">Hint</button>
+      <button id="expl" hidden="off" style="font-size: 30px;padding: 4px;">Get explain</button>
       <button id="reset">Play again</button>
-    </div>
+ </div>
   </div>
+  </div>
+<div class="col-sm-1">
   </div>
 
-  <div class="col-sm-1">
   </div>
+  <div class="row">
+    <div class="col-sm-1"></div>
+     <div class="col-sm-10"><div id="viet" style="color: black;text-align: left;background-color: #A0E7D6;padding: 10px;outline: 15px solid  #A0E7D6;margin-top: 15px;">
+    </div></div>
+      <div class="col-sm-1"></div>
   </div>
-        
-     <div class="fb-comments" data-href="http://localhost/lythuyet1.php" data-width="900px" data-numposts="5"></div> 
+     
+     <div class="fb-comments" data-href="http://localhost/Hangman.php" data-width="900px" data-numposts="5"></div> 
     <div class="py-3">
       <div class="container">
         <div class="row">
@@ -74,8 +82,8 @@
             <ul class="nav mx-md-auto d-flex justify-content-center">
               <li class="nav-item"> <a class="nav-link active" href="homemoi.php">Home</a> </li>
               <li class="nav-item"> <a class="nav-link" href="lythuyet1.php">Grammar</a> </li>
-              <li class="nav-item"> <a class="nav-link" href="Hangman">HangMan</a> </li>
-              <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="Hangman.php">HangMan</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="About.php">About</a> </li>
             </ul>
             <div class="row">
               <div class="col-md-12 d-flex align-items-center justify-content-md-between justify-content-center my-2"> <a href="#">
@@ -100,5 +108,222 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </div>
 </body>
+<script type="text/javascript">
+  function randomInteger(a, b) {
+    return Math.floor(Math.random() * (a - b + 1)) + a;
+}
+  
+window.onload = function () {
 
+  var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+        'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+        't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  
+    var categories;         // Array of topics
+  var chosenCategory;
+  var getHint ;          // Word getHint
+  var word ;              // Selected word
+  var guess ;             // Geuss
+  var geusses = [ ];      // Stored geusses
+  var lives ;             // Lives
+  var counter ;           // Count correct geusses
+  var space;        
+    var a = "<?php word()?>";
+  // Play
+   var b=a.split("&&");
+   var word=b[0];
+   var detail=b[2];
+   var topic=b[1];      // Number of spaces in word '-'
+
+  // Get elements
+  var showLives = document.getElementById("mylives");
+ var showCatagory = document.getElementById("scatagory");
+var exl=document.getElementById("expl");
+var viet=document.getElementById("viet");
+ 
+
+  // create alphabet ul
+  var buttons = function () {
+    myButtons = document.getElementById('buttons');
+    letters = document.createElement('ul');
+
+    for (var i = 0; i < alphabet.length; i++) {
+      letters.id = 'alphabet';
+      list = document.createElement('li');
+      list.id = 'letter';
+      list.innerHTML = alphabet[i];
+      check();
+      myButtons.appendChild(letters);
+      letters.appendChild(list);
+    }
+  }
+  // Create geusses ul
+   result = function () {
+    wordHolder = document.getElementById('hold');
+    correct = document.createElement('ul');
+
+    for (var i = 0; i < word.length; i++) {
+      correct.setAttribute('id', 'my-word');
+      guess = document.createElement('li');
+      guess.setAttribute('class', 'guess');
+      if (word[i] === "-") {
+        guess.innerHTML = "-";
+        space = 1;
+      } else {
+        guess.innerHTML = "_";
+      }
+
+      geusses.push(guess);
+      wordHolder.appendChild(correct);
+      correct.appendChild(guess);
+    }
+  }
+  // Show lives
+   var selectCat = function () {
+    
+      catagoryName.innerHTML = topic+"" ;
+  }
+   comments = function () {
+    showLives.innerHTML = "You have " + lives + " lives";
+    if (lives < 1) {
+      showLives.innerHTML = "Game Over<br />"+b[0];
+     exl.hidden=false;
+    
+    }
+    for (var i = 0; i < geusses.length; i++) {
+      if (counter + space === geusses.length) {
+        showLives.innerHTML = "You Win!";
+        exl.hidden=false;
+      }
+    }
+  }
+
+      // Animate man
+  var animate = function () {
+    var drawMe = lives ;
+    drawArray[drawMe]();
+  }
+
+  
+   // Hangman
+  canvas =  function(){
+
+    myStickman = document.getElementById("stickman");
+    context = myStickman.getContext('2d');
+    context.beginPath();
+    context.strokeStyle = "#fff";
+    context.lineWidth = 2;
+  };
+  
+    head = function(){
+      myStickman = document.getElementById("stickman");
+      context = myStickman.getContext('2d');
+      context.beginPath();
+      context.arc(60, 25, 10, 0, Math.PI*2, true);
+      context.stroke();
+    }
+    
+  draw = function($pathFromx, $pathFromy, $pathTox, $pathToy) {
+    
+    context.moveTo($pathFromx, $pathFromy);
+    context.lineTo($pathTox, $pathToy);
+    context.stroke(); 
+}
+
+   frame1 = function() {
+     draw (0, 150, 150, 150);
+   };
+   
+   frame2 = function() {
+     draw (10, 0, 10, 600);
+   };
+  
+   frame3 = function() {
+     draw (0, 5, 70, 5);
+   };
+  
+   frame4 = function() {
+     draw (60, 5, 60, 15);
+   };
+  
+   torso = function() {
+     draw (60, 36, 60, 70);
+   };
+  
+   rightArm = function() {
+     draw (60, 46, 100, 50);
+   };
+  
+   leftArm = function() {
+     draw (60, 46, 20, 50);
+   };
+  
+   rightLeg = function() {
+     draw (60, 70, 100, 100);
+   };
+  
+   leftLeg = function() {
+     draw (60, 70, 20, 100);
+   };
+  
+  drawArray = [rightLeg, leftLeg, rightArm, leftArm,  torso,  head, frame4, frame3, frame2, frame1]; 
+
+  // OnClick Function
+   check = function () {
+    list.onclick = function () {
+      var geuss = (this.innerHTML);
+      this.setAttribute("class", "active");
+      this.onclick = null;
+      for (var i = 0; i < word.length; i++) {
+        if (word[i] === geuss) {
+          geusses[i].innerHTML = geuss;
+          counter += 1;
+        } 
+      }
+      var j = (word.indexOf(geuss));
+      if (j === -1) {
+        lives -= 1;
+        comments();
+        animate();
+      } else {
+        comments();
+      }
+    }
+  }
+   
+  play = function () {
+    console.log(word);
+    buttons();
+
+    geusses = [ ];
+    lives = 10;
+    counter = 0;
+    space = 0;
+    result();
+    comments();
+    console.log(detail);
+    selectCat();
+   canvas();
+  }
+
+  play();
+     document.getElementById('expl').onclick = function() {
+       viet.innerHTML=detail+"";
+}
+   // Reset
+
+  document.getElementById('reset').onclick = function() {
+    correct.parentNode.removeChild(correct);
+    letters.parentNode.removeChild(letters);
+     a = "<?php word()?>";
+     b=a.split("&&");
+     word=b[0];
+     topic=b[1];
+     detail=b[2];
+    context.clearRect(0, 0, 400, 400);
+    viet.innerHTML="";
+    play();
+  }
+}
+</script>
 </html>
