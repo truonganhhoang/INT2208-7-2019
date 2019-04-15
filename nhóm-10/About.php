@@ -56,13 +56,15 @@
           <h5><p class="mb-3" style="text-align: center;">Miễn phí. Tiện lợi. Hiệu quả.</p></h5>
           <p>
           Bạn muốn học từ vựng, ngữ pháp Tiếng Anh nhưng không biết bắt đầu từ đâu? Bạn muốn tự kiểm tra và củng cố lại từ vựng một cách hiệu quả và thú vị?
-          <br>Với UDict, bạn có thể!
-          <br>Từ
+          <br/>Với UDict, bạn có thể!
+          <br/>Từ
           <a href="homemoi.php">tra từ điển</a>
           đến
-          <a href="lythuyet1.php">học ngữ pháp Tiếng Anh</a>
+          <a href="lythuyet1.php">học ngữ pháp Tiếng Anh</a>,
+          <a href="Hangman.php"> học từ vựng qua game HangMan</a>
+          
           , và thậm chí 
-          <a href="#">kiểm tra từ vựng.</a>
+          <a href=\forum/ >tham gia diễn đàn để chia sẻ, giải đáp thắc mắc.</a>
           <br>
           <h3 style="text-align: center;"><a href="homemoi.php">Cùng học Tiếng Anh với UDict!</a></h3>
           <br>

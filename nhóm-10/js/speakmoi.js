@@ -3,7 +3,7 @@ const synth = window.speechSynthesis;
 
 // DOM Elements
 const textForm = document.querySelector('#formsp');
-const textInput = document.querySelector('#form3');
+const textInput = document.querySelector('#speech');
 const voiceSelect = document.querySelector('#voice-select');
 
 //Browser identifier
