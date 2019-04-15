@@ -68,7 +68,7 @@
     </mat-sidenav>
 
     <mat-sidenav-content style="height: 800px">
-        <mat-tab-group>
+        <mat-tab-group dynamicHeight>
             <mat-tab label="Posts"> Content 0 </mat-tab>
             <mat-tab label="Photos"> Content 1 </mat-tab>
             <mat-tab label="Info">
@@ -83,14 +83,19 @@
                 </mat-card>
             </mat-tab>
             <mat-tab label="Friends" *ngIf="isMyProfile">
-                <mat-grid-list cols="2" rowHeight="100px">
+                <mat-grid-list cols="2" rowHeight="150px">
                     <mat-grid-tile *ngFor="let friend of friends">
-                        <mat-card mat-button style="width: 90%; height: 90%;" routerLink="../{{friend.username}}">
-                            <mat-card-header>
-                                <div mat-card-avatar [style.backgroundImage]="'url('+ friend.avatarUrl +')'" style="background-size: contain"></div>
-                                <mat-card-title>{{friend.name}}</mat-card-title>
-                                <mat-card-subtitle>{{friend.username}}</mat-card-subtitle>
-                            </mat-card-header>
+                        <mat-card mat-button style="width: 90%; height: 90%;">
+                            <a routerLink="../{{friend.username}}">
+                                <mat-card-header>
+                                    <div mat-card-avatar [style.backgroundImage]="'url('+ friend.avatarUrl +')'" style="background-size: contain"></div>
+                                    <mat-card-title>{{friend.name}}</mat-card-title>
+                                    <mat-card-subtitle>{{friend.username}}</mat-card-subtitle>
+                                </mat-card-header>
+                            </a>
+                            <mat-card-actions>
+                                <button mat-button>Unfriend</button>
+                            </mat-card-actions>
                         </mat-card>
                     </mat-grid-tile>
                   </mat-grid-list>
