@@ -1,9 +1,9 @@
 Options +FollowSymLinks
 RewriteEngine On
 RewriteBase /forum/
-RewriteRule ^register register.html
-RewriteRule ^login-fail index.php?status=login-fail
-RewriteRule ^reg-success index.php?status=reg-success
+RewriteRule ^regest regest.php
+RewriteRule ^login-fail home.php?status=login-fail
+RewriteRule ^reg-success home.php?status=reg-success
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
