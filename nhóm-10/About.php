@@ -27,10 +27,8 @@
           <li class="nav-item mx-2"> <a class="nav-link" href="Hangman.php">HangMan Game</a> </li>
           <li class="nav-item mx-2"> <a class="nav-link navbar-brand mr-0 " href="homemoi.php"><i class="fa d-inline fa-lg fa-stop-circle-o"></i>
               <b>UDict</b></a> </li>
-          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Explore</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item " href="index.php">Translate</a><a class="dropdown-item" href="#">Speech</a></div>
-          </li>
-          <li class="nav-item"><a class="nav-link text-white" href="About.php">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php">Translate</a></li>
+          <li class="nav-item"><a class="nav-link active" href="About.php">About us</a></li>
           <li class="nav-item"><a class="nav-link" href=\forum/ > Forum</a></li>
         </ul>
       </div>
@@ -63,8 +61,8 @@
           <a href="homemoi.php">tra từ điển</a>
           đến
           <a href="lythuyet1.php">học ngữ pháp Tiếng Anh</a>
-          , <a href="Hangman.php">học từ vựng qua game HangMan </a>và thậm chí 
-          <a href=\forum/ >đặt câu hỏi và cùng thảo luận trên diễn đàn </a>
+          , và thậm chí 
+          <a href="#">kiểm tra từ vựng.</a>
           <br>
           <h3 style="text-align: center;"><a href="homemoi.php">Cùng học Tiếng Anh với UDict!</a></h3>
           <br>

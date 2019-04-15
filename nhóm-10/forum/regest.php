@@ -54,7 +54,7 @@ else return true;
             <div class="form-group"> <input type="text" id="usernameinput" name="usernameinput"  class="form-control" placeholder="Name" required="on" autocomplete="off" maxlength="15" value=""> </div>
             <div class="form-group"> <input type="password" class="form-control" placeholder="Password" id="password" required="on" autocomplete="off" value="" maxlength="64"> </div>
             <div class="form-group"> <input type="password" class="form-control" placeholder="Password" id="passwordinput" name="passwordinput" required="on"> <small class="form-text text-muted text-right">
-                <a href="login.php">You have an account?</a>
+                <a href="#">You have an account?</a>
               </small> </div> <button type="submit" class="btn btn-primary">Register</button>
             
           </form>  

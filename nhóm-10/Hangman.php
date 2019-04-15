@@ -28,13 +28,11 @@
       <div class="collapse navbar-collapse text-center justify-content-center" id="navbar15">
         <ul class="navbar-nav">
           <li class="nav-item mx-2"> <a class="nav-link" href="lythuyet1.php">Grammar</a> </li>
-          <li class="nav-item mx-2 "> <a class="nav-link" href="Hangman.php" style="color: white;">HangMan Game</a> </li>
+          <li class="nav-item mx-2"> <a class="nav-link active" href="Hangman.php">HangMan Game</a> </li>
           <li class="nav-item mx-2"> <a class="nav-link navbar-brand mr-0 " href="homemoi.php"><i class="fa d-inline fa-lg fa-stop-circle-o"></i>
               <b>UDict</b></a> </li>
-          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle " href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Explore</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item " href="index.php">Translate</a><a class="dropdown-item" href="#">Speech</a></div>
-          </li>
-          <li class="nav-item"><a class="nav-link " href="About.php">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php">Translate</a></li>
+          <li class="nav-item"><a class="nav-link" href="About.php">About us</a></li>
           <li class="nav-item"><a class="nav-link" href=\forum/ > Forum</a></li>
         </ul>
       </div>
@@ -70,7 +68,7 @@
   </div>
   <div class="row">
     <div class="col-sm-1"></div>
-     <div class="col-sm-10"><div id="viet" style="color: black;text-align: left;background-color: lightblue;padding: 10px;outline: 15px solid  lightblue;margin-top: 15px;margin-bottom: 15px; ">
+     <div class="col-sm-10"><div id="viet" style="color: black;text-align: left;background-color: #A0E7D6;padding: 10px;outline: 15px solid  #A0E7D6;margin-top: 15px;">
     </div></div>
       <div class="col-sm-1"></div>
   </div>

@@ -28,9 +28,7 @@
           <li class="nav-item mx-2"> <a class="nav-link" href="Hangman.php">HangMan Game</a> </li>
           <li class="nav-item mx-2"> <a class="nav-link navbar-brand mr-0 " href="homemoi.php"><i class="fa d-inline fa-lg fa-stop-circle-o"></i>
               <b>UDict</b></a> </li>
-          <li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Explore</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="index.php">Translate</a><a class="dropdown-item" href="#">Speech</a></div>
-          </li>
+          <li class="nav-item"><a class="nav-link active" href="index.php">Translate</a></li>
           <li class="nav-item"><a class="nav-link" href="About.php">About us</a></li>
           <li class="nav-item"><a class="nav-link" href=\forum/ > Forum</a></li>
         </ul>
@@ -42,39 +40,49 @@
 		$arrayName = array(	1 => 'Việt Nam',
 							2 => 'English' );
 	?>
-	<div class="row" style="background-color: #AEE5D5; ">
+	<div class="row" >
 		<div  class="col-sm-2"></div>
-		<div class="col-sm-8">
+		<div class="col-sm-8" style="background-color: #BFEDE0; ">
 			<div class="container-wrap" class="tlid-input-area input-area less-padding">
   				<h2 style="text-align: center;">TRANSLATE</h2>
   				<p style="text-align: center;" >You can translate from English to Vietnamese and vice versa</p>
   				<form method="POST">
-					<select name="langua">
-						
-						<?php
+					<select name="langua" id="lang">
+						<option value="1" selected="selected">Tiếng Việt</option>
+            <option value="2">English</option>
+					<!-- 	<?php
                 		foreach($arrayName as $k=>$v){
                 	?>
                 		<option value=" <?php echo $k;?> "><?php echo $v;?></option>
                 	<?php
                 	}
-            		?>
+            		?> -->
 					</select>
 					<h3>						
-						<textarea name ="dulieu" class="form-control" id="form3"  class="orig tlid-source-text-input goog-textarea" rows="1" spellcheck="false" autocapitalize="off" autocomplete="off" maxlength="1000" autocorrect="off" style="overflow-x: auto;overflow-y:  auto; box-sizing: border-box; max-height: 400px;min-height: 200px; width: 100%; direction: ltr;height: auto; padding-bottom: 80px;"><?php if (isset($_POST['submit'])) {
+						<textarea name ="dulieu" class="form-control" id="speech"  class="orig tlid-source-text-input goog-textarea" rows="1" spellcheck="false" autocapitalize="off" autocomplete="off" maxlength="1000" autocorrect="off" style="overflow-x: auto;overflow-y:  auto; box-sizing: border-box; max-height: 400px;min-height: 200px; width: 100%; direction: ltr;height: auto; padding-bottom: 80px;"><?php if (isset($_POST['submit'])) {
 							echo $_POST['dulieu'];
 						} ?></textarea>	
-						<input type="submit" name="submit" value="Dịch" style=" position: relative;border-radius: 20px 20px 20px 20px;height: 30px;width: 60px;min-width: 60px;font-size: 18px; border: none;outline: none;margin-top: 20px;margin-left: 20px;cursor: pointer;background: #23415C; color: #fff;left: -5px;box-shadow: 0 0 0 7px #23415C;display: block;">
-					</h3>
-				</form>
-
-			</div>   
-      <form id="formsp" style="margin-top:20px; ">
-              <div class="form-group">
-                    <select id="voice-select" class="form-control form-control-lg" style="width: 100%;font-size: 18px;"></select>
-                </div>
+            <input type="submit" name="submit" value="Dịch" style=" position: relative;border-radius: 20px 20px 20px 20px;height: 30px;width: 60px;min-width: 60px;font-size: 18px; border: none;outline: none;margin-top: 20px;margin-left: 20px;cursor: pointer;background: #23415C; color: #fff;left: 10%;box-shadow: 0 0 0 7px #23415C;">
+          </h3>
+        </form>
+            <script src="speech.js"></script>
+        <div class="row center" style="padding: 0px 0px 0px 60px;">
+          <button onclick="startConverting();" style="text-align: center; position: relative;border-radius: 20px 20px 20px 20px;height: 30px;width: 160px;min-width: 60px;font-size: 18px; border: none;outline: none;margin-top: 20px;margin-left: 20px;cursor: pointer;background: #23415C; color: #fff;left: -5px;box-shadow: 0 0 0 7px #23415C;">Start Recording</button>
+          <button onclick="stop();" style="text-align: center; position: relative;border-radius: 20px 20px 20px 20px;height: 30px;width: 160px;min-width: 60px;font-size: 18px; border: none;outline: none;margin-top: 20px;margin-left: 20px;cursor: pointer;background: #23415C; color: #fff;left:5%;box-shadow: 0 0 0 7px #23415C;" >Stop Recording</button>  
+        </div>
+						<form id="formsp" style="margin-top:20px; ">
+     <div class="row">
+              
+                    <div class="col-sm-10">
+                    <select id="voice-select" class="form-control form-control-lg" style=" font-size: 18px;"></select>
+                    </div>
+                <div class="cl-sm-2">
                 <button class="btn btn-light btn-md" id="speak" style="background-color:white; "><img src="imgg/pn.jpg" alt="Speak" style="width:100%"></button>
+      </div></div>
           </form>
-		</div>
+    </div>
+			</div>   
+      
 		<div class="col-sm-2"></div>
 	</div>
 
@@ -85,6 +93,7 @@
         	<div class="col-sm-8" style="padding-top: 15px;"  >
             
         		<div style="text-align: center;">
+              <div id='speak2'></div>
           		<?php
 				$text1="";
 				$source='';
@@ -115,7 +124,7 @@
             		$text = $text1;
             		$trans = new GoogleTranslate();
             		$result = $trans->translate($source, $target, $text);
-					echo '<h6>'.$result.'</h6>';	
+					echo '<h6 id="p2">'.$result.'</h6>';	
         		?>
 
           		</div>

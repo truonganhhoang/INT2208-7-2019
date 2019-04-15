@@ -43,19 +43,6 @@
             } 
             else
             echo  '<a class="navbar-brand" href="login.php"> <i class="fa d-inline fa-lg fa-sign-in"></i>&nbsp;Login'; ?>
-          <?php
-        if (isset($_SESSION['username'])) {
-        } else {
-          if (isset($_GET['status'])) {
-            if ($_GET['status'] == 'reg_success') {
-
-              echo "<script>alert('register successful')</script>";
-            } else if ($_GET['status'] == 'login_fail') {
-              echo "<script>alert('register fail')</script>";
-            }
-          }
-        }
-      ?>
             </a>
          
       </div>

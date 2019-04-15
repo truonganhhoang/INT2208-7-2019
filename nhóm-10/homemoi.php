@@ -27,11 +27,9 @@
         <ul class="navbar-nav">
           <li class="nav-item mx-2"> <a class="nav-link" href="lythuyet1.php">Grammar</a> </li>
           <li class="nav-item mx-2"> <a class="nav-link" href="Hangman.php">HangMan Game</a> </li>
-          <li class="nav-item mx-2"> <a class="nav-link navbar-brand mr-0 text-white" href="homemoi.php"><i class="fa d-inline fa-lg fa-stop-circle-o"></i>
+          <li class="nav-item mx-2"> <a class="nav-link navbar-brand mr-0 active" href="homemoi.php"><i class="fa d-inline fa-lg fa-stop-circle-o"></i>
               <b>UDict</b></a> </li>
-          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Explore</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="index.php">Translate</a><a class="dropdown-item" href="#">Speech</a></div>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.php">Translate</a></li>
           <li class="nav-item"><a class="nav-link" href="About.php">About us</a></li>
           <li class="nav-item"><a class="nav-link" href=\forum/ > Forum</a></li>
         </ul>
