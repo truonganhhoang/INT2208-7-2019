@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatNativeDateModule, MatInputModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
@@ -47,6 +48,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
         MatTabsModule,
         MatIconModule,
         MatDialogModule,
+        MatCheckboxModule,
         MatNativeDateModule, MatInputModule,
         FormsModule,
     ],

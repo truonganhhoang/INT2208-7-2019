@@ -38,3 +38,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-button{
   outline: none !important;
 }
+
+.mat-tab-header {
+  z-index: 9999;
+  position: sticky !important;
+  top: 0px;
+  background-color: white !important;
+}

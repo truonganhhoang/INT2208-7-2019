@@ -66,6 +66,7 @@ export class UserProfileComponent implements OnInit {
                 .subscribe(
                     data => {
                         this.friends.push(data.user);
+                        console.log(data.user)
                     }
                 );
         });
