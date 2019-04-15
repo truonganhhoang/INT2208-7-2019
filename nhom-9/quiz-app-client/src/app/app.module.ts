@@ -14,6 +14,7 @@ import { DashboardTestComponent } from './dashboard-test/dashboard-test.componen
 import { routing } from './app.routing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { QuizDetailComponent } from './quiz-detail/quiz-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpModule } from '@angular/http';
     LandingPageComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardTestComponent
+    DashboardTestComponent,
+    QuizDetailComponent
   ],
   imports: [
     BrowserModule,
