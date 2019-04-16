@@ -6,7 +6,7 @@
     <title>Tin tức bóng đá</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <style>
-        .container-fluid {
+        .container {
             position: relative;
             text-align: center;
         }
@@ -36,7 +36,7 @@
             background-size: cover;
             position: relative;
             border-radius: 10px;
-            border: 2px solid #737373;
+            border: 1.2px solid #737373;
         }
 
         .item2 {
@@ -47,7 +47,7 @@
             background-size: cover;
             position: relative;
             border-radius: 10px;
-            border: 2px solid #737373;
+            border: 1.2px solid #737373;
         }
 
         .item3 {
@@ -58,7 +58,7 @@
             background-size: cover;
             position: relative;
             border-radius: 10px;
-            border: 2px solid #737373;
+            border: 1.2px solid #737373;
         }
 
         .item4 {
@@ -69,7 +69,7 @@
             background-size: cover;
             position: relative;
             border-radius: 10px;
-            border: 2px solid #737373;
+            border: 1.2px solid #737373;
         }
 
         .item5 {
@@ -80,7 +80,7 @@
             background-size: cover;
             position: relative;
             border-radius: 10px;
-            border: 2px solid #737373;
+            border: 1.2px solid #737373;
         }
 
         .item6 {
@@ -91,11 +91,55 @@
             background-size: cover;
             position: relative;
             border-radius: 10px;
-            border: 2px solid #737373;
+            border: 1.2px solid #737373;
+        }
+
+        .item7 {
+            background-image: url("images/ajax-ronaldo.jpg");
+            min-height: 380px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            border-radius: 10px;
+            border: 1.2px solid #737373;
+        }
+
+        .item8 {
+            background-image: url("images/ha-slna.jpg");
+            min-height: 380px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            border-radius: 10px;
+            border: 1.2px solid #737373;
+        }
+
+        .item9 {
+            background-image: url("images/Nhan-dinh-bong-da-Yangon-United--Ha-Noi.jpg");
+            min-height: 380px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            border-radius: 10px;
+            border: 1.2px solid #737373;
+        }
+
+        .item10 {
+            background-image: url("images/mu-barca.jpg");
+            min-height: 380px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            border-radius: 10px;
+            border: 1.2px solid #737373;
         }
 
         /*Căn lề text*/
-        .container-fluid .content {
+        .container .content {
             position: relative;
             text-align: left;
 
@@ -105,12 +149,22 @@
             margin-left: 10px;
         }
 
+        .container .content-long {
+            position: relative;
+            text-align: left;
+
+            margin-top: 10px;
+            margin-right: 300px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
         /*Màu chữ trong ảnh*/
-        .container-fluid h4 {
+        .container h4 {
             color: white;
         }
 
-        .container-fluid .inf {
+        .container .inf {
             color: #e6e6e6;
 
         }
@@ -193,12 +247,65 @@
             -ms-transition: all 1s ease;
             transition: all 1s ease;
         }
+
+        .item7 {
+            -webkit-filter: brightness(100%);
+        }
+
+        .item7:hover {
+            -webkit-filter: brightness(70%);
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+
+        .item8 {
+            -webkit-filter: brightness(100%);
+        }
+
+        .item8:hover {
+            -webkit-filter: brightness(70%);
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+
+        .item9 {
+            -webkit-filter: brightness(100%);
+        }
+
+        .item9:hover {
+            -webkit-filter: brightness(70%);
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+
+        .item10 {
+            -webkit-filter: brightness(100%);
+        }
+
+        .item10:hover {
+            -webkit-filter: brightness(70%);
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            transition: all 1s ease;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row d-inline-flex">
+
             <!-- Gallery Item 1 -->
             <div class="col-12 col-sm-6 col-md-4 p-2">
                 <div class="d-flex flex-column text-center border height100 border-0">
@@ -216,6 +323,7 @@
                     </a>
                 </div>
             </div>
+
             <!-- Gallery Item 2 -->
             <div class="col-12 col-sm-6 col-md-4 p-2">
                 <div class="d-flex flex-column text-center border height100 border-0">
@@ -228,15 +336,13 @@
                                     khi
                                     lập
                                     hat-trick bàn thắng
-                                    giúp "bà đầm già" hạ Atletico Madrid 3-0 ở lượt về vòng 16 đội để giành quyền vào tứ
-                                    kết
-                                    Champions
-                                    League với tổng tỉ số thắng 3-2 sau hai lượt.</div>
+                                    giúp "bà đầm già" hạ Atletico Madrid.</div>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
+
             <!-- Gallery Item 3 -->
             <div class="col-12 col-sm-6 col-md-4 p-2">
                 <div class="d-flex flex-column text-center border height100 border-0">
@@ -258,6 +364,76 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Gallery Item 7 -->
+            <div class="col-12 col-sm-12 col-md-8 p-2">
+                <div class="d-flex flex-column text-center border height100 border-0">
+                    <a style="text-decoration:none"
+                        href="https://www.24h.com.vn/bong-da/nhan-dinh-bong-da-juventus-ajax-cho-ronaldo-toa-sang-ban-ket-thang-tien-c48a1043480.html">
+                        <div class="item7">
+                            <div class="content-long">
+                                <h4>Juventus - Ajax: Chờ Ronaldo tỏa sáng, bán kết thẳng tiến</h4>
+                                <div class="inf">Ở tuổi 34, Ronaldo vẫn cho thấy mình là một cỗ máy ghi bàn không thể
+                                    ngăn cản.
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Gallery Item 8 -->
+            <div class="col-12 col-sm-6 col-md-4 p-2">
+                <div class="d-flex flex-column text-center border height100 border-0">
+                    <a style="text-decoration:none"
+                        href="https://www.24h.com.vn/bong-da/video-ket-qua-bong-da-ha-noi-slna-sung-so-dien-bien-tuyet-tac-quang-hai-c48a1041385.html">
+                        <div class="item8">
+                            <div class="content">
+                                <h4>Hà Nội - SLNA: Tuyệt tác Quang Hải, dạ tiệc 4 bàn mãn nhãn</h4>
+                                <div class="inf">Hà Nội vẫn tung ra cặp Oseni - Omar trên hàng công với sự trợ giúp của
+                                    Thành Lương và Quang Hải.
+                                    Trong khi đó SLNA trông cậy vào Olaha và Khắc Ngọc.</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 9 -->
+            <div class="col-12 col-sm-6 col-md-4 p-2">
+                <div class="d-flex flex-column text-center border height100 border-0">
+                    <a style="text-decoration:none"
+                        href="https://www.24h.com.vn/bong-da/nhan-dinh-bong-da-yangon-united-ha-noi-quyet-tam-rua-han-cho-quang-hai-toa-sang-c48a1043680.html">
+                        <div class="item9">
+                            <div class="content">
+                                <h4>Yangon United – Hà Nội: Quyết tâm rửa hận, chờ Quang Hải tỏa sáng</h4>
+                                <div class="inf">
+                                    Tái đấu Yangon United khi làm khách trên sân Thuwanna ở Yangon (Myanmar), thầy trò
+                                    Chu Đình Nghiêm hướng đến việc giành chiến thắng.
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 10 -->
+            <div class="col-12 col-sm-12 col-md-8 p-2">
+                <div class="d-flex flex-column text-center border height100 border-0">
+                    <a style="text-decoration:none"
+                        href="https://www.24h.com.vn/bong-da/nhan-dinh-bong-da-barcelona-mu-hiem-hoa-nou-camp-mo-tai-lap-sieu-ki-tich-c48a1043451.html">
+                        <div class="item10">
+                            <div class="content-long">
+                                <h4>Barcelona - MU: Hiểm họa Nou Camp, mơ tái lập siêu kì tích</h4>
+                                <div class="inf">
+                                    Chiến thắng "hú vía" West Ham ở Premier League không phải sự chuẩn bị tốt của MU
+                                    trước thềm đại chiến với Barca.
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
             <!-- Gallery Item 4 -->
             <div class="col-12 col-sm-6 col-md-4 p-2">
                 <div class="d-flex flex-column text-center border height100 border-0">
@@ -278,6 +454,7 @@
                     </a>
                 </div>
             </div>
+
             <!-- Gallery Item 5 -->
             <div class="col-12 col-sm-6 col-md-4 p-2">
                 <div class="d-flex flex-column text-center border height100 border-0">
@@ -293,10 +470,12 @@
                     </a>
                 </div>
             </div>
+
             <!-- Gallery Item 6 -->
             <div class="col-12 col-sm-6 col-md-4 p-2">
                 <div class="d-flex flex-column text-center border height100 border-0">
-                    <a style="text-decoration:none" href="http://bongdaplus.vn/real-se-thay-mau-luc-luong-vao-he-2019-2401781901.html">
+                    <a style="text-decoration:none"
+                        href="http://bongdaplus.vn/real-se-thay-mau-luc-luong-vao-he-2019-2401781901.html">
                         <div class="item6">
                             <div class="content">
                                 <h4>Real sẽ thay máu lực lượng vào Hè 2019</h4>
@@ -310,6 +489,7 @@
                     </a>
                 </div>
             </div>
+
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
