@@ -1,3 +1,4 @@
+import { WelcomeComponent } from './welcome/welcome.component';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardTestComponent } from './dashboard-test/dashboard-test.component';
@@ -8,11 +9,10 @@ import { AuthGuard } from './_guards/auth.guard';
 // import { AuthGuard } from './_guards';
 
 const appRoutes: Routes = [
-    { path: '', component: DashboardTestComponent, canActivate: [AuthGuard] },
+    { path: '', component: WelcomeComponent},
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-
-    // otherwise redirect to home
+    { path: 'dashboard', component: DashboardTestComponent},
     { path: '**', redirectTo: '' }
 ];
 

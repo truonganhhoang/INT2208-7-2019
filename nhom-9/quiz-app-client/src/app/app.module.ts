@@ -1,3 +1,4 @@
+import { WelcomeComponent } from './welcome/welcome.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -24,7 +25,8 @@ import { QuizDetailComponent } from './quiz-detail/quiz-detail.component';
     LoginComponent,
     RegisterComponent,
     DashboardTestComponent,
-    QuizDetailComponent
+    QuizDetailComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
