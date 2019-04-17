@@ -8,6 +8,11 @@ import { UserService } from '@app/_services';
 import { User } from '@app/_models';
 import { stringify } from '@angular/core/src/util';
 
+export interface Friend {
+    user: User;
+    relation: String;
+};
+  
 @Component({
     selector: 'app-user-profile',
     templateUrl: './user-profile.component.html',
@@ -17,10 +22,11 @@ export class UserProfileComponent implements OnInit {
 
     file: any;
     user: User;
-    friends: Array<User>;
+    friends: Array<Friend>;
     isMyProfile: boolean;
     relation: string;
     default: string;
+    showFriends = {'friend': true, 'wait for accept': false, 'sent request': false};
     sideNavButton: [];
 
     constructor(
@@ -60,13 +66,12 @@ export class UserProfileComponent implements OnInit {
 
     getFriends() {
         if (!this.isMyProfile) return;
-        this.friends = new Array<User>();
+        this.friends = new Array<Friend>();
         this.user.friends.forEach(friend => {
             this.userService.get(friend.username)
                 .subscribe(
                     data => {
-                        this.friends.push(data.user);
-                        console.log(data.user)
+                        this.friends.push({user: data.user, relation:friend.relationType});
                     }
                 );
         });
