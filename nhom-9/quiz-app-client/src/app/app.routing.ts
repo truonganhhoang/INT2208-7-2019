@@ -1,3 +1,4 @@
+import { TestingComponent } from './testing/testing.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -13,6 +14,7 @@ const appRoutes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'dashboard', component: DashboardTestComponent},
+    {path:'testing', component: TestingComponent},
     { path: '**', redirectTo: '' }
 ];
 

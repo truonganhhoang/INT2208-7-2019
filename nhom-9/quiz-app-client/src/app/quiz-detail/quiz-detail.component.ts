@@ -8,10 +8,10 @@ import { Quizs } from '../_models/quiz-detail/mock-quiz';
   styleUrls: ['./quiz-detail.component.css']
 })
 export class QuizDetailComponent implements OnInit {
-  quizs:Quiz[] = Quizs;
+  quizs: Quiz[] = Quizs;
+  router: any;
   constructor() { }
 
   ngOnInit() {
   }
-
 }

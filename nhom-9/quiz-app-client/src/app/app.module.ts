@@ -16,6 +16,7 @@ import { routing } from './app.routing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { QuizDetailComponent } from './quiz-detail/quiz-detail.component';
+import { TestingComponent } from './testing/testing.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { QuizDetailComponent } from './quiz-detail/quiz-detail.component';
     RegisterComponent,
     DashboardTestComponent,
     QuizDetailComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    TestingComponent
   ],
   imports: [
     BrowserModule,
