@@ -89,8 +89,7 @@
                 <mat-checkbox style="margin-left: 20px" color="primary" [(ngModel)]='showFriends["friend"]'>Friends</mat-checkbox>
                 <mat-checkbox style="margin-left: 20px" color="primary" [(ngModel)]='showFriends["wait for accept"]'>Other's Requests</mat-checkbox>
                 <mat-checkbox style="margin-left: 20px" color="primary" [(ngModel)]='showFriends["sent request"]'>My Requests</mat-checkbox>
-                <!-- <mat-grid-list cols="2" rowHeight="155px"> -->
-                    <mat-list style="margin-left: 20px" *ngFor="let friend of friends">
+                    <div style="margin: 10px" *ngFor="let friend of friends">
                         <mat-card style="width: 90%; height: 90%;" *ngIf='showFriends[friend.relation]'>
                             <a routerLink="../{{friend.user.username}}">
                                 <mat-card-header>
@@ -106,8 +105,7 @@
                                 <button mat-button *ngIf='friend.relation == "sent request"'>Cancel Request</button>
                             </mat-card-actions>
                         </mat-card>
-                    </mat-list>
-                  <!-- </mat-grid-list> -->
+                    </div>
             </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>
