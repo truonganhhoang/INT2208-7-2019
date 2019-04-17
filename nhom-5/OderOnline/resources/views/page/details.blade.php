@@ -27,9 +27,9 @@
                                     @endif
                                 </div>
                                 <div class="caption" style="margin-top: 10px">
-                                    <a class="shopping shop"  href="{{route('cart',$sp->id)}}"><i class="fas fa-cart-plus"></i></a>
+                                    <a class="shopping shop" style="background: white" href="{{route('cart',$sp->id)}}"><i class="fas fa-cart-plus"></i></a>
 
-                                    <a class="shopping pay"   href="{{route('details',[$sp->id_type,$sp->id])}}">Details<i class="fa fa-chevron-right"></i></a>
+                                    <a class="shopping pay" style="background: white" href="{{route('details',[$sp->id_type,$sp->id])}}">Details<i class="fa fa-chevron-right"></i></a>
 
                                 </div>
 
@@ -61,8 +61,8 @@
                         {{$product[0]['description']}}
                     </div>
                     <div class="caption" style="margin-top: 30px">
-                        <a class="shopping shop"  href="{{route('cart',$product[0]['id'])}}"><i class="fas fa-cart-plus"></i></a>
-                        <a class="shopping" href="#" style="letter-spacing: 2px"><i class="fas fa-mouse-pointer"></i>Thanh toán</a>
+                        <a class="shopping shop" style="background: white" href="{{route('cart',$product[0]['id'])}}"><i class="fas fa-cart-plus"></i></a>
+                        <a class="shopping" href="#" style="background: white; letter-spacing: 2px"><i class="fas fa-mouse-pointer"></i>Thanh toán</a>
 
                     </div>
 
@@ -71,15 +71,16 @@
                     <p style="display: inline">NHẬN XÉT</p>
 
                     @if (Auth::check())
-                        <button style="float: right; background: #ffffff" onclick="showHideForm()">Viết đánh giá</button>
+                        <button class="btn btn-primary" style="float: right; " onclick="showHideForm()">Viết đánh giá</button>
                     @endif
                     <br>
                     <br>
                     @if (Auth::check())
-                        <div id = "rateForm" style="display: none">
-                            <form method="POST" action="{{route('postReview')}}" style="height: 200px; padding: 15px; alignment: center; background: #aeffd7">
+                        <div id = "rateForm" style="display: none; height: 245px">
+                            <br>
+                            <form method="POST" action="{{route('postReview')}}" style="height: 90%; padding: 0px 15px 0px 15px; alignment: center; background: lightskyblue; box-shadow: 3px 5px #c3c3c3;">
                                 @csrf
-                                <div id = 'stars' onmouseout="bright()" >
+                                <div id = 'stars' style="padding-top: 10px" onmouseout="bright()" >
                                     @for ($i = 0; $i < 5; $i++)
                                         <i class="far fa-star" onmouseover="bright({{$i + 1}})" onclick="{
                                             document.getElementsByName('rate_input')[0].getAttributeNode('value').value = '{{$i + 1}}'
@@ -89,18 +90,19 @@
                                 <input name="product_id" style="display: none" type="number" value="{{$auth_rate['product_id']}}">
                                 <input name="customer_id" style="display: none" type="number" value="{{$auth_rate['customer_id']}}">
                                 <input name="rate_input" style="display: none" type="number" value="{{$auth_rate['rate']}}">
-                                <textarea name="content_input" style="width: 100%; height: 115px; padding: 10px 10px 10px 10px;" type="text" placeholder="Nhận xét của bạn">{{$auth_rate['content']}}</textarea>
+                                <textarea class="form-control" rows="5" name="content_input" placeholder="Nhận xét của bạn" maxlength="1000">{{$auth_rate['content']}}</textarea>
+                                <!-- todo: <p style="color: red; display: none">Không còn chỗ trống</p>-->
                                 <div style="float: right; padding: 5px">
-                                    <button type="reset" onclick="showHideForm()">HỦY</button>
+                                    <button class="btn btn-default" style=" float: right; " type="reset" onclick="showHideForm()">HỦY</button>
                                 </div>
                                 <div style="float: right; padding: 5px">
-                                    <button type="submit">GỬI</button>
+                                    <button class="btn btn-success" style="float: right;" type="submit">GỬI</button>
                                 </div>
                             </form>
                             <br>
                         </div>
                     @endif
-
+                    <br>
                     <div style="padding: 15px; alignment: center; background: white">
                         @foreach($rates as $rate)
                             <div>
