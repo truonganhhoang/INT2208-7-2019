@@ -31,6 +31,7 @@
     "jsonwebtoken": "^8.5.0",
     "mongodb": "^3.1.13",
     "mongoose": "^5.4.11",
+    "mqtt": "^2.18.8",
     "multer": "^1.4.1",
     "ngx-textarea-autosize": "^2.0.0",
     "nodemon": "^1.18.10",

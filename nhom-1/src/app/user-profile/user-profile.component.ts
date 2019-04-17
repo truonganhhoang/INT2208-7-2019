@@ -6,7 +6,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { UserService } from '@app/_services';
 import { User } from '@app/_models';
-import { stringify } from '@angular/core/src/util';
 
 export interface Friend {
     user: User;

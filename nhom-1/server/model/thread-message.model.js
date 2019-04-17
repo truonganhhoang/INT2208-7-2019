@@ -4,11 +4,9 @@ const Schema = mongoose.Schema;
 
 var threadMessageSchema = new Schema({
     messages: {
-        type: [messageSchema]
+        type: [messageSchema],
+        default: []
     },
-    author: {
-        type: [String]
-    }, 
     previous: {
         type: String,
         default: ''

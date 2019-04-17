@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const http = require('http');
 const app = express();
 const cors = require('cors');
+const mqttMessengerServer = require('./messenger/messenger-mqtt');
+const mongoose = require('./database/mongoose-connect');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
@@ -29,5 +31,7 @@ const api = require('./api/api')(io);
 
 app.use('/auth',auth);
 app.use('/api',api);
+
+mqttMessengerServer();
 
 server.listen(port,()=> console.log(`API running on localhost:${port}`));

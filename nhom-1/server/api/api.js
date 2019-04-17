@@ -1,41 +1,113 @@
+require('dotenv').config();
+const express = require('express');
+const router = express.Router();
+const mongoose = require('mongoose');
+const multer = require('multer');
+const tokenCheck = require('./token-check');
+const userSchema = require('./../model/user.model');
+const friendSchema = require('./../model/friend.model');
+const notifySchema = require('./../model/notify.model');
+const messengerRoom = require('./../model/messenger-room.model');
+const genNoti = require('./generate-room-notification');
+const messageThread = require('./../model/thread-message.model');
+
+const User = mongoose.model('User', userSchema);
+const Friend = mongoose.model('Friend', friendSchema);
+const Notify = mongoose.model('Notify', notifySchema);
+const MessengerRoom = mongoose.model('MessengerRoom', messengerRoom);
+const MessengerThread = mongoose.model('MessengerThread', messageThread);
+
+var storageAvatar = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './src/assets/data/avatar/');
+    },
+    filename: function (req, file, cb) {
+        cb(null, req.username);
+    }
+});
+
+var storagePicture = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './src/assets/data/picture/');
+    },
+    filename: function (req, file, cb) {
+        cb(null, req.username + '_' + String(Date.now()))
+    }
+});
+
+var saveAvatarHandlerMiddleware = multer({ storage: storageAvatar });
+
+var savePictureHandlerMiddleware = multer({ storage: storagePicture });
 
 module.exports = function (io) {
-    require('dotenv').config();
-    const express = require('express');
-    const router = express.Router();
-    const mongoose = require('mongoose');
-    const multer = require('multer');
-    const tokenCheck = require('./token-check');
-    const userSchema = require('./../model/user.model');
-    const friendSchema = require('./../model/friend.model');
-    const notifySchema = require('./../model/notify.model');
-    const gen = require('./generate-room');
 
-    const User = mongoose.model('User', userSchema);
-    const Friend = mongoose.model('Friend', friendSchema);
-    const Notify = mongoose.model('Notify', notifySchema);
+    router.get('/createroom', tokenCheck, (req,res)=>{
+        let user1 = req.body.username;
+        let user2 = req.query.username;
 
-    var storageAvatar = multer.diskStorage({
-        destination: function (req, file, cb) {
-            cb(null, './src/assets/data/avatar/');
-        },
-        filename: function (req, file, cb) {
-            cb(null, req.username);
-        }
+        let thread = new MessengerThread();
+        thread.save((err, doc)=>{
+            if (err) {
+                res.json({
+                    state: false
+                });
+                return;
+            }
+            let room = new MessengerRoom();
+            room.authors = [];
+            room.authors.push(user1);
+            room.authors.push(user2);
+            room.thread = doc._id;
+            room.save((err, doc)=>{
+                if (err) {
+                    res.json({
+                        state: false
+                    });
+                    return;
+                }
+                res.json({
+                    state: true,
+                    room: {
+                        _id: doc._id,
+                        thread: doc.thread
+                    }
+                });
+            });
+        });
     });
 
-    var storagePicture = multer.diskStorage({
-        destination: function (req, file, cb) {
-            cb(null, './src/assets/data/picture/');
-        },
-        filename: function (req, file, cb) {
-            cb(null, req.username + '_' + String(Date.now()))
-        }
+    router.get('/threadchat', tokenCheck, (req,res)=>{
+        threadId = req.query.thread;
+        MessengerThread.findById(threadId, (err,doc)=>{
+            if (err) {
+                res.json({
+                    state: false
+                });
+                return;
+            }
+            res.json({
+                state: true,
+                thread: doc
+            });
+        });
     });
 
-    var saveAvatarHandlerMiddleware = multer({ storage: storageAvatar });
+    router.get('/getlistchat', tokenCheck, (req,res)=>{
+        let user = req.body.username;
+        MessengerRoom.find({authors: user}, 
+            (err,docs) => {
+                if (err) {
+                    res.json({state: false});
+                    return;
+                }
+                res.json({
+                    state: true,
+                    list: docs
+                });
+            }
+        );
 
-    var savePictureHandlerMiddleware = multer({ storage: storagePicture });
+    });
 
 
     router.get('/search', (req,res)=>{
@@ -201,7 +273,7 @@ module.exports = function (io) {
                     res.json({state:false});
                     return;
                 }
-                io.to(gen(friendId)).emit('notify', notifyData);
+                io.to(genNoti(friendId)).emit('notify', notifyData);
                 User.findOne({username: userId},(err,doc)=>{
                     if (err) {
                         res.json({state: false});
@@ -321,7 +393,7 @@ module.exports = function (io) {
                                 return;
                             }
                             res.json({state:true});
-                            io.to(gen(friendId)).emit('notify', notifyData);
+                            io.to(genNoti(friendId)).emit('notify', notifyData);
                         });
                     }
                 );
@@ -329,7 +401,7 @@ module.exports = function (io) {
         );
     });
 
-
+    
     router.get('/notify', tokenCheck,(req,res)=> { 
         User.findOne({username: req.body.username}, (err,doc)=>{
             if (err) {
@@ -347,6 +419,24 @@ module.exports = function (io) {
                 }
             }
         });
+    });
+
+    router.post('/modify-password', tokenCheck, (req,res)=> {
+        let newPassword = req.body.password;
+        let hashedPassword = bcrypt.hashSync(newPassword,Number(process.env.SALT_ROUND));
+
+        User.findOneAndUpdate({ username: req.body.username }, { password: hashedPassword }, (err, doc) => {
+            if (err) {
+                res.json({
+                    state: false
+                });
+            } else {
+                res.json({
+                    state: true
+                });
+            }
+        });
+
     });
 
     router.post('/modify', tokenCheck, (req, res) => {
