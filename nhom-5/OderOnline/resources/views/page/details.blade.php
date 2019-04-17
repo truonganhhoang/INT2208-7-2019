@@ -29,7 +29,7 @@
                                 <div class="caption" style="margin-top: 10px">
                                     <a class="shopping shop" style="background: white" href="{{route('cart',$sp->id)}}"><i class="fas fa-cart-plus"></i></a>
 
-                                    <a class="shopping pay" style="background: white" href="{{route('details',[$sp->id_type,$sp->id])}}">Details<i class="fa fa-chevron-right"></i></a>
+                                    <a class="shopping pay" style="background: white" href="{{route('details',[$sp->id_type,$sp->id])}}">Chi tiết<i class="fa fa-chevron-right"></i></a>
 
                                 </div>
 
