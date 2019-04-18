@@ -10,9 +10,33 @@
 		<link rel="stylesheet" href="score.css" />
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+		<style>
+		  .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+		    color: #fff;
+		    background-color: #660066;
+		}
+			.bg-img {
+			  /* The image used */
+			  background-image: url("LogoGiaiDau//premier-bar.png");
+
+			  /* Center and scale the image nicely */
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-size: cover;
+
+			  /* Needed to position the navbar */
+			  position: relative;
+			}
+			.bd {
+				background-image: url("premier.gif");
+				background-repeat: repeat;
+				background-size: 200%;
+				}
+
+		</style>
 	</head>
 
-	<body>
+	<body class="bd">
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -55,36 +79,40 @@
 		</nav>
 
 	<!--/Logo League -->
-		<img src="LogoGiaiDau/premier league.png" width="200px" height="auto" alt="ngoai hang anh" class="center img-responsive" >&nbsp&nbsp
+		<img src="LogoGiaiDau//premier-header.png" width="auto" height="auto" alt="ngoai hang anh" class="center img-responsive" >&nbsp&nbsp
 
 	<!--/Toolbar -->
 
       <!-- Nav tabs -->
-      <ul class="nav nav-tabs nav-justified " role="tablist">
+      
+      <ul class="nav nav-pills nav-justified color-bar" role="tablist">
         <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
             data-toggle="tab">Bảng xếp hạng</a></li>
-        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="p tab"
             data-toggle="tab">Lịch thi đấu - Kết quả</a></li>
+        <li role="presentation"><a href="#profile2" aria-controls="profile2" role="tab"
+            data-toggle="tab">Số liệu thống kê</a></li>
       </ul>
+  	
 
       <!-- Tab panes -->
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="home">
-			<div class="col-md-10">
-				<table class="table table-striped">&nbsp
-				<tr>
-				  <th class="col-md-1"><p>Vị trí</p></th>
-				  <th class="col-md-5"><p>Câu lạc bộ</p></th>
-				  <th class="col-md-1"><p align="center">Trận</p></th>
-				  <th class="col-md-1"><p align="center">Thắng</p></th>
-				  <th class="col-md-1"><p align="center">Hòa</p></th>
-				  <th class="col-md-1"><p align="center">Thua</p></th>
-				  <th class="col-md-1"><p align="center">+/-</p></th>
-				  <th class="col-md-1"><p align="center">Điểm</p></th>
+        	<div class="container" style="width: 90%">
+				<table class="table">&nbsp
+				<tr class="bg-img white">
+				  <th class="col-xs-1" ><p>Vị trí</p></th>
+				  <th class="col-xs-2" ><p>Câu lạc bộ</p></th>
+				  <th class="col-xs-1" ><p align="center">Trận</p></th>
+				  <th class="col-xs-1" ><p align="center">Thắng</p></th>
+				  <th class="col-xs-1" ><p align="center">Hòa</p></th>
+				  <th class="col-xs-1" ><p align="center">Thua</p></th>
+				  <th class="col-xs-1" ><p align="center">+/-</p></th>
+				  <th class="col-xs-1" ><p align="center">Điểm</p></th>
 				</tr>
 				<%i=1%>
 				<%results[3].forEach(function(rows){%>
-				<tr>
+				<tr style="background-color: white">
 					<td><%=i++%></td>
 					<td><img src="<%=rows.logo_doibong%>" alt="score+" width="auto" height="20px">&nbsp&nbsp<%=rows.doibong%></td>
 					<td align="center"><%=rows.st%></td>
@@ -97,8 +125,9 @@
 				<%})%>
 				</table>
 			</div>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="profile">
+		</div>
+
+        <div role="tabpanel" class="tab-pane tab-pane fade" id="profile">
 
           	 <ul class="nav nav-tabs nav-justified " role="tablist">
 		        <li role="presentation" class="active"><a href="#r1" aria-controls="round" role="tab"
@@ -125,8 +154,8 @@
 
 
 		      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="r1">
-						<table class="table">
+        		<div role="tabpanel" class="tab-pane active" id="r1">
+						<table class="table" style="background-color: white">
 								<tr>
 								  <th class="col-xs-4"><p align="center">HOME</p></th>
 								  <th class="col-xs-4"><p align="center"></p></th>
@@ -143,9 +172,8 @@
 								</tr>
 						</table>
 				</div>
-
-        <div role="tabpanel" class="tab-pane" id="r2">
-						<table class="table">
+        		<div role="tabpanel" class="tab-pane tab-pane fade" id="r2">
+						<table class="table" style="background-color: white">
 								<tr>
 								  <th class="col-xs-4"><p align="center">HOME</p></th>
 								  <th class="col-xs-4"><p align="center"></p></th>
@@ -162,8 +190,8 @@
 								</tr>
 						</table>
 				</div>
-				<div role="tabpanel" class="tab-pane" id="r3">
-					<table class="table">
+				<div role="tabpanel" class="tab-pane tab-pane fade" id="r3">
+					<table class="table" style="background-color: white">
 							<tr>
 							  <th class="col-xs-4"><p align="center">HOME</p></th>
 							  <th class="col-xs-4"><p align="center"></p></th>
@@ -180,68 +208,41 @@
 							</tr>
 						</table>
 				</div>
-		<div role="tabpanel" class="tab-pane" id="r4">
-			<p>Chưa có dữ liệu mới nhất</p>
+				<div role="tabpanel" class="tab-pane" id="r4">
+					<p>Chưa có dữ liệu mới nhất</p>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="r5">
+					<p>Chưa có dữ liệu mới nhất</p>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="r6">
+					<p>Chưa có dữ liệu mới nhất</p>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="r7">
+					<p>Chưa có dữ liệu mới nhất</p>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="r8">
+					<p>Chưa có dữ liệu mới nhất</p>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="r9">
+					<p>Chưa có dữ liệu mới nhất</p>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="r10">
+					<p>Chưa có dữ liệu mới nhất</p>
+				</div>	
+			  
+			  </div>
 		</div>
-		<div role="tabpanel" class="tab-pane" id="r5">
-			<p>Chưa có dữ liệu mới nhất</p>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="r6">
-			<p>Chưa có dữ liệu mới nhất</p>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="r7">
-			<p>Chưa có dữ liệu mới nhất</p>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="r8">
-			<p>Chưa có dữ liệu mới nhất</p>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="r9">
-			<p>Chưa có dữ liệu mới nhất</p>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="r10">
-			<p>Chưa có dữ liệu mới nhất</p>
-		</div>
+
+		<div role="tabpanel" class="tab-pane" id="profile2">
+			<p> chưa có gì cả</p>
+		</div>	
 	</div>
+
+
+	
 
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 
-
-		<!--Hàm script cho 2 nút next và previous
-		<script>
-			$('body').on('click', '.next', function() {
-			    var id = $('.content:visible').data('id');
-			    var nextId = $('.content:visible').data('id')+1;
-			    $('[data-id="'+id+'"]').hide();
-			    $('[data-id="'+nextId+'"]').show();
-
-			    if($('.back:hidden').length == 1){
-			        $('.back').show();
-			    }
-
-			    if(nextId == 4){
-
-			        $('.content-holder').hide();
-        			$('.end').show();
-			    }
-			});
-
-			$('body').on('click', '.back', function() {
-			    var id = $('.content:visible').data('id');
-			    var prevId = $('.content:visible').data('id')-1;
-			    $('[data-id="'+id+'"]').hide();
-			    $('[data-id="'+prevId+'"]').show();
-
-			    if(prevId == 1){
-			        $('.back').hide();
-			    }
-			});
-			$('body').on('click', '.edit-previous', function() {
-			    $('.end').hide();
-			    $('.content-holder').show();
-			    $('#content-3').show();
-			});
-
-		</script> -->
 	</body>
 </html>

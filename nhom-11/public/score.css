@@ -14,13 +14,11 @@ body {
 	margin-right: auto;
 	
 }
-.content {
-    display: none;
-}
-.back {
-    display: none;
-}
-.end {
-    display: none;
-}
 
+.color-bar {
+  background-color: #ebebe0;
+}
+.white {
+  color: #fff;
+}
+ 

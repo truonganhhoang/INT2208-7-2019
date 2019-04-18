@@ -11,9 +11,15 @@
     <link rel="stylesheet" href="score.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <style>
+          .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+            color: #fff;
+            background-color: #000000;
+        }
+  </style>
 </head>
 
-<body>
+<body class="bd">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -63,19 +69,22 @@
     <img src="LogoGiaiDau/laliga.png" alt="la liga" class="center img-responsive" width="140px" height="auto">&nbsp&nbsp
 
     <!--/Toolbar -->
-    <ul class="nav nav-tabs nav-justified " role="tablist">
+    <ul class="nav nav-pills nav-justified " role="tablist">
         <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
             data-toggle="tab">Bảng xếp hạng</a></li>
         <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
             data-toggle="tab">Lịch thi đấu - Kết quả</a></li>
+        <li role="presentation"><a href="#profile2" aria-controls="profile2" role="tab"
+            data-toggle="tab">Số liệu thống kê</a></li>    
       </ul>
 
       <!-- Tab panes -->
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="home">
             <div class="col-md-10">
-                <table class="table table-striped">&nbsp
-                <tr>
+                <div class="container">
+                <table class="table">&nbsp
+                <tr style="background-color: #000000; color: #fff">
                   <th class="col-md-1"><p>Vị trí</p></th>
                   <th class="col-md-5"><p>Câu lạc bộ</p></th>
                   <th class="col-md-1"><p align="center">Trận</p></th>
@@ -102,6 +111,7 @@
                 </tr>
                 </table>
             </div>
+        </div>
         </div>
         <div role="tabpanel" class="tab-pane" id="profile">
 
@@ -207,47 +217,16 @@
             <p>Chưa có dữ liệu mới nhất</p>
         </div>
     </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="profile2">
+            <p> chưa có gì cả</p>
+        </div>  
+    </div>
 
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
 
-
-        <!--Hàm script cho 2 nút next và previous
-        <script>
-            $('body').on('click', '.next', function () {
-                var id = $('.content:visible').data('id');
-                var nextId = $('.content:visible').data('id') + 1;
-                $('[data-id="' + id + '"]').hide();
-                $('[data-id="' + nextId + '"]').show();
-
-                if ($('.back:hidden').length == 1) {
-                    $('.back').show();
-                }
-
-                if (nextId == 4) {
-
-                    $('.content-holder').hide();
-                    $('.end').show();
-                }
-            });
-
-            $('body').on('click', '.back', function () {
-                var id = $('.content:visible').data('id');
-                var prevId = $('.content:visible').data('id') - 1;
-                $('[data-id="' + id + '"]').hide();
-                $('[data-id="' + prevId + '"]').show();
-
-                if (prevId == 1) {
-                    $('.back').hide();
-                }
-            });
-            $('body').on('click', '.edit-previous', function () {
-                $('.end').hide();
-                $('.content-holder').show();
-                $('#content-3').show();
-            });-->
-
-        </script>
-</body>
+    </body>
 
 </html>
