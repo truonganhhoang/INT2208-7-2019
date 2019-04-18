@@ -21,7 +21,7 @@ var userSchema = new Schema({
     gender: Boolean,
     avatarUrl: {
         type:String,
-        default:'assets/data/default/useravatar_default.png'
+        default:'data/default/useravatar_default.png'
     },
     joinDay: {
         type: Date,

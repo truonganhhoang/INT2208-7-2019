@@ -19,7 +19,7 @@ const MessengerThread = mongoose.model('MessengerThread', messageThread);
 
 var storageAvatar = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './src/assets/data/avatar/');
+        cb(null, './data/avatar/');
     },
     filename: function (req, file, cb) {
         cb(null, req.username);
@@ -28,7 +28,7 @@ var storageAvatar = multer.diskStorage({
 
 var storagePicture = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './src/assets/data/picture/');
+        cb(null, './data/picture/');
     },
     filename: function (req, file, cb) {
         cb(null, req.username + '_' + String(Date.now()))

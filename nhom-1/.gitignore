@@ -15,3 +15,6 @@ backend/app_server/.env
 
 #imageData
 frontend/src/assets/data
+
+#mongo
+backend/mongo_server

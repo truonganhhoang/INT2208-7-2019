@@ -1,7 +1,7 @@
 <mat-sidenav-container style="margin-top:20px">
     <mat-sidenav mode="side" opened style="width: 200px">
         <mat-card>
-            <div class="profile-avatar" *ngIf="user.avatarUrl" mat-card-avatar [style.backgroundImage]="'url('+ user.avatarUrl +')'">
+            <div class="profile-avatar" *ngIf="user.avatarUrl" mat-card-avatar [style.backgroundImage]="'url('+ 'http://localhost:3000/'+user.avatarUrl +')'">
                 <button mat-flat-button color="primary" *ngIf="isMyProfile" style="margin: 100px 45px; visibility: hidden;"  (click)="updateAvatarDialog()">
                     Update
                 </button>
