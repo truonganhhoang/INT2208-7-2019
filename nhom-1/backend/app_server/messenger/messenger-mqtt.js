@@ -11,8 +11,8 @@ const Message = mongoose.model('Message', messageSchema);
 function saveMessageToDatabase(topic,payload) {
     payload = JSON.parse(payload);
     let userReceiver = topic;
-    let userSender = payload.sender;
     let roomChatId = payload.roomId;
+    let userSender = payload.sender;
     
     MessengerRoom.findById(roomChatId ,(err,docRoom)=>{
         if (err) {
