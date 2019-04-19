@@ -5,10 +5,46 @@
     <meta charset="utf-8">
     <title>High Light</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css.css">   
+    <link rel="stylesheet" href="normalize.css" />
+  	<link rel="stylesheet" href="score.css" />
+    <link rel="stylesheet" type="text/css" href="css.css">
 </head>
 
 <body>
+
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container">
+        <a href="score.html"><img src="Logoweb.png" alt="score+"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+
+          </button>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Các giải đấu</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" href="anh.html">Premier League</a>
+                <a class="dropdown-item" href="taybannha.html">LaLiga</a>
+                <a class="dropdown-item" href="italia.html">Series A</a>
+                <a class="dropdown-item" href="duc.html">BundesLiga</a>
+                <a class="dropdown-item" href="phap.html">Ligue I</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tintuc.html">Tin Tức</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Video</a>
+            </li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+
     <div class="container">
         <div class="row">
             <div class="col-xs-12 ">
@@ -73,7 +109,7 @@
                                 </div>
                                 <!--Modal: Name-->
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/mancity-tottenham.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/mancity-tottenham.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal1">
                                     <div class="ten-tran-dau">
                                         <h4>Man City vs Tottenham</h4>
@@ -136,7 +172,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Porto-Liverpool.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Porto-Liverpool.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal2">
                                     <div class="ten-tran-dau">
                                         <h4>Porto vs Liverpool</h4>
@@ -198,7 +234,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Ajax-Juventus.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Ajax-Juventus.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal3">
                                     <div class="ten-tran-dau">
                                         <h4>Ajax vs Juventus</h4>
@@ -259,7 +295,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/IncheonUnited-Cheonju.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/IncheonUnited-Cheonju.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal4">
                                     <div class="ten-tran-dau">
                                         <h4>Incheon United vs Cheonju</h4>
@@ -321,7 +357,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Manchester-Barcelona.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Manchester-Barcelona.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal5">
                                     <div class="ten-tran-dau">
                                         <h4>Manchester United vs Barcelona</h4>
@@ -382,7 +418,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/YangonUnited-HaNoi.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/YangonUnited-HaNoi.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal6">
                                     <div class="ten-tran-dau">
                                         <h4>Yangon United vs Ha Noi</h4>
@@ -444,7 +480,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Leganes-RealMadrid.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Leganes-RealMadrid.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal7">
                                     <div class="ten-tran-dau">
                                         <h4>Leganes vs RealMadrid</h4>
@@ -505,7 +541,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Haiphong-Danang.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Haiphong-Danang.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal8">
                                     <div class="ten-tran-dau">
                                         <h4>Hải Phòng vs Đà Nẵng</h4>
@@ -566,7 +602,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Huesca-Barcelona.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Huesca-Barcelona.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal9">
                                     <div class="ten-tran-dau">
                                         <h4>Huesca vs Barcelona</h4>
@@ -635,7 +671,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Leganes-RealMadrid.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Leganes-RealMadrid.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal7">
                                     <div class="ten-tran-dau">
                                         <h4>Leganes vs RealMadrid</h4>
@@ -696,7 +732,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Haiphong-Danang.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Haiphong-Danang.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal8">
                                     <div class="ten-tran-dau">
                                         <h4>Hải Phòng vs Đà Nẵng</h4>
@@ -757,7 +793,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Huesca-Barcelona.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Huesca-Barcelona.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal9">
                                     <div class="ten-tran-dau">
                                         <h4>Huesca vs Barcelona</h4>
@@ -811,7 +847,7 @@
                                 </div>
                                 <!--Modal: Name-->
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/mancity-tottenham.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/mancity-tottenham.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal1">
                                     <div class="ten-tran-dau">
                                         <h4>Man City vs Tottenham</h4>
@@ -875,7 +911,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Porto-Liverpool.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Porto-Liverpool.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal2">
                                     <div class="ten-tran-dau">
                                         <h4>Porto vs Liverpool</h4>
@@ -938,7 +974,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Ajax-Juventus.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Ajax-Juventus.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal3">
                                     <div class="ten-tran-dau">
                                         <h4>Ajax vs Juventus</h4>
@@ -1000,7 +1036,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/IncheonUnited-Cheonju.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/IncheonUnited-Cheonju.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal4">
                                     <div class="ten-tran-dau">
                                         <h4>Incheon United vs Cheonju</h4>
@@ -1062,7 +1098,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Manchester-Barcelona.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Manchester-Barcelona.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal5">
                                     <div class="ten-tran-dau">
                                         <h4>Manchester United vs Barcelona</h4>
@@ -1123,7 +1159,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/YangonUnited-HaNoi.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/YangonUnited-HaNoi.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal6">
                                     <div class="ten-tran-dau">
                                         <h4>Yangon United vs Ha Noi</h4>
@@ -1186,7 +1222,7 @@
                                 </div>
                                 <!--Modal: Name-->
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/mancity-tottenham.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/mancity-tottenham.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal1">
                                     <div class="ten-tran-dau">
                                         <h4>Man City vs Tottenham</h4>
@@ -1249,7 +1285,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Porto-Liverpool.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Porto-Liverpool.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal2">
                                     <div class="ten-tran-dau">
                                         <h4>Porto vs Liverpool</h4>
@@ -1311,7 +1347,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Ajax-Juventus.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Ajax-Juventus.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal3">
                                     <div class="ten-tran-dau">
                                         <h4>Ajax vs Juventus</h4>
@@ -1372,7 +1408,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/IncheonUnited-Cheonju.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/IncheonUnited-Cheonju.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal4">
                                     <div class="ten-tran-dau">
                                         <h4>Incheon United vs Cheonju</h4>
@@ -1434,7 +1470,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Manchester-Barcelona.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Manchester-Barcelona.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal5">
                                     <div class="ten-tran-dau">
                                         <h4>Manchester United vs Barcelona</h4>
@@ -1495,7 +1531,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/YangonUnited-HaNoi.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/YangonUnited-HaNoi.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal6">
                                     <div class="ten-tran-dau">
                                         <h4>Yangon United vs Ha Noi</h4>
@@ -1557,7 +1593,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Leganes-RealMadrid.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Leganes-RealMadrid.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal7">
                                     <div class="ten-tran-dau">
                                         <h4>Leganes vs RealMadrid</h4>
@@ -1618,7 +1654,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Haiphong-Danang.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Haiphong-Danang.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal8">
                                     <div class="ten-tran-dau">
                                         <h4>Hải Phòng vs Đà Nẵng</h4>
@@ -1679,7 +1715,7 @@
                                 <!--Modal: Name-->
 
                                 <a class="anh">
-                                    <img class="img-fluid z-depth-1" src="images/Huesca-Barcelona.jpg" alt="video"
+                                    <img class="img-fluid z-depth-1" src="images_video/Huesca-Barcelona.jpg" alt="video"
                                         style="width:100%;" data-toggle="modal" data-target="#modal9">
                                     <div class="ten-tran-dau">
                                         <h4>Huesca vs Barcelona</h4>
@@ -1698,6 +1734,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

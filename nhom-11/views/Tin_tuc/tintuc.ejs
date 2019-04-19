@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8">
     <title>Tin tức bóng đá</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="normalize.css" />
+  	<link rel="stylesheet" href="score.css" />
+  	<link rel="stylesheet" href="css/bootstrap.min.css" />
+  	<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
     <style>
         .container {
             position: relative;
@@ -27,9 +30,10 @@
 
         .item1 {
             /* The image used */
-            background-image: url("images/anh_cong_phuong_incheon.jpg");
+            background-image: url("images_tintuc/anh_cong_phuong_incheon.jpg");
             /* Control the height of the image */
             min-height: 380px;
+            padding: 10px;
             /* Center and scale the image nicely */
             background-position: center;
             background-repeat: no-repeat;
@@ -37,10 +41,11 @@
             position: relative;
             border-radius: 10px;
             border: 1.2px solid #737373;
+            border-bottom: 10px;
         }
 
         .item2 {
-            background-image: url("images/anh_cr7.jpg");
+            background-image: url("images_tintuc/anh_cr7.jpg");
             min-height: 380px;
             background-position: center;
             background-repeat: no-repeat;
@@ -48,10 +53,11 @@
             position: relative;
             border-radius: 10px;
             border: 1.2px solid #737373;
+            border-bottom: 10px;
         }
 
         .item3 {
-            background-image: url("images/anh_quang_hai.jpg");
+            background-image: url("images_tintuc/anh_quang_hai.jpg");
             min-height: 380px;
             background-position: center;
             background-repeat: no-repeat;
@@ -59,10 +65,11 @@
             position: relative;
             border-radius: 10px;
             border: 1.2px solid #737373;
+            border-bottom: 10px;
         }
 
         .item4 {
-            background-image: url("images/argentina-0-3-croatia-messi-1.jpg");
+            background-image: url("images_tintuc/argentina-0-3-croatia-messi-1.jpg");
             min-height: 380px;
             background-position: center;
             background-repeat: no-repeat;
@@ -70,10 +77,11 @@
             position: relative;
             border-radius: 10px;
             border: 1.2px solid #737373;
+            border-bottom: 10px;
         }
 
         .item5 {
-            background-image: url("images/cr7-and-m10.jpg");
+            background-image: url("images_tintuc/cr7-and-m10.jpg");
             min-height: 380px;
             background-position: center;
             background-repeat: no-repeat;
@@ -81,10 +89,11 @@
             position: relative;
             border-radius: 10px;
             border: 1.2px solid #737373;
+            border-bottom: 10px;
         }
 
         .item6 {
-            background-image: url("images/real_madrid.jpg");
+            background-image: url("images_tintuc/real_madrid.jpg");
             min-height: 380px;
             background-position: center;
             background-repeat: no-repeat;
@@ -92,10 +101,11 @@
             position: relative;
             border-radius: 10px;
             border: 1.2px solid #737373;
+            border-bottom: 10px;
         }
 
         .item7 {
-            background-image: url("images/ajax-ronaldo.jpg");
+            background-image: url("images_tintuc/ajax-ronaldo.jpg");
             min-height: 380px;
             background-position: center;
             background-repeat: no-repeat;
@@ -103,10 +113,11 @@
             position: relative;
             border-radius: 10px;
             border: 1.2px solid #737373;
+            border-bottom: 10px;
         }
 
         .item8 {
-            background-image: url("images/ha-slna.jpg");
+            background-image: url("images_tintuc/ha-slna.jpg");
             min-height: 380px;
             background-position: center;
             background-repeat: no-repeat;
@@ -114,10 +125,11 @@
             position: relative;
             border-radius: 10px;
             border: 1.2px solid #737373;
+            border-bottom: 10px;
         }
 
         .item9 {
-            background-image: url("images/Nhan-dinh-bong-da-Yangon-United--Ha-Noi.jpg");
+            background-image: url("images_tintuc/Nhan-dinh-bong-da-Yangon-United--Ha-Noi.jpg");
             min-height: 380px;
             background-position: center;
             background-repeat: no-repeat;
@@ -125,10 +137,11 @@
             position: relative;
             border-radius: 10px;
             border: 1.2px solid #737373;
+            border-bottom: 10px;
         }
 
         .item10 {
-            background-image: url("images/mu-barca.jpg");
+            background-image: url("images_tintuc/mu-barca.jpg");
             min-height: 380px;
             background-position: center;
             background-repeat: no-repeat;
@@ -136,6 +149,7 @@
             position: relative;
             border-radius: 10px;
             border: 1.2px solid #737373;
+            border-bottom: 10px;
         }
 
         /*Căn lề text*/
@@ -303,6 +317,41 @@
 </head>
 
 <body>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+          aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="score.html"><img src="Logoweb.png" alt="score+"></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Các
+              giải đấu <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="anh.html">Premier League</a></li>
+              <li><a href="taybannha.html">La Liga</a></li>
+              <li><a href="italia.html">Series A</a></li>
+              <li><a href="phap.html">Ligue I</a></li>
+              <li><a href="duc.html">BundesLiga</a></li>
+            </ul>
+          </li>
+          <li><a href="tintuc.html">Tin tức</a></li>
+          <li><a href="video.html">Video</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+
     <div class="container">
         <div class="row d-inline-flex">
 
@@ -492,9 +541,8 @@
 
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
