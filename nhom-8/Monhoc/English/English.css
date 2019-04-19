@@ -4,25 +4,26 @@
 }
 #header{
 	height:90px;
-	background-color: #2a2730;
+	background-color: #222;
 }
-#monhoa{
-	padding-top: 15%;
+#english{
+	padding-top: 8%;
+	padding-left: 8%;
 }
 h2{
 	text-transform : uppercase;
 	font-weight: bold;
 	font-family: -webkit-body;
-	padding-left :38%;
-	padding-top: 60%;
+	padding-left :28%;
 	color: #0f0465;
+	font-size: 200%;
 }
 h3{
 	font-weight: bold;
 	font-family: -webkit-body;
 	
 }
-#chuthuong{
+#chuthuong1{
 	font-family: -webkit-body;
 	font-size: 22px;
 }
@@ -34,20 +35,41 @@ h3{
 .bs-docs-footer {
 	padding-top:10px;
     padding-bottom: 10px;
-    margin-top: 100px;
+    padding-left: 10%;
+    margin-top: 80px;
     font-size: 15px;
     color: #99979c;
-    background-color: #2a2730;
+    background-color: #222;
+    height: 100px;
 }
 .navbar-collapse {
-	padding-top: 45px;
-	padding-left: 50px;
+
+	padding-left: 10%;
 }
 body{
 	font-size: 20px;
 	background-color: #DDDDDD;
 }
-#binhluan{
-	padding-top: 60%;
-	padding-left: 40%;
+#main1{
+	padding-top: 5%;
+	padding-left: 5%;
+}
+
+#navbar2{
+	padding-top: 4%;
+	padding-bottom:2%;
+}
+#hd2{
+	padding-top: 2%;
+}
+.nav>li>a {
+	margin-right: 20px;
+}
+#main2{
+	padding-top: 47%;
+	padding-left: 5%;
+}
+#chuthuong2{
+	font-family: -webkit-body;
+	font-size: 22px;
 }
