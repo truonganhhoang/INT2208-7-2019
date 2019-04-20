@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2019 at 09:09 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.1
+-- Generation Time: Apr 20, 2019 at 04:43 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,10 +25,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ac milan`
+-- Table structure for table `acmilan`
 --
 
-CREATE TABLE `ac milan` (
+CREATE TABLE `acmilan` (
   `vong` int(2) NOT NULL,
   `doibong` varchar(20) NOT NULL,
   `doithu` varchar(20) NOT NULL,
@@ -39,10 +39,10 @@ CREATE TABLE `ac milan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `ac milan`
+-- Dumping data for table `acmilan`
 --
 
-INSERT INTO `ac milan` (`vong`, `doibong`, `doithu`, `banthang`, `banbai`, `logo_doibong`, `logo_doithu`) VALUES
+INSERT INTO `acmilan` (`vong`, `doibong`, `doithu`, `banthang`, `banbai`, `logo_doibong`, `logo_doithu`) VALUES
 (1, 'AC Milan', 'Genoa', 2, 1, 'LogoCLB\\Series A\\AC Milan.png', 'LogoCLB\\Series A\\Genoa.png'),
 (2, 'AC Milan', 'Napoli', 2, 3, 'LogoCLB\\Series A\\AC Milan.png', 'LogoCLB\\Series A\\Napoli.png'),
 (3, 'AC Milan', 'AS Roma', 2, 1, 'LogoCLB\\Series A\\AC Milan.png', 'LogoCLB\\Series A\\AS Roma.png');
@@ -50,10 +50,10 @@ INSERT INTO `ac milan` (`vong`, `doibong`, `doithu`, `banthang`, `banbai`, `logo
 -- --------------------------------------------------------
 
 --
--- Table structure for table `as roma`
+-- Table structure for table `asroma`
 --
 
-CREATE TABLE `as roma` (
+CREATE TABLE `asroma` (
   `vong` int(2) NOT NULL,
   `doibong` varchar(20) NOT NULL,
   `doithu` varchar(20) NOT NULL,
@@ -64,10 +64,10 @@ CREATE TABLE `as roma` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `as roma`
+-- Dumping data for table `asroma`
 --
 
-INSERT INTO `as roma` (`vong`, `doibong`, `doithu`, `banthang`, `banbai`, `logo_doibong`, `logo_doithu`) VALUES
+INSERT INTO `asroma` (`vong`, `doibong`, `doithu`, `banthang`, `banbai`, `logo_doibong`, `logo_doithu`) VALUES
 (1, 'AS Roma', 'Torino', 1, 0, 'LogoCLB\\Series A\\AS Roma.png', 'LogoCLB\\Series A\\Torino.png'),
 (2, 'AS Roma', 'Atalanta', 3, 3, 'LogoCLB\\Series A\\AS Roma.png', 'LogoCLB\\Series A\\atalanta.png'),
 (3, 'AS Roma', 'AC Milan', 1, 2, 'LogoCLB\\Series A\\AS Roma.png', 'LogoCLB\\Series A\\AC Milan.png');
@@ -275,10 +275,10 @@ INSERT INTO `genoa` (`vong`, `doibong`, `doithu`, `banthang`, `banbai`, `logo_do
 -- --------------------------------------------------------
 
 --
--- Table structure for table `inter milan`
+-- Table structure for table `intermilan`
 --
 
-CREATE TABLE `inter milan` (
+CREATE TABLE `intermilan` (
   `vong` int(2) NOT NULL,
   `doibong` varchar(20) NOT NULL,
   `doithu` varchar(20) NOT NULL,
@@ -289,10 +289,10 @@ CREATE TABLE `inter milan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `inter milan`
+-- Dumping data for table `intermilan`
 --
 
-INSERT INTO `inter milan` (`vong`, `doibong`, `doithu`, `banthang`, `banbai`, `logo_doibong`, `logo_doithu`) VALUES
+INSERT INTO `intermilan` (`vong`, `doibong`, `doithu`, `banthang`, `banbai`, `logo_doibong`, `logo_doithu`) VALUES
 (1, 'Internazionale', 'Sassuolo', 0, 1, 'LogoCLB\\Series A\\Internazionale.png', 'LogoCLB\\Series A\\sassuolo.png'),
 (2, 'Internazionale', 'Torino', 2, 2, 'LogoCLB\\Series A\\Internazionale.png', 'LogoCLB\\Series A\\Torino.png'),
 (3, 'Internazionale', 'Bologna', 3, 0, 'LogoCLB\\Series A\\Internazionale.png', 'LogoCLB\\Series A\\bologna.png');
@@ -400,31 +400,6 @@ INSERT INTO `parma` (`vong`, `doibong`, `doithu`, `banthang`, `banbai`, `logo_do
 -- --------------------------------------------------------
 
 --
--- Table structure for table `s.p.a.l`
---
-
-CREATE TABLE `s.p.a.l` (
-  `vong` int(2) NOT NULL,
-  `doibong` varchar(20) NOT NULL,
-  `doithu` varchar(20) NOT NULL,
-  `banthang` int(2) NOT NULL,
-  `banbai` int(2) NOT NULL,
-  `logo_doibong` varchar(50) NOT NULL,
-  `logo_doithu` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `s.p.a.l`
---
-
-INSERT INTO `s.p.a.l` (`vong`, `doibong`, `doithu`, `banthang`, `banbai`, `logo_doibong`, `logo_doithu`) VALUES
-(1, 'S.P.A.L', 'Bologna', 1, 0, 'LogoCLB\\Series A\\S.P.A.L.png', 'LogoCLB\\Series A\\bologna.png'),
-(2, 'S.P.A.L', 'AC Parma', 1, 0, 'LogoCLB\\Series A\\S.P.A.L.png', 'LogoCLB\\Series A\\AC Parma.png'),
-(3, 'S.P.A.L', 'Torino', 0, 1, 'LogoCLB\\Series A\\S.P.A.L.png', 'LogoCLB\\Series A\\Torino.png');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `sampdoria`
 --
 
@@ -471,6 +446,31 @@ INSERT INTO `sassuolo` (`vong`, `doibong`, `doithu`, `banthang`, `banbai`, `logo
 (1, 'Sassuolo', 'Internazionale', 1, 0, 'LogoCLB\\Series A\\sassuolo.png', 'LogoCLB\\Series A\\Internazionale.png'),
 (2, 'Sassuolo', 'Cagliari', 2, 2, 'LogoCLB\\Series A\\sassuolo.png', 'LogoCLB\\Series A\\cagliari.png'),
 (3, 'Sassuolo', 'Genoa', 5, 3, 'LogoCLB\\Series A\\sassuolo.png', 'LogoCLB\\Series A\\Genoa.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spal`
+--
+
+CREATE TABLE `spal` (
+  `vong` int(2) NOT NULL,
+  `doibong` varchar(20) NOT NULL,
+  `doithu` varchar(20) NOT NULL,
+  `banthang` int(2) NOT NULL,
+  `banbai` int(2) NOT NULL,
+  `logo_doibong` varchar(50) NOT NULL,
+  `logo_doithu` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `spal`
+--
+
+INSERT INTO `spal` (`vong`, `doibong`, `doithu`, `banthang`, `banbai`, `logo_doibong`, `logo_doithu`) VALUES
+(1, 'S.P.A.L', 'Bologna', 1, 0, 'LogoCLB\\Series A\\S.P.A.L.png', 'LogoCLB\\Series A\\bologna.png'),
+(2, 'S.P.A.L', 'AC Parma', 1, 0, 'LogoCLB\\Series A\\S.P.A.L.png', 'LogoCLB\\Series A\\AC Parma.png'),
+(3, 'S.P.A.L', 'Torino', 0, 1, 'LogoCLB\\Series A\\S.P.A.L.png', 'LogoCLB\\Series A\\Torino.png');
 
 -- --------------------------------------------------------
 
