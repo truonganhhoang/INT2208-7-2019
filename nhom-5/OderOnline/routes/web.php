@@ -147,3 +147,9 @@ Route::get('/demo',function(){
 })->name('just_demo');
 Route::post('/post-don-hang','PageController@post_don_hang')->name('post_don_hang');
 Route::get('thanh-toan/{id}','PageController@thanhtoan')->name('thanh_toan');
+
+// Review Post Routes...
+Route::prefix('details')->group(function () {
+    Route::get('user','Auth\Review@getReviewForm')->name('getReview');
+    Route::post('puser','Auth\Review@postReviewForm')->name('postReview');
+});

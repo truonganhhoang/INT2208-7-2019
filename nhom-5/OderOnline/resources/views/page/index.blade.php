@@ -82,7 +82,7 @@
                             </div>
                             <div class="caption" style="margin-top: 10px">
                                 <a class="shopping shop"  href="{{route('cart',$pro->id)}}"><i class="fas fa-cart-plus"></i></a>
-                                <a class="shopping pay"   href="{{route('details',[$pro->id_type,$pro->id])}}">Details<i class="fa fa-chevron-right"></i></a>
+                                <a class="shopping pay"   href="{{route('details',[$pro->id_type,$pro->id])}}">Chi tiết<i class="fa fa-chevron-right"></i></a>
                                 @if(\Illuminate\Support\Facades\Auth::id() == 1)
                                     <a class="dropItem" href="#"><i class="fas fa-trash fa-lg"></i></a>
                                     <a href="{{route('update_product',$pro->id)}}"><i class="fas fa-cog fa-lg"></i></a>
@@ -125,7 +125,7 @@
                             <div class="caption" style="margin-top: 10px">
                                 <a class="shopping shop"  href="{{route('cart',$sp->id)}}"><i class="fas fa-cart-plus"></i></a>
 
-                                <a class="shopping pay"   href="{{route('details',[$sp->id_type,$sp->id])}}">Details<i class="fa fa-chevron-right"></i></a>
+                                <a class="shopping pay"   href="{{route('details',[$sp->id_type,$sp->id])}}">Chi tiết<i class="fa fa-chevron-right"></i></a>
                                 @if(\Illuminate\Support\Facades\Auth::id() == 1)
                                     <a class="dropItemKM" href="#"><i class="fas fa-trash fa-lg"></i></a>
                                     <a href="{{route('update_product',$pro->id)}}"><i class="fas fa-cog fa-lg"></i></a>
