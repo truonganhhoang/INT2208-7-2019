@@ -18,7 +18,6 @@ class SocialAuthController extends Controller
     {
         $user = SocialAccountService::createOrGetUser(Socialite::driver($social)->user(), $social);
         auth()->login($user);
-
         return redirect()->to('/');
     }
 }

@@ -1,4 +1,7 @@
 @extends('page.master')
+@section('title')
+    Đăng kí
+@stop
 @section('content')
         <div class="container">
             <form action="{{ route('register') }}" method="post" class="form-horizontal col-sm-6 col-sm-offset-3" style="background-color: white;padding: 20px;border: 1px solid green;border-radius: 15px;margin-top: 8%;margin-bottom: 8%">
@@ -20,9 +23,13 @@
                         {{ session('diff') }}
                     </div>
                 @endif
+
                 <div class="col-sm-6">
+                    @if($errors->has('name'))
+                        <p  class="alert-danger">{{$errors->first('name')}}</p>
+                    @endif
                     <div class="form-group has-success has-feedback">
-                        <label class="col-sm-2 control-label">UserName</label>
+                        <label class="col-sm-2 control-label">Username</label>
                         <div class="col-sm-12">
                             <input type="text" class="form-control" name="name" placeholder="">
                             <span class="form-control-feedback"><i class="far fa-user"></i></span>
@@ -58,7 +65,7 @@
 
                     <a href="#" style="padding: 10px;background-color: #1b4b72;color: white !important;letter-spacing: 2px"><!--<i style="margin-right: 2px" class="fab fa-facebook fa-lg"></i>-->Facebook</a>
                     <hr>
-                    <a href="#" style="padding-top: 10px;padding-bottom: 10px; padding-left:25px;padding-right:25px;background-color: red;color: white !important;letter-spacing: 2px"><!--<i style="margin-right: 2px" class="fab fa-google-plus fa-lg"></i>-->Gmail</a>
+                    <a href="{{route('loginApp','google')}}" style="padding-top: 10px;padding-bottom: 10px; padding-left:25px;padding-right:25px;background-color: red;color: white !important;letter-spacing: 2px"><!--<i style="margin-right: 2px" class="fab fa-google-plus fa-lg"></i>-->Gmail</a>
                 </div>
 
             </form>

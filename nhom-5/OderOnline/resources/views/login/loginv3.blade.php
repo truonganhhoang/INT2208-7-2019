@@ -1,4 +1,7 @@
 @extends('page.master')
+@section('title')
+    Đăng nhập
+@stop
 @section('content')
 <div class="container" style="margin-top: 5%;margin-bottom: 5%">
     <div class="row">
@@ -15,6 +18,11 @@
                                 @if (session('login'))
                                     <div class="alert-success">
                                         {{ session('login') }}
+                                    </div>
+                                @endif
+                                @if (session('notLogin'))
+                                    <div class="alert-success">
+                                        {{ session('notLogin') }}
                                     </div>
                                 @endif
 
@@ -35,8 +43,8 @@
                         <div class="social-login">
                             <p>- - - - - - - - - - - - - Sign In With - - - - - - - - - - - - - </p>
                             <ul>
-                                <li><a href="{{route('loginwithfb','facebook')}}"><i class="fab fa-facebook"></i> Facebook</a></li>
-                                <li><a href=""><i class="fab fa-google-plus"></i> Google+</a></li>
+                                <li><a href="{{route('loginApp','facebook')}}"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="{{route('loginApp','google')}}"><i class="fab fa-google-plus"></i> Google+</a></li>
                                 <li><a href=""><i class="fab fa-twitter"></i> Twitter</a></li>
                             </ul>
                         </div>

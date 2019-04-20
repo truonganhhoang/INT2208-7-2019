@@ -102,6 +102,12 @@ a:active {
     .products-sale{
         margin-left: 20%;
     }
+    #logo{
+        height: 80px;
+        width: 80px;
+
+
+    }
 
 }
 @media only screen and (max-width: 1200px) {

@@ -50,7 +50,7 @@ class RegisterController extends Controller
     {
         $mess =[
             'name.required'=>'Không được bỏ trống mục này',
-
+            'name.max'=>'Không được quá 20 kí tự',
             'email.required'=>'Không được bỏ trống mục này',
             'email.unique'=>'Mail này đã được sử dụng',
             'email.email'=>'Hãy nhập đúng định dạng của Email',
@@ -60,8 +60,8 @@ class RegisterController extends Controller
 
         ];
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'name' => ['required', 'string', 'max:20'],
+            'email' => ['required', 'string', 'email', 'max:50', 'unique:users'],
             'password' => ['required', 'string', 'min:6'],
         ],$mess);
     }

@@ -1,6 +1,6 @@
 @extends('page.master')
-@section('sl')
-
+@section('title')
+    Chi tiết sản phẩm
 @stop
 @section('content')
     <div class="container-fluid">
@@ -27,9 +27,9 @@
                                     @endif
                                 </div>
                                 <div class="caption" style="margin-top: 10px">
-                                    <a class="shopping shop" style="background: white" href="{{route('cart',$sp->id)}}"><i class="fas fa-cart-plus"></i></a>
+                                    <a class="shopping shop"  href="{{route('cart',$sp->id)}}"><i class="fas fa-cart-plus"></i></a>
 
-                                    <a class="shopping pay" style="background: white" href="{{route('details',[$sp->id_type,$sp->id])}}">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                    <a class="shopping pay"   href="{{route('details',[$sp->id_type,$sp->id])}}">Details<i class="fa fa-chevron-right"></i></a>
 
                                 </div>
 
@@ -61,68 +61,13 @@
                         {{$product[0]['description']}}
                     </div>
                     <div class="caption" style="margin-top: 30px">
-                        <a class="shopping shop" style="background: white" href="{{route('cart',$product[0]['id'])}}"><i class="fas fa-cart-plus"></i></a>
-                        <a class="shopping" href="#" style="background: white; letter-spacing: 2px"><i class="fas fa-mouse-pointer"></i>Thanh toán</a>
+                        <a class="shopping shop"  href="{{route('cart',$product[0]['id'])}}"><i class="fas fa-cart-plus"></i></a>
+                        <a class="shopping" href="{{route('don_hang')}}" style="letter-spacing: 2px"><i class="fas fa-mouse-pointer"></i>Thanh toán</a>
 
                     </div>
 
                 </div>
-                <div class="col-sm-9" style="top: 45px; padding-top: 15px; padding-bottom: 15px; height: 100%;background-color: whitesmoke;">
-                    <p style="display: inline">NHẬN XÉT</p>
 
-                    @if (Auth::check())
-                        <button class="btn btn-primary" style="float: right; " onclick="showHideForm()">Viết đánh giá</button>
-                    @endif
-                    <br>
-                    <br>
-                    @if (Auth::check())
-                        <div id = "rateForm" style="display: none; height: 245px">
-                            <br>
-                            <form method="POST" action="{{route('postReview')}}" style="height: 90%; padding: 0px 15px 0px 15px; alignment: center; background: lightskyblue; box-shadow: 3px 5px #c3c3c3;">
-                                @csrf
-                                <div id = 'stars' style="padding-top: 10px" onmouseout="bright()" >
-                                    @for ($i = 0; $i < 5; $i++)
-                                        <i class="far fa-star" onmouseover="bright({{$i + 1}})" onclick="{
-                                            document.getElementsByName('rate_input')[0].getAttributeNode('value').value = '{{$i + 1}}'
-                                            }" style="display: inline-block; color : #b3b8b5"></i>
-                                    @endfor
-                                </div>
-                                <input name="product_id" style="display: none" type="number" value="{{$auth_rate['product_id']}}">
-                                <input name="customer_id" style="display: none" type="number" value="{{$auth_rate['customer_id']}}">
-                                <input name="rate_input" style="display: none" type="number" value="{{$auth_rate['rate']}}">
-                                <textarea class="form-control" rows="5" name="content_input" placeholder="Nhận xét của bạn" maxlength="1000">{{$auth_rate['content']}}</textarea>
-                                <!-- todo: <p style="color: red; display: none">Không còn chỗ trống</p>-->
-                                <div style="float: right; padding: 5px">
-                                    <button class="btn btn-default" style=" float: right; " type="reset" onclick="showHideForm()">HỦY</button>
-                                </div>
-                                <div style="float: right; padding: 5px">
-                                    <button class="btn btn-success" style="float: right;" type="submit">GỬI</button>
-                                </div>
-                            </form>
-                            <br>
-                        </div>
-                    @endif
-                    <br>
-                    <div style="padding: 15px; alignment: center; background: white">
-                        @foreach($rates as $rate)
-                            <div>
-                                <p style="display: inline">{{$rated_customer[$rate['customer_id']]}}: </p>
-                                <span style="float: right;">
-                                    @for ($i = 0; $i < 5; $i++)
-
-                                        @if($i < $rate['rate'])
-                                            <i class="fas fa-star" style="display: inline-block; color : #ffd655"></i>
-                                        @else
-                                            <i class="far fa-star" style="display: inline-block; color : #b3b8b5"></i>
-                                        @endif
-                                    @endfor
-                                </span>
-                                <p>{{$rate['content']}}</p>
-                                <br>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
             </div>
             <div class="col-sm-9 bg2" style="background: linear-gradient(90deg, rgb(0, 62, 82) 50%, rgb(13, 109, 130) 50% , rgb(26, 156, 183) 100%); ">
                 <div class="form-group">
@@ -137,7 +82,7 @@
                                 @csrf
                                 <input class="col-sm-6 form-control" type="text" placeholder="Name" name="name" style="margin-bottom: 10px">
                                 <input class="col-sm-6 form-control" type="email" placeholder="Email" name="email" style="margin-bottom: 10px">
-                                <textarea name="comment" rows="10" cols="30"></textarea>
+                                <textarea style="color: black !important;" name="comment" rows="10" cols="30"></textarea>
                                 <input type="submit" class="btn btn-primary" name="submit" value="send" >
 
                             </form>
@@ -145,12 +90,18 @@
                     </div>
                 </div>
             </div>
+
+
+
         </div>
 
     </div>
 @stop
 @section('script')
     <script>
+        @if(session('success'))
+        alert('Cảm ơn vì feedback từ bạn , chúng tối sẽ phản hồi sớm nhất');
+        @endif
         @if(session('empty'))
         alert('Mặt hàng này hiện chưa có, vui lòng quay lại sau');
         @endif
@@ -163,43 +114,17 @@
                 $(this).css('background','orange');
             });
             $(".shop").mouseleave(function () {
-                $(this).css('background','white')
+                $(this).css('background','')
             });
             $(".pay").mouseenter(function(){
 
                 $(this).css('background','#1b6d85');
             });
             $(".pay").mouseleave(function () {
-                $(this).css('background','white')
+                $(this).css('background','')
             });
+
+
         });
-
-        function showHideForm() {
-            let x = document.getElementById("rateForm");
-            if (x.style.display === "none") {
-                document.getElementsByName("rate_input")[0].getAttributeNode("value").value = "{{$auth_rate['rate']}}";
-                document.getElementsByName("content_input")[0].textContent = "{{$auth_rate['content']}}";
-                bright();
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-
-        function bright(num) {
-            if (num == null)
-                num = document.getElementsByName("rate_input")[0].getAttributeNode("value").value;
-            let iArr = document.getElementById("stars").childNodes;
-            for(let i=1; i <= 10; i += 2) {
-                if(i < num*2 + 1) {
-                    iArr[i].className = "fas fa-star";
-                    iArr[i].style.color = "#ffd655";
-                }else {
-                    iArr[i].className = "far fa-star";
-                    iArr[i].style.color = "#b3b8b5";
-                }
-            }
-        }
-
     </script>
 @stop

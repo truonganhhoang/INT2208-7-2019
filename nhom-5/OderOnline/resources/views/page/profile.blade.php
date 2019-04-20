@@ -14,7 +14,7 @@
         </div>
         <div class="form-inline">
             <label>Phone</label>
-            <a href="#" style="text-decoration: none;margin-left: 7%">Thêm</a>
+            <input placeholder="" value="{{$user->phone}}" class="form-control" name="phone" style="margin-left: 8%">
         </div>
         <div class="form-inline">
             <label>Name</label>

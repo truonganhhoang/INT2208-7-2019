@@ -18,6 +18,9 @@ class AdminController extends Controller
             {
                 return view('Admin.admin');
             }
+            else if(Auth::id() != 1){
+                return redirect('/')->with('notAdmin','hmmm');
+            }
             else{
                 return redirect('/login');
             }
@@ -26,6 +29,8 @@ class AdminController extends Controller
         else{
             return redirect('/login');
         }
+
+       // return redirect('/');
 
     }
     public  function getAdd()

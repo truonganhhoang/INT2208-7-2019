@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-
+use Socialite;
 class LoginController extends Controller
 {
     /*
@@ -79,6 +79,35 @@ class LoginController extends Controller
         DB::table('cart')->where('drops', '=', 1)->delete();
 
         return redirect('/');
+    }
+    public function redirectToProvider()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+    public function handleProviderCallback()
+    {
+        try {
+            $user = Socialite::driver('google')->user();
+        } catch (\Exception $e) {
+            return redirect('/login');
+        }
+
+        // check if they're an existing user
+        $existingUser = User::where('email', $user->email)->first();
+        if($existingUser){
+            // log them in
+            auth()->login($existingUser, true);
+        } else {
+            // create a new user
+
+            User::create([
+                'name' => $user->name,
+                'email' => $user->email,
+                'remember_token' =>  $user->token,
+            ]);
+
+        }
+        return redirect()->to('/');
     }
 
 }

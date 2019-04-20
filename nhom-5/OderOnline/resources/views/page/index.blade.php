@@ -1,4 +1,7 @@
 @extends('page.master')
+@section('title')
+    Trang chủ
+@stop
 @section('sl')
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -79,7 +82,7 @@
                             </div>
                             <div class="caption" style="margin-top: 10px">
                                 <a class="shopping shop"  href="{{route('cart',$pro->id)}}"><i class="fas fa-cart-plus"></i></a>
-                                <a class="shopping pay"   href="{{route('details',[$pro->id_type,$pro->id])}}">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                <a class="shopping pay"   href="{{route('details',[$pro->id_type,$pro->id])}}">Details<i class="fa fa-chevron-right"></i></a>
                                 @if(\Illuminate\Support\Facades\Auth::id() == 1)
                                     <a class="dropItem" href="#"><i class="fas fa-trash fa-lg"></i></a>
                                     <a href="{{route('update_product',$pro->id)}}"><i class="fas fa-cog fa-lg"></i></a>
@@ -122,7 +125,7 @@
                             <div class="caption" style="margin-top: 10px">
                                 <a class="shopping shop"  href="{{route('cart',$sp->id)}}"><i class="fas fa-cart-plus"></i></a>
 
-                                <a class="shopping pay"   href="{{route('details',[$sp->id_type,$sp->id])}}">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                <a class="shopping pay"   href="{{route('details',[$sp->id_type,$sp->id])}}">Details<i class="fa fa-chevron-right"></i></a>
                                 @if(\Illuminate\Support\Facades\Auth::id() == 1)
                                     <a class="dropItemKM" href="#"><i class="fas fa-trash fa-lg"></i></a>
                                     <a href="{{route('update_product',$pro->id)}}"><i class="fas fa-cog fa-lg"></i></a>
@@ -148,6 +151,24 @@
     <script>
         @if(session('empty'))
             alert('Mặt hàng này hiện chưa có, vui lòng quay lại sau');
+        @endif
+        @if(session('notAdmin'))
+            alert('Trang này chỉ dùng cho Admin');
+        @endif
+        @if(session('searchEmpty'))
+            alert('Hiện tại chưa có sản phẩm này');
+        @endif
+        @if(session('verify'))
+        alert('Vui lòng xác thực tài khoản để sử dụng dịch vụ này');
+        @endif
+        @if(session('order'))
+        alert('Đặt hàng thành công!!!');
+        @endif
+        @if(session('key'))
+        alert('Vui lòng nhập khóa để tìm kiếm');
+        @endif
+        @if(session('longText'))
+        alert('Từ khóa quá dài vui lòng nhập lại');
         @endif
         $(document).ready(function(){
             
@@ -178,14 +199,14 @@
                 $(this).css('background','orange');
             });
             $(".shop").mouseleave(function () {
-                $(this).css('background','white')
+                $(this).css('background','')
             });
             $(".pay").mouseenter(function(){
 
                 $(this).css('background','#1b6d85');
             });
             $(".pay").mouseleave(function () {
-                $(this).css('background','white')
+                $(this).css('background','')
             });
 
 

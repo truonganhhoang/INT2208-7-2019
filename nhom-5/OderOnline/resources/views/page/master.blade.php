@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>Trang Chủ</title>
+    <title>@yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -30,7 +30,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a  class="navbar-brand aHead" href="{{route('home')}}"><img class="img-fluid" src="{{asset('img/Logo/logo.png')}}" style="height: 100px;width: 100px;position: relative;bottom: 200%"></a>
+            <a  class="navbar-brand aHead" href="{{route('home')}}"><img id="logo" class="img-fluid" src="{{asset('img/Logo/logo.png')}}" style="height: 80px;width: 80px;position: relative;bottom: 170%"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
@@ -50,7 +50,7 @@
             </ul>
             <form class="navbar-form navbar-left search-form" method="get" action="{{route('searchall')}}">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Tìm kiếm" size="30" name="key">
+                    <input type="text" class="form-control" placeholder="Search" size="30" name="key">
                     <div class="input-group-btn">
                         <button class="btn btn-default" type="submit">
                             <i class="glyphicon glyphicon-search"></i>
@@ -63,13 +63,13 @@
                     <div class="dropdown">
                         <span class="glyphicon glyphicon-user" style="margin-right: 10px"></span><span class="dropdown-toggle" id="email" data-toggle="dropdown"><a style="color: whitesmoke"  href="#">{{\Illuminate\Support\Facades\Auth::user()->name}}<span class="caret"></span></a></span>
                         <ul class="dropdown-menu" style="background:#1b4b72;font-size: 11px !important;letter-spacing: 2px;">
-
-                            <li><a class="black" href="#">Đơn hàng</a></li>
-                            <li><a class="black" href="{{route('profile_user',\Illuminate\Support\Facades\Auth::id())}}}">Thông tin cá nhân</a></li>
-                            <li><a class="black" href="#"></a></li>
+                            <!--<li><a class="black" href="{{route('dh',\Illuminate\Support\Facades\Auth::id())}}}">Đơn hàng</a></li>-->
+                            <li><a class="black" href="{{route('don_hang')}}">Đơn hàng</a></li>
+                            <li><a class="black" href="{{route('profile_user')}}">Thông tin cá nhân</a></li>
                             <li class="divider"></li>
                             <li class="dropdown-header"></li>
                             <li><a class="black" href="{{route('logout')}}">Đăng xuất</a></li>
+
                         </ul>
 
                     <!-- <span class="glyphicon glyphicon-log-out"></span><a id="logout" href="{{route('out')}}">LogOut</a>-->
@@ -118,7 +118,8 @@
                                     <div class="divider"></div>
                             @endforeach
                                 @if(count($cart)!=0)
-                                    <li><a href="#" style="color: #1b4b72 !important;"><i class="fas fa-mouse-pointer"></i>Thanh toán</a></li>
+                                    <li><a href="{{route('don_hang')}}" style="color: #1b4b72 !important;"><i class="fas fa-mouse-pointer"></i>Thanh toán</a></li>
+
                                 @endif
 
                         </ul>
@@ -135,7 +136,7 @@
 @yield('sl')
 @yield('content')
 
-<footer id="myFooter" style="background: linear-gradient(90deg, rgb(0, 62, 82) 50%, rgb(13, 109, 133) 87%, rgb(26, 156, 183) 100%);">
+<footer id="myFooter" style="background: linear-gradient(90deg, rgb(0, 62, 82) 50%, rgb(13, 109, 133) 87%, rgb(26, 156, 183) 100%)">
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
@@ -171,11 +172,6 @@
                 </ul>
             </div>
         </div>
-        <!-- Here we use the Google Embed API to show Google Maps. -->
-        <!-- In order for this to work in your project you will need to generate a unique API key.  -->
-        <!-- <iframe id="map-container" frameborder="0" style="border:0"
-                 src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOwg_06VPwokRYv534QaPC8g&key=AIzaSyBdJm9Amm4KALkKlZObWn40dcpRyH119zg" >
-         </iframe>-->
     </div>
     <div class="social-networks">
         <a href="#" class="twitter"><i class="fab fa-twitter fa-lg"></i></a>

@@ -21,7 +21,7 @@ Route::get('/testlogin',function(){
     return view('login.loginv3',compact('slide'));
 });
 //profile
-Route::get('/profile/{id}','PageController@profile')->name('profile_user')->middleware('verified');
+Route::get('/profile','PageController@profile')->name('profile_user')->middleware('verified');
 Route::get('/profile/{id}/changePW','PageController@profilePW')->name('profile_user_pw');
 // change account
 Route::put('/changeInfo/{id}','PageController@putInfo')->name('change_info');
@@ -71,7 +71,7 @@ Route::get('/details/{id_type}/{id}','PageController@detailProduct')->name('deta
 Route::get('/update/{id}','Admin\AdminController@getUpdate')->name('update_product');
 Route::put('/putUpdate/{id}','Admin\AdminController@putUpdate')->name('put_update_product');
 // login with fb
-Route::get('/redirect/{social}', 'SocialAuthController@redirect')->name('loginwithfb');
+Route::get('/redirect/{social}', 'SocialAuthController@redirect')->name('loginApp');
 Route::get('/callback/{social}', 'SocialAuthController@callback');
 // gui mail
 Route::get('/sendmail',function (){
@@ -100,7 +100,11 @@ Route::post('logout', [
     'as' => 'logout',
     'uses' => 'Auth\LoginController@logout'
 ]);
+Route::get('/upload',function(){
 
+    return view('page.demo');
+});
+Route::post('/post_img','PageController@upload')->name('post_img');
 // Password Reset Routes...
 Route::post('password/email', [
     'as' => 'password.email',
@@ -134,9 +138,12 @@ Route::get('/reset',function (){
 Route::get('/forgot-password',function (){
    return view('auth.passwords.email');
 })->name('forgot_pw');
-
-// Review Post Routes...
-Route::prefix('details')->group(function () {
-    Route::get('user','Auth\Review@getReviewForm')->name('getReview');
-    Route::post('puser','Auth\Review@postReviewForm')->name('postReview');
-});
+// google
+// don hang
+Route::get('/don-hang','PageController@view_don_hang')->name('don_hang');
+Route::get('/don-hang/{id}','PageController@dh_profile')->name('dh');
+Route::get('/demo',function(){
+   return view('page.index');
+})->name('just_demo');
+Route::post('/post-don-hang','PageController@post_don_hang')->name('post_don_hang');
+Route::get('thanh-toan/{id}','PageController@thanhtoan')->name('thanh_toan');

@@ -17,6 +17,6 @@ class EmailController extends Controller
         });
         Session::flash('flash_message', 'Send message successfully!');
 
-        return view('Email.form');
+        return back()->with('success','Thành công');
     }
 }

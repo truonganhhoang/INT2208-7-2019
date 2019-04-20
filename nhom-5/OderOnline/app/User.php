@@ -12,6 +12,7 @@ class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
 
+
     /**
      * The attributes that are mass assignable.
      *
@@ -19,7 +20,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $table ='users';
     protected $fillable = [
-         'email', 'password','name',
+         'email', 'password','name','email_verified_at','phone',
     ];
 
     /**
