@@ -17,7 +17,7 @@
 			font-weight: bold;
 			background-color: transparent;
 			border-bottom: 3px solid #ff0066;
-			
+
 		}
 
 			.bg-img {
@@ -31,58 +31,51 @@
 			  /* Needed to position the navbar */
 			  position: relative;
 			}
-		
+
 		</style>
 	</head>
 
 	<body>
 
 	<!---Thanh công cụ trên cùng--->
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a href="score.html"><img src="Logoweb.png" alt="score+"></a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Các giải đấu <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Premier League</a></li>
-								<li><a href="taybannha.html">La Liga</a></li>
-								<li><a href="italia.html">Series A</a></li>
-								<li><a href="phap.html">Ligue I</a></li>
-								<li><a href="duc.html">BundesLiga</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Tin tức</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Bên lề</a></li>
-								<li><a href="#">Highlights</a></li>
-								<li><a href="#"></a></li>
-								<li role="separator" class="divider"></li>
-								<li class="dropdown-header">Nav header</li>
-								<li><a href="#">Separated link</a></li>
-								<li><a href="#">One more separated link</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div><!--/.nav-collapse -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+					aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="score.html"><img src="Logoweb.png" alt="score+"></a>
 			</div>
-		</nav>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">Các
+							giải đấu <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="anh.html">Premier League</a></li>
+							<li><a href="taybannha.html">La Liga</a></li>
+							<li><a href="italia.html">Series A</a></li>
+							<li><a href="phap.html">Ligue I</a></li>
+							<li><a href="duc.html">BundesLiga</a></li>
+						</ul>
+					</li>
+					<li><a href="tintuc.html">Tin tức</a></li>
+					<li><a href="video.html">Video</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
 
-	<!--/Logo League 
+	<!--/Logo League
 		<img src="LogoGiaiDau//premier-header.png" width="auto" height="auto" alt="ngoai hang anh" class="center img-responsive" >&nbsp&nbsp -->
 
-  
+
 
 
 
@@ -125,49 +118,49 @@
 	<!--Thanh nav-pill của giải đấu -->
 
       <!-- Nav-pills -->
-      
+
       <ul class="nav nav-pills nav-justified" role="tablist">
         <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
             data-toggle="tab" class="purple"><h4>Bảng xếp hạng</h4></a></li>
         <li role="presentation"><a href="#profile" aria-controls="profile" role="p tab"
             data-toggle="tab" class="purple"><h4>Lịch thi đấu - Kết quả</h4></a></li>
-      </ul>	
+      </ul>
   </div>
- 
 
-  	
+
+
 
       <!-- Nội dung tab 1-->
     <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="home">
-        	<div class="container" style="width: 90%">
-				<table class="table">&nbsp
-				<tr class="bg-img white">
-				  <th class="col-xs-1" ><p>Vị trí</p></th>
-				  <th class="col-xs-2" ><p>Câu lạc bộ</p></th>
-				  <th class="col-xs-1" ><p align="center">Trận</p></th>
-				  <th class="col-xs-1" ><p align="center">Thắng</p></th>
-				  <th class="col-xs-1" ><p align="center">Hòa</p></th>
-				  <th class="col-xs-1" ><p align="center">Thua</p></th>
-				  <th class="col-xs-1" ><p align="center">+/-</p></th>
-				  <th class="col-xs-1" ><p align="center">Điểm</p></th>
-				</tr>
-				<%i=1%>
-				<%results[3].forEach(function(rows){%>
-				<tr style="background-color: white">
-					<td><%=i++%></td>
-					<td><img src="<%=rows.logo_doibong%>" alt="score+" width="auto" height="20px">&nbsp&nbsp<%=rows.doibong%></td>
-					<td align="center"><%=rows.st%></td>
-					<td align="center"><%=rows.w%></td>
-					<td align="center"><%=rows.d%></td>
-					<td align="center"><%=rows.l%></td>
-					<td align="center"><%=rows.hieuso%></td>
-					<td align="center"><%=rows.diem%></td>
-				</tr>
-				<%})%>
-				</table>
+	       <div role="tabpanel" class="tab-pane active" id="home">
+	        	<div class="container" style="width: 90%">
+					<table class="table">&nbsp
+					<tr class="bg-img white">
+					  <th class="col-xs-1" ><p>Vị trí</p></th>
+					  <th class="col-xs-2" ><p>Câu lạc bộ</p></th>
+					  <th class="col-xs-1" ><p align="center">Trận</p></th>
+					  <th class="col-xs-1" ><p align="center">Thắng</p></th>
+					  <th class="col-xs-1" ><p align="center">Hòa</p></th>
+					  <th class="col-xs-1" ><p align="center">Thua</p></th>
+					  <th class="col-xs-1" ><p align="center">+/-</p></th>
+					  <th class="col-xs-1" ><p align="center">Điểm</p></th>
+					</tr>
+					<%i=1%>
+					<%results[3].forEach(function(rows){%>
+					<tr style="background-color: white">
+						<td><%=i++%></td>
+						<td><img src="<%=rows.logo_doibong%>" alt="score+" width="auto" height="20px">&nbsp&nbsp<%=rows.doibong%></td>
+						<td align="center"><%=rows.st%></td>
+						<td align="center"><%=rows.w%></td>
+						<td align="center"><%=rows.d%></td>
+						<td align="center"><%=rows.l%></td>
+						<td align="center"><%=rows.hieuso%></td>
+						<td align="center"><%=rows.diem%></td>
+					</tr>
+					<%})%>
+					</table>
+				</div>
 			</div>
-		</div>
 
 		<!---Nội dung tab 2--->
         <div role="tabpanel" class="tab-pane tab-pane fade" id="profile">&nbsp
@@ -178,7 +171,7 @@
 		            data-toggle="tab">Vòng 2</a></li>
 		        <li role="presentation"><a href="#r3" aria-controls="round" role="tab"
 		            data-toggle="tab">Vòng 3</a></li>
-		        
+
 		      </ul>
 
 
@@ -237,12 +230,12 @@
 							</tr>
 						</table>
 				</div>
-				
+
 			  </div>
 		</div>
 
 
-	
+
 
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>

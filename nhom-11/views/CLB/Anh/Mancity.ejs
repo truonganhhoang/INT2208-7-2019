@@ -64,7 +64,7 @@
   <div>
     <div class="row">
       <div class="col-md-4">
-        <img src="Logo/mc.png" style="display: block; margin-left: auto; margin-right: auto;" width="100px" height="auto">
+        <img src="LogoCLB\Premier League\mancity.png" style="display: block; margin-left: auto; margin-right: auto;" width="100px" height="auto">
       </div>
       <div class="col-md-4">
         <h2 style="text-align: center">Manchester City FC</h2>
@@ -90,43 +90,143 @@
       <!-- Tab panes -->
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="home">
-          <h2>Thủ môn</h2>
-            <div class="row">
-              <div class="col-xs-6 col-sm-3">
-                <img src="EPL/MC/Ederson.jpg" style="display: block; margin-left: auto; margin-right: auto;" width="150px" height="auto">
-                <p style="text-align: center"> 1 Ederson </p>
-              </div>
-              <div class="col-xs-6 col-sm-3">
-                <img src="EPL/MC/bravo.jpg" style="display: block; margin-left: auto; margin-right: auto;" width="150px" height="auto">
-                <p style="text-align: center"> 23 Bravo </p>
-              </div>
-              <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-              <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-            </div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading" style="background: #996633; color: white;">
+							<p align="center"><strong>Thủ môn</strong></p>
+						</div>
+						<table class="table">
+							<tbody>
+								<tr>
+										<th style="width: 25%">
+												<p align="center">Số áo</p>
+										</th>
+										<th style="width: 50%">
+												<p align="center">Tên</p>
+										</th>
+										<th style="width: 25%">
+												<p align="center">Quốc tịch</p>
+										</th>
+								</tr>
+									<%results[0].forEach(function(rows){%>
+									<tr>
+										<td><p align="center"><%=rows.soao%></p></td>
+										<td><p align="center"><%=rows.ten%></p></td>
+										<td><p align="center"><%=rows.quoctich%></p></td>
+									</tr>
+									<%})%>
+							</tbody>
+						</table>
+					</div>
+					<!-- Thủ môn -->
+					<div class="panel panel-default">
+						<div class="panel-heading" style="background: #3333ff; color: white;">
+							<p align="center"><strong>Hậu vệ</strong></p>
+						</div>
+						<table class="table">
+							<tbody>
+								<tr>
+										<th style="width: 25%">
+												<p align="center">Số áo</p>
+										</th>
+										<th style="width: 50%">
+												<p align="center">Tên</p>
+										</th>
+										<th style="width: 25%">
+												<p align="center">Quốc tịch</p>
+										</th>
+								</tr>
+									<%results[1].forEach(function(rows){%>
+									<tr>
+										<td><p align="center"><%=rows.soao%></p></td>
+										<td><p align="center"><%=rows.ten%></p></td>
+										<td><p align="center"><%=rows.quoctich%></p></td>
+									</tr>
+									<%})%>
+							</tbody>
+						</table>
+					</div>
+					<!-- Hậu vệ -->
+					<div class="panel panel-default">
+						<div class="panel-heading" style="background: #00cc00; color: white;">
+							<p align="center"><strong>Tiền vệ</strong></p>
+						</div>
+						<table class="table">
+							<tbody>
+								<tr>
+										<th style="width: 25%">
+												<p align="center">Số áo</p>
+										</th>
+										<th style="width: 50%">
+												<p align="center">Tên</p>
+										</th>
+										<th style="width: 25%">
+												<p align="center">Quốc tịch</p>
+										</th>
+								</tr>
+									<%results[2].forEach(function(rows){%>
+									<tr>
+										<td><p align="center"><%=rows.soao%></p></td>
+										<td><p align="center"><%=rows.ten%></p></td>
+										<td><p align="center"><%=rows.quoctich%></p></td>
+									</tr>
+									<%})%>
+							</tbody>
+						</table>
+					</div>
+					<!-- Tiền vệ -->
+					<div class="panel panel-default">
+						<div class="panel-heading" style="background: #cc0000; color: white;">
+							<p align="center"><strong>Tiền đạo</strong></p>
+						</div>
+						<table class="table">
+							<tbody>
+									<tr>
+											<th style="width: 25%">
+													<p align="center">Số áo</p>
+											</th>
+											<th style="width: 50%">
+													<p align="center">Tên</p>
+											</th>
+											<th style="width: 25%">
+													<p align="center">Quốc tịch</p>
+											</th>
+									</tr>
+								<%results[3].forEach(function(rows){%>
+								<tr>
+									<td><p align="center"><%=rows.soao%></p></td>
+									<td><p align="center"><%=rows.ten%></p></td>
+									<td><p align="center"><%=rows.quoctich%></p></td>
+								</tr>
+								<%})%>
+							</tbody>
+						</table>
+					</div>
+					<!-- Tiền đạo -->
+
         </div>
         <div role="tabpanel" class="tab-pane" id="profile">
           <table class="table table-striped">
             <tr>
-              <th>Vòng đấu</th>
-              <th>Trận đấu</th>
-              <th>Trạng thái</th>
+              <th style="width: 25%"><p align="center">Vòng</p></th>
+              <th style="width: 50%"><p align="center">Kết quả</p></th>
+              <th style="width: 25%"><p align="center">Trạng thái</p></th>
             </tr>
-            <tr>
-              <td>1</td>
-              <td>Barcelona 1-1 Mancity</td>
-              <td>Đã kết thúc</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Barcelona 1-1 Mancity</td>
-              <td>Đang diễn ra</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Barcelona 1-1 Mancity</td>
-              <td>Chưa diễn ra</td>
-            </tr>
-
+						<%results[4].forEach(function(rows){%>
+						<tr>
+							<td><p align="center"><%=rows.vong%></p></td>
+							<td>
+								<p align="center">
+									<div class="row">
+									  <div class="col-md-4" align="center"><img src="<%=rows.logo_doibong%>" width="auto" height="20px">&nbsp&nbsp<%=rows.doibong%></div>
+									  <div class="col-md-4" align="center">&nbsp&nbsp<%=rows.banthang%>&nbsp-&nbsp<%=rows.banbai%>&nbsp&nbsp</div>
+									  <div class="col-md-4" align="center"><img src="<%=rows.logo_doithu%>" width="auto" height="20px">&nbsp&nbsp<%=rows.doithu%></div>
+									</div>
+								</p>
+							</td>
+							<td><p align="center">FT</p></td>
+						</tr>
+						<%})%>
           </table>
         </div>
       </div>

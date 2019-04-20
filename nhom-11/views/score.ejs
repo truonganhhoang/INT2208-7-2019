@@ -431,7 +431,7 @@
 									<th>Điểm</th>
 								</tr>
 								<%i=1%>
-								<%result.forEach(function(rows){%>
+								<%result[0].forEach(function(rows){%>
 								<tr>
 									<td><%=i++%></td>
 									<td><%=rows.doibong%></td>
@@ -449,24 +449,15 @@
 									<th>Hiệu số</th>
 									<th>Điểm</th>
 								</tr>
+								<%i=1%>
+								<%result[4].forEach(function(rows){%>
 								<tr>
-									<td>1</td>
-									<td>Barcelona</td>
-									<td>44</td>
-									<td>65</td>
+									<td><%=i++%></td>
+									<td><%=rows.doibong%></td>
+									<td><%=rows.hieuso%></td>
+									<td><%=rows.diem%></td>
 								</tr>
-								<tr>
-									<td>2</td>
-									<td>Athletico Madrid</td>
-									<td>48</td>
-									<td>62</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>Real Madrid</td>
-									<td>48</td>
-									<td>62</td>
-								</tr>
+								<%})%>
 							</table>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="messages">
@@ -477,24 +468,15 @@
 									<th>Hiệu số</th>
 									<th>Điểm</th>
 								</tr>
+								<%i=1%>
+								<%result[1].forEach(function(rows){%>
 								<tr>
-									<td>1</td>
-									<td>Dortmund</td>
-									<td>44</td>
-									<td>65</td>
+									<td><%=i++%></td>
+									<td><%=rows.doibong%></td>
+									<td><%=rows.hieuso%></td>
+									<td><%=rows.diem%></td>
 								</tr>
-								<tr>
-									<td>2</td>
-									<td>Bayern Munich</td>
-									<td>48</td>
-									<td>62</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>RB Leipzig</td>
-									<td>48</td>
-									<td>62</td>
-								</tr>
+								<%})%>
 							</table>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="settings">
@@ -505,24 +487,15 @@
 									<th>Hiệu số</th>
 									<th>Điểm</th>
 								</tr>
+								<%i=1%>
+								<%result[2].forEach(function(rows){%>
 								<tr>
-									<td>1</td>
-									<td>Juventus</td>
-									<td>44</td>
-									<td>65</td>
+									<td><%=i++%></td>
+									<td><%=rows.doibong%></td>
+									<td><%=rows.hieuso%></td>
+									<td><%=rows.diem%></td>
 								</tr>
-								<tr>
-									<td>2</td>
-									<td>Napoli</td>
-									<td>48</td>
-									<td>62</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>Inter Mian</td>
-									<td>48</td>
-									<td>62</td>
-								</tr>
+								<%})%>
 							</table>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="league1">
@@ -533,24 +506,15 @@
 									<th>Hiệu số</th>
 									<th>Điểm</th>
 								</tr>
+								<%i=1%>
+								<%result[3].forEach(function(rows){%>
 								<tr>
-									<td>1</td>
-									<td>PSG</td>
-									<td>44</td>
-									<td>65</td>
+									<td><%=i++%></td>
+									<td><%=rows.doibong%></td>
+									<td><%=rows.hieuso%></td>
+									<td><%=rows.diem%></td>
 								</tr>
-								<tr>
-									<td>2</td>
-									<td>Lyon</td>
-									<td>48</td>
-									<td>62</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>Lille</td>
-									<td>48</td>
-									<td>62</td>
-								</tr>
+								<%})%>
 							</table>
 						</div>
 					</div>

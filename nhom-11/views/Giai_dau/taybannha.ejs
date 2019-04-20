@@ -18,57 +18,45 @@
             font-weight: bold;
             background-color: transparent;
             border-bottom: 3px solid #ff0066;
-            
+
         }
   </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="score.html"><img src="Logoweb.png" alt="score+"></a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                            aria-expanded="false">Các giải đấu <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="anh.html">Premier League</a></li>
-                            <li><a href="#">La Liga</a></li>
-                            <li><a href="italia.html">Series A</a></li>
-                            <li><a href="phap.html">Ligue I</a></li>
-                            <li><a href="duc.html">BundesLiga</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Tin tức</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                            aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Bên lề</a></li>
-                            <li><a href="#">Highlights</a></li>
-                            <li><a href="#"></a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-    </nav>
-
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+          aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="score.html"><img src="Logoweb.png" alt="score+"></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Các
+              giải đấu <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="anh.html">Premier League</a></li>
+              <li><a href="taybannha.html">La Liga</a></li>
+              <li><a href="italia.html">Series A</a></li>
+              <li><a href="phap.html">Ligue I</a></li>
+              <li><a href="duc.html">BundesLiga</a></li>
+            </ul>
+          </li>
+          <li><a href="tintuc.html">Tin tức</a></li>
+          <li><a href="video.html">Video</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
 
 
     <div class="row">
@@ -128,25 +116,24 @@
                   <th class="col-md-1"><p align="center">+/-</p></th>
                   <th class="col-md-1"><p align="center">Điểm</p></th>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td><img src="LogoCLB/La Liga/barcelona.png" alt="score+" width="auto" height="20px"> F.C Barcelona</td><td align="center">5</td><td align="center">4</td><td align="center">1</td><td align="center">0</td><td align="center">10</td><td align="center">15</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td><img src="LogoCLB/La Liga/atleticomadrid.png" alt="score+" width="auto" height="20px"> Atletico Madrid</td><td align="center">5</td><td align="center">4</td><td align="center">0</td><td align="center">1</td><td align="center">12</td><td align="center">12</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td><img src="LogoCLB/La Liga/real.png" alt="score+" width="auto" height="20px"> Real Madrid</td><td align="center">5</td><td align="center">3</td><td align="center">1</td><td align="center">1</td><td align="center">8</td><td align="center">10</td>
-                </tr>
-                <tr>
-                    <td>4</td><td><img src="LogoCLB/La Liga/getafe.png" alt="score+" width="auto" height="20px"> Getafe</td><td align="center">5</td><td align="center">3</td><td align="center">0</td><td align="center">2</td><td align="center">10</td><td align="center">9</td>
-                </tr>
+                <%i=1%>
+        				<%results[3].forEach(function(rows){%>
+        				<tr style="background-color: white">
+        					<td><%=i++%></td>
+        					<td><img src="<%=rows.logo_doibong%>" alt="score+" width="auto" height="20px">&nbsp&nbsp<%=rows.doibong%></td>
+        					<td align="center"><%=rows.st%></td>
+        					<td align="center"><%=rows.w%></td>
+        					<td align="center"><%=rows.d%></td>
+        					<td align="center"><%=rows.l%></td>
+        					<td align="center"><%=rows.hieuso%></td>
+        					<td align="center"><%=rows.diem%></td>
+        				</tr>
+        				<%})%>
                 </table>
-            
+
         </div>
         </div>
+
         <div role="tabpanel" class="tab-pane tab-pane fade" id="profile">&nbsp
              <ul class="nav nav-pills nav-justified " role="tablist">
                 <li role="presentation" class="active"><a href="#r1" aria-controls="round" role="tab"
