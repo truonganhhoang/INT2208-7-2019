@@ -1,3 +1,4 @@
+import { QuestionService } from './../_services/question.service';
 import { Questions } from './../_models/question/mock-question';
 import { Question } from './../_models/question/question';
 import { Component, OnInit } from '@angular/core';
@@ -9,14 +10,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestingComponent implements OnInit {
   selectedQuestion: Question;
-  questions: Question[] = Questions;
-  constructor() {
-    this.selectedQuestion = this.questions[0];
+  questions: Question[];
+  currentIndex: number;
+  length: number;
+  constructor(private questionService: QuestionService) {
   }
 
   ngOnInit() {
+    this.questions = this.questionService.getTest();
+    this.length = this.questions.length;
+    this.currentIndex = 0;
+    this.update();
   }
-  changeQuizTo(question: Question): void {
-    this.selectedQuestion = question;
+  changeQuestionTo(i: number): void {
+    this.currentIndex = i;
+    this.update();
+  }
+  onClickPrev() {
+    this.currentIndex = (this.length + this.currentIndex - 1) % this.length;
+    this.update();
+  }
+  onClickNext() {
+    this.currentIndex = (this.length + this.currentIndex + 1) % this.length;
+    this.update();
+  }
+  onClickSubmit() {
+
+  }
+  update() {
+    this.selectedQuestion = this.questions[this.currentIndex];
   }
 }

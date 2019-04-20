@@ -1,3 +1,4 @@
+import { QuestionService } from './_services/question.service';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -44,6 +45,7 @@ import { TestingComponent } from './testing/testing.component';
     AuthenticationService,
     UserService,
     AlertService,
+    QuestionService
   ],
   bootstrap: [AppComponent]
 })
