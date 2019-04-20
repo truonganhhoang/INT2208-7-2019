@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardTestComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
-  refresh():void{
+  refresh(): void {
     window.location.reload();
+  }
+  onLogOut(): void {
+    this.router.navigate(['/welcome']);
   }
 }
