@@ -5,13 +5,16 @@
   </a>
 </nav>
 <div class="row">
+  <h1 style="margin-left: 10%">{{title}}:</h1>
+</div>
+<div class="row">
   <div class="col-md-3">
-      <h1 style="margin-left: 10%">{{title}}:</h1>
     <app-user-detail></app-user-detail>
   </div>
   <div class="col-md-9 ali">
     <div class="row justify-content-center">
-      <div *ngFor=" let question of questions; let i = index "class="'btn btn-lg " [ngClass]="{'btn-primary': currentIndex != i, 'btn-success':currentIndex == i }" (click)="changeQuestionTo(i)">
+      <div *ngFor=" let question of questions; let i = index " class="'btn btn-lg "
+        [ngClass]="{'btn-primary': currentIndex != i, 'btn-success':currentIndex == i }" (click)="changeQuestionTo(i)">
         Question {{i+1}}
       </div>
     </div>
@@ -25,22 +28,22 @@
             <div class="col-12">
               <div class="radio">
                 <label><input type="radio" name="optradio">
-                  <span (click)="onClickcheckboxA">{{selectedQuestion.optionA}}</span>
+                  <span id="A" (click)="onClickCheckbox($event)">{{selectedQuestion.optionA}}</span>
                 </label>
               </div>
               <div class="radio">
                 <label><input type="radio" name="optradio">
-                  <span (click)="onClickcheckboxB">{{selectedQuestion.optionB}}</span>
+                  <span id="B" (click)="onClickCheckbox($event)">{{selectedQuestion.optionB}}</span>
                 </label>
               </div>
               <div class="radio">
                 <label><input type="radio" name="optradio">
-                  <span (click)="onClickcheckboxC">{{selectedQuestion.optionC}}</span>
+                  <span id="C" (click)="onClickCheckbox($event)">{{selectedQuestion.optionC}}</span>
                 </label>
               </div>
               <div class="radio">
                 <label><input type="radio" name="optradio">
-                  <span (click)="onClickcheckboxD">{{selectedQuestion.optionD}}</span>
+                  <span id="D" (click)="onClickCheckbox($event)">{{selectedQuestion.optionD}}</span>
                 </label>
               </div>
             </div>

@@ -1,3 +1,4 @@
+import { LandingPageComponent } from './landing-page/landing-page.component';
 import { TestingComponent } from './testing/testing.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -10,12 +11,13 @@ import { AuthGuard } from './_guards/auth.guard';
 // import { AuthGuard } from './_guards';
 
 const appRoutes: Routes = [
-    { path: '', component: WelcomeComponent},
+    { path: '', component: WelcomeComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'dashboard', component: DashboardTestComponent},
-    {path:'testing/:id', component: TestingComponent},
-    { path: '**', redirectTo: '' }
+    { path: 'dashboard', component: DashboardTestComponent },
+    { path: 'testing/:id', component: TestingComponent },
+    { path: '**', redirectTo: '' },
+    { path: 'about', component: LandingPageComponent}
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
