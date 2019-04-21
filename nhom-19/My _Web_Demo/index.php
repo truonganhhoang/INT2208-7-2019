@@ -48,15 +48,17 @@
             <input style="color: #DF7401;width:100% " type = "text" id = "wordVE" class="input_box hidden"  placeholder=" Nhập từ cần tra" required/> 
             <input style="color: #DF7401;width:100% " type = "text" id = "wordVV" class="input_box hidden"   placeholder=" Nhập từ cần tra" required/>
             <input style="color: #DF7401;width:100% " type = "text" id = "wordVF" class="input_box hidden"  placeholder=" Nhập từ cần tra" required/>
-            <input style="color: #DF7401;width:100%" type = "text" id = "wordFV" class="input_box hidden"  placeholder=" Nhập từ cần tra" required/>       
-                <select id = "dictionary" name = "dictionary"  >
+            <input style="color: #DF7401;width:100%" type = "text" id = "wordFV" class="input_box hidden"  placeholder=" Nhập từ cần tra" required/>  
+            <input type="image" src="./img/pa.png" id="Pronun" onclick="pronun();return false;"</input>
+				<select id = "dictionary" name = "dictionary"  >
                     <option value="EV" >Anh-Việt</option>
                     <option value="VE" >Việt-Anh</option>
                     <option value="VV" >Việt-Việt</option>
                     <option value="VF" >Việt-Pháp</option>
                     <option value="FV" >Pháp-Việt</option>
-                </select>                                      
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search">Search</button>                    
+                </select>                                  
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search">Search</button>
+			
         </div>                                  
     </div>
     <!-- print result -->

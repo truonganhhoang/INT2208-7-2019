@@ -86,7 +86,7 @@
                 <option value="ko">Korean</option>
                 <option value="ru">Russian</option>
             </select>
-        <input type="image" src="./img/swap.gif" id="SwapButton" onclick="swap();return false;">Sang</input>
+        <input type="image" src="./img/swap.gif" id="SwapButton" onclick="swap();return false;"</input>
             <select name="target" id="target">
                 <option value="en">English</option>
                 <option selected value="vi">Vietnamese</option>
