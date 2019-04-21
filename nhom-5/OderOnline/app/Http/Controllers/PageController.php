@@ -123,6 +123,47 @@ class PageController extends Controller
 
         return redirect('/');
     }
+
+    public function detailProduct($id_type,$id){
+        $slide = slide::all();
+        $product = products::where('id',$id)->get();
+        $type_product = products::where('id_type',$id_type)->paginate(5);
+
+
+        $rates_DB = DB::table('rates')
+            ->join('customer', 'rates.customer_id', '=', 'customer.id')
+            ->select( 'customer.id as customer_id', 'customer.name as customer_name',
+                'rates.product_id as product_id', 'rates.rate as rate', 'rates.content as content')
+            ->where('rates.product_id', '=', $id);
+
+        $rates = $rates_DB->get();
+
+        $star = round($rates_DB->avg('rate'), 3);
+        $auth_rate = null;
+
+        if (Auth::check() and count(DB::table('bills')
+                ->join('bill_detail', 'bills.id', '=', 'bill_detail.id_bill')
+                ->where('bills.id_customer', '=', Auth::id())
+                ->where('bill_detail.id_product', '=', $id)->get()) > 0) {
+
+            $auth_rate_data = $rates_DB->where('rates.customer_id', '=', Auth::id())->get();
+
+            if (count($auth_rate_data) <= 0) {
+                $auth_rate['product_id'] = $id;
+                $auth_rate['customer_id'] = Auth::id();
+                $auth_rate['rate'] = 0;
+                $auth_rate['content'] = '';
+            } else {
+                $auth_rate['product_id'] = $id;
+                $auth_rate['customer_id'] = Auth::id();
+                $auth_rate['rate'] = $auth_rate_data[0]->rate;
+                $auth_rate['content'] = $auth_rate_data[0]->content;
+            }
+        }
+        return view('page.details', compact('slide', 'product', 'type_product', 'star', 'rates', 'auth_rate'));
+    }
+
+    /*
     public function detailProduct($id_type,$id){
         $slide = slide::all();
         $product = products::where('id',$id)->get();
@@ -144,6 +185,8 @@ class PageController extends Controller
         }
         return view('page.details',compact('slide','product','type_product','star','rates','auth_rate','rated_customer'));
     }
+    */
+
     public function profile(){
         $slide = [];
         $id = Auth::id();

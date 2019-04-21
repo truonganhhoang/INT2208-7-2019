@@ -48,12 +48,21 @@
                 </div>
                 <div class="col-sm-8">
                     <p class="single-item-title" style="letter-spacing: 4px;color: #31b0d5">{{$product[0]['name']}}</p>
+
+                    @for ($i = 0; $i < 5; $i++)
+                        @if ($i < $star)
+                            <i class="fas fa-star" style="display: inline-block; color : #ffd655"></i>
+                        @else
+                            <i class="far fa-star" style="display: inline-block; color : #b3b8b5"></i>
+                        @endif
+                    @endfor
+
                     @if($sp->promotion_price != 0)
                         <span style="text-decoration: line-through">{{number_format($product[0]['unit_price'])}} đồng</span>
                         <span  style="color: orange;margin-bottom: 10px">{{number_format($product[0]['promotion_price'])}} đồng</span>
 
                     @else
-                        <p class="price ">
+                        <p class="price" style="height: 32px; padding-top: 8px">
                             <span class="form-inline">{{number_format($product[0]['unit_price'])}} đồng</span>
                         </p>
                     @endif
@@ -71,12 +80,12 @@
                     <p style="display: inline">NHẬN XÉT</p>
 
 
-                    @if (Auth::check())
+                    @if ($auth_rate != null)
                         <button class="btn btn-primary" style="float: right; " onclick="showHideForm()">Viết đánh giá</button>
                     @endif
                     <br>
                     <br>
-                    @if (Auth::check())
+                    @if ($auth_rate != null)
                         <div id = "rateForm" style="display: none; height: 245px">
                             <br>
                             <form method="POST" action="{{route('postReview')}}" style="height: 90%; padding: 0px 15px 0px 15px; alignment: center; background: lightskyblue; box-shadow: 3px 5px #c3c3c3;">
@@ -88,9 +97,9 @@
                                             }" style="display: inline-block; color : #b3b8b5"></i>
                                     @endfor
                                 </div>
-                                <input name="product_id" style="display: none" type="number" value="{{$auth_rate['product_id']}}">
-                                <input name="customer_id" style="display: none" type="number" value="{{$auth_rate['customer_id']}}">
-                                <input name="rate_input" style="display: none" type="number" value="{{$auth_rate['rate']}}">
+                                <input readonly name="product_id" style="display: none" type="number" value="{{$auth_rate['product_id']}}">
+                                <input readonly name="customer_id" style="display: none" type="number" value="{{$auth_rate['customer_id']}}">
+                                <input readonly name="rate_input" style="display: none" type="number" value="{{$auth_rate['rate']}}">
                                 <textarea class="form-control" rows="5" name="content_input" placeholder="Nhận xét của bạn" maxlength="1000">{{$auth_rate['content']}}</textarea>
                                 <!-- todo: <p style="color: red; display: none">Không còn chỗ trống</p>-->
                                 <div style="float: right; padding: 5px">
@@ -107,18 +116,18 @@
                     <div style="padding: 15px; alignment: center; background: white">
                         @foreach($rates as $rate)
                             <div>
-                                <p style="display: inline">{{$rated_customer[$rate['customer_id']]}}: </p>
+                                <p style="display: inline">{{$rate->customer_name}}: </p>
                                 <span style="float: right;">
                                     @for ($i = 0; $i < 5; $i++)
 
-                                        @if($i < $rate['rate'])
+                                        @if($i < $rate->rate)
                                             <i class="fas fa-star" style="display: inline-block; color : #ffd655"></i>
                                         @else
                                             <i class="far fa-star" style="display: inline-block; color : #b3b8b5"></i>
                                         @endif
                                     @endfor
                                 </span>
-                                <p>{{$rate['content']}}</p>
+                                <p>{{$rate->content}}</p>
                                 <br>
                             </div>
                         @endforeach
@@ -180,18 +189,20 @@
                 $(this).css('background','')
             });
         });
+        @if ($auth_rate != null)
+            function showHideForm() {
+                let x = document.getElementById("rateForm");
 
-        function showHideForm() {
-            let x = document.getElementById("rateForm");
-            if (x.style.display === "none") {
-                document.getElementsByName("rate_input")[0].getAttributeNode("value").value = "{{$auth_rate['rate']}}";
-                document.getElementsByName("content_input")[0].textContent = "{{$auth_rate['content']}}";
-                bright();
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
+                if (x.style.display === "none") {
+                    document.getElementsByName("rate_input")[0].getAttributeNode("value").value = "{{$auth_rate['rate']}}";
+                    document.getElementsByName("content_input")[0].textContent = "{{$auth_rate['content']}}";
+                    bright();
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
             }
-        }
+        @endif
         function bright(num) {
             if (num == null)
                 num = document.getElementsByName("rate_input")[0].getAttributeNode("value").value;
