@@ -5,19 +5,19 @@ import { User } from '../_models';
 
 const httpOptions = {
     headers: new Headers({
-      'Content-Type':  'application/json',
-      'Authorization': 'my-auth-token',
-      'Accept': 'application/json',
-      'Access-Control-Allow-Headers': 'Content-Type',
-      'Access-Control-Allow-Origin': '*',
-      
+        'Content-Type': 'application/json',
+        'Authorization': 'my-auth-token',
+        'Accept': 'application/json',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Origin': '*',
+
     })
-  };
+};
 
 @Injectable()
 export class UserService {
 
-    private headers = new Headers({'Content-Type': 'application/json'});
+    private headers = new Headers({ 'Content-Type': 'application/json' });
 
     private dataUrl = 'http://localhost:3000/';
 
@@ -26,7 +26,7 @@ export class UserService {
     getAll() {
         return this.http.get('/api/users', httpOptions);
     }
-    
+
 
     getById(id: number) {
         return this.http.get('/api/users' + id);

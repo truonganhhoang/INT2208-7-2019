@@ -1,3 +1,5 @@
+import { QuestionService } from './_services/question.service';
+import { WelcomeComponent } from './welcome/welcome.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -14,6 +16,8 @@ import { DashboardTestComponent } from './dashboard-test/dashboard-test.componen
 import { routing } from './app.routing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { QuizDetailComponent } from './quiz-detail/quiz-detail.component';
+import { TestingComponent } from './testing/testing.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { HttpModule } from '@angular/http';
     LandingPageComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardTestComponent
+    DashboardTestComponent,
+    QuizDetailComponent,
+    WelcomeComponent,
+    TestingComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +45,7 @@ import { HttpModule } from '@angular/http';
     AuthenticationService,
     UserService,
     AlertService,
+    QuestionService
   ],
   bootstrap: [AppComponent]
 })
