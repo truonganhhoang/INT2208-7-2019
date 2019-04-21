@@ -21,15 +21,15 @@
 					</a>
 				</div>
 
-				
-				<ul class="nav nav-pills pull-right">
-					<li><a href="#" onclick="change()" style ="color:#dddddd">Sign in</a></li>
-					<script> 
-						function change(){
-							window.location.assign('/signin.html')
-						}
-					</script>
+					<ul class="nav nav-pills pull-right">
+					<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Sign out</a></li>
+					</ul>
+				</li>
 				</ul>
+				
 				<div class="container center_div">
 					<form class="navbar-form">
 						<input type="text" class="form-control" placeholder="Tìm kiếm tài liệu & đề thi...">
@@ -102,9 +102,9 @@
 			</section>
 		</div>
 	</div>
-	<div id = "comment" >
+	<div id = "comment" align="center">
 		<div class="container-fluid">
-		<h1 align="center">Bình luận</h1>
+		<h1 class = "text-middle">Bình luận</h1>
 		<p>
 			<textarea class="form-control" rows="3" id="comment" name="text" placehoder="không quá 50 ký tự"></textarea>
 		</p>
@@ -113,6 +113,7 @@
 	<div align="center">
 		<h1 class="text-middle">Bình luận mới nhất</h1> 
 	</div>
+
 	<footer class ="bs-docs-footer">
 		<div class="container">
 			<p><strong>Chia sẻ tài liệu ôn thi Đại học</strong></p>

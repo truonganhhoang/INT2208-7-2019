@@ -1,6 +1,6 @@
 .container{
-	margin-top: 3%;
-	width: 100%
+    margin-top: 3%;
+    width: 100%
     margin-bottom: 10px;
     text-align: center;
     font-size: 14;
@@ -12,17 +12,17 @@
     color: #000000;
 }
 .navbar-brand {
-	margin-top: -30px;
-	padding-left: 50px;
+    margin-top: -30px;
+    padding-left: 50px;
 }
 .btn {
-	border-radius: 10px;
+    border-radius: 10px;
 }
 .navbar{
     margin-bottom: 50px;
 }
 #bs-example-navbar-collapse-1{
-	background-color: #efebeb;
+    background-color: #efebeb;
 }
 .navbar-inverse .navbar-form {
     border-color: #101010;
@@ -30,16 +30,16 @@
     justify-content: center;
 }
 .form-control {
-	text-align: center;
-	padding: 1% 10%;
-	border-radius: 10px;
+    text-align: center;
+    padding: 1% 10%;
+    border-radius: 10px;
 }
 h3{
-	text-transform : uppercase;
-	font-weight: bold;
-	font-family: -webkit-body;
-	padding-top :3%;
-	color: #0f0465;
+    text-transform : uppercase;
+    font-weight: bold;
+    font-family: -webkit-body;
+    padding-top :3%;
+    color: #0f0465;
 }
 .bs-docs-footer {
     padding-bottom: 20px;
@@ -56,25 +56,24 @@ h3{
     z-index: 99;
 }
 #header{
-	height:90px;
-	background-color: #2a2730;
+    height:90px;
+    background-color: #2a2730;
 }
 #logo{
-	padding-top: 20px;
-}
-#banner{
-    
+    padding-top: 20px;
 }
 #main{
-	padding-left: 10%;
+    padding-left: 10%;
     padding-right: 10%;
     padding-top: 150px;
 }
-#block{
-border: 0.5px #2a2730 solid;
+#comment{
+    padding-left: 10%;
+    padding-right: 10%;
+    width:100%;
 }
 .center_div{
-	padding: 0px 20%;
+    padding: 0px 20%;
     margin: 0 auto;
     width:90% /* value of your choice which suits your alignment */
 }
@@ -85,29 +84,13 @@ border: 0.5px #2a2730 solid;
 .dropdown-menu {
     width: 100%;
 }
-.carousel-inner>.item>img {
-    margin: auto;
+.wraptocenter{
+    margin:0 auto;
+    display: block;
+    width:680px;
+    height:1000px;
+    border: 2px solid;
 }
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 24%;
-}
-
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-
-div.desc {
-  padding: 15px;
-  text-align: center;
+.text-center{
+    padding-top: 20px;
 }
