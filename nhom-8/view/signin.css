@@ -101,10 +101,9 @@ h2 {
 }
  
 @media screen and (max-width: 430px) {
- 
+  
   body { font-size: 11px; }
   button, input, select, textarea { font-size: 11px; }
- 
   .loginbox { width: auto; margin: 10px; }
   .loginbox input { width: 95%; }
   .loginbox button { width: 100%; }

@@ -67,6 +67,12 @@ h3{
     padding-right: 10%;
     padding-top: 150px;
 }
+#comment{
+    padding-left: 10%;
+    padding-right: 10%;
+    width:100%;
+}
+
 .center_div{
     padding: 0px 20%;
     margin: 0 auto;
@@ -89,3 +95,4 @@ h3{
 .text-center{
     padding-top: 20px;
 }
+
