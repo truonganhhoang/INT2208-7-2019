@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset ="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Japanese</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="Japanese1.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div id="header">
+			<header class="container-fluid">
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-left">
+						<li><a href="/">Trang chủ</a></li>
+						
+					</ul>
+				</div>
+			</header>
+		</div>
+	</nav>
+
+	<section>
+
+		
+		<div class="container">
+			<div class="row">
+<div class="col-xs-12 col-md-8 col-lg-9">
+ <div id = "monhoa">
+							<a class="navbar-brand">
+								<img src="japanese.jpg" alt="">
+							</a>
+						</div>
+					</div>
+ 	
+						
+				<div class="col-xs-12 col-md-8 col-lg-9">
+					<section> 	
+							<h2>Japanese</h2>
+					</section>
+					<section> 
+										
+							<h3><b>Chào mừng bạn đã đến với chủ đề 'Japanese'.</b></h3>					
+						
+					</section>
+					<div id="chuthuong">
+					<section> 
+						
+							Đây là trang sẽ cung cấp cho bạn các bí quyết ôn luyện để chinh phục môn tiếng Nhật, các bài tập theo chuyên đề và quan trọng nhất là các bộ đề thi THPT quốc gia mới nhất của Bộ Giáo Dục.
+						
+					</section>
+				</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="container">
+						<div class="row">
+						<% results.forEach(function(result) { %>
+							<div class="col-md-3 col-sm-6">
+								<a href="/giaodiendethi/<%=result.id%>" class="thumbnail">
+									<img src="<%=result.link%>" alt="de1" style="width:150px;height:150px">
+								</a>
+								<p style="text-align:center"><%=result.name%></p> 
+							</div>
+						<% }); %>
+						</div>
+					</div>
+	<footer class ="bs-docs-footer">
+		<div class="container">
+			<ul>
+				<li><p>ÔN THI ĐẠI HỌC</p></li>
+				<li><p>Design by Đức Dũng</p></li>
+				<li><p>Thi THPT 2019!!!</p></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>
