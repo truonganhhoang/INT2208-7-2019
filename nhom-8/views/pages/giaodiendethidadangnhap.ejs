@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang = "vi">
+<head>
+	<meta charset ="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hoctot.vn</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/giaodiendethi.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.pack.js"></script>
+	<script>
+$('#submit').click(function() {
+{
+    var submit = $("button[type='submit']");
+    var data = {
+                    number: 1 ,
+                    comment: 'hay'
+                }
+    submit.click(function()
+    {
+	$.ajax({
+    url: 'pages/giaodiendethidadangnhap', 
+    type: 'POST', 
+	dataType: "json",
+    contentType: 'application/json', 
+	cache: false,
+    data:  JSON.stringify(data)
+	});
+});
+</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div id="header">
+			<header class="container-fluid">
+				
+				<div id = "logo">
+					<a class="navbar-brand" href="/giaodiendadangnhap">
+						<img src="/hoctot.png" alt="" style="auto">
+					</a>
+				</div>
+
+				
+				<ul class="nav nav-pills pull-right">
+					
+					<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%=signinUser.firstname%> <%=signinUser.lastname%><span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#" onclick="signout()">Đăng xuất</a></li>
+						<script>  
+							function signout(){  
+							window.location.assign('http://localhost:3000')  
+						}  
+						</script>
+					</ul>
+				</li>
+				</ul>
+				
+				<div class="container center_div">
+					<form class="navbar-form">
+						<!--<input type="text" class="form-control" placeholder="Tìm kiếm tài liệu & đề thi...">
+						<button type="search" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>-->
+					</form>
+				</div>
+
+			</header>
+		</div>
+
+
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a href="/giaodiendadangnhap"><span class="glyphicon glyphicon-home"></span> Trang chủ </a></li>
+				<li><a href="/toandn">Toán Học</a></li>
+				<li><a href="/vandn">Ngữ Văn</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ngoại Ngữ <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="/engdn">English</a></li>
+						<li><a href="/phapdn">French</a></li>
+						<li><a href="/nhatdn">Japanese</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Khoa học Tự Nhiên<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="/lydn">Vật Lý</a></li>
+						<li><a href="/hoadn">Hóa Học</a></li>
+						<li><a href="/sinhdn">Sinh Học</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Khoa học Xã hội<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="/sudn">Lịch Sử</a></li>
+						<li><a href="/diadn">Địa Lý</a></li>
+						<li><a href="/gdcddn">Công Dân</a></li>		
+					</ul>
+				</li>
+				<li><a href="#">Video</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav>
+	
+
+<%var id;%>;
+	<div role="main" id="main">
+		<div class="container-fluid">
+			<section>
+			<% results[0].forEach(function(result) { %>
+				<div>
+					<a href="<%=result.link%>" >
+						<img src="<%=result.link%>" class="wraptocenter">
+						<%id = result.id%>;
+					</a>
+				</div>
+				<div class="text-center">
+					<a href="<%=result.link%>" class="btn btn-primary btn-lg" download>
+						Download <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+					</a>
+				</div>
+			<% }); %>
+			</section>
+		</div>
+	</div>
+	<%if (data && data.error) {%>
+		<div id="error" class="alert alert-danger">
+		<%=data.error%>
+		</div>
+	<%}%>
+	<% results[0].forEach(function(result) { %>
+	<div class="container ">
+	<form id="comment" action="/giaodiendethidadangnhap/<%=result.id%>" method="POST">
+			<div>
+				<input type="text" name="texts" class="form-control" placeholder="Thêm bình luận...">
+				<button id="comment" type="submit" class="btn btn-default pull-right"> Comment</button>
+			</div>
+	</form>
+  </div>
+  <% }); %>
+		<% results[1].forEach(function(cm) { %>
+		<div style="<% if(!cm){%> display: none <%}%>" class="alert alert-danger">
+			<p> <h4><%=cm.firstname%> <%=cm.lastname%>:</h4> <%=cm.comment%></p>
+		</div>
+		<% }); %>
+		
+		
+	<footer class ="bs-docs-footer">
+		<div class="container">
+			<p><strong>Chia sẻ tài liệu ôn thi Đại học</strong></p>
+			<p><strong>Design by Nhóm 8</strong></p>
+			<p><strong> Chúc các bạn thi tốt!</strong></p>
+		</div>
+	</footer>
+
+</body>
+</html>

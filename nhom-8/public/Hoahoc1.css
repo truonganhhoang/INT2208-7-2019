@@ -1,0 +1,53 @@
+.container-fluid{
+	padding-right: 0px;
+    padding-left: 0px;
+}
+#header{
+	height:90px;
+	background-color: #2a2730;
+}
+#monhoa{
+	padding-top: 15%;
+}
+h2{
+	text-transform : uppercase;
+	font-weight: bold;
+	font-family: -webkit-body;
+	padding-left :38%;
+	padding-top: 60%;
+	color: #0f0465;
+}
+h3{
+	font-weight: bold;
+	font-family: -webkit-body;
+	
+}
+#chuthuong{
+	font-family: -webkit-body;
+	font-size: 22px;
+}
+.btn-default {
+	color: #fff;
+	font-size: 20px;
+	background-color: #3F51B5;
+}
+.bs-docs-footer {
+	padding-top:10px;
+    padding-bottom: 10px;
+    margin-top: 100px;
+    font-size: 15px;
+    color: #99979c;
+    background-color: #2a2730;
+}
+.navbar-collapse {
+	padding-top: 45px;
+	padding-left: 50px;
+}
+body{
+	font-size: 20px;
+	background-color: #DDDDDD;
+}
+#binhluan{
+	padding-top: 60%;
+	padding-left: 40%;
+}
