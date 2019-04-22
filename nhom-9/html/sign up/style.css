@@ -39,7 +39,7 @@
 }
 #div12 h2 {
     padding-bottom: 10%;
-    padding-left: 40%;
+    text-align: center;
 }
 .col-sm-7 {
     padding-top: 2%;
@@ -49,11 +49,11 @@
     padding-top: 2%;
     padding-left: 0%;
 }
-.row a {
+.col-sm-7 a {
     text-decoration: none;
     color: #000000;
 }
-.row a:hover {
+.col-sm-7 a:hover {
     color: #737373;
 }
 .row {

@@ -61,5 +61,11 @@ export class LoginComponent implements OnInit {
                   this.loading = false;
               });
   }
+  refresh() {
+    window.location.reload();
+  }
+  onClickAbout() {
+      this.router.navigate(['/about']);
+  }
 }
 

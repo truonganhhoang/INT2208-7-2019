@@ -1,3 +1,8 @@
+
+.row{
+    margin-top: 4%;
+}
+
 .navbar-custom {
     background-color: #3c5fe7;
     margin-bottom: 1%;
@@ -5,7 +10,4 @@
 
 .navbar-custom .navbar-brand {
     color: #ecf0f1;
-}
-.bage-primary{
-    color: white;
 }
