@@ -1,2 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.navbar-custom {
+    background-color: #3c5fe7;
+    margin-bottom: 1%;
+}
+
+.navbar-custom .navbar-brand {
+    color: #ecf0f1;
+}

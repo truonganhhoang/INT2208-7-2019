@@ -9,24 +9,8 @@
 
 <div id="div12">
   <div class="container">
-    <!-- <form>
-      <h2>Log in</h2>
-      <div class="form-group">
-          <label for="usr"><i class="fas fa-user-alt"></i> Username:</label>
-          <input type="text" class="form-control" id="usr">
-      </div> 
-      <div class="form-group">
-          <label for="pwr"><i class="fas fa-key"></i> Password:</label>
-          <input type="password" class="form-control" id="pwr">
-      </div>
-      <div class="row">
-          <div class="col-sm-4"><button class="btn btn-primary">Log in</button></div>
-          <div class="col-sm-7"><a href=""><i class="fas fa-unlock"></i> Forgot your password?</a> </div>
-      </div>
-
-
-    </form> -->
     <h2>Log in</h2>
+    <alert></alert>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="username">Username</label>

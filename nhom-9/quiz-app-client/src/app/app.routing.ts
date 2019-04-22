@@ -1,15 +1,28 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { DashboardTestComponent } from './dashboard-test/dashboard-test.component';
+import { TestDisplayComponent } from './dashboard/test/test.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
 import { AuthGuard } from './_guards/auth.guard';
-// import { AuthGuard } from './_guards';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ClassComponent } from './dashboard/class/class.component';
+import { DoQuizComponent } from './dashboard/test/do-quiz/do-quiz.component';
+import { LoggedGuard } from './_guards/logged.guard';
 
 const appRoutes: Routes = [
-    { path: '', component: DashboardTestComponent, canActivate: [AuthGuard] },
-    { path: 'login', component: LoginComponent },
+    { path: '', component: DashboardComponent, canActivate: [AuthGuard],
+    children: [
+
+        { path: 'classes', component: ClassComponent },
+        { path: 'test', component: TestDisplayComponent },
+        { path: 'doing', component: DoQuizComponent },
+        
+        { path: '', redirectTo: 'test', pathMatch: 'full', canActivate: [AuthGuard]},
+        // { path: '**', redirectTo: '' },
+        ]
+    },
+    { path: 'login', component: LoginComponent, canActivate: [LoggedGuard] },
     { path: 'register', component: RegisterComponent },
 
     // otherwise redirect to home
