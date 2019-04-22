@@ -20,11 +20,11 @@ const appRoutes: Routes = [
     children: [
 
         { path: 'classes', component: ClassComponent },
-        { path: 'test', component: QuizDetailComponent },
+        { path: 'quiz-detail', component: QuizDetailComponent },
         { path: 'testing/:id', component: TestingComponent, canActivate: [ConfirmTestGuard] },
         // { path: 'doing', component: TestingComponent },
         
-        { path: '', redirectTo: 'test', pathMatch: 'full', canActivate: [AuthGuard]},
+        { path: '', redirectTo: 'quiz-detail', pathMatch: 'full', canActivate: [AuthGuard]},
         // { path: '**', redirectTo: '' },
         ]
     },
