@@ -7,13 +7,14 @@ export class ConfirmTestGuard implements CanActivate {
     constructor(private router: Router) { }
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-        if (localStorage.getItem('doing')) {
-            // logged in so return true
-            return true;
-        }
+        return true;
+        // if (localStorage.getItem('doing')) {
+        //     // logged in so return true
+        //     return true;
+        // }
 
-        // not logged in so redirect to login page with the return url
-        this.router.navigate(['/doing'], { queryParams: { returnUrl: state.url }});
-        return false;
+        // // not logged in so redirect to login page with the return url
+        // this.router.navigate(['/doing'], { queryParams: { returnUrl: state.url }});
+        // return false;
     }
 }

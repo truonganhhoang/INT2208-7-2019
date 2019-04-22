@@ -1,75 +1,59 @@
-<nav class="navbar navbar-custom">
-  <a class="navbar-brand">
-    <img src="assets/logo2.jpg" alt="logo" style="margin-right:20px" width="40px" height="40px" (click)="onClickLogo()">
-    Quizs
-  </a>
-</nav>
-<div class="row">
-  <h1 style="margin-left: 10%">{{title}}:</h1>
-</div>
-<div class="row">
-  <div class="col-md-3">
-    <app-dashboard-user-detail></app-dashboard-user-detail>
+<div class="row justify-content-center">
+  <div *ngFor=" let question of questions; let i = index " class="'btn btn-lg "
+    [ngClass]="{'btn-primary': currentIndex != i, 'btn-success':currentIndex == i }" (click)="changeQuestionTo(i)">
+    Question {{i+1}}
   </div>
-  <div class="col-md-9 ali">
-    <div class="row justify-content-center">
-      <div *ngFor=" let question of questions; let i = index " class="'btn btn-lg "
-        [ngClass]="{'btn-primary': currentIndex != i, 'btn-success':currentIndex == i }" (click)="changeQuestionTo(i)">
-        Question {{i+1}}
+</div>
+<div class="container">
+  <div class="col-md-12">
+    <div class="card" *ngIf="selectedQuestion">
+      <div class="card-header text-md-left">
+        <h5 class="display-6">{{selectedQuestion.questionContent}}</h5>
+      </div>
+      <div class="card-body text-md-left">
+        <div class="col-12">
+          <div class="radio">
+            <label><input type="radio" name="optradio">
+              <span id="A" (click)="onClickCheckbox($event)">{{selectedQuestion.optionA}}</span>
+            </label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio">
+              <span id="B" (click)="onClickCheckbox($event)">{{selectedQuestion.optionB}}</span>
+            </label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio">
+              <span id="C" (click)="onClickCheckbox($event)">{{selectedQuestion.optionC}}</span>
+            </label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio">
+              <span id="D" (click)="onClickCheckbox($event)">{{selectedQuestion.optionD}}</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 text-md-left">
+          <button class="btn btn-lg btn-primary" (click)="onClickPrev()">
+            <i class="fas fa-arrow-left"></i>
+            Back
+          </button>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <button class="btn btn-lg btn-primary" (click)="onClickNext()">
+            <i class="fas fa-arrow-right"></i>
+            Next
+          </button>
+        </div>
       </div>
     </div>
-    <div class="container">
-      <div class="col-md-12">
-        <div class="card" *ngIf="selectedQuestion">
-          <div class="card-header text-md-left">
-            <h5 class="display-6">{{selectedQuestion.questionContent}}</h5>
-          </div>
-          <div class="card-body text-md-left">
-            <div class="col-12">
-              <div class="radio">
-                <label><input type="radio" name="optradio">
-                  <span id="A" (click)="onClickCheckbox($event)">{{selectedQuestion.optionA}}</span>
-                </label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="optradio">
-                  <span id="B" (click)="onClickCheckbox($event)">{{selectedQuestion.optionB}}</span>
-                </label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="optradio">
-                  <span id="C" (click)="onClickCheckbox($event)">{{selectedQuestion.optionC}}</span>
-                </label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="optradio">
-                  <span id="D" (click)="onClickCheckbox($event)">{{selectedQuestion.optionD}}</span>
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 text-md-left">
-              <button class="btn btn-lg btn-primary" (click)="onClickPrev()">
-                <i class="fas fa-arrow-left"></i>
-                Back
-              </button>
-            </div>
-            <div class="col-md-6 text-md-right">
-              <button class="btn btn-lg btn-primary" (click)="onClickNext()">
-                <i class="fas fa-arrow-right"></i>
-                Next
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-md-right">
-            <button class="btn btn-lg btn-success" (click)="onClickSubmit()">
-              Submit
-            </button>
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-md-12 text-md-right">
+        <button class="btn btn-lg btn-success" (click)="onClickSubmit()">
+          Submit
+        </button>
       </div>
     </div>
   </div>
