@@ -14,7 +14,6 @@ import { DoQuizComponent } from './dashboard/test/do-quiz/do-quiz.component';
 import { LoggedGuard } from './_guards/logged.guard';
 
 const appRoutes: Routes = [
-<<<<<<< HEAD
     { path: '', component: DashboardComponent, canActivate: [AuthGuard],
     children: [
 
@@ -27,12 +26,10 @@ const appRoutes: Routes = [
         ]
     },
     { path: 'login', component: LoginComponent, canActivate: [LoggedGuard] },
-=======
-    { path: '', component: WelcomeComponent },
-    { path: 'login', component: LoginComponent },
->>>>>>> 313ea513a2799896355a6b0cb0b8e28f1f2d3f45
+    // { path: '', component: WelcomeComponent },
+    // { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'dashboard', component: DashboardTestComponent },
+    { path: 'dashboard', component: DashboardComponent },
     { path: 'testing/:id', component: TestingComponent },
     { path: '**', redirectTo: '' },
     { path: 'about', component: LandingPageComponent}

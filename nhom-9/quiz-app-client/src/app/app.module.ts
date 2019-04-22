@@ -20,15 +20,12 @@ import { TestDisplayComponent } from './dashboard/test/test.component';
 import { routing } from './app.routing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-<<<<<<< HEAD
 import { DetailComponent } from './dashboard/test/detail/detail.component';
 import { DoQuizComponent } from './dashboard/test/do-quiz/do-quiz.component';
 import { ClassComponent } from './dashboard/class/class.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-=======
 import { QuizDetailComponent } from './quiz-detail/quiz-detail.component';
 import { TestingComponent } from './testing/testing.component';
->>>>>>> 313ea513a2799896355a6b0cb0b8e28f1f2d3f45
 
 @NgModule({
   declarations: [
@@ -38,18 +35,14 @@ import { TestingComponent } from './testing/testing.component';
     LandingPageComponent,
     LoginComponent,
     RegisterComponent,
-<<<<<<< HEAD
     TestDisplayComponent,
     DetailComponent,
     DoQuizComponent,
     ClassComponent,
-    DashboardComponent
-=======
-    DashboardTestComponent,
+    DashboardComponent,
     QuizDetailComponent,
     WelcomeComponent,
     TestingComponent
->>>>>>> 313ea513a2799896355a6b0cb0b8e28f1f2d3f45
   ],
   imports: [
     BrowserModule,
@@ -67,13 +60,10 @@ import { TestingComponent } from './testing/testing.component';
     AuthenticationService,
     UserService,
     AlertService,
-<<<<<<< HEAD
     // { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     // fakeBackendProvider,
-=======
     QuestionService
->>>>>>> 313ea513a2799896355a6b0cb0b8e28f1f2d3f45
   ],
   bootstrap: [AppComponent]
 })
