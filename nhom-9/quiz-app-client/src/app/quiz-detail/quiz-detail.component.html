@@ -6,7 +6,27 @@
         <p class="card-text">{{quiz.catalogy}}</p>
         <p class="card-text">{{quiz.chapter}}</p>
         <p class="card-text">{{quiz.language}}</p>
-        <a class="btn btn-primary" (click)="onGetQuiz(i)">Get Quizs</a>
+        <a class="btn btn-primary" data-toggle="modal" data-target="#modal_1">Get Quizs</a>
+
+        <div class="modal fade" id="modal_1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Time: </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>You are going to do the test and you won't be able to out!</p>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-primary" data-dismiss="modal" (click)="onGetQuiz(i)">Go to test now!</a>
+                <a class="btn btn-secondary" data-dismiss="modal">Back</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

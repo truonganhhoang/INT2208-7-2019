@@ -59,7 +59,7 @@ export class TestingComponent implements OnInit {
     this.selectedQuestion = this.questions[this.currentIndex];
   }
   onClickLogo(): void {
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/test']);
   }
   onLogOut(): void {
     this.router.navigate(['/welcome']);

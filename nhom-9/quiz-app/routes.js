@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var quizs = require('./models/Quiz');
 var users = require('./models/Users');
+var jwt = require('jsonwebtoken');
+var key = 'itsasecret';
 router.get('/', (req, res, next) =>{
     quizs.getAllQuizs(function (err, rows) {
         if (err) {
@@ -72,8 +74,41 @@ router.get('/api/users', function(req, res) {
     });
 });
 
-router.post('/api/users', function (req, res, next) {
-    console.log(req);
+router.post('/api/users/authenticate/:username', function (req, res) {
+    users.getUserByUsername(req.params.username, function (err, rows) {
+        if(err) {
+            res.status(401).json({
+                sucess: false,
+                token: null,
+                err: 'Username or password is incorrect'
+            });
+        } else {
+            if(rows.length>0  && rows[0].password === req.body.password) {
+                let token = jwt.sign(
+                    { username: rows[0] },
+                    key,
+                    { expiresIn: 129600 }
+                    );
+                // Sigining the token
+                res.json({
+                    status: 200,
+                    sucess: true,
+                    err: null,
+                    token: token
+                });
+            } else {
+                res.status(401).json({
+                    sucess: false,
+                    token: null,
+                    err: 'Username or password is incorrect'
+                }); 
+            }
+        }
+    });
+});
+
+router.post('/api/users/register', function (req, res, next) {
+    // console.log(req);
     users.addUser(req.body, function (err, count) {
         if (err) {
             res.json(err);
@@ -84,7 +119,7 @@ router.post('/api/users', function (req, res, next) {
 });
 
 router.delete('/api/users', function (req, res, next) {
-    quizs.deleteQuiz(req.params.id, function (err, count) {
+    users.deleteUser(req.param.username, function (err, count) {
         if (err) {
             res.json(err);
         } else {
@@ -94,7 +129,7 @@ router.delete('/api/users', function (req, res, next) {
 });
 
 router.put('/api/users', function (req, res, next) {
-    quizs.updateQuiz(req.params.id, req.body, function (err, rows) {
+    users.updateUser(req.params.id, req.body, function (err, rows) {
         if (err) {
             res.json(err);
         } else {
