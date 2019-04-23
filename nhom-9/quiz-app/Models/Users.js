@@ -6,6 +6,9 @@ var users = {
 	getQuizsByid: function (id, callback) {
 		return pool.query("SELECT * FROM quizs WHERE id=?", [id], callback);
 	},
+	getUserByUsername: function (id, callback) {
+		return pool.query("SELECT * FROM database_test.users WHERE username=?", [id], callback);
+	},
 	addUser: function (user, callback) {
 		return pool.query("INSERT INTO database_test.users(username, password) VALUES(?,?)", 
 		[user.name, user.password], callback);
