@@ -23,10 +23,6 @@ var messageSchema = new Schema({
     },
     receiver: {
         type: String
-    },
-    receiverReadState:{
-        type: Boolean,
-        default: false
     }
 });
 

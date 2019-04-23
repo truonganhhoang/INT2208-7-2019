@@ -4,8 +4,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { UserService } from '@app/_services';
 import { User } from '@app/_models';
+import { UserService } from '@app/_services/user.service';
 
 export interface Friend {
     user: User;
@@ -32,7 +32,7 @@ export class UserProfileComponent implements OnInit {
         private router: Router,
         private route: ActivatedRoute,
         private userService: UserService,
-        private dialog: MatDialog
+        private dialog: MatDialog,
     ) {
         this.user = new User;
         this.isMyProfile = false;

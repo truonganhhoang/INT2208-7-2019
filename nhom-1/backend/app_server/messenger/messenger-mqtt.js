@@ -69,6 +69,23 @@ function saveMessageToDatabase(topic,payload) {
     });
 }
 
+function updateUnreadMessage(topic, payload) {
+    payload = JSON.parse(payload);
+    let userReceiver = topic;
+    let roomChatId = payload.roomId;
+    MessengerRoom.findById(roomChatId, (err,doc)=> {
+        while (doc.unread.length > 0) {
+            doc.unread.pop()
+        }
+        doc.unread.push(userReceiver)
+        doc.save((err)=>{
+            if (err) {
+                console.log('error in save unread state to messenger room');
+            }
+        });
+    });
+}
+
 module.exports = function() {
     const mqtt = require('mqtt');
     const server = mqtt.connect(process.env.MQTT_URL,{clean:false, clientId: process.env.MQTT_SERVER_CLIENTID});
@@ -77,5 +94,6 @@ module.exports = function() {
 
     server.on('message', (topic, payload)=>{
         saveMessageToDatabase(topic, payload);
+        updateUnreadMessage(topic, payload)
     });
 }

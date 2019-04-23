@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
-import * as io from 'socket.io-client';
-import { UserService } from '@app/_services';
 import { Message } from '../_models/message.model';
 import genRoomChat from './../common/generate-chatroom';
+import { UserService } from '@app/_services/user.service';
 
 @Component({
   selector: 'app-chatbox',
@@ -21,17 +20,8 @@ export class ChatboxComponent implements OnInit, AfterViewChecked {
   messages: Message[] = []; 
   
   ngOnInit() {
-    this.socket = io('http://localhost:3000');
-    this.socket.on('new message', (data)=>{
-      let message = new Message(data);
-      this.messages.push(message);
-    });
-    this.socket.emit('join chat room',{
-      user1: this.userService.currentUserValue.username,
-      user2: 'namphan'
-    });
 
-    //this.socket.join(this.genRoom(this.userService.currentUserValue.username,'namphan'));
+
   }
 
   ngAfterViewChecked() {
@@ -39,16 +29,7 @@ export class ChatboxComponent implements OnInit, AfterViewChecked {
   }
 
   sendMessage($event) {
-    if ($event.target.value=="") return;
-    let data = {
-      sender: this.userService.currentUserValue.username,
-      receiver: 'admin',
-      content: $event.target.value,
-      sendDate: new Date()
-    }
-    this.socket.emit('new message', data);
-    this.messages.push(new Message(data));
-    $event.target.value="";
+
   }
 
 }

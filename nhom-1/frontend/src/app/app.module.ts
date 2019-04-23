@@ -33,6 +33,9 @@ import { NotFoundComponent } from './not-found/not-found.component';;
 import { ChatboxComponent } from './chatbox/chatbox.component';
 import { ChatlistComponent } from './chatlist/chatlist.component';
 import { ChatlistItemComponent } from './chatlist-item/chatlist-item.component';
+import { UserService } from './_services/user.service';
+import { AlertService } from './_services/alert.service';
+import { MessageService } from './_services/message.service';
 
 @NgModule({
     imports: [
@@ -74,7 +77,10 @@ import { ChatlistItemComponent } from './chatlist-item/chatlist-item.component';
         EditProfileDialog, UpdateAvatarDialog,
     ],
     providers: [
-        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+        UserService,
+        AlertService,
+        MessageService
     ],
     bootstrap: [AppComponent]
 })

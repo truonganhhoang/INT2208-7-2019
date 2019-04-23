@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { AlertService, UserService} from '@app/_services';
+import { UserService } from '@app/_services/user.service';
+import { AlertService } from '@app/_services/alert.service';
 
 @Component({templateUrl: 'register.component.html'})
 export class RegisterComponent implements OnInit {

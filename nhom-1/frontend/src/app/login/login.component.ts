@@ -5,7 +5,8 @@ import { HttpClient } from '@angular/common/http';
 import { first } from 'rxjs/operators';
 
 import { environment } from '@environments/environment'
-import { AlertService, UserService } from '@app/_services';
+import { UserService } from '@app/_services/user.service';
+import { AlertService } from '@app/_services/alert.service';
 
 @Component({templateUrl: 'login.component.html'})
 export class LoginComponent implements OnInit {
