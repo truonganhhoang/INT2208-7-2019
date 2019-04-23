@@ -8,13 +8,15 @@ export class ConfirmTestGuard implements CanActivate {
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
         return true;
-        // if (localStorage.getItem('doing')) {
+        // console.log(state.url);
+        // if (localStorage.getItem('testing')) {
         //     // logged in so return true
         //     return true;
         // }
 
-        // // not logged in so redirect to login page with the return url
-        // this.router.navigate(['/doing'], { queryParams: { returnUrl: state.url }});
+        // // // not logged in so redirect to login page with the return url
+        // // this.router.navigate(['/'], { queryParams: { returnUrl: state.url }});
+        // this.router.navigate([state.url]);
         // return false;
     }
 }
