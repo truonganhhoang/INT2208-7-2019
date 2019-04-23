@@ -189,7 +189,7 @@
 	</div>
 
 	<div class="footer">
-		<?php/* require_once __DIR__. "/layouts/footer.php";*/ ?>
+		<?php require_once __DIR__. "/layouts/footer.php"; ?>
 	</div>
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
