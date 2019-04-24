@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang = "vi">
+<head>
+	<meta charset ="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign in</title>
+	<link rel="stylesheet" href="signin.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="Bar">
+  <div id="Frame">
+    <div id="logo"> <a href="/">Hoctot.vn</a> </div>
+    
+  </div>
+</div>
+<!-- header ends here -->
+<div class="loginbox radius">
+  <h2 style="color:#141823; text-align:center;">Đăng nhập</h2>
+  <div class="loginboxinner radius">
+    <div class="loginheader">
+      <h4 class="title"</h4>
+    </div>
+    <!--loginheader-->
+    <div class="loginform">
+      <form id="login" action="/signin" method="POST">
+		<%if (data && data.error) {%>
+		<div id="signinerror" class="alert alert-danger">
+		<%=data.error%>
+		</div>
+		<%}%>
+        <p>
+          <input type="text" name="username" placeholder="Your user name"  class="radius" />
+        </p>
+        <p>
+          <input type="password" name="passwords" placeholder="Password" class="radius" />
+        </p>
+        <p>
+          <button class="radius title" type="submit" name="signin">Đăng nhập</button>
+        </p>
+	<a href="#" onclick="signup()" class="text-center">Nhấn vào đây nếu bạn chưa có tài khoản</a>
+		<script>  
+			function signup(){  
+			window.location.assign('http://localhost:3000/signup')  
+			}  
+		</script>
+      </form>
+    </div>
+  </div>
+</div>
+	<script src="https://fb.me/react-15.1.0.js"></script>
+	<script src="https://fb.me/react-dom-15.1.0.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<script type="text/jsx" src="dangnhap.js"></script>
+</body>
+
+
