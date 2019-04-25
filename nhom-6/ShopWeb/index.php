@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	include('function/sql.php');
 ?>
 
 <!DOCTYPE html>
@@ -7,14 +8,6 @@
 <head>
 	<title>Home Shoppe</title>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<link rel="stylesheet" type="text/css" media="all" href="/ShopWeb/public/home/css/style.css">
-	<link rel="stylesheet" type="text/css" media="all" href="/ShopWeb/public/home/css/slider.css">
-
-	<script type="text/javascript" src="/ShopWeb/public/home/js/jquery-1.7.2.min.js"></script> 
-	<script type="text/javascript" src="/ShopWeb/public/home/js/move-top.js"></script>
-	<script type="text/javascript" src="/ShopWeb/public/home/js/easing.js"></script>
-	<script type="text/javascript" src="/ShopWeb/public/home/js/startstop-slider.js"></script>
 </head>
 <body>
 	<div class="wrap">
@@ -34,76 +27,30 @@
 					</div>
 					
 					<div class="see">
-						<p><a href="#">Xem tất cả</a></p>
+						<p><a href="product.php?p_loai=new">Xem tất cả</a></p>
 					</div>
 
 					<div class="clear"></div>
 				</div>
 
 				<div class="section group">
-					<div class="grid_1_of_4 images_1_of_4">
-						<a href="#"><img src="/ShopWeb/public/home/images/dellg3.jpg" alt="Ảnh"></a>
-						<h2>Dell G3-3579</h2>
-						<div class="price-details">
-							<div class="price-number">
-								<p><span class="rupees">$620.87</span></p>
-							</div>
+					<?php
+	                $sql_sp=mysqli_query($con,'select * from product join loai on product.p_loai=loai.p_loai where product.p_group="new"');
+	                $i=0;
+	                while($r_sp=mysqli_fetch_assoc($sql_sp)){
+	                    $i++;
+	                    echo'<div class="grid_1_of_4 images_1_of_4">
+	                        <img src="public/images/'.$r_sp['p_img'].'"/>
 
-							<div class="add-cart">
-								<h4><a href="#">Xem thêm</a></h4>
-							</div>
-
-							<div class="clear"></div>
-						</div>
-					</div>
-
-					<div class="grid_1_of_4 images_1_of_4">
-						<a href="#"><img src="/ShopWeb/public/home/images/dellg3.jpg" alt="Ảnh"></a>
-						<h2>Dell G3-3579</h2>
-						<div class="price-details">
-							<div class="price-number">
-								<p><span class="rupees">$620.87</span></p>
-							</div>
-
-							<div class="add-cart">
-								<h4><a href="#">Xem thêm</a></h4>
-							</div>
-
-							<div class="clear"></div>
-						</div>
-					</div>
-					
-					<div class="grid_1_of_4 images_1_of_4">
-						<a href="#"><img src="/ShopWeb/public/home/images/dellg3.jpg" alt="Ảnh"></a>
-						<h2>Dell G3-3579</h2>
-						<div class="price-details">
-							<div class="price-number">
-								<p><span class="rupees">$620.87</span></p>
-							</div>
-
-							<div class="add-cart">
-								<h4><a href="#">Xem thêm</a></h4>
-							</div>
-
-							<div class="clear"></div>
-						</div>
-					</div>
-
-					<div class="grid_1_of_4 images_1_of_4">
-						<a href="#"><img src="/ShopWeb/public/home/images/dellg3.jpg" alt="Ảnh"></a>
-						<h2>Dell G3-3579</h2>
-						<div class="price-details">
-							<div class="price-number">
-								<p><span class="rupees">$620.87</span></p>
-							</div>
-
-							<div class="add-cart">
-								<h4><a href="#">Xem thêm</a></h4>
-							</div>
-
-							<div class="clear"></div>
-						</div>
-					</div>
+	                        <h2>'.$r_sp['p_name'].'</h2>
+	                            <div class="price-details"><div class="price-number"><p><span class="rupees">'.$r_sp['p_gia'].'</span></p></div><div class="add-cart"><h4><a href="details.php?p_id'.$r_sp['p_id'].'">Chi tiết</a></h4></div>  
+	                            <div class="clear"></div>
+	                            </div>
+	                            </div>
+	                    ';
+	                    if($i%4==0) break;
+	                    }
+	                ?>
 				</div>
 
 				<div class="content_bottom">
@@ -112,76 +59,30 @@
 					</div>
 					
 					<div class="see">
-						<p><a href="#">Xem tất cả</a></p>
+						<p><a href="product.php?p_loai=hot">Xem tất cả</a></p>
 					</div>
 
 					<div class="clear"></div>
 				</div>
 
 				<div class="section group">
-					<div class="grid_1_of_4 images_1_of_4">
-						<a href="#"><img src="/ShopWeb/public/home/images/dellg3.jpg" alt="Ảnh"></a>
-						<h2>Dell G3-3579</h2>
-						<div class="price-details">
-							<div class="price-number">
-								<p><span class="rupees">$620.87</span></p>
-							</div>
+					<?php
+	                $sql_sp=mysqli_query($con,'select * from product join loai on product.p_loai=loai.p_loai where product.p_group="hot"');
+	                $i=0;
+	                while($r_sp=mysqli_fetch_assoc($sql_sp)){
+	                    $i++;
+	                    echo'<div class="grid_1_of_4 images_1_of_4">
+	                        <img src="public/images/'.$r_sp['p_img'].'"/>
 
-							<div class="add-cart">
-								<h4><a href="#">Xem thêm</a></h4>
-							</div>
-
-							<div class="clear"></div>
-						</div>
-					</div>
-
-					<div class="grid_1_of_4 images_1_of_4">
-						<a href="#"><img src="/ShopWeb/public/home/images/dellg3.jpg" alt="Ảnh"></a>
-						<h2>Dell G3-3579</h2>
-						<div class="price-details">
-							<div class="price-number">
-								<p><span class="rupees">$620.87</span></p>
-							</div>
-
-							<div class="add-cart">
-								<h4><a href="#">Xem thêm</a></h4>
-							</div>
-
-							<div class="clear"></div>
-						</div>
-					</div>
-
-					<div class="grid_1_of_4 images_1_of_4">
-						<a href="#"><img src="/ShopWeb/public/home/images/dellg3.jpg" alt="Ảnh"></a>
-						<h2>Dell G3-3579</h2>
-						<div class="price-details">
-							<div class="price-number">
-								<p><span class="rupees">$620.87</span></p>
-							</div>
-
-							<div class="add-cart">
-								<h4><a href="#">Xem thêm</a></h4>
-							</div>
-
-							<div class="clear"></div>
-						</div>
-					</div>
-
-					<div class="grid_1_of_4 images_1_of_4">
-						<a href="#"><img src="/ShopWeb/public/home/images/dellg3.jpg" alt="Ảnh"></a>
-						<h2>Dell G3-3579</h2>
-						<div class="price-details">
-							<div class="price-number">
-								<p><span class="rupees">$620.87</span></p>
-							</div>
-
-							<div class="add-cart">
-								<h4><a href="#">Xem thêm</a></h4>
-							</div>
-
-							<div class="clear"></div>
-						</div>
-					</div>
+	                        <h2>'.$r_sp['p_name'].'</h2>
+	                            <div class="price-details"><div class="price-number"><p><span class="rupees">'.$r_sp['p_gia'].'</span></p></div><div class="add-cart"><h4><a href="details.php?p_id'.$r_sp['p_id'].'">Chi tiết</a></h4></div>  
+	                            <div class="clear"></div>
+	                            </div>
+	                            </div>
+	                    ';
+	                    if($i%4==0) break;
+	                    }
+	                ?>
 				</div>
 				
 			</div>

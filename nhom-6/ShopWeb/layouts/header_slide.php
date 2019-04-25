@@ -3,18 +3,12 @@
 		<div class="categories">
 			<ul>
 				<h3>DANH SÁCH</h3>
-				<li><a href="#" title="">Dell</a></li>
-				<li><a href="#" title="">ASUS</a></li>
-				<li><a href="#" title="">MSI</a></li>
-				<li><a href="#" title="">ACER</a></li>
-				<li><a href="#" title="">HP</a></li>
-				<li><a href="#" title="">LENOVO</a></li>
-				<li><a href="#" title="">MACBOOK</a></li>
-				<li><a href="#" title="">ALIENWARE</a></li>
-				<li><a href="#" title="">XIAOMI</a></li>
-				<li><a href="#" title="">VĂN PHÒNG</a></li>
-				<li><a href="#" title="">GAMING</a></li>
-				<li><a href="#" title="">ĐỒ HỌA</a></li>
+				<?php
+                    $sql_loai=mysqli_query($con,'select * from loai');
+                    while($r_loai=mysqli_fetch_assoc($sql_loai)){
+                        echo '<li><a kind="'.$r_loai['l_name'].'" href="product.php?p_loai='.$r_loai['p_loai'].'">'.$r_loai['l_name'].'</a></li>';
+                    }
+                ?>
 			</ul>
 		</div>
 	</div>

@@ -1,3 +1,11 @@
+<link rel="stylesheet" type="text/css" media="all" href="public/home/css/style.css">
+<link rel="stylesheet" type="text/css" media="all" href="public/home/css/slider.css">
+
+<script type="text/javascript" src="public/home/js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="public/home/js/move-top.js"></script>
+<script type="text/javascript" src="public/home/js/easing.js"></script>
+<script type="text/javascript" src="public/home/js/startstop-slider.js"></script>
+
 <div class="header-top">
 	<div class="logo" title="Trang chủ Home Shoppe">
 		<a href="/ShopWeb"><img src="/ShopWeb/public/home/images/logo.png"></a>

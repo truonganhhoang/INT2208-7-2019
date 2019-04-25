@@ -10,8 +10,8 @@
 	</div>
 
 	<div class="search_box">
-		<form>
-			<input type="text" value="Tìm kiếm" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+		<form action="search.php">
+			<input type="text" type="submit" name="value" value="Tìm kiếm" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tìm kiếm';}"><input type="submit" value="">
 		</form>
 	</div>
 
