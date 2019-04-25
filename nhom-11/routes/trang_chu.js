@@ -25,4 +25,68 @@ router.get('/match.html', function (req, res) {
   });
 });
 
+router.get('/Watford-MC.html', function (req, res) {
+  var sql = "SELECT * FROM arsenal";
+  con_anh.query(sql,function(err, results) {
+    if (err) throw err;
+    res.render('Thong_ke/Watford-MC', {results});
+  });
+});
+
+router.get('/FCB-ATM.html', function (req, res) {
+  var sql = "SELECT * FROM arsenal";
+  con_anh.query(sql,function(err, results) {
+    if (err) throw err;
+    res.render('Thong_ke/FCB-ATM', {results});
+  });
+});
+router.get('/Real-Eibar.html', function (req, res) {
+  var sql = "SELECT * FROM arsenal";
+  con_anh.query(sql,function(err, results) {
+    if (err) throw err;
+    res.render('Thong_ke/Real-Eibar', {results});
+  });
+});
+router.get('/Bayer-Wolfsburg.html', function (req, res) {
+  var sql = "SELECT * FROM arsenal";
+  con_anh.query(sql,function(err, results) {
+    if (err) throw err;
+    res.render('Thong_ke/Bayer-Wolfsburg', {results});
+  });
+});
+router.get('/BVB-Stuttgart.html', function (req, res) {
+  var sql = "SELECT * FROM arsenal";
+  con_anh.query(sql,function(err, results) {
+    if (err) throw err;
+    res.render('Thong_ke/BVB-Stuttgart', {results});
+  });
+});
+router.get('/Juve-AC.html', function (req, res) {
+  var sql = "SELECT * FROM arsenal";
+  con_anh.query(sql,function(err, results) {
+    if (err) throw err;
+    res.render('Thong_ke/Juve-AC', {results});
+  });
+});
+router.get('/Napoli-Genoa.html', function (req, res) {
+  var sql = "SELECT * FROM arsenal";
+  con_anh.query(sql,function(err, results) {
+    if (err) throw err;
+    res.render('Thong_ke/Napoli-Genoa', {results});
+  });
+});
+router.get('/Nantes-PSG.html', function (req, res) {
+  var sql = "SELECT * FROM arsenal";
+  con_anh.query(sql,function(err, results) {
+    if (err) throw err;
+    res.render('Thong_ke/Nantes-PSG', {results});
+  });
+});
+router.get('/Marseille-Nice.html', function (req, res) {
+  var sql = "SELECT * FROM arsenal";
+  con_anh.query(sql,function(err, results) {
+    if (err) throw err;
+    res.render('Thong_ke/Marseille-Nice', {results});
+  });
+});
 module.exports = router;
