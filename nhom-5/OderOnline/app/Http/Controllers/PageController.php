@@ -132,17 +132,19 @@ class PageController extends Controller
 
         $rates_DB = DB::table('rates')
             ->join('customer', 'rates.customer_id', '=', 'customer.id')
+            ->orderBy('rates.updated_at', 'desc')
             ->select( 'customer.id as customer_id', 'customer.name as customer_name',
                 'rates.product_id as product_id', 'rates.rate as rate', 'rates.content as content')
             ->where('rates.product_id', '=', $id);
 
         $rates = $rates_DB->get();
+        //dd(count($rates));
 
         $star = round($rates_DB->avg('rate'), 3);
         $auth_rate = null;
 
         if (Auth::check() and count(DB::table('bills')
-                ->join('bill_detail', 'bills.id', '=', 'bill_detail.id_bill')
+                ->join('bill_detail', 'bills.id', '=', 'bill_detail.id')
                 ->where('bills.id_customer', '=', Auth::id())
                 ->where('bill_detail.id_product', '=', $id)->get()) > 0) {
 
@@ -159,6 +161,7 @@ class PageController extends Controller
                 $auth_rate['rate'] = $auth_rate_data[0]->rate;
                 $auth_rate['content'] = $auth_rate_data[0]->content;
             }
+            $a = 1 < 2 ? 1 : 2;
         }
         return view('page.details', compact('slide', 'product', 'type_product', 'star', 'rates', 'auth_rate'));
     }

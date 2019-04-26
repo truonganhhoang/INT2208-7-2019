@@ -86,11 +86,11 @@
                     <br>
                     <br>
                     @if ($auth_rate != null)
-                        <div id = "rateForm" style="display: none; height: 245px">
+                        <div id="rate-form" style="display: none; height: 245px">
                             <br>
                             <form method="POST" action="{{route('postReview')}}" style="height: 90%; padding: 0px 15px 0px 15px; alignment: center; background: lightskyblue; box-shadow: 3px 5px #c3c3c3;">
                                 @csrf
-                                <div id = 'stars' style="padding-top: 10px" onmouseout="bright()" >
+                                <div id='stars' style="padding-top: 10px" onmouseout="bright()" >
                                     @for ($i = 0; $i < 5; $i++)
                                         <i class="far fa-star" onmouseover="bright({{$i + 1}})" onclick="{
                                             document.getElementsByName('rate_input')[0].getAttributeNode('value').value = '{{$i + 1}}'
@@ -100,8 +100,7 @@
                                 <input readonly name="product_id" style="display: none" type="number" value="{{$auth_rate['product_id']}}">
                                 <input readonly name="customer_id" style="display: none" type="number" value="{{$auth_rate['customer_id']}}">
                                 <input readonly name="rate_input" style="display: none" type="number" value="{{$auth_rate['rate']}}">
-                                <textarea class="form-control" rows="5" name="content_input" placeholder="Nhận xét của bạn" maxlength="1000">{{$auth_rate['content']}}</textarea>
-                                <!-- todo: <p style="color: red; display: none">Không còn chỗ trống</p>-->
+                                <textarea class="form-control" rows="5" name="content_input" placeholder="Nhận xét của bạn" maxlength=900>{{$auth_rate['content']}}</textarea>
                                 <div style="float: right; padding: 5px">
                                     <button class="btn btn-default" style=" float: right; " type="reset" onclick="showHideForm()">HỦY</button>
                                 </div>
@@ -113,24 +112,27 @@
                         </div>
                     @endif
                     <br>
-                    <div style="padding: 15px; alignment: center; background: white">
-                        @foreach($rates as $rate)
-                            <div>
-                                <p style="display: inline">{{$rate->customer_name}}: </p>
-                                <span style="float: right;">
+
+                    <div id="customer-rates" style="display: block; padding: 15px; alignment: center; background: white">
+                        @for ($j = 0; $j < count($rates); $j++)
+                            <div style="display:{{$j < 5 ? "block" : "none"}}">
+                                <p style="display: inline; word-wrap:break-word; color: dodgerblue; font-weight: bold">{{$rates[$j]->customer_name}}: </p>
+                                <div style="float: right;">
                                     @for ($i = 0; $i < 5; $i++)
 
-                                        @if($i < $rate->rate)
+                                        @if($i < $rates[$j]->rate)
                                             <i class="fas fa-star" style="display: inline-block; color : #ffd655"></i>
                                         @else
                                             <i class="far fa-star" style="display: inline-block; color : #b3b8b5"></i>
                                         @endif
                                     @endfor
-                                </span>
-                                <p>{{$rate->content}}</p>
-                                <br>
+                                </div>
+                                <p style="  overflow: hidden; display: -webkit-box; -webkit-line-break: normal; -webkit-box-orient: vertical; word-wrap:break-word;">{{$rates[$j]->content}}</p>
                             </div>
-                        @endforeach
+                        @endfor
+                        @if (count($rates) > 5)
+                            <a id="see-more-button" style="display: block; text-align: center; color: yellowgreen" role="button" onclick="renderMoreRates()">Xem thêm</a>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -191,7 +193,7 @@
         });
         @if ($auth_rate != null)
             function showHideForm() {
-                let x = document.getElementById("rateForm");
+                let x = document.getElementById("rate-form");
 
                 if (x.style.display === "none") {
                     document.getElementsByName("rate_input")[0].getAttributeNode("value").value = "{{$auth_rate['rate']}}";
@@ -215,6 +217,23 @@
                     iArr[i].className = "far fa-star";
                     iArr[i].style.color = "#b3b8b5";
                 }
+            }
+        }
+        function renderMoreRates() {
+            let rateArr = document.getElementById("customer-rates").childNodes;
+            let maxLength = (rateArr.length - 3) / 2;
+            let st = 0;
+            for (let i = 0; i < maxLength; i++){
+                if (rateArr[i*2+1].style.display === "none") {
+                    st = i;
+                    break;
+                }
+            }
+            for (let i = st; i < st+5 && i < maxLength; i++){
+                rateArr[i*2+1].style.display = "block";
+            }
+            if (st + 5 >= maxLength){
+                document.getElementById("see-more-button").style.display = "none";
             }
         }
     </script>
