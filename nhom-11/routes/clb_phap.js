@@ -153,11 +153,11 @@ router.get('/saintetienne.html', function (req, res) {
   });
 });
 
-router.get('/strasbourg.html', function (req, res) {
+router.get('/strabourg.html', function (req, res) {
   var sql = "SELECT * FROM mancity WHERE vitri = 'GK';SELECT * FROM mancity WHERE vitri = 'DF';SELECT * FROM mancity WHERE vitri = 'MF';SELECT * FROM mancity WHERE vitri = 'FW';SELECT * FROM clb_phap.strasbourg";
   con.query(sql,[1,5], function(err, results) {
     if (err) throw err;
-    res.render('CLB/Pháp/strasbourg', {results});
+    res.render('CLB/Pháp/strabourg', {results});
   });
 });
 
