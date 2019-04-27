@@ -50,4 +50,9 @@ export class RegisterComponent implements OnInit {
                     this.loading = false;
                 });
     }
+  model: any;
+  
+  refresh(): void {
+    window.location.reload();
+  }
 }
