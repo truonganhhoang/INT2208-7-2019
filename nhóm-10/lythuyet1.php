@@ -73,7 +73,7 @@
   </nav>
 	<div class="content" style= "background: #A8B5BE;">
 		<div class="row">
-			<div class="col-sm-4 " style="background: white;" >
+			<div class="col-sm-3 " style="background: white;" >
 				<form method="POST">			
         			<select  name="mucc" class="form-control" style="margin-left: 5px;">
             			<option>Chọn mục</option>
@@ -94,7 +94,7 @@
 			
 
 
-  			<div class="col-sm-8" style="padding: 1em;font-size: xx-small;" >
+  			<div class="col-sm-9" style="padding: 3em;font-size: xx-small;" >
   				
   					<?php
 						$servername = "localhost";
