@@ -12,7 +12,7 @@
 	function login(){
 		echo '<form action="/forum/validateloginn.php" method="POST">
             <div class="form-group"> 
-              <input type="text" class="form-control" placeholder="Enter email" name="usernameinput" id="usernameinput"required="on"> </div>
+              <input type="text" class="form-control" placeholder="Enter Username" name="usernameinput" id="usernameinput"required="on"> </div>
             <div class="form-group mb-3"> <input type="password" class="form-control" name="passwordinput" placeholder="Password" id="passwordinput" required="on"> <small class="form-text text-muted text-right">
                 <a href="#" class="text-left mr-auto"> Recover password</a>
               </small> </div> <button type="submit" class="btn btn-primary" name="ok">Submit</button>
