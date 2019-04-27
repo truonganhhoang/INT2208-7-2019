@@ -42,13 +42,13 @@
   <div class="row">
     <div class="col-sm-1">
     </div>
-    <div class="col-sm-5" style="background-color: lightblue;">
+    <div class="col-sm-4" style="background-color: lightblue;">
    <h3>Hangman</h3>
     <p>Use the alphabet below to guess the word. </p>
     <div id="buttons">
     </div>  
   </div>
-  <div class="col-sm-5" style="background-color: lightblue;">
+  <div class="col-sm-6" style="background-color: lightblue;">
     <p style="font-size: 30px;">Topic: </p><h5 id="catagoryName" style="font-size: 30px;"></h5>
 
     <div id="hold">
@@ -60,7 +60,6 @@
       <button id="expl" hidden="off" style="font-size: 30px;padding: 4px;">Get explain</button>
       <button id="reset">Play again</button>
  </div>
-  </div>
   </div>
 <div class="col-sm-1">
   </div>

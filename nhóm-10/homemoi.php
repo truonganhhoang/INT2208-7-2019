@@ -6,12 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>UDict</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
- 
+
    <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script> 
-  
    <link rel="stylesheet" href="cssmoi.css" type ="text/css">
   <link rel="stylesheet" href="theme.css" type="text/css"> 
   <link rel="shortcut icon" type="image/ico" href="imgg/avv.ico"/>
@@ -26,13 +24,13 @@
       </button>
       <div class="collapse navbar-collapse text-center justify-content-center" id="navbar15">
         <ul class="navbar-nav">
-          <li class="nav-item mx-2"> <a class="nav-link" href="lythuyet1.php">Grammar</a> </li>
-          <li class="nav-item mx-2"> <a class="nav-link" href="Hangman.php">HangMan Game</a> </li>
-          <li class="nav-item mx-2"> <a class="nav-link navbar-brand mr-0 active" href="homemoi.php"><i class="fa d-inline fa-lg fa-stop-circle-o"></i>
+          <li class="nav-item mx-2"> <a class="nav-link" href="lythuyet1.php">Gammar</a> </li>
+          <li class="nav-item mx-2"> <a class="nav-link" href="HangMan.php">HangMan Game</a> </li>
+          <li class="nav-item mx-2"> <a class="nav-link navbar-brand mr-0 text-white" href="homemoi.php"><i class="fa d-inline fa-lg fa-stop-circle-o"></i>
               <b>UDict</b></a> </li>
-          <li class="nav-item"><a class="nav-link" href="index.php">Translate</a></li>
+          <li class="nav-item mx-2"> <a class="nav-link" href="index.php">Translate</a> </li>
           <li class="nav-item"><a class="nav-link" href="About.php">About us</a></li>
-          <li class="nav-item"><a class="nav-link" href=\forum/ > Forum</a></li>
+          <li class="nav-item"><a class="nav-link" href=\forum/ >Forum</a></li>
         </ul>
       </div>
     </div>
@@ -70,7 +68,7 @@
               <div class="form-group">
                     <select id="voice-select" class="form-control form-control-lg" style="width: 100%;font-size: 18px;"></select>
                 </div>
-                <button class="btn btn-light btn-md" id="speak" style="background-color:white; "><img src="imgg/pn.jpg" alt="Speak" style="width:100%"></button>
+                <button class="btn btn-light btn-md" id="speak" style="background-color:white; "><img src="/imgg/pn.jpg" alt="Speak" style="width:100%"></button>
           </form>
           <div>
           <?php
@@ -115,10 +113,10 @@
       <div class="row">
         <div class="col-md-12 text-center d-md-flex align-items-center"> <i class="d-block fa fa-stop-circle fa-2x mr-md-5 text-primary"></i>
           <ul class="nav mx-md-auto d-flex justify-content-center">
-            <li class="nav-item"> <a class="nav-link active" href="homemoi.php">Home</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="lythuyet1.php">Grammar</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="Hangman.php">HangMan</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="About.php">About</a> </li>
+            <li class="nav-item"> <a class="nav-link active" href="#">Home</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Gammar</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">HangMan</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
           </ul>
           <div class="row">
             <div class="col-md-12 d-flex align-items-center justify-content-md-between justify-content-center my-2"> <a href="#">
@@ -139,9 +137,9 @@
     </div>
   </div>
 
-   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 <script>
 $(document).ready(function(){
@@ -165,7 +163,6 @@ $(document).ready(function(){
  });
  
 });
-
 </script>
   <script src="js/speak.js"></script>
 

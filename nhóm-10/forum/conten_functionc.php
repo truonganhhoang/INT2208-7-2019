@@ -18,7 +18,7 @@
 		include ('dbconn.php');
 		$select = mysqli_query($con, "SELECT username,point FROM users
 									  ORDER BY point DESC LIMIT 10");
-		echo "<div class='col-sm-2' ><table class='rank'>";
+		echo "<div class='col-sm-3' ><table class='rank'>";
 		echo "<tr style='background-color:#83DFCE;' ><th width='50%' style='padding:10px;'>Name</th><th width='50%' style='padding:10px;'>Score</th></tr>";
 			
 		while ($row = mysqli_fetch_assoc($select)) {
@@ -54,7 +54,7 @@
 									  AND ($scid = subcategories.subcat_id) ORDER BY views DESC");
 		
 		if (mysqli_num_rows($select) != 0) {
-			echo "<table class='topic-table'>";
+			echo " <table class='topic-table'>";
 			echo "<tr><th>Title</th><th>Posted By</th><th>Date Posted</th><th>Views</th><th>Replies</th></tr>";
 			while ($row = mysqli_fetch_assoc($select)) {
 				$select1 = mysqli_query($con, "SELECT category_id, subcategory_id, topic_id FROM replies WHERE $cid = category_id AND $scid = subcategory_id AND ".$row['topic_id']." = topic_id");

@@ -12,9 +12,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
  <link rel="stylesheet" href="styles/main.css" type="text/css">
+ <link rel="shortcut icon" type="image/ico" href=\imgg/avv.ico >
 <style type="text/css">
   body {
     overflow-x: hidden;
@@ -78,10 +77,10 @@
         <div class="row">
           <div class="col-md-12 text-center d-md-flex align-items-center"> <i class="d-block fa fa-stop-circle fa-2x mr-md-5 text-primary"></i>
             <ul class="nav mx-md-auto d-flex justify-content-center">
-              <li class="nav-item"> <a class="nav-link active" href="#">Home</a> </li>
-              <li class="nav-item"> <a class="nav-link" href="#">Gammar</a> </li>
-              <li class="nav-item"> <a class="nav-link" href="#">HangMan</a> </li>
-              <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
+            <li class="nav-item"> <a class="nav-link active" href=\hommoi.php >Home</a> </li>
+              <li class="nav-item"> <a class="nav-link" href=\lythuyet.php >Gammar</a> </li>
+              <li class="nav-item"> <a class="nav-link" href=\Hangman.php >HangMan</a> </li>
+              <li class="nav-item"> <a class="nav-link" href=\About.php >About</a> </li>
             </ul>
             <div class="row">
               <div class="col-md-12 d-flex align-items-center justify-content-md-between justify-content-center my-2"> <a href="#">
