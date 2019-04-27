@@ -8,7 +8,7 @@
 	// 	header("Location: ".$_SERVER['HTTP_REFERER']."?status=regester_fail");
 	// }
 	// else{
-	$insert = mysqli_query($con, "INSERT INTO users (`username`, `password`,'point') VALUES ('".$newuser."', '".$newpwd."','0');");
+	$insert = mysqli_query($con, "INSERT INTO users (`username`, `password`,`point`) VALUES ('".$newuser."', '".$newpwd."','0');");
 	
 	if ($insert) {
 		header("Location: /forum/home.php?status=reg_success");

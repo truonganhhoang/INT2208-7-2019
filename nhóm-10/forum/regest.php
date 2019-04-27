@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -61,7 +61,7 @@ else return true;
           <?php 
                       if (isset($_GET['status'])) {
                   if ($_GET['status'] == 'regester_fail') {
-                    echo "<script type='text/javascript'>alert('this username is not available. please try another')</script>";
+                    echo "<script type='text/javascript'>alert('this username is  available. please try another')</script>";
                   } 
                 }
               ?>
