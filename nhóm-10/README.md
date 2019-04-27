@@ -15,6 +15,12 @@
   * Scrum Master: Đỗ Minh Anh
   * Development Team: 4 thành viên trong nhóm	
 ### Tóm tắt kế hoạch thực hiện:
-  * Tuần 1-4: Tìm hiểu các công nghệ cần dùng cho phần mềm, hoàn thành giao diện.
-  * Tuần 5-8: Hoàn thành phần chủ đề theo từ vựng và tra từ điển.
-  * Tuần 9-12: Hoàn thành phần kiểm tra từ, soát lỗi và hoàn thiện sản phẩm.
+  * Sprint 1 (2 tuần): Tìm hiểu các công nghệ cần dùng cho phần mềm, hoàn thành chức năng tra từ cơ bản.
+  * Sprint 2 (2 tuần): Hoàn thành phần học ngữ pháp, tra từ(gợi ý tìm kiếm).
+                       Thêm dịch văn bản, phát âm.
+                       Tạo game HangMan cơ bản.
+                       Tạo trang giới thiệu.
+  * Sprint 3 (2 tuần): Hoàn thành game HangMan.
+                       Thêm chức năng nhập dữ liệu băng giọng nói
+                       Tạo diễn đàn cơ bản cho trang
+                       
