@@ -1,8 +1,9 @@
 import React from 'react'
-import Menu from './Menu';
-import Hello from './Hello';
-import Register from './Register';
+import Menu from './Menu_';
+import Hello from './Login/Hello';
+import Register from './Signup/Register';
 import {Route} from 'react-router-dom';
+import './App.css';
 
 /*  Font awesome */
 
