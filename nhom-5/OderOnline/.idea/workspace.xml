@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8723e68a-a66c-4c7b-a6a7-360851f56ff1" name="Default Changelist" comment="update project">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/SocialAccountService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/SocialAccountService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bills.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/bills.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/login/cssLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/login/cssLogin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/product/keocudo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/addproduct.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/addproduct.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login/loginv3.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login/loginv3.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/typeProduct.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/typeProduct.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="8723e68a-a66c-4c7b-a6a7-360851f56ff1" name="Default Changelist" comment="update project" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +136,7 @@
     <session id="-521468319">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -219,8 +200,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/page/details.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="195" column="22" selection-start-line="195" selection-start-column="13" selection-end-line="195" selection-end-column="23" />
+            <state relative-caret-position="256">
+              <caret line="196" column="37" lean-forward="true" selection-start-line="196" selection-start-column="37" selection-end-line="196" selection-end-column="37" />
               <folding>
                 <element signature="e#2939#2985#0#HTML" expanded="true" />
                 <element signature="e#3072#3118#0#HTML" expanded="true" />
@@ -492,7 +473,7 @@
       <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="275" />
     <option name="y" value="16" />
     <option name="width" value="683" />
@@ -680,16 +661,23 @@
       <workItem from="1556280989384" duration="6042000" />
       <workItem from="1556327486179" duration="3169000" />
       <workItem from="1556436016970" duration="1006000" />
-      <workItem from="1556437351815" duration="2090000" />
+      <workItem from="1556437351815" duration="2359000" />
     </task>
+    <task id="LOCAL-00001" summary="update project">
+      <created>1556441001827</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1556441001859</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="400191000" />
+    <option name="totallyTimeSpent" value="400460000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13388805" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1066,8 +1054,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/page/details.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="195" column="22" selection-start-line="195" selection-start-column="13" selection-end-line="195" selection-end-column="23" />
+        <state relative-caret-position="256">
+          <caret line="196" column="37" lean-forward="true" selection-start-line="196" selection-start-column="37" selection-end-line="196" selection-end-column="37" />
           <folding>
             <element signature="e#2939#2985#0#HTML" expanded="true" />
             <element signature="e#3072#3118#0#HTML" expanded="true" />
