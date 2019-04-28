@@ -1,22 +1,22 @@
 import { Subject } from 'rxjs';
 import { Injectable } from '@angular/core';
-import * as mqtt from 'mqtt';
 import {environment} from '@environments/environment'
 import { UserService } from './user.service';
 import { Message } from '@app/_models/message.model';
+import { MqttService, IMqttMessage, IMqttClient } from 'ngx-mqtt';
 
 @Injectable()
 export class MessageService {
     private messageStream: any;
 
-    constructor(userSerivce: UserService) {
+    constructor(
+        private userSerivce: UserService,
+        private mqttService: MqttService
+        ) {
         this.messageStream = new Subject<Message>();
-        let username = userSerivce.currentUserValue.username;
-        let client = mqtt.connect(environment.mqttUrl, {clientId: username+Date.now()});
-        client.subscribe(username, (err)=>{console.log(err)});
-
-        client.on('message', (topic, payload)=>{
-            let payloadObj = JSON.parse(payload.toString());
+        let username = this.userSerivce.currentUserValue.username;
+        this.mqttService.observe(username).subscribe((mess: IMqttMessage)=>{
+            let payloadObj = JSON.parse(mess.payload.toString());
             let payloadMessage = new Message();
             payloadMessage.roomId = payloadObj.roomId;
             payloadMessage.content = payloadObj.content;
@@ -28,5 +28,9 @@ export class MessageService {
 
     getMessageStream() {
         return this.messageStream;
+    }
+
+    sendMessage(topic, message: Message) {
+        this.mqttService.publish(topic, message.toString());
     }
 }

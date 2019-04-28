@@ -32,6 +32,6 @@ const api = require('./api/api')(io);
 app.use('/auth',auth);
 app.use('/api',api);
 
-mqttMessengerServer();
+// mqttMessengerServer();
 
 server.listen(port,()=> console.log(`API running on localhost:${port}`));

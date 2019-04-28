@@ -37,6 +37,10 @@ import { UserService } from './_services/user.service';
 import { AlertService } from './_services/alert.service';
 import { MessageService } from './_services/message.service';
 
+import {
+    MqttModule
+  } from 'ngx-mqtt';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -58,6 +62,11 @@ import { MessageService } from './_services/message.service';
         MatCheckboxModule,
         MatNativeDateModule, MatInputModule,
         FormsModule,
+        MqttModule.forRoot({
+            hostname: 'localhost',
+            port: 9001,
+            path:''
+        })
     ],
     declarations: [
         AppComponent,
@@ -80,7 +89,7 @@ import { MessageService } from './_services/message.service';
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         UserService,
         AlertService,
-        MessageService
+        MessageService,
     ],
     bootstrap: [AppComponent]
 })

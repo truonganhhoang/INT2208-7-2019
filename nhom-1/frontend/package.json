@@ -23,7 +23,6 @@
     "@angular/router": "~7.1.0",
     "bootstrap": "^4.2.1",
     "core-js": "^2.5.4",
-    "mqtt": "^2.18.8",
     "ngx-textarea-autosize": "^2.0.0",
     "rxjs": "~6.3.3",
     "socket.io": "^2.2.0",
