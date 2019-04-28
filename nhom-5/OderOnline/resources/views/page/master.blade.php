@@ -50,7 +50,7 @@
             </ul>
             <form class="navbar-form navbar-left search-form" method="get" action="{{route('searchall')}}">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Tìm kiếm" size="30" name="key">
+                    <input type="text" class="form-control" placeholder="Search" size="30" name="key">
                     <div class="input-group-btn">
                         <button class="btn btn-default" type="submit">
                             <i class="glyphicon glyphicon-search"></i>

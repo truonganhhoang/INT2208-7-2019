@@ -44,8 +44,8 @@
                             <p>- - - - - - - - - - - - - Sign In With - - - - - - - - - - - - - </p>
                             <ul>
                                 <li><a href="{{route('loginApp','facebook')}}"><i class="fab fa-facebook"></i> Facebook</a></li>
-                                <li><a href="{{route('loginApp','google')}}"><i class="fab fa-google-plus"></i> Google+</a></li>
-                                <li><a href=""><i class="fab fa-twitter"></i> Twitter</a></li>
+                                <li id="google"><a href="{{route('loginApp','google')}}"><i class="fab fa-google-plus"></i> Google+</a></li>
+                               <!-- <li><a href=""><i class="fab fa-twitter"></i> Twitter</a></li>-->
                             </ul>
                         </div>
                         <div class="clearfix"></div>

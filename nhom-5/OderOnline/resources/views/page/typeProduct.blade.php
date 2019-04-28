@@ -18,7 +18,7 @@
                     <div class="col-sm-3" style="margin-bottom: 30px">
                         <div class="single-item">
                             <div class="single-item-header">
-                                <a href="{{route('details',[$pro->id_type,$pro->id])}}"><img  class="img-fluid newproduct" src="../img/product/{{$pro->image}}" alt=""></a>
+                                <a href="#"><img  class="img-fluid newproduct" src="../img/product/{{$pro->image}}" alt=""></a>
                             </div>
                             <div class="body">
                                 <p class="single-item-title">{{$pro->name}}</p>
@@ -37,7 +37,7 @@
                             </div>
                             <div class="caption" style="margin-top: 10px">
                                 <a class="shopping shop"  href="{{route('cart',$pro->id)}}"><i class="fas fa-cart-plus"></i></a>
-                                <a class="shopping pay"   href="{{route('details',[$pro->id_type,$pro->id])}}">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                <a class="shopping pay"   href="{{route('details',[$pro->id_type,$pro->id])}}">Details<i class="fa fa-chevron-right"></i></a>
                                 @if(\Illuminate\Support\Facades\Auth::id() == 1)
                                    <!-- <a href="{{route('dropsp',$pro->id)}}"><i class="fas fa-trash fa-lg"></i></a>-->
                                     

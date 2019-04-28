@@ -34,7 +34,7 @@ class SocialAccountService extends VerificationController
                 $user = User::create([
                     'email' => $email,
                     'name' => $providerUser->getName(),
-                    'password' => $providerUser->getName(),
+                    'password' => bcrypt($email),
                     'email_verified_at'=>$datetime->format('Y-m-d'),
                 ]);
             }else{

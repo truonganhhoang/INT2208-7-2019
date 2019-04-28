@@ -9,7 +9,6 @@ use App\customer;
 use App\products;
 use App\slide;
 use App\User;
-use App\Rates;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -26,7 +25,7 @@ class PageController extends Controller
            //$name=$req->getClientOriginalName();
            $file = $req->file('img');
            $name = $file->getClientOriginalName();
-           $file->move('img',$name);
+           $file->move('img\product',$name);
        }
        else{
            dd('error');
@@ -49,7 +48,6 @@ class PageController extends Controller
         else if(str_word_count($key) >= 20){
             return redirect('/')->with('longText','longText');
         }
-
         $getS = products::where('name','like','%'.str_replace(' ','%',$req->key).'%')->orWhere('unit_price',$req->key)->get();
         if(count($getS) == 0)
         {
@@ -124,6 +122,7 @@ class PageController extends Controller
         return redirect('/');
     }
 
+
     public function detailProduct($id_type,$id){
         $slide = slide::all();
         $product = products::where('id',$id)->get();
@@ -166,29 +165,6 @@ class PageController extends Controller
         return view('page.details', compact('slide', 'product', 'type_product', 'star', 'rates', 'auth_rate'));
     }
 
-    /*
-    public function detailProduct($id_type,$id){
-        $slide = slide::all();
-        $product = products::where('id',$id)->get();
-        $type_product = products::where('id_type',$id_type)->paginate(5);
-        $rates = Rates::where('product_id',$id)->get();
-        $auth_rate = null;
-        $rated_customer = array();
-        $star = round(DB::table('rates')->where('product_id',$id)->avg('rate'),3);
-        foreach ($rates as $rate) {
-            $rated_customer[$rate['customer_id']] = (customer::where('id', $rate['customer_id']))->get()[0]['name'];
-            if (Auth::id() == $rate['customer_id'])
-                $auth_rate = $rate;
-        }
-        if ($auth_rate == null) {
-            $auth_rate['product_id'] = $id;
-            $auth_rate['customer_id'] = Auth::id();
-            $auth_rate['rate'] = 0;
-            $auth_rate['content'] = '';
-        }
-        return view('page.details',compact('slide','product','type_product','star','rates','auth_rate','rated_customer'));
-    }
-    */
 
     public function profile(){
         $slide = [];
@@ -265,8 +241,12 @@ class PageController extends Controller
 
     }
     public function view_don_hang(){
+
         $sp = Cart::all();
         $total = 0;
+        if(count($sp) == 0 ){
+            return redirect('/')->with('sp','Hiện tại chưa có sản phẩm nào');
+        }
         if(Auth::check()) {
             if(Auth::user()->hasVerifiedEmail())
             {
@@ -322,6 +302,8 @@ class PageController extends Controller
         }
     }
     public function post_don_hang(Request $req){
+            //dd($req->thanhtoan);
+
             $mess =[
                 'name.required'=>'Vui lòng không bỏ trống mục này',
                 'phone.required'=>'Vui lòng không bỏ trống mục này',
@@ -329,9 +311,10 @@ class PageController extends Controller
                 'thanhtoan.required'=>'Vui lòng chọn phương thức thanh toán',
                 'note.required'=>'Vui lòng không bỏ trống mục này',
                 'name.max'=>'Dài nhất chỉ có 50 kí tự',
-                'phone.numberic'=>'Chỉ chứa kí tự số',
-                'phone.max'=>'Dài nhất chỉ chứa 11 kí tự',
-                'phone.min'=>'Ít nhất là 10 kí tự',
+                'phone.numeric'=>'Chỉ chứa kí tự số',
+                'phone.digits_between'=>'Số điện thoại không quá 10 số',
+                //'phone.min'=>'Ít nhất là 10 kí tự',
+                'phone.max'=>'Dài nhất chỉ chứa 10 kí tự',
                 'address.max'=>'Dài nhất chỉ chứa 200 kí tự',
                 'note'=>'Dài nhất chứa 500 kí tự',
 
@@ -340,14 +323,14 @@ class PageController extends Controller
             $validator = Validator::make($req->all(), [
 
                 'name'=>'required|max:50',
-                'phone'=>'required|min:10|numeric|max:11',
+                'phone'=>'required|numeric|digits_between:1,10',
                 'address'=>'required|max:200',
                 'thanhtoan'=>'required',
                 'note'=>'max:500',
             ],$mess);
             if($validator->fails()){
                 //d('error');
-                return redirect('\don-hang')
+                return redirect('don-hang')
                     ->withErrors($validator)
                     ->withInput();
             }else{
@@ -368,24 +351,21 @@ class PageController extends Controller
                 //dd(Carbon::now()->toDateTimeString('Y-m-d'));
                 $id = Auth::id();
                 $email = User::where('id',$id)->value('email');
-                customer::create([
-                    'id'=>$id,
-                    'name'=>$req->name,
-                    'email'=>$email,
-                    'phone_number'=>$req->phone,
-                    'address'=>$req->address,
-                    'note'=>$req->note,
-                ]);
-                bills::create([
-                    'id'=>$id,
-                    'id_customer'=>$id,
-                    'date_order'=>$dt->format('Y-m-d'),
-                    'total'=>$total,
-                    'payment'=>$req->thanhtoan,
-                    'note'=>$req->note,
+                $check = customer::where('id',$id)->value('id');
+                //dd($check);
+                if($check == null)
+                {
+                  //  dd('sc');
 
-                ]);
+                    customer::create([
+                        'id'=>$id,
+                        'name'=>$req->name,
+                        'email'=>$email,
+                        'phone_number'=>$req->phone,
+                        'address'=>$req->address,
 
+                    ]);
+                }
                 foreach ($sp as $s){
                     $unit = 0;
                     if($s->sale_price != 0)
@@ -405,6 +385,16 @@ class PageController extends Controller
                     ]);
 
                 }
+                bills::create([
+                    'id'=>$id,
+                    'id_customer'=>$id,
+                    'date_order'=>$dt->format('Y-m-d'),
+                    'total'=>$total,
+                    'payment'=>$req->thanhtoan,
+                    'note'=>$req->note,
+
+                ]);
+                DB::table('cart')->where('drops', '=', 1)->delete();
             }
 
             return redirect('/')->with('order','Đặt hàng thành công');

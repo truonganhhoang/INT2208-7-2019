@@ -22,7 +22,7 @@ Route::get('/testlogin',function(){
 });
 //profile
 Route::get('/profile','PageController@profile')->name('profile_user')->middleware('verified');
-Route::get('/profile/{id}/changePW','PageController@profilePW')->name('profile_user_pw');
+Route::get('/profile/{id}/change-password','PageController@profilePW')->name('profile_user_pw');
 // change account
 Route::put('/changeInfo/{id}','PageController@putInfo')->name('change_info');
 Route::put('/changePw/{id}','PageController@putPw')->name('change_pw');
@@ -147,7 +147,10 @@ Route::get('/demo',function(){
 })->name('just_demo');
 Route::post('/post-don-hang','PageController@post_don_hang')->name('post_don_hang');
 Route::get('thanh-toan/{id}','PageController@thanhtoan')->name('thanh_toan');
-
+Route::get('/test_img',function (){
+    return view('page.image');
+});
+Route::get('/post_img','PageController@upload')->name('post_img');
 // Review Post Routes...
 Route::prefix('details')->group(function () {
     Route::get('user','Auth\Review@getReviewForm')->name('getReview');
