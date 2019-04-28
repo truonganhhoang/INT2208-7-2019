@@ -399,7 +399,7 @@ class PageController extends Controller
                 }
                 bills::create([
                     'id'=>$id,
-                    //'id_customer'=>$id,
+                    'id_customer'=>$id,
                     'date_order'=>$dt->format('Y-m-d'),
                     'total'=>$total,
                     'payment'=>$req->thanhtoan,
