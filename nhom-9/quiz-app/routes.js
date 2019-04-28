@@ -13,13 +13,18 @@ router.get('/', (req, res, next) =>{
         }
     });
 })
-router.get('/:id?', function (req, res, next) {
+router.get('/api/test/:id', function (req, res) {
+    // console.log(req.params.id);    
+    res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
     if (req.params.id) {
         quizs.getQuizsByid(req.params.id, function (err, rows) {
             if (err) {
                 res.json(err);
             } else {
                 res.json(rows);
+                // console.log(rows);
             }
         });
     } else {
@@ -65,6 +70,9 @@ router.put('/:id', function (req, res, next) {
 });
 
 router.get('/api/users', function(req, res) {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
     users.getAllUsers(function (err, rows) {
         if (err) {
             res.json(err);

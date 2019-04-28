@@ -28,7 +28,8 @@ export class TestingComponent implements OnInit {
   ngOnInit() {
     this.title = 'Test ' + (parseInt(this.route.snapshot.paramMap.get('id'), 10) + 1);
     this.titleService.setTitle(this.title);
-    this.questions = this.questionService.getTest();
+    this.questions = this.questionService.getTest(parseInt(this.route.snapshot.paramMap.get('id'), 10) + 1);
+    // console.log(this.questions);
     this.length = this.questions.length;
     this.currentIndex = 0;
     this.update();
