@@ -160,7 +160,6 @@ class PageController extends Controller
                 $auth_rate['rate'] = $auth_rate_data[0]->rate;
                 $auth_rate['content'] = $auth_rate_data[0]->content;
             }
-            $a = 1 < 2 ? 1 : 2;
         }
         return view('page.details', compact('slide', 'product', 'type_product', 'star', 'rates', 'auth_rate'));
     }

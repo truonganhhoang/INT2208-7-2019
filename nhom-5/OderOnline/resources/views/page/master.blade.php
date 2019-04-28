@@ -50,7 +50,7 @@
             </ul>
             <form class="navbar-form navbar-left search-form" method="get" action="{{route('searchall')}}">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" size="30" name="key">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm" size="30" name="key">
                     <div class="input-group-btn">
                         <button class="btn btn-default" type="submit">
                             <i class="glyphicon glyphicon-search"></i>
@@ -125,7 +125,7 @@
                         </ul>
                     </div>
                 @else
-                        <li><a href="{{route('reguser')}}" target="_parent"><span class="glyphicon glyphicon-user"></span>Đăng kí</a></li>
+                        <li><a href="{{route('reguser')}}" target="_parent"><span class="glyphicon glyphicon-user"></span>Đăng ký</a></li>
                         <li><a href="{{route('login')}}" target="_parent"><span class="glyphicon glyphicon-log-in"></span>Đăng nhập</a></li>
                 @endif
 

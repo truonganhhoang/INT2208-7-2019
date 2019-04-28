@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đăng Kí</title>
+    <title>Đăng Ký</title>
     <script src="../bootstrap/jquery.min.js"></script>
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
     <script src="../bootstrap/bootstrap.min.js"></script>
@@ -16,7 +16,7 @@
     <div class="col-sm-6 col-sm-offset-3" style="margin-top: 10%;box-shadow: 10px 10px 10px 10px #9d9d9d;border-radius: 20px">
         <div class="form-group">
             <div class="top">
-                <h3 class="head">Đăng Kí</h3>
+                <h3 class="head">Đăng Ký</h3>
             </div>
             <form method="POST" action="{{route('postreg')}}">
                 @csrf
@@ -58,7 +58,7 @@
                 @if($errors->has('againpassword'))
                     <p  class="alert alert-danger">{{$errors->first('againpassword')}}</p>
                 @endif
-                <button type="submit" class="btn btn-primary">Đăng kí</button>
+                <button type="submit" class="btn btn-primary">Đăng ký</button>
 
             </form>
         </div>

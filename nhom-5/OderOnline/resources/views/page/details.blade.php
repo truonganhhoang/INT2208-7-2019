@@ -29,7 +29,7 @@
                                 <div class="caption" style="margin-top: 10px">
                                     <a class="shopping shop"  href="{{route('cart',$sp->id)}}"><i class="fas fa-cart-plus"></i></a>
 
-                                    <a class="shopping pay"   href="{{route('details',[$sp->id_type,$sp->id])}}">Details<i class="fa fa-chevron-right"></i></a>
+                                    <a class="shopping pay"   href="{{route('details',[$sp->id_type,$sp->id])}}">Chi tiết<i class="fa fa-chevron-right"></i></a>
 
                                 </div>
 
@@ -113,9 +113,9 @@
                     @endif
                     <br>
 
-                    <div id="customer-rates" style="display: block; padding: 15px; alignment: center; background: white">
+                    <div id="customer-rates" style="display: block; padding: 0px 15px 0px 15px; alignment: center; background: white">
                         @for ($j = 0; $j < count($rates); $j++)
-                            <div style="display:{{$j < 5 ? "block" : "none"}}">
+                            <div style="border-bottom: .1rem dashed lightgray; padding: 15px 0px 5px 0px; display:{{$j < 5 ? "block" : "none"}}">
                                 <p style="display: inline; word-wrap:break-word; color: dodgerblue; font-weight: bold">{{$rates[$j]->customer_name}}: </p>
                                 <div style="float: right;">
                                     @for ($i = 0; $i < 5; $i++)
@@ -127,7 +127,11 @@
                                         @endif
                                     @endfor
                                 </div>
-                                <p style="  overflow: hidden; display: -webkit-box; -webkit-line-break: normal; -webkit-box-orient: vertical; word-wrap:break-word;">{{$rates[$j]->content}}</p>
+                                <div style="min-height: 20px; display: block; overflow: hidden; -webkit-box-orient: vertical; word-wrap:break-word;">
+                                    {{trim(substr($rates[$j]->content, 0, 400), " ")}}@if(strlen($rates[$j]->content) > 400)<span style="display: inline;">...</span><span style="display: none;">{{substr($rates[$j]->content, 400)}}</span>
+                                    <a class="seeAll" style="color: green; text-decoration: none; outline: none; " role="button"> xem hết</a>
+                                @endif
+                                </div>
                             </div>
                         @endfor
                         @if (count($rates) > 5)
@@ -191,7 +195,16 @@
                 $(this).css('background','')
             });
 
-
+            $(".seeAll").click(function(){
+                if($(this).text() === " xem hết") {
+                    $(this).html(" rút gọn");
+                } else {
+                    $(this).html(" xem hết");
+                }
+                $(this).prev().prev().toggle();
+                $(this).prev().toggle();
+                return false;
+            });
         });
         @if ($auth_rate != null)
             function showHideForm() {

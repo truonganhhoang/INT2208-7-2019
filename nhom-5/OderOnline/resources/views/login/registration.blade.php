@@ -1,11 +1,11 @@
 @extends('page.master')
 @section('title')
-    Đăng kí
+    Đăng ký
 @stop
 @section('content')
         <div class="container">
             <form action="{{ route('register') }}" method="post" class="form-horizontal col-sm-6 col-sm-offset-3" style="background-color: white;padding: 20px;border: 1px solid green;border-radius: 15px;margin-top: 8%;margin-bottom: 8%">
-                <h3 style="margin-left: 40%">Đăng kí</h3>
+                <h3 style="margin-left: 40%">Đăng ký</h3>
                 @csrf
                 @if (session('success'))
                     <div class="alert-success">
@@ -55,7 +55,7 @@
                             <span class="form-control-feedback"><i style="margin-top: 50%" class="fas fa-lock"></i></span>
                         </div>
                     </div>
-                    <input style="margin-left: 30%" class="btn btn-dark" type="submit" value="Đăng kí">
+                    <input style="margin-left: 30%" class="btn btn-dark" type="submit" value="Đăng ký">
 
                 </div>
                 <div class="col-sm-2" style="margin-top: 20%">

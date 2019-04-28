@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đăng Kí</title>
+    <title>Đăng Ký</title>
     <script src="../bootstrap/jquery.min.js"></script>
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
     <script src="../bootstrap/bootstrap.min.js"></script>
