@@ -30,6 +30,14 @@ body {
 .gray {
   color: #3d3d5c;
 }
+.zoom {
+  background-color: transparent;
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.5);
+}
 
 
  
