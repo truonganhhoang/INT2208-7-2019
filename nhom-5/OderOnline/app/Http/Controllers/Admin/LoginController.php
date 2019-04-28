@@ -47,10 +47,12 @@ class LoginController extends Controller
 
     }
     public function logOut(){
-
+        //dd(Auth::id());
+        DB::table('cart')->where('id_user','=',Auth::id())->delete();
         Auth::logout();
+        $id_user = Auth::id();
 
-        DB::table('cart')->where('drops', '=', 1)->delete();
+
 
         return redirect('/');
     }

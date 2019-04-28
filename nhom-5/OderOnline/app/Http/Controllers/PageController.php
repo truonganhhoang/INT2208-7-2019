@@ -67,11 +67,17 @@ class PageController extends Controller
     }
     public function Cart($id)
     {
-       // $idUser = Auth::id();
+        $idUser = Auth::id();
         if(Auth::check() == true)
         {
-            $product = products::where('id',$id)->get();
-            $findId =  Cart::where('id_type',$id)->value('id_type');
+            $product = products::where([
+                ['id','=',$id],
+
+            ])->get();
+            $findId =  Cart::where([
+                ['id_type','=',$id],
+                ['id_user','=',Auth::id()]
+            ])->value('id_type');
 
             if($findId == null)
             {
@@ -83,6 +89,7 @@ class PageController extends Controller
                     'unit_price'=>$product[0]['unit_price'],
                     'sale_price'=>$product[0]['promotion_price'],
                     'img'=>$product[0]['image'],
+                    'id_user'=>$idUser,
                     'amount'=>1,
 
 
@@ -91,7 +98,10 @@ class PageController extends Controller
                 return redirect()->back();
             }
             else{
-                $amount =  Cart::where('id_type',$id)->value('amount');
+                $amount =  Cart::where([
+                    ['id_type','=',$id],
+                    ['id_user','=',Auth::id()]
+                ])->value('amount');
                 DB::table('cart')
                     ->where('id_type', $findId)
                     ->update(['amount' => $amount+1]);
@@ -109,7 +119,10 @@ class PageController extends Controller
 
     public function dropItem($id)
     {
-        $amount = Cart::where('id_type',$id)->value('amount');
+        $amount = Cart::where([
+            ['id_type','=',$id],
+            ['id_user','=',Auth::id()]
+        ])->value('amount');
         if($amount > 1)
         {
             DB::table('cart')->where('id_type','=',$id)->update(['amount'=>$amount-1]);
@@ -143,12 +156,12 @@ class PageController extends Controller
         $auth_rate = null;
 
         if (Auth::check() and count(DB::table('bills')
-                ->join('bill_detail', 'bills.id', '=', 'bill_detail.id')
+                ->join('bill_detail', 'bills.id_customer', '=', 'bill_detail.id')
                 ->where('bills.id_customer', '=', Auth::id())
                 ->where('bill_detail.id_product', '=', $id)->get()) > 0) {
 
-            $auth_rate_data = $rates_DB->where('rates.customer_id', '=', Auth::id())->get();
-
+            $auth_rate_data = customer::where('id',Auth::id())->get(); //$rates_DB->where('rates.customer_id', '=', Auth::id())->get();
+            //dd($auth_rate_data);
             if (count($auth_rate_data) <= 0) {
                 $auth_rate['product_id'] = $id;
                 $auth_rate['customer_id'] = Auth::id();
@@ -242,7 +255,7 @@ class PageController extends Controller
     }
     public function view_don_hang(){
 
-        $sp = Cart::all();
+        $sp = Cart::where('id_user','=',Auth::id())->get();
         $total = 0;
         if(count($sp) == 0 ){
             return redirect('/')->with('sp','Hiện tại chưa có sản phẩm nào');
@@ -377,7 +390,7 @@ class PageController extends Controller
                     }
                     bill_detail::create([
                         'id'=>$id,
-                        'id_product'=>$s->id,
+                        'id_product'=>$s->id_type,
                         'quantity'=>$s->amount,
                         'unit_price'=>$unit,
 
@@ -387,7 +400,7 @@ class PageController extends Controller
                 }
                 bills::create([
                     'id'=>$id,
-                    'id_customer'=>$id,
+                    //'id_customer'=>$id,
                     'date_order'=>$dt->format('Y-m-d'),
                     'total'=>$total,
                     'payment'=>$req->thanhtoan,
