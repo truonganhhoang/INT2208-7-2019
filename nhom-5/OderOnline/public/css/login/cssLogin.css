@@ -51,10 +51,12 @@ body{
     list-style-type:none;
 }
 .social-login ul li{
+    margin-left: 30px;
     width:33%;
     float:left;
     clear:fix;
 }
+
 .social-login ul li a{
     font-size:13px;
     color:#fff;

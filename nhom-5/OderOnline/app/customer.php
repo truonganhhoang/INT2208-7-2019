@@ -8,7 +8,7 @@ class customer extends Model
 {
     //
     protected $table = 'customer';
-    protected $fillable = ['id','name','email','address','phone_number','created_at','update_at'];
+    protected $fillable = ['id','name','email','address','created_at','update_at','phone_number'];
     public function bills(){
         return $this->hasMany('App\bills','id_customer','id');
     }

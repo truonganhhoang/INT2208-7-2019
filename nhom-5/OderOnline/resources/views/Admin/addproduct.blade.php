@@ -24,32 +24,53 @@
             </div>
             @endif
             <div class="sp-name">
+                @if($errors->has('name'))
+                    <p  class="alert-danger">{{$errors->first('name')}}</p>
+                @endif
                 <span>Tên sản phẩm</span>
                 <input class="form-control" placeholder="" type="text" name="name" value =@yield('name')>
             </div>
             <div class="sp-type">
+                @if($errors->has('id_type'))
+                    <p  class="alert-danger">{{$errors->first('id_type')}}</p>
+                @endif
                 <span>Loại sản phẩm</span>
                 <input class="form-control" placeholder="" type="text" name="id_type" value =@yield('type') >
             </div>
             <div class="sp-description">
+                @if($errors->has('description'))
+                    <p  class="alert-danger">{{$errors->first('description')}}</p>
+                @endif
                 <span>Mô tả sản phẩm</span>
                 <input class="form-control" placeholder="" type="text" name="description" value =@yield('description') >
             </div>
             <div class="sp-unit-price">
+                @if($errors->has('unit_price'))
+                    <p  class="alert-danger">{{$errors->first('unit_price')}}</p>
+                @endif
                 <span>Giá gốc</span>
                 <input class="form-control" placeholder="" type="text" name="unit_price" value =@yield('unit_price')>
             </div>
             <div class="sp-promotion-price">
+                @if($errors->has('promotion_price'))
+                    <p  class="alert-danger">{{$errors->first('promotion_price')}}</p>
+                @endif
                 <span>Giá sale</span>
                 <input class="form-control" placeholder="" type="text" name="promotion_price" value =@yield('promotion_price') >
             </div>
             <div class="sp-box">
+                @if($errors->has('unit'))
+                    <p  class="alert-danger">{{$errors->first('unit')}}</p>
+                @endif
                 <span>Kiểu sản phẩm</span>
                 <input class="form-control" placeholder="" type="text" name="unit" value =@yield('box')>
             </div>
             <div class="sp-image">
+                @if($errors->has('img'))
+                    <p  class="alert-danger">{{$errors->first('img')}}</p>
+                @endif
                 <span>Hình ảnh</span>
-                <input  type="file" name="image" id="image">
+                <input  type="file" name="img" id="img">
             </div>
             <div class="sp-submit" style="position: relative;left: 40%;top: 3px">
 

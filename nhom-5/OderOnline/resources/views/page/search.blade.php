@@ -35,7 +35,7 @@
                             <div class="caption" style="margin-top: 10px">
                                 <a class="shopping shop"  href="{{route('cart',$pro->id)}}"><i class="fas fa-cart-plus"></i></a>
 
-                                <a class="shopping pay"   href="{{route('details',[$pro->id_type,$pro->id])}}">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                <a class="shopping pay"   href="{{route('details',[$pro->id_type,$pro->id])}}">Details<i class="fa fa-chevron-right"></i></a>
                                 @if(\Illuminate\Support\Facades\Auth::id() == 1)
                                 <!--<a href="{{route('dropsp',$pro->id)}}"><i class="fas fa-trash fa-lg"></i></a>-->
                                     <a class="dropItemKM" href="#"><i class="fas fa-trash fa-lg"></i></a>
@@ -64,7 +64,7 @@
                 var data = confirm("Bạn có muốn xóa sản phẩm này không?");
                 if(data === true){
 
-                    // $(this).attr("href", "");
+                    $(this).attr("href", "{{route('dropsp',$pro->id)}}");
                 }
                 else{
                     $(this).attr("href", "#");

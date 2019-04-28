@@ -29,7 +29,7 @@
                                 <div class="caption" style="margin-top: 10px">
                                     <a class="shopping shop"  href="{{route('cart',$sp->id)}}"><i class="fas fa-cart-plus"></i></a>
 
-                                    <a class="shopping pay"   href="{{route('details',[$sp->id_type,$sp->id])}}">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                    <a class="shopping pay"   href="{{route('details',[$sp->id_type,$sp->id])}}">Details<i class="fa fa-chevron-right"></i></a>
 
                                 </div>
 
@@ -190,6 +190,8 @@
             $(".pay").mouseleave(function () {
                 $(this).css('background','')
             });
+
+
         });
         @if ($auth_rate != null)
             function showHideForm() {
