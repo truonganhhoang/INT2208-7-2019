@@ -12,8 +12,8 @@ class RegController extends Controller
 {
     //
     public function getReg(){
-        $slide = [];
-        return view('login.registration',compact('slide'));
+
+        return view('login.reg');
     }
     public function postReg(Request $request){
 

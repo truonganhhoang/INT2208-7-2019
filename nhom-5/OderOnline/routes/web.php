@@ -33,10 +33,7 @@ Route::get('/', 'PageController@index')->name('home');
 
 
 // dang ki tai khoan
-Route::get('/registration',function (){
-    $slide = [];
-    return view('login.registration',compact('slide'));
-});
+
 Route::prefix('reg')->group(function () {
 
     Route::post('puser','Admin\RegController@postReg')->name('postreg');

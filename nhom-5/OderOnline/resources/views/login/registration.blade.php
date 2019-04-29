@@ -66,6 +66,7 @@
                     <a href="#" style="padding: 10px;background-color: #1b4b72;color: white !important;letter-spacing: 2px"><!--<i style="margin-right: 2px" class="fab fa-facebook fa-lg"></i>-->Facebook</a>
                     <hr>
                     <a href="{{route('loginApp','google')}}" style="padding-top: 10px;padding-bottom: 10px; padding-left:25px;padding-right:25px;background-color: red;color: white !important;letter-spacing: 2px"><!--<i style="margin-right: 2px" class="fab fa-google-plus fa-lg"></i>-->Gmail</a>
+
                 </div>
 
             </form>
