@@ -31,7 +31,7 @@ export class QuestionService {
       _res = JSON.parse(data._body);
       console.log(_res);
     });
-    console.log(_res);
+    setTimeout(()=>{console.log(_res)}, 3000,);
     return arr;
   }
 
