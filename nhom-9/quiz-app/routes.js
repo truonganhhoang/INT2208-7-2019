@@ -70,6 +70,7 @@ router.put('/:id', function (req, res, next) {
 });
 
 router.get('/api/users', function(req, res) {
+    console.log(req);
     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
