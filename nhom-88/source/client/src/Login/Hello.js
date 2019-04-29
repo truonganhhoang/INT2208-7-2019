@@ -1,62 +1,30 @@
-import React from 'react';
-import {Link} from 'react-router';
-//import ForgotPassword from './ForgotPassword';
+import React, { Component } from 'react';
+import { Link, browserHistory } from 'react-router';
+import { connect } from 'react-redux';
+import '../CSS/styles.css';
 import Menu from '../Components/Menu_';
 import {
-    Form, Icon, Input, Button, Checkbox,
-  } from 'antd';
+  Form, Icon, Input, Button, Checkbox,
+} from 'antd';
 
-import {connect} from 'react-redux';
 import { loginUserAction } from '../Actions/authenticationActions';
 
+class NormalLoginForm extends Component {
+  onHandleLogin = (event) => {
+    event.preventDefault();
 
-class Hello extends React.Component{
+    let email = event.target.email.value;
+    let password = event.target.password.value;
 
-    render(){
-        return(
-          <React.Fragment>
-            <Menu/>
-            <div id="page-container">
+    const data = {
+      email, password
+    };
 
-                <div id="signin-wrapper">
-                    <div className="signin-section">
-                <WrappedNormalLoginForm/>
-            </div>
-            </div>
-            </div>
-            </React.Fragment>
-        );
-    }
-}
+    this.props.dispatch(loginUserAction(data));
+  }
 
-  
-  class NormalLoginForm extends React.Component {
-      
-   
-    handleSubmit = (e) => {
-      e.preventDefault();
-      this.props.form.validateFields((err, values) => {
-        if (!err) {
-          const userName = values.userName;
-          const pass = values.password;
-          const remember = values.remember;
-
-          const data = {
-            userName,
-            pass,
-            remember
-          }
-
-          this.props.dispatch(loginUserAction(data));
-        }
-      });
-    }
-  
-    render() {
-      
-      const { getFieldDecorator } = this.props.form;
-
-      let isSuccess, message;
+  render() {
+    let isSuccess, message;
 
     if (this.props.response.login.hasOwnProperty('response')) {
       isSuccess = this.props.response.login.response.success;
@@ -68,42 +36,45 @@ class Hello extends React.Component{
       }
     }
 
-      return (
-        <Form onSubmit={this.handleSubmit} className="login-form">
+    return (
+      <React.Fragment>
+        
+        <Menu/>
+        <div className="page-content">
+        <h3>Login Page</h3>
+        {!isSuccess ? <div>{message}</div> : browserHistory.push('dashboard')}
+        
+        <form onSubmit={this.onHandleLogin} className="login-form">
           <Form.Item>
-            {getFieldDecorator('userName', {
-              rules: [{ required: true, message: 'Please input your username!' }],
-            })(
-              <Input  prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
-            )}
-          </Form.Item>
-          <Form.Item>
-            {getFieldDecorator('password', {
-              rules: [{ required: true, message: 'Please input your Password!' }],
-            })(
-              <Input  prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
-            )}
-          </Form.Item>
-          <Form.Item>
-            {getFieldDecorator('remember', {
-              valuePropName: 'checked',
-              initialValue: true,
-            })(
-              <Checkbox>Remember me</Checkbox>
-            )}
+              <Input type="email" name="email" prefix={<Icon type="email" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Email" />
+            </Form.Item>
+            <Form.Item>
+              
+              <Input type="password" name="password" prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
+            </Form.Item>
+
+            <Form.Item>
+          
+          <Button type="primary" htmlType="submit" className="login-form-button">
+            Log in
+          </Button>
+          <Checkbox>Remember me</Checkbox>
+
+            <br></br>
             <a className="login-form-forgot" href="">Forgot password</a>
-            <br/>
-            <Button type="primary" htmlType="submit" className="login-form-button">
-              Log in
-            </Button>
-            Or <a href="/signup">register now!</a>
-          </Form.Item>
-        </Form>
-      );
-    }
+
+          Don't have account? <Link to='register'>Register here</Link>
+        </Form.Item>
+        </form>
+        </div>
+        
+        
+        </React.Fragment>
+    );
   }
-  
-const WrappedNormalLoginForm = Form.create({ name: 'normal_login' })(NormalLoginForm);
+}
+
 
 const mapStateToProps = (response) => ({response});
-export default connect(mapStateToProps)(Hello);
+
+export default connect(mapStateToProps)(NormalLoginForm);

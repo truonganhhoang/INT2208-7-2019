@@ -4,6 +4,7 @@ import App from '../App';
 import LoginPage from '../Login/Hello';
 import RegisterPage from '../Signup/Register';
 import DashboardPage from '../Components/dashBoard';
+import Hello from '../Login/Hello';
 
 function isLoggedIn() {
   if (localStorage.getItem('token')) {
@@ -22,7 +23,7 @@ function requireAuth(nextState, replace) {
 }
 
 export default (
-  <Route path='/' component={App}>
+  <Route path='/' component={Hello}>
     <IndexRoute component={LoginPage} />
     <Route path='login' component={LoginPage} />
     <Route path='register' component={RegisterPage} />
