@@ -72,4 +72,4 @@ export const Questions: Question[] = [
         optionC: 'Tổng Liên đoàn Lao động Pháp ',
         optionD: 'Hội Liên hiệp thuộc địa',
     }
-]
+];
