@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../_services';
+import { AuthenticationService, UserService } from '../_services';
+import { Headers, RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,9 +9,21 @@ import { AuthenticationService } from '../_services';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private authService: AuthenticationService) { }
+  id: number;
+
+  headers: Headers = new Headers({
+     'Content-Type': 'application/json',
+     'Authorization': `Bearer ${this.authService.getToken()}`,
+     'Accept': 'application/json',
+     'Access-Control-Allow-Headers': 'Content-Type',
+     'Access-Control-Allow-Origin': '*', });
+  httpOptions: RequestOptions = new RequestOptions({ headers: this.headers });
+
+  constructor(private authService: AuthenticationService,
+              private userService: UserService) { }
 
   ngOnInit() {
+    // console.log(this.httpOptions.headers);
   }
 
   logout() {
@@ -22,4 +35,10 @@ export class DashboardComponent implements OnInit {
   refresh(): void {
     window.location.reload();
   }
+
+  renderAvatar(): void {
+    this.userService.getByToken(this.headers);
+    localStorage.setItem('avatarLink', 'abc');
+  }
+
 }

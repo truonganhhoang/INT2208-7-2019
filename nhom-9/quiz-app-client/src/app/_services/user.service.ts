@@ -3,17 +3,6 @@ import { Http, Headers } from '@angular/http';
 
 import { User } from '../_models';
 
-const httpOptions = {
-    headers: new Headers({
-        'Content-Type': 'application/json',
-        'Authorization': 'my-auth-token',
-        'Accept': 'application/json',
-        'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Allow-Origin': '*',
-
-    })
-};
-
 @Injectable()
 export class UserService {
 
@@ -23,13 +12,17 @@ export class UserService {
 
     constructor(private http: Http) { }
 
-    getAll() {
-        return this.http.get('/api/users', httpOptions);
-    }
+    // getAll(httpOptions: string) {
+    //     return this.http.get('/api/users', httpOptions);
+    // }
 
 
     getById(id: number) {
         return this.http.get('/api/users' + id);
+    }
+
+    getByToken(headers: Headers) {
+        return this.http.get('/api/users', {headers: headers});
     }
 
     register(user: User) {
