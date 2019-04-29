@@ -51,6 +51,7 @@ function saveMessageToDatabase(topic,payload) {
                     }
                     //save room
                     docRoom.thread = doc._id;
+                    docRoom.lastMessage = new Date();
                     docRoom.save((err)=>{
                         if (err) {
                             console.log('err in save room in mqtt');
@@ -63,6 +64,12 @@ function saveMessageToDatabase(topic,payload) {
                     if (err) {
                         console.log('error in save thread message');
                     }
+                    docRoom.lastMessage = new Date();
+                    docRoom.save((err)=>{
+                        if (err) {
+                            console.log('err in save room in mqtt');
+                        }
+                    });
                 });
             }
         });

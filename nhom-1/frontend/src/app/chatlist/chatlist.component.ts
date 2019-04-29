@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { UserService } from '@app/_services/user.service';
 import { MessageService } from '@app/_services/message.service';
 import { Message } from '@app/_models/message.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-chatlist',
@@ -13,27 +14,14 @@ import { Message } from '@app/_models/message.model';
 export class ChatlistComponent implements OnInit {
 
   @Input() selectedItem;
+  paramValue: String;
+  roomList: ChatRoom[] = [];
 
   constructor(
-      private userService: UserService,
-      private http: HttpClient,
-      private messageService: MessageService,
     ) {
     }
 
   ngOnInit() {
-    this.getChatList();
-    this.messageService.getMessageStream().subscribe((message: Message)=>{
-        
-    });
-  }
-
-  getChatList(): void {
-    this.http.get<any>(`${environment.apiUrl}/api/getlistchat`).subscribe((data)=>{
-      if (data.state) {
-        console.log(data.list)
-      }
-    });
   }
 
 }

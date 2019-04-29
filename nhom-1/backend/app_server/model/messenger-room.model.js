@@ -15,6 +15,10 @@ var messengerRoomSchema = new Schema({
     unread: {
         type: [String],
         default: []
+    },
+    lastMessage: {
+        type: Date,
+        default: Date.now
     }
 });
 
