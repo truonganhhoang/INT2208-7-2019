@@ -1,9 +1,6 @@
 import React from 'react'
-import Menu from './Menu_';
-import Hello from './Login/Hello';
-import Register from './Signup/Register';
-import {Route} from 'react-router-dom';
-import './App.css';
+import './CSS/App.css';
+import Menu from './Components/Menu_';
 
 /*  Font awesome */
 
@@ -22,35 +19,15 @@ library.add(faSearch);
 
 class App extends React.Component{
 
-
-    constructor(props){
-        super(props);
-        this.state = {
-            login: true,
-            show: Hello,
-            studentID:null
-        }
-        
-    }
-
     render(){
 
-        if(this.state.login){
-            this.state.show = PagaContainer;
-        }
-
         return (
-           
-                <div>
+               <React.Fragment>
                     <Menu/>
                     <div className="page-content">
-                    <Route exact path="/" component={this.state.show}/>
-                    <Route exact path="/signup" component={Register}/>
-                    <Route exact path="/signin" component={Hello}/>
-                    </div>
-                </div>
-
-            
+                    <PageContainer/>
+                  </div>
+               </React.Fragment>
         );
     }
 }
@@ -258,7 +235,7 @@ class TweetContainer extends React.Component{
     }
 }
 
-class PagaContainer extends React.Component{
+class PageContainer extends React.Component{
     render(){
         return(
                 <div id="page-container">

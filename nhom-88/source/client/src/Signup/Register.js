@@ -1,5 +1,5 @@
 import React from 'react';
-import { readSync } from 'fs';
+import Menu from '../Components/Menu_';
 import {
     Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete,
   } from 'antd';
@@ -62,7 +62,7 @@ class Register extends React.Component{
     render(){
         return(
             <React.Fragment>
-                
+                <Menu/>
                 <div id="page-container">
                 <div id="signin-wrapper">
                     <div className="signin-section">

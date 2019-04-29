@@ -1,6 +1,5 @@
 import React from 'react';
 import { Menu, Icon } from 'antd';
-import './search';
 import SearchFrom from './search';
 
 class MenuBar extends React.Component {
