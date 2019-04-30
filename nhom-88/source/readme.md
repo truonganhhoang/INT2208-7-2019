@@ -61,6 +61,7 @@ React chịu trách nhiệm hiện thị giao diện và Redux quản lý trạn
 
 Cấu trúc ứng dụng:
 
+```
 scr-----Action
  |      |------------index.js
  |      |------------authentication.js
@@ -84,7 +85,7 @@ scr-----Action
  |------App.js
  |
  |------index.js
-
+```
 
 * Component:
 
@@ -95,10 +96,18 @@ scr-----Action
 to do
 
 
-### Kết quả
+### 5. Kết quả
+
+* Login 
+....
 
 ![login](https://i.imgur.com/3zziXtP.png)
 
+* Register
+...
 ![dang ky](https://i.imgur.com/gVUnxWH.png)
+
+* Home
+....
 
 ![home](https://i.imgur.com/HcGzgLo.png)
