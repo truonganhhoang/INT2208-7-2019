@@ -19,28 +19,61 @@ Ngày nay, công nghệ hiện đại và phát triển, con người cũng có 
 
 #### 3.1. Mô tả bài toán
 
-Bài toán đặt ra là cần ứng dụng cho người dùng chia sẻ trạng thái, sự kiện đang xảy ra.
+Bài toán đặt ra là cần ứng dụng cho người dùng chia sẻ, kết nối với nhau thông qua các dòng trạng thái và nhắn tin trực tiếp.
 
 #### 3.2. Thu thập yêu cầu
 
 Là một người dùng, tôi muốn tạo tài khoản riêng của mình để có thể sử dụng nó.
 Là một người dùng, tôi muốn tạo bài viết của mình để chia sẻ với người khác.
 Là một người dùng, tôi muốn thay đổi thông tin của mình để đáp ứng yêu cầu của mình.
-Là một người dùng, 
+Là một người dùng, tôi muốn kết bạn với mọi người để tiện biết được họ đang hoạt động như thế nào.
+Là một người dùng, tôi muốn nhắn tin trực tiếp với bạn bè để có thể chia sẻ với họ về những điều đang diễn ra.
 
 #### 3.3. Phân tích yêu cầu
 
 Thiết kế ca sử dụng
 
-* Đăng nhập: ...
+#### 3.3.1. Đăng nhập:
 
-* Đăng xuất:  ...
+ * Trạng thái: Người dùng chưa đăng nhập.
+ * Mục đích: Đăng nhập vào trang web để có thể sử dụng được các chức năng của trang.
+ * Luồng sự kiện:</br>
+Người dùng vào phần đăng nhập.</br>
+Sau khi ấn đăng nhập, thành công trả về giao diện trang chủ.</br>
+Nếu không thành công, trả về màn hình ban đầu, hiện ra thông báo lỗi.</br>
+Hệ thống thiết lập socket cho người dùng.
 
-* Đăng trạng thái: ...
+#### 3.3.2. Đăng xuất:
 
-* Kết bạn: ...
+Trạng thái: Người dùng đang trong phiên hoạt động.
+Mực đích: Người dùng thoát khỏi phiên hoạt động, đăng xuất khỏi ứng dụng.
+Luồng sự kiện:</br>
+Người dùng chọn phần đăng xuất, màn hình trả về giao diện đăng nhập.</br>
+Hệ thống kết thúc phiên hoạt động của người dùng đó.
 
-* Gửi tin nhắn: ...
+#### 3.3.3. Đăng trạng thái:
+* Trạng thái: Người dùng đang trong phiên hoạt động.
+* Mục đích: Người dùng viết và tạo các dòng trạng thái ở trên giao diện trang chủ.
+* Luồng sự kiện:</br>
+Người dùng thao tác trên dòng trạng thái, khi ấn đăng bài thì hiển thị bài đăng trên trang chủ.</br>
+Nếu bài đăng trống hoặc quá dài thì không cho phép đăng bài đăng.</br>
+Hệ thống lưu lại sữ liệu của bài đăng thành công.
+
+#### 3.3.4. Kết bạn: 
+* Trạng thái: Người dùng đang trong phiên hoạt động, một người dùng khác không có trong danh sách bạn bè hiện tại.
+* Mục đích: Người dùng kết bạn với người dùng khác để tiện theo dõi và trò chuyện.
+* Luồng sự kiện:</br>
+Tại trang cá nhân của người dùng khác, ấn vào kết bạn thì nút kết bạn đổi thành nút hủy kết bạn.</br>
+Hệ thống lưu trữ dữ liệu về lời mời kết bạn của người dùng, gửi nó đến hồ sơ của người dùng được gửi lời mời đó.</br>
+Nếu người dùng hủy yêu cầu kết bạn, hệ thóng xác nhận xóa danh sách người dùng đó khỏi danh sách bạn bè.
+
+#### 3.3.5. Gửi tin nhắn:
+* Trạng thái: Người dùng trong phiên hoạt động, người dùng khác đang là bạn bè của nhau.
+* Mục đích: Nhắn tin với bạn bè để tán gẫu và chia sẻ một cách nhanh chóng nhất.
+* Luồng sự kiện: 
+Người dùng ấn vào ô tin nhắn sẽ hiện ra danh sách tin nhắn với người dùng khác.</br>
+Người dùng ấn chọn sẽ hiện ra khung chat nhỏ.</br>
+Người dùng nhập tin nhắn và gửi thành công, hệ thống lưu trữ và gửi tin nhắn đén dối phương.
 
 ### 4. Giải quyết bài toán
 
