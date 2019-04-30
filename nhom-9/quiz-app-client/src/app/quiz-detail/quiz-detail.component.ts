@@ -1,6 +1,6 @@
+import { QuestionService } from './../_services/question.service';
 import { Component, OnInit } from '@angular/core';
 import { Quiz } from '../_models/quiz-detail/quiz';
-import { Quizs } from '../_models/quiz-detail/mock-quiz';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,12 +9,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./quiz-detail.component.css']
 })
 export class QuizDetailComponent implements OnInit {
-  quizs: Quiz[] = Quizs;
-  constructor(private router: Router) { }
+  testId = 1;
+  quizs: Quiz[];
+  constructor(
+    private router: Router,
+    private questionService: QuestionService
+  ) { }
 
   ngOnInit() {
+    this.questionService.getAllQuizDetail().subscribe(quizs => this.quizs = quizs);
   }
   onGetQuiz(i: number): void {
-    this.router.navigate(['/testing', i]);
+    this.testId = i + 1;
+  }
+  onConfirm() {
+    this.router.navigate(['/testing', this.testId]);
   }
 }
