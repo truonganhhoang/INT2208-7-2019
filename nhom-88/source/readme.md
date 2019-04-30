@@ -101,7 +101,7 @@ to do
 * Login 
 ....
 
-![login](https://i.imgur.com/3zziXtP.png)
+![login](https://i.imgur.com/g0j65T7.png)
 
 * Register
 ...
