@@ -1,3 +1,4 @@
+import { QuestionService } from './../_services/question.service';
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService, UserService } from '../_services';
 import { Headers, RequestOptions } from '@angular/http';

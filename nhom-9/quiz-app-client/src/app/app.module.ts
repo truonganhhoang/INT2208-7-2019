@@ -2,7 +2,7 @@ import { QuestionService } from './_services/question.service';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'; 
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AuthGuard } from './_guards/auth.guard';
 import { LoggedGuard } from './_guards/logged.guard';
@@ -50,7 +50,6 @@ import { TestingComponent } from './testing/testing.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-
     routing
   ],
   providers: [
