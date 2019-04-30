@@ -1,8 +1,9 @@
 ## Tài liệu kỹ thuật ứng dụng
+### 1. Mở đầu
+Ngày nay, công nghệ hiện đại và phát triển, con người cũng có nhu cầu về kết nối và giao tiếp với nhau ngày càng tăng. Các ứng dụng của người nước ngoài như Facebook, Tweeter đang dần trở thành một nơi truyền bá những tư tưởng xấu và gây ảnh hưởng không tốt đến trải nghiệm người dùng như lạm dụng thông tin người dùng cho mục đích quảng cáo, làm giảm sự tập trung khi quá phụ thuộc... Với tiêu chí tập trung vào giá trị cốt lõi là giúp kết nối những người bạn người thân với nhau, nhóm 88 đã tạo dựng và giới thiệu sản phẩm Twiteruet nhằm đáp ứng những điều trên.
+## 2. Công nghệ sử dụng
 
-### 1. Công nghệ sử dụng
-
-#### 1.1 Phía máy chủ
+#### 2.1 Phía máy chủ
 
 * Nodejs: Nodejs là thư viện được viết bằng C++ và javascript, dựa trên Runtime engine của Google. Nó giúp ta sử dụng javascript bên ngoài môi trường trình duyệt
 
@@ -10,21 +11,24 @@
 
 * Mongodb, Mongoose: Mongodb là chương trình cơ sở dữ liệu không cấu trúc, Moongoose giúp chúng ta định nghĩa các lược đồ.
 
-#### 1.2 Phía giao diện người dùng
+#### 2.2 Phía giao diện người dùng
 
 * Reactjs: Thư viện xây dựng ứng dụng giao diện người dùng do Facebook phát triển
 
-### 2. Phân tích yêu cầu của ứng dụng
+### 3. Phân tích yêu cầu của ứng dụng
 
-#### 2.1. Mô tả bài toán
+#### 3.1. Mô tả bài toán
 
-Bài toán đặt ra là cần ứng dụng cho người dùng chia sẻ trạng thái, sự kiện đang sảy ra.
+Bài toán đặt ra là cần ứng dụng cho người dùng chia sẻ trạng thái, sự kiện đang xảy ra.
 
-#### 2.2. Thu thập yêu cầu
+#### 3.2. Thu thập yêu cầu
 
-// user story
+Là một người dùng, tôi muốn tạo tài khoản riêng của mình để có thể sử dụng nó.
+Là một người dùng, tôi muốn tạo bài viết của mình để chia sẻ với người khác.
+Là một người dùng, tôi muốn thay đổi thông tin của mình để đáp ứng yêu cầu của mình.
+Là một người dùng, 
 
-#### 2.3. Phân tích yêu cầu
+#### 3.3. Phân tích yêu cầu
 
 Thiết kế ca sử dụng
 
@@ -38,20 +42,20 @@ Thiết kế ca sử dụng
 
 * Gửi tin nhắn: ...
 
-### 3. Giải quyết bài toán
+### 4. Giải quyết bài toán
 
-#### 3.1. Thiết kế giao diện
+#### 4.1. Thiết kế giao diện
 
 Sử dụng React để tận dụng khả năng tái sử dụng của các Component và sư đa dạng của các thư viện hỗ trợ như Bootstrap...vv
 
-#### 3.2. Thiết kế cơ sở dữ liệu
+#### 4.2. Thiết kế cơ sở dữ liệu
 
 todo
 
 
-### 4. Triển khai phần mềm
+### 5. Triển khai phần mềm
 
-#### 4.1 Xây dựng ứng dụng phía người dùng
+#### 5.1 Xây dựng ứng dụng phía người dùng
 
 * Cấu trúc ứng dụng
 
@@ -91,12 +95,12 @@ scr-----Action
 
 * Quan lý trạng thái
 
-#### 4.2 Xây dựng ứng dụng phía server 
+#### 5.2 Xây dựng ứng dụng phía server 
 
 to do
 
 
-### 5. Kết quả
+### 6. Kết quả
 
 * Login 
 ....
