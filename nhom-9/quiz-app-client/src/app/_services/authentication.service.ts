@@ -36,4 +36,9 @@ export class AuthenticationService {
         // remove user from local storage to log user out
         localStorage.removeItem('currentUser');
     }
+
+    getToken(): string {
+        var local_data = JSON.parse(localStorage.getItem('currentUser'));
+        return local_data['token'];
+    }
 }

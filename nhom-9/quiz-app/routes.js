@@ -68,13 +68,28 @@ router.get('/api/users', function (req, res) {
     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
-    users.getAllUsers(function (err, rows) {
-        if (err) {
-            res.json(err);
-        } else {
-            res.json(rows);
-        }
-    });
+    var arr = req.headers.authorization.split(' ', 2);
+    var token_type = arr[0], token = arr[1];
+    // console.log(token);
+    try {
+        // var decoded = jwt.verify(token, key);
+        // console.log(decoded);
+        // var data = JSON.parse(decoded); // Adding this line and decoded variable can not log to console
+
+
+        // console.log(jwt.verify(token, key).username.userName);
+        var username = jwt.verify(token, key).username.userName;
+        users.getUserByUsername(username, function (err, rows) {
+            if (err) {
+                res.json(err);
+            } else {
+                res.json(rows);
+                console.log(rows[0]);
+            }
+        });
+    } catch (e) {
+        return res.status(401).send('unauthorized');
+    }
 });
 
 router.post('/api/users/authenticate/:username', function (req, res) {

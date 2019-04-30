@@ -7,7 +7,7 @@ var users = {
 		return pool.query("SELECT * FROM quiz_app.users WHERE id=?", [id], callback);
 	},
 	getUserByUsername: function (id, callback) {
-		return pool.query("SELECT * FROM quiz_app.users WHERE userName=?", [id], callback);
+		return pool.query("SELECT avatarLink FROM quiz_app.users WHERE userName=?", [id], callback);
 	},
 	addUser: function (user, callback) {
 		return pool.query("INSERT INTO quiz_app.users(username, password) VALUES(?,?)", 
