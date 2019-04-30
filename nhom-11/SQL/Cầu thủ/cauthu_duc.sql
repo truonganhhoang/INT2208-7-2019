@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2019 at 04:54 PM
+-- Generation Time: Apr 30, 2019 at 03:47 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -66,10 +66,10 @@ INSERT INTO `augsburg` (`soao`, `ten`, `quoctich`, `vitri`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bayer-leverkusen`
+-- Table structure for table `bayerleverkusen`
 --
 
-CREATE TABLE `bayer-leverkusen` (
+CREATE TABLE `bayerleverkusen` (
   `soao` int(2) NOT NULL,
   `ten` varchar(20) NOT NULL,
   `quoctich` varchar(20) NOT NULL,
@@ -77,10 +77,10 @@ CREATE TABLE `bayer-leverkusen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `bayer-leverkusen`
+-- Dumping data for table `bayerleverkusen`
 --
 
-INSERT INTO `bayer-leverkusen` (`soao`, `ten`, `quoctich`, `vitri`) VALUES
+INSERT INTO `bayerleverkusen` (`soao`, `ten`, `quoctich`, `vitri`) VALUES
 (1, 'Lukas Hradecky', 'Finland', 'GK'),
 (3, 'Panagiotis Retsos', 'Greece', 'DF'),
 (4, 'Jonathan Tah', 'Germany', 'DF'),
@@ -105,10 +105,10 @@ INSERT INTO `bayer-leverkusen` (`soao`, `ten`, `quoctich`, `vitri`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bayern-munich`
+-- Table structure for table `bayernmunich`
 --
 
-CREATE TABLE `bayern-munich` (
+CREATE TABLE `bayernmunich` (
   `soao` int(2) NOT NULL,
   `ten` varchar(20) NOT NULL,
   `quoctich` varchar(20) NOT NULL,
@@ -116,10 +116,10 @@ CREATE TABLE `bayern-munich` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `bayern-munich`
+-- Dumping data for table `bayernmunich`
 --
 
-INSERT INTO `bayern-munich` (`soao`, `ten`, `quoctich`, `vitri`) VALUES
+INSERT INTO `bayernmunich` (`soao`, `ten`, `quoctich`, `vitri`) VALUES
 (1, 'Manuel Neuer', 'Germany', 'GK'),
 (2, 'Sandro Wagner', 'Germany', 'FW'),
 (4, 'Niklas Sule', 'Germany', 'DF'),
@@ -342,10 +342,10 @@ INSERT INTO `hannover96` (`soao`, `ten`, `quoctich`, `vitri`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hertha-berlin`
+-- Table structure for table `herthaberlin`
 --
 
-CREATE TABLE `hertha-berlin` (
+CREATE TABLE `herthaberlin` (
   `soao` int(2) NOT NULL,
   `ten` varchar(30) NOT NULL,
   `quoctich` varchar(30) NOT NULL,
@@ -353,10 +353,10 @@ CREATE TABLE `hertha-berlin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `hertha-berlin`
+-- Dumping data for table `herthaberlin`
 --
 
-INSERT INTO `hertha-berlin` (`soao`, `ten`, `quoctich`, `vitri`) VALUES
+INSERT INTO `herthaberlin` (`soao`, `ten`, `quoctich`, `vitri`) VALUES
 (1, 'Thomas Kraft', 'Germany', 'GK'),
 (2, 'Peter Pekarik', 'Slovakia', 'DF'),
 (3, 'Per Skjelbred', 'Noway', 'MF'),
@@ -670,10 +670,10 @@ INSERT INTO `stuttgart` (`soao`, `ten`, `quoctich`, `vitri`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `werder-bremen`
+-- Table structure for table `werderbremen`
 --
 
-CREATE TABLE `werder-bremen` (
+CREATE TABLE `werderbremen` (
   `soao` int(2) NOT NULL,
   `ten` varchar(30) NOT NULL,
   `quoctich` varchar(30) NOT NULL,
@@ -681,10 +681,10 @@ CREATE TABLE `werder-bremen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `werder-bremen`
+-- Dumping data for table `werderbremen`
 --
 
-INSERT INTO `werder-bremen` (`soao`, `ten`, `quoctich`, `vitri`) VALUES
+INSERT INTO `werderbremen` (`soao`, `ten`, `quoctich`, `vitri`) VALUES
 (1, 'Jiri Pavlenka', 'Czech', 'GK'),
 (2, 'Felix Beijmo', 'Sweden', 'DF'),
 (4, 'Claudio Pizarro', 'Peru ', 'FW'),
@@ -754,9 +754,9 @@ INSERT INTO `wolfsburg` (`soao`, `ten`, `quoctich`, `vitri`) VALUES
 --
 
 --
--- Indexes for table `bayern-munich`
+-- Indexes for table `bayernmunich`
 --
-ALTER TABLE `bayern-munich`
+ALTER TABLE `bayernmunich`
   ADD PRIMARY KEY (`soao`);
 
 --
@@ -790,9 +790,9 @@ ALTER TABLE `hannover96`
   ADD PRIMARY KEY (`soao`);
 
 --
--- Indexes for table `hertha-berlin`
+-- Indexes for table `herthaberlin`
 --
-ALTER TABLE `hertha-berlin`
+ALTER TABLE `herthaberlin`
   ADD PRIMARY KEY (`soao`);
 
 --
@@ -838,9 +838,9 @@ ALTER TABLE `stuttgart`
   ADD PRIMARY KEY (`soao`);
 
 --
--- Indexes for table `werder-bremen`
+-- Indexes for table `werderbremen`
 --
-ALTER TABLE `werder-bremen`
+ALTER TABLE `werderbremen`
   ADD PRIMARY KEY (`soao`);
 
 --
