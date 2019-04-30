@@ -1,43 +1,63 @@
 'use strict';
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const passport = require('passport');
-const cookieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser'); 
+const cors = require('cors');
+
 module.exports = function() {
   let server = express(),
-      create,
-      start;
-   create = function(config, db) {
-        let database = 'mongodb://twituet:AloAlo123@cluster0-shard-00-00-ziifr.mongodb.net:27017,cluster0-shard-00-01-ziifr.mongodb.net:27017,cluster0-shard-00-02-ziifr.mongodb.net:27017/Twituet?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true';
+    create,
+    start;
 
-      let routes = require('./routes');
-       // Server settings
-       server.set('env', config.env);
-       server.set('port', config.port);
-       server.set('hostname', config.hostname);
-       // Returns middleware that parses json
-       server.use(bodyParser.json());
-       server.use(bodyParser.urlencoded({ extended: false }));
-       server.use(cookieParser());
-       server.use(logger('dev'));
-       server.use(passport.initialize());
-       mongoose.connect(database,{useNewUrlParser: true});
-       console.log('Connected database');
-       require('../configs/passport')(passport);
-       // Set up routes
-       routes.init(server);
-   };
-   start = function() {
-       let hostname = server.get('hostname'),
-       port = server.get('port');
-       server.listen(port, function () {
-          console.log('Express server listening on - http://' + hostname + ':' + port);
-        });
-    };
-    return {
-       create: create,
-       start: start
-    };
+  create = function(config, db) {
+    let routes = require('./routes');
+
+    // Server settings
+    server.set('env', config.env);
+    server.set('port', config.port);
+    server.set('hostname', config.hostname);
+    server.set('viewDir', config.viewDir);
+
+    // Returns middleware that parses json
+    server.use(cors());
+    server.use(bodyParser.json());
+    server.use(bodyParser.urlencoded({ extended: false }));
+    server.use(cookieParser());
+    server.use(logger('dev'));
+    server.use(passport.initialize());
+    mongoose.connect(db.database, {
+      useNewUrlParser: true,
+      useCreateIndex: true
+    },(err)=>{
+        if(!err){
+            console.log('Ket noi co so du lieu thanh cong');
+        }
+    });
+    require('../configs/passport')(passport);
+
+    server.use('/uploads', express.static('uploads'));
+
+    server.set('views', server.get('viewDir'));
+
+    // Set up routes
+    routes.init(server);
+  };
+
+  start = function() {
+    let hostname = server.get('hostname'),
+      port = server.get('port');
+
+    server.listen(port, function () {
+      console.log('Express server listening on - http://' + hostname + ':' + port);
+    });
+  };
+
+  return {
+    create: create,
+    start: start
+  };
 };

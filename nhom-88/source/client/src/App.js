@@ -1,5 +1,6 @@
 import React from 'react'
 import './CSS/App.css';
+import './CSS/styles.css';
 import Menu from './Components/Menu_';
 
 /*  Font awesome */

@@ -212,6 +212,16 @@ a {
     width: 70%;
 }
 
+#page-container Input {
+    width: 60%
+}
+
+#page-container h2 {
+    font-size: 18px;
+    padding: 12px;
+    font-weight: bold;
+}
+
 #main {
     float: right;
     width: 60%;
@@ -230,9 +240,10 @@ a {
 
 #dashboard {
     border-radius: 6px;
+    border-color: black;
     background-color: white;
     float: left;
-    width: 35%;
+    width: 30%;
     height: 200px;
 }
 
@@ -717,6 +728,54 @@ a {
 }
 
 .page-content {
-    padding-top: 4%;
+    padding-top: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
+.login-button a {
+    margin: 5px;
+}
+
+.login-button Button {
+    margin: 5px;
+}
+
+#about {
+    float: right;
+}
+
+.page-content #dashboard-left {
+    float: left;
+    width: 200px;
+    height: 500px;
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#tweet-container {
+    border-radius: 5px;
+    padding-left: 5%;
+}
+
+.home-tweet-box {
+    background-color: hsl(203, 84%, 95%);
+    color: hsl(210, 13%, 9%);
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 12px;
+}
+
+#home-tweet-box-avatar {
+    border-radius: 50%;
+    color: hsl(210, 13%, 9%);
+    font-size: 13px;
+    line-height: 20px;
+}
+
+#home-tweet-box-input {
+    max-width: 50%;
+    line-height: 20px;
+    font-size: 14px;
+}

@@ -1,10 +1,13 @@
 import React from 'react';
-import { Menu, Icon } from 'antd';
-import SearchFrom from './search';
+import { Menu, Icon, Input, Spin, Badge } from 'antd';
+
+const Search = Input.Search;
+const MenuItem = Menu.Item;
 
 class MenuBar extends React.Component {
   state = {
     current: 'mail',
+    isLogin: true
   }
 
   handleClick = (e) => {
@@ -16,22 +19,37 @@ class MenuBar extends React.Component {
 
   render() {
     return (
-        
+      <React.Suspense fallback={<Spin/>}>
       <Menu
         onClick={this.handleClick}
         selectedKeys={[this.state.current]}
         mode="horizontal"
-      >
-        <Menu.Item key="mail">
+      > 
+        <MenuItem key="home-page">
             <Icon type="home" />Home
+        </MenuItem>
+
+
+        <Menu.Item key="app">
+          {this.state.isLogin ? <Badge dot><Icon type="message" /></Badge> :
+          <Icon type="message" />} Messgage
         </Menu.Item>
-        <Menu.Item key="alipay">
-            <Icon type="message" /> Message
-        </Menu.Item>
-        <Menu.Item key="search">
-            <SearchFrom/>
-        </Menu.Item>
+
+        <MenuItem key="search">
+          <Search
+          placeholder="Search"
+          onSearch={value => console.log(value)}
+          style={{ width: 200 }}
+          />
+        </MenuItem>
+
+        <MenuItem key="info-page" id="about">
+            <Icon type="info-circle" />About
+        </MenuItem>
+
+
       </Menu>
+      </React.Suspense>
        
     );
   }

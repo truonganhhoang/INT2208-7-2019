@@ -1,10 +1,11 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import {Router,Route, IndexRoute } from 'react-router';
 import App from '../App';
-import LoginPage from '../Login/Hello';
-import RegisterPage from '../Signup/Register';
+import LoginPage from '../Login/Login';
+import RegisterPage from '../Signup/Reg';
 import DashboardPage from '../Components/dashBoard';
-import Hello from '../Login/Hello';
+import Page from '../Components/Home';
+
 
 function isLoggedIn() {
   if (localStorage.getItem('token')) {
@@ -23,10 +24,12 @@ function requireAuth(nextState, replace) {
 }
 
 export default (
-  <Route path='/' component={Hello}>
-    <IndexRoute component={LoginPage} />
+  <Router>
+    <IndexRoute component={App} />
+    <Route exac path='/' component={App} />
+    <Route path="/home" component={Page}/>
     <Route path='login' component={LoginPage} />
     <Route path='register' component={RegisterPage} />
     <Route path='dashboard' component={DashboardPage} onEnter={requireAuth} />
-  </Route>
+  </Router>
 );

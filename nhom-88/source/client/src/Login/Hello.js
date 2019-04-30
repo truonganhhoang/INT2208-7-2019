@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import '../CSS/styles.css';
+
 import Menu from '../Components/Menu_';
 import {
   Form, Icon, Input, Button, Checkbox,
