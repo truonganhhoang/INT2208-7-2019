@@ -45,34 +45,45 @@ module.exports = function (io) {
         let user1 = req.body.username;
         let user2 = req.query.username;
 
-        let thread = new MessengerThread();
-        thread.save((err, doc)=>{
+        //check if user is exist ?
+        User.findOne({username: user2}, (err,doc)=>{
             if (err) {
-                res.json({
-                    state: false
-                });
+                res.json({state:false});
                 return;
             }
-            let room = new MessengerRoom();
-            room.authors = [];
-            room.authors.push(user1);
-            room.authors.push(user2);
-            room.thread = doc._id;
-            room.save((err, doc)=>{
-                if (err) {
-                    res.json({
-                        state: false
+            if (doc) {
+                let thread = new MessengerThread();
+                thread.save((err, doc1)=>{
+                    if (err) {
+                        res.json({
+                            state: false
+                        });
+                        return;
+                    }
+                    let room = new MessengerRoom();
+                    room.authors = [];
+                    room.authors.push(user1);
+                    room.authors.push(user2);
+                    room.thread = doc1._id;
+                    room.save((err, doc2)=>{
+                        if (err) {
+                            res.json({
+                                state: false
+                            });
+                            return;
+                        }
+                        res.json({
+                            state: true,
+                            room: doc2
+                        });
                     });
-                    return;
-                }
+                });
+            } else {
                 res.json({
                     state: true,
-                    room: {
-                        _id: doc._id,
-                        thread: doc.thread
-                    }
+                    room: false
                 });
-            });
+            }
         });
     });
 
@@ -133,6 +144,27 @@ module.exports = function (io) {
                 });
             }
         );
+    });
+
+    router.get('/get-roomchat', tokenCheck, (req,res)=> {
+        let roomChatId = req.query.roomid;
+
+        MessengerRoom.findById(roomChatId, (err, doc)=>{
+            if (err) {
+                res.json({state:false});
+            }
+            if (doc) {
+                res.json({
+                    state: true,
+                    roomchat: doc
+                });
+            } else {
+                res.json({
+                    state: true,
+                    roomchat: null
+                });
+            }
+        });
     });
     
     router.get('/rejectfriend', tokenCheck, (req,res)=> {
