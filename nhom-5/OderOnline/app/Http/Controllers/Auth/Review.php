@@ -18,17 +18,25 @@ class Review extends Controller
         return view('page\details');
     }
     public function postReviewForm(Request $request){
-        $data = Rates::where(['product_id' => $request->product_id, 'customer_id' => $request->customer_id]);
-        if (count($data->get()) == 0){
-            Rates::create([
-                'product_id' => $request->product_id,
-                'customer_id' => $request->customer_id,
-                'rate' => $request->rate_input,
-                'content' => trim($request->content_input),
-            ]);
-        }else {
-            $data->update(['rate'=>$request->rate_input, 'content'=>trim($request->content_input)]);
+        if ($request->rate_input < 1 || $request->rate_input > 5) {
+            return back()->with('rateError', 'Bạn chưa đánh giá cho sản phẩm');
+        } else {
+            $content = $request->content_input;
+            if (strlen($content) > 900)
+                $content = substr($content, 0, 897)."...";
+
+            $data = Rates::where(['product_id' => $request->product_id, 'customer_id' => $request->customer_id]);
+            if (count($data->get()) == 0) {
+                Rates::create([
+                    'product_id' => $request->product_id,
+                    'customer_id' => $request->customer_id,
+                    'rate' => $request->rate_input,
+                    'content' => $content,
+                ]);
+            } else {
+                $data->update(['rate' => $request->rate_input, 'content' => $content]);
+            }
+            return back();
         }
-        return back();
     }
 }

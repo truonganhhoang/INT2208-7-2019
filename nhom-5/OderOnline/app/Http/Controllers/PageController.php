@@ -19,10 +19,8 @@ use DateTime;
 
 class PageController extends Controller
 {
-    //
     public function upload(Request $req){
        if($req->hasFile('img')){
-           //$name=$req->getClientOriginalName();
            $file = $req->file('img');
            $name = $file->getClientOriginalName();
            $file->move('img\product',$name);
@@ -116,7 +114,6 @@ class PageController extends Controller
 
 
     }
-
     public function dropItem($id)
     {
         $amount = Cart::where([
@@ -134,8 +131,6 @@ class PageController extends Controller
 
         return redirect('/');
     }
-
-
     public function detailProduct($id_type,$id){
         $slide = slide::all();
         $product = products::where('id',$id)->get();
@@ -150,7 +145,6 @@ class PageController extends Controller
             ->where('rates.product_id', '=', $id);
 
         $rates = $rates_DB->get();
-        //dd(count($rates));
 
         $star = round($rates_DB->avg('rate'), 3);
         $auth_rate = null;
@@ -160,8 +154,7 @@ class PageController extends Controller
                 ->where('bills.id_customer', '=', Auth::id())
                 ->where('bill_detail.id_product', '=', $id)->get()) > 0) {
 
-            $auth_rate_data = customer::where('id',Auth::id())->get(); //$rates_DB->where('rates.customer_id', '=', Auth::id())->get();
-            //dd($auth_rate_data);
+            $auth_rate_data = $rates_DB->where('rates.customer_id', '=', Auth::id())->get();
             if (count($auth_rate_data) <= 0) {
                 $auth_rate['product_id'] = $id;
                 $auth_rate['customer_id'] = Auth::id();
@@ -176,20 +169,15 @@ class PageController extends Controller
         }
         return view('page.details', compact('slide', 'product', 'type_product', 'star', 'rates', 'auth_rate'));
     }
-
-
     public function profile(){
         $slide = [];
         $id = Auth::id();
-        //dd($id);
         $user = User::find($id);
-        //dd(print_r($user));
         return view('page.profile',compact('slide','user'));
     }
     public function profilePW($id){
         $slide = [];
         $user = User::find($id);
-        //dd(print_r($user));
         return view('page.profilePW',compact('slide','user'));
     }
     public function putInfo($id,Request $request){
@@ -204,12 +192,10 @@ class PageController extends Controller
         ]);
         return back();
     }
-
-    public  function putPw($id,Request $req){
+    public function putPw($id,Request $req){
         $user = User::where('id',$id)->value('password');
 
 
-        //dd(bcrypt("123456"));
         $mess =[
             'old_pw.required'=>'Không được để trống',
             'new_pw.required'=>'Không được để trống',
@@ -264,7 +250,6 @@ class PageController extends Controller
             {
                 foreach ($sp as $c)
                 {
-                    //$total = 0;
                     if($c->sale_price > 0){
                         $total += $c->sale_price * $c->amount;
                     }
@@ -293,7 +278,6 @@ class PageController extends Controller
             {
                 foreach ($sp as $c)
                 {
-                    //$total = 0;
                     if($c->sale_price > 0){
                         $total += $c->sale_price * $c->amount;
                     }
@@ -314,7 +298,6 @@ class PageController extends Controller
         }
     }
     public function post_don_hang(Request $req){
-            //dd($req->thanhtoan);
 
             $mess =[
                 'name.required'=>'Vui lòng không bỏ trống mục này',
@@ -325,7 +308,6 @@ class PageController extends Controller
                 'name.max'=>'Dài nhất chỉ có 50 kí tự',
                 'phone.numeric'=>'Chỉ chứa kí tự số',
                 'phone.digits_between'=>'Số điện thoại không quá 10 số',
-                //'phone.min'=>'Ít nhất là 10 kí tự',
                 'phone.max'=>'Dài nhất chỉ chứa 10 kí tự',
                 'address.max'=>'Dài nhất chỉ chứa 200 kí tự',
                 'note'=>'Dài nhất chứa 500 kí tự',
@@ -341,7 +323,6 @@ class PageController extends Controller
                 'note'=>'max:500',
             ],$mess);
             if($validator->fails()){
-                //d('error');
                 return redirect('don-hang')
                     ->withErrors($validator)
                     ->withInput();
@@ -350,7 +331,6 @@ class PageController extends Controller
                 $total = 0;
                 foreach ($sp as $c)
                 {
-                    //$total = 0;
                     if($c->sale_price > 0){
                         $total += $c->sale_price * $c->amount;
                     }
@@ -360,14 +340,11 @@ class PageController extends Controller
 
                 }
                 $dt = new DateTime();
-                //dd(Carbon::now()->toDateTimeString('Y-m-d'));
                 $id = Auth::id();
                 $email = User::where('id',$id)->value('email');
                 $check = customer::where('id',$id)->value('id');
-                //dd($check);
                 if($check == null)
                 {
-                  //  dd('sc');
 
                     customer::create([
                         'id'=>$id,

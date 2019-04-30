@@ -23,13 +23,13 @@
                         {{ session('diff') }}
                     </div>
                 @endif
-
+<!--todo: fix form icon face and gmail-->
                 <div class="col-sm-6">
                     @if($errors->has('name'))
                         <p  class="alert-danger">{{$errors->first('name')}}</p>
                     @endif
                     <div class="form-group has-success has-feedback">
-                        <label class="col-sm-2 control-label">Username</label>
+                        <label class="col-sm-2 control-label" style="width: 130px; text-align: left;">Tên đăng nhập</label>
                         <div class="col-sm-12">
                             <input type="text" class="form-control" name="name" placeholder="">
                             <span class="form-control-feedback"><i class="far fa-user"></i></span>
@@ -49,7 +49,7 @@
                         <p  class="alert-danger">{{$errors->first('password')}}</p>
                     @endif
                     <div class="form-group has-success has-feedback">
-                        <label class="col-sm-2 control-label">Password</label>
+                        <label class="col-sm-2 control-label" style="width: 95px; text-align: left;">Mật khẩu</label>
                         <div class="col-sm-12">
                             <input type="password" class="form-control" name="password" placeholder="">
                             <span class="form-control-feedback"><i style="margin-top: 50%" class="fas fa-lock"></i></span>

@@ -86,9 +86,9 @@
                     <br>
                     <br>
                     @if ($auth_rate != null)
-                        <div id="rate-form" style="display: none; height: 245px">
+                        <div id="rate-form" style="display: {{session('rateError') ? "block" : "none"}}; height: 245px">
                             <br>
-                            <form method="POST" action="{{route('postReview')}}" style="height: 90%; padding: 0px 15px 0px 15px; alignment: center; background: lightskyblue; box-shadow: 3px 5px #c3c3c3;">
+                            <form method="POST" action="{{route('postReview')}}" style="height: 215px; padding: 0px 15px 0px 15px; alignment: center; background: lightskyblue; box-shadow: 3px 5px #c3c3c3;">
                                 @csrf
                                 <div id='stars' style="padding-top: 10px" onmouseout="bright()" >
                                     @for ($i = 0; $i < 5; $i++)
@@ -101,11 +101,10 @@
                                 <input readonly name="customer_id" style="display: none" type="number" value="{{$auth_rate['customer_id']}}">
                                 <input readonly name="rate_input" style="display: none" type="number" value="{{$auth_rate['rate']}}">
                                 <textarea class="form-control" rows="5" name="content_input" placeholder="Nhận xét của bạn" maxlength=900>{{$auth_rate['content']}}</textarea>
-                                <div style="float: right; padding: 5px">
-                                    <button class="btn btn-default" style=" float: right; " type="reset" onclick="showHideForm()">HỦY</button>
-                                </div>
-                                <div style="float: right; padding: 5px">
-                                    <button class="btn btn-success" style="float: right;" type="submit">GỬI</button>
+                                <div style="display: block; height: 44px;">
+                                    <button class="btn btn-default" style="display: inline-block; float: right; margin: 5px" type="reset" onclick="showHideForm()">HỦY</button>
+                                    <button class="btn btn-success" style="display: inline-block; float: right; margin: 5px" type="submit">GỬI</button>
+                                    <span style="height: 44px; display: inline; color: red; ">{{session('rateError')}}</span>
                                 </div>
                             </form>
                             <br>
@@ -128,7 +127,7 @@
                                     @endfor
                                 </div>
                                 <div style="min-height: 20px; display: block; overflow: hidden; -webkit-box-orient: vertical; word-wrap:break-word;">
-                                    {{trim(substr($rates[$j]->content, 0, 400), " ")}}@if(strlen($rates[$j]->content) > 400)<span style="display: inline;">...</span><span style="display: none;">{{substr($rates[$j]->content, 400)}}</span>
+                                    {{substr($rates[$j]->content, 0, 400)}}@if(strlen($rates[$j]->content) > 400)<span style="display: inline;">...</span><span style="display: none;">{{substr($rates[$j]->content, 400)}}</span>
                                     <a class="seeAll" style="color: green; text-decoration: none; outline: none; " role="button"> xem hết</a>
                                 @endif
                                 </div>
@@ -206,6 +205,7 @@
                 return false;
             });
         });
+
         @if ($auth_rate != null)
             function showHideForm() {
                 let x = document.getElementById("rate-form");
@@ -220,6 +220,7 @@
                 }
             }
         @endif
+
         function bright(num) {
             if (num == null)
                 num = document.getElementsByName("rate_input")[0].getAttributeNode("value").value;

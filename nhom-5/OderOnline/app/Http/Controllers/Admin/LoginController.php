@@ -32,10 +32,8 @@ class LoginController extends Controller
                 return redirect('/admin');
             }
             else{
-                //dd("thang cong");
                 $email = Auth::user();
                 return redirect('/')->with(['data'=>$email]);
-                //$cookie = cookie($request->email,$request->password,3600);
             }
 
         }
