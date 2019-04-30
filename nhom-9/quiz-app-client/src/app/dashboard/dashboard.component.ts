@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService, UserService } from '../_services';
 import { Headers, RequestOptions } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,6 +11,7 @@ import { Headers, RequestOptions } from '@angular/http';
 export class DashboardComponent implements OnInit {
 
   id: number;
+  avatarLink: string;
 
   headers: Headers = new Headers({
      'Content-Type': 'application/json',
@@ -23,7 +25,11 @@ export class DashboardComponent implements OnInit {
               private userService: UserService) { }
 
   ngOnInit() {
-    // console.log(this.httpOptions.headers);
+    let a = this.userService.getByToken(this.headers).catch(this.handleError);
+    a.subscribe(data => {
+      // console.log(JSON.parse(data._body)[0].avatarLink);
+      this.avatarLink = JSON.parse(data._body)[0].avatarLink;
+    });
   }
 
   logout() {
@@ -39,6 +45,10 @@ export class DashboardComponent implements OnInit {
   renderAvatar(): void {
     this.userService.getByToken(this.headers);
     localStorage.setItem('avatarLink', 'abc');
+  }
+
+  private handleError(error: Response) {
+    return Observable.throw(error);
   }
 
 }
