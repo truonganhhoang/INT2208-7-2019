@@ -1,5 +1,5 @@
+import { Quiz } from './../_models/quiz-detail/quiz';
 import { Question } from './../_models/question/question';
-import { Questions } from './../_models/question/mock-question';
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { Observable } from 'rxjs';
@@ -17,11 +17,11 @@ const httpOptions = {
 
 @Injectable()
 export class QuestionService {
-  getUrl = 'http://localhost:3000/api/test';
   constructor(private http: Http) { }
-  getTest(id: number): Observable<Question[]> {
+  getQuestionsByQuizId(id: number): Observable<Question[]> {
+    const getUrl = 'http://localhost:3000/api/test';
     const questionArray: Question[] = [];
-    const url = `${this.getUrl}/${id}`;
+    const url = `${getUrl}/${id}`;
     const res = this.http.get(url).catch(this.handleError);
     res.subscribe(data => {
       const JSONarray = JSON.parse(data._body);
@@ -31,7 +31,24 @@ export class QuestionService {
     });
     return Observable.of(questionArray);
   }
-
+  getAllQuizDetail(): Observable<Quiz[]> {
+    const getUrl = 'http://localhost:3000/api/testdetail';
+    const quizArray: Quiz[] = [];
+    this.http.get(getUrl).catch(this.handleError)
+      .subscribe(data => {
+        const JSONarray = JSON.parse(data._body);
+        JSONarray.forEach((element: {
+          quizNumber: number;
+          language: string;
+          catalogy: string;
+          questionQuantity: number
+        }) => {
+          quizArray.push(new Quiz(element.quizNumber, element.catalogy, element.language, element.questionQuantity));
+        }
+        );
+      });
+    return Observable.of(quizArray);
+  }
   private handleError(error: Response) {
     return Observable.throw(error);
   }

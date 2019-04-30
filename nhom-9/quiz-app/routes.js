@@ -4,22 +4,14 @@ var quizs = require('./models/Quiz');
 var users = require('./models/Users');
 var jwt = require('jsonwebtoken');
 var key = 'itsasecret';
-router.get('/', (req, res, next) =>{
-    quizs.getAllQuizs(function (err, rows) {
-        if (err) {
-            res.json(err);
-        } else {
-            res.json(rows);
-        }
-    });
-})
+
 router.get('/api/test/:id', function (req, res) {
-    // console.log(req.params.id);    
+    // console.log(req.params.id);
     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     if (req.params.id) {
-        quizs.getQuizsByid(req.params.id, function (err, rows) {
+        quizs.getQuestionsByQuizId(req.params.id, function (err, rows) {
             if (err) {
                 res.json(err);
             } else {
@@ -28,15 +20,18 @@ router.get('/api/test/:id', function (req, res) {
             }
         });
     } else {
-        quizs.getAllQuizs('/', function (err, rows, next) {
-            if (err) {
-                res.json(err);
-            } else {
-                res.json(rows);
-            }
-
-        });
+        res.json(rows);
     }
+});
+
+router.get('/api/testdetail', function (req, res) {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    quizs.getAllQuizDetail(function (err, rows) {
+        if (err) res.json(err);
+        else res.json(rows);
+    })
 });
 
 router.post('/', function (req, res, next) {
@@ -69,7 +64,7 @@ router.put('/:id', function (req, res, next) {
     });
 });
 
-router.get('/api/users', function(req, res) {
+router.get('/api/users', function (req, res) {
     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
@@ -84,19 +79,19 @@ router.get('/api/users', function(req, res) {
 
 router.post('/api/users/authenticate/:username', function (req, res) {
     users.getUserByUsername(req.params.username, function (err, rows) {
-        if(err) {
+        if (err) {
             res.status(401).json({
                 sucess: false,
                 token: null,
                 err: 'Username or password is incorrect'
             });
         } else {
-            if(rows.length>0  && rows[0].password === req.body.password) {
+            if (rows.length > 0 && rows[0].password === req.body.password) {
                 let token = jwt.sign(
                     { username: rows[0] },
                     key,
                     { expiresIn: 129600 }
-                    );
+                );
                 // Sigining the token
                 res.json({
                     status: 200,
@@ -109,7 +104,7 @@ router.post('/api/users/authenticate/:username', function (req, res) {
                     sucess: false,
                     token: null,
                     err: 'Username or password is incorrect'
-                }); 
+                });
             }
         }
     });
