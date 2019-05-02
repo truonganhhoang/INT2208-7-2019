@@ -3,7 +3,7 @@
 <head>
 	<meta charset ="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Toanhoc</title>
+	<title>French</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="Mon.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -26,6 +26,22 @@
 					</a>
 				</div>
 
+				
+				<ul class="nav nav-pills pull-right">
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%=signinUser.firstname%> <%=signinUser.lastname%><span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" onclick="signout()">Đăng xuất</a></li>
+							<script>  
+								function signout(){  
+									window.location.assign('http://localhost:3000')  
+								}  
+							</script>
+						</ul>
+					</li>
+
+				</ul>
 				
 				<div class="container center_div">
 					<form class="navbar-form" method="post" action="/">
@@ -90,17 +106,17 @@
 					<div role="main" id="main1">	
 						<div class="col-xs-12 col-md-8 col-lg-9">
 							<section> 	
-								<h2>Toán Học</h2>
+								<h2>French</h2>
 							</section>
 							<section> 
 								
-								<h3><b>Chào mừng bạn đã đến với chủ đề 'Toán Học'.</b></h3>					
+								<h3><b>Chào mừng bạn đã đến với chủ đề 'French'.</b></h3>					
 								
 							</section>
 							<div id="chuthuong1">
 								<section> 
 									
-									Đây là trang sẽ cung cấp cho bạn các bí quyết ôn luyện để chinh phục môn Toán Học, các bài tập theo chuyên đề và quan trọng nhất là các bộ đề thi THPT quốc gia mới nhất của Bộ Giáo Dục.
+									Đây là trang sẽ cung cấp cho bạn các bí quyết ôn luyện để chinh phục môn tiếng Pháp, các bài tập theo chuyên đề và quan trọng nhất là các bộ đề thi THPT quốc gia mới nhất của Bộ Giáo Dục.
 									
 								</section>
 								
@@ -110,7 +126,7 @@
 
 					<div class="col-xs-12 col-md-8 col-lg-9">
 						<div id = "mon">
-							<img src="montoan.jpg" alt="" width="auto" height="auto" class="center img-responsive">
+							<img src="french.jpg" alt="" width="auto" height="auto" class="center img-responsive">
 						</div>
 					</div>
 
@@ -193,7 +209,7 @@
 				<ul>
 					<p>Chia sẻ tài liệu ôn thi Đại học</p>
 					<p>Design by Nhóm 8</p>
-					<p> Chúc các bạn thi tốt!</p>
+					<p>Chúc các bạn thi tốt!</p>
 				</ul>
 			</div>
 		</footer>
