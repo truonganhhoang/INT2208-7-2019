@@ -31,17 +31,17 @@
                                         {{ session('error') }}
                                     </div>
                                 @endif
-                                <label>Email Address</label>
+                                <label>Email</label>
                                 <input type="email" name="email">
-                                <label>Password</label>
+                                <label>Mật khẩu</label>
                                 <input type="password" name="password">
                                 <button type="submit">Đăng nhập</button>
 
-                               <a href="{{ route('forgot_pw')}}" style="text-decoration: none">Forgot Password?</a>
+                               <a href="{{ route('forgot_pw')}}" style="text-decoration: none">Quên mật khẩu</a>
                             </form>
                         </div>
                         <div class="social-login">
-                            <p>- - - - - - - - - - - - - Sign In With - - - - - - - - - - - - - </p>
+                            <p>- - - - - - - - - - - - -Phương thức khác- - - - - - - - - - - - - </p>
                             <ul>
                                 <li><a href="{{route('loginApp','facebook')}}"><i class="fab fa-facebook"></i> Facebook</a></li>
                                 <li id="google"><a href="{{route('loginApp','google')}}"><i class="fab fa-google-plus"></i> Google+</a></li>
