@@ -16,16 +16,13 @@ import { UserDetailComponent } from './dashboard/user-detail/user-detail.compone
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { TestDisplayComponent } from './dashboard/test/test.component';
 import { routing } from './app.routing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { DetailComponent } from './dashboard/test/detail/detail.component';
-import { DoQuizComponent } from './dashboard/test/do-quiz/do-quiz.component';
-import { ClassComponent } from './dashboard/class/class.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { QuizDetailComponent } from './quiz-detail/quiz-detail.component';
 import { TestingComponent } from './testing/testing.component';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
@@ -35,14 +32,11 @@ import { TestingComponent } from './testing/testing.component';
     LandingPageComponent,
     LoginComponent,
     RegisterComponent,
-    TestDisplayComponent,
-    DetailComponent,
-    DoQuizComponent,
-    ClassComponent,
     DashboardComponent,
     QuizDetailComponent,
     WelcomeComponent,
-    TestingComponent
+    TestingComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,

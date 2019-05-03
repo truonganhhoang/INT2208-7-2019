@@ -6,7 +6,6 @@ var jwt = require('jsonwebtoken');
 var key = 'itsasecret';
 
 router.get('/api/test/:id', function (req, res) {
-    console.log(req.params.id);
     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.header('Access-Control-Allow-Methods', 'GET');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
@@ -64,20 +63,32 @@ router.put('/:id', function (req, res, next) {
     });
 });
 
+router.get('/api/submitdetail/:id', function (req, res) {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+    res.header('Access-Control-Allow-Methods', 'GET');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    var arr = req.headers.authorization.split(' ', 2);
+    var token_type = arr[0], token = arr[1];
+    try {
+        var username = jwt.verify(token, key).username.userName;
+        users.getSubmitDetail(username, req.params.id, function (err, rows) {
+            if (err) {
+                res.json(err);
+            } else {
+                res.json(rows);
+            }
+        });
+    } catch (e) {
+        return res.status(401).send('unauthorized');
+    }
+});
 router.get('/api/users', function (req, res) {
     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.header('Access-Control-Allow-Methods', 'GET');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     var arr = req.headers.authorization.split(' ', 2);
     var token_type = arr[0], token = arr[1];
-    // console.log(token);
     try {
-        // var decoded = jwt.verify(token, key);
-        // console.log(decoded);
-        // var data = JSON.parse(decoded); // Adding this line and decoded variable can not log to console
-
-
-        // console.log(jwt.verify(token, key).username.userName);
         var username = jwt.verify(token, key).username.userName;
         users.getUserInfo(username, function (err, rows) {
             if (err) {
@@ -91,7 +102,6 @@ router.get('/api/users', function (req, res) {
         return res.status(401).send('unauthorized');
     }
 });
-
 router.post('/api/users/authenticate/:username', function (req, res) {
     // console.log(req);
     users.getUserByUsername(req.params.username, function (err, rows) {
