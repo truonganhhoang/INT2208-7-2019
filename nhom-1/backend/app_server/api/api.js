@@ -19,7 +19,7 @@ const MessengerThread = mongoose.model('MessengerThread', messageThread);
 
 var storageAvatar = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './data/avatar/');
+        cb(null, './../data/avatar/');
     },
     filename: function (req, file, cb) {
         cb(null, req.username);
@@ -87,7 +87,7 @@ module.exports = function (io) {
         });
     });
 
-    router.get('/threadchat', tokenCheck, (req,res)=>{
+    router.get('/get-threadchat', tokenCheck, (req,res)=>{
         threadId = req.query.thread;
         MessengerThread.findById(threadId, (err,doc)=>{
             if (err) {
