@@ -23,7 +23,6 @@
                         {{ session('diff') }}
                     </div>
                 @endif
-<!--todo: fix form icon face and gmail-->
                 <div class="col-sm-6">
                     @if($errors->has('name'))
                         <p  class="alert-danger">{{$errors->first('name')}}</p>
