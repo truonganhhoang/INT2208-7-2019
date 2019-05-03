@@ -6,17 +6,9 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class UserService {
-
     private headers = new Headers({ 'Content-Type': 'application/json' });
-
     private dataUrl = 'http://localhost:3000';
-
     constructor(private http: Http) { }
-
-    // getAll(httpOptions: string) {
-    //     return this.http.get('/api/users', httpOptions);
-    // }
-
 
     getById(id: number) {
         return this.http.get('/api/users' + id);
@@ -24,7 +16,6 @@ export class UserService {
 
     getByToken(header: Headers) {
         var dataUrl = this.dataUrl + '/api/users';
-        // console.log(dataUrl);
         console.log(header);
         return this.http.get(dataUrl, {headers: header}).catch(this.handleError);
     }
@@ -40,7 +31,9 @@ export class UserService {
     delete(id: number) {
         return this.http.delete(`/users/` + id);
     }
-
+    getSubmitDetail(quizId: Number){
+        
+    }
     private handleError(error: Response) {
         return Observable.throw(error);
       }
