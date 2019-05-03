@@ -8,19 +8,19 @@ export class AuthenticationService {
     constructor(private http: Http) { }
 
     login(username: string, password: string) {
-        let a = this.http.post('/api/users/authenticate/' + username, { username: username, password: password }).catch(this.handleError);
+        const a = this.http.post('/api/users/authenticate/' + username, { username: username, password: password }).catch(this.handleError);
         // console.log(a);
-        let b = 
+        const b =
             a.pipe(map(user => {
-                
+
                 // login successful if there's a jwt token in the response
-                let usr_string = user['_body'].toString();
-                let user_obj = JSON.parse(usr_string);
+                const usr_string = user['_body'].toString();
+                const user_obj = JSON.parse(usr_string);
                 if (user && user_obj['token']) {
                     // store user details and jwt token in local storage to keep user logged in between page refreshes
                     localStorage.setItem('currentUser', JSON.stringify(user_obj));
                 }
-                
+
                 return user_obj;
             }));
         // console.log(a);
@@ -38,7 +38,7 @@ export class AuthenticationService {
     }
 
     getToken(): string {
-        var local_data = JSON.parse(localStorage.getItem('currentUser'));
+        let local_data = JSON.parse(localStorage.getItem('currentUser'));
         return local_data['token'];
     }
 }

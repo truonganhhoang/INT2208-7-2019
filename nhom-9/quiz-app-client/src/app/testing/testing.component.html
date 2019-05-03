@@ -8,28 +8,28 @@
   <div class="col-md-12">
     <div class="card" *ngIf="selectedQuestion">
       <div class="card-header text-md-left">
-        <h5 class="display-6">{{selectedQuestion.getquestionContent()}}</h5>
+        <h5 class="display-6">{{selectedQuestion.questionContent}}</h5>
       </div>
       <div class="card-body text-md-left">
         <div class="col-12">
           <div class="radio">
             <label><input type="radio" name="optradio" #checkbox>
-              <span id="A" (click)="onClickCheckbox($event)">{{selectedQuestion.getOptionA()}}</span>
+              <span id="A" (click)="onClickCheckbox($event)" >{{selectedQuestion.optionA}}</span>
             </label>
           </div>
           <div class="radio">
             <label><input type="radio" name="optradio" #checkbox>
-              <span id="B" (click)="onClickCheckbox($event)">{{selectedQuestion.getOptionB()}}</span>
+              <span id="B" (click)="onClickCheckbox($event)">{{selectedQuestion.optionB}}</span>
             </label>
           </div>
           <div class="radio">
             <label><input type="radio" name="optradio" #checkbox>
-              <span id="C" (click)="onClickCheckbox($event)">{{selectedQuestion.getOptionC()}}</span>
+              <span id="C" (click)="onClickCheckbox($event)">{{selectedQuestion.optionC}}</span>
             </label>
           </div>
           <div class="radio">
             <label><input type="radio" name="optradio" #checkbox>
-              <span id="D" (click)="onClickCheckbox($event)">{{selectedQuestion.getOptionD()}}</span>
+              <span id="D" (click)="onClickCheckbox($event)">{{selectedQuestion.optionD}}</span>
             </label>
           </div>
         </div>

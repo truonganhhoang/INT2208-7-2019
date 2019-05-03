@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService, UserService } from '../_services';
 import { Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
@@ -28,7 +29,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     let a = this.userService.getByToken(this.headers).catch(this.handleError);
     a.subscribe(data => {
-      // console.log(JSON.parse(data._body)[0].avatarLink);
+      console.log(JSON.parse(data._body));
       this.avatarLink = JSON.parse(data._body)[0].avatarLink;
     });
   }
