@@ -1,6 +1,6 @@
 
 <div #chatbox style="overflow-y:scroll; height:500px; background-color:white">
-  <app-message *ngFor="let message of messages" [message]="message"></app-message>
+  <app-message *ngFor="let message of messageShow" [message]="message"></app-message>
 </div>
 
 <input type="text" (keydown.enter)="sendMessage($event)">

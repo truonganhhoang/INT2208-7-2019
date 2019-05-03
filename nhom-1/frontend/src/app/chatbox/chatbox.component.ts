@@ -18,6 +18,7 @@ export class ChatboxComponent implements OnInit, AfterViewChecked {
   messageLoaders: MessageLoader[] = [];
   selectedChatRoom: String = null;
   messageShow: Message[] = [];
+  selectedMessageLoader: MessageLoader = null;
 
   constructor(
     private userService: UserService,
@@ -28,16 +29,19 @@ export class ChatboxComponent implements OnInit, AfterViewChecked {
 
   
   ngOnInit() {
-
     this.messageService.getMessageStream().subscribe((newMessage: Message)=>{
       console.log(newMessage);
       let roomid = newMessage.roomId;
       for (let i = 0; i < this.messageLoaders.length; i++) {
+        console.log(this.messageLoaders[i].roomId);
+        console.log(roomid);
         if (roomid == this.messageLoaders[i].roomId) {
           this.messageLoaders[i].messages.push(newMessage);
           break;
         }
       }
+      console.log(this.messageLoaders);
+      console.log(this.messageShow);
     });
 
     this.messageService.getSelectedRoomStream().subscribe((selected: String)=>{
@@ -48,6 +52,8 @@ export class ChatboxComponent implements OnInit, AfterViewChecked {
         if (this.selectedChatRoom == this.messageLoaders[i].roomId) {
           found = true;
           this.messageShow = this.messageLoaders[i].messages;
+          this.selectedMessageLoader = this.messageLoaders[i];
+          if (this.messageShow.length < 15) this.selectedMessageLoader.loadMoreChat(this.http);
         }
       }
       if (!found) {
@@ -71,7 +77,9 @@ export class ChatboxComponent implements OnInit, AfterViewChecked {
               }
               newMessageLoader.messages = messagesForLoad;
               this.messageLoaders.push(newMessageLoader);
+              this.selectedMessageLoader = newMessageLoader;
               this.messageShow = newMessageLoader.messages;
+              if (this.messageShow.length < 15) this.selectedMessageLoader.loadMoreChat(this.http);
             });
           }
         });
@@ -95,6 +103,7 @@ export class ChatboxComponent implements OnInit, AfterViewChecked {
     newMessage.sendDate = new Date();
     newMessage.sender = this.userService.currentUserValue.username;
     this.messageService.sendMessage(receiver, newMessage);
+    this.messageShow.push(newMessage);
   }
 
 }
@@ -104,4 +113,22 @@ class MessageLoader {
   messages: Message[] = [];
   roomId: String;
   nextThread: String;
+
+  loadMoreChat(http: HttpClient) {
+    if (this.nextThread == '') return;
+    http.get<any>(`${environment.apiUrl}/api/get-threadchat`, {params: {thread: this.nextThread.toString()}}).subscribe((resThread)=>{
+      console.log(resThread);
+      this.nextThread = resThread.thread.previous;
+      //load message
+      let messages = resThread.thread.messages;
+      for (let i = messages.length - 1; i >= 0; i--) {
+        let newMessage = new Message();
+        newMessage.sendDate = messages[i].sendDate;
+        newMessage.roomId = this.roomId;
+        newMessage.sender = messages[i].sender;
+        newMessage.content = messages[i].content;
+        this.messages.unshift(newMessage);
+      }
+    });
+  }
 }

@@ -20,19 +20,13 @@ export class MessageService {
         let username = this.userSerivce.currentUserValue.username;
         console.log(username);
         this.mqttService.observe(username).subscribe((mess: IMqttMessage)=>{
-            console.log(mess.payload);
-            console.log(JSON.parse(mess.payload.toString()));
-            // let payload = Object();
-            // payload.sendDate = 'fsfsa';
-            // payload.gnar = 'fsfa';
-            // console.log(JSON.parse(payload.toString()));
-            // let payloadObj = mess.payload.toString();
-            // let payloadMessage = new Message();
-            // payloadMessage.roomId = payloadObj.roomId;
-            // payloadMessage.content = payloadObj.content;
-            // payloadMessage.sender = payloadObj.sender;
-            // payloadMessage.sendDate = payloadObj.sendDate;
-            // this.messageStream.next(payloadMessage);
+            let payloadObj = JSON.parse(mess.payload.toString());
+            let payloadMessage = new Message();
+            payloadMessage.roomId = payloadObj.roomId;
+            payloadMessage.content = payloadObj.content;
+            payloadMessage.sender = payloadObj.sender;
+            payloadMessage.sendDate = new Date(payloadObj.sendDate);
+            this.messageStream.next(payloadMessage);
         });
     }
 
@@ -49,9 +43,6 @@ export class MessageService {
     }
 
     sendMessage(topic, message: Message) {
-        console.log(topic);
-        console.log(message);
-        console.log(message.toString());
         this.mqttService.unsafePublish(topic, JSON.stringify(message));
     }
 }

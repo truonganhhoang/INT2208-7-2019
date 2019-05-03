@@ -26,7 +26,7 @@ function saveMessageToDatabase(topic,payload) {
             return;
         }
         //find thread
-        MessengerThread.findById(doc.thread, (err,docThread)=>{
+        MessengerThread.findById(docRoom.thread, (err,docThread)=>{
             if (err) {
                 console.log('err in find message thread mqtt');
                 return;
@@ -45,7 +45,7 @@ function saveMessageToDatabase(topic,payload) {
                 newThread.previous = docThread._id;
                 newThread.messages.push(newMessage);
                 //save new thread
-                docThread.save((err, doc)=>{
+                newThread.save((err, doc)=>{
                     if (err) {
                         console.log('error in create new messages, save in new thread');
                     }
