@@ -20,7 +20,21 @@
 
 - <u>Hướng dẫn</u>: Để sử dụng chức năng thì yêu cầu người dùng cần phải
 	- Đăng nhập tài khoản (nếu chưa có tải khoản thì đăng ký và xác nhận mail) trên web [orderonline](http://oderonline.herokuapp.com).
-	- Mua sản phẩm (thêm các sản phẩm vào giỏ hàng và thanh toán) bất kỳ trước khi đánh giá. 
+
+	<img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenDucLoc/dang_ky.png" alt="đăng ký" title="dang_ky" width="350" height="100%" /> <img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenDucLoc/dang_nhap.png" alt="đăng nhập" title="dang_nhap" width="350" height="100%" />
+
+	- Mua sản phẩm (thêm các sản phẩm vào giỏ hàng và thanh toán) bất kỳ trước khi đánh giá.
+
+	<img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenDucLoc/trang_chu.png" alt="thêm vào giỏ hàng tại trang chủ" title="trang_chu" width="350" height="100%" /> <img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenDucLoc/mua_hang_1.png" alt="thêm vào giỏ hàng tại trang chi tiết của sản phẩm" title="mua_hang_1" width="350" height="100%" /> <img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenDucLoc/don_hang.png" alt="đơn hàng" title="don_hang" width="350" height="100%" />
+
 	- Quay trở lại trang chi tiết của sản phẩm đã được mua.
+
+	<img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenDucLoc/danh_gia_1.png" alt="sản phẩm được phép đánh giá" title="chua_danh_gia" width="350" height="100%" />
+
 	- Nhấp chọn vào viết đánh giá. Đánh giá số sao cho sản phẩm, viết nhận xét của bạn cho sản phẩm để mọi người đều đọc được. Cuối cùng nhấn gửi để gửi đánh giá và nhân xét về sản phẩm.
+
+	<img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenDucLoc/viet_danh_gia.png" alt="viết đánh giá" title="viet_danh_gia" width="350" height="100%" />
+
 	- Mỗi khách hàng chỉ được có nhiều nhất 1 đánh giá và chỉ được đánh giá sau khi đã mua sản phẩm. Khách hàng được phép thay đổi đánh giá của bản thân tùy thích.
+
+    <img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenDucLoc/danh_gia_2.png" alt="sửa đánh giá" title="sua_danh_gia" width="350" height="100%" />
