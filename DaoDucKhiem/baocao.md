@@ -6,9 +6,9 @@
 # Báo cáo cá nhân môn học Công nghệ phần mềm
 ====
 * Hoàn thành khó học trên edx ([chi tiết](https://github.com/DaoDucKhiem/nhom-5/blob/master/DaoDucKhiem/SoftEng1x.jpg))
-* Bài tập nhóm: **Dự án web bán hàng online [website](http://Oderonline.herokuapp.com), [Github](https://github.com/DaoDucKhiem/nhom-5/tree/master/nhom-5)
+* Bài tập nhóm: **Dự án web bán hàng online** [website](http://Oderonline.herokuapp.com), [Github](https://github.com/DaoDucKhiem/nhom-5/tree/master/nhom-5)
 * User story: Là một người mua hàng, tôi muốn có thể tìm kiếm sản phẩm trên trang web thông qua các từ khóa để tôi có thể nhanh chóng tìm được sản phẩm mà mình muốn mua.
-	[chi tiết](https://github.com/DaoDucKhiem/nhom-5/issues/18)
+	[chi tiết](https://github.com/DaoDucKhiem/nhom-5/issues/18):
 	a, Xác định yêu cầu, mong muốn: 
 		- Tìm kiếm sản phẩm ngay tại trên web (yêu cầu chức năng - specifications)
 		- Tìm kiếm nhanh và chính xác sản phẩm hoặc những sản phẩm có liên quan đến từ khóa người dùng nhập (yêu cầu phi chức năng - specifications)
