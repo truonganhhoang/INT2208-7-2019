@@ -22,7 +22,7 @@
           <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="form-row">
               <div class="col form-group">
-                <label>First name </label>
+                <label>First name: (*) </label>
                 <input type="text" formControlName="firstName" class="form-control"
                   [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
                 <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
@@ -30,7 +30,7 @@
                 </div>
               </div>
               <div class="col form-group">
-                <label>Last name</label>
+                <label>Last name: (*)</label>
                 <input type="text" formControlName="lastName" class="form-control"
                   [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
                 <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
@@ -39,7 +39,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label>Username</label>
+              <label>Username: (*)</label>
               <input type="text" formControlName="username" class="form-control"
                 [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
               <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
@@ -47,7 +47,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label>Password</label>
+              <label>Password: (*)</label>
               <input type="password" formControlName="password" class="form-control"
                 [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
               <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
@@ -56,8 +56,9 @@
               </div>
             </div>
             <div class="form-group">
-              <label>Repeat password</label>
-              <input type="email" class="form-control" placeholder="">
+              <label>Retype password: (*)</label>
+              <input type="password" formControlName="confirmPassword" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
             </div>
             <div class="form-group">
               <label>Email address</label>
@@ -66,13 +67,13 @@
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label>Your birthday</label>
+                <label>Your birthday: </label>
                 <label class="form-check form-check-inline">
                   <input class="form-control" type="date">
                 </label>
               </div>
               <div class="form-group col-md-6">
-                <label>Gender</label>
+                <label>Gender: (*)</label>
                 <div class="form-group">
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="gender">
@@ -88,7 +89,7 @@
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label>You are: </label>
+                <label>You are: (*)</label>
                 <select id="job" class="form-control">
                   <option selected="">Student</option>
                   <option>Teacher</option>
@@ -96,8 +97,12 @@
                 </select>
               </div>
               <div class="form-group col-md-6">
-                <label>Your school: </label>
-                <input type="text" class="form-control">
+                <label>Your school: (*)</label>
+                <input type="text" formControlName="school" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.school.errors }" />
+                <div *ngIf="submitted && f.school.errors" class="invalid-feedback">
+                  <div *ngIf="f.school.errors.required">School name is required</div>
+                </div>
               </div>
             </div>
             <div class="form-group">
