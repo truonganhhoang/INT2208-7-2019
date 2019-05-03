@@ -23,6 +23,6 @@
         <p>Team quản lý công việc và tổ chức công việc nhằm hoàn thành các giai đoạn hoặc chu kỳ phát triển.</p></li>
   </ul>
   
-## Hướng dẫn sử dụng phần mềm: [Google_Docs](https://docs.google.com/document/d/17aWGwAhGq-GpFrMAlU8JGvxOhzR8jEcZDYg4I8s1WQ0/edit?fbclid=IwAR0wztm_g6aTDMW7jVL090gLFL8xgekl6uOqGKCjOHmJ1DOJMiCU0ELKS6M/Google_Docs)
+## Hướng dẫn sử dụng phần mềm: [link 1](https://docs.google.com/document/d/17aWGwAhGq-GpFrMAlU8JGvxOhzR8jEcZDYg4I8s1WQ0/edit?fbclid=IwAR0wztm_g6aTDMW7jVL090gLFL8xgekl6uOqGKCjOHmJ1DOJMiCU0ELKS6M/Google_Docs)
 
-## Video demo sản phẩm: [Demo_DictionaryWeb](https://www.youtube.com/watch?v=oxOZCpNO0SY&feature=youtu.be&fbclid=IwAR1LHcXAoGqcjtXnDE4DId4PTyom0tn_3xcvCoc6NzB4rn2ddlv_se2SiWk/Demo_DictionaryWeb)
+## Video demo sản phẩm: [link 2](https://www.youtube.com/watch?v=oxOZCpNO0SY&feature=youtu.be&fbclid=IwAR1LHcXAoGqcjtXnDE4DId4PTyom0tn_3xcvCoc6NzB4rn2ddlv_se2SiWk/Demo_DictionaryWeb)
