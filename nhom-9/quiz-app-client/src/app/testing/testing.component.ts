@@ -28,7 +28,7 @@ export class TestingComponent implements OnInit {
   ngOnInit() {
     this.title = 'Test ' + (parseInt(this.route.snapshot.paramMap.get('id'), 10) + 1);
     this.titleService.setTitle(this.title);
-    this.questionService.getQuestionsByQuizId(parseInt(this.route.snapshot.paramMap.get('id'), 10) + 1)
+    this.questionService.getQuestionsByQuizId(parseInt(this.route.snapshot.paramMap.get('id'), 10))
       .finally(() => {
         setTimeout(() => this.length = this.questions.length, 50);
         setTimeout(() => this.update(), 100);
