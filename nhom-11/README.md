@@ -42,4 +42,6 @@
    - Sửa lại giao diện chính: Thêm logo web, slogan.
    - Tìm hiểu về ứng dụng của NodeJS và cách sử dụng. 
    - Học trước về MySQL để chuẩn bị cho kế hoạch tiếp theo.
+   
+Link tài liệu kỹ thuật và hướng dẫn sử dụng: https://docs.google.com/document/d/1GEU0qN_Rtvowd0bZk9P5OzJ4PegQ4ROpVGZ8x7-XLa8/edit#
 
