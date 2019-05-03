@@ -39,8 +39,9 @@
      
      3.Sau khi đăng nhập thành công sẽ được chuyển hướng sang trang dành riêng cho người quản lí.
      
-     //thêm ảnh
+     <img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/admin.jpg" height="80%" width="100%" />
      
+     <img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/themsanpham.jpg" height="100%" width="100%" />
 - Câu chuyện người dùng (user story): **Gửi phản hồi ứng dụng, sản phẩm tới nhà phát hành** ([chi tiết](https://github.com/DaoDucKhiem/nhom-5/issues/21)).
 
   <b>Hướng dẫn sử dụng </b>:
@@ -52,7 +53,7 @@
      3.Để gửi phản hồi bạn kéo thanh cuộn xuống phần sản phẩm cick chuột vào phần "detail".
      
      4.Sau khi click kéo xuống bạn sẽ thấy form để gửi phản hồi hãy nhập theo đúng chỉ dẫn.
-  // them anh
+     <img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/phanhoi.jpg" height="100%" width="100%"/>
        
 - Câu chuyện người dùng (user story): **Xác thực tài khoản,bảo vệ tài khoản** ([chi tiết](https://github.com/DaoDucKhiem/nhom-5/issues/20)).
 
@@ -68,7 +69,7 @@
 
 	5.Sau khi xác nhận tài khoản, bạn đã có thể dùng được các chứng năng của website.
 	
-	6.Thêm ảnh.
+	<img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/verify.jpg" alt="verify" >
 
 - Câu chuyện người dùng (user story): **Tạo chức năng đăng kí, chức năng đăng nhập.** ([chi tiết](https://github.com/DaoDucKhiem/nhom-5/issues/20)).
  
@@ -86,7 +87,7 @@
 
 		5.Sau khi xác nhận tài khoản, bạn đã có thể dùng được các chứng năng của website.
 	
-		6.Thêm ảnh.
+		<img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/dangki.jpg" alt="đăng ký" title="dang_ky" width="100%" height="100%" />
 		
     - Đăng nhập tài khoản:
      
@@ -98,4 +99,6 @@
 
 		4.Sau khi đăng nhập thành công thì bây giờ bạn có thể sử dụng được các tính năng của website.
 	
-		5.Thêm ảnh.
+		<img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/dangnhap.jpg" height="100%" width="100%" />
+		<img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/dangkifb.jpg" height="100%" width="100%" />
+		<img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/dangkigmail.jpg" height="100%" width="100%" />
