@@ -1,17 +1,7 @@
-<nav class="navbar navbar-custom">
-  <a class="navbar-brand">
-    <img src="assets/logo2.jpg" alt="logo" style="width:40px" (click)="refresh()">
-  </a>
-  <a id="a_1">
-    <i class="fas fa-bars" (click)="onClickAbout()"></i> About
-  </a>
-</nav>
-
 <div class="container login-container">
   <div class="row justify-content-center">
     <div class="col-md-6 login-form">
         <h3>Log in</h3>
-        <alert></alert>
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="username">Username</label>
