@@ -6,9 +6,9 @@ var jwt = require('jsonwebtoken');
 var key = 'itsasecret';
 
 router.get('/api/test/:id', function (req, res) {
-    // console.log(req.params.id);
+    console.log(req.params.id);
     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Methods', 'GET');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     if (req.params.id) {
         quizs.getQuestionsByQuizId(req.params.id, function (err, rows) {
@@ -26,7 +26,7 @@ router.get('/api/test/:id', function (req, res) {
 
 router.get('/api/testdetail', function (req, res) {
     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Methods', 'GET');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     quizs.getAllQuizDetail(function (err, rows) {
         if (err) res.json(err);
@@ -66,7 +66,7 @@ router.put('/:id', function (req, res, next) {
 
 router.get('/api/users', function (req, res) {
     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Methods', 'GET');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     var arr = req.headers.authorization.split(' ', 2);
     var token_type = arr[0], token = arr[1];
@@ -79,12 +79,12 @@ router.get('/api/users', function (req, res) {
 
         // console.log(jwt.verify(token, key).username.userName);
         var username = jwt.verify(token, key).username.userName;
-        users.getUserByUsername(username, function (err, rows) {
+        users.getUserInfo(username, function (err, rows) {
             if (err) {
                 res.json(err);
             } else {
                 res.json(rows);
-                console.log(rows[0]);
+                // console.log(rows[0]);
             }
         });
     } catch (e) {
@@ -93,6 +93,7 @@ router.get('/api/users', function (req, res) {
 });
 
 router.post('/api/users/authenticate/:username', function (req, res) {
+    // console.log(req);
     users.getUserByUsername(req.params.username, function (err, rows) {
         if (err) {
             res.status(401).json({
