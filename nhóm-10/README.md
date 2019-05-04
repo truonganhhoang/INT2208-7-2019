@@ -23,4 +23,22 @@
   * Sprint 3 (2 tuần): Hoàn thành game HangMan.
                        Thêm chức năng nhập dữ liệu băng giọng nói
                        Tạo diễn đàn cơ bản cho trang
-                       
+### Công cụ sử dụng:
+ * HTML/CSS/Bootstrap
+ * JavaScript/Jquery
+ * PHP
+ * Pingendo
+ * MySQL,SQLite
+ ### Hướng dẫn cài đặt ứng dụng:
+ * clone hoặc dowload file zip về
+ * Tải thêm xampp để chạy 
+ * Nhét file đã clone hoặc dowload vào thư mục htdocs trong xampp (ổ C).
+ * import 2 file .sql lên phpmyadmin trong đường link: http://localhost/phpmyadmin .
+ * mở Google Chorme hoặc Cốc cốc để truy cập với link : http://localhost/homemoi.php để vào trang trủ.
+ ### Link sản phẩm: 
+ https://udict-10team.000webhostapp.com/homemoi.php
+ ### Báo cáo nhóm:
+ https://docs.google.com/document/d/1UZjnOihPkoEg6eQDRIeDhzl7e2hXcB3gq9xEthdaKds/edit?usp=sharing
+ ### Video demo sản phẩm:
+ https://drive.google.com/file/d/1JLC8ikzdxILCdU-BNxUQHeUpfvCmCjvD/view?usp=sharing
+ 
