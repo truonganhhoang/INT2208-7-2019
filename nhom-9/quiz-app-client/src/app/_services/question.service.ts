@@ -1,7 +1,8 @@
+import { AuthenticationService } from './authentication.service';
 import { Quiz } from './../_models/quiz-detail/quiz';
 import { Question } from './../_models/question/question';
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
+import { Http, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs';
 
 const httpOptions = {
@@ -17,9 +18,10 @@ const httpOptions = {
 
 @Injectable()
 export class QuestionService {
-  constructor(private http: Http) { }
+  constructor(private http: Http,
+    private authService: AuthenticationService) { }
   getQuestionsByQuizId(id: number): Observable<Question[]> {
-    const getUrl = 'http://localhost:3000/api/test';
+    const getUrl = 'api/test';
     const questionArray: Question[] = [];
     const url = `${getUrl}/${id}`;
     const res = this.http.get(url).catch(this.handleError);
@@ -32,20 +34,30 @@ export class QuestionService {
     return Observable.of(questionArray);
   }
   getAllQuizDetail(): Observable<Quiz[]> {
-    const getUrl = 'http://localhost:3000/api/testdetail';
+    const getUrl = 'api/testdetail';
+    const headers: Headers = new Headers({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.authService.getToken()}`,
+      'Accept': 'application/json',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Origin': '*',
+    });
     const quizArray: Quiz[] = [];
-    this.http.get(getUrl).catch(this.handleError)
+    this.http.get(getUrl, { headers: headers }).catch(this.handleError)
       .subscribe(data => {
-        const JSONarray = JSON.parse(data._body);
-        JSONarray.forEach((element: {
-          quizNumber: number;
-          language: string;
-          catalogy: string;
-          questionQuantity: number
-        }) => {
-          quizArray.push(new Quiz(element.quizNumber, element.catalogy, element.language, element.questionQuantity));
+        if (data.ok) {
+          const JSONarray = JSON.parse(data._body);
+          JSONarray.forEach((element: {
+            quizNumber: number;
+            language: string;
+            catalogy: string;
+            questionQuantity: number
+            isCompleted: boolean
+          }) => {
+            quizArray.push(new Quiz(element.quizNumber, element.catalogy, element.language, element.questionQuantity, element.isCompleted));
+          }
+          );
         }
-        );
       });
     return Observable.of(quizArray);
   }

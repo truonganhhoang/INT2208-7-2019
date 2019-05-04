@@ -20,9 +20,17 @@ export class QuizDetailComponent implements OnInit {
     this.questionService.getAllQuizDetail().subscribe(quizs => this.quizs = quizs);
   }
   onGetQuiz(i: number): void {
-    this.testId = i + 1;
+    this.testId = i;
   }
-  onConfirm() {
-    this.router.navigate(['/testing', this.testId]);
+  onReview(i: number): void {
+    this.testId = i;
+  }
+  onConfirm(option: number) {
+    if (option === 0) {
+      this.router.navigate(['/testing', this.testId]);
+    }
+    else {
+      this.router.navigate(['/result', this.testId]);
+    }
   }
 }

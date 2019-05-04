@@ -11,3 +11,7 @@
 .navbar-custom .navbar-brand {
     color: #ecf0f1;
 }
+:btn-primary{
+    margin: 5%;
+    color:white;
+}

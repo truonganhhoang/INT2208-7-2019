@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoggedGuard } from './_guards/logged.guard';
 import { QuizDetailComponent } from './quiz-detail/quiz-detail.component';
 import { ConfirmTestGuard } from './_guards/confirm-test.guard';
+import { ResultComponent } from './result/result.component';
 
 const appRoutes: Routes = [
     {
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
             { path: 'quiz-detail', component: QuizDetailComponent },
             { path: 'testing/:id', component: TestingComponent, canActivate: [ConfirmTestGuard] },
             { path: '', redirectTo: 'quiz-detail', pathMatch: 'full', canActivate: [AuthGuard] },
+            { path: 'result/:id', component: ResultComponent }
         ]
     },
     { path: 'login', component: LoginComponent, canActivate: [LoggedGuard] },

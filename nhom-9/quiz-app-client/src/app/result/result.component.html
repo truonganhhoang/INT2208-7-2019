@@ -1,3 +1,37 @@
-<p>
-  result works!
-</p>
+<div class="container">
+  <div class="card">
+    <header class="card-header">
+      <a routerLink="/dashboard" class="float-right btn btn-outline-primary mt-1 display-4"
+        style="font-size:28px">Back</a>
+      <h1 class="display-4" style="margin-left:4%; color:darkblue">TEST {{quizId + 1}}: </h1>
+    </header>
+    <div class="card-body">
+      <div class="card" *ngFor="let result of results; let i = index">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-2">
+              <h5 class="card-title" style="color:blue">Question {{i + 1}}:</h5>
+            </div>
+            <div class="col-10">
+              <div *ngIf="result.accuracy; else elseBlock">
+                <h5 style="color:forestgreen">True</h5>
+              </div>
+              <ng-template #elseBlock>
+                <h5 style="color:darkred">False</h5>
+              </ng-template>
+            </div>
+          </div>
+          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark">Question: </strong> {{result.questionContent}}
+          </p>
+          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark">Your Answer: </strong> {{result.yourAnswer}}
+          </p>
+          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark">True Answer: </strong> {{result.trueAnswer}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
