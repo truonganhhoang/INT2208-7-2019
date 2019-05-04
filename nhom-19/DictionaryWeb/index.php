@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Tra cứu từ điển</title>
+        <title>Tra từ online</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="img/globe-2x.png">
@@ -22,8 +22,6 @@
                             wordEV :     $('#wordEV').val(),
                             wordVE :     $('#wordVE').val(),
                             wordVV :     $('#wordVV').val(),
-                            wordVF :     $('#wordVF').val(),
-                            wordFV :     $('#wordFV').val(),
                             dictionary : $('#dictionary').val()
                         },
                         success : function (result){
@@ -62,15 +60,11 @@
         <div class="input-group" id="input" style="margin-top:5%">                            
             <input style="color: #DF7401;width:100% " type = "text" id = "wordEV" class="input_box"  placeholder="Nhập từ cần tra" required/> 
             <input style="color: #DF7401;width:100% " type = "text" id = "wordVE" class="input_box hidden"  placeholder="Nhập từ cần tra" required/> 
-            <input style="color: #DF7401;width:100% " type = "text" id = "wordVV" class="input_box hidden"   placeholder="Nhập từ cần tra" required/>
-            <input style="color: #DF7401;width:100% " type = "text" id = "wordVF" class="input_box hidden"  placeholder="Nhập từ cần tra" required/>
-            <input style="color: #DF7401;width:100%" type = "text" id = "wordFV" class="input_box hidden"  placeholder="Nhập từ cần tra" required/>       
+            <input style="color: #DF7401;width:100% " type = "text" id = "wordVV" class="input_box hidden"   placeholder="Nhập từ cần tra" required/>   
                 <select id = "dictionary" name = "dictionary"  >
                     <option value="EV" >Anh-Việt</option>
                     <option value="VE" >Việt-Anh</option>
                     <option value="VV" >Việt-Việt</option>
-                    <option value="VF" >Việt-Pháp</option>
-                    <option value="FV" >Pháp-Việt</option>
                 </select>                                      
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search">Search</button>                    
         </div>                                  
@@ -120,29 +114,7 @@
                     }                    
                 });
             });        
-            $.getJSON("./json/VF.json", function(tags4) {
-                $( "#wordVF" ).autocomplete({
-                    delay: 100,
-                    source: function( request, response ) {
-                        var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
-                        response( $.grep( tags4, function( item ){
-                            return matcher.exec( item );
-                        }) );                                               
-                    }                    
-                });
-            });
-            $.getJSON("./json/FV.json", function(tags5) {
-                $( "#wordFV" ).autocomplete({
-                    delay: 100,
-                    source: function( request, response ) {
-                        var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
-                        response( $.grep( tags5, function( item ){
-                            return matcher.exec( item );
-                        }) );                                               
-                    }                    
-                });
-            });
-
+        
             $('.input_box').keypress(function(e){
             var p = e.which;
             if(p==13){
@@ -176,12 +148,10 @@
     <!-- END BODY -->
     <!--FOOTER-->
     <footer class="container-fluid text-center starter-template" style="margin-top:50px">
-        <p style="color: #084B8A"><b>Contact Me</b></p>       
-        <a href="https://www.facebook.com/hung.tr.522" class="fa fa-facebook-square fa-3x" title="Liên kết tới Facebook tác giả" target="_blank"></a>
-        <a href="https://plus.google.com/u/0/112179101004715606073" class="fa fa-google-plus fa-3x" title="Liên kết tới Google+ tác giả" target="_blank"></a>
-        <a href="https://github.com/hungtrn75" class="fa fa-github fa-3x" title="Mã nguồn ứng dụng" target="_blank"></a>
+        <p style="color: #084B8A"><b>Contact Me</b></p>      
+        <a href="https://github.com/ThaoIE3/INT2208-7-2019" class="fa fa-github fa-3x" title="Mã nguồn ứng dụng" target="_blank"></a>
         <a href="https://www.linkedin.com/in/h%C3%B9ng-tr-574093141/" title="Liên kết tới Linkedin tác giả" class="fa fa-linkedin-square fa-3x" target="_blank"></a>
-        <p><span style="color: #084B8A">Copyright &copy; <a href="./index.php">hungtrn75 2017</a></span></p>
+        <p><span style="color: #084B8A">Copyright &copy; <a href="./index.php">Nhom 19</a></span></p>
     </footer>
     <!--END FOOTER-->
 </body>  
