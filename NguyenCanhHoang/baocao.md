@@ -54,6 +54,8 @@
      
      4.Sau khi click kéo xuống bạn sẽ thấy form để gửi phản hồi hãy nhập theo đúng chỉ dẫn.
      <img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/phanhoi.jpg" height="100%" width="100%"/>
+     Phản hồi của bạn sẽ được gửi tới nhà phát hành (sau đây là ví dụ):
+     <img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/feedback.PNG" height="100%" width="100%"/>
        
 - Câu chuyện người dùng (user story): **Xác thực tài khoản,bảo vệ tài khoản** ([chi tiết](https://github.com/DaoDucKhiem/nhom-5/issues/20)).
 
@@ -102,3 +104,17 @@
 		<img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/dangnhap.jpg" height="100%" width="100%" />
 		<img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/dangkifb.jpg" height="100%" width="100%" />
 		<img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/dangkigmail.jpg" height="100%" width="100%" />
+
+ - Câu chuyện người dùng (user story): **Tạo chức năng giỏ hàng.** ([chi tiết](https://github.com/DaoDucKhiem/nhom-5/issues/25)).
+ 
+   <b>Hướng dẫn sử dụng </b>
+	
+	  1.Bạn cần đăng nhập tài khoản (lưu ý răng hãy chắc chắn rằng tài khoản của bạn đã xác thực).
+	  
+	  2.Bây giờ, bạn có thể tìm kiếm tài khoản theo từ khóa, hay mua trực tiếp ở trang chủ.
+	  
+	  3.Click vào icon giỏ hàng ở mỗi sản phẩm để thêm sản phẩm mới vào giỏ hàng.
+	  
+	  4.Thực hiện thanh toán sản phẩm.
+	  
+	  <img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/giohang.PNG" height="100%" width="100%" />
