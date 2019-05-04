@@ -30,7 +30,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.renderUserInfo();
-    console.log(this.userinfo.length)
+    setTimeout(() => {localStorage.setItem('userinfo', JSON.stringify(this.userinfo))}, 300);
+    console.log(this.userinfo);
   }
 
   logout() {
@@ -48,7 +49,7 @@ export class DashboardComponent implements OnInit {
     // localStorage.setItem('avatarLink', 'abc');
     let a = this.userService.getByToken(this.headers).catch(this.handleError);
     a.subscribe(data => {
-      // this.avatarLink = JSON.parse(data._body)[0].avatarLink;
+      this.avatarLink = JSON.parse(data._body)[0].avatarLink;
       // var user = JSON.parse(data._body)[0];
       // this.userinfo = new User(user.firstName, user.lastName, user.username, '', user.email, user.birthday, user.gender, user.role, 
       // user.school, user.id, user.avatarLink);

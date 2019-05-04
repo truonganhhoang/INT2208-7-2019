@@ -15,16 +15,18 @@
               <div class="col form-group">
                 <label>First name: (*) </label>
                 <input type="text" formControlName="firstName" class="form-control"
-                placeholder="{{this.userinfo.firstname}}" />
+                placeholder="{{firstname}}" />
               </div>
               <div class="col form-group">
                 <label>Last name: (*)</label>
-                <input type="text" formControlName="lastName" class="form-control" />
+                <input type="text" formControlName="lastName" class="form-control"
+                placeholder="{{lastname}}" />
               </div>
             </div>
             <div class="form-group">
               <label>Username: (*)</label>
-              <input type="text" formControlName="username" class="form-control" />
+              <input type="text" formControlName="username" class="form-control"
+              placeholder="{{username}}" />
             </div>
             <div class="form-group">
               <label>Password: (*)</label>
@@ -40,7 +42,8 @@
             </div>
             <div class="form-group">
               <label>Email address</label>
-              <input type="email" class="form-control" placeholder="">
+              <input type="email" class="form-control" placeholder=""
+              placeholder="{{email}}">
               <small class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-row">
@@ -76,7 +79,8 @@
               </div>
               <div class="form-group col-md-6">
                 <label>Your school: (*)</label>
-                <input type="text" formControlName="school" class="form-control" />
+                <input type="text" formControlName="school" class="form-control"
+                placeholder="{{school}}" />
               </div>
             </div>
             <div class="form-group">

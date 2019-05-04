@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
@@ -13,7 +13,14 @@ import { User } from '../_models';
 })
 export class UserEditComponent implements OnInit {
 
-    @Input() userinfo: User;
+    userinfo: any;
+    firstname: string;
+    lastname: string;
+    username: string;
+    email: string;
+    birthday: string;
+    school: string;
+
     updateForm: FormGroup;
     loading = false;
     submitted = false;
@@ -25,18 +32,26 @@ export class UserEditComponent implements OnInit {
         private alertService: AlertService) { }
 
     ngOnInit() {
-        // console.log(this.userinfo)
+        this.userinfo = JSON.parse(localStorage.getItem('userinfo'));
+        this.firstname = this.userinfo[0].firstName;
+        this.lastname = this.userinfo[0].lastName;
+        this.username = this.userinfo[0].username;
+        // console.log(this.userinfo[0]);
+        this.email = this.userinfo[0].email;
+        this.birthday = this.userinfo[0].birthday;
+        this.school = this.userinfo[0].school;
+
         this.updateForm = this.formBuilder.group({
-            firstName: [],
-            lastName: [],
-            username: [],
-            password: [,Validators.minLength(6)],
+            firstName: [''],
+            lastName: [''],
+            username: [''],
+            password: ['', Validators.minLength(6)],
             confirmPassword: [''],
             email: [''],
             birthday: [''],
             gender: [''],
             role: [''],
-            school: []
+            school: ['']
 
         });
     }
