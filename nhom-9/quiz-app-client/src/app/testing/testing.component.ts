@@ -1,5 +1,5 @@
 import { UserService } from './../_services/user.service';
-
+import { first } from 'rxjs/operators';
 import { QuestionService } from './../_services/question.service';
 import { Question } from './../_models/question/question';
 import { Component, OnInit, ElementRef, Renderer2, ViewChildren, QueryList } from '@angular/core';
@@ -18,7 +18,7 @@ export class TestingComponent implements OnInit {
   questions: Question[];
   currentIndex = 0;
   length: number;
-  title: string;
+  quizId: number;
   constructor(
     private titleService: Title,
     private route: ActivatedRoute,
@@ -28,12 +28,12 @@ export class TestingComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.title = 'Test ' + (parseInt(this.route.snapshot.paramMap.get('id'), 10) + 1);
-    this.titleService.setTitle(this.title);
+    this.quizId = parseInt(this.route.snapshot.paramMap.get('id'), 10);
+    this.titleService.setTitle('Test ' + (this.quizId + 1 ));
     this.questionService.getQuestionsByQuizId(parseInt(this.route.snapshot.paramMap.get('id'), 10))
       .finally(() => {
-        setTimeout(() => this.length = this.questions.length, 200);
-        setTimeout(() => this.update(), 200);
+        setTimeout(() => this.length = this.questions.length, 100);
+        setTimeout(() => this.update(), 300);
       })
       .subscribe(quesitons => this.questions = quesitons);
   }
@@ -44,9 +44,7 @@ export class TestingComponent implements OnInit {
   }
   onClickCheckbox(event: any) {
     const elementId: string = (event.target as Element).id;
-    console.log(this.currentIndex + ' ' + elementId);
-    this.map.set(this.currentIndex, elementId);
-    console.log(this.map.size);
+    this.map.set(this.questions[this.currentIndex].questionNumber, elementId);
   }
   onClickPrev(): void {
     this.currentIndex = (this.length + this.currentIndex - 1) % this.length;
@@ -57,7 +55,15 @@ export class TestingComponent implements OnInit {
     this.update();
   }
   onClickSubmit(): void {
-    this.router.navigate(['/dashboard']);
+    this.questionService.submitAnswer(this.map, this.quizId ).pipe(first())
+    .subscribe(
+        data => {
+            console.log(';');
+        },
+        error => {
+          console.log(';dd');
+        });
+     this.router.navigate(['/dashboard']);
   }
   update(): void {
     this.selectedQuestion = this.questions[this.currentIndex];
