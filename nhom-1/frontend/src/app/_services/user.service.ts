@@ -36,7 +36,7 @@ export class UserService {
     }
 
     updateAvatar(avt: FormData) {
-        return this.http.post(`${environment.apiUrl}/api/avatarupload`, avt)
+        return this.http.post(`${environment.apiUrl}/api/avatarupload`, avt);
     }
 
     addFriend(username: string) {

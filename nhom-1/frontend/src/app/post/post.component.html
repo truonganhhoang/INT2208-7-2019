@@ -1,0 +1,32 @@
+<mat-card style="width: 90%; margin: 20px auto;overflow: auto; ">
+  <div mat-card-avatar style="background-image:url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+   height: 45px; width: 45px; background-size: contain">
+      <mat-card-title style="margin-left: 60px; font-size: 15px;white-space: nowrap ;">Nguyen Chum And Quynh Kool Nhom 1</mat-card-title>
+      <mat-card-subtitle style="margin-left: 60px; font-size: 15px;white-space: nowrap ;">This is</mat-card-subtitle>
+  </div>
+  <mat-card style="margin-top: 10px;overflow: auto; overflow-y:hidden; ">
+      The (click) to the left of the equals sign identifies the button's
+      click event as the target of the binding. The text in quotes to the 
+      right of the equals sign is the template statement, 
+      which responds to the click event by calling the component's onClickMe method.
+      The (click) to the left of the equals sign identifies the button's
+      click event as the target of the binding. The text in quotes to the 
+      right of the equals sign is the template statement, 
+      which responds to the click event by calling the component's onClickMe method.
+      The (click) to the left of the equals sign identifies the button's
+      click event as the target of the binding. The text in quotes to the 
+      right of the equals sign is the template statement,
+  </mat-card>
+  <hr>
+  <button mat-button style="width:50%;">
+    <i class="far fa-2x fa-thumbs-up"></i>
+    <span style = "padding: 0px 0px 0px 10px">100</span>
+  </button>
+  <button mat-button style="width:50%;">Comment</button>
+  <hr>
+  <textarea matInput cdkTextareaAutosize
+  #autosize="cdkTextareaAutosize"
+  cdkAutosizeMinRows="1"
+  placeholder="Your comment"
+  style="overflow-y:hidden; border-radius: 5px; margin-left: 15px;"></textarea>
+</mat-card>

@@ -9,7 +9,6 @@ import { UserService } from '@app/_services/user.service';
 export class HomeComponent implements OnInit, OnDestroy {
     currentUser: User;
     currentUserSubscription: Subscription;
-    // users: User[] = [];
 
     constructor(
         private userService: UserService
@@ -20,10 +19,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
+        this.userService.get(this.currentUser.username).subscribe(data=>{
+            this.currentUser = data.user;
+        });
     }
 
     ngOnDestroy() {
-        // unsubscribe to ensure no memory leaks
         this.currentUserSubscription.unsubscribe();
     }
 }

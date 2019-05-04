@@ -36,8 +36,8 @@ export class UserProfileComponent implements OnInit {
     ) {
         this.user = new User;
         this.isMyProfile = false;
+        console.log(this.userService.currentUserValue);
     }
-
 
     ngOnInit() {
         this.route.params.subscribe(param => {
@@ -56,6 +56,7 @@ export class UserProfileComponent implements OnInit {
                 .subscribe(
                     data => {
                         this.user = data.user;
+                        console.log(this.user);
                         this.getFriends();
                         this.getRelation();
                     }

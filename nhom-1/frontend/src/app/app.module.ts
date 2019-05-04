@@ -39,7 +39,8 @@ import { MessageService } from './_services/message.service';
 
 import {
     MqttModule
-  } from 'ngx-mqtt';
+  } from 'ngx-mqtt';;
+import { PostComponent } from './post/post.component'
 
 @NgModule({
     imports: [
@@ -81,7 +82,8 @@ import {
         ChatlistComponent,
         ChatboxComponent,
         ChatlistItemComponent
-    ],
+,
+        PostComponent    ],
     entryComponents: [
         EditProfileDialog, UpdateAvatarDialog,
     ],
