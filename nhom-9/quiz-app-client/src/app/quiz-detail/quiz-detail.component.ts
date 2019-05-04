@@ -20,10 +20,10 @@ export class QuizDetailComponent implements OnInit {
     this.questionService.getAllQuizDetail().subscribe(quizs => this.quizs = quizs);
   }
   onGetQuiz(i: number): void {
-    this.testId = i + 1;
+    this.testId = i;
   }
   onReview(i: number): void {
-    this.testId = i + 1;
+    this.testId = i;
   }
   onConfirm(option: number) {
     if (option === 0) {

@@ -1,17 +1,17 @@
 <div class="row">
   <div class="col-sm-6 col-6" *ngFor="let quiz of quizs let i= index">
     <div class=" card">
-      <h5 class="card-header">Test {{quiz?.quizNumber}}:</h5>
+      <h5 class="card-header">Test {{quiz?.quizNumber + 1}}:</h5>
       <div class="card-body">
         <p class="card-text">{{quiz?.catalogy}}</p>
         <p class="card-text">{{quiz?.language}}</p>
         <div *ngIf="quiz.isCompleted; else elseBlock">
-          <a style="color:white" class="btn btn-primary" (click)="onGetQuiz(i)" data-toggle="modal"
-            data-target="#modal_1">Get Quizs</a>
-        </div>
-        <ng-template #elseBlock>
           <a style="color:white" class="btn btn-primary" (click)="onReview(i)" data-toggle="modal"
             data-target="#modal_2">Review</a>
+        </div>
+        <ng-template #elseBlock>
+          <a style="color:white" class="btn btn-primary" (click)="onGetQuiz(i)" data-toggle="modal"
+            data-target="#modal_1">Get Quizs</a>
         </ng-template>
         <div class="modal fade" id="modal_1">
           <div class="modal-dialog">
@@ -43,7 +43,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                <p>You will review your work on {{quizs[testId].quizNumber}}</p>
+                <p>You will review your work on {{quizs[testId].quizNumber + 1}}</p>
               </div>
               <div class="modal-footer">
                 <a class="btn btn-primary" data-dismiss="modal" (click)="onConfirm(1)">Go to test now!</a>
