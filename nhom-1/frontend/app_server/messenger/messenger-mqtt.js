@@ -8,6 +8,14 @@ const MessengerRoom = mongoose.model('MessengerRoom', messengerRoom);
 const MessengerThread = mongoose.model('MessengerThread', messageThread);
 const Message = mongoose.model('Message', messageSchema);
 
+
+function saveNotify(topic, payload) {
+    let userReceiver = topic;
+    payload = JSON.parse(payload);
+    let type = payload.type;
+
+}
+
 function saveMessageToDatabase(topic,payload) {
     payload = JSON.parse(payload);
     let userReceiver = topic;
@@ -97,10 +105,25 @@ module.exports = function() {
     const mqtt = require('mqtt');
     const server = mqtt.connect(process.env.MQTT_URL,{clean:false, clientId: process.env.MQTT_SERVER_CLIENTID});
 
-    server.subscribe('#', {qos:2}, (err)=>{if (err) console.log(err)});
+    server.subscribe('messenger/#', {qos:2}, (err)=>{if (err) console.log(err)});
+    server.subscribe('notify/#', {qos:2}, (err)=>{if (err) console.log(err)});
 
     server.on('message', (topic, payload)=>{
-        saveMessageToDatabase(topic, payload);
-        updateUnreadMessage(topic, payload)
+        let index = 0;
+        for (let i = 0; i < topic.length; i++) {
+            if (topic[i] == '/') {
+                index = i;
+                break;
+            }
+        }
+        let type = topic.substr(0,index);
+        let receiver = topic.substring(index+1, topic.length);
+        if (type == 'messenger') {
+            saveMessageToDatabase(receiver, payload);
+            updateUnreadMessage(receiver, payload)
+        }
+        if (type == 'notify') {
+            saveNotify(receiver, payload);
+        }
     });
 }

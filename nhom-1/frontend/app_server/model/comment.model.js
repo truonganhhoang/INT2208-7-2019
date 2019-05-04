@@ -6,7 +6,14 @@ var commentSchema = new Schema({
         type: String,
         default: ''
     },
-    
+    content: {
+        type: String,
+        default: ''
+    },
+    sendDate: {
+        type: Date,
+        default: Date.now
+    }
 });
 
 

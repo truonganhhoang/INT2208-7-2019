@@ -19,7 +19,7 @@ export class MessageService {
         this.selectedRoom = new Subject<String>();
         let username = this.userSerivce.currentUserValue.username;
         console.log(username);
-        this.mqttService.observe(username).subscribe((mess: IMqttMessage)=>{
+        this.mqttService.observe('messenger/'+username).subscribe((mess: IMqttMessage)=>{
             let payloadObj = JSON.parse(mess.payload.toString());
             let payloadMessage = new Message();
             payloadMessage.roomId = payloadObj.roomId;
@@ -43,6 +43,6 @@ export class MessageService {
     }
 
     sendMessage(topic, message: Message) {
-        this.mqttService.unsafePublish(topic, JSON.stringify(message));
+        this.mqttService.unsafePublish(topic, JSON.stringify(message),{qos:2});
     }
 }

@@ -102,7 +102,7 @@ export class ChatboxComponent implements OnInit, AfterViewChecked {
     newMessage.roomId = this.selectedChatRoom;
     newMessage.sendDate = new Date();
     newMessage.sender = this.userService.currentUserValue.username;
-    this.messageService.sendMessage(receiver, newMessage);
+    this.messageService.sendMessage('messenger/'+receiver, newMessage);
     this.messageShow.push(newMessage);
   }
 
