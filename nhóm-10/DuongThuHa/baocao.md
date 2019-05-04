@@ -8,7 +8,7 @@
 - Thiết kế giao diện:
 	
 	[Tìm hiểu về HTML, CSS, JavaScript.](http://www.w3schools.com)
-- Liên kết cơ sở dữ liệu với phần tìm kiếm (sử dụng mySQL,PHP).
+- Liên kết cơ sở dữ liệu với phần từ cần đoán (sử dụng mySQL,PHP).
 
 	[Học mySQL](https://freetuts.net/hoc-mysql)
 	
