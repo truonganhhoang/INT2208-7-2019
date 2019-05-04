@@ -28,7 +28,7 @@
 
 				
 				<ul class="nav nav-pills pull-right">
-					<li><a href="#" onclick="signin()" style ="color:#dddddd">Đăng nhập</a></li>
+					<li><a href="#" onclick="signin()" style ="color:#ffffff">Đăng nhập<span class="caret"></a></li>
 					<script> 
 						function signin(){
 							window.location.assign('/signin')
@@ -36,7 +36,7 @@
 					</script>
 				</ul>
 				<div class="container center_div">
-					<form class="navbar-form" method="post" action="/giaodiendethi">
+					<form class="navbar-form" method="post" action="/search">
 						<input type="text" class="form-control" name="search" placeholder="Tìm kiếm tài liệu & đề thi...">
 						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 					</form>
@@ -85,18 +85,19 @@
 						<li><a href="/gdcd">Công Dân</a></li>		
 					</ul>
 				</li>
-				<li><a href="#">Video</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>
-
-	<script>
-	</script>
+	
 	<div role="main" id="main">
+		<% results[0].forEach(function(result) { %>
+		<div class = "col-md-12">
+			<h3><u> <%=result.name%></u></h3>
+		</div>
 		<div class="container-fluid">
 			<section>
-			<% results[0].forEach(function(result) { %>
-				<div>
+			
+				<div >
 					<a href="<%=result.link%>" >
 						<img src="<%=result.link%>" class="wraptocenter">
 					</a>
@@ -106,26 +107,39 @@
 						Download <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
 					</a>
 				</div>
-			<% }); %>
+			
 			</section>
 		</div>
-	</div>
-	<div class="container ">
-			<div>
-				<input type="text" class="form-control" placeholder="Thêm bình luận...">
-				<button id="comment" onclick="signin()"	class="btn btn-default pull-right"> Comment</button>
+		<% }); %>
+	
+	<div >
+		<div class = "col-md-12">
+			<h3><u> Bình luận: </u></h3>
+		</div>
+		<p style="margin-top: ">
+
+				<input type="text" id="comm" class="btn btn-default" placeholder="Thêm bình luận..."/>
+
+				<button onclick="signin()"	class="btn btn-default pull-right"> Comment</button>
 				<script> 
 						function signin(){
-							window.location.assign('/signin')
+							var conf = false;
+							conf = confirm("Bạn cần đăng nhập để bình luận!");
+			            if(conf){
+			            	
+							window.location.assign('/signin');
+						}
 						}
 					</script>
-			</div>
+		</p>
 		</div>
+
 		<% results[1].forEach(function(cm) { %>
-		<div style="<% if(!cm){%> display: none <%}%>" class="alert alert-danger">
+		<div id= "comment" style="<% if(!cm){%> display: none <%}%>" class="">
 			<p> <h4><%=cm.firstname%> <%=cm.lastname%>:</h4> <%=cm.comment%></p>
 		</div>
 		<% }); %>
+	</div>
 	<footer class ="bs-docs-footer">
 		<div class="container">
 			<p><strong>Chia sẻ tài liệu ôn thi Đại học</strong></p>

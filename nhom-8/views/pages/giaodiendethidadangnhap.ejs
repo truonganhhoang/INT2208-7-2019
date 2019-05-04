@@ -46,7 +46,7 @@ $('#submit').click(function() {
 				<ul class="nav nav-pills pull-right">
 					
 					<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%=signinUser.firstname%> <%=signinUser.lastname%><span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style ="color:#ffffff"><%=signinUser.firstname%> <%=signinUser.lastname%><span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="#" onclick="signout()">Đăng xuất</a></li>
 						<script>  
@@ -59,9 +59,9 @@ $('#submit').click(function() {
 				</ul>
 				
 				<div class="container center_div">
-					<form class="navbar-form">
-						<!--<input type="text" class="form-control" placeholder="Tìm kiếm tài liệu & đề thi...">
-						<button type="search" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>-->
+					<form class="navbar-form" method="post" action="/searchdn">
+						<input type="text" class="form-control" name="search" placeholder="Tìm kiếm tài liệu & đề thi...">
+						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 					</form>
 				</div>
 
@@ -99,7 +99,6 @@ $('#submit').click(function() {
 						<li><a href="/gdcddn">Công Dân</a></li>		
 					</ul>
 				</li>
-				<li><a href="#">Video</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>
@@ -107,45 +106,55 @@ $('#submit').click(function() {
 
 <%var id;%>;
 	<div role="main" id="main">
+		<% results[0].forEach(function(result) { %>
+		<div class = "col-md-12">
+			<h3><u> <%=result.name%></u></h3>
+		</div>
 		<div class="container-fluid">
 			<section>
-			<% results[0].forEach(function(result) { %>
-				<div>
+			
+				<div >
 					<a href="<%=result.link%>" >
 						<img src="<%=result.link%>" class="wraptocenter">
-						<%id = result.id%>;
 					</a>
 				</div>
 				<div class="text-center">
-					<a href="<%=result.link%>" class="btn btn-primary btn-lg" download>
+					<a href="<%-result.link%>" class="btn btn-primary btn-lg" download="<%=result.name%>">
 						Download <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
 					</a>
 				</div>
-			<% }); %>
+			
 			</section>
 		</div>
-	</div>
+		<% }); %>
+
 	<%if (data && data.error) {%>
 		<div id="error" class="alert alert-danger">
 		<%=data.error%>
 		</div>
 	<%}%>
+
 	<% results[0].forEach(function(result) { %>
-	<div class="container ">
-	<form id="comment" action="/giaodiendethidadangnhap/<%=result.id%>" method="POST">
-			<div>
-				<input type="text" name="texts" class="form-control" placeholder="Thêm bình luận...">
-				<button id="comment" type="submit" class="btn btn-default pull-right"> Comment</button>
-			</div>
-	</form>
+	<div >
+	<div class = "col-md-12">
+			<h3><u> Bình luận: </u></h3>
+		</div>
+		<form action="/giaodiendethidadangnhap/<%=result.id%>" method="POST">
+
+				<input type="text" id="comm" name="texts" class="btn btn-default" placeholder="Thêm bình luận..."/>
+
+				<button type="submit"	class="btn btn-default pull-right"> Comment</button>
+		</form>
   </div>
   <% }); %>
+
+
 		<% results[1].forEach(function(cm) { %>
-		<div style="<% if(!cm){%> display: none <%}%>" class="alert alert-danger">
+		<div id= "comment" style="<% if(!cm){%> display: none <%}%>" class="">
 			<p> <h4><%=cm.firstname%> <%=cm.lastname%>:</h4> <%=cm.comment%></p>
 		</div>
 		<% }); %>
-		
+		</div>
 		
 	<footer class ="bs-docs-footer">
 		<div class="container">
