@@ -142,18 +142,27 @@ class AdminController extends Controller
     }
     public function putUpdate($id,Request $request){
 
-       $targetProduct = products::find($id);
-       $targetProduct->update([
+        if($request->hasFile('image')) {
+            //$name=$req->getClientOriginalName();
+            $file = $request->file('image');
+            $name = $file->getClientOriginalName();
+            $file->move('img\product', $name);
 
-           'name'=>$request->name,
-           'id_type'=>$request->id_type,
-           'description'=>$request->description,
-           'unit_price'=>$request->unit_price,
-           'promotion_price'=>$request->promotion_price,
-           'unit'=>$request->unit,
-           'image'=>$request->image,
+            $targetProduct = products::find($id);
+            $targetProduct->update([
 
-       ]);
-       return redirect('/');
-    }
+                'name' => $request->name,
+                'id_type' => $request->id_type,
+                'description' => $request->description,
+                'unit_price' => $request->unit_price,
+                'promotion_price' => $request->promotion_price,
+                'unit' => $request->unit,
+                'image' => $name,
+
+            ]);
+        }
+
+            return redirect('/');
+
+        }
 }
