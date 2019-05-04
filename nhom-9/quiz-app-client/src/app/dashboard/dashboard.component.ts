@@ -4,6 +4,7 @@ import { AuthenticationService, UserService } from '../_services';
 import { Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { JsonPipe } from '@angular/common';
+import { User } from '../_models';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,6 +15,7 @@ export class DashboardComponent implements OnInit {
 
   id: number;
   avatarLink: string;
+  userinfo: User[] = [];
 
   headers: Headers = new Headers({
      'Content-Type': 'application/json',
@@ -27,11 +29,9 @@ export class DashboardComponent implements OnInit {
               private userService: UserService) { }
 
   ngOnInit() {
-    let a = this.userService.getByToken(this.headers).catch(this.handleError);
-    a.subscribe(data => {
-      console.log(JSON.parse(data._body));
-      this.avatarLink = JSON.parse(data._body)[0].avatarLink;
-    });
+    this.renderUserInfo();
+    setTimeout(() => {localStorage.setItem('userinfo', JSON.stringify(this.userinfo))}, 300);
+    console.log(this.userinfo);
   }
 
   logout() {
@@ -44,9 +44,35 @@ export class DashboardComponent implements OnInit {
     window.location.reload();
   }
 
-  renderAvatar(): void {
-    this.userService.getByToken(this.headers);
-    localStorage.setItem('avatarLink', 'abc');
+  renderUserInfo(): void {
+    // this.userService.getByToken(this.headers);
+    // localStorage.setItem('avatarLink', 'abc');
+    let a = this.userService.getByToken(this.headers).catch(this.handleError);
+    a.subscribe(data => {
+      this.avatarLink = JSON.parse(data._body)[0].avatarLink;
+      // var user = JSON.parse(data._body)[0];
+      // this.userinfo = new User(user.firstName, user.lastName, user.username, '', user.email, user.birthday, user.gender, user.role, 
+      // user.school, user.id, user.avatarLink);
+      const JSONarray = JSON.parse(data._body);
+      JSONarray.forEach((element:
+        { firstName: string;
+          lastName: string;
+          username: string;
+          password: string;
+          email: string;
+          birthday: string;
+          gender: string;
+          role: string;
+          school: string;
+          id: number;
+          avatarLink: string; }) => {
+        this.userinfo.push(new User(
+          element.firstName, element.lastName, element.username, element.password, element.email,
+          element.birthday, element.gender, element.role, element.school, element.id, element.avatarLink
+          ));
+      });
+    });
+    // Observable.of(this.userinfo).subscribe(user => this.userinfo = user);
   }
 
   private handleError(error: Response) {

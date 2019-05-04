@@ -23,6 +23,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { QuizDetailComponent } from './quiz-detail/quiz-detail.component';
 import { TestingComponent } from './testing/testing.component';
 import { ResultComponent } from './result/result.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ResultComponent } from './result/result.component';
     QuizDetailComponent,
     WelcomeComponent,
     TestingComponent,
-    ResultComponent
+    ResultComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
