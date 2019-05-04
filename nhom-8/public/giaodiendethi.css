@@ -89,6 +89,16 @@ h3{
 .text-center{
     padding-top: 20px;
 }
+#comm{
+    width: 90%;
+    padding: 20px;
+}
 #comment{
-    margin-top: 6px;
+    padding-top: 6px;
+}
+a{
+   color:  #ffffff;
+}
+.navbar-nav {
+    padding-left: 10%;
 }

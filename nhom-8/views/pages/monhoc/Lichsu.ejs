@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Lichsu</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="Lichsu.css">
+	<link rel="stylesheet" href="Mon.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
@@ -14,25 +14,89 @@
 	<nav class="navbar navbar-inverse">
 		<div id="header">
 			<header class="container-fluid">
-				<div id="hd2">
-					<div class="col-xs-12 col-md-8 col-lg-9">
-						<ul class="nav navbar-nav navbar-left">
-							<li><a href="/giaodiendadangnhap">Trang chủ</a></li>
-						</ul>
-					</div>
+				
+				<div id = "logo">
+					<a class="navbar-brand" href="#" onclick="home()">
+						<script> 
+							function home(){
+								window.location.assign('/')
+							}
+						</script>
+						<img src="/hoctot.png" alt="" style="auto">
+					</a>
 				</div>
 
-				
-			</header>
-		</div>
-	</nav>
-
-	<section>
+				<ul class="nav nav-pills pull-right">
+					
+					<li class="dropdown">
+						<a href="#" onclick="signin()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style ="color:#ffffff">Đăng nhập<span class="caret"></span></a>
+						<script> 
+							function signin(){
+								window.location.assign('/signin')
+							}
+						</script>
+					</ul>
 
 		
-		<div class="container">
-			<div class="row">
 				<div class="container center_div">
+					<form class="navbar-form" method="post" action="/search">
+						<input type="text" class="form-control" name="search" placeholder="Tìm kiếm tài liệu & đề thi...">
+						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+					</form>
+				</div>
+
+			</header>
+		</div>
+
+
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a href="/"><span class="glyphicon glyphicon-home"></span> Trang chủ </a></li>
+				<li><a href="/toan">Toán Học</a></li>
+				<li><a href="/van">Ngữ Văn</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ngoại Ngữ <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="/eng">English</a></li>
+						<li><a href="/phap">French</a></li>
+						<li><a href="/nhat">Japanese</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Khoa học Tự Nhiên<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="/ly">Vật Lý</a></li>
+						<li><a href="/hoa">Hóa Học</a></li>
+						<li><a href="/sinh">Sinh Học</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Khoa học Xã hội<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="/su">Lịch Sử</a></li>
+						<li><a href="/dia">Địa Lý</a></li>
+						<li><a href="/gdcd">Công Dân</a></li>		
+					</ul>
+				</li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav>
+
+	<section>	
+		<div class="container-fluid">
+			<div id="phanchinh">
+				<div class="row">
+
 					<div role="main" id="main1">	
 						<div class="col-xs-12 col-md-8 col-lg-9">
 							<section> 	
@@ -49,38 +113,40 @@
 									Đây là trang sẽ cung cấp cho bạn các bí quyết ôn luyện để chinh phục môn Lịch Sử, các bài tập theo chuyên đề và quan trọng nhất là các bộ đề thi THPT quốc gia mới nhất của Bộ Giáo Dục.
 									
 								</section>
+								
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-xs-12 col-md-8 col-lg-9">
-					<div id = "monsu">
-						<img src="monsu.jpg" alt="" width="auto" height="auto" class="center img-responsive">
+					<div class="col-xs-12 col-md-8 col-lg-9">
+						<div id = "mon">
+							<img src="monsu.jpg" alt="" width="auto" height="auto" class="center img-responsive">
+						</div>
 					</div>
-				</div>
 
-				<div class="container center_div">
+					
 					<div role="main" id="main2">	
 						<div class="col-xs-12 col-md-8 col-lg-9">
 							
-							
 							<div id="chuthuong2">
-								
-							<div class="container">
-						<div class="row">
-						<% results.forEach(function(result) { %>
-							<div class="col-md-3 col-sm-6">
-								<a href="/giaodiendethidadangnhap/<%=result.id%>" class="thumbnail">
+								<section> 
+									Sau đây chúng tôi sẽ cung cấp cho các bạn một số bộ đề thi cần thiết và hữu ích:
 									
-									<img src="<%=result.link%>" alt="de1" style="width:150px;height:150px">
-								</a>
-								<p style="text-align:center"><%=result.name%></p> 
-							</div>
-						<% }); %>
-						</div>
-					</div>
+								</section>
+								<div class="container">
+									<div class="row">
+										<% results.forEach(function(result) { %>
+										<div class="col-md-3 col-sm-6">
+											<a href="/giaodiendethi/<%=result.id%>"  class="thumbnail">
 
+												<img src="<%=result.link%>" alt="de1" style="width:150px;height:150px">
+											</a>
+											<p style="text-align:center"><%=result.name%></p> 
+										</div>
+										<% }); %>
+									</div>
+								</div>	
+								
 							</div>
 						</div>
 					</div>
@@ -89,14 +155,18 @@
 		</div>
 	</section>
 
-	<footer class ="bs-docs-footer">
-		<div class="container-fluid">
-			<ul>
-				<li><p>ÔN THI ĐẠI HỌC</p></li>
-				<li><p>Design by Nhóm 8</p></li>
-				<li><p>Thi THPT 2019!!!</p></li>
-			</ul>
-		</div>
-	</footer>
+
+
+		<footer class ="bs-docs-footer">
+			<div class="container">
+				<ul>
+					<p>Chia sẻ tài liệu ôn thi Đại học</p>
+					<p>Design by Nhóm 8</p>
+					<p>Chúc các bạn thi tốt!</p>
+				</ul>
+			</div>
+		</footer>
+	</section>
+
 </body>
 </html>
