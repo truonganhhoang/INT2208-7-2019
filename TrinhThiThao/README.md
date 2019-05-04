@@ -1,3 +1,3 @@
- - Họ và tên: Nguyễn Thị Huyền Trang.</li>
- - Ngày sinh: 07/08/1999.</li>
- - MSSV: 17021075.</li> 
+ - Họ và tên: Trịnh Thị Thảo.</li>
+ - Ngày sinh: 10/09/1999.</li>
+ - MSSV: 17021025.</li> 
