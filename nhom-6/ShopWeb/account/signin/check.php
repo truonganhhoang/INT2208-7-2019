@@ -1,42 +1,51 @@
 <?php
-	session_start();
-
-	include_once __DIR__. "/../../function/database.php";
 	
 
-	/**
-	 * 
-	 */
-	class CheckLogin
-	{
-		public $obj;
+	include_once __DIR__. "/../../function/sql.php";
+	
+	if(isset($_POST['submit'])){
 
-		function __construct()
+		$err = [];
+
+		$id   = $_POST['txtusername'];
+    	$pass   = $_POST['txtpassword'];
+
+		if(!isset($id))
 		{
-			$this->obj= new Database();
+			$err['id'] = 'Không để trống tên đăng nhập!';
+		} else{
+			if (!isset($pass)) {
+				$err['pass'] = 'Mật khẩu không thể trống!';
+			}
 		}
 
-		public function checkPass($id, $pass)
+		if (empty($err))
 		{
-			$query = $this->obj->fetchID('user', $id);
-			return ($pass == $query['password']);
-		}
+			$pas = md5($pass);
+			$sql = "SELECT * FROM user WHERE id = '$id' AND password = '$pas'";
+			$result = mysqli_query($con, $sql);
+			$row = mysqli_fetch_assoc($result);
+			
 
-		public function setcookie($id, $pass)
-		{
-			if (isset($_POST['remember'])) {
-	            setcookie('id', $id, time() + 3600, '/', '', 0, 0);
-	            setcookie('pass', $pass, time() + 3600, '/', '', 0, 0);
-	        }
-	        else
-	        {
-	            setcookie('id', $id, time() - 3600, '/', '', 0, 0);
-	            setcookie('pass', $pass, time() - 3600, '/', '', 0, 0);
-	        }
+			if ($pas == $row['password'])
+			{
+				if (isset($_POST['remember'])) {
+		            setcookie('id', $id, time() + 3600, '/', '', 0, 0);
+		            setcookie('pass', $pass, time() + 3600, '/', '', 0, 0);
+		        }
+		        else
+		        {
+		            setcookie('id', $id, time() - 3600, '/', '', 0, 0);
+		            setcookie('pass', $pass, time() - 3600, '/', '', 0, 0);
+		        }
 
-	        $query = $this->obj->fetchID('user', $id);
-	        $_SESSION['us'] =  $query['Name'];
+		        $_SESSION['us'] =  $row['Name'];
+		        $_SESSION['us_id'] =  $row['id'];
+
+		        header('Location: /ShopWeb');
+			}else{
+				$err['account'] = 'Thông tin tài khoản hoặc mật khẩu không chính xác. Vui lòng nhập lại!';
+			}
 		}
 	}
-	
 ?>

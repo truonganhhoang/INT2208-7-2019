@@ -1,7 +1,7 @@
 <div class="header_bottom">
 	<div class="menu">
 		<ul>
-			<li class="active"><a href="/ShopWeb" title="Trang chủ Home Shoppe">Trang chủ</a></li>
+			<li class="active"><a href="<?php echo $domain; ?>" title="Trang chủ Home Shoppe">Trang chủ</a></li>
 			<li><a href="#">Thông tin</a></li>
 			<li><a href="#">Tin tức</a></li>
 			<li><a href="#">Khuyến mại</a></li>
@@ -21,14 +21,14 @@
 			{?>
 				<ul>
 					<li><a title="Tài khoản của tôi" href="/ShopWeb/account/myaccount/"><?php echo $_SESSION['us']; ?></a></li>
-					<li><a href="/ShopWeb/account/signout">Đăng xuất</a></li>
+					<li><a href="<?php echo $domain; ?>/account/signout">Đăng xuất</a></li>
 				</ul>
 			<?php } 
 			else{
 			?>
 				<ul>
 					<li>
-						<a href="/ShopWeb/account/signin/">Đăng nhập
+						<a href="<?php echo $domain; ?>/account/signin/">Đăng nhập
 						</a>
 					</li>
 				</ul>

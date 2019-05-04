@@ -19,7 +19,7 @@
 				<div id="mover">
 					<div id="slide-1" class="slide">
 						<div class="slider-img">
-							<a href="#"><img src="/ShopWeb/public/home/images/km2.jpg"></a>
+							<a href="#"><img src="public/home/images/p14.jpg"></a>
 						</div>
 						
 						<div class="slider-text">
@@ -45,7 +45,7 @@
 						</div>
 
 						<div class="slider-img">
-							<a href="#"><img src="/ShopWeb/public/home/images/km2.jpg"></a>
+							<a href="#"><img src="public/home/images/p12.jpg"></a>
 						</div>
 
 						<div class="clear"></div>
@@ -62,7 +62,7 @@
 						</div>
 
 						<div class="slider-img">
-							<a href="#"><img src="/ShopWeb/public/home/images/km2.jpg"></a>
+							<a href="#"><img src="public/home/images/p15.jpg"></a>
 						</div>
 
 						<div class="clear"></div>

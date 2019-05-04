@@ -52,6 +52,19 @@ button:hover {
   opacity: 0.8;
 }
 
+.c_form{
+	text-align: center;
+	width: 100%;
+}
+
+.c_form p label{
+	padding-right: 2%;
+}
+
+.c_form p input{
+	padding-left: 10%;
+}
+
 .account_desc{
 	float:right;
 	margin-right: 2%;
@@ -152,7 +165,6 @@ button:hover {
 	font-size:1.5em;
 	color:#E4292F;
 }
-
 .wrapper-dropdown-2 {
     display:inline-block;
     margin: 0 auto;
@@ -399,7 +411,8 @@ button:hover {
 	position: relative;
 }
 .images_1_of_4  img {
-	max-width: 100%;
+	max-width: 251px;
+	max-height: 355px;
 }
 .images_1_of_4  h2 {
 	color:#6A82A4;
@@ -512,7 +525,7 @@ button:hover {
 	display: block;
 }
 .span_1_of_4  li span{
-	font-size:1em;
+	font-size:0.8125em;
 	font-family: 'ambleregular';
 	color:#2A5C86;
 	cursor:pointer;
@@ -524,7 +537,6 @@ button:hover {
 }
 /*** Social Icons ***/
 .social-icons {
-	padding-top: 8%;
 }
 .social-icons li {
 	width: 30px;

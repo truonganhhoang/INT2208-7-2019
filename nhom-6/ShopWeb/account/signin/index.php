@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include_once __DIR__. "/../../function/sql.php";
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +15,8 @@
 
 <form style="border:1px solid #ccc" method="POST">
 	<div class="logosignup">
-		<a href="/ShopWeb">
-    		<img title="Trang chủ" src="/ShopWeb/public/home/images/logo.png" alt="Avatar" class="avatar">
+		<a href="<?php echo $domain; ?>">
+    		<img title="Trang chủ" src="<?php echo $domain; ?>/public/home/images/logo.png" alt="Avatar" class="avatar">
    		</a>
 	</div>
 	<hr>
@@ -30,16 +35,26 @@
                     <input type="checkbox" name="remember" checked="checked">Nhớ mật khẩu
                 </div>
             </div>
+
+            <div>
+                <?php 
+                    include ("check.php");
+                    if(isset($err['id'])) echo $err['id'];
+                    if(isset($err['pass'])) echo $err['pass'];
+                    if(isset($err['account'])) echo $err['account'];
+                ?>
+
+            </div>
         </div>
 
         <div class="clearfix">
-            <a href="/ShopWeb/account/signup/"><button type="button" class="cancelbtn">Đăng ký</button></a>
+            <a href="<?php echo $domain; ?>/account/signup/"><button type="button" class="cancelbtn">Đăng ký</button></a>
             <button type="submit" class="signupbtn" name="submit" >Đăng nhập</button>
         </div>
 
         <div style="text-align: right; margin-top: 5px;" >
             <div style="padding-right:  15%;">
-                Quên mật khẩu? Khôi phục lại <a href="/ShopWeb/account/forgot/">tại đây!</a>
+                Quên mật khẩu? Khôi phục lại <a href="<?php echo $domain; ?>/account/forgot/">tại đây!</a>
             </div>
         </div>
     </div>
@@ -48,23 +63,3 @@
 </body>
 </html>
 
-<?php
-    if(isset($_POST['submit']))
-    {
-        include ("check.php");
-        $obj = new CheckLogin();
-        $id   = $_POST['txtusername'];
-        $pass   = $_POST['txtpassword'];
-        $password = md5($pass);
-
-        if($obj->checkPass($id, $password))
-        {
-            $obj->setcookie($id, $pass);
-            header('Location: /ShopWeb');
-        }
-        else
-        {
-            echo "<script>alert('Thông tin Tài khoản hoặc Mật khẩu không chính xác, vui lòng kiểm tra lại!');</script>";
-        }
-    }
-?>

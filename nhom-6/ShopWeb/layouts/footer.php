@@ -22,21 +22,21 @@
 		<div class="col_1_of_4 span_1_of_4">
 			<h4>Tài khoản</h4>
 			<ul>
-				<li><a href="/PHP_ShopWeb/login">Đăng nhập</a></li>
-				<li><a href="#">Xem giỏ hàng</a></li>
-				<li><a href="#">Sản phẩm yêu thích</a></li>
+				<li><a href="<?php echo $domain; ?>/account/signin/">Đăng nhập</a></li>
+				<li><a href="<?php echo $domain; ?>/account/signup/">Đăng ký</a></li>
+				<li><a href="<?php echo $domain; ?>/account/forgot/">Quên mật khẩu</a></li>
 			</ul>
 		</div>
 
 		<div class="col_1_of_4 span_1_of_4">
 			<h4>Liên hệ</h4>
 			<ul>
-				<li><span>+84 xxx xxxx</span></li>
 				<div class="social-icons">
-					<li><a href="#" target="_blank"><img src="/PHP_ShopWeb/public/home/images/facebook.png" alt="" /></a></li>
-					<li><a href="#" target="_blank"><img src="/PHP_ShopWeb/public/home/images/twitter.png" alt="" /></a></li>
-					<li><a href="#" target="_blank"><img src="/PHP_ShopWeb/public/home/images/skype.png" alt="" /> </a></li>
+					<li><a href="#" target="_blank"><img src="public/home/images/facebook.png" alt="" /></a></li>
+					<li><a href="#" target="_blank"><img src="public/home/images/twitter.png" alt="" /></a></li>
+					<li><a href="#" target="_blank"><img src="public/home/images/skype.png" alt="" /> </a></li>
 				</div>
+				<li><span>+84 xxx xxxx</span></li>
 			</ul>
 		</div>
 			
