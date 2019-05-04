@@ -140,6 +140,10 @@ export class UserProfileComponent implements OnInit {
                 }
             )
     }
+
+    routeToMessage() {
+        this.router.navigate(['messenger'], {queryParams:{u: this.user.username}});
+    }
 }
 
 @Component({

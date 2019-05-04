@@ -17,6 +17,14 @@ var threadSchema = new Schema({
     author: {
         type: String,
         default: ''
+    },
+    lastInteract: {
+        type: Date,
+        default: Date.now
+    },
+    likes: {
+        type: [String],
+        default: []
     }
 });
 
