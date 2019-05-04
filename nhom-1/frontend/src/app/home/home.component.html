@@ -1,17 +1,26 @@
-﻿﻿<mat-card style="width: 90%; margin: 20px auto;">
+﻿﻿
+<div class="row">
+<div class="col-10 offset-1">
+  
+<mat-card style="margin: 15px 0px 15px 0px;">
   <div mat-card-avatar style="height: 45px; width: 45px; background-size: contain"
   [style.backgroundImage]="'url('+ currentUser.avatarUrl +')'">
   </div>
   <br>
   <mat-form-field class="full-width">
       <mat-label>What are you thingking?</mat-label>
-      <textarea  matInput cdkTextareaAutosize
+      <textarea #postcontent matInput cdkTextareaAutosize
       #autosize="cdkTextareaAutosize"
       cdkAutosizeMinRows="1" 
       style="overflow-y:hidden;"></textarea>
   </mat-form-field>
-  <button mat-button style="width:10%;margin-left:15px;">Share</button>
+  <mat-progress-bar *ngIf="progressShow" mode="indeterminate" style="width: 95%; margin-left: 15px; margin-bottom: 20px;"></mat-progress-bar>
+  <button #sharebutton mat-button style="width:10%;margin-left:15px;" (click)="uploadPost(postcontent,sharebutton)">Share</button>
 </mat-card>
 
+
 <!--bai dang-->
-<app-post></app-post>
+<app-post *ngFor="let post of posts;" [post]="post"></app-post>
+
+</div>
+</div>

@@ -5,6 +5,7 @@ export class Message {
     roomId: String;
 
     constructor() {
+        
     }
 
 }

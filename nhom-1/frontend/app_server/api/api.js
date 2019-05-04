@@ -4,6 +4,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const multer = require('multer');
 const tokenCheck = require('./token-check');
+const mqttClient = require('./../common/mqttConnect');
 
 
 const userSchema = require('./../model/user.model');
@@ -14,7 +15,7 @@ const genNoti = require('./generate-room-notification');
 const messageThread = require('./../model/thread-message.model');
 const postSchema = require('./../model/thread.model');
 const commentSchema = require('./../model/comment.model');
-const NotifyObject = require('./../model/notifyObj.model');
+const NotifyObject = require('./../model/notifyObj.model')
 
 const Post = mongoose.model('Post', postSchema);
 const User = mongoose.model('User', userSchema);
@@ -45,9 +46,72 @@ var saveAvatarHandlerMiddleware = multer({ storage: storageAvatar });
 
 var savePictureHandlerMiddleware = multer({ storage: storagePicture });
 
+router.post('/unlike-post', tokenCheck, (req,res)=>{
+    //leave blank
+});
+
+router.get('/getfullpost', tokenCheck, (req,res)=>{
+    Post.find({}, (err,docs)=>{
+        if (err) {
+            res.json({state: false});
+            return;
+        }
+        res.json({state:true, posts: docs});
+    });
+});
+
+router.post('/like-post', tokenCheck, (req,res)=>{
+    let postId = req.body.postId;
+    let user = req.body.username;
+
+    Post.findById(postId, (err,doc)=>{
+        if (err) {
+            res.json({state:false});
+            return;
+        }
+        if (doc) {
+            let found = false;
+            for (let i = 0; i < doc.likes.length; i++) {
+                if (doc.likes[i] == user) {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) doc.likes.push(user);
+            found = false; 
+            for (let i = 0; i < doc.subcribers.length; i++) {
+                if (doc.subcribers[i] == user) {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) doc.subcribers.push(user);
+            doc.save((err)=>{
+                if (err) {
+                    res.json({state:false});
+                } else {
+                    res.json({state: true});
+                }
+            });
+        }
+    });
+});
 
 router.get('/get-post', tokenCheck, (req,res)=>{
+    let postId = req.query.postid;
 
+    Post.findById(postId, (err,doc)=>{
+        if (err) {
+            res.json({state: false});
+            return;
+        }
+        if (doc) {
+            res.json({state: true, post: doc});
+        }
+        else {
+            res.json({state: true, post: false});
+        }
+    });
 });
 
 router.post('/post-comment', tokenCheck, (req,res)=>{
@@ -61,7 +125,7 @@ router.post('/post-comment', tokenCheck, (req,res)=>{
                 state: false
             });
             return;
-        } else {
+        } else if (doc) {
             let found = false;
             for (let i = 0; i < doc.subcribers.length; i ++) {
                 if (user == doc.subcribers[i]) {
@@ -75,16 +139,41 @@ router.post('/post-comment', tokenCheck, (req,res)=>{
             let newComment = new Comment();
             newComment.content = commentContent;
             newComment.sender = user;
+            newComment.postId = postId;
             doc.comments.push(newComment);
             doc.lastInteract = new Date();
-            doc.save((err,doc)=>{
+            doc.save((err,docPost)=>{
                 if (err) {
                     res.json({state: false});
                     return;
                 }
                 let newNotify = new Notify();
                 newNotify.type = 'comment to post';
-                
+                newNotify.payload.sender = user;
+                newNotify.payload.postId = postId;
+
+                let newMqttNotify = new NotifyObject();
+                newMqttNotify.type = 'comment to post';
+                newMqttNotify.payload.sender = user;
+                newMqttNotify.payload.postId = postId;
+
+                for (let i = 0; i < docPost.subcribers.length; i++) {
+                    if (user != docPost.subcribers[i]) {
+                        //notify to user
+                        mqttClient.publish('notify/'+docPost.subcribers[i], JSON.stringify(newMqttNotify), {qos:2});
+
+                        //then save
+                        User.findOne({username: docPost.subcribers[i]}, (err,docUser)=>{
+                            if (!err) {
+                                while (docUser.notifies.length > 50) {
+                                    docUser.notifies.pop();
+                                }
+                                docUser.notifies.unshift(newNotify);
+                                docUser.save(err=>{if (err) console.log(err)});
+                            }
+                        });
+                    }
+                }
             });
         }
     });
@@ -100,7 +189,7 @@ router.post('/post-thread', tokenCheck, (req,res)=>{
     post.subcribers.push(user);
     post.content = content;
 
-    Post.save((err,doc)=>{
+    post.save((err,doc)=>{
         if (err) {
             res.json({
                 state: false
@@ -358,8 +447,14 @@ router.get('/acceptfriend', tokenCheck, (req,res)=> {
             }
         });
 
+        let notifyMqttData = new NotifyObject();
+        notifyMqttData.type = 'friend accepted';
+        notifyMqttData.payload.sender = userId;
+
+        mqttClient.publish('notify/'+friendId, JSON.stringify(notifyMqttData), {qos:2});
+
         doc.notifies.unshift(notifyData);
-        if (doc.notifies.length > 50) {
+        while (doc.notifies.length > 50) {
             doc.notifies.pop();                
         }
 
@@ -432,6 +527,12 @@ router.get('/requestfriend', tokenCheck, (req, res) => {
         type: 'friend request',
         payload: {sender: userId}
     });
+
+    let notifyMqttData = new NotifyObject();
+    notifyMqttData.type = 'friend request';
+    notifyMqttData.payload.sender = userId;
+    
+    mqttClient.publish('notify/'+friendId, JSON.stringify(notifyMqttData), {qos:2});
 
     //update in receiver
     let friendTypeInReceiver = new Friend({

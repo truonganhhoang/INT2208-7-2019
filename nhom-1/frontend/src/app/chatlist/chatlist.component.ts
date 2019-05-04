@@ -168,7 +168,4 @@ export class ChatlistComponent implements OnInit {
   selectChatRoom(i: ChatRoom) {
     this.router.navigate(['messenger'], {queryParams: {u : i.sender}});
   }
-
-
-
 }

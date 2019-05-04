@@ -15,7 +15,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatNativeDateModule, MatInputModule } from '@angular/material';
+import { MatNativeDateModule, MatInputModule, MatProgressBarModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent }  from './app.component';
@@ -61,8 +61,10 @@ import { PostComponent } from './post/post.component'
         MatIconModule,
         MatDialogModule,
         MatCheckboxModule,
-        MatNativeDateModule, MatInputModule,
+        MatNativeDateModule, 
+        MatInputModule,
         FormsModule,
+        MatProgressBarModule,
         MqttModule.forRoot({
             hostname: 'localhost',
             port: 9001,

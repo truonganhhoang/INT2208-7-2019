@@ -1,6 +1,18 @@
-
+<!-- 
 <div #chatbox style="overflow-y:scroll; height:500px; background-color:white">
   <app-message *ngFor="let message of messageShow" [message]="message"></app-message>
 </div>
 
-<input type="text" (keydown.enter)="sendMessage($event)">
+<input type="text" (keydown.enter)="sendMessage($event)"> -->
+<div #chatbox style="overflow-y:scroll; height:500px;">
+  <app-message *ngFor="let message of messageShow" [message]="message"></app-message>
+</div>
+<div class="type_msg">
+  <div class="input_msg_write">
+    <input type="text" class="write_msg" placeholder="Type a message" #messText
+      (keydown.enter)="sendMessage(messText)" />
+    <button class="msg_send_btn" type="button" (click)="sendMessage(messText)">
+      <i class="fas fa-angle-double-right"></i>
+    </button>
+  </div>
+</div>

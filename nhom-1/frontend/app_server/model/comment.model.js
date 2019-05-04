@@ -13,6 +13,10 @@ var commentSchema = new Schema({
     sendDate: {
         type: Date,
         default: Date.now
+    },
+    postId: {
+        type: String,
+        default: ''
     }
 });
 

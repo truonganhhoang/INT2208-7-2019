@@ -1,12 +1,13 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const messengerRoom = require('./../model/messenger-room.model');
-const messageThread = require('./../model/thread-message.model');
-const messageSchema = require('./../model/message.model');
+const messengerRoom = require('../model/messenger-room.model');
+const messageThread = require('../model/thread-message.model');
+const messageSchema = require('../model/message.model');
 
 const MessengerRoom = mongoose.model('MessengerRoom', messengerRoom);
 const MessengerThread = mongoose.model('MessengerThread', messageThread);
 const Message = mongoose.model('Message', messageSchema);
+const server = require('../common/mqttConnect');
 
 
 function saveNotify(topic, payload) {
@@ -102,11 +103,7 @@ function updateUnreadMessage(topic, payload) {
 }
 
 module.exports = function() {
-    const mqtt = require('mqtt');
-    const server = mqtt.connect(process.env.MQTT_URL,{clean:false, clientId: process.env.MQTT_SERVER_CLIENTID});
-
     server.subscribe('messenger/#', {qos:2}, (err)=>{if (err) console.log(err)});
-    server.subscribe('notify/#', {qos:2}, (err)=>{if (err) console.log(err)});
 
     server.on('message', (topic, payload)=>{
         let index = 0;
@@ -121,9 +118,6 @@ module.exports = function() {
         if (type == 'messenger') {
             saveMessageToDatabase(receiver, payload);
             updateUnreadMessage(receiver, payload)
-        }
-        if (type == 'notify') {
-            saveNotify(receiver, payload);
         }
     });
 }

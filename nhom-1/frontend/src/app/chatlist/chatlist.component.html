@@ -1,3 +1,6 @@
-<mat-list>
-    <mat-list-item *ngFor = "let chatRoom of roomList;" (click)="selectChatRoom(chatRoom)">{{chatRoom.sender}}</mat-list-item>
-</mat-list>
+<!-- <mat-list-item *ngFor = "let chatRoom of roomList;" (click)="selectChatRoom(chatRoom)">{{chatRoom.sender}}</mat-list-item> -->
+
+
+<app-chatlist-item *ngFor = "let chatRoom of roomList" (click)="selectChatRoom(chatRoom)" [chatlistItem]="chatRoom" [selected]="checkIfRoomSelected(chatRoom)">
+
+</app-chatlist-item>

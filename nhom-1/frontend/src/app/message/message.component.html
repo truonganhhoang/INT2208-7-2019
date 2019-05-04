@@ -1,3 +1,6 @@
-<mat-list-item>
-  {{message.sender}}: {{message.content}}
-</mat-list-item>
+<div [class.outgoing_msg]="outgoing" [class.incoming_msg]="incoming">
+  <div *ngIf="incoming" class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"></div>
+  <div [class.sent_msg]="outgoing" [class.received_msg]="incoming">
+    <p>{{message.content}}</p>
+  </div>
+</div>
