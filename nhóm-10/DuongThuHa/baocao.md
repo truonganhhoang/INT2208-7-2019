@@ -1,7 +1,7 @@
-#Báo cáo cá nhân
-##Dương Thu Hà - 17020709
-##Môn: CNPM - Trình bày các user story của bản thân
-###Là một người học Tiếng Anh, tôi muốn học từ vựng thông qua trò chơi HangMan.
+# Báo cáo cá nhân
+## Dương Thu Hà - 17020709
+## Môn: CNPM - Trình bày các user story của bản thân
+### Là một người học Tiếng Anh, tôi muốn học từ vựng thông qua trò chơi HangMan.
 - Xây dựng và làm rõ yêu cầu của user story
  [Tài liệu xây dựng user story](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.22k63k6hf7hl)
 - Thiết kế giao diện:
@@ -22,5 +22,5 @@
 - Tái cấu trúc mã nguồn và xử lí code xấu nếu có.	
 	[Tài liệu về code xấu và tái cấu trúc](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.ws3padpks5uo)
 
-####Giao diện trang game Hangman
+#### Giao diện trang game Hangman
 (https://github.com/dominan/INT2208-7-2019/blob/master/nh%C3%B3m-10/DuongThuHa/Hangman.png)
