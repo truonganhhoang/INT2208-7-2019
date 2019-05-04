@@ -56,9 +56,9 @@ Kiểm thử kết hợp tìm kiếm với phát âm các trường hợp gây l
 	<a href="https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.rxddpdxv9qym">Tài liệu về Kiểm thử</a>
 <li>Rà soát mã nguồn và xử lí code xấu nếu có.(1h)</li>
 	<a href="https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.ws3padpks5uo">Tài liệu về code xấu và tái cấu trúc</a>
-<p>Hình ảnh giao diện màn hình chính hoàn thiện</p>
-<img src="https://github.com/dominan/INT2208-7-2019/edit/master/nh%C3%B3m-10/NguyenThiVanAnh/anh1.png" ></div>
 
+</div><h4>Hình ảnh giao diện màn hình chính hoàn thiện</h4>
+<img src="https://github.com/dominan/INT2208-7-2019/blob/master/nh%C3%B3m-10/NguyenThiVanAnh/anh1.png">
 <div>
 <h3>3. Là một người học Tiếng Anh, tôi muốn đặt câu hỏi và thắc mắc của mình lên một diễn đàn để nhận được những câu trả lời và nâng cao hiểu biết.</h3>
 <ul>
@@ -85,5 +85,14 @@ Kiểm thử kết hợp tìm kiếm với phát âm các trường hợp gây l
 	<a href="https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.ws3padpks5uo">Tài liệu về code xấu và tái cấu trúc</a>
  <br/>
  <a href="https://github.com/dominan/INT2208-7-2019/commit/61ed0790cb61939f242ef44f79812a8f8f6ba76b">Sản phẩm sau khi sửa lỗi và xử lí mã xấu</a>
+	<img src="">
+	
 </div>
+<h4>Hình ảnh giao diện diễn đàn hoàn thiện</h4>
+<img src="https://github.com/dominan/INT2208-7-2019/blob/master/nh%C3%B3m-10/NguyenThiVanAnh/anh2.PNG" />
+	<img src="https://github.com/dominan/INT2208-7-2019/blob/master/nh%C3%B3m-10/NguyenThiVanAnh/anh3.PNG" />
+	<img src="https://github.com/dominan/INT2208-7-2019/blob/master/nh%C3%B3m-10/NguyenThiVanAnh/anh4.PNG" /></div>
+<h3>Giới thiệu,hướng dẫn sử dụng sản phẩm</h3>
+<a href="https://drive.google.com/file/d/1JLC8ikzdxILCdU-BNxUQHeUpfvCmCjvD/view?usp=sharing">Video Demo sản phẩm</a>
+
 
