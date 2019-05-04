@@ -16,12 +16,12 @@ export class UserService {
 
     getByToken(header: Headers) {
         var dataUrl = this.dataUrl + '/api/users';
-        console.log(header);
+        // console.log(header);
         return this.http.get(dataUrl, {headers: header}).catch(this.handleError);
     }
 
     register(user: User) {
-        console.log(user);
+        // console.log(user);
         return this.http.post('/api/users/register', user);
     }
 

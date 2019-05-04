@@ -1,19 +1,38 @@
 export class User {
-    id: number;
-    username: string;
-    password: string;
     firstName: string;
     lastName: string;
+    username: string;
+    password: string;
+    email: string;
+    birthday: string;
+    gender: string;
+    role: string;
+    school: string;
+    id: number;
+    avatarLink: string;
 
-    constructor(id: number,
+    constructor(
+        firstName: string,
+        lastName: string,
         username: string,
         password: string,
-        firstName: string,
-        lastName: string) {
-            this.id = id;
-            this.username = username;
-            this.password = password;
+        email: string,
+        birthday: string,
+        gender: string,
+        role: string,
+        school: string,
+        id: number,
+        avatarLink: string) {
             this.firstName = firstName;
             this.lastName = lastName;
-        }
+            this.username = username;
+            this.password = password;
+            this.email = email;
+            this.birthday = birthday;
+            this.gender = gender;
+            this.role = role;
+            this.school = school;
+            this.id = id;
+            this.avatarLink = avatarLink;
+    }
 }

@@ -1,13 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
 import { AlertService, UserService } from '../_services';
+import { User } from '../_models';
 
-@Component({selector: 'app-register',templateUrl: 'register.component.html'})
-export class RegisterComponent implements OnInit {
-    registerForm: FormGroup;
+@Component({
+    selector: 'app-user-edit',
+    templateUrl: './user-edit.component.html',
+    styleUrls: ['./user-edit.component.css']
+})
+export class UserEditComponent implements OnInit {
+
+    @Input() userinfo: User;
+    updateForm: FormGroup;
     loading = false;
     submitted = false;
 
@@ -18,32 +25,33 @@ export class RegisterComponent implements OnInit {
         private alertService: AlertService) { }
 
     ngOnInit() {
-        this.registerForm = this.formBuilder.group({
-            firstName: ['', Validators.required],
-            lastName: ['', Validators.required],
-            username: ['', Validators.required],
-            password: ['', [Validators.required, Validators.minLength(6)]],
+        // console.log(this.userinfo)
+        this.updateForm = this.formBuilder.group({
+            firstName: [],
+            lastName: [],
+            username: [],
+            password: [,Validators.minLength(6)],
             confirmPassword: [''],
             email: [''],
             birthday: [''],
             gender: [''],
             role: [''],
-            school: ['', Validators.required]
+            school: []
 
         });
     }
 
     // convenience getter for easy access to form fields
-    get f() { return this.registerForm.controls; }
+    get f() { return this.updateForm.controls; }
 
     onSubmit() {
         this.submitted = true;
         // stop here if form is invalid
-        if (this.registerForm.invalid) {
+        if (this.updateForm.invalid) {
             return;
         }
         this.loading = true;
-        this.userService.register(this.registerForm.value)
+        this.userService.register(this.updateForm.value)
             .pipe(first())
             .subscribe(
                 data => {
@@ -55,9 +63,5 @@ export class RegisterComponent implements OnInit {
                     this.loading = false;
                 });
     }
-  model: any;
-  
-  refresh(): void {
-    window.location.reload();
-  }
+
 }
