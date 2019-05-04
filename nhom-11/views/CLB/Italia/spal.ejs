@@ -16,60 +16,66 @@
 	<!--Biểu đồ-->
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Trận đấu', 'Percentage'],
-          ['Thắng', 75],
-          ['Hòa', 25],
-					['Thua', 25]
-        ]);
+		google.charts.load("current", {packages:["corechart"]});
+		google.charts.setOnLoadCallback(drawChart);
+		<%results[7].forEach(function(rows){%>
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
 
-        var options = {
+				['Trận đấu', 'Percentage'],
+				['Thắng', <%=rows.w%>],
+				['Hòa', <%=rows.d%>],
+				['Thua', <%=rows.l%>]
+			]);
+
+			var options = {
+				pieHole: 0.4,
+				pieSliceText: 'none',
+				pieStartAngle: 135,
+				tooltip: { trigger: 'none' },
+				slices: {
+					0: { color: '#66ff33' },
+					1: { color: '#ffff66' },
+					2: { color: '#ff3300' }
+				}
+			};
+
+			var chart = new google.visualization.PieChart(document.getElementById('sannha'));
+			chart.draw(data, options);
+		}
+		<%})%>
+	</script>
+	<!--Biểu đồ-->
+	<script type="text/javascript">
+			google.charts.load("current", {packages:["corechart"]});
+			google.charts.setOnLoadCallback(drawChart);
+			<%results[8].forEach(function(rows){%>
+			function drawChart() {
+				var data = google.visualization.arrayToDataTable([
+
+					['Trận đấu', 'Percentage'],
+					['Thắng', <%=rows.w%>],
+					['Hòa', <%=rows.d%>],
+					['Thua', <%=rows.l%>]
+				]);
+
+				var options = {
 					pieHole: 0.4,
-          pieSliceText: 'none',
-          pieStartAngle: 135,
-          tooltip: { trigger: 'none' },
-          slices: {
-            0: { color: '#66ff33' },
-            1: { color: '#ffff66' },
+					pieSliceText: 'none',
+					pieStartAngle: 135,
+					tooltip: { trigger: 'none' },
+					slices: {
+						0: { color: '#66ff33' },
+						1: { color: '#ffff66' },
 						2: { color: '#ff3300' }
-          }
-        };
+					}
+				};
 
-        var chart = new google.visualization.PieChart(document.getElementById('sannha'));
-        chart.draw(data, options);
-      }
-    </script>
-		<!--Biểu đồ-->
-		<script type="text/javascript">
-	      google.charts.load("current", {packages:["corechart"]});
-	      google.charts.setOnLoadCallback(drawChart);
-	      function drawChart() {
-	        var data = google.visualization.arrayToDataTable([
-	          ['Trận đấu', 'Percentage'],
-	          ['Thắng', 75],
-	          ['Hòa', 25],
-						['Thua', 25]
-	        ]);
-
-	        var options = {
-						pieHole: 0.4,
-	          pieSliceText: 'none',
-	          pieStartAngle: 135,
-	          tooltip: { trigger: 'none' },
-	          slices: {
-	            0: { color: '#66ff33' },
-	            1: { color: '#ffff66' },
-							2: { color: '#ff3300' }
-	          }
-	        };
-
-	        var chart = new google.visualization.PieChart(document.getElementById('sankhach'));
-	        chart.draw(data, options);
-	      }
-	    </script>
+				var chart = new google.visualization.PieChart(document.getElementById('sankhach'));
+				chart.draw(data, options);
+			}
+			<%})%>
+		</script>
 
 
 </head>
