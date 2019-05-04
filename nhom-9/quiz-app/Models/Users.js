@@ -13,8 +13,18 @@ var users = {
 		return pool.query("SELECT avatarLink FROM quiz_app.users WHERE userName=?", [id], callback);
 	},
 	addUser: function (user, callback) {
-		return pool.query("INSERT INTO quiz_app.users(username, password) VALUES(?,?)",
-		[user.name, user.password], callback);
+		console.log(user);
+		return pool.query("INSERT INTO quiz_app.users(firstName, lastName, userName, password, email," +
+		"birthday, gender, role, school," + 
+		"userNumber, avatarLink)" + 
+		
+		"VALUES(?,?,?,?,?" +
+		",?,?,?,?" +
+		",2, NULL)", 
+		[user.firstName, user.lastName, user.username,user.password, user.email, 
+		user.birthday, user.gender, user.role, user.school], callback);
+		// return pool.query("INSERT INTO quiz_app.users(username, password) VALUES(?,?)",
+		// [user.name, user.password], callback);
 	},
 	deleteUser: function (id, callback) {
 		return pool.query("delete FROM quiz_app.users WHERE id=?", [id], callback);

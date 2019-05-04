@@ -42,14 +42,13 @@ export class RegisterComponent implements OnInit {
         if (this.registerForm.invalid) {
             return;
         }
-console.log(this.registerForm.value)
         this.loading = true;
         this.userService.register(this.registerForm.value)
             .pipe(first())
             .subscribe(
                 data => {
                     this.alertService.success('Registration successful', true);
-                    this.router.navigate(['/login']);
+                    // this.router.navigate(['/login']);
                 },
                 error => {
                     this.alertService.error(error);

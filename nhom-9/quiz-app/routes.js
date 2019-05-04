@@ -148,7 +148,7 @@ router.post('/api/users/authenticate/:username', function (req, res) {
 });
 
 router.post('/api/users/register', function (req, res, next) {
-    // console.log(req);
+    // console.log(req.body);
     users.addUser(req.body, function (err, count) {
         if (err) {
             res.json(err);
