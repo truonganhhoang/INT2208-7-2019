@@ -4,15 +4,14 @@
 # User story: Là một học sinh, tôi muốn tra cứu từ đơn để tiết kiệm thời gian so với tra cứu cuốn từ điển.
 - [x] Tự học HTML, PHP, CSS, Bootstrap.
 - [x] Tạo form giao diện PHP nhúng HTML, CSS cho Tab "Tra từ online".
-* Liên kết khóa học: [Interface_segregation_principle](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.t50jyopjk04o/Interface_segregation_principle)
+* Liên kết khóa học: [Interface_segregation_principle](https://medium.com/codingthesmartway-com-blog/the-2019-roadmap-to-fullstack-web-development-1bba67a54ae8)
 * Liên kết git: [Interface](https://github.com/ThaoIE3/INT2208-7-2019/blob/master/nhom-19/DictionaryWeb/index.php)
 - [x] Xem lại giao diện đã tạo để đảm bảo giao diện đơn giản, thân thiện và dễ sử dụng
-* Liên kết khóa học: [Kinds_of_tests](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.e3sa5k1h7i5n/Kinds_of_tests)
-- [x] Thiết lập mô hình MVC cho Tab Dịch đoạn văn bản
-* Liên kết khóa học: [MVC](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.kehlqoeo6d9r/MVC)
-* Liên kết git: [Translate](https://github.com/ThaoIE3/INT2208-7-2019/commit/712c50b4e4f0be777b9c9425f046ca15d15fcfa0#diff-bb6197e00da3734b249dd26a12dfd8db/Translate)
+* Liên kết khóa học: [Kinds_of_tests](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.e3sa5k1h7i5n)
+- [x] Thiết lập mô hình MVC cho Tab "Dịch từ online".
+* Liên kết khóa học: [MVC](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.kehlqoeo6d9r)
+* Liên kết git: [Index](https://github.com/ThaoIE3/INT2208-7-2019/commit/712c50b4e4f0be777b9c9425f046ca15d15fcfa0#diff-bb6197e00da3734b249dd26a12dfd8db/Translate)
 - [x] Tìm hiểu về API, cách thiết kế và sử dụng API
-- [x] Đưa phần dịch văn bản của Google Translate vào phần mềm
 * Liên kết khóa học: [API](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.nzr0nabmnmj3/API)
 * Liên kết git: [TransAPI](https://github.com/ThaoIE3/INT2208-7-2019/commit/0a8bd65bc526f087e70a4f61565c43e7e2a03d8e#diff-bb6197e00da3734b249dd26a12dfd8db/TransAPI)
 - [x] Kiểm tra lại các chức năng đã được đưa vào từ Google Translate để bảo đảm các chức năng như kiểm tra chính tả, hiện bản dịch ở đúng khung text
