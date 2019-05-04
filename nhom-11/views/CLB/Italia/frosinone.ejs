@@ -318,22 +318,28 @@ Sau một thời gian dài chơi bóng ở Serie C , trong những năm gần đ
 					</div>
 					<p>&nbsp&nbsp</p>
 					<div class="row">
+						<%results[6].forEach(function(rows){%>
 						  <div class="col-xs-6 col-sm-3" align="center">
 								<img src="Icon/goal.png" width="auto" height="100px">
-								<h3 align="center">Bàn thắng: 10</h3>
+								<h3 align="center">Bàn thắng: <%=rows.bt%></h3>
 							</div>
+							<%})%>
+							<%results[5].forEach(function(rows){%>
 						  <div class="col-xs-6 col-sm-3" align="center">
 								<img src="Icon/yellow.png" width="auto" height="100px">
-								<h3 align="center">Thẻ vàng: 2</h3>
+								<h3 align="center">Thẻ vàng: <%=rows.tv%></h3>
 							</div>
 						  <div class="col-xs-6 col-sm-3" align="center">
 								<img src="Icon/red.png" width="auto" height="100px">
-								<h3 align="center">Thẻ đỏ: 0</h3>
+								<h3 align="center">Thẻ đỏ: <%=rows.td%></h3>
 							</div>
+							<%})%>
+							<%results[6].forEach(function(rows){%>
 						  <div class="col-xs-6 col-sm-3" align="center">
 								<img src="Icon/goal.png" width="auto" height="100px">
-								<h3 align="center">Bàn thua: 2</h3>
+								<h3 align="center">Bàn thua: <%=rows.bb%></h3>
 							</div>
+							<%})%>
 					</div>
        	</div>
   </div>
