@@ -27,10 +27,21 @@ router.get('/api/testdetail', function (req, res) {
     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.header('Access-Control-Allow-Methods', 'GET');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
-    quizs.getAllQuizDetail(function (err, rows) {
-        if (err) res.json(err);
-        else res.json(rows);
-    })
+    var arr = req.headers.authorization.split(' ', 2);
+    var token_type = arr[0], token = arr[1];
+    try {
+        var username = jwt.verify(token, key).username.userName;
+        quizs.getAllQuizDetail(username,  function (err, rows) {
+            if (err) {
+                res.json(err);
+            } else {
+                res.json(rows);
+            }
+        });
+    } catch (e) {
+        console.log(e)
+        return res.status(401).send('unauthorized');
+    }
 });
 
 router.post('/', function (req, res, next) {

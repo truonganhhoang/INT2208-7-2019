@@ -1,18 +1,23 @@
 <div class="row">
   <div class="col-sm-6 col-6" *ngFor="let quiz of quizs let i= index">
     <div class=" card">
-      <h5 class="card-header">{{quiz.name}}</h5>
+      <h5 class="card-header">Test {{quiz?.quizNumber}}:</h5>
       <div class="card-body">
-        <p class="card-text">{{quiz.catalogy}}</p>
-        <p class="card-text">{{quiz.chapter}}</p>
-        <p class="card-text">{{quiz.language}}</p>
-        <a class="btn btn-primary" (click)="onGetQuiz(i)" data-toggle="modal" data-target="#modal_1">Get Quizs</a>
-
+        <p class="card-text">{{quiz?.catalogy}}</p>
+        <p class="card-text">{{quiz?.language}}</p>
+        <div *ngIf="quiz.isCompleted; else elseBlock">
+          <a style="color:white" class="btn btn-primary" (click)="onGetQuiz(i)" data-toggle="modal"
+            data-target="#modal_1">Get Quizs</a>
+        </div>
+        <ng-template #elseBlock>
+          <a style="color:white" class="btn btn-primary" (click)="onReview(i)" data-toggle="modal"
+            data-target="#modal_2">Review</a>
+        </ng-template>
         <div class="modal fade" id="modal_1">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title">Time: </h5>
+                <h5 class="modal-title">Take this quiz: </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -21,7 +26,27 @@
                 <p>You are going to do the test and you won't be able to out!</p>
               </div>
               <div class="modal-footer">
-                <a class="btn btn-primary" data-dismiss="modal" (click)="onConfirm()">Go to test now!</a>
+                <a style="color:white" class="btn btn-primary" data-dismiss="modal" (click)="onConfirm(0)">Go to test
+                  now!</a>
+                <a style="color:white" class="btn btn-secondary" data-dismiss="modal">Back</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="modal_2">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Review: </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>You will review your work on {{quizs[testId].quizNumber}}</p>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-primary" data-dismiss="modal" (click)="onConfirm(1)">Go to test now!</a>
                 <a class="btn btn-secondary" data-dismiss="modal">Back</a>
               </div>
             </div>

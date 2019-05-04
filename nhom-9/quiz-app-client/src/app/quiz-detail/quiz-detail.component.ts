@@ -22,7 +22,15 @@ export class QuizDetailComponent implements OnInit {
   onGetQuiz(i: number): void {
     this.testId = i + 1;
   }
-  onConfirm() {
-    this.router.navigate(['/testing', this.testId]);
+  onReview(i: number): void {
+    this.testId = i + 1;
+  }
+  onConfirm(option: number) {
+    if (option === 0) {
+      this.router.navigate(['/testing', this.testId]);
+    }
+    else {
+      this.router.navigate(['/result', this.testId]);
+    }
   }
 }

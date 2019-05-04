@@ -1,3 +1,4 @@
+import { UserService } from './../_services/user.service';
 
 import { QuestionService } from './../_services/question.service';
 import { Question } from './../_models/question/question';
@@ -22,6 +23,7 @@ export class TestingComponent implements OnInit {
     private titleService: Title,
     private route: ActivatedRoute,
     private questionService: QuestionService,
+    private userService: UserService,
     private router: Router
   ) { }
 
@@ -30,8 +32,8 @@ export class TestingComponent implements OnInit {
     this.titleService.setTitle(this.title);
     this.questionService.getQuestionsByQuizId(parseInt(this.route.snapshot.paramMap.get('id'), 10))
       .finally(() => {
-        setTimeout(() => this.length = this.questions.length, 50);
-        setTimeout(() => this.update(), 100);
+        setTimeout(() => this.length = this.questions.length, 200);
+        setTimeout(() => this.update(), 200);
       })
       .subscribe(quesitons => this.questions = quesitons);
   }
@@ -55,7 +57,7 @@ export class TestingComponent implements OnInit {
     this.update();
   }
   onClickSubmit(): void {
-
+    this.router.navigate(['/dashboard']);
   }
   update(): void {
     this.selectedQuestion = this.questions[this.currentIndex];
