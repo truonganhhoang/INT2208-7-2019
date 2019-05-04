@@ -9,6 +9,7 @@ frontend/frontend_server
 # dependencies
 frontend/node_modules
 backend/app_server/node_modules
+frontend/app_server/node_modules
 
 # env file
 backend/app_server/.env
