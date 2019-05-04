@@ -38,9 +38,9 @@
 
   [Tài liệu xây dựng user story](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#)
   
-- Tìm hiểu về HTML, CSS, Boostrap để thiết kế giao diện.
+- Tìm hiểu về HTML, CSS, Bootstrap để thiết kế giao diện.
 
-  [Tài liệu học HTML](https://www.w3schools.com/html/default.asp), [CSS](https://www.w3schools.com/css/default.asp), [Boostrap](https://www.w3schools.com/bootstrap4/default.asp)
+  [Tài liệu học HTML](https://www.w3schools.com/html/default.asp), [CSS](https://www.w3schools.com/css/default.asp), [Bootstrap](https://www.w3schools.com/bootstrap4/default.asp)
   
 - Kiểm thử và sửa lỗi:
   - Mở giao diện trên các thiết bị khác nhau : điện thoại, máy tính.
