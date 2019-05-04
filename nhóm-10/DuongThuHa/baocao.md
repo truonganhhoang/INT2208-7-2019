@@ -6,7 +6,6 @@
 
 	[Tài liệu xây dựng user story](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.22k63k6hf7hl)
 - Thiết kế giao diện:
-	- Thiết kế giao diện trang chủ cơ bản
 	
 	[Tìm hiểu về HTML, CSS, JavaScript.](http://www.w3schools.com)
 - Liên kết cơ sở dữ liệu với phần tìm kiếm (sử dụng mySQL,PHP).
