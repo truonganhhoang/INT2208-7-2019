@@ -118,3 +118,28 @@
 	  4.Thực hiện thanh toán sản phẩm.
 	  
 	  <img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/giohang.PNG" height="100%" width="100%" />
+
+- Câu chuyện người dùng (user story): **Tạo chức năng thanh toán.** ([chi tiết](https://github.com/DaoDucKhiem/nhom-5/issues/26)).
+ 
+   <b>Hướng dẫn sử dụng </b>   
+   	 1.Bạn cần đăng nhập tài khoản (lưu ý răng hãy chắc chắn rằng tài khoản của bạn đã xác thực).
+	  
+	 2.Bây giờ, bạn lựa chọn các mặt hàng mà bạn muốn mua.
+	  
+	 3.Có 2 cách để bạn thanh toán, một là click vào phần giỏi hàng và chọn thanh toán, hai là chọn vào phần user và chọn đơn hàng (ảnh ví dụ ở phần dưới).
+	  
+	 4.Thực hiện thanh toán sản phẩm.
+	  
+	 Cách thanh toán trực tiếp ở giỏ hàng:
+	  
+	 <img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/giohang.PNG" height="100%" width="100%" />
+	  
+	 Cách thanh toán ở phần tài khoản:
+	 
+	<img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/taikhoan.jpg" height="100%" width="100%" />
+	  
+	 Đơn hàng thanh toán:
+	  
+	 <img src="https://raw.githubusercontent.com/DaoDucKhiem/nhom-5/master/NguyenCanhHoang/image/thanhtoan.PNG" height="100%" width="100%" />
+	 
+	  
