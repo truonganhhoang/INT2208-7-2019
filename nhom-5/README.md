@@ -59,4 +59,5 @@ Chức năng:
 - Kiểm thử sản phẩm.
 - Viết hướng dẫn sử dụng.
 
-**Link demo sản phẩm:** [tại đây](http://oderonline.herokuapp.com/){target="_blank" rel="noopener"}
+**Link demo sản phẩm:** <a href="https://oderonline.herokuapp.com" target="_blank">oderonline.herokuapp.com</a>
+
