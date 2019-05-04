@@ -30,7 +30,7 @@
   [Tài liệu về tái cấu trúc mã nguồn và code xấu](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.rxddpdxv9qym)
 
 #### Giao diện trang dịch văn bản và nhập dữ liệu bằng giọng nói sau khi hoàn thiện.
-![alt text]()
+![Translate](https://github.com/dominan/INT2208-7-2019/blob/master/nh%C3%B3m-10/BuiKhanhNgocAnh/translate.png)
 
 ### 2. Là một khách hàng, tôi muốn biết thêm thông tin về ứng dụng và nhóm làm sản phẩm.
 
@@ -56,4 +56,4 @@
   
 #### Giao diện của trang About us.
   
-  ![alt text]()
+![About us](https://github.com/dominan/INT2208-7-2019/blob/master/nh%C3%B3m-10/BuiKhanhNgocAnh/about.png)
