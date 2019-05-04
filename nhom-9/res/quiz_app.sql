@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Apr 30, 2019 at 04:30 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.1
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th5 04, 2019 lúc 03:23 PM
+-- Phiên bản máy phục vụ: 10.1.38-MariaDB
+-- Phiên bản PHP: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `quiz_app`
+-- Cơ sở dữ liệu: `quiz_app`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `questions`
+-- Cấu trúc bảng cho bảng `questions`
 --
 
 CREATE TABLE `questions` (
@@ -40,7 +40,7 @@ CREATE TABLE `questions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `questions`
+-- Đang đổ dữ liệu cho bảng `questions`
 --
 
 INSERT INTO `questions` (`questionNumber`, `optionA`, `optionB`, `optionC`, `optionD`, `quizNumber`, `trueAnswer`, `questionContent`) VALUES
@@ -53,12 +53,17 @@ INSERT INTO `questions` (`questionNumber`, `optionA`, `optionB`, `optionC`, `opt
 (100007, ' Công nhân và nông dân', 'Công nhân, nông dân, tiểu tư sản ', 'Công nhân, nông dân, tiểu tư sản, tư sản dân tộc', 'Công nhân, nông dân, tiểu tư sản, tư sản dân tộc, địa chủ vừa và nhỏ', 1, 'D', 'Những giai cấp bị trị ở Việt Nam dưới chế độ thuộc địa của đế quốc Pháp là:'),
 (100008, 'Năm 1920 (tổ chức công hội ở Sài Gòn được thành lập)', 'Năm 1925(cuộc bãi công Ba Son)', 'Năm 1929 (sự ra đời ba tổ chức cộng sản)', 'Năm 1930(Đảng Cộng sản Việt Nam ra đời)', 1, 'D', 'Khi nào phong trào công nhân Việt Nam hoàn toàn trở thành một phong trào tự giác ?'),
 (100009, 'Đảng Xã hội Pháp', 'Đảng Cộng sản Pháp', 'Tổng Liên đoàn Lao động Pháp ', 'Hội Liên hiệp thuộc địa', 1, 'C', 'Báo Đời sống công nhân là của tổ chức nào ?'),
-(100010, '1917', '1918', '1919', '1920', 1, 'D', 'Nguyễn ái Quốc lựa chọn con đường giải phóng dân tộc theo khuynh hướng chính trị vô sản vào thời gian nào ?');
+(100010, '1917', '1918', '1919', '1920', 1, 'D', 'Nguyễn ái Quốc lựa chọn con đường giải phóng dân tộc theo khuynh hướng chính trị vô sản vào thời gian nào ?'),
+(100011, '1858-1884', '1884-1896', '1896-1913', '1914-1918', 0, 'C', 'Thời gian thực dân Pháp tiến hành khai thác thuộc địa lần thứ nhất ở Việt Nam khi nào?'),
+(100012, 'Giai cấp tư sản', 'Giai cấp tư sản và công nhân', 'Giai cấp công nhân ', 'Giai cấp tiểu tư sản', 0, 'C', 'Trong đợt khai thác thuộc địa lần thứ nhất của thực dân Pháp ở nước ta có giai cấp mới nào được hình thành?'),
+(100013, 'Địa chủ phong kiến và nông dân', 'Địa chủ phong kiến, nông dân, tư sản, tiểu tư sản và công nhân', 'Địa chủ phong kiến, nông dân và công nhân ', 'Địa chủ phong kiến, nông dân và tiểu tư sản', 0, 'C', 'Trước Chiến tranh thế giới thứ nhất, ở Việt Nam có những giai cấp nào?'),
+(100014, 'Độc lập dân tộc ', 'Ruộng đất', 'Quyền bình đẳng nam, nữ', 'Được giảm tô, giảm tức', 0, 'A', 'Dưới chế độ thực dân phong kiến, giai cấp nông dân Việt Nam có yêu cầu bức thiết nhất là gì?'),
+(100015, 'Mâu thuẫn giữa giai cấp nông dân với giai cấp địa chủ phong kiến', 'Mâu thuẫn giữa giai cấp công nhân với giai cấp tư sản', 'Mâu thuẫn giữa công nhân và nông dân với đế quốc và phong kiến', 'Mâu thuẫn giữa dân tộc Việt Nam với đế quốc xâm lược và tay sai của chúng ', 0, 'D', 'Mâu thuẫn cơ bản và chủ yếu ở Việt Nam đầu thế kỷ XX là mâu thuẫn nào?');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `quizs`
+-- Cấu trúc bảng cho bảng `quizs`
 --
 
 CREATE TABLE `quizs` (
@@ -69,16 +74,17 @@ CREATE TABLE `quizs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `quizs`
+-- Đang đổ dữ liệu cho bảng `quizs`
 --
 
 INSERT INTO `quizs` (`quizNumber`, `catalogy`, `language`, `questionQuantity`) VALUES
+(0, 'Revolutionary Line of the Communist Party of Vietnam.', 'Vietnamese', 10),
 (1, 'Revolutionary Line of the Communist Party of Vietnam.', 'Vietnamese', 10);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `submit`
+-- Cấu trúc bảng cho bảng `submit`
 --
 
 CREATE TABLE `submit` (
@@ -89,10 +95,17 @@ CREATE TABLE `submit` (
   `totalScore` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Đang đổ dữ liệu cho bảng `submit`
+--
+
+INSERT INTO `submit` (`submitNumber`, `userNumber`, `quizNumber`, `submitDate`, `totalScore`) VALUES
+(1, 1, 1, '0000-00-00', 0);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `submitdetail`
+-- Cấu trúc bảng cho bảng `submitdetail`
 --
 
 CREATE TABLE `submitdetail` (
@@ -101,47 +114,74 @@ CREATE TABLE `submitdetail` (
   `answer` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Đang đổ dữ liệu cho bảng `submitdetail`
+--
+
+INSERT INTO `submitdetail` (`submitNumber`, `questionNumber`, `answer`) VALUES
+(20, 100011, 'A'),
+(20, 100012, 'B'),
+(20, 100013, 'B'),
+(20, 100014, 'B'),
+(20, 100015, 'B'),
+(100001, 100001, 'C'),
+(100001, 100002, 'C'),
+(100001, 100003, 'C'),
+(100001, 100004, 'A'),
+(100001, 100005, 'D'),
+(100001, 100006, 'B'),
+(100001, 100007, 'D'),
+(100001, 100008, 'D'),
+(100001, 100009, 'C'),
+(100001, 100010, 'C');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `users`
 --
 
 CREATE TABLE `users` (
-  `userNumber` int(10) NOT NULL,
-  `userName` text NOT NULL,
-  `password` text NOT NULL,
   `firstName` text NOT NULL,
   `lastName` text NOT NULL,
+  `userName` text NOT NULL,
+  `password` text NOT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `birthday` date DEFAULT NULL,
+  `gender` varchar(10) DEFAULT NULL,
+  `role` varchar(15) DEFAULT NULL,
+  `school` varchar(100) DEFAULT NULL,
+  `userNumber` int(10) NOT NULL,
   `avatarLink` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
-INSERT INTO `users` (`userNumber`, `userName`, `password`, `firstName`, `lastName`, `avatarLink`) VALUES
-(1, 'nhom-9', '123456', 'nhom-9', 'nhom-9', 'https://res.cloudinary.com/refind-inc/image/twitter_name/w_200,h_200,c_fill,q_auto,f_auto,d_refind:avatar.png/ismonkeyuser');
+INSERT INTO `users` (`firstName`, `lastName`, `userName`, `password`, `email`, `birthday`, `gender`, `role`, `school`, `userNumber`, `avatarLink`) VALUES
+('nhom-9', 'nhom-9', 'nhom-9', '123456', NULL, NULL, NULL, NULL, NULL, 1, 'https://res.cloudinary.com/refind-inc/image/twitter_name/w_200,h_200,c_fill,q_auto,f_auto,d_refind:avatar.png/ismonkeyuser'),
+('Tran', 'Nam', 'nam', '123456', '', '0000-00-00', '', '', 'ABC', 2, NULL);
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `questions`
+-- Chỉ mục cho bảng `questions`
 --
 ALTER TABLE `questions`
   ADD PRIMARY KEY (`questionNumber`),
   ADD KEY `r2_1` (`quizNumber`);
 
 --
--- Indexes for table `quizs`
+-- Chỉ mục cho bảng `quizs`
 --
 ALTER TABLE `quizs`
   ADD PRIMARY KEY (`quizNumber`);
 
 --
--- Indexes for table `submit`
+-- Chỉ mục cho bảng `submit`
 --
 ALTER TABLE `submit`
   ADD PRIMARY KEY (`submitNumber`),
@@ -149,37 +189,47 @@ ALTER TABLE `submit`
   ADD KEY `r1_2` (`userNumber`);
 
 --
--- Indexes for table `submitdetail`
+-- Chỉ mục cho bảng `submitdetail`
 --
 ALTER TABLE `submitdetail`
   ADD PRIMARY KEY (`submitNumber`,`questionNumber`),
   ADD KEY `r3_1` (`questionNumber`);
 
 --
--- Indexes for table `users`
+-- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`userNumber`);
 
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- Constraints for table `questions`
+-- AUTO_INCREMENT cho bảng `submit`
+--
+ALTER TABLE `submit`
+  MODIFY `submitNumber` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- Các ràng buộc cho các bảng đã đổ
+--
+
+--
+-- Các ràng buộc cho bảng `questions`
 --
 ALTER TABLE `questions`
   ADD CONSTRAINT `r2_1` FOREIGN KEY (`quizNumber`) REFERENCES `quizs` (`quizNumber`);
 
 --
--- Constraints for table `submit`
+-- Các ràng buộc cho bảng `submit`
 --
 ALTER TABLE `submit`
   ADD CONSTRAINT `r1_1` FOREIGN KEY (`quizNumber`) REFERENCES `quizs` (`quizNumber`),
   ADD CONSTRAINT `r1_2` FOREIGN KEY (`userNumber`) REFERENCES `users` (`userNumber`);
 
 --
--- Constraints for table `submitdetail`
+-- Các ràng buộc cho bảng `submitdetail`
 --
 ALTER TABLE `submitdetail`
   ADD CONSTRAINT `r3_1` FOREIGN KEY (`questionNumber`) REFERENCES `questions` (`questionNumber`);

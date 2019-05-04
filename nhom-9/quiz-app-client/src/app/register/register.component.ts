@@ -56,7 +56,7 @@ export class RegisterComponent implements OnInit {
                 });
     }
   model: any;
-  
+
   refresh(): void {
     window.location.reload();
   }

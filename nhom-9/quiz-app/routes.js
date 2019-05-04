@@ -15,7 +15,6 @@ router.get('/api/test/:id', function (req, res) {
                 res.json(err);
             } else {
                 res.json(rows);
-                // console.log(rows);
             }
         });
     } else {
@@ -31,7 +30,7 @@ router.get('/api/testdetail', function (req, res) {
     var token_type = arr[0], token = arr[1];
     try {
         var username = jwt.verify(token, key).username.userName;
-        quizs.getAllQuizDetail(username,  function (err, rows) {
+        quizs.getAllQuizDetail(username, function (err, rows) {
             if (err) {
                 res.json(err);
             } else {
@@ -73,7 +72,49 @@ router.put('/:id', function (req, res, next) {
         }
     });
 });
-
+router.post('/api/submit/:id', function (req, res, next) {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+    res.header('Access-Control-Allow-Methods', 'GET');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    var arr = req.headers.authorization.split(' ', 2);
+    var token_type = arr[0], token = arr[1];
+    try {
+        var result = req.body;
+        console.log(result)
+        result.forEach(element => {
+            console.log(element)
+        });
+        var username = jwt.verify(token, key).username.userName;
+        users.insertSubmit(username, req.params.id, function (err, rows) {
+            if (err) {
+                console.log("Lỗi bước 1 rồi nha cậu ơi.")
+                res.json(err);
+            } else {
+                var submitId;
+                console.log("Xong 1 bước rồi nha cậu ơi.")
+                users.getSubmitId(username, req.params.id, function (err, rows) {
+                    if (err) {
+                        console.log("Lỗi bước 2 rồi nha cậu ơi.")
+                        res.json(err);
+                    } else {
+                        submitId = rows[0].submitNumber;
+                        console.log("Xong 2 bước  rồi nha cậu ơi.")
+                        result.forEach(element => {
+                            users.insertSubmitDetail(submitId, element.questionId, element.answer,function(err, rows){
+                                if(err)
+                                    res.json(err);
+                            })
+                        });
+                    }
+                }
+                )
+            }
+        });
+    } catch (e) {
+        console.log(e)
+        return res.status(401).send('unauthorized');
+    }
+});
 router.get('/api/submitdetail/:id', function (req, res) {
     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.header('Access-Control-Allow-Methods', 'GET');
