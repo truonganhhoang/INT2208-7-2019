@@ -88,10 +88,18 @@ img{ max-width:100%;}
 .chat_ib h5{ font-size:15px; color:#464646; margin:0 0 8px 0;}
 .chat_ib h5 span{ font-size:13px; float:right;}
 .chat_ib p{ font-size:14px; color:#989898; margin:auto}
+
 .chat_img {
   float: left;
-  width: 11%;
+  
 }
+
+.chat_img img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
 .chat_ib {
   float: left;
   padding: 0 0 0 15px;
@@ -112,16 +120,19 @@ img{ max-width:100%;}
   background-color: #cdcdcd;
 }
 .chat_list:active {
-  background-color: #8c8c8c;
+  background-color: #c4c4c4;
 }
 
 .inbox_chat { height: 550px; overflow-y: scroll;}
 
-.active_chat{ background:#ebebeb;}
+.active_chat{ background:#c4c4c4;}
 
 .incoming_msg_img {
   display: inline-block;
-  width: 4%;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  background-size: contain;
 }
 .received_msg {
   display: inline-block;
@@ -201,3 +212,19 @@ img{ max-width:100%;}
   height: 516px;
   overflow-y: auto;
 }
+
+.liked {
+  background-color: #3f51b5;
+  color: white;
+}
+
+/* .write_msg {
+  box-shadow: none;
+  resize: none;
+  width: 100%;
+}
+
+.write_msg :focus {
+  box-shadow: none;
+  resize: none;
+} */

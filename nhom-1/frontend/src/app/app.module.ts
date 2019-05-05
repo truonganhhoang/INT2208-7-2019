@@ -15,7 +15,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatNativeDateModule, MatInputModule, MatProgressBarModule } from '@angular/material';
+import { MatNativeDateModule, MatInputModule, MatProgressBarModule, MatBadgeModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent }  from './app.component';
@@ -41,7 +41,8 @@ import {
     MqttModule
   } from 'ngx-mqtt';;
 import { PostComponent } from './post/post.component'
-
+;
+import { SideAlertComponent } from './side-alert/side-alert.component'
 @NgModule({
     imports: [
         BrowserModule,
@@ -65,6 +66,7 @@ import { PostComponent } from './post/post.component'
         MatInputModule,
         FormsModule,
         MatProgressBarModule,
+        MatBadgeModule,
         MqttModule.forRoot({
             hostname: 'localhost',
             port: 9001,
@@ -85,7 +87,8 @@ import { PostComponent } from './post/post.component'
         ChatboxComponent,
         ChatlistItemComponent
 ,
-        PostComponent    ],
+        PostComponent ,
+        SideAlertComponent   ],
     entryComponents: [
         EditProfileDialog, UpdateAvatarDialog,
     ],
