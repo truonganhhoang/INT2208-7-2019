@@ -50,19 +50,13 @@ Giao diện chức năng:
    
 Bên cạnh bảng xếp hạng chính là lịch thi đấu và kết quả của các đội bóng đó ở giải hiện tại. 
    	
-![alt](trandau.png)
-   	
 ![alt](trandau_1.png)
    
 Tiếp theo là mục **Thống kê** với các số liệu thống kê liên quan tới các đội bóng thuộc giải đó bao gồm: cầu thủ ghi bàn tốt nhất, kiến tạo nhiều nhất, đội bóng chịu nhiều thẻ phạt nhất. Bên dưới là minh họa cho 1 nội dung thuộc mục **Thống kê** của giải:
-   	
-![alt](thongke.png)	
 
 ![alt](thongke_1.png)
 
 Cuối cùng là mục **Thông tin** số thông tin sơ lược khác về giải đấu như lịch sử hình thành, thể lệ thi đấu, nhà vô địch cũng như liên kết tới giải đấu qua các mạng xã hội: Facebook, Twitter và Instagram.
-
-![alt](thongtin.png) 
 
 ![alt](thongtin_1.png) 
    
