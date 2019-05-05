@@ -4,7 +4,7 @@
 ### Họ và tên: Nguyễn Thành Trung. Mã sinh viên: 17021087. Nhóm 6.
 ### Đề tài: Xây dựng ứng dụng web bán hàng bằng PHP và mySQLi.
 
-### Câu chuyện người dùng: Là người dùng tôi muốn có các chức năng đăng nhập, đăng ký để tôi có thể thuận tiện theo dõi hoạt động của mình và bảo mật thông tin cá nhân.
+### I. CÂU CHUYỆN NGƯỜI DÙNG: Là người dùng tôi muốn có các chức năng đăng nhập, đăng ký để tôi có thể thuận tiện theo dõi hoạt động của mình và bảo mật thông tin cá nhân.
 
 * #### Phân tích:
 	Khi sử dụng một trang web, người dùng (ở đây cụ thể là người mua hàng) cần có tài khoản riêng. Việc này giúp người dùng có thể dễ dàng quản lý hoạt động của mình trên trang web, có thể bảo mật thông tin cá nhân, lịch sử mua hàng của mình. Và đặc biệt là tiện lợi khi sử dụng dịch vụ. Ví dụ như người dùng sẽ không cần phải nhập liệu nơi giao hàng mỗi khi đặt hàng, hoặc cũng có thể người dùng sẽ được hưởng một số quyền và lợi ích của trang web dành cho thành viên của mình.
@@ -75,7 +75,7 @@
 			- Đảm bảo các nhánh của rẽ nhánh được thực hiện ít nhất một lần
 	* Lấy ý kiến người dùng và tối ưu hóa giao diện.
 
-### HƯỚNG DẪN SỬ DỤNG CÁC TÍNH NĂNG LIÊN QUAN ĐẾN TÀI KHOẢN NGƯỜI DÙNG
+### II. HƯỚNG DẪN SỬ DỤNG CÁC TÍNH NĂNG LIÊN QUAN ĐẾN TÀI KHOẢN NGƯỜI DÙNG
 #### 1. ĐĂNG KÝ
 * ##### Bước 1: Tại trang chủ click Đăng nhập ở bên phải của thanh menu.
 ![alt](https://scontent.fhan2-1.fna.fbcdn.net/v/t1.15752-9/59252965_355578851735621_3750789729801469952_n.png?_nc_cat=102&_nc_oc=AQmr96AVk3OCT0Ns7wM7FxG4hy_CiDfzGYwQzoT7mONHWNq3jVhnQ7GMdTAstwOTd9kmnZWcqrpb_n9hh5XfUCJu&_nc_ht=scontent.fhan2-1.fna&oh=913d8675bba4d89cb73cc50a1930dba8&oe=5D5F664D)
