@@ -1,33 +1,4 @@
-User story: Là một người mua hàng, tôi muốn các mặt hàng được hiển thị chi tiết, chân thật về hình ảnh, mô tả cấu hình máy,
-            giá tiền để có thể dễ dàng đưa ra quyết định mua máy.
-1. Các mặt hàng được hiển thị theo hãng sản xuất:
-  - Phân loại mặt hàng máy tính theo hãng sản xuất để người dùng phân biệt và đưa ra chọn lựa mua dùng máy của hãng nào.
-  - Code:
-    <div class="header_bottom_left">
-      <div class="categories">
-        <ul>
-          <h3>DANH SÁCH</h3>
-          <li><a kind="Macbook" href="product.php?p_loai=1">Macbook</a></li>
-          <li><a kind="Dell" href="product.php?p_loai=2">Dell</a></li>
-          <li><a kind="ToShiBa" href="product.php?p_loai=3">ToShiBa</a></li>
-          <li><a kind="Vaio" href="product.php?p_loai=4">Vaio</a></li>
-          <li><a kind="Acer" href="product.php?p_loai=5">Acer</a></li>
-          <li><a kind="Hp" href="product.php?p_loai=6">Hp</a></li>
-          <li><a kind="Asus" href="product.php?p_loai=7">Asus</a></li>
-          <li><a kind="MSI" href="product.php?p_loai=8">MSI</a></li>
-          <li><a kind="Lenovo" href="product.php?p_loai=9">Lenovo</a></li>
-          <li><a kind="Alineware" href="product.php?p_loai=10">Alineware</a></li>
-          <li><a kind="Xiaomi" href="product.php?p_loai=11">Xiaomi</a></li>
-          <li><a kind="Sony" href="product.php?p_loai=12">Sony</a></li>			
-        </ul>
-      </div>
-    </div>
-    
-    -khi bạn truy cập vào trang web, phía bên trái giao diện sẽ hiện các thanh ghi tên hãng máy tính như ở trên để bạn chọn lựa. Bạn click vào tên đó, sẽ hiện ra cho bạn một đường link mới, tại đây hiển thị các loại máy của hãng bạn chọn lựa, 
-    
-2. Hiển thị chi tiết về máy bao gồm hình ảnh, cấu hình, giá tiền:
- -Code:
- <div class="cont-desc span_1_of_2">
+<div class="cont-desc span_1_of_2">
     <div class="product-details">             
         <div class="grid images_3_of_2">
             <div id="container">
@@ -77,6 +48,11 @@ User story: Là một người mua hàng, tôi muốn các mặt hàng được 
             </div>
         </div>
     	</form>
+     
+                   
+
+                            
+
     <div class="product_desc">  
         <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
             <ul class="resp-tabs-list">
@@ -107,7 +83,7 @@ User story: Là một người mua hàng, tôi muốn các mặt hàng được 
                                                
             </div>
         </div>
+    </div>
+</div>
 
                 
-                                                                   
-                                    
