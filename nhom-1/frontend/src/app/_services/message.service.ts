@@ -18,7 +18,6 @@ export class MessageService {
         this.messageStream = new Subject<Message>();
         this.selectedRoom = new Subject<String>();
         let username = this.userSerivce.currentUserValue.username;
-        console.log(username);
         this.mqttService.observe('messenger/'+username).subscribe((mess: IMqttMessage)=>{
             let payloadObj = JSON.parse(mess.payload.toString());
             let payloadMessage = new Message();

@@ -38,6 +38,10 @@ var userSchema = new Schema({
     notifies: {
         type: [notifySchema],
         default: []
+    },
+    unreadNotifies: {
+        type: Number,
+        default: 0
     }
 });
 

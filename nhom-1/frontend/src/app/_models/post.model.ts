@@ -24,6 +24,7 @@ export class Post {
                 newComment.content = resPost.comments[i].content;
                 newComment.postId = resPost._id;
                 newComment.sendDate = new Date(resPost.comments[i].sendDate);
+                newComment.commentId = resPost.comments[i]._id;
                 this.comments.push(newComment);
             }
         }

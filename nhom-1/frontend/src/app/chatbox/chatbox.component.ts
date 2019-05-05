@@ -11,7 +11,7 @@ import { environment } from '@environments/environment.prod';
   templateUrl: './chatbox.component.html',
   styleUrls: ['./chatbox.component.css']
 })
-export class ChatboxComponent implements OnInit, AfterViewChecked {
+export class ChatboxComponent implements OnInit {
 
   @ViewChild('chatbox') private messageList: ElementRef;
 
@@ -87,6 +87,17 @@ export class ChatboxComponent implements OnInit, AfterViewChecked {
     });
   }
 
+  messageLeft() {
+    if (this.selectedMessageLoader == null) return false;
+    if (this.selectedMessageLoader.nextThread) {
+      return this.selectedMessageLoader.nextThread != '';
+    } else return false;
+  }
+
+  loadMoreChat() {
+    this.selectedMessageLoader.loadMoreChat(this.http);
+    this.messageList.nativeElement.scrollTop = 0;
+  }
 
   ngAfterViewChecked() {
     this.messageList.nativeElement.scrollTop = this.messageList.nativeElement.scrollHeight;

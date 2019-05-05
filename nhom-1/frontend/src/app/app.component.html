@@ -1,22 +1,30 @@
 ﻿<mat-toolbar color="primary" role="heading" style="position: sticky; top:0; z-index: 1000;">
     <div style="position: absolute; right: 25%;">
-    <button mat-button routerLink="/" *ngIf="currentUser">
-        <mat-icon style="margin-bottom: 5px">home</mat-icon>
-        Home
-    </button>
-    <button mat-button routerLink="users/{{currentUser.username}}" *ngIf="currentUser">Profile</button>
-    <button mat-button routerLink="messenger" *ngIf="currentUser">Messenger</button>
-    <button mat-button (click)="logout()" *ngIf="currentUser">Logout</button>
+        <button mat-button routerLink="/" *ngIf="currentUser">
+            <mat-icon style="margin-bottom: 5px">home</mat-icon>
+            Home
+        </button>
+        <button mat-button routerLink="users/{{currentUser.username}}" *ngIf="currentUser">Profile</button>
+        <button mat-button routerLink="messenger" *ngIf="currentUser">Messenger</button>
+        <button *ngIf="currentUser" mat-button [matMenuTriggerFor]="belowMenu" (menuOpened)="menuOpened()">
+            <i class="far fa-lg fa-bell"  matBadgeSize="medium" [matBadgeHidden]="unreadNotify == 0" [matBadge]="unreadNotify" matBadgePosition="above after" matBadgeColor="warn"></i>
+        </button>
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+            <app-notify-item *ngFor="let notify of getNotifies()" [notify]="notify"></app-notify-item>
+        </mat-menu>
 
-    <button mat-button routerLink="/login" *ngIf="!currentUser">Login</button>
-    <button mat-button routerLink="/register" *ngIf="!currentUser">Register</button>
+        <button mat-button (click)="logout()" *ngIf="currentUser">Logout</button>
+
+        <button mat-button routerLink="/login" *ngIf="!currentUser">Login</button>
+        <button mat-button routerLink="/register" *ngIf="!currentUser">Register</button>
     </div>
 </mat-toolbar>
 
 <!-- main app container -->
 
-    <div class="container">
-        <alert></alert>
-        <router-outlet></router-outlet>
-    </div>
+<div class="container">
+    <alert></alert>
+    <router-outlet></router-outlet>
+</div>
 
+<app-side-alert></app-side-alert>

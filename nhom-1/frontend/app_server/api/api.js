@@ -47,6 +47,111 @@ var saveAvatarHandlerMiddleware = multer({ storage: storageAvatar });
 
 var savePictureHandlerMiddleware = multer({ storage: storagePicture });
 
+
+router.post('/delete-post', tokenCheck, (req,res)=>{
+    let postId = req.body.postId;
+    Post.findByIdAndDelete(postId, (err)=>{
+        if (err) {
+            res.json({state: false});
+        } else {
+            res.json({state: true});
+        }
+    });
+});
+
+router.get('/get-notify', tokenCheck, (req,res)=>{
+    let user = req.body.username;
+
+    User.findOne({username: user}, (err,doc)=>{
+        if (err) {
+            res.json({state: false});
+            return;
+        }
+        if (doc) {
+            res.json({
+                state: true,
+                notifies: doc.notifies,
+                unread: doc.unreadNotifies
+            });
+        } else {
+            res.json({
+                state: false
+            });
+        }
+    });
+});
+
+router.get('/reset-notify', tokenCheck, (req,res)=>{
+    let user = req.body.username;
+
+    User.findOne({username: user}, (err,doc)=>{
+        if (err) {
+            res.json({state:false});
+            return;
+        }
+        if (doc) {
+            doc.unreadNotifies = 0;
+            doc.save(err=>{
+                if (err) {
+                    res.json({state:false});
+                } else {
+                    res.json({state: true});
+                }
+            });
+        } else {
+            res.json({state: false});
+        }
+    });
+});
+
+router.get('/get-own-post', tokenCheck, (req,res)=>{
+    let user = req.body.username;
+    Post.find({author: user}, (err,docs)=>{
+        if (err) {
+            res.json({state: false});
+            return;
+        }
+        res.json({state:true, posts: docs});
+    });
+});
+
+router.post('/delete-comment', tokenCheck, (req,res)=>{
+    let postId = req.body.postId;
+    let commentId = req.body.commentId;
+    
+    Post.findById(postId, (err,doc)=>{
+        if (err) {
+            res.json({state:false});
+            return;
+        }
+        if (doc) {
+            let pointer = 0;
+            let isFound = false;
+            let n = doc.comments.length;
+            for (let i = 0; i < n; i++) {
+                if (doc.comments[i]._id == commentId) {
+                    pointer = i;
+                    isFound = true;
+                    break;
+                }
+            }
+            if (isFound) {
+                doc.comments.splice(pointer,1);
+            }
+            doc.save((err)=>{
+                if (err) {
+                    res.json({state: false});
+                } else {
+                    res.json({state: true});
+                }
+            });
+        } else {
+            res.json({state: false});
+        }
+    });
+});
+
+
 router.post('/unlike-post', tokenCheck, (req,res)=>{
     let postId = req.body.postId;
     let user = req.body.username;
@@ -125,10 +230,12 @@ router.post('/like-post', tokenCheck, (req,res)=>{
                 notifyData.type = 'like post';
                 notifyData.payload.sender = user;
                 notifyData.payload.postId = postId;
+                notifyDate.payload.postAuthor = doc.author;
                 let newNotify = new Notify();
                 newNotify.type = 'like post';
                 newNotify.payload.sender = user;
                 newNotify.payload.postId = postId;
+                newNotify.payload.postAuthor = doc.author;
                 for (let i = 0; i < doc.subcribers.length; i++) {
                     //notify by mqtt
                     mqttClient.publish('notify/'+ doc.subcribers[i], JSON.stringify(notifyData), {qos:2});
@@ -140,6 +247,7 @@ router.post('/like-post', tokenCheck, (req,res)=>{
                                     docUser.notifies.pop();
                                 }
                                 docUser.notifies.unshift(newNotify);
+                                doc.unreadNotifies = doc.unreadNotifies + 1;
                                 docUser.save((err)=>{
                                     if (err) {
                                         console.log('err in save notify like post');
@@ -159,6 +267,7 @@ router.post('/like-post', tokenCheck, (req,res)=>{
                 }
             }
             if (!found) doc.subcribers.push(user);
+            doc.lastInteract = new Date();
             doc.save((err)=>{
                 if (err) {
                     res.json({state:false});
@@ -219,17 +328,19 @@ router.post('/post-comment', tokenCheck, (req,res)=>{
                 if (err) {
                     res.json({state: false});
                     return;
+                } else {
+                    res.json({state: true, comment: newComment});
                 }
                 let newNotify = new Notify();
                 newNotify.type = 'comment to post';
                 newNotify.payload.sender = user;
                 newNotify.payload.postId = postId;
-
+                newNotify.payload.postAuthor = doc.author;
                 let newMqttNotify = new NotifyObject();
                 newMqttNotify.type = 'comment to post';
                 newMqttNotify.payload.sender = user;
                 newMqttNotify.payload.postId = postId;
-
+                newMqttNotify.payload.postAuthor = doc.author;
                 for (let i = 0; i < docPost.subcribers.length; i++) {
                     if (user != docPost.subcribers[i]) {
                         //notify to user
@@ -242,6 +353,7 @@ router.post('/post-comment', tokenCheck, (req,res)=>{
                                     docUser.notifies.pop();
                                 }
                                 docUser.notifies.unshift(newNotify);
+                                doc.unreadNotifies = doc.unreadNotifies + 1;
                                 docUser.save(err=>{if (err) console.log(err)});
                             }
                         });
@@ -527,6 +639,8 @@ router.get('/acceptfriend', tokenCheck, (req,res)=> {
         mqttClient.publish('notify/'+friendId, JSON.stringify(notifyMqttData), {qos:2});
 
         doc.notifies.unshift(notifyData);
+        doc.unreadNotifies = doc.unreadNotifies + 1;
+
         while (doc.notifies.length > 50) {
             doc.notifies.pop();                
         }
@@ -634,6 +748,7 @@ router.get('/requestfriend', tokenCheck, (req, res) => {
             }
             doc.friends.push(friendTypeInReceiver);
             doc.notifies.unshift(notifyData);
+            doc.unreadNotifies = doc.unreadNotifies + 1;
 
             if (doc.notifies.length > 50) {
                 doc.notifies.pop();                

@@ -1,0 +1,19 @@
+<div style=" margin: 0px;margin-top:20px; ">
+  <div style="float:left;">
+  <div class="col-sm-1" mat-card-avatar style="margin: 0px; height: 30px; width: 30px; background-size: contain; cursor: pointer;"
+    [style.backgroundImage]="'url('+ userInfo.avatarUrl +')'"  (click)="routeToProfilePage()"></div>
+  </div>
+
+  <div style="margin: 0px;">
+  <div style="margin: 0px; margin-left: 35px; ">
+    <mat-card-title style=" font-size: 15px; white-space: nowrap;  display: inline; cursor: pointer;" (click)="routeToProfilePage()">{{userInfo.name}}</mat-card-title>
+    <p style="display: inline; margin:0px;margin-left: 6px; font-size: 15px; white-space: pre-line;">{{comment.content}}
+    </p>
+    <a  *ngIf="deletePermission()" style="display: block; font-size: 12px; width:30px; color: blue; cursor: pointer;" (click)="delete()">Delete</a>
+  </div>
+</div>
+
+</div>
+
+
+<!-- white-space: pre-line; -->
