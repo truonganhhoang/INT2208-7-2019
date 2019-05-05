@@ -344,13 +344,13 @@ app.post('/signin', function(req,res) {
 		else {
 			var dt = false;
 		}
-	if (!dt) {
-		res.render('pages/signin', {data: {error:  "Tài khoản không tồn tại"}});
-	}
-	else {
+	
 		dt.then(function(users){
 			var user = users[0];
-			if (user.passwords == signin.passwords) {
+			if (user == null) {
+				res.render('pages/signin', {data: {error:  "Tài khoản không tồn tại"}});
+			}
+			else if (user.passwords == signin.passwords) {
 				var sql = "SELECT * FROM debai ORDER BY(datediff(`date`, now())) DESC LIMIT 8;SELECT * FROM `news`  ORDER BY(datediff(`date`, now())) DESC LIMIT 4";
 				con.query(sql, function(err, results) {
 				if (err) throw err;
@@ -363,7 +363,6 @@ app.post('/signin', function(req,res) {
 				res.render('pages/signin', {data: {error:  "Tài khoản hoặc mật khẩu không đúng"}});
 			}
 		});
-	}
 	}
 });
 	
@@ -388,8 +387,9 @@ app.post('/signup', function(req,res) {
 		lastname: signup.lastname,
 		passwords: signup.passwords
 	};
-	
+
 	if (users) {
+
 		var defer = q.defer();
 		var query = con.query("INSERT INTO user SET ?", users, function(err,results) {
 			if (err) {
