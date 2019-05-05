@@ -11,9 +11,6 @@
 - [x] Thiết lập mô hình MVC cho Tab "Dịch từ online".
 * Liên kết khóa học: [MVC](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.kehlqoeo6d9r)
 * Liên kết git: [Index](https://github.com/ThaoIE3/INT2208-7-2019/blob/master/nhom-19/DictionaryWeb/index.php)
-- [x] Tìm hiểu về API, cách thiết kế và sử dụng API.
-* Liên kết khóa học: [API](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.8wbcxnd04jqr)
-* Liên kết git: [Actions](https://github.com/ThaoIE3/INT2208-7-2019/blob/master/nhom-19/DictionaryWeb/index.php)
 - [x] Làm việc với cơ sở dữ liệu, đọc và ghi dữ liệu vào tệp.
 * Liên kết khóa học: [Use algorithms](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.y0z4iaquxeaf)
 * Liên kết git: [Database](https://github.com/ThaoIE3/INT2208-7-2019/tree/master/nhom-19/DictionaryWeb/EV) và [Handle with database](https://github.com/ThaoIE3/INT2208-7-2019/blob/master/nhom-19/DictionaryWeb/actions.php)
