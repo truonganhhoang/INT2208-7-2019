@@ -52,16 +52,20 @@ export class UserProfileComponent implements OnInit {
                         }
                     }
                 );
-            this.userService.get(username)
-                .subscribe(
-                    data => {
-                        this.user = data.user;
-                        console.log(this.user);
-                        this.getFriends();
-                        this.getRelation();
-                    }
-                );
-            });
+            this.getUser(username);
+        });
+    }
+
+    getUser(username) {
+        this.userService.get(username)
+            .subscribe(
+                data => {
+                    this.user = data.user;
+                    console.log(this.user);
+                    this.getFriends();
+                    this.getRelation();
+                }
+            );
     }
 
     getFriends() {
@@ -112,28 +116,31 @@ export class UserProfileComponent implements OnInit {
         });
     }
 
-    addFriend(): void {
-        this.userService.addFriend(this.user.username)
+    addFriend(username = this.user.username): void {
+        this.userService.addFriend(username)
             .subscribe(
                 data => {
                     console.log(data);
+                    this.getUser(this.user.username);
                     this.getRelation();
                 }
             )
     }
 
-    rejectFriend(): void {
-        this.userService.rejectFriend(this.user.username)
+    rejectFriend(username = this.user.username): void {
+        console.log(username);
+        this.userService.rejectFriend(username)
             .subscribe(
                 data => {
                     console.log(data);
+                    this.getUser(this.user.username);
                     this.getRelation();
                 }
             )
     }
 
-    acceptFriend(): void {
-        this.userService.acceptFriend(this.user.username)
+    acceptFriend(username = this.user.username): void {
+        this.userService.acceptFriend(username)
             .subscribe(
                 data => {
                     console.log(data);

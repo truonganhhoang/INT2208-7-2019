@@ -88,10 +88,10 @@
                             </mat-card-header>
                         </a>
                         <mat-card-actions>
-                            <button mat-button *ngIf='friend.relation == "friend"'>Unfriend</button>
-                            <button mat-button *ngIf='friend.relation == "wait for accept"'>Accept</button>
-                            <button mat-button *ngIf='friend.relation == "wait for accept"'>Reject</button>
-                            <button mat-button *ngIf='friend.relation == "sent request"'>Cancel Request</button>
+                            <button mat-button *ngIf='friend.relation == "friend"' (click)='rejectFriend(friend.user.username)'>Unfriend</button>
+                            <button mat-button *ngIf='friend.relation == "wait for accept"' (click)='acceptFriend(friend.user.username)'>Accept</button>
+                            <button mat-button *ngIf='friend.relation == "wait for accept"' (click)='rejectFriend(friend.user.username)'>Reject</button>
+                            <button mat-button *ngIf='friend.relation == "sent request"' (click)='rejectFriend(friend.user.username)'>Cancel Request</button>
                         </mat-card-actions>
                     </mat-card>
                 </div>
