@@ -92,10 +92,24 @@ export class ChatboxComponent implements OnInit, AfterViewChecked {
     this.messageList.nativeElement.scrollTop = this.messageList.nativeElement.scrollHeight;
   }
 
-  sendMessage(messText) {
+  sendMessage($event,messText) {
+    if ($event.shiftKey || $event.altKey) {
+      return;
+    } else {
+      let messValue = messText.value;
+      messText.value = '';
+      this.submitMessage(messValue);
+    }
+  }
+
+  sendMessageWithClick(messText) {
     let messValue = messText.value;
     messText.value = '';
-    if (messValue == '') return;
+    this.submitMessage(messValue);
+  }
+
+  submitMessage(messValue) {
+    if (messValue.trim() == '') return;
     let receiver = this.route.snapshot.queryParams.u;
     let newMessage = new Message();
     newMessage.content = messValue;

@@ -15,7 +15,7 @@ const genNoti = require('./generate-room-notification');
 const messageThread = require('./../model/thread-message.model');
 const postSchema = require('./../model/thread.model');
 const commentSchema = require('./../model/comment.model');
-const NotifyObject = require('./../model/notifyObj.model')
+const NotifyObject = require('./../model/notifyObj.model');
 
 const Post = mongoose.model('Post', postSchema);
 const User = mongoose.model('User', userSchema);
@@ -47,7 +47,39 @@ var saveAvatarHandlerMiddleware = multer({ storage: storageAvatar });
 var savePictureHandlerMiddleware = multer({ storage: storagePicture });
 
 router.post('/unlike-post', tokenCheck, (req,res)=>{
-    //leave blank
+    let postId = req.body.postId;
+    let user = req.body.username;
+
+    Post.findById(postId, (err,doc)=>{
+        if (err) {
+            res.json({state:false});
+            return;
+        } 
+        if (doc) {
+            let pointer = 0;
+            let isFound = false;
+            let n = doc.likes.length;
+            for (let i = 0; i < n; i++) {
+                if (doc.likes[i] == user) {
+                    pointer = i;
+                    isFound = true;
+                    break;
+                }
+            }
+            if (isFound) {
+                doc.likes.splice(pointer,1);
+            }
+            doc.save(err=>{
+                if (err) {
+                    res.json({state: false});
+                } else {
+                    res.json({state: true});
+                }
+            });
+        } else {
+            res.json({state: false});
+        }
+    });
 });
 
 router.get('/getfullpost', tokenCheck, (req,res)=>{
@@ -78,6 +110,44 @@ router.post('/like-post', tokenCheck, (req,res)=>{
                 }
             }
             if (!found) doc.likes.push(user);
+            found = false;
+            for (let i = 0; i < doc.likesHistory.length; i++) {
+                if (doc.likesHistory[i] == user) {
+                    found = true;
+                    break;
+                }
+            }
+            
+            if (!found) {
+                doc.likesHistory.push(user);
+                let notifyData = new NotifyObject();
+                notifyData.type = 'like post';
+                notifyData.payload.sender = user;
+                notifyData.payload.postId = postId;
+                let newNotify = new Notify();
+                newNotify.type = 'like post';
+                newNotify.payload.sender = user;
+                newNotify.payload.postId = postId;
+                for (let i = 0; i < doc.subcribers.length; i++) {
+                    //notify by mqtt
+                    mqttClient.publish('notify/'+ doc.subcribers[i], JSON.stringify(notifyData), {qos:2});
+                    
+                    User.findOne({username: doc.subcribers[i]}, (err,docUser)=>{
+                        if (!err) {
+                            if (docUser) {
+                                while (docUser.notifies.length > 50) {
+                                    docUser.notifies.pop();
+                                }
+                                docUser.notifies.unshift(newNotify);
+                                docUser.save((err)=>{
+                                    console.log('err in save notify like post');
+                                });
+                            }
+                        }
+                    });
+                }
+            }
+
             found = false; 
             for (let i = 0; i < doc.subcribers.length; i++) {
                 if (doc.subcribers[i] == user) {
@@ -779,9 +849,5 @@ router.post('/avatarupload', tokenCheck, saveAvatarHandlerMiddleware.single('ava
         });
     });
 });
-
-
-
-
 
 module.exports = router;

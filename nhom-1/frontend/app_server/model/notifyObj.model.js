@@ -1,7 +1,9 @@
 class NotifyObject {
     constructor() {
-        this.sender = '';
+        this.type = '';
         this.date = new Date();
         this.payload = {};
     }
 }
+
+module.exports = NotifyObject;

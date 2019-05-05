@@ -1,6 +1,10 @@
 <div [class.outgoing_msg]="outgoing" [class.incoming_msg]="incoming">
-  <div *ngIf="incoming" class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"></div>
+  <!-- <div *ngIf="incoming" class="incoming_msg_img" [ngStyle]="{'background-image': 'url('+avatarUrl+')'}"></div> -->
+  <div *ngIf = "incoming" class="incoming_msg_img" mat-card-avatar [style.backgroundImage]="'url('+ avatarUrl +')'"></div>
   <div [class.sent_msg]="outgoing" [class.received_msg]="incoming">
     <p>{{message.content}}</p>
   </div>
 </div>
+
+
+<!-- <img [src]="avatarUrl" alt="sunil"> -->

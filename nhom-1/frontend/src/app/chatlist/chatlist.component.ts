@@ -37,7 +37,7 @@ export class ChatlistComponent implements OnInit {
           temp.roomId = data.list[i]._id;
           temp.read = data.list[i].unread.length == 0 ? true : false;
           temp.thread = data.list[i].thread;
-          temp.lastMessage = data.list[i].lastMessage;
+          temp.lastMessage = new Date(data.list[i].lastMessage);
           for (let j = 0; j < data.list[i].authors.length; j++) {
             if (data.list[i].authors[j] != this.userService.currentUserValue.username) {
               temp.sender = data.list[i].authors[j];
@@ -82,7 +82,7 @@ export class ChatlistComponent implements OnInit {
                   }
                 }
                 newRoom.thread = res.room.thread;
-                newRoom.lastMessage = res.room.lastMessage;
+                newRoom.lastMessage = new Date(res.room.lastMessage);
                 for (let j = 0; j < res.room.authors.length; j++) {
                   if (res.room.authors[j] == this.userService.currentUserValue.username) {
                     continue;
@@ -116,16 +116,18 @@ export class ChatlistComponent implements OnInit {
       for (let i = 0; i < this.roomList.length; i++) {
         if (this.roomList[i].roomId == newMessage.roomId) {
           found = true;
-          this.roomList[i].lastMessage = newMessage.sendDate;
+          this.roomList[i].lastMessage = new Date(newMessage.sendDate);
           this.roomList[i].read = false;
           this.sortRoomList();
+          break;
         }
       }
+      console.log(this.roomList);
       if (!found) {
         this.http.get<any>(`${environment.apiUrl}/api/get-roomchat`, {params: {'roomid': newMessage.roomId.toString()}}).subscribe((res)=>{
           if (res.roomchat) {
             let newRoom = new ChatRoom();
-            newRoom.lastMessage = res.roomChat.lastMessage;
+            newRoom.lastMessage = new Date(res.roomChat.lastMessage);
             newRoom.read = false;
             newRoom.thread = res.roomChat.thread;
             newRoom.roomId = res.roomChat._id;

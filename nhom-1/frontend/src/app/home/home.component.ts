@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     uploadPost(postElement,shareElement) {
-        if (postElement.value == '') return;
+        if (postElement.value.trim().length < 10) return;
         console.log(postElement.value);
         postElement.disabled = true;
         shareElement.disabled = true;

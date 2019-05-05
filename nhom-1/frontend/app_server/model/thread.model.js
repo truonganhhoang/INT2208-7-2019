@@ -30,6 +30,10 @@ var threadSchema = new Schema({
     comments: {
         type: [commentSchema],
         default: []
+    },
+    likesHistory: {
+        type: [String],
+        default: []
     }
 });
 
