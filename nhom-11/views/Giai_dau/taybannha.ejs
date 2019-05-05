@@ -255,141 +255,112 @@
 
       
       <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="home2">
-        <div class="container" style="width: 90%">
-        <table class="table">
-          <thead>
-            <tr>
-              <th class="col-md-1">Vị trí</th>
-             <th class="col-md-3">Câu lạc bộ</th>
-              <th class="col-md-7">Cầu thủ</th>
-              <th class="col-md-1">Bàn thắng</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td><img src="LogoCLB\La Liga\barcelona.png" width="auto" height="25px"> Barcelona</td>
-              <td>Lionel Messi</td>
-              <td align="center">20</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              
-              <td><img src="LogoCLB\La Liga\real.png" width="auto" height="25px"> Real Madrid</td>
-              <td>Karim Benzema</td>
-              <td align="center">18</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              
-              <td><img src="LogoCLB\La Liga\barcelona.png" width="auto" height="25px"> Barcelona</td>
-              <td>Luis Suarez</td>
-              <td align="center">16</td>
-            </tr>
-          </tbody>
-        </table></div>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="profile6">
-        <div class="container" style="width: 90%">
-        <table class="table">
-          <thead>
-            <tr>
-              <th class="col-md-1">Vị trí</th>
-             <th class="col-md-3">Câu lạc bộ</th>
-              <th class="col-md-7">Cầu thủ</th>
-              <th class="col-md-1">Kiến tạo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td><img src="LogoCLB\La Liga\barcelona.png" width="auto" height="25px"> Barcelona</td>
-              <td>Lionel Messi</td>
-              <td align="center">13</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              
-              <td><img src="LogoCLB\La Liga\sevilla.png" width="auto" height="25px"> Sevilla</td>
-              <td>Pablo Sabaria</td>
-              <td align="center">13</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td><img src="LogoCLB\La Liga\villareal.png" width="auto" height="25px"> Villarreal</td>
-              <td>Santi Carzola</td>
-              <td align="center">10</td>
-            </tr>
-          </tbody>
-        </table></div>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="profile7">
-        <div class="container" style="width: 90%">
-        <table class="table">
-          <thead>
-            <tr>
-              <th class="col-md-1">Vị trí</th>
-             <th class="col-md-3">Câu lạc bộ</th>
-              <th class="col-md-7">Cầu thủ</th>
-              <th class="col-md-1">Thẻ vàng</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td><img src="LogoCLB\La Liga\sevilla.png" width="auto" height="25px"> Sevilla</td>
-              <td>Ever Banega</td>
-              <td align="center">10</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td><img src="LogoCLB\La Liga\villareal.png" width="auto" height="25px"> Villarreal</td>
-              <td>Mario Martinez</td>
-              <td align="center">9</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td><img src="LogoCLB\La Liga\villareal.png" width="auto" height="25px"> Villarreal</td>
-              <td>Funes Mori</td>
-              <td align="center">8</td>
-            </tr>
-          </tbody>
-        </table></div>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="profile8">
-        <div class="container" style="width: 90%">
-        <table class="table">
-          <thead>
-            <tr>
-              <th class="col-md-1">Vị trí</th>
-             <th class="col-md-3">Câu lạc bộ</th>
-              <th class="col-md-7">Cầu thủ</th>
-              <th class="col-md-1">Thẻ đỏ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td><img src="LogoCLB\La Liga\rayo.png" width="auto" height="25px"> Rayo Vallecano</td>
-              <td>Abdoulaye Ba</td>
-              <td align="center">2</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td><img src="LogoCLB\La Liga\villareal.png" width="auto" height="25px"> Villarreal</td>
-              <td>A. González</td>
-              <td align="center">2</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td><img src="LogoCLB\La Liga\girona.png" width="auto" height="25px">Girona</td>
-              <td>Espinosa</td>
-              <td align="center">2</td>
-            </tr>
-          </tbody>
-        </table></div>
-    </div>
+        <!-- Tab bàn thắng -->
+          <div role="tabpanel" class="tab-pane active" id="home2">
+            <div class="container" style="width: 90%">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="col-md-1">Vị trí</th>
+                 <th class="col-md-3">Cầu thủ</th>
+                  <th class="col-md-7">Câu lạc bộ</th>
+                  <th class="col-md-1">Bàn thắng</th>
+                </tr>
+              </thead>
+              <tbody>
+                <%i=1%>
+                <%results[4].forEach(function(rows){%>
+                <tr>
+                  <td><%=i++%></td>
+                  <td><%=rows.ten%></td>
+                  <td><img src="<%=rows.logo_clb%>" width="auto" height="20px">&nbsp;<%=rows.clb%></td>
+                  <td align="center"><%=rows.banthang%></td>
+                </tr>
+                <%})%>
+              </tbody>
+              </table>
+              </div>
+          </div>
+          
+
+          <!-- Tab kiến tạo -->
+          <div role="tabpanel" class="tab-pane fade" id="profile6">
+            <div class="container" style="width: 90%">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="col-md-1">Vị trí</th>
+                 <th class="col-md-3">Cầu thủ</th>
+                  <th class="col-md-7">Câu lạc bộ</th>
+                  <th class="col-md-1">Kiến tạo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <%i=1%>
+                <%results[5].forEach(function(rows){%>
+                <tr>
+                  <td><%=i++%></td>
+                  <td><%=rows.ten%></td>
+                  <td><img src="<%=rows.logo_clb%>" width="auto" height="20px">&nbsp;<%=rows.clb%></td>
+                  <td align="center"><%=rows.kientao%></td>
+                </tr>
+                <%})%>
+              </tbody>
+              </table>
+              </div>
+          </div>
+
+
+
+          <!-- Tab thẻ vàng -->
+          <div role="tabpanel" class="tab-pane fade" id="profile7">
+            <div class="container" style="width: 80%">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="col-md-4">Vị trí</th>
+                  <th class="col-md-6">Câu lạc bộ</th>
+                  <th class="col-md-2" style="text-align: center;">Thẻ vàng</th>
+                </tr>
+              </thead>
+              <tbody>
+                <%i=1%>
+                <%results[6].forEach(function(rows){%>
+                <tr>
+                  <td><%=i++%></td>
+                  <td><img src="<%=rows.logo_clb%>" width="auto" height="20px">&nbsp;<%=rows.clb%></td>
+                  <td align="center"><%=rows.tv%></td>
+                </tr>
+                <%})%>
+              </table>
+              </div>
+          </div>
+          
+          
+          <!-- Tab thẻ đỏ -->
+          <div role="tabpanel" class="tab-pane fade" id="profile8">
+            <div class="container" style="width: 80%">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="col-md-4">Vị trí</th>
+                  <th class="col-md-6">Câu lạc bộ</th>
+                  <th class="col-md-2" style="text-align: center;">Thẻ đỏ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <%i=1%>
+                <%results[7].forEach(function(rows){%>
+                <tr>
+                  <td><%=i++%></td>
+                  <td><img src="<%=rows.logo_clb%>" width="auto" height="20px">&nbsp;<%=rows.clb%></td>
+                  <td align="center"><%=rows.td%></td>
+                </tr>
+                <%})%>
+              </tbody>
+              </table>
+              </div>
+          </div>
     
   </div>
 
