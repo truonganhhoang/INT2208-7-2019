@@ -29,7 +29,12 @@ https://github.com/duong17020661/INT2208-7-2019/commit/d706a519e5b91c7d47fca8758
     https://github.com/duong17020661/INT2208-7-2019/commit/705353c7a4142f39330cb8f47fa00b904a021f41
 
 ## Giới thiệu giao diện web
+
 ![alt](web.png)
+
+## Giới thiệu chức năng
+    
+   Đây là một trang web giúp ta biết về những thông tin mới nhất của các giải đấu hàng đầu thế giới, giúp chúng ta dễ dàng hơn trong việc theo dõi diễn biến của từng trận cầu hấp dẫn, đồng thời biết thêm thông tin khác liên quan đến giải đấu, đội bóng và các câu chuyện bên lề sân cỏ. 
 
     - Demo code
 	1. Chạy thử và xem các chức năng đã sử dụng được chưa.
