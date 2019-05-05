@@ -29,7 +29,6 @@ export class NotifyItemComponent implements OnInit {
       if (res.state) {
         if (res.user) {
           this.userInfo.avatarUrl = res.user.avatarUrl;
-          console.log(this.userInfo.avatarUrl);
           this.userInfo.name = res.user.name;
         }
       }

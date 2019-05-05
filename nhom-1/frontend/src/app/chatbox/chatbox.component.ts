@@ -96,7 +96,6 @@ export class ChatboxComponent implements OnInit {
 
   loadMoreChat() {
     this.selectedMessageLoader.loadMoreChat(this.http);
-    this.messageList.nativeElement.scrollTop = 0;
   }
 
   ngAfterViewChecked() {
