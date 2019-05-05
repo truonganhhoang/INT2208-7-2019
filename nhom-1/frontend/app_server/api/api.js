@@ -17,6 +17,7 @@ const postSchema = require('./../model/thread.model');
 const commentSchema = require('./../model/comment.model');
 const NotifyObject = require('./../model/notifyObj.model');
 
+const Comment = mongoose.model('Comment', commentSchema);
 const Post = mongoose.model('Post', postSchema);
 const User = mongoose.model('User', userSchema);
 const Friend = mongoose.model('Friend', friendSchema);
@@ -140,7 +141,9 @@ router.post('/like-post', tokenCheck, (req,res)=>{
                                 }
                                 docUser.notifies.unshift(newNotify);
                                 docUser.save((err)=>{
-                                    console.log('err in save notify like post');
+                                    if (err) {
+                                        console.log('err in save notify like post');
+                                    }
                                 });
                             }
                         }

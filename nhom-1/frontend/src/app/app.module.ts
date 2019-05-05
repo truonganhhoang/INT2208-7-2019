@@ -41,7 +41,8 @@ import {
     MqttModule
   } from 'ngx-mqtt';;
 import { PostComponent } from './post/post.component'
-
+;
+import { SideAlertComponent } from './side-alert/side-alert.component'
 @NgModule({
     imports: [
         BrowserModule,
@@ -86,7 +87,8 @@ import { PostComponent } from './post/post.component'
         ChatboxComponent,
         ChatlistItemComponent
 ,
-        PostComponent    ],
+        PostComponent ,
+        SideAlertComponent   ],
     entryComponents: [
         EditProfileDialog, UpdateAvatarDialog,
     ],

@@ -1,4 +1,5 @@
 ﻿<mat-toolbar color="primary" role="heading" style="position: sticky; top:0; z-index: 1000;">
+    <div style="position: absolute; right: 25%;">
     <button mat-button routerLink="/" *ngIf="currentUser">
         <mat-icon style="margin-bottom: 5px">home</mat-icon>
         Home
@@ -9,7 +10,7 @@
 
     <button mat-button routerLink="/login" *ngIf="!currentUser">Login</button>
     <button mat-button routerLink="/register" *ngIf="!currentUser">Register</button>
-    
+    </div>
 </mat-toolbar>
 
 <!-- main app container -->
