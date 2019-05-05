@@ -272,40 +272,40 @@ session_start();
         </div>
     </div>
 </div>
-<div class="container-fluid mt-4">
-    <div class="jcarousel-wrapper">
-        <div class="jcarousel" data-jcarousel="true">
-            <ul>
-                <?php
-                include 'connect.php';
+<div class="container-fluid mt-4 mb-5">
+        <div class="jcarousel-wrapper">
+            <div class="jcarousel" data-jcarousel="true">
+                <ul>
+                    <?php
+                    include 'connect.php';
 
-                $query = mysqli_query($con,"SELECT * FROM thongtinsanpham ORDER BY time_sp DESC LIMIT 10");
-                if($query->num_rows > 0){
-                    while($row = $query->fetch_assoc()){
-                        $imageURL1 = 'sanpham/'.$row["img"];
-                        ?>
-                        <li>
-                            <img class="img" src="<?php echo $imageURL1; ?>" alt="Hình ảnh sản phẩm">
-                        </li>
+                    $query = mysqli_query($con,"SELECT * FROM thongtinsanpham ORDER BY time_sp DESC LIMIT 6");
+                    if($query->num_rows > 0){
+                        while($row = $query->fetch_assoc()){
+                            $imageURL1 = 'sanpham/'.$row["img"];
+                            ?>
+                            <li style="height: 200px">
+                                <img class="img" src="<?php echo $imageURL1; ?>" alt="Hình ảnh sản phẩm" style="height: 195px!important;">
+                            </li>
 
-                    <?php }
-                } ?>
-            </ul>
+                        <?php }
+                    } ?>
+                </ul>
+            </div>
+
+            <a href="#" class="jcarousel-control-prev" role="button" data-jcarouselcontrol="true">‹</a>
+            <a href="#" class="jcarousel-control-next" role="button" data-jcarouselcontrol="true">›</a>
+
+            <p class="jcarousel-pagination" data-jcarouselpagination="true">
+                <a href="#1" class="">1</a>
+                <a href="#2" class="">2</a>
+                <a href="#3" class="">3</a>
+                <a href="#4" class="">4</a>
+                <a href="#5" class="">5</a>
+                <a href="#6" class="active">6</a>
+            </p>
         </div>
-
-        <a href="#" class="jcarousel-control-prev" role="button" data-jcarouselcontrol="true">‹</a>
-        <a href="#" class="jcarousel-control-next" role="button" data-jcarouselcontrol="true">›</a>
-
-        <p class="jcarousel-pagination" data-jcarouselpagination="true">
-            <a href="#1" class="">1</a>
-            <a href="#2" class="">2</a>
-            <a href="#3" class="">3</a>
-            <a href="#4" class="">4</a>
-            <a href="#5" class="">5</a>
-            <a href="#6" class="active">6</a>
-        </p>
     </div>
-</div>
 <section class="container-fluid mt-5">
     <section class="text-center mb-4">
 

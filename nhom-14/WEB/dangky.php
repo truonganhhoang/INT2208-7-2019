@@ -17,7 +17,7 @@ if(isset($_POST['submit']) && !empty($_FILES["avatar"]["name"])){
 	    echo '<script language="javascript">alert("Mật khẩu phải trên 5 ký tự! Bạn hãy đăng ký lại!"); window.location="index.php";</script>';
 	}
 	if($password2!=$password){
-		echo '<script language="javascript">alert("Mật khẩu trung nhau! Bạn hãy đăng ký lại!"); window.location="index.php";</script>';
+		echo '<script language="javascript">alert("Mật khẩu không trùng nhau! Bạn hãy đăng ký lại!"); window.location="index.php";</script>';
 	}else{
 		$sql = "SELECT * FROM thongtinnguoidung WHERE username = '$username'";
 		$query = mysqli_query($con,$sql);

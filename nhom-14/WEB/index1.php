@@ -123,6 +123,7 @@ session_start();
 			</div>
 		</div>
 	</div>
+	
 	<div class="container-fluid mt-4 mb-5">
 		<div class="jcarousel-wrapper">
 			<div class="jcarousel" data-jcarousel="true">
@@ -135,8 +136,8 @@ session_start();
 						while($row = $query->fetch_assoc()){
 							$imageURL1 = 'sanpham/'.$row["img"];
 							?>
-							<li>
-								<img class="img" src="<?php echo $imageURL1; ?>" alt="Hình ảnh sản phẩm">
+							<li style="height: 200px">
+								<img class="img" src="<?php echo $imageURL1; ?>" alt="Hình ảnh sản phẩm" style="height: 195px!important;">
 							</li>
 
 						<?php }

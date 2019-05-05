@@ -271,20 +271,20 @@ session_start();
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid mt-4">
+	<div class="container-fluid mt-4 mb-5">
 		<div class="jcarousel-wrapper">
 			<div class="jcarousel" data-jcarousel="true">
 				<ul>
 					<?php
 					include 'connect.php';
 
-					$query = mysqli_query($con,"SELECT * FROM thongtinsanpham ORDER BY time_sp DESC LIMIT 10");
+					$query = mysqli_query($con,"SELECT * FROM thongtinsanpham ORDER BY time_sp DESC LIMIT 6");
 					if($query->num_rows > 0){
 						while($row = $query->fetch_assoc()){
 							$imageURL1 = 'sanpham/'.$row["img"];
 							?>
-							<li>
-								<img class="img" src="<?php echo $imageURL1; ?>" alt="Hình ảnh sản phẩm">
+							<li style="height: 200px">
+								<img class="img" src="<?php echo $imageURL1; ?>" alt="Hình ảnh sản phẩm" style="height: 195px!important;">
 							</li>
 
 						<?php }
