@@ -55,6 +55,10 @@ export class UserService {
         return this.http.post<any>(`${environment.apiUrl}/auth/checkvaliduser`, ({username}));
     }
 
+    search(keyword: string) {
+        return this.http.get<any>(`${environment.apiUrl}/api/search`, {params: {'q': keyword}});
+    }
+
     public get currentUserValue(): User {
         return this.currentUserSubject.value;
     }

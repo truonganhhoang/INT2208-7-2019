@@ -43,6 +43,8 @@ import {
 import { PostComponent } from './post/post.component'
 ;
 import { SideAlertComponent } from './side-alert/side-alert.component'
+;
+import { SearchComponent } from './search/search.component';
 @NgModule({
     imports: [
         BrowserModule,
@@ -88,7 +90,8 @@ import { SideAlertComponent } from './side-alert/side-alert.component'
         ChatlistItemComponent
 ,
         PostComponent ,
-        SideAlertComponent   ],
+        SideAlertComponent ,
+        SearchComponent  ],
     entryComponents: [
         EditProfileDialog, UpdateAvatarDialog,
     ],
