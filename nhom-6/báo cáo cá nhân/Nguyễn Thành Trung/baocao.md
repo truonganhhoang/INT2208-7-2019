@@ -1,9 +1,9 @@
 # BÁO CÁO THỰC HÀNH
-## <center> Môn: Công nghệ phần mềm - INT2208 7
-
+## Môn: Công nghệ phần mềm - INT2208 7
+<br>
 ### Họ và tên: Nguyễn Thành Trung. Mã sinh viên: 17021087. Nhóm 6.
 ### Đề tài: Xây dựng ứng dụng web bán hàng bằng PHP và mySQLi.
-
+<br><br>
 ### I. CÂU CHUYỆN NGƯỜI DÙNG: Là người dùng tôi muốn có các chức năng đăng nhập, đăng ký để tôi có thể thuận tiện theo dõi hoạt động của mình và bảo mật thông tin cá nhân.
 
 * #### Phân tích:
@@ -74,7 +74,7 @@
 			- Đảm bảo các lệnh đều được chạy ít nhất một lần
 			- Đảm bảo các nhánh của rẽ nhánh được thực hiện ít nhất một lần
 	* Lấy ý kiến người dùng và tối ưu hóa giao diện.
-
+<br><br>
 ### II. HƯỚNG DẪN SỬ DỤNG CÁC TÍNH NĂNG LIÊN QUAN ĐẾN TÀI KHOẢN NGƯỜI DÙNG
 #### 1. ĐĂNG KÝ
 * ##### Bước 1: Tại trang chủ click Đăng nhập ở bên phải của thanh menu.
