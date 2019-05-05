@@ -15,7 +15,7 @@
 		- Sau khi nhấp chọn 1 tin, hiển thị với tốc độ nhanh, chính xác tin tức đó (yêu cầu phi chức năng - specifications).
 	2. Lập trình có cấu trúc và thay đổi liên tục trong quá trình thiết kế, từ đơn giản đến phức tạp (High Level Design).
 	3. Thực hiện:
-		- Tìm hiểu về Bootstrap,HTML,CSS.
+		- Tìm hiểu về Bootstrap,HTML,CSS,JavaScript; link Bootstrap: [Bootstrap](https://getbootstrap.com/docs/3.4/css/).
 		- Thiết kế giao diện ở chế độc PC và Mobile (Bootstrap and HTML, CSS).
 		- Hiển thị "title" và "image" trực tiếp trên web.
 		- Liên kết CSDL đã tạo với các bài tin tức tuyển sinh nổi bật của các trang web lớn.
