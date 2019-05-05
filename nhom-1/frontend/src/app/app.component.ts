@@ -59,7 +59,7 @@ export class AppComponent {
     }
 
     menuOpened() {
-        this.http.get(`${environment.apiUrl}/api/reset-notify`).subscribe(res=>{
+        this.http.get<any>(`${environment.apiUrl}/api/reset-notify`).subscribe(res=>{
             if (res.state) {
                 this.unreadNotify = 0;
             }
