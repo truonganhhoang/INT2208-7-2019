@@ -54,6 +54,7 @@
     ![alt](tintuc_2.png)
     Khi giao diện hiện ra đó là các ô lưới, mỗi ô ứng với một tin tức. Trong mỗi ô có phần tiêu đề là nội dung chính của tin đó, bên dưới là phần mô tả vắn tắt cho tiêu đề. Trang web thân thiện cho mọi thiết bị.
     Khi người dùng bấm vào 1 ô tin tức thì trang sẽ chuyển sang một trang web mô tả chi tiết về thông tin đó.
+
     ![alt](tintuc.png)
 
 - Giao diện, chức năng, cách dùng trang tổng hợp video:
@@ -63,6 +64,7 @@
 
     Khi giao diện hiện ra đó là các ô lưới, mỗi ô ứng với một video. Bên dưới ô là tiêu đề-trận đấu giữa đội nào với đội nào.
     Khi người dùng bấm vào 1 ô video thì một video sẽ hiện lên, người dùng có thể xem ở đó. Muốn quay lại thì bấm vào bất cứ chỗ nào ngoại trừ video, hoặc là bấm close.
+    
     ![alt](video.png)
 
 ## Thu hoạch sau khi kết thúc môn học:
