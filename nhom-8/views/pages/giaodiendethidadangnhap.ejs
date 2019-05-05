@@ -9,26 +9,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.pack.js"></script>
-	<script>
-$('#submit').click(function() {
-{
-    var submit = $("button[type='submit']");
-    var data = {
-                    number: 1 ,
-                    comment: 'hay'
-                }
-    submit.click(function()
-    {
-	$.ajax({
-    url: 'pages/giaodiendethidadangnhap', 
-    type: 'POST', 
-	dataType: "json",
-    contentType: 'application/json', 
-	cache: false,
-    data:  JSON.stringify(data)
-	});
-});
-</script>
 </head>
 
 <body>
@@ -51,7 +31,7 @@ $('#submit').click(function() {
 						<li><a href="#" onclick="signout()">Đăng xuất</a></li>
 						<script>  
 							function signout(){  
-							window.location.assign('http://localhost:3000')  
+							window.location.assign('/')  
 						}  
 						</script>
 					</ul>
@@ -151,7 +131,7 @@ $('#submit').click(function() {
 
 		<% results[1].forEach(function(cm) { %>
 		<div id= "comment" style="<% if(!cm){%> display: none <%}%>" class="">
-			<p> <h4><%=cm.firstname%> <%=cm.lastname%>:</h4> <%=cm.comment%></p>
+			<p> <h3><%=cm.firstname%> <%=cm.lastname%>:</h4> <%=cm.comment%></p>
 		</div>
 		<% }); %>
 		</div>
