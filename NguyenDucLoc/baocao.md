@@ -1,7 +1,7 @@
-### **Nguyễn Đức Lộc**
-### **MSSV: 17020871**
-#### Nhóm dự án: Nhóm 5
-#### Vai trò: Scrum Master, Developer
+## **Nguyễn Đức Lộc**
+### MSSV: 17020871
+### Nhóm dự án: Nhóm 5
+### Vai trò: Scrum Master, Developer
 
 # Báo cáo cá nhân môn học Công nghệ phần mềm
 #### Hoàn thành khóa học trên edx ([chi tiết](https://github.com/truonganhhoang/INT2208-7-2019/blob/master/NguyenDucLoc/SoftEng1x.jpg))
