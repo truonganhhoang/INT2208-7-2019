@@ -2,7 +2,7 @@
  - Ngày sinh: 10/09/1999.</li>
  - MSSV: 17021025.</li> 
 # User story: Là một học sinh, tôi muốn tra cứu từ đơn để tiết kiệm thời gian so với tra cứu cuốn từ điển.
-- [x] Tự học HTML, PHP, CSS, Bootstrap.
+- [x] Tự học HTML, PHP, CSS, Bootstrap, JavaScript.
 - [x] Tạo form giao diện PHP nhúng HTML, CSS cho Tab "Tra từ online".
 * Liên kết khóa học: [Interface_segregation_principle](https://medium.com/codingthesmartway-com-blog/the-2019-roadmap-to-fullstack-web-development-1bba67a54ae8)
 * Liên kết git: [Interface](https://github.com/ThaoIE3/INT2208-7-2019/blob/master/nhom-19/DictionaryWeb/index.php)
