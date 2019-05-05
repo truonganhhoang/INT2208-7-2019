@@ -5,6 +5,7 @@
 
 <input type="text" (keydown.enter)="sendMessage($event)"> -->
 <div #chatbox style="overflow-y:scroll; height:500px;">
+  <p style="text-align: center; color:blue; font-size:13px; cursor: pointer;" (click)="loadMoreChat()" *ngIf="messageLeft()">Load more message</p>
   <app-message *ngFor="let message of messageShow" [message]="message"></app-message>
 </div>
 <div class="type_msg">

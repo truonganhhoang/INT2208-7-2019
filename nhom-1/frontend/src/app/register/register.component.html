@@ -19,14 +19,14 @@
             <mat-error *ngIf="f.password.hasError('minlength')">Password must be at least 6 characters</mat-error>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field style="margin-left:15px">
             <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="birthday" required>
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
             <mat-error *ngIf="f.birthday.hasError('required')">Invalid date of birth</mat-error>
         </mat-form-field> <br>
 
-        <div class="form-group">
+        <div class="form-group" style="margin-left:15px">
             <mat-label>Gender</mat-label> <br>
             <mat-radio-group formControlName="gender" required>
                 <mat-radio-button color="primary" value="true">Male</mat-radio-button>

@@ -36,7 +36,6 @@ export class UserProfileComponent implements OnInit {
     ) {
         this.user = new User;
         this.isMyProfile = false;
-        console.log(this.userService.currentUserValue);
     }
 
     ngOnInit() {
@@ -61,7 +60,6 @@ export class UserProfileComponent implements OnInit {
             .subscribe(
                 data => {
                     this.user = data.user;
-                    console.log(this.user);
                     this.getFriends();
                     this.getRelation();
                 }
@@ -87,7 +85,6 @@ export class UserProfileComponent implements OnInit {
             .subscribe(
                 data => {
                     this.relation = data.isFriend;
-                    console.log(this.relation);
                 }
             );
     }
@@ -120,7 +117,6 @@ export class UserProfileComponent implements OnInit {
         this.userService.addFriend(username)
             .subscribe(
                 data => {
-                    console.log(data);
                     this.getUser(this.user.username);
                     this.getRelation();
                 }
@@ -128,11 +124,9 @@ export class UserProfileComponent implements OnInit {
     }
 
     rejectFriend(username = this.user.username): void {
-        console.log(username);
         this.userService.rejectFriend(username)
             .subscribe(
                 data => {
-                    console.log(data);
                     this.getUser(this.user.username);
                     this.getRelation();
                 }
@@ -143,7 +137,6 @@ export class UserProfileComponent implements OnInit {
         this.userService.acceptFriend(username)
             .subscribe(
                 data => {
-                    console.log(data);
                     this.getRelation();
                 }
             )

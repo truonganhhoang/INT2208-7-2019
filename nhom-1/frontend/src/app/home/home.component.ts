@@ -6,12 +6,14 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '@environments/environment';
 import { Post } from '@app/_models/post.model';
 import { Comment } from '@app/_models/comment.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({ 
-    selector: 'home',
-    templateUrl: 'home.component.html'
+    templateUrl: 'home.component.html',
+    selector: 'app-home'
 })
 export class HomeComponent implements OnInit, OnDestroy {
+
 
     currentUser: User;
     currentUserSubscription: Subscription;
@@ -21,6 +23,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     constructor(
         private userService: UserService,
         private http: HttpClient,
+        private route: ActivatedRoute
     ) {
         this.currentUserSubscription = this.userService.currentUser.subscribe(user => {
             this.currentUser = user;
@@ -40,14 +43,28 @@ export class HomeComponent implements OnInit, OnDestroy {
             this.currentUser = data.user;
         });
 
-        this.http.get<any>(`${environment.apiUrl}/api/getfullpost`).subscribe((res)=>{
-            if (res.state) {
-                for (let i = 0; i < res.posts.length; i++) {
-                    this.posts.push(new Post(res.posts[i]));
-                }
-                this.sortPosts();
+        if (this.route.snapshot.url[0]) {
+            if (this.route.snapshot.url[0].path == 'users') {
+                this.http.get<any>(`${environment.apiUrl}/api/get-own-post`).subscribe((res)=>{
+                    if (res.state) {
+                        console.log(res);
+                        for (let i = 0; i < res.posts.length; i++) {
+                            this.posts.push(new Post(res.posts[i]));
+                        }
+                        this.sortPosts();
+                    }
+                });
             }
-        });
+        } else {
+            this.http.get<any>(`${environment.apiUrl}/api/getfullpost`).subscribe((res)=>{
+                if (res.state) {
+                    for (let i = 0; i < res.posts.length; i++) {
+                        this.posts.push(new Post(res.posts[i]));
+                    }
+                    this.sortPosts();
+                }
+            });
+        }
     }
 
     ngOnDestroy() {

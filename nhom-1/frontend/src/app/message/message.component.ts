@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { UserService } from '@app/_services/user.service';
 import { environment } from '@environments/environment';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-message',
@@ -20,7 +21,7 @@ export class MessageComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private userService: UserService,
-    private santizier: DomSanitizer
+    private router: Router
   ) {
 
   }
@@ -40,11 +41,13 @@ export class MessageComponent implements OnInit {
         if (res.user) {
           // res.user.avatarUrl = this.santizier.bypassSecurityTrustUrl(res.user.avatarUrl);
           this.avatarUrl = res.user.avatarUrl;
-          this.name = res.user.name;
-          console.log(this.avatarUrl);
-        }
+          this.name = res.user.name;        }
       }
     });
+  }
+
+  routeToUser() {
+    this.router.navigate(['users', this.message.sender]);
   }
 
 }

@@ -15,7 +15,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatNativeDateModule, MatInputModule, MatProgressBarModule, MatBadgeModule } from '@angular/material';
+import { MatNativeDateModule, MatInputModule, MatProgressBarModule, MatBadgeModule, MatMenuModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent }  from './app.component';
@@ -40,11 +40,14 @@ import { MessageService } from './_services/message.service';
 import {
     MqttModule
   } from 'ngx-mqtt';;
-import { PostComponent } from './post/post.component'
-;
-import { SideAlertComponent } from './side-alert/side-alert.component'
-;
+import { PostComponent } from './post/post.component';
+import { SideAlertComponent } from './side-alert/side-alert.component';
+import { SideAlertService } from './_services/sideAlert.service';
+import { CommentComponent } from './comment/comment.component';
 import { SearchComponent } from './search/search.component';
+
+import { NotifyItemComponent } from './notify-item/notify-item.component';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -69,6 +72,7 @@ import { SearchComponent } from './search/search.component';
         FormsModule,
         MatProgressBarModule,
         MatBadgeModule,
+        MatMenuModule,
         MqttModule.forRoot({
             hostname: 'localhost',
             port: 9001,
@@ -87,11 +91,13 @@ import { SearchComponent } from './search/search.component';
         NotFoundComponent ,
         ChatlistComponent,
         ChatboxComponent,
-        ChatlistItemComponent
-,
+        ChatlistItemComponent,
         PostComponent ,
         SideAlertComponent ,
-        SearchComponent  ],
+        CommentComponent,
+        NotifyItemComponent,
+        SearchComponent
+    ],
     entryComponents: [
         EditProfileDialog, UpdateAvatarDialog,
     ],
@@ -100,6 +106,7 @@ import { SearchComponent } from './search/search.component';
         UserService,
         AlertService,
         MessageService,
+        SideAlertService
     ],
     bootstrap: [AppComponent]
 })

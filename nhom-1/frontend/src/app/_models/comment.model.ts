@@ -3,4 +3,5 @@ export class Comment {
     author: String = '';
     postId: String = '';
     sendDate: Date = new Date();
+    commentId: String = '';
 }
