@@ -72,4 +72,28 @@ User story: Là một người mua hàng, tôi muốn các mặt hàng được 
 		    </div>
 	 	<div class="clear"></div>
 	</div>
-</div>                             
+</div>               
+
+<div class="resp-tabs-container">
+    <h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0">
+    	<span class="resp-arrow"></span>
+		"Cấu hình"
+	</h2>
+</div>
+    
+<div class="product-desc resp-tab-content resp-tab-content-active" aria-labelledby="tab_item-0" style="display:block">
+    <div class="your-review">
+        <p class="nd_tt"><b>THÔNG TIN CHI TIẾT SẢN PHẨM</b></p>
+        <p class="nd_tt"><b>Tên máy : Dell Audi A4</b></p>
+        <p class="nd_ct">
+            <b>Cấu hình</b> : Intel Core i5-3210M 2.5GHz<br>
+            <b>Bộ nhớ</b> : 4GB RAM<br>
+            <b>HDD</b> : 500GB HDD<br>
+            <b>VAG</b> : VGA NVIDIA GeForce GT 630M<br>
+            <b>Nhà sản xuất</b> : Dell<br>
+            <b>Giá</b> : 13.100.000 đ
+         </p>
+    </div>
+</div>
+                                                                   
+                                    
