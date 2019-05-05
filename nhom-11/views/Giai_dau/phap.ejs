@@ -111,12 +111,13 @@
         </div>
     </div>
 
+
+<!--- Nội dung tab Ligue I --->
 <div class="tab-content">
 
 
-	<div role="tabpanel" class="tab-pane active" id="home1">
-    <!--/Toolbar -->
-    <ul class="nav nav-pills nav-justified " role="tablist">
+ <div role="tabpanel" class="tab-pane active" id="home1">
+      <ul class="nav nav-pills nav-justified " role="tablist">
         <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
             data-toggle="tab" class="gray"><h5>Bảng xếp hạng</h5></a></li>
         <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
@@ -126,39 +127,40 @@
       </ul>
 
 
-      <!-- Tab panes -->
-    <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="home">
-				<div class="container" style="width: 90%">
-				<table class="table">&nbsp
-				<tr style="background-color: #e6e600; color: #000">
-				  <th class="col-md-1"><p>Vị trí</p></th>
-				  <th class="col-md-5"><p>Câu lạc bộ</p></th>
-				  <th class="col-md-1"><p align="center">Trận</p></th>
-				  <th class="col-md-1"><p align="center">Thắng</p></th>
-				  <th class="col-md-1"><p align="center">Hòa</p></th>
-				  <th class="col-md-1"><p align="center">Thua</p></th>
-				  <th class="col-md-1"><p align="center">+/-</p></th>
-				  <th class="col-md-1"><p align="center">Điểm</p></th>
-				</tr>
-				<%i=1%>
-				<%results[3].forEach(function(rows){%>
-				<tr style="background-color: white">
-					<td><%=i++%></td>
-					<td><img src="<%=rows.logo_doibong%>" alt="score+" width="auto" height="20px">&nbsp&nbsp<%=rows.doibong%></td>
-					<td align="center"><%=rows.st%></td>
-					<td align="center"><%=rows.w%></td>
-					<td align="center"><%=rows.d%></td>
-					<td align="center"><%=rows.l%></td>
-					<td align="center"><%=rows.hieuso%></td>
-					<td align="center"><%=rows.diem%></td>
-				</tr>
-				<%})%>
-				</table>
-		</div>
-        </div>
+      		<!-- Tab bảng xếp hạng -->
+			<div class="tab-content">
+	        <div role="tabpanel" class="tab-pane active" id="home">
+					<div class="container" style="width: 90%">
+					<table class="table">&nbsp
+					<tr style="background-color: #e6e600; color: #000">
+					  <th class="col-md-1"><p>Vị trí</p></th>
+					  <th class="col-md-5"><p>Câu lạc bộ</p></th>
+					  <th class="col-md-1"><p align="center">Trận</p></th>
+					  <th class="col-md-1"><p align="center">Thắng</p></th>
+					  <th class="col-md-1"><p align="center">Hòa</p></th>
+					  <th class="col-md-1"><p align="center">Thua</p></th>
+					  <th class="col-md-1"><p align="center">+/-</p></th>
+					  <th class="col-md-1"><p align="center">Điểm</p></th>
+					</tr>
+					<%i=1%>
+					<%results[3].forEach(function(rows){%>
+					<tr style="background-color: white">
+						<td><%=i++%></td>
+						<td><img src="<%=rows.logo_doibong%>" alt="score+" width="auto" height="20px">&nbsp&nbsp<%=rows.doibong%></td>
+						<td align="center"><%=rows.st%></td>
+						<td align="center"><%=rows.w%></td>
+						<td align="center"><%=rows.d%></td>
+						<td align="center"><%=rows.l%></td>
+						<td align="center"><%=rows.hieuso%></td>
+						<td align="center"><%=rows.diem%></td>
+					</tr>
+					<%})%>
+					</table>
+			</div>
+	        </div>
 
-				<div role="tabpanel" class="tab-pane tab-pane fade" id="profile">
+			<!-- Tab trận đấu -->
+			<div role="tabpanel" class="tab-pane tab-pane fade" id="profile">
 
           	 <ul class="nav nav-pills nav-justified " role="tablist">&nbsp
 		        <li role="presentation" class="active"><a href="#r1" aria-controls="round" role="tab"
@@ -227,133 +229,150 @@
 								</table>
 						</div>
 
+					</div>
+					</div>
+
+
+			<!---Nội dung tab Thống kê--->
+			<div role="tabpanel" class="tab-pane " id="profile2">
+				&nbsp;
+				<div class="container">
+
+				<div class="row">
+			      <div>
+			      	<ul class="nav nav-tabs nav-justified" role="tablist">
+				        <li role="presentation" class="active"><a href="#home2" aria-controls="home2" role="tab"
+				            data-toggle="tab"><img src="Icon\top-scorer.png" width="auto" height="30px"><h5>Top ghi bàn</h5></a></li>
+				        <li role="presentation"><a href="#profile6" aria-controls="profile6" role="tab"
+				            data-toggle="tab"><img src="Icon\top-assist.png" width="auto" height="30px"><h5>Top kiến tạo</h5></a></li>
+				            <li role="presentation"><a href="#profile7" aria-controls="profile6" role="tab"
+				            data-toggle="tab"><img src="Icon\yellow.png" width="auto" height="30px"><h5>Thẻ vàng</h5></a></li>
+				            <li role="presentation"><a href="#profile8" aria-controls="profile6" role="tab"
+				            data-toggle="tab"><img src="Icon\red.png" width="auto" height="30px"><h5>Thẻ đỏ</h5></a></li>
+			      	</ul>
+			      </div>
+			  	</div>
+
+				</div>
+
+
+				<div class="tab-content">
+					
+					<!-- Tab bàn thắng -->
+					<div role="tabpanel" class="tab-pane active" id="home2">
+						<div class="container" style="width: 90%">
+						<table class="table">
+					    <thead>
+					      <tr>
+					      	<th class="col-md-1">Vị trí</th>
+					       <th class="col-md-3">Cầu thủ</th>
+					        <th class="col-md-7">Câu lạc bộ</th>
+					        <th class="col-md-1">Bàn thắng</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+								<%i=1%>
+								<%results[4].forEach(function(rows){%>
+					      <tr>
+					      	<td><%=i++%></td>
+					        <td><%=rows.ten%></td>
+									<td><img src="<%=rows.logo_clb%>" width="auto" height="20px">&nbsp;<%=rows.clb%></td>
+					        <td align="center"><%=rows.banthang%></td>
+					      </tr>
+								<%})%>
+					    </tbody>
+		  				</table>
+		  				</div>
+					</div>
+					
+
+					<!-- Tab kiến tạo -->
+					<div role="tabpanel" class="tab-pane fade" id="profile6">
+						<div class="container" style="width: 90%">
+						<table class="table">
+					    <thead>
+					      <tr>
+					      	<th class="col-md-1">Vị trí</th>
+					       <th class="col-md-3">Cầu thủ</th>
+					        <th class="col-md-7">Câu lạc bộ</th>
+					        <th class="col-md-1">Kiến tạo</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+								<%i=1%>
+								<%results[5].forEach(function(rows){%>
+					      <tr>
+					      	<td><%=i++%></td>
+					        <td><%=rows.ten%></td>
+									<td><img src="<%=rows.logo_clb%>" width="auto" height="20px">&nbsp;<%=rows.clb%></td>
+					        <td align="center"><%=rows.kientao%></td>
+					      </tr>
+								<%})%>
+					    </tbody>
+		  				</table>
+		  				</div>
+					</div>
+
+
+
+					<!-- Tab thẻ vàng -->
+					<div role="tabpanel" class="tab-pane fade" id="profile7">
+						<div class="container" style="width: 80%">
+						<table class="table">
+					    <thead>
+					      <tr>
+					      	<th class="col-md-4">Vị trí</th>
+					      	<th class="col-md-6">Câu lạc bộ</th>
+					        <th class="col-md-2" style="text-align: center;">Thẻ vàng</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+								<%i=1%>
+								<%results[6].forEach(function(rows){%>
+					      <tr>
+					      	<td><%=i++%></td>
+									<td><img src="<%=rows.logo_clb%>" width="auto" height="20px">&nbsp;<%=rows.clb%></td>
+					        <td align="center"><%=rows.tv%></td>
+					      </tr>
+								<%})%>
+		  				</table>
+		  				</div>
+					</div>
+					
+					
+					<!-- Tab thẻ đỏ -->
+					<div role="tabpanel" class="tab-pane fade" id="profile8">
+						<div class="container" style="width: 80%">
+						<table class="table">
+					    <thead>
+					      <tr>
+					      	<th class="col-md-4">Vị trí</th>
+					       	<th class="col-md-6">Câu lạc bộ</th>
+					        <th class="col-md-2" style="text-align: center;">Thẻ đỏ</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+								<%i=1%>
+								<%results[7].forEach(function(rows){%>
+					      <tr>
+					      	<td><%=i++%></td>
+									<td><img src="<%=rows.logo_clb%>" width="auto" height="20px">&nbsp;<%=rows.clb%></td>
+					        <td align="center"><%=rows.td%></td>
+					      </tr>
+								<%})%>
+					    </tbody>
+		  				</table>
+		  				</div>
+					</div>
+
+				</div>
+
 		</div>
-		</div>
 
 
-				<!---Nội dung tab Thống kê--->
-		<div role="tabpanel" class="tab-pane " id="profile2">
-			&nbsp;
-			<div class="container">
-
-			<div class="row">
-		      <div>
-		      	<ul class="nav nav-tabs nav-justified" role="tablist">
-			        <li role="presentation" class="active"><a href="#home2" aria-controls="home2" role="tab"
-			            data-toggle="tab"><img src="Icon\top-scorer.png" width="auto" height="30px"><h5>Top ghi bàn</h5></a></li>
-			        <li role="presentation"><a href="#profile6" aria-controls="profile6" role="tab"
-			            data-toggle="tab"><img src="Icon\top-assist.png" width="auto" height="30px"><h5>Top kiến tạo</h5></a></li>
-			            <li role="presentation"><a href="#profile7" aria-controls="profile6" role="tab"
-			            data-toggle="tab"><img src="Icon\yellow.png" width="auto" height="30px"><h5>Thẻ vàng</h5></a></li>
-			            <li role="presentation"><a href="#profile8" aria-controls="profile6" role="tab"
-			            data-toggle="tab"><img src="Icon\red.png" width="auto" height="30px"><h5>Thẻ đỏ</h5></a></li>
-		      	</ul>
-		      </div>
-		  	</div>
-
-			</div>
-
-
-			<div class="tab-content">
-				<div role="tabpanel" class="tab-pane active" id="home2">
-				<div class="container" style="width: 90%">
-				<table class="table">
-			    <thead>
-			      <tr>
-			      	<th class="col-md-1">Vị trí</th>
-			       <th class="col-md-3">Cầu thủ</th>
-			        <th class="col-md-7">Câu lạc bộ</th>
-			        <th class="col-md-1">Bàn thắng</th>
-			      </tr>
-			    </thead>
-			    <tbody>
-						<%i=1%>
-						<%results[4].forEach(function(rows){%>
-			      <tr>
-			      	<td><%=i++%></td>
-			        <td><%=rows.ten%></td>
-							<td><%=rows.clb%></td>
-			        <td align="center"><%=rows.banthang%></td>
-			      </tr>
-						<%})%>
-			    </tbody>
-  			</table></div>
-		</div>
-		<div role="tabpanel" class="tab-pane fade" id="profile6">
-				<div class="container" style="width: 90%">
-				<table class="table">
-			    <thead>
-			      <tr>
-			      	<th class="col-md-1">Vị trí</th>
-			       <th class="col-md-3">Cầu thủ</th>
-			        <th class="col-md-7">Câu lạc bộ</th>
-			        <th class="col-md-1">Kiến tạo</th>
-			      </tr>
-			    </thead>
-			    <tbody>
-						<%i=1%>
-						<%results[5].forEach(function(rows){%>
-			      <tr>
-			      	<td><%=i++%></td>
-			        <td><%=rows.ten%></td>
-							<td><%=rows.clb%></td>
-			        <td align="center"><%=rows.kientao%></td>
-			      </tr>
-						<%})%>
-			    </tbody>
-  			</table></div>
-		</div>
-		<div role="tabpanel" class="tab-pane fade" id="profile7">
-				<div class="container" style="width: 90%">
-				<table class="table">
-			    <thead>
-			      <tr>
-			      	<th class="col-md-1">Vị trí</th>
-			      	<th class="col-md-3">Câu lạc bộ</th>
-			        <th class="col-md-1">Thẻ vàng</th>
-			      </tr>
-			    </thead>
-			    <tbody>
-						<%i=1%>
-						<%results[6].forEach(function(rows){%>
-			      <tr>
-			      	<td><%=i++%></td>
-							<td><%=rows.clb%></td>
-			        <td align="center"><%=rows.tv%></td>
-			      </tr>
-						<%})%>
-  			</table></div>
-		</div>
-		<div role="tabpanel" class="tab-pane fade" id="profile8">
-				<div class="container" style="width: 90%">
-				<table class="table">
-			    <thead>
-			      <tr>
-			      	<th class="col-md-1">Vị trí</th>
-			       	<th class="col-md-3">Câu lạc bộ</th>
-			        <th class="col-md-1">Thẻ đỏ</th>
-			      </tr>
-			    </thead>
-			    <tbody>
-						<%i=1%>
-						<%results[7].forEach(function(rows){%>
-			      <tr>
-			      	<td><%=i++%></td>
-							<td><%=rows.clb%></td>
-			        <td align="center"><%=rows.td%></td>
-			      </tr>
-						<%})%>
-			    </tbody>
-  			</table></div>
-		</div>
-
-	</div>
-
-	</div>
-
-
-	</div>
+ </div>
 </div>
+
 <!---Nội dung tab Thông tin--->
 	<div role="tabpanel" class="tab-pane" id="profile5">
 		<img src="LogoGiaiDau\phap.png" width="auto" height="150px" class="center">
