@@ -78,6 +78,7 @@
 ### HƯỚNG DẪN SỬ DỤNG CÁC TÍNH NĂNG LIÊN QUAN ĐẾN TÀI KHOẢN NGƯỜI DÙNG
 #### 1. ĐĂNG KÝ
 * ##### Bước 1: Tại trang chủ click Đăng nhập ở bên phải của thanh menu.
+		<img src="https://drive.google.com/file/d/1Ha5POEdH8_Rxq3nH3NH_VyPdZYis1ZEU/view?usp=sharing">
 		![alt](https://drive.google.com/file/d/1Ha5POEdH8_Rxq3nH3NH_VyPdZYis1ZEU/view?usp=sharing)
 * ##### Bước 2: Click nút Đăng ký
 		![alt](https://drive.google.com/open?id=1RUOUZNilrMdhQtcpoQ1MM9mTuELjOqew)
