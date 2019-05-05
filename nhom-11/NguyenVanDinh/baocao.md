@@ -51,8 +51,8 @@
     Khi người dùng bấm vào 1 ô video thì một video sẽ hiện lên, người dùng có thể xem ở đó. Muốn quay lại thì bấm vào bất cứ chỗ nào ngoại trừ video, hoặc là bấm close.
     ![alt](video.png)
 ## Thu hoạch sau khi kết thúc môn học:
-- Hoàn thành khoá học SoftEng1x
-- Hoàn thành khoá học [Bootstrap](https://o7planning.org/en/11745/bootstrap)
-- Hoàn thành khoá học CSS, HTML, JS trên [O7planning](https://o7planning.org/) [W3schools] (https://www.w3schools.com/)
+- Hoàn thành khoá học SoftEng1x.
+- Hoàn thành khoá học [Bootstrap](https://o7planning.org/en/11745/bootstrap).
+- Hoàn thành khoá học CSS, HTML, JS trên [O7planning](https://o7planning.org/) [W3schools](https://www.w3schools.com/).
 
 
