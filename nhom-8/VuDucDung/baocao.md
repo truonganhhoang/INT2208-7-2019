@@ -7,7 +7,7 @@
 
 
 * Bài tập nhóm: **Dự án web cung cấp đề thi các môn** 
-* Link Github (trưởng nhóm): [Github](https://github.com/buibaouet/INT2208-7-2019)
+* Link Github (nhóm trưởng): [Github](https://github.com/buibaouet/INT2208-7-2019)
 * User story: Là một học sinh lớp 12, tôi muốn xem tin tức tuyển sinh để cập nhật được tình hình học tập và định hướng ngành học.
 	
 	1. Xác định yêu cầu, mong muốn: 
@@ -25,6 +25,6 @@
 		- Tái cấu trúc mã nguồn: Rà soát mã nguồn, xử lý code xấu nếu có.
 
 * Hướng dẫn sử dụng:
-Bước 1: Mở giao diện trang chủ, kéo xuống dưới bạn sẽ thấy các tin tức tuyển sinh nổi bật.
-Bước 1: Nhấp đúp bất kỳ vào 1 tin, giao diện tin tức sẽ hiển thị (luôn cập nhật thông tin mới nhất).
+- Mở giao diện trang chủ, kéo xuống dưới bạn sẽ thấy các tin tức tuyển sinh nổi bật.
+- Nhấp đúp bất kỳ vào 1 tin, giao diện tin tức sẽ hiển thị (luôn cập nhật thông tin mới nhất).
 
