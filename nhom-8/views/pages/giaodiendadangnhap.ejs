@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Hoctot.vn</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="demo.css">
+	<link rel="stylesheet" href="index.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
@@ -30,7 +30,7 @@
 				<ul class="nav nav-pills pull-right">
 					
 					<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%=signinUser.firstname%> <%=signinUser.lastname%><span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style ="color:#ffffff"><%=signinUser.firstname%> <%=signinUser.lastname%><span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="#" onclick="signout()">Đăng xuất</a></li>
 						<script>  
@@ -43,7 +43,7 @@
 				</ul>
 				
 				<div class="container center_div">
-					<form class="navbar-form" method="post" action="/giaodiendadangnhap">
+					<form class="navbar-form" method="post" action="/searchdn">
 						<input type="text" class="form-control" name="search" placeholder="Tìm kiếm tài liệu & đề thi...">
 						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 					</form>
@@ -92,7 +92,6 @@
 						<li><a href="/gdcddn">Công Dân</a></li>		
 					</ul>
 				</li>
-				<li><a href="#">Video</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>
@@ -154,54 +153,43 @@
 		</section>
 
 		<section> 
+			<div class="container">
+				<div class="row">
+					<% results[0].forEach(function(result) { %>
+					<div class="col-md-3 col-sm-6">
+						<a href="/giaodiendethidadangnhap/<%=result.id%>" class="thumbnail">
 
-			<div class="row">
-						<% results.forEach(function(result) { %>
-							<div class="col-md-3">
-								<a href="/giaodiendethidadangnhap/<%=result.id%>" class="thumbnail">
-									<p style="text-align:center"><%=result.name%></p> 
-									<img src="<%=result.link%>" alt="de1" style="width:150px;height:150px">
-								</a>
-							</div>
-						<% }); %>
+							<img src="<%=result.link%>" alt="" style="width:150px;height:150px">
+						</a>
+						<p style="text-align:center"><%=result.name%></p> 
+					</div>
+					<% }); %>
+				</div>
 			</div>
 		</section>
+
 		<section> 
-			<div class = "row">
-				<div class = "col-md-12">
-					<h3><u> Tin tức tuyển sinh:</u></h3>
-				</div>
-			</div>	
-			<div class="col-md-3 col-sm-6">
-					<a target="_blank" href="https://news.zing.vn/vi-sao-sinh-vien-duoc-nang-diem-thi-thpt-quoc-gia-khong-bi-duoi-hoc-post935490.html">
-						<img src="tin1.jpg" alt="" width="auto" height="auto" class="center img-responsive">
-					</a>
-					<div class="desc">Vì sao SV được nâng điểm thi THPT quốc gia không bị đuổi học?</div>
-				</div>	
+			<h3><u> Tin tức tuyển sinh 2019:</u></h3>
+			<div class="container">
+				<div class="row">
+					
+					<% results[1].forEach(function(res) { %>
+					<div class="col-md-3 col-sm-6">
+						<a class="thumbnail" href="<%=res.link%>">
+							<img src="<%=res.image%>" alt="" style="width:100%;height:150px" >
+						</a>
 
-				<div class="col-md-3 col-sm-6">
-					<a target="_blank" href="https://news.zing.vn/thi-thpt-quoc-gia-co-thi-sinh-dang-ky-20-nguyen-vong-post937917.html">
-						<img src="tin2.jpg" alt="" width="auto" height="auto" class="center img-responsive">
-					</a>
-					<div class="desc">Thi THPT quốc gia: Có thí sinh đăng ký 20 nguyện vọng</div>
-				</div>
+						<p style="text-align:center"><%=res.title%></p>
 
-				<div class="col-md-3 col-sm-6">
-					<a target="_blank" href="https://news.zing.vn/bo-cong-an-se-co-quy-dinh-dac-thu-de-han-che-gian-lan-thi-cu-post936765.html">
-						<img src="tin3.jpg" alt="" width="auto" height="auto" class="center img-responsive">
-					</a>
-					<div class="desc">Bộ Công an sẽ có quy định đặc thù để hạn chế gian lận thi cử</div>
+					</div>	
+
+					<% }); %>
 				</div>
-				
-				<div class="col-md-3 col-sm-6">
-					<a target="_blank" href="https://tin.tuyensinh247.com/lich-thi-thpt-quoc-gia-nam-2019-chi-tiet-bo-gd-c24a41718.html">
-						<img src="tin4.jpg" alt="" width="auto" height="auto" class="center img-responsive">
-					</a>
-					<div class="desc">Lịch thi THPT quốc gia 2019 - Chính thức từ Bộ Giáo dục</div>
-				</div>		
+			</div>
 		</section>
+
 	</div>
-	</div>
+</div>
 
 
 	<footer class ="bs-docs-footer">

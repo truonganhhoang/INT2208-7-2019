@@ -40,7 +40,7 @@ var con = mysql.createConnection({
 var signinUser;
 var timkiem;
 app.get('/', function(req, res) {
-	var sql = "SELECT * FROM debai LIMIT 8";
+	var sql = "SELECT * FROM debai ORDER BY(datediff(`date`, now())) DESC LIMIT 8;SELECT * FROM `news`  ORDER BY(datediff(`date`, now())) DESC LIMIT 4";
 	con.query(sql, function(err, results) {
     if (err) throw err;
     res.render('pages/index', {results});
@@ -129,81 +129,81 @@ app.get('/diadn', function(req, res) {
 	var sql = "SELECT * FROM debai WHERE mon = 'dia'";
 	con.query(sql, function(err, results) {
     if (err) throw err;
-    res.render('pages/monhocdadangnhap/Dialy', {results,signinUser});
+    res.render('pages/monhocdadangnhap/Dialy_signin', {results,signinUser});
 	});
 });
 app.get('/engdn', function(req, res) {
 	var sql = "SELECT * FROM debai WHERE mon = 'anh'";
 	con.query(sql, function(err, results) {
     if (err) throw err;
-    res.render('pages/monhocdadangnhap/English', {results,signinUser});
+    res.render('pages/monhocdadangnhap/English_signin', {results,signinUser});
 	});
 });
 app.get('/phapdn', function(req, res) {
 	var sql = "SELECT * FROM debai WHERE mon = 'phap'";
 	con.query(sql, function(err, results) {
     if (err) throw err;
-    res.render('pages/monhocdadangnhap/French', {results,signinUser});
+    res.render('pages/monhocdadangnhap/French_signin', {results,signinUser});
 	});
 });
 app.get('/gdcddn', function(req, res) {
 	var sql = "SELECT * FROM debai WHERE mon = 'gdcd'";
 	con.query(sql, function(err, results) {
     if (err) throw err;
-    res.render('pages/monhocdadangnhap/Giaoduccongdan', {results,signinUser});
+    res.render('pages/monhocdadangnhap/Giaoduccongdan_signin', {results,signinUser});
 	});
 });
 app.get('/hoadn', function(req, res) {
 	var sql = "SELECT * FROM debai WHERE mon = 'hoa'";
 	con.query(sql, function(err, results) {
     if (err) throw err;
-    res.render('pages/monhocdadangnhap/Hoahoc', {results,signinUser});
+    res.render('pages/monhocdadangnhap/Hoahoc_signin', {results,signinUser});
 	});
 });
 app.get('/nhatdn', function(req, res) {
 	var sql = "SELECT * FROM debai WHERE mon = 'nhat'";
 	con.query(sql, function(err, results) {
     if (err) throw err;
-    res.render('pages/monhocdadangnhap/Japanese', {results,signinUser});
+    res.render('pages/monhocdadangnhap/Japanese_signin', {results,signinUser});
 	});
 });
 app.get('/sudn', function(req, res) {
 	var sql = "SELECT * FROM debai WHERE mon = 'su'";
 	con.query(sql, function(err, results) {
     if (err) throw err;
-    res.render('pages/monhocdadangnhap/Lichsu', {results,signinUser});
+    res.render('pages/monhocdadangnhap/Lichsu_signin', {results,signinUser});
 	});
 });
 app.get('/vandn', function(req, res) {
 	var sql = "SELECT * FROM debai WHERE mon = 'van'";
 	con.query(sql, function(err, results) {
     if (err) throw err;
-    res.render('pages/monhocdadangnhap/Nguvan', {results,signinUser});
+    res.render('pages/monhocdadangnhap/Nguvan_signin', {results,signinUser});
 	});
 });
 app.get('/sinhdn', function(req, res) {
 	var sql = "SELECT * FROM debai WHERE mon = 'sinh'";
 	con.query(sql, function(err, results) {
     if (err) throw err;
-    res.render('pages/monhocdadangnhap/Sinhhoc', {results,signinUser});
+    res.render('pages/monhocdadangnhap/Sinhhoc_signin', {results,signinUser});
 	});
 });
 app.get('/toandn', function(req, res) {
 	var sql = "SELECT * FROM debai WHERE mon = 'toan'";
 	con.query(sql, function(err, results) {
     if (err) throw err;
-    res.render('pages/monhocdadangnhap/Toanhoc', {results,signinUser});
+    res.render('pages/monhocdadangnhap/Toanhoc_signin', {results,signinUser});
 	});
 });
 app.get('/lydn', function(req, res) {
 	var sql = "SELECT * FROM debai WHERE mon = 'ly'";
 	con.query(sql, function(err, results) {
     if (err) throw err;
-    res.render('pages/monhocdadangnhap/Vatly', {results,signinUser});
+    res.render('pages/monhocdadangnhap/Vatly_signin', {results,signinUser});
 	});
 });
 app.get('/giaodiendadangnhap', function(req, res) {
-	var sql = "SELECT * FROM debai LIMIT 8";
+	var sql = "SELECT * FROM debai ORDER BY(datediff(`date`, now())) DESC LIMIT 8;SELECT * FROM `news`  ORDER BY(datediff(`date`, now())) DESC LIMIT 4";
 	con.query(sql, function(err, results) {
     if (err) throw err;
     res.render('pages/giaodiendadangnhap', {results, signinUser});
@@ -236,38 +236,6 @@ app.get('/giaodiendethidadangnhap/:id', function(req, res) {
 			if (err) throw err;
 			res.render('pages/giaodiendethidadangnhap', {data,results,signinUser});
 		});
-	}
-});
-app.post('/', function(req, res) {
-	timkiem = req.body.search;
-	if (timkiem.trim() !=0) {
-	var sql = "SELECT * FROM debai WHERE LOWER(name) LIKE '%"+ timkiem.toLowerCase() +"%'";
-	con.query(sql, function(err, results) {
-    if (err) throw err;
-	res.render('pages/search',{timkiem,results});
-	});
-	}
-});
-
-app.post('/giaodiendethi', function(req, res) {
-	timkiem = req.body.search;
-	if (timkiem.trim() !=0) {
-	var sql = "SELECT * FROM debai WHERE LOWER(name) LIKE '%"+ timkiem.toLowerCase() +"%'";
-	con.query(sql, function(err, results) {
-    if (err) throw err;
-	res.render('pages/search',{timkiem,results});
-	});
-	}
-});
-
-app.post('/giaodiendadangnhap', function(req, res) {
-	timkiem = req.body.search;
-	if (timkiem.trim() !=0) {
-	var sql = "SELECT * FROM debai WHERE LOWER(name) LIKE '%"+ timkiem.toLowerCase() +"%'";
-	con.query(sql, function(err, results) {
-    if (err) throw err;
-	res.render('pages/searchdn',{timkiem,results,signinUser});
-	});
 	}
 });
 
@@ -383,7 +351,7 @@ app.post('/signin', function(req,res) {
 		dt.then(function(users){
 			var user = users[0];
 			if (user.passwords == signin.passwords) {
-				var sql = "SELECT * FROM debai LIMIT 8";
+				var sql = "SELECT * FROM debai ORDER BY(datediff(`date`, now())) DESC LIMIT 8;SELECT * FROM `news`  ORDER BY(datediff(`date`, now())) DESC LIMIT 4";
 				con.query(sql, function(err, results) {
 				if (err) throw err;
 				signinUser = user;
@@ -402,16 +370,16 @@ app.post('/signin', function(req,res) {
 app.post('/signup', function(req,res) {
 	var signup = req.body;
 	if (signup.username.trim().length == 0) {
-		res.render('pages/signup', {data: {error:  "Bạn chưa nhập username"}});
+		res.render('pages/signup', {data: {error:  "Bạn chưa nhập username!"}});
 	}
 	else if (signup.lastname.trim().length == 0 || signup.firstname.trim().length == 0) {
-		res.render('pages/signup', {data: {error:  "Bạn chưa nhập tên"}});
+		res.render('pages/signup', {data: {error:  "Bạn chưa nhập tên!"}});
 	}
 	else if (signup.passwords.trim().length == 0 || signup.repasswords.trim().length == 0) {
-		res.render('pages/signup', {data: {error:  "Bạn chưa nhập mật khẩu"}});
+		res.render('pages/signup', {data: {error:  "Bạn chưa nhập mật khẩu!"}});
 	}
 	else if (signup.passwords != signup.repasswords) {
-		res.render('pages/signup', {data: {error:  "Mật khẩu không đúng"}});
+		res.render('pages/signup', {data: {error:  "Mật khẩu không trùng khớp!"}});
 	}
 	else {
 		users = {
@@ -445,11 +413,13 @@ app.post('/signup', function(req,res) {
 	}
 });
 
-
-
-
-
-	
-
-										
-		
+app.post('/searchdn', function(req, res) {
+	timkiem = req.body.search;
+	if (timkiem.trim() !=0) {
+	var sql = "SELECT * FROM debai WHERE LOWER(name) LIKE '%"+ timkiem.toLowerCase() +"%'";
+	con.query(sql, function(err, results) {
+    if (err) throw err;
+	res.render('pages/searchdn',{timkiem,results,signinUser});
+	});
+	}
+});

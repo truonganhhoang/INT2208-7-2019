@@ -16,7 +16,7 @@
 			<header class="container-fluid">
 				
 				<div id = "logo">
-					<a class="navbar-brand" href="#" onclick="location.href='http://localhost:3000';">
+					<a class="navbar-brand" href="#" onclick="location.href='/giaodiendadangnhap';">
 						<img src="hoctot.png" alt="" style="auto">
 					</a>
 				</div>
@@ -25,7 +25,7 @@
 				<ul class="nav nav-pills pull-right">
 					
 					<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%=signinUser.firstname%> <%=signinUser.lastname%><span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style ="color:#ffffff"><%=signinUser.firstname%> <%=signinUser.lastname%><span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="#" onclick="signout()">Đăng xuất</a></li>
 						<script>  
@@ -59,7 +59,7 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li><a href="http://localhost:3000"><span class="glyphicon glyphicon-home"></span>  Trang chủ </a></li>
+				<li><a href="/giaodiendadangnhap"><span class="glyphicon glyphicon-home"></span>  Trang chủ </a></li>
 				<li><a href="/toandn">Toán</a></li>
 				<li><a href="/vandn">Ngữ Văn</a></li>
 				<li class="dropdown">
@@ -81,12 +81,11 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Khoa học Xã hội<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="/su">Lịch Sử</a></li>
-						<li><a href="/dia">Địa Lý</a></li>
-						<li><a href="/gdcd">Công Dân</a></li>		
+						<li><a href="/sudn">Lịch Sử</a></li>
+						<li><a href="/diadn">Địa Lý</a></li>
+						<li><a href="/gdcddn">Công Dân</a></li>		
 					</ul>
 				</li>
-				<li><a href="#">Video</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>
@@ -103,7 +102,7 @@
 	<section> 
 		<div class="row">
 			<div class="col-md-3 col-sm-4" >
-				<a href="/giaodiendethi/<%=result.id%>" class="thumbnail">	
+				<a href="/giaodiendethidadangnhap/<%=result.id%>" class="thumbnail">	
 					<img src="<%=result.link%>" alt="de1" style="width:150px;height:150px">
 					</a>
 			</div>
