@@ -21,7 +21,7 @@
 - Sau đó, sửa lỗi nếu có.
 - Tái cấu trúc mã nguồn và xử lí code xấu nếu có.
 
-* Hướng dẫn sử dụng:
+##* Hướng dẫn sử dụng:
 - Vào giao diện trang chủ.
 
 ![alt](trangchu.png)
