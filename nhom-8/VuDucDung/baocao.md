@@ -7,7 +7,7 @@
 
 
 * Bài tập nhóm: **Dự án web cung cấp đề thi các môn** 
-* Link Github (nhóm trưởng): [Github](https://github.com/buibaouet/INT2208-7-2019)
+* Link Github (nhóm trưởng): [Github](https://github.com/buibaouet/INT2208-7-2019).
 * User story: Là một học sinh lớp 12, tôi muốn xem tin tức tuyển sinh để cập nhật được tình hình học tập và định hướng ngành học.
 	
 	1. Xác định yêu cầu, mong muốn: 
