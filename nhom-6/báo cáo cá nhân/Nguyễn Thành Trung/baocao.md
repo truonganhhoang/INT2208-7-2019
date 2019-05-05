@@ -1,16 +1,16 @@
-#<center style="color: red;">BÁO CÁO THỰC HÀNH
-##<center> Môn: Công nghệ phần mềm - INT2208 7
+# <center style="color: red;"> BÁO CÁO THỰC HÀNH
+## <center> Môn: Công nghệ phần mềm - INT2208 7
 
 ### Họ và tên: Nguyễn Thành Trung. Mã sinh viên: 17021087. Nhóm 6.
 ### Đề tài: Xây dựng ứng dụng web bán hàng bằng PHP và mySQLi.
 
 <hr><hr>
-###Câu chuyện người dùng: Là người dùng tôi muốn có các chức năng đăng nhập, đăng ký để tôi có thể thuận tiện theo dõi hoạt động của mình và bảo mật thông tin cá nhân.
+### Câu chuyện người dùng: Là người dùng tôi muốn có các chức năng đăng nhập, đăng ký để tôi có thể thuận tiện theo dõi hoạt động của mình và bảo mật thông tin cá nhân.
 
-* ####Phân tích:
+* #### Phân tích:
 	Khi sử dụng một trang web, người dùng (ở đây cụ thể là người mua hàng) cần có tài khoản riêng. Việc này giúp người dùng có thể dễ dàng quản lý hoạt động của mình trên trang web, có thể bảo mật thông tin cá nhân, lịch sử mua hàng của mình. Và đặc biệt là tiện lợi khi sử dụng dịch vụ. Ví dụ như người dùng sẽ không cần phải nhập liệu nơi giao hàng mỗi khi đặt hàng, hoặc cũng có thể người dùng sẽ được hưởng một số quyền và lợi ích của trang web dành cho thành viên của mình.
     
-* ####CÁC TASK LIST CẦN THỰC HIỆN
+* #### CÁC TASK LIST CẦN THỰC HIỆN
 	* Thu thập câu chuyện người dùng (user story) và viết đặc tả, đánh giá yêu cầu.
 		* Liên kết lý thuyết: [tại đây!](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.22k63k6hf7hl)
 	* Thiết kế
@@ -80,33 +80,33 @@
 ### HƯỚNG DẪN SỬ DỤNG CÁC TÍNH NĂNG LIÊN QUAN ĐẾN TÀI KHOẢN NGƯỜI DÙNG
 #### 1. ĐĂNG KÝ
 * ##### Bước 1: Tại trang chủ click Đăng nhập ở bên phải của thanh menu.
-		![Trang chủ](https://drive.google.com/open?id=1Ha5POEdH8_Rxq3nH3NH_VyPdZYis1ZEU)
+		![alt](https://drive.google.com/file/d/1Ha5POEdH8_Rxq3nH3NH_VyPdZYis1ZEU/view?usp=sharing)
 * ##### Bước 2: Click nút Đăng ký
-		![Click Đăng ký] (https://drive.google.com/open?id=1RUOUZNilrMdhQtcpoQ1MM9mTuELjOqew)
+		![alt](https://drive.google.com/open?id=1RUOUZNilrMdhQtcpoQ1MM9mTuELjOqew)
 * ##### Bước 3: Điền đầy đủ thông tin vào các trường dữ liệu, sau đó click nút Đăng ký
-		![Điền đầy đủ thông tin](https://drive.google.com/open?id=10tfc6D1B2bJ8J1i2sFUuloxE4wLeXzQT)
+		![alt](https://drive.google.com/open?id=10tfc6D1B2bJ8J1i2sFUuloxE4wLeXzQT)
 * ##### Bước 4: Nếu đăng ký thành công thì sẽ chuyển ra trang chủ, nếu không thành công thì bạn thao tác lại các bước trên
-		![Đăng ký thành công](https://drive.google.com/open?id=1KppxtdS8XpuHtsnVhFULb-lg2HEmEv-2)
+		![alt](https://drive.google.com/open?id=1KppxtdS8XpuHtsnVhFULb-lg2HEmEv-2)
 #### 2. ĐĂNG NHẬP
 * ##### Bước 1: Tại trang chủ click Đăng nhập ở bên phải của thanh menu.
-		![Trang chủ](https://drive.google.com/open?id=1Ha5POEdH8_Rxq3nH3NH_VyPdZYis1ZEU)
+		![alt](https://drive.google.com/open?id=1Ha5POEdH8_Rxq3nH3NH_VyPdZYis1ZEU)
 * ##### Bước 2: Điền đầy đủ thông tin vào các trường, sau đó click nút Đăng nhập
-		![Nhập tên đăng nhập và mật khẩu](https://drive.google.com/open?id=1lBZe8m-2oqR9NaQ6fvK7H3o0283A6fjU)
+		![alt](https://drive.google.com/open?id=1lBZe8m-2oqR9NaQ6fvK7H3o0283A6fjU)
 * ##### Bước 3: Nếu đăng nhập thành công thì sẽ chuyển ra trang chủ, nếu thất bại thì bạn kiểm tra lại thông tin tài khoản hoặc mật khẩu của bạn!
-		![Đăng nhập thành công](https://drive.google.com/open?id=1KppxtdS8XpuHtsnVhFULb-lg2HEmEv-2)
+		![alt](https://drive.google.com/open?id=1KppxtdS8XpuHtsnVhFULb-lg2HEmEv-2)
 #### 3. QUÊN MẬT KHẨU
 * ##### Bước 1: Tại trang chủ click Đăng nhập ở bên phải của thanh menu.
-		![Trang chủ](https://drive.google.com/open?id=1Ha5POEdH8_Rxq3nH3NH_VyPdZYis1ZEU)
+		![alt](https://drive.google.com/open?id=1Ha5POEdH8_Rxq3nH3NH_VyPdZYis1ZEU)
 * ##### Bước 2: Click vào Quên mật khẩu
-		![Quên mật khẩu](https://drive.google.com/open?id=10YeA85cIrQhKBEfhJO1uQ3fve5mZsyCN)
+		![alt](https://drive.google.com/open?id=10YeA85cIrQhKBEfhJO1uQ3fve5mZsyCN)
 * ##### Bước 3: Hoàn thành thông tin về email và tên đăng nhập
-		![Hoàn thành thông tin](https://drive.google.com/open?id=1lyEuLKQ9pfKWpA8_n_VhJSyHsNbrt1cT)
+		![alt](https://drive.google.com/open?id=1lyEuLKQ9pfKWpA8_n_VhJSyHsNbrt1cT)
 * ##### Bước 4: Nếu thông tin bạn nhập là trùng khớp với thông tin đã đăng ký, mật khẩu sẽ được gửi về trong email cá nhân riêng của bạn, vui lòng kiểm tra hộp thư. Nếu không chính xác bạn cần kiểm tra lại thông tin đã cung cấp!
-		![Thông báo gửi mật khẩu thành công](https://drive.google.com/open?id=1Mcc5HM6y4D51br4lEMacf4Qta3OY0BSB)
+		![alt](https://drive.google.com/open?id=1Mcc5HM6y4D51br4lEMacf4Qta3OY0BSB)
 #### 4. ĐĂNG XUẤT
 * ##### Bước 1: Đảm bảo bạn đã đăng nhập thành công
-		![Đăng nhập thành công](https://drive.google.com/open?id=1KppxtdS8XpuHtsnVhFULb-lg2HEmEv-2)
+		![alt](https://drive.google.com/open?id=1KppxtdS8XpuHtsnVhFULb-lg2HEmEv-2)
 * ##### Bước 2: Click nút Đăng xuất (cạnh bên tên tài khoản của bạn)
-		![Đăng xuất](https://drive.google.com/open?id=1pDHJMl9Ts3Ay14UXjBN1p9070tAhiwxT)
+		![alt](https://drive.google.com/open?id=1pDHJMl9Ts3Ay14UXjBN1p9070tAhiwxT)
 * ##### Bước 3: Đăng xuất thành công, trở lại trang chủ
-		![Trang chủ](https://drive.google.com/open?id=1_6GrN-8WVDUSSHAHLUOEYZPhJc8p-lvN)
+		![alt](https://drive.google.com/open?id=1_6GrN-8WVDUSSHAHLUOEYZPhJc8p-lvN)
