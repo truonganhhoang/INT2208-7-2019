@@ -78,33 +78,33 @@
 ### HƯỚNG DẪN SỬ DỤNG CÁC TÍNH NĂNG LIÊN QUAN ĐẾN TÀI KHOẢN NGƯỜI DÙNG
 #### 1. ĐĂNG KÝ
 * ##### Bước 1: Tại trang chủ click Đăng nhập ở bên phải của thanh menu.
-		![alt](https://scontent.fhan2-1.fna.fbcdn.net/v/t1.15752-9/59252965_355578851735621_3750789729801469952_n.png?_nc_cat=102&_nc_oc=AQmr96AVk3OCT0Ns7wM7FxG4hy_CiDfzGYwQzoT7mONHWNq3jVhnQ7GMdTAstwOTd9kmnZWcqrpb_n9hh5XfUCJu&_nc_ht=scontent.fhan2-1.fna&oh=913d8675bba4d89cb73cc50a1930dba8&oe=5D5F664D)
+![alt](https://scontent.fhan2-1.fna.fbcdn.net/v/t1.15752-9/59252965_355578851735621_3750789729801469952_n.png?_nc_cat=102&_nc_oc=AQmr96AVk3OCT0Ns7wM7FxG4hy_CiDfzGYwQzoT7mONHWNq3jVhnQ7GMdTAstwOTd9kmnZWcqrpb_n9hh5XfUCJu&_nc_ht=scontent.fhan2-1.fna&oh=913d8675bba4d89cb73cc50a1930dba8&oe=5D5F664D)
 * ##### Bước 2: Click nút Đăng ký
-		![alt](https://scontent.fhan2-4.fna.fbcdn.net/v/t1.15752-9/57462917_326851718224730_9191524888714674176_n.png?_nc_cat=104&_nc_oc=AQkGd5QrpbXiMwdbRZ-s9o8DLL8LzFE6ufRGNZF7St5_xPHh9Po_BxsiGPip-TrJDjSpBgi5B38BoBdMQ5VAqFjG&_nc_ht=scontent.fhan2-4.fna&oh=b7d8736cbe339c6e9ae52e8e85c1377f&oe=5D75AD4C)
+![alt](https://scontent.fhan2-4.fna.fbcdn.net/v/t1.15752-9/57462917_326851718224730_9191524888714674176_n.png?_nc_cat=104&_nc_oc=AQkGd5QrpbXiMwdbRZ-s9o8DLL8LzFE6ufRGNZF7St5_xPHh9Po_BxsiGPip-TrJDjSpBgi5B38BoBdMQ5VAqFjG&_nc_ht=scontent.fhan2-4.fna&oh=b7d8736cbe339c6e9ae52e8e85c1377f&oe=5D75AD4C)
 * ##### Bước 3: Điền đầy đủ thông tin vào các trường dữ liệu, sau đó click nút Đăng ký
-		![alt](https://scontent.fhan2-4.fna.fbcdn.net/v/t1.15752-9/59479897_445893239506050_6604085479769899008_n.png?_nc_cat=104&_nc_oc=AQnV9el98BvdPvkcZxZBkJVGNBTy5wlrzdGSM_7PVxn1p_fB4LTW7SQgFod6cVSBLgKLd4dRP17PpZ0QAyqSoZe4&_nc_ht=scontent.fhan2-4.fna&oh=262c18e9a09faa46bcbcff79244b99e1&oe=5D61FAEF)
+![alt](https://scontent.fhan2-4.fna.fbcdn.net/v/t1.15752-9/59479897_445893239506050_6604085479769899008_n.png?_nc_cat=104&_nc_oc=AQnV9el98BvdPvkcZxZBkJVGNBTy5wlrzdGSM_7PVxn1p_fB4LTW7SQgFod6cVSBLgKLd4dRP17PpZ0QAyqSoZe4&_nc_ht=scontent.fhan2-4.fna&oh=262c18e9a09faa46bcbcff79244b99e1&oe=5D61FAEF)
 * ##### Bước 4: Nếu đăng ký thành công thì sẽ chuyển ra trang chủ, nếu không thành công thì bạn thao tác lại các bước trên
-		![alt](https://scontent.fhan2-3.fna.fbcdn.net/v/t1.15752-9/59516851_288775062058929_5108495769002835968_n.png?_nc_cat=109&_nc_oc=AQk7v6GQUvzXUNO9ZGK-CVvBpnL-Uu0HuCkJcK1S5HkwKKhoqbtdKcCI8_HJrDGafa77TRiFiFLE3bLL0vf4BP2X&_nc_ht=scontent.fhan2-3.fna&oh=360dcf1e1529fa95e47c0fd2a277d32b&oe=5D73A1FE)
+![alt](https://scontent.fhan2-3.fna.fbcdn.net/v/t1.15752-9/59516851_288775062058929_5108495769002835968_n.png?_nc_cat=109&_nc_oc=AQk7v6GQUvzXUNO9ZGK-CVvBpnL-Uu0HuCkJcK1S5HkwKKhoqbtdKcCI8_HJrDGafa77TRiFiFLE3bLL0vf4BP2X&_nc_ht=scontent.fhan2-3.fna&oh=360dcf1e1529fa95e47c0fd2a277d32b&oe=5D73A1FE)
 #### 2. ĐĂNG NHẬP
 * ##### Bước 1: Tại trang chủ click Đăng nhập ở bên phải của thanh menu.
-		![alt](https://drive.google.com/open?id=1Ha5POEdH8_Rxq3nH3NH_VyPdZYis1ZEU)
+![alt](https://drive.google.com/open?id=1Ha5POEdH8_Rxq3nH3NH_VyPdZYis1ZEU)
 * ##### Bước 2: Điền đầy đủ thông tin vào các trường, sau đó click nút Đăng nhập
-		![alt](https://drive.google.com/open?id=1lBZe8m-2oqR9NaQ6fvK7H3o0283A6fjU)
+![alt](https://drive.google.com/open?id=1lBZe8m-2oqR9NaQ6fvK7H3o0283A6fjU)
 * ##### Bước 3: Nếu đăng nhập thành công thì sẽ chuyển ra trang chủ, nếu thất bại thì bạn kiểm tra lại thông tin tài khoản hoặc mật khẩu của bạn!
-		![alt](https://drive.google.com/open?id=1KppxtdS8XpuHtsnVhFULb-lg2HEmEv-2)
+![alt](https://drive.google.com/open?id=1KppxtdS8XpuHtsnVhFULb-lg2HEmEv-2)
 #### 3. QUÊN MẬT KHẨU
 * ##### Bước 1: Tại trang chủ click Đăng nhập ở bên phải của thanh menu.
-		![alt](https://drive.google.com/open?id=1Ha5POEdH8_Rxq3nH3NH_VyPdZYis1ZEU)
+![alt](https://drive.google.com/open?id=1Ha5POEdH8_Rxq3nH3NH_VyPdZYis1ZEU)
 * ##### Bước 2: Click vào Quên mật khẩu
-		![alt](https://drive.google.com/open?id=10YeA85cIrQhKBEfhJO1uQ3fve5mZsyCN)
+![alt](https://drive.google.com/open?id=10YeA85cIrQhKBEfhJO1uQ3fve5mZsyCN)
 * ##### Bước 3: Hoàn thành thông tin về email và tên đăng nhập
-		![alt](https://drive.google.com/open?id=1lyEuLKQ9pfKWpA8_n_VhJSyHsNbrt1cT)
+![alt](https://drive.google.com/open?id=1lyEuLKQ9pfKWpA8_n_VhJSyHsNbrt1cT)
 * ##### Bước 4: Nếu thông tin bạn nhập là trùng khớp với thông tin đã đăng ký, mật khẩu sẽ được gửi về trong email cá nhân riêng của bạn, vui lòng kiểm tra hộp thư. Nếu không chính xác bạn cần kiểm tra lại thông tin đã cung cấp!
-		![alt](https://drive.google.com/open?id=1Mcc5HM6y4D51br4lEMacf4Qta3OY0BSB)
+![alt](https://drive.google.com/open?id=1Mcc5HM6y4D51br4lEMacf4Qta3OY0BSB)
 #### 4. ĐĂNG XUẤT
 * ##### Bước 1: Đảm bảo bạn đã đăng nhập thành công
-		![alt](https://drive.google.com/open?id=1KppxtdS8XpuHtsnVhFULb-lg2HEmEv-2)
+![alt](https://drive.google.com/open?id=1KppxtdS8XpuHtsnVhFULb-lg2HEmEv-2)
 * ##### Bước 2: Click nút Đăng xuất (cạnh bên tên tài khoản của bạn)
-		![alt](https://drive.google.com/open?id=1pDHJMl9Ts3Ay14UXjBN1p9070tAhiwxT)
+![alt](https://drive.google.com/open?id=1pDHJMl9Ts3Ay14UXjBN1p9070tAhiwxT)
 * ##### Bước 3: Đăng xuất thành công, trở lại trang chủ
-		![alt](https://drive.google.com/open?id=1_6GrN-8WVDUSSHAHLUOEYZPhJc8p-lvN)
+![alt](https://drive.google.com/open?id=1_6GrN-8WVDUSSHAHLUOEYZPhJc8p-lvN)
