@@ -24,4 +24,4 @@
 * Hướng dẫn sử dụng:
   1) Mở trình duyệt web lên.
   2) Nhập địa chỉ sau để mở trang web
-  3) Sau khi trang web xuất hiện là giao diện Home của trang chủ
+  3) Sau khi trang web xuất hiện là giao diện Home của trang web
