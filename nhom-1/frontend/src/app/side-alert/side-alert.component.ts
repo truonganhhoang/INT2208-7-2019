@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideAlertComponent implements OnInit {
 
+  array: number[] = [];
+
   constructor() { }
 
   ngOnInit() {
+    this.array.push(1);
+    this.array.push(2);
+    this.array.push(3);
+    this.array.push(4);
   }
 
 }
