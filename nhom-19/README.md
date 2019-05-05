@@ -27,4 +27,4 @@
 
 ## Video demo sản phẩm: [link 2](https://www.youtube.com/watch?v=oxOZCpNO0SY&feature=youtu.be&fbclid=IwAR1LHcXAoGqcjtXnDE4DId4PTyom0tn_3xcvCoc6NzB4rn2ddlv_se2SiWk/Demo_DictionaryWeb)
 
-## Báo cáo dự án phần mềm nhóm: [link 3](https://docs.google.com/document/d/1neyYKrJJIA1MdQH-g2kPv0pVccHklLEJBUc98OLbUec/edit?usp=drivesdk)
+## Tài liệu kĩ thuật phần mềm nhóm: [link 3](https://docs.google.com/document/d/1neyYKrJJIA1MdQH-g2kPv0pVccHklLEJBUc98OLbUec/edit?usp=drivesdk)
