@@ -1,7 +1,7 @@
 User story: Là một người mua hàng, tôi muốn các mặt hàng được hiển thị chi tiết, chân thật về hình ảnh, mô tả cấu hình máy,
             giá tiền để có thể dễ dàng đưa ra quyết định mua máy.
 1. Các mặt hàng được hiển thị theo hãng sản xuất:
-  - Phân loại mặt hàng máy tính theo hãng sản xuất để người dùng phân biệt và đưa ra chọn lựa
+  - Phân loại mặt hàng máy tính theo hãng sản xuất để người dùng phân biệt và đưa ra chọn lựa mua dùng máy của hãng nào.
   - Code:
     <div class="header_bottom_left">
       <div class="categories">
@@ -22,6 +22,8 @@ User story: Là một người mua hàng, tôi muốn các mặt hàng được 
         </ul>
       </div>
     </div>
+    
+    -khi bạn truy cập vào trang web, phía bên trái giao diện sẽ hiện các thanh ghi tên hãng máy tính như ở trên để bạn chọn lựa. Bạn click vào tên đó, sẽ hiện ra cho bạn một đường link mới, tại đây hiển thị các loại máy của hãng bạn chọn lựa, 
     
 2. Hiển thị chi tiết về máy bao gồm hình ảnh, cấu hình, giá tiền:
   <div class="product-details">             
