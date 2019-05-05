@@ -7,7 +7,10 @@ import { environment } from '@environments/environment';
 import { Post } from '@app/_models/post.model';
 import { Comment } from '@app/_models/comment.model';
 
-@Component({ templateUrl: 'home.component.html' })
+@Component({ 
+    selector: 'home',
+    templateUrl: 'home.component.html'
+})
 export class HomeComponent implements OnInit, OnDestroy {
 
     currentUser: User;
