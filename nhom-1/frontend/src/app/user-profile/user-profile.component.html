@@ -73,29 +73,26 @@
                 </mat-card>
             </mat-tab>
             <mat-tab label="Friends" *ngIf="isMyProfile">
-                <mat-form-field style="margin-left: 20px">
-                    <input matInput placeholder="Search"/>
-                </mat-form-field> <br>
-                <mat-checkbox style="margin-left: 20px" color="primary" [(ngModel)]='showFriends["friend"]'>Friends</mat-checkbox>
-                <mat-checkbox style="margin-left: 20px" color="primary" [(ngModel)]='showFriends["wait for accept"]'>Other's Requests</mat-checkbox>
-                <mat-checkbox style="margin-left: 20px" color="primary" [(ngModel)]='showFriends["sent request"]'>My Requests</mat-checkbox>
-                    <div style="margin: 10px" *ngFor="let friend of friends">
-                        <mat-card style="width: 90%; height: 90%;" *ngIf='showFriends[friend.relation]'>
-                            <a routerLink="../{{friend.user.username}}">
-                                <mat-card-header>
-                                    <div mat-card-avatar [style.backgroundImage]="'url('+ friend.user.avatarUrl +')'" style="background-size: contain"></div>
-                                    <mat-card-title>{{friend.user.name}}</mat-card-title>
-                                    <mat-card-subtitle>{{friend.relation}}</mat-card-subtitle>
-                                </mat-card-header>
-                            </a>
-                            <mat-card-actions>
-                                <button mat-button *ngIf='friend.relation == "friend"'>Unfriend</button>
-                                <button mat-button *ngIf='friend.relation == "wait for accept"'>Accept</button>
-                                <button mat-button *ngIf='friend.relation == "wait for accept"'>Reject</button>
-                                <button mat-button *ngIf='friend.relation == "sent request"'>Cancel Request</button>
-                            </mat-card-actions>
-                        </mat-card>
-                    </div>
+                <mat-checkbox style="margin: 20px" color="primary" [(ngModel)]='showFriends["friend"]'>Friends</mat-checkbox>
+                <mat-checkbox style="margin: 20px" color="primary" [(ngModel)]='showFriends["wait for accept"]'>Other's Requests</mat-checkbox>
+                <mat-checkbox style="margin: 20px" color="primary" [(ngModel)]='showFriends["sent request"]'>My Requests</mat-checkbox>
+                <div style="margin: 10px" *ngFor="let friend of friends">
+                    <mat-card style="width: 90%; height: 90%;" *ngIf='showFriends[friend.relation]'>
+                        <a routerLink="../{{friend.user.username}}">
+                            <mat-card-header>
+                                <div mat-card-avatar [style.backgroundImage]="'url('+ friend.user.avatarUrl +')'" style="background-size: contain"></div>
+                                <mat-card-title>{{friend.user.name}}</mat-card-title>
+                                <mat-card-subtitle>{{friend.relation}}</mat-card-subtitle>
+                            </mat-card-header>
+                        </a>
+                        <mat-card-actions>
+                            <button mat-button *ngIf='friend.relation == "friend"'>Unfriend</button>
+                            <button mat-button *ngIf='friend.relation == "wait for accept"'>Accept</button>
+                            <button mat-button *ngIf='friend.relation == "wait for accept"'>Reject</button>
+                            <button mat-button *ngIf='friend.relation == "sent request"'>Cancel Request</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
             </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>
