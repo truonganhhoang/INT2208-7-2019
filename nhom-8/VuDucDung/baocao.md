@@ -25,6 +25,6 @@
 		- Tái cấu trúc mã nguồn: Rà soát mã nguồn, xử lý code xấu nếu có.
 
 * Hướng dẫn sử dụng:
-- Mở giao diện trang chủ, kéo xuống dưới bạn sẽ thấy các tin tức tuyển sinh nổi bật.
-- Nhấp đúp bất kỳ vào 1 tin, giao diện tin tức sẽ hiển thị (luôn cập nhật thông tin mới nhất).
+1. Mở giao diện trang chủ, kéo xuống dưới bạn sẽ thấy các tin tức tuyển sinh nổi bật.
+2. Nhấp đúp bất kỳ vào 1 tin, giao diện tin tức sẽ hiển thị (luôn cập nhật thông tin mới nhất).
 
