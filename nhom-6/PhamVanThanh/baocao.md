@@ -41,7 +41,7 @@ User story: Là một người mua hàng, tôi muốn các mặt hàng được 
                 </div>
             </div>
                             
-      	
+      	<form method="post">
         <div class="desc span_3_of_2">
             <h2>SẢN PHẨM: Dell Audi A4 </h2>
             <p>Siêu giá trị, cấu hình siêu khủng.</p>                    
@@ -76,7 +76,7 @@ User story: Là một người mua hàng, tôi muốn các mặt hàng được 
                 <div class="clear"></div>
             </div>
         </div>
-    	
+    	</form>
     <div class="product_desc">  
         <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
             <ul class="resp-tabs-list">
