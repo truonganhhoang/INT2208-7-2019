@@ -4,7 +4,7 @@
 ### Vai trò: Product Owner.
 *******************
 # Báo cáo cá nhân:
-* Hoàn thành khóa học trên edx ([chi tiết](https://github.com/DaoDucKhiem/nhom-5/blob/master/DaoDucKhiem/SoftEng1x.jpg))
+* Hoàn thành khóa học trên edx ([chi tiết](https://github.com/HugManh/INT2208-7-2019/blob/master/nhom-14/PhamHungManh/SoftEng1x.jpg))
 * Bài tập nhóm: **Dự án web trao đổi thông tin sản phẩm** [website](http://cokhioto.byethost4.com), [Github](https://github.com/HugManh/INT2208-7-2019/tree/master/nhom-14/WEB)
 * User story: Là một người dùng , tôi muốn có một tài khoản riêng để tham gia review công khai và thêm sản phẩm.
 
