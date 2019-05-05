@@ -36,12 +36,12 @@ https://github.com/duong17020661/INT2208-7-2019/commit/d706a519e5b91c7d47fca8758
     
    Đây là một trang web giúp ta biết về những thông tin mới nhất của các giải đấu hàng đầu thế giới, giúp chúng ta dễ dàng hơn trong việc theo dõi diễn biến của từng trận cầu hấp dẫn, đồng thời biết thêm thông tin khác liên quan đến giải đấu, đội bóng và các câu chuyện bên lề sân cỏ. 
 
-    - Demo code
-	1. Chạy thử và xem các chức năng đã sử dụng được chưa.
-	[Phân tích vùng biên - kiểm thử hộp đen](http://bit.ly/2vq5xGh)
-	2. Nếu có lỗi sửa và quay lại 1.
-	**Github commit**
-    https://github.com/duong17020661/INT2208-7-2019/commit/b8f1038b048a53c2c5a2daecba722e51de73a3dd
+- Demo code
+1. Chạy thử và xem các chức năng đã sử dụng được chưa.
+[Phân tích vùng biên - kiểm thử hộp đen](http://bit.ly/2vq5xGh)
+2. Nếu có lỗi sửa và quay lại 1.
+**Github commit**
+https://github.com/duong17020661/INT2208-7-2019/commit/b8f1038b048a53c2c5a2daecba722e51de73a3dd
 	
 - Review code
 	1.Xem code có mã mùi có thể làm ảnh hưởng đến việc phát triển hay không.
