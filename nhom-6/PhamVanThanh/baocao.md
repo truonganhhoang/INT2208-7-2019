@@ -5,7 +5,6 @@ Phân tích:
 1. Các mặt hàng được hiển thị thep từng dòng sản phẩm giúp người dùng lựa chọn giữa các hãng điện tử lớn như DELL, ASUS, ...
 
   -Link tham khảo:
-  
       https://github.com/ThanhTrungGVC/INT2208-7-2019/blob/master/nhom-6/ShopWeb/layouts/header_slide.php
       
   -Hướng dẫn:
@@ -17,7 +16,6 @@ Phân tích:
 2. Mặt hàng được hiển thị chi tiết về hình ảnh, cấu hình máy, giá tiền giúp người dùng so sánh giữa các sản phẩm, cấu hỉnh máy nào tốt hơn cũng như giá tiền hợp lí để lựa chọn mua máy
 
   -Link tham khảo:
-  
       https://github.com/ThanhTrungGVC/INT2208-7-2019/blob/master/nhom-6/ShopWeb/details.php
       
   -Hướng dẫn:
