@@ -45,11 +45,11 @@
     Khi người dùng bấm vào 1 ô tin tức thì trang sẽ chuyển sang một trang web mô tả chi tiết về thông tin đó.
     ![alt](tintuc.png)
 - Giao diện, chức năng, cách dùng trang tổng hợp video:
-    ![alt](header_highlight_1)
-    ![alt](header_highlight_2)
+    ![alt](header_highlight_1.png)
+    ![alt](header_highlight_2.png)
     Khi giao diện hiện ra đó là các ô lưới, mỗi ô ứng với một video. Bên dưới ô là tiêu đề-trận đấu giữa đội nào với đội nào.
     Khi người dùng bấm vào 1 ô video thì một video sẽ hiện lên, người dùng có thể xem ở đó. Muốn quay lại thì bấm vào bất cứ chỗ nào ngoại trừ video, hoặc là bấm close.
-    ![alt](video)
+    ![alt](video.png)
 ## Thu hoạch sau khi kết thúc môn học:
 - Hoàn thành khoá học SoftEng1x
 - Hoàn thành khoá học [Bootstrap](https://o7planning.org/en/11745/bootstrap)
