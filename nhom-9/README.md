@@ -15,7 +15,7 @@
    ### Demo các chức năng.
    * Các video demo các tính năng xem ở [đây](https://drive.google.com/drive/folders/1ZCXtzpAO3SIyF_IHpNtMhlQk9xdc9xV1?usp=sharing).
    ### Tài liệu.
-   * Xem tài liệu tại [đây]()
+   * Xem tài liệu tại [đây](https://docs.google.com/document/d/1q-NVJi6FGQ59hZUpiOLeEjfwaHXWm7iTjnil1aTrfhQ/edit?usp=sharing)
    ### Quá trình phát triển.
    #### Tuần 1
    * Tên ứng dụng: ....... (Do chưa thống nhất tên của phần mềm)
