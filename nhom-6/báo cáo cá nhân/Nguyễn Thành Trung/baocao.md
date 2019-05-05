@@ -1,4 +1,4 @@
-<h1 style="text-align:center; color:red;">BÁO CÁO THỰC HÀNH</h1>
+# BÁO CÁO THỰC HÀNH
 ## <center> Môn: Công nghệ phần mềm - INT2208 7
 
 ### Họ và tên: Nguyễn Thành Trung. Mã sinh viên: 17021087. Nhóm 6.
