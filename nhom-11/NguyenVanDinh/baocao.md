@@ -17,17 +17,19 @@
     [Github commit](https://github.com/duong17020661/INT2208-7-2019/commit/4ef4387fe4417c368cfb2482b6699ea73f29ed06)
 
 - Demo code
-    1.Chạy thử và xem các chức năng đã sử dụng được chưa.
 
+    1.Chạy thử và xem các chức năng đã sử dụng được chưa.
 	[Phân tích vùng biên - kiểm thử hộp đen](http://bit.ly/2vq5xGh)
+
 	2.Nếu có lỗi sửa và quay lại 1
 
 	[Github commit](https://github.com/duong17020661/INT2208-7-2019/commit/5df6f92fa7cc3b2814e6c0fad765a1b43689723d)
-
     [Github commit](https://github.com/duong17020661/INT2208-7-2019/commit/4ef4387fe4417c368cfb2482b6699ea73f29ed06)
 
 - Kiểm thử: Sử dụng bảng quyết định (Decision Tables)
+
 - Kiểm thử hộp đen 	
+
 - Review code
 
     1.Xem code có mã mùi có thể làm ảnh hưởng đến việc phát triển hay không.
@@ -37,6 +39,7 @@
 	[Phân tích tĩnh](http://bit.ly/2UOhzDs)
     
 - [Tái cấu trúc](http://bit.ly/2XWSZCx)
+
 - Thử chạy ở chế độ điện thoại.
 	
 ## Giới thiệu
@@ -51,7 +54,8 @@
     ![alt](tintuc_2.png)
     Khi giao diện hiện ra đó là các ô lưới, mỗi ô ứng với một tin tức. Trong mỗi ô có phần tiêu đề là nội dung chính của tin đó, bên dưới là phần mô tả vắn tắt cho tiêu đề. Trang web thân thiện cho mọi thiết bị.
     Khi người dùng bấm vào 1 ô tin tức thì trang sẽ chuyển sang một trang web mô tả chi tiết về thông tin đó.
-    ![alt](tintuc.png)
+
+    ![alt](tintuc_3.png)
 
 - Giao diện, chức năng, cách dùng trang tổng hợp video:
 
@@ -60,7 +64,8 @@
 
     Khi giao diện hiện ra đó là các ô lưới, mỗi ô ứng với một video. Bên dưới ô là tiêu đề-trận đấu giữa đội nào với đội nào.
     Khi người dùng bấm vào 1 ô video thì một video sẽ hiện lên, người dùng có thể xem ở đó. Muốn quay lại thì bấm vào bất cứ chỗ nào ngoại trừ video, hoặc là bấm close.
-    ![alt](video.png)
+
+    ![alt](highlight_3.png)
 
 ## Thu hoạch sau khi kết thúc môn học:
 - Hoàn thành khoá học SoftEng1x.
