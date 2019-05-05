@@ -24,9 +24,9 @@
 ###	Team Development: cả nhóm
    - Tạo ra sản phẩm dựa trên Product backlog.
 ## Product backlog:
--	Lịch thi đấu và kết quả các trận đấu gần đây: thời gian diễn ra, tỷ số , thống kê, …
--	Thông tin về giải đấu: lịch thi đấu, bảng xếp hạng, kết quả, …
--	Thông tin về đội bóng: huấn luyện viên, sân vận động, cầu thủ, …
+-	Lịch thi đấu và kết quả các trận đấu gần đây: thời gian diễn ra, tỷ số , thống kê.
+-	Thông tin về giải đấu: lịch thi đấu, bảng xếp hạng, kết quả.
+-	Thông tin về đội bóng: huấn luyện viên, sân vận động, cầu thủ.
 -	Highlights & một vài thông tin bên lề.
 -	Hỗ trợ và tương tác với người dung ( có thể không làm ).
 ## Tuần 1-4:
@@ -42,20 +42,20 @@
    - Sửa lại giao diện chính: Thêm logo web, slogan.
    - Tìm hiểu về ứng dụng của NodeJS và cách sử dụng. 
    - Học trước về MySQL để chuẩn bị cho kế hoạch tiếp theo.
-   ## Tuần 7-9:
+## Tuần 7-9:
 -	**Kế hoạch:** Tạo giao diện, tạo cơ cở dữ liệu các giải đấu và các đội bóng.
 -  **Công việc:**
    - Tạo giao diện giải đấu
    - Tìm kiếm dữ liệu về các giải đấu và tạo cơ sở sữ liệu.
    - Tạo giao diện trang thông tin đội bóng.
    - Tìm kiếm dữ liệu về các đôi bóng và tạo cơ sở dữ liệu.
-   ## Tuần 10-13:
+## Tuần 10-13:
 -	**Kế hoạch:** Hoàn thành chức năng xem thông tin đội bóng và chức năng tin tức & video
 -  **Công việc:**
    - Sử dụng expressJS để kết nối với MySQL.
    - Tạo giao diện tin tưc và giao diện video.
    - Tiếp tục tạo cơ sở dữ liệu còn thiếu
-   ## Tuần 14:
+## Tuần 14:
 -	**Kế hoạch:** Kiểm thử và hoàn thành 4 chức năng chính và viết báo cáo.
 -  **Công việc:**
    - Hoàn thanh đầy đủ các chức năng 
@@ -64,4 +64,4 @@
    
 Link tài liệu kỹ thuật và hướng dẫn sử dụng: https://docs.google.com/document/d/1GEU0qN_Rtvowd0bZk9P5OzJ4PegQ4ROpVGZ8x7-XLa8/edit#
 
-Video demo projects: {@youtube: https://www.youtube.com/watch?v=7oEq6lCBq8w&feature=youtu.be}
+Video demo projects: {@youtube: https://www.youtube.com/watch?v=7oEq6lCBq8w}
