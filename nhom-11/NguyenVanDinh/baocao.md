@@ -17,17 +17,19 @@
     [Github commit](https://github.com/duong17020661/INT2208-7-2019/commit/4ef4387fe4417c368cfb2482b6699ea73f29ed06)
 
 - Demo code
-    1.Chạy thử và xem các chức năng đã sử dụng được chưa.
 
+    1.Chạy thử và xem các chức năng đã sử dụng được chưa.
 	[Phân tích vùng biên - kiểm thử hộp đen](http://bit.ly/2vq5xGh)
+
 	2.Nếu có lỗi sửa và quay lại 1
 
 	[Github commit](https://github.com/duong17020661/INT2208-7-2019/commit/5df6f92fa7cc3b2814e6c0fad765a1b43689723d)
-
     [Github commit](https://github.com/duong17020661/INT2208-7-2019/commit/4ef4387fe4417c368cfb2482b6699ea73f29ed06)
 
 - Kiểm thử: Sử dụng bảng quyết định (Decision Tables)
+
 - Kiểm thử hộp đen 	
+
 - Review code
 
     1.Xem code có mã mùi có thể làm ảnh hưởng đến việc phát triển hay không.
@@ -37,6 +39,7 @@
 	[Phân tích tĩnh](http://bit.ly/2UOhzDs)
     
 - [Tái cấu trúc](http://bit.ly/2XWSZCx)
+
 - Thử chạy ở chế độ điện thoại.
 	
 ## Giới thiệu
