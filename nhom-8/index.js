@@ -9,6 +9,7 @@ var session      = require('express-session');
 var router = express.Router();
 var q = require('q');
 var multer = require('multer'); 
+var port = process.env.PORT || 3000;
 
 
 app.use(bodyParser.json());
@@ -25,7 +26,7 @@ app.use(session({
   cookie: { secure: true }
 }));
 
-app.listen(3000,function(){
+app.listen(port,function(){
     console.log('Node server running')
 });
 
