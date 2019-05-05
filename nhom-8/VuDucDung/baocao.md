@@ -18,7 +18,7 @@
 		- Tìm hiểu về Bootstrap,HTML,CSS,JavaScript; link Bootstrap: [Bootstrap](https://getbootstrap.com/docs/3.4/css/).
 		- Thiết kế giao diện ở chế độc PC và Mobile (Bootstrap and HTML, CSS).
 		- Hiển thị "title" và "image" trực tiếp trên web.
-		- Liên kết CSDL đã tạo với các bài tin tức tuyển sinh nổi bật của các trang web lớn.
+		- Liên kết CSDL đã tạo với các bài viết chi tiết về tin tức tuyển sinh nổi bật.
 	4. Kiểm thử và tái cấu trúc mã nguồn:
 		- Kiểm thử hộp trắng: kiểm thử bao phủ, đảm bảo mã nguồn không bị lỗi, build và run trên nhiều thiết bị khác nhau.
 		- Sử dụng html và localhost thiết kế bố cục, giao diện tin tức.
