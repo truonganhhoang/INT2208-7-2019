@@ -13,8 +13,6 @@
    - Bên dưới của giao diện chính, là kết quả trận đấu vừa mới kết thúc và được cập nhật.  
 ###    Giao diện cơ bản của trang web:
 ![alt](Interface.png)
-###    Giao diện cơ bản của từng giải đấu:
-![alt](Premier-league.png)
    # SCRUM
 ## Vai trò:
 ###	Product Owner: Cả nhóm
@@ -64,4 +62,5 @@
    
 Link tài liệu kỹ thuật và hướng dẫn sử dụng: https://docs.google.com/document/d/1GEU0qN_Rtvowd0bZk9P5OzJ4PegQ4ROpVGZ8x7-XLa8/edit#
 
-Video demo projects: {@youtube: https://www.youtube.com/watch?v=7oEq6lCBq8w}
+Video demo projects: https://www.youtube.com/watch?v=7oEq6lCBq8w 
+
