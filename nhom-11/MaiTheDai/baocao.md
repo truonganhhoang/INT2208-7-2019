@@ -32,7 +32,7 @@ https://github.com/duong17020661/INT2208-7-2019/commit/d706a519e5b91c7d47fca8758
 
 ![alt](web.png)
 
-Dòng tin nóng chạy liên tục gây sự chú ý cho người dùng
+## Dòng tin nóng chạy liên tục gây sự chú ý cho người dùng
 
 ![alt](tinchay.png)
 
