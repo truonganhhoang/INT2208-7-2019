@@ -1,3 +1,7 @@
+# BÁO CÁO CÁ NHÂN
+	Họ và tên: Mai Thế Đại
+	MSSV: 17020663
+
 ## Câu chuyện người dùng
 
 **Là** một người yêu bóng đá 
@@ -6,6 +10,8 @@
 
 ## Phân tích câu chuyện
 - Tạo giao diện trang web.
+	[Mẫu thiết kế MVP](http://bit.ly/2IXYcFY)	
+    [Github commit](https://github.com/duong17020661/INT2208-7-2019/commit/d706a519e5b91c7d47fca87589314b2305b33c8f)
 
 **Github commit** 
 https://github.com/duong17020661/INT2208-7-2019/commit/d706a519e5b91c7d47fca87589314b2305b33c8f
@@ -21,6 +27,9 @@ https://github.com/duong17020661/INT2208-7-2019/commit/d706a519e5b91c7d47fca8758
     3.Các thông số của trận đấu
     **Github commit** 
     https://github.com/duong17020661/INT2208-7-2019/commit/705353c7a4142f39330cb8f47fa00b904a021f41
+
+## Giới thiệu giao diện web
+![alt](web.png)
 
     - Demo code
 	1. Chạy thử và xem các chức năng đã sử dụng được chưa.
@@ -39,3 +48,9 @@ https://github.com/duong17020661/INT2208-7-2019/commit/d706a519e5b91c7d47fca8758
 	[Tái cấu trúc](http://bit.ly/2XWSZCx)
 - Thử chạy ở chế độ điện thoại
 	**Github commit**
+
+## Thu hoạch sau khi kết thúc môn học:
+- Hoàn thành khoá học SoftEng1x.
+- Hoàn thành khoá học [Bootstrap](https://o7planning.org/en/11745/bootstrap).
+- Hoàn thành khoá học CSS, HTML, JS trên [O7planning](https://o7planning.org/) [W3schools](https://www.w3schools.com/).
+
