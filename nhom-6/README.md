@@ -1,5 +1,10 @@
 # Nhóm 6
 
+## Cập nhật bài tập nhóm:
+* Link sản phẩm : https://n6shopuet.000webhostapp.com/
+* Link báo cáo nhóm: https://github.com/ThanhTrungGVC/INT2208-7-2019/blob/master/nhom-6/b%C3%A1o%20c%C3%A1o%20nh%C3%B3m/T%C3%A0i%20li%E1%BB%87u%20k%E1%BB%B9%20thu%E1%BA%ADt%20ph%E1%BA%A7n%20m%E1%BB%81m.pdf
+* Link báo cáo cá nhân của các thành viên: https://github.com/ThanhTrungGVC/INT2208-7-2019/tree/master/nhom-6/b%C3%A1o%20c%C3%A1o%20c%C3%A1%20nh%C3%A2n
+
 ### 1. Thành viên:
 * `Nguyễn Thành Trung`
 * `Vũ Thanh Thiên`
