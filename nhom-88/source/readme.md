@@ -91,32 +91,32 @@ Sử dụng React để tận dụng khả năng tái sử dụng của các Com
 ```
 User
 |
-|------------Id_
-|				|------type: Object_id
+|----------Id_
+|			|------type: Object_id
 |
-|------------Email
-|				|-----type: String
-|				|-----unique: true
-|				|-----required: true
+|----------Email
+|			|-----type: String
+|			|-----unique: true
+|			|-----required: true
 |
-|------------Password
-|				|-----type: String
-|				|-----required: true
+|----------Password
+|			|-----type: String
+|			|-----required: true
 |
 |
-|-------Permission
-|				|-----type: String
-|				|-----enum: ['Client', 'Manager', 'Admin']
-|				|-----default: 'Clinet'
+|----------Permission
+|			|-----type: String
+|			|-----enum: ['Client', 'Manager', 'Admin']
+|			|-----default: 'Clinet'
 |
-|-------Media
-|		|-------Avatar
-|		|			|------type: String
-|		|			
-|		|-------Image
+|-----------Media
+|			|-------Avatar
+|			|		|------type: String
+|			|			
+|			|-------Image
 |					|------type: String
 |
-|--------Tweet
+|-----------Tweet
 |			|------reference: Tweet_id
 ```
 
@@ -124,17 +124,17 @@ User
 ```
 Tweet
 |
-|------------Id_
-|				|------type: Object_id
+|----------Id_
+|			|------type: Object_id
 |
-|------------Content
-|				|-----type: String
-|				|-----unique: true
-|				|-----required: true
+|----------Content
+|			|-----type: String
+|			|-----unique: true
+|			|-----required: true
 |
-|------------Action
-|				|------Like
-				|------Dislike
+|----------Action
+|			|------Like
+			|------Dislike
 
 ```
 
