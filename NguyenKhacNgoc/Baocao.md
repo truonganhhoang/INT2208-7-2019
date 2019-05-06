@@ -22,11 +22,11 @@
 1. Phần đăng nhập, đăng xuất:
     - Khi chưa đăng nhập thì trên thanh header hiện button 'login'
     - Khi đăng nhập thành công thanh header hiện button 'logout' và tên của người đăng nhập.
-       ![Home](home.PNG)
+       ![Home](home.png)
     - Khi đăng nhập mới sử dụng được 1 số tính năng như đặt hàng để ghi đơn hàng vào database.
-    ![login](login.PNG)
+    ![login](login.png)
 2. Phần đăng kí:
     - Chức năng đăng kí gồm một số thông tin như tên, Email, Số điện thoại, địa chỉ.
-    ![register](register.PNG)
+    ![register](register.png)
     - Chức năng đăng kí khi ghi vào database sẽ dùng hàm Hash trước khi lưu do đó sẽ không lo về mất an toàn của tài khoản.
  
