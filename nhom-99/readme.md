@@ -1,14 +1,19 @@
 # INT2208-7-2019 
-- Tên ứng dụng: Ahh - Web học Tiếng Anh.
+- Tên ứng dụng: Learning English - Web học Tiếng Anh.
 - Các nhóm người dùng: Những người có nhu cầu học Tiếng Anh cơ bản. 
 - Mô tả tóm tắt phần mềm: Phần mềm học Tiếng Anh cơ bản cho người mới bắt đầu.
 
+**Tài liệu hướng dẫn sử dụng**
+https://docs.google.com/document/d/1R9KKIZnqUqBSC1Nzxn2-WshKTOHEBIUMqsyG0OeucZ0/edit#heading=h.9jb67iadprxi
+
 **Một vài hình ảnh:** 
-- Trang chủ:                    
+- Trang chủ, đăng nhập, đăng kí:                    
 ![web01](https://user-images.githubusercontent.com/41587478/53711061-e921a180-3e72-11e9-9c99-c859f3bf159f.png)
+![image](https://user-images.githubusercontent.com/43178187/57211557-dfe7b900-700a-11e9-9e37-9d311bcd99a6.png)
+![image](https://user-images.githubusercontent.com/43178187/57211631-289f7200-700b-11e9-8206-a2fc9000e51b.png)
 
 - Giao diện học:                 
-![2](https://user-images.githubusercontent.com/43178187/52537126-997d1800-2d95-11e9-9cf3-2c9a585319a1.png)
+![image](https://user-images.githubusercontent.com/43178187/57211546-d6f6e780-700a-11e9-9823-a2e3479c50b4.png)
 
 
 
