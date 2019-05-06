@@ -20,9 +20,9 @@ https://docs.google.com/document/d/1R9KKIZnqUqBSC1Nzxn2-WshKTOHEBIUMqsyG0OeucZ0/
 **Các công nghệ bao gồm cả các Freamwork sẽ được dùng để triển khai dự án**
 - HTML.
 - CSS <Bootstrap>. 
-- JavaScript <JQuery, AngularJS>.
-- Hệ quản trị cơ sở dữ liệu MySQL.
-- Và một ngôn ngữ quản trị dữ liệu Backend <NodeJS, PHP>.
+- JavaScript <JQuery, ReactJs>.
+- Hệ quản trị cơ sở dữ liệu Mongodb và Mongoose.
+- Và một ngôn ngữ quản trị dữ liệu Backend <NodeJS>.
   
 **Nhóm sẽ thực hiện theo áp dụng quy trình Scrum vào dự án**
 - User Story: Khách hàng hay người sử dụng sẽ tùy chọn sử dụng các tính năng, khóa học có trên trang web và có thể đưa lại ý kiến phản hồi ở những khóa học.
