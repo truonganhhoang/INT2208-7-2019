@@ -97,6 +97,7 @@ export class PostComponent implements OnInit {
     $event.preventDefault();
     if ($event.shiftKey) return;
     let commentValue = $event.target.value;
+    if (commentValue.trim() == '') return;
     $event.target.disabled = true;
     this.http.post<any>(`${environment.apiUrl}/api/post-comment`, { postId: this.post.postId.toString(), content: commentValue }).subscribe(res => {
       $event.target.value = '';
