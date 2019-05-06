@@ -5,7 +5,7 @@
 
 # Báo cáo nhập môn học Công nghệ phần mềm
 
-* Hoàn thành khóa học trên edx [chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenNgocMinh/SoftEng1x%20edX_3.jpg "chi tiết")
+* Hoàn thành khóa học trên edx [chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenKhacNgoc/SoftEng1x%20edX_3.jpg)
 * Bài tập nhóm: **Dự án Web bán giày online**
 * User story:Là người mua hàng, tôi muốn có chức năng khách hàng có thể đăng nhập, đăng xuất, phục vụ bảo mật người dùng.[chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/issues/3).
   - Thiết kế giao diện login, logout.
