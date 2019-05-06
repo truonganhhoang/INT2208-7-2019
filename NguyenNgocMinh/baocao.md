@@ -30,3 +30,5 @@
   ![search](search.PNG)
   5) Muốn lọc sản phẩm theo từng danh mục chú ý Menu **Categories** sau đó chọn danh mục sản phẩm mong muốn.
   ![filter](filter.PNG)
+  6) Muốn xem chi tiết sản phẩm chú ý vào phần khung hiển thị sản phẩm click vào **Viewdetails** thông tin chi tiết sản phẩm hiển thị như sau
+  ![details](details.png)
