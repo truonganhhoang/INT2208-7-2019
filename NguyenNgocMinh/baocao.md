@@ -23,7 +23,7 @@
       - kiểm thử hiển thị giao diện trên các thiết bị.
 * Hướng dẫn sử dụng:
   1) Mở trình duyệt web lên.
-  2) Nhập địa chỉ sau để mở trang web
+  2) Nhập địa chỉ sau để mở trang web http://wolfshoes.000webhostapp.com.
   3) Sau khi trang web xuất hiện là giao diện Home của trang web
   ![detailFull](detailFull.PNG)
   4) Muốn tìm kiếm sản phẩm nhập tên sản phẩm vào ô Search, sau đó click vào icon tìm kiếm để tìm kiếm sản phẩm mong muốn.
