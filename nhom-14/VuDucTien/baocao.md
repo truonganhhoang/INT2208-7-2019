@@ -1,6 +1,6 @@
 ﻿## Sinh viên: VŨ ĐỨC TIẾN 
 ## Mã sinh viên: 17021063
-### Nhóm dự án: Nhóm 4
+### Nhóm dự án: Nhóm 14
 ### Vai trò: thành viên nhóm phát triển.
 
 # Báo cáo cá nhân môn học Công nghệ phần mềm
