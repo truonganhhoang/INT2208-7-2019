@@ -3,48 +3,54 @@ import { Post } from '@app/_models/post.model';
 import { time_off } from '@app/_helpers/dateoff';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '@environments/environment.prod';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { UserService } from '@app/_services/user.service';
 import { Comment } from '@app/_models/comment.model';
+import { routerNgProbeToken } from '@angular/router/src/router_module';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  selector: 'app-post-page',
+  templateUrl: './post-page.component.html',
+  styleUrls: ['./post-page.component.css']
 })
-export class PostComponent implements OnInit {
+export class PostPageComponent implements OnInit {
 
-  @Input() post: Post;
-  @Input() posts: Post[];
+  post: Post = new Post(null);
   userFromPost: any = {};
   liked: boolean = false;
   commentShow: boolean = false;
-  fullMode: boolean = false;
 
   constructor(
     private http: HttpClient,
     private router: Router,
-    private userService: UserService
+    private userService: UserService,
+    private route: ActivatedRoute
   ) {
-    console.log(this.post);
+    this.route.queryParams.subscribe((params)=>{
+      if (params.id) {
+        let postId = params.id;
+        this.http.get<any>(`${environment.apiUrl}/api/get-post`, {params: {postid: postId}}).subscribe(res=>{
+          this.post = new Post(res.post);
+          this.http.get<any>(`${environment.apiUrl}/api/user`, { params: { username: this.post.author.toString() } }).subscribe(res => {
+            if (res.state) {
+              if (res.user) {
+                this.userFromPost.avatarUrl = res.user.avatarUrl;
+                this.userFromPost.name = res.user.name;
+              }
+            }
+          });
+          for (let i = 0; i < this.post.likes.length; i++) {
+            if (this.post.likes[i] == this.userService.currentUserValue.username) {
+              this.liked = true;
+              break;
+            }
+          }
+        });
+      }
+    });
   }
 
   ngOnInit() {
-    this.fullMode = this.post.comments.length < 10;
-    this.http.get<any>(`${environment.apiUrl}/api/user`, { params: { username: this.post.author.toString() } }).subscribe(res => {
-      if (res.state) {
-        if (res.user) {
-          this.userFromPost.avatarUrl = res.user.avatarUrl;
-          this.userFromPost.name = res.user.name;
-        }
-      }
-    });
-    for (let i = 0; i < this.post.likes.length; i++) {
-      if (this.post.likes[i] == this.userService.currentUserValue.username) {
-        this.liked = true;
-        break;
-      }
-    }
   }
 
   getDateOff() {
@@ -87,10 +93,7 @@ export class PostComponent implements OnInit {
   }
 
   getComments() {
-    if (this.post.comments.length < 10 || this.fullMode)
-      return this.post.comments.reverse();
-    else 
-      return this.post.comments.reverse().slice(0,8);
+    return this.post.comments.reverse();
   }
 
   submitComment($event) {
@@ -112,9 +115,6 @@ export class PostComponent implements OnInit {
     });
   }
 
-  activeFullMode() {
-    this.fullMode = true;
-  }
 
   deletePermission() {
     return this.post.author == this.userService.currentUserValue.username;
@@ -123,21 +123,8 @@ export class PostComponent implements OnInit {
   deletePost() {
     this.http.post<any>(`${environment.apiUrl}/api/delete-post`, { postId: this.post.postId.toString() }).subscribe(res => {
       if (res.state) {
-        let pointer = 0;
-        let isFound = false;
-        let n = this.posts.length;
-        for (let i = 0; i < n; i++) {
-          if (this.posts[i].postId == this.post.postId) {
-            pointer = i;
-            isFound = true;
-            break;
-          }
-        }
-        if (isFound) {
-          this.posts.splice(pointer, 1);
-        }
+        this.router.navigate(['']);
       }
     });
   }
-
 }

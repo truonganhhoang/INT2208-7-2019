@@ -4,9 +4,9 @@ export class Post {
     postId: String = '';
     likes: String[] = [];
     author: String = '';
-    comments: Comment[];
-    sendDate: Date;
-    lastInteract: Date;
+    comments: Comment[] = [];
+    sendDate: Date = new Date();
+    lastInteract: Date = new Date();
     content: String = '';
 
     constructor(resPost) {

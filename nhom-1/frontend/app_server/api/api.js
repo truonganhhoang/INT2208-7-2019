@@ -48,6 +48,38 @@ var saveAvatarHandlerMiddleware = multer({ storage: storageAvatar });
 var savePictureHandlerMiddleware = multer({ storage: storagePicture });
 
 
+router.post('mark-read', tokenCheck, (req,res)=>{
+    let roomId = req.body.roomId;
+    let user = req.body.username;
+
+    MessengerRoom.findById(roomId, (err,doc)=>{
+        if (err) {
+            res.json({state: false});
+            return;
+        }
+        if (doc) {
+            let found = false;
+            let pos = 0;
+            for (let i = 0; i < doc.unread.length; i++) {
+                if (doc.unread[i] == user) {
+                    pos = i;
+                    break;
+                }
+            }
+            doc.unread.splice(i,1);
+            doc.save((err)=>{
+                if (err) {
+                    res.json({state: false});
+                } else {
+                    res.json({state: true});
+                }
+            })
+        } else {
+            res.json({state: false});
+        }
+    });
+});
+
 router.post('/delete-post', tokenCheck, (req,res)=>{
     let postId = req.body.postId;
     Post.findByIdAndDelete(postId, (err)=>{
@@ -216,6 +248,10 @@ router.post('/like-post', tokenCheck, (req,res)=>{
                 }
             }
             if (!found) doc.likes.push(user);
+            if (user == doc.author) {
+                res.json({state:true});
+                return;
+            }
             found = false;
             for (let i = 0; i < doc.likesHistory.length; i++) {
                 if (doc.likesHistory[i] == user) {

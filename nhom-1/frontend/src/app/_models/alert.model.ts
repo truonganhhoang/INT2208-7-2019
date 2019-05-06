@@ -1,6 +1,6 @@
 export class Alert {
     type: String = '';
-    payload = {sender: '', author: ''};
+    payload = {sender: '', postAuthor: '', postId: ''};
     date: Date = new Date();
 
 

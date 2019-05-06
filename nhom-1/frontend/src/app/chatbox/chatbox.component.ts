@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
 import { Message } from '../_models/message.model';
 import { UserService } from '@app/_services/user.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from '@app/_services/message.service';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '@environments/environment.prod';
+import { routerNgProbeToken } from '@angular/router/src/router_module';
 
 @Component({
   selector: 'app-chatbox',
@@ -18,14 +19,16 @@ export class ChatboxComponent implements OnInit {
   messageLoaders: MessageLoader[] = [];
   selectedChatRoom: String = null;
   messageShow: Message[] = [];
-  selectedMessageLoader: MessageLoader = null;
+  selectedMessageLoader: MessageLoader = new MessageLoader();
 
   constructor(
     private userService: UserService,
     private messageService: MessageService,
     private http: HttpClient,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
+
 
   
   ngOnInit() {
@@ -53,7 +56,7 @@ export class ChatboxComponent implements OnInit {
           found = true;
           this.messageShow = this.messageLoaders[i].messages;
           this.selectedMessageLoader = this.messageLoaders[i];
-          if (this.messageShow.length < 15) this.selectedMessageLoader.loadMoreChat(this.http);
+          if (this.messageShow.length < 12) this.selectedMessageLoader.loadMoreChat(this.http);
         }
       }
       if (!found) {
@@ -61,6 +64,8 @@ export class ChatboxComponent implements OnInit {
           if (res.roomchat) {
             let newMessageLoader = new MessageLoader();
             newMessageLoader.roomId = this.selectedChatRoom;
+            newMessageLoader.authors = res.roomchat.authors;
+            newMessageLoader.loadNameAndAvatar(this.http, this.userService.currentUserValue.username);
             let threadId = res.roomchat.thread;
             this.http.get<any>(`${environment.apiUrl}/api/get-threadchat`, {params: {thread: threadId}}).subscribe((resThread)=>{
               newMessageLoader.nextThread = resThread.thread.previous;
@@ -79,7 +84,7 @@ export class ChatboxComponent implements OnInit {
               this.messageLoaders.push(newMessageLoader);
               this.selectedMessageLoader = newMessageLoader;
               this.messageShow = newMessageLoader.messages;
-              if (this.messageShow.length < 15) this.selectedMessageLoader.loadMoreChat(this.http);
+              if (this.messageShow.length < 12) this.selectedMessageLoader.loadMoreChat(this.http);
             });
           }
         });
@@ -130,6 +135,10 @@ export class ChatboxComponent implements OnInit {
     this.messageShow.push(newMessage);
   }
 
+  routeTo() {
+    this.router.navigate(['users',this.selectedMessageLoader.username]);
+  }
+
 }
 
 
@@ -137,6 +146,10 @@ class MessageLoader {
   messages: Message[] = [];
   roomId: String;
   nextThread: String;
+  name: String = 'Loading...';
+  avatarUrl: String = '';
+  authors: String[] = [];
+  username: String = '';
 
   loadMoreChat(http: HttpClient) {
     if (this.nextThread == '') return;
@@ -152,6 +165,27 @@ class MessageLoader {
         newMessage.sender = messages[i].sender;
         newMessage.content = messages[i].content;
         this.messages.unshift(newMessage);
+      }
+    });
+  }
+
+  loadNameAndAvatar(http: HttpClient, username) {
+    let user = '';
+    let pos = 0;
+    for (let i = 0; i < this.authors.length; i++) {
+      if (this.authors[i] != username) {
+        pos = i;
+        break;
+      }
+    }
+    user = this.authors[pos].toString();
+    this.username = user;
+    http.get<any>(`${environment.apiUrl}/api/user`, {params:{username: user}}).subscribe((res)=>{
+      if (res.state) {
+        if (res.user) {
+          // res.user.avatarUrl = this.santizier.bypassSecurityTrustUrl(res.user.avatarUrl);
+          this.avatarUrl = res.user.avatarUrl;
+          this.name = res.user.name;        }
       }
     });
   }

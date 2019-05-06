@@ -1,11 +1,12 @@
 import { Component, OnInit, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ChatRoom } from '@app/_models/chatroom.model';
 import { MessageService } from '@app/_services/message.service';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '@environments/environment';
 import { UserService } from '@app/_services/user.service';
 import { Message } from '@app/_models/message.model';
+import { User } from '@app/_models/user';
 
 @Component({
   selector: 'app-chatlist',
@@ -18,6 +19,7 @@ export class ChatlistComponent implements OnInit {
   selectedChatRoom: String;
   roomList: ChatRoom[] = [];
   sortedRoomList: ChatRoom[];
+  userInfo = {avatarUrl: '', name:'Loading...'};
 
   constructor(
       private route: ActivatedRoute,
@@ -29,13 +31,30 @@ export class ChatlistComponent implements OnInit {
     }
 
   ngOnInit() {
+    this.http.get<any>(`${environment.apiUrl}/api/user`, {params:{username: this.userService.currentUserValue.username}}).subscribe((res)=>{
+      if (res.state) {
+        if (res.user) {
+          this.userInfo.avatarUrl = res.user.avatarUrl;
+          this.userInfo.name = res.user.name;
+        }
+      }
+    });
+
+    
     this.http.get<any>(`${environment.apiUrl}/api/getlistchat`).subscribe((data)=>{
       if (data.state) {
+        console.log(data);
         let nList = data.list.length;
         for (let i = 0; i < nList; i++) {
           let temp = new ChatRoom();
           temp.roomId = data.list[i]._id;
-          temp.read = data.list[i].unread.length == 0 ? true : false;
+          temp.read = true;
+          console.log(data.list[i]);
+          for (let j = 0; j < data.list[i].unread.length; j++) {
+            if (data.list[i].unread[j] == this.userService.currentUserValue.username) {
+              temp.read = false;
+            }
+          }
           temp.thread = data.list[i].thread;
           temp.lastMessage = new Date(data.list[i].lastMessage);
           for (let j = 0; j < data.list[i].authors.length; j++) {
@@ -47,7 +66,8 @@ export class ChatlistComponent implements OnInit {
           this.roomList.push(temp);
         }
         this.sortRoomList();
-        // console.log(this.roomList);
+        
+        console.log(this.roomList);
         this.makeSubcribe();
       }
     });
@@ -65,6 +85,8 @@ export class ChatlistComponent implements OnInit {
             found = true;
             this.selectedChatRoom = this.roomList[i].roomId;
             this.messageService.updateSelectedRoom(this.selectedChatRoom);
+            this.roomList[i].read = true;
+            this.http.post<any>(`${environment.apiUrl}/api/mark-read`, {roomId: this.selectedChatRoom});
             break;
           }
         }
@@ -118,7 +140,12 @@ export class ChatlistComponent implements OnInit {
           found = true;
           this.roomList[i].lastMessage = new Date(newMessage.sendDate);
           this.roomList[i].read = false;
+          if (this.roomList[i].roomId == this.selectedChatRoom) {
+            this.roomList[i].read = true;
+            this.http.post<any>(`${environment.apiUrl}/api/mark-read`, {roomId: this.selectedChatRoom});
+          }
           this.sortRoomList();
+          console.log(this.roomList);
           break;
         }
       }
@@ -128,7 +155,8 @@ export class ChatlistComponent implements OnInit {
           if (res.roomchat) {
             let newRoom = new ChatRoom();
             newRoom.lastMessage = new Date(res.roomChat.lastMessage);
-            newRoom.read = false;
+            newRoom.read = true;
+            this.http.post<any>(`${environment.apiUrl}/api/mark-read`, {roomId: this.selectedChatRoom});
             newRoom.thread = res.roomChat.thread;
             newRoom.roomId = res.roomChat._id;
             for (let i = 0; i < res.roomChat.authors.length; i++) {
@@ -169,5 +197,9 @@ export class ChatlistComponent implements OnInit {
 
   selectChatRoom(i: ChatRoom) {
     this.router.navigate(['messenger'], {queryParams: {u : i.sender}});
+  }
+
+  read(i: ChatRoom) {
+    return i.read;
   }
 }

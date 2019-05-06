@@ -5,7 +5,6 @@ import { UserService } from '@app/_services/user.service';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '@environments/environment';
 import { Post } from '@app/_models/post.model';
-import { Comment } from '@app/_models/comment.model';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({ 

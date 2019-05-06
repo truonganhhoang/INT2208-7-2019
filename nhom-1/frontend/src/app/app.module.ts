@@ -46,7 +46,8 @@ import { SideAlertService } from './_services/sideAlert.service';
 import { CommentComponent } from './comment/comment.component';
 import { SearchComponent } from './search/search.component';
 
-import { NotifyItemComponent } from './notify-item/notify-item.component';
+import { NotifyItemComponent } from './notify-item/notify-item.component';;
+import { PostPageComponent } from './post-page/post-page.component'
 
 @NgModule({
     imports: [
@@ -97,7 +98,8 @@ import { NotifyItemComponent } from './notify-item/notify-item.component';
         CommentComponent,
         NotifyItemComponent,
         SearchComponent
-    ],
+,
+        PostPageComponent    ],
     entryComponents: [
         EditProfileDialog, UpdateAvatarDialog,
     ],
