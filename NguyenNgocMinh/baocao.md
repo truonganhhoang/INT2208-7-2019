@@ -25,3 +25,8 @@
   1) Mở trình duyệt web lên.
   2) Nhập địa chỉ sau để mở trang web
   3) Sau khi trang web xuất hiện là giao diện Home của trang web
+  ![detailFull](detailFull.PNG)
+  4) Muốn tìm kiếm sản phẩm nhập tên sản phẩm vào ô Search, sau đó click vào icon tìm kiếm để tìm kiếm sản phẩm mong muốn.
+  ![search](search.PNG)
+  5) Muốn lọc sản phẩm theo từng danh mục chú ý Menu **Categories** sau đó chọn danh mục sản phẩm mong muốn.
+  ![filter](filter.PNG)
