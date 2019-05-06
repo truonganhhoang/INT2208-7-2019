@@ -25,6 +25,7 @@ Chức năng:
 ![Image](image_demo/account.png)
 
 5. Phản hồi đánh giá.
+
 6. Nhắn tin trao đổi.
 
 ## Quy trình phát triển Scrum:
@@ -71,3 +72,4 @@ Chức năng:
 - Là một người mua hàng, tôi có thể đánh giá sản phẩm sau khi nhận hàng từ shop.
 
 **Link demo sản phẩm:** [tại đây](nguoitheohuonghoa.herokuapp.com)
+

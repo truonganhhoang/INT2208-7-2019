@@ -15,22 +15,26 @@
 			<li>Hoàng Duy Tùng</li>
 		</ul>
 			<h2>
-			Tên sản phẩm: <i>TOEIC FUN</i>
-			</h2>
+        Tên sản phẩm: <i>TOEIC FUN</i>
+    </h2>
 			<h2>
 			Nhóm người sử dụng
 			</h2>
 			<ul>
+
 			<li>Học sinh, sinh viên những người muốn học từ vựng cơ bản để luyện thi TOEIC.</li>
+
 			</ul>
 			<h2>
 			Mô tả tóm tắt phần mềm
 			</h2>
 			<ul>
+
 				<li>Ứng dụng có chức năng hiển thị  từ vựng tiếng Anh TOEIC căn bản.</li>
 				<li>Ứng dụng có chế độ để luyện tập từ vựng đã học.</li>
 				<li>Ứng dụng có hiển thị ngữ pháp cơ bản.</li>
 				<li>Ứng dụng có tham khảo trang web https://600tuvungtoeic.com</li>
+
 			</ul>
 			<h2>
 			Các công nghệ có thể dùng đến
@@ -39,6 +43,7 @@
 					<li>HTML</li>
 					<li>CSS</li>
 					<li>JavaScript</li>
+
 					<li>Và một ngôn ngữ back-end bất kì...</li>
 			</ul>
 			<h3>Một số hình ảnh sơ bộ của ứng dụng:</h3>
@@ -56,4 +61,5 @@
 	    </ul>
 	    <p>- Product Backlog, Sprint Backlog của nhóm được đặt ở: https://github.com/meomen/Scrum-Nhom12/issues </p>
 	</body>
+
 </html>
