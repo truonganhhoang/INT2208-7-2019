@@ -5,7 +5,7 @@
 
 # Báo cáo cá nhân môn học Công nghệ phần mềm
 ====
-* Hoàn thành khó học trên edx ([chi tiết](https://github.com/DaoDucKhiem/nhom-5/blob/master/DaoDucKhiem/SoftEng1x.jpg))
+* Hoàn thành khóa học trên edx ([chi tiết](https://github.com/DaoDucKhiem/nhom-5/blob/master/DaoDucKhiem/SoftEng1x.jpg))
 * Bài tập nhóm: **Dự án web bán hàng online** [website](http://Oderonline.herokuapp.com), [Github](https://github.com/DaoDucKhiem/nhom-5/tree/master/nhom-5)
 * User story: Là một người mua hàng, tôi muốn có thể tìm kiếm sản phẩm trên trang web thông qua các từ khóa để tôi có thể nhanh chóng tìm được sản phẩm mà mình muốn mua.
 	[chi tiết](https://github.com/DaoDucKhiem/nhom-5/issues/18):
