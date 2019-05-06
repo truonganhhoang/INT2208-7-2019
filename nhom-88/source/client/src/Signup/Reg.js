@@ -10,14 +10,13 @@ class RegisterPage extends Component {
   onHandleRegistration = (event) => {
     event.preventDefault();
 
+    let name = event.target.username.value;
     let email = event.target.email.value;
     let password = event.target.password.value;
 
     const data = {
-      email, password
+        name, email, password
     };
-
-    console.log(data);
     this.props.dispatch(registerUserAction(data));
   }
 
@@ -25,6 +24,7 @@ class RegisterPage extends Component {
     let message, isSuccess;
 
     if (this.props.response.register.hasOwnProperty('response')) {
+      console.log(this.props.response.register);
       isSuccess = this.props.response.register.response.success;
       message = this.props.response.register.response.message;
     }
@@ -32,16 +32,21 @@ class RegisterPage extends Component {
     return (
       <React.Fragment>
         <Menu/>
-        
         <div id="page-container">
         <h2>Signup to Twituet</h2>
 
-        {!isSuccess ? <div>{message}</div> : browserHistory.push('login')}
+        {!isSuccess ? <div>{message}</div> : browserHistory.push('/login')}
 
         <Form onSubmit={this.onHandleRegistration} className="login-form" >
 
+
+        <Form.Item>
+              <Input type="text" name="username" prefix={<Icon type="user" 
+                    style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="User Name" />
+          </Form.Item>
+
           <Form.Item>
-              <Input type="email" name="email" prefix={<Icon type="user" 
+              <Input type="email" name="email" prefix={<Icon type="mail" 
                     style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Email" />
           </Form.Item>
 
@@ -59,6 +64,10 @@ class RegisterPage extends Component {
           <Button type="primary" htmlType="submit" className="login-form-button">
             Sign Up
           </Button>
+
+          <br></br>
+          Or <a href="/login">Login now!</a>
+
 
         </Form>
         </div>

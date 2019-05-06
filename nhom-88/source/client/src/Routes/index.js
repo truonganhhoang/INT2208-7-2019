@@ -1,6 +1,7 @@
 import React from 'react';
 import {Router,Route, IndexRoute } from 'react-router';
 import App from '../App';
+import Home from '../Components/Home';
 import LoginPage from '../Login/Login';
 import RegisterPage from '../Signup/Reg';
 import DashboardPage from '../Components/dashBoard';
@@ -25,8 +26,8 @@ function requireAuth(nextState, replace) {
 
 export default (
   <Router>
-    <IndexRoute component={App} />
-    <Route exac path='/' component={App} />
+    <IndexRoute component={Home} />
+    <Route exac path='/' component={Home} />
     <Route path="/home" component={Page}/>
     <Route path='login' component={LoginPage} />
     <Route path='register' component={RegisterPage} />

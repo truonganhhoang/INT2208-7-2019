@@ -1,7 +1,7 @@
 import React from 'react';
 import Menu from '../Components/Menu_';
 import {
-    Comment, Icon, Tooltip, Avatar, Spin, Badge, Input
+    Comment, Icon, Tooltip, Avatar, Spin, Badge, Input, Button
   } from 'antd';
 
 import moment from 'moment';
@@ -32,6 +32,11 @@ class Page extends React.Component {
 
   render() {
     const { likes, dislikes, action } = this.state;
+
+    const buttonRocket = {
+      'padding': '2px 5px 2px',
+
+    }
 
     const actions = [
       <span>
@@ -78,7 +83,11 @@ class Page extends React.Component {
             <div className="home-tweet-box">
                <center> 
                     <Avatar shape="circle" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"/>
-                   <Input id="home-tweet-box-input" placeholder="What happeding?"/>
+                   
+                   
+                      <Input id="home-tweet-box-input" placeholder="What happening?"/>
+                      <Button className={buttonRocket} type="primary" shape="circle" icon="rocket" size="medium" />
+                   
                    </center>
             </div>
         <Comment

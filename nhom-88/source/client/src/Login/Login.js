@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Link, browserHistory } from 'react-router';
+import {browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 
 import Menu from '../Components/Menu_';
-import {Form, Input, Icon, Button, Checkbox, Spin} from 'antd';
-import { registerUserAction } from '../Actions/authenticationActions';
+import {Form, Input, Icon, Button, Checkbox, Spin, message} from 'antd';
+import { loginUserAction  } from '../Actions/authenticationActions';
 
 class LoginPage extends Component {
   onHandleRegistration = (event) => {
@@ -18,15 +18,15 @@ class LoginPage extends Component {
     };
 
     console.log(data);
-    this.props.dispatch(registerUserAction(data));
+    this.props.dispatch(loginUserAction(data));
   }
 
   render() {
-    let message, isSuccess;
+    let message_info, isSuccess;
 
-    if (this.props.response.register.hasOwnProperty('response')) {
-      isSuccess = this.props.response.register.response.success;
-      message = this.props.response.register.response.message;
+    if (this.props.response.login.hasOwnProperty('response')) {
+      isSuccess = this.props.response.login.response.success;
+      message_info = ()=>{ message.info(this.props.response.login.response.message) };
     }
     
     return (
@@ -36,7 +36,7 @@ class LoginPage extends Component {
         <div id="page-container">
         <h2>Login to Twituet</h2>
 
-        {!isSuccess ? <div>{message}</div> : browserHistory.push('/')}
+        {!isSuccess ? <div>{'khong thanh cong'}</div> : browserHistory.push('/')}
 
         <Form onSubmit={this.onHandleRegistration} className="login-form" >
 
@@ -57,7 +57,7 @@ class LoginPage extends Component {
                 <Button type="primary" htmlType="submit" className="login-form-button">
                     Log in
                 </Button><br></br>
-                Or <a href="">register now!</a>
+                Or <a href="/register">Signup now!</a>
             </div>
         </Form.Item>
 

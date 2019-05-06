@@ -779,3 +779,12 @@ a {
     line-height: 20px;
     font-size: 14px;
 }
+
+.message-login {
+    border-radius: 5px;
+    border-color: gray;
+}
+
+.rocket-button {
+    padding-left: 2px;
+}
