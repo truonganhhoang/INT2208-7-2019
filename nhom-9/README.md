@@ -94,3 +94,16 @@
    ##### Sprint backlog - sprint-1:
    * Tìm hiểu về Bootstrap
    * Chia bố cục trang web
+   #### Tuần 4:
+   ##### Xác định user story:
+   * User story 1    : Là một học sinh, tôi muốn có thể làm bài trên trang web, để kiểm tra kiến thức bản thân.
+   * User story 2    : Là một học sinh đã đăng nhập, tôi muốn có thể lưu lại và xem lại bài làm của mình mỗi khi làm xong bài, để có thể xem điểm của bản thân
+   #### Các tuần còn lại:
+   Cả nhóm phối hợp thực cài đặt các chức năng theo user story.
+
+
+
+
+
+
+
