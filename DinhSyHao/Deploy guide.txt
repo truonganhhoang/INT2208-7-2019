@@ -110,7 +110,30 @@ Sau đó tải CLI của heroku về máy tính
 	Chạy thử lại app
 	
 		$ heroku open
+				
+
+11. Fix lỗi 404 not found nginx 
+	
+	Tạo một file nginx_app.conf với nội dung như sau:
 		
+		
+		location / {
+			# try to serve file directly, fallback to rewrite
+			try_files $uri @rewriteapp;
+		}
+
+		location @rewriteapp {
+			# rewrite all to app.php
+			rewrite ^(.*)$ /index.php/$1 last;
+		}
+		location ~ ^/(app|app_dev|config)\.php(/|$) {
+			try_files @heroku-fcgi @heroku-fcgi;
+			internal;
+		}
+		
+	Và sửa Procfile lại như sau: 
+	
+		$ echo web: vendor/bin/heroku-php-nginx -C nginx_app.conf /public > Procfile
 	 
 		
 ## Tham khảo tại https://medium.com/@Oriechinedu/how-to-host-a-laravel-app-with-mysql-database-on-heroku-ab56b08be735 ##
