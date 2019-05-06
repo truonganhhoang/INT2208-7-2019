@@ -357,7 +357,7 @@ session_start();
                         <?php }
                     }else{?>
                         <p style="margin: auto;">
-                            <big><i>Không có dữ liệu tìm kiiếm</i></big>
+                            <big><i>Không có dữ liệu tìm kiếm</i></big>
                         </p>
                         <?php    
                     }

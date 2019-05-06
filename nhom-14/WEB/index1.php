@@ -123,7 +123,6 @@ session_start();
 			</div>
 		</div>
 	</div>
-	
 	<div class="container-fluid mt-4 mb-5">
 		<div class="jcarousel-wrapper">
 			<div class="jcarousel" data-jcarousel="true">
