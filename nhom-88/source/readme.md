@@ -23,11 +23,14 @@ Bài toán đặt ra là cần ứng dụng cho người dùng chia sẻ, kết 
 
 #### 3.2. Thu thập yêu cầu
 
-Là một người dùng, tôi muốn tạo tài khoản riêng của mình để có thể sử dụng nó.
-Là một người dùng, tôi muốn tạo bài viết của mình để chia sẻ với người khác.
-Là một người dùng, tôi muốn thay đổi thông tin của mình để đáp ứng yêu cầu của mình.
-Là một người dùng, tôi muốn kết bạn với mọi người để tiện biết được họ đang hoạt động như thế nào.
-Là một người dùng, tôi muốn nhắn tin trực tiếp với bạn bè để có thể chia sẻ với họ về những điều đang diễn ra.
+* Là một người dùng, tôi muốn tạo tài khoản riêng của mình để có thể sử dụng nó.
+* Là một người dùng, tôi muốn tạo bài viết của mình để chia sẻ với người khác.
+* Là một người dùng, tôi muốn thay đổi thông tin của mình để đáp ứng yêu cầu của mình.
+* Là một người dùng, tôi muốn kết bạn với mọi người để tiện biết được họ đang hoạt động như thế nào.
+* Là một người dùng, tôi muốn nhắn tin trực tiếp với bạn bè để có thể chia sẻ với họ về những điều đang diễn ra.
+* Là một người dùng, khi tôi quên mật khẩu thì tôi có quền lấy lại mật khẩu qua email.
+
+
 
 #### 3.3. Phân tích yêu cầu
 
@@ -38,10 +41,11 @@ Thiết kế ca sử dụng
  * Trạng thái: Người dùng chưa đăng nhập.
  * Mục đích: Đăng nhập vào trang web để có thể sử dụng được các chức năng của trang.
  * Luồng sự kiện:</br>
+
 Người dùng vào phần đăng nhập.</br>
 Sau khi ấn đăng nhập, thành công trả về giao diện trang chủ.</br>
 Nếu không thành công, trả về màn hình ban đầu, hiện ra thông báo lỗi.</br>
-Hệ thống thiết lập socket cho người dùng.
+
 
 #### 3.3.2. Đăng xuất:
 
@@ -83,7 +87,58 @@ Sử dụng React để tận dụng khả năng tái sử dụng của các Com
 
 #### 4.2. Thiết kế cơ sở dữ liệu
 
-todo
+* Lượng đồ User
+```
+User
+|
+|------------Id_
+|				|------type: Object_id
+|
+|------------Email
+|				|-----type: String
+|				|-----unique: true
+|				|-----required: true
+|
+|------------Password
+|				|-----type: String
+|				|-----required: true
+|
+|
+|-------Permission
+|				|-----type: String
+|				|-----enum: ['Client', 'Manager', 'Admin']
+|				|-----default: 'Clinet'
+|
+|-------Media
+|		|-------Avatar
+|		|			|------type: String
+|		|			
+|		|-------Image
+|					|------type: String
+|
+|--------Tweet
+|			|------reference: Tweet_id
+```
+
+
+```
+Tweet
+|
+|------------Id_
+|				|------type: Object_id
+|
+|------------Content
+|				|-----type: String
+|				|-----unique: true
+|				|-----required: true
+|
+|------------Action
+|				|------Like
+				|------Dislike
+
+```
+
+
 
 
 ### 5. Triển khai phần mềm
@@ -107,6 +162,8 @@ scr-----Action
  |      |--------dashboard.js
  |      |--------Home.js
  |      |--------Menu.js
+ |		|--------About.js
+ |		|--------ForgotPassword
  |
  |------Reducers
  |      |--------loginReducer.js
@@ -116,6 +173,12 @@ scr-----Action
  |------saga
  |      |--------authenticationSaga.js
  |
+ |------Login
+ |      |--------login.js
+ |
+ |------Register
+ |      |--------register.js
+ |
  |------Stores
  |      |--------configureStore.js
  |
@@ -124,13 +187,46 @@ scr-----Action
  |------index.js
 ```
 
-* Component:
+* Component: là nơi chứa các component chung của ứng dụng
 
-* Quan lý trạng thái
+* Quan lý trạng thái: Action, Reducer, Store, saga: thư viện Redux quản lý trạng thái của toàn bộ ứng dụng
+
+* Login, Register...: là các thư mục chưa các tính năng của ứng dụng
+
 
 #### 5.2 Xây dựng ứng dụng phía server 
 
-to do
+
+```
+scr-----Config
+ |      |------------db.js
+ |      |------------index.js
+ |
+ |------server
+ |      |--------controller
+ |		|			|
+ |		|			|-------api
+ |		|			|		|-----login.js
+ |		|			|		|-----register.js
+ |		|--------models
+ |		|			|--------user.js
+ |		|			|--------message.js
+ |		|			|--------tweet.js
+ |		|				
+ |		|--------index.js
+ |		
+ |------index.js
+ |
+```
+
+* Config: Nơi chứa các thông tin cấu hình của server, bao hồm thông tin cơ sở dữ liệu ...
+
+* Server/controller: Xây dựng và quản lý các API của server
+
+* Server/Model: Xây dựng các lượng đồ cho các đối tượng trong cơ sở dữ liệu
+
+...
+
 
 
 ### 6. Kết quả
@@ -148,3 +244,4 @@ to do
 ....
 
 ![home](https://i.imgur.com/HcGzgLo.png)
+
