@@ -7,7 +7,7 @@
 #### Hoàn thành khóa học trên edx ([chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/SoftEng1x-%203.jpg))
 
 #### Bài tập nhóm: Dự án web shop bán giày hàng online
-**Trang web:**  [website](link)
+**Trang web:**  [website](http://wolfshoes.000webhostapp.com/)
 
 **Lưu trữ code:**  [github](https://github.com/KhacNgoc/INT2208-7-2019)
 
@@ -25,7 +25,7 @@
 
 1 .Mở trình duyệt của bạn lên: Chrome,Cốc Cốc,Firefox....
 
-2 .Gõ vào ô tìm kiếm địa chỉ sau:  [link.com](https://link).
+2 .Gõ vào ô tìm kiếm địa chỉ sau:  [wolfshoes.000webhostapp.com/](http://wolfshoes.000webhostapp.com/).
 
 3 .Chọn vào mục CONTACT US 
 ![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store.png)
@@ -47,7 +47,7 @@ rồi điền đầy đủ thông tin rồi submit.
 
 1 .Mở trình duyệt của bạn lên: Chrome,Cốc Cốc,Firefox....
 
-2 .Gõ vào ô tìm kiếm địa chỉ sau:  [link.com](https://link).
+2 .Gõ vào ô tìm kiếm địa chỉ sau:  [wolfshoes.000webhostapp.com/](http://wolfshoes.000webhostapp.com/).
 
 3 .Đăng nhập tài khoản nếu có, nếu không tài khoản thì bạn đăng ký tài khoản mới.
 ![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store%20(2).png)
