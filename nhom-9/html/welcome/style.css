@@ -30,4 +30,15 @@
 	color: #e6e6e6;
 	text-decoration: none;
 }
+.card-body h1 {
+    font-size: 80px;
+}
+.card-body a {
+    align-items: center;
+    color: #ffffff;
+}
+.card-body a:hover {
+    text-decoration: none;
+    color: #e6e6e6;
+}
 
