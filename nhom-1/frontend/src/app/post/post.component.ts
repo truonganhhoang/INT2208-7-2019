@@ -6,6 +6,7 @@ import { environment } from '@environments/environment.prod';
 import { Router } from '@angular/router';
 import { UserService } from '@app/_services/user.service';
 import { Comment } from '@app/_models/comment.model';
+import { SideAlertService } from '@app/_services/sideAlert.service';
 
 @Component({
   selector: 'app-post',
@@ -24,7 +25,8 @@ export class PostComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private router: Router,
-    private userService: UserService
+    private userService: UserService,
+    private notifyService: SideAlertService
   ) {
     console.log(this.post);
   }
@@ -45,6 +47,14 @@ export class PostComponent implements OnInit {
         break;
       }
     }
+    this.notifyService.getAlertStream().subscribe((notify)=>{
+      if (notify.type == 'like post') {
+        if (this.post.postId == notify.payload.postId) {
+          this.post.likes.push(notify.payload.sender);
+        }
+      }
+
+    });
   }
 
   getDateOff() {
