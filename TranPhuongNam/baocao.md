@@ -8,7 +8,7 @@
 - Nhận xét chung: 
   - Các file bị thay đổi khó theo dõi do lười commit.
   - Tập trung vào việc làm cho trang web chạy mà chưa bám sát kiến thức trong khoá học.
-Bài làm của sinh viên còn nhiều sai sót. Rất mong được thầy giáo và các bạn góp ý.
+- Bài làm của sinh viên còn nhiều sai sót. Rất mong được thầy giáo và các bạn góp ý.
 
 # User story thực hiện
 1. Là một học sinh, tôi có thể đăng nhập trên trang web, để làm bài thi.
