@@ -9,11 +9,11 @@
 #### Bài tập nhóm: Dự án web shop bán giày hàng online
 **Trang web:**  [website](link)
 
-**Lưu trữ code:**  [github](link)
+**Lưu trữ code:**  [github](https://github.com/KhacNgoc/INT2208-7-2019)
 
 **Câu chuyện người dùng (user story):**
 
- **User story 1:** Là người mua hàng, tôi muốn có thể phản hồi lại với chủ shop, phục vụ mục đích phát triển hơn của shop. ([chi tiết](link))
+ **User story 1:** Là người mua hàng, tôi muốn có thể phản hồi lại với chủ shop, phục vụ mục đích phát triển hơn của shop. ([chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/issues/5))
   ### Phân tích câu chuyện
  1.  Xác định yêu cầu, mong muốn: gửi phản hồi về chủ shop (specifications).
 2.  Chọn quy trình phát triển Scrum (process).
@@ -27,11 +27,13 @@
 
 2 .Gõ vào ô tìm kiếm địa chỉ sau:  [link.com](https://link).
 
-3 .Chọn vào mục CONTACT US rồi điền đầy đủ thông tin rồi submit.![alt](https://www.upsieutoc.com/image/xkkniG)
+3 .Chọn vào mục CONTACT US ![](Screenshot_2019-05-06 Wolf Store.png)
+
+rồi điền đầy đủ thông tin rồi submit.![](Screenshot_2019-05-06 Wolf Store(5).png)
 
 
 
-**2** Là người mua hàng, tôi muốn có trình đặt hàng, phục vụ mục đích đặt hàng. ([chi tiết](link))
+**2** Là người mua hàng, tôi muốn có trình đặt hàng, phục vụ mục đích đặt hàng. ([chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/issues/6))
 ### Phân tích câu chuyện
  1.  Xác định yêu cầu, mong muốn: trình đặt hàng (specifications).
 2.  Chọn quy trình phát triển Scrum (process).
@@ -45,11 +47,11 @@
 
 2 .Gõ vào ô tìm kiếm địa chỉ sau:  [link.com](https://link).
 
-3 .Đăng nhập tài khoản nếu có, nếu không tài khoản thì bạn đăng ký tài khoản mới.![alt](http://~)
+3 .Đăng nhập tài khoản nếu có, nếu không tài khoản thì bạn đăng ký tài khoản mới.![alt](Screenshot_2019-05-06 Wolf Store (2).png)
 
-3 .Khi lựa chọn được sản phẩm phù hợp thêm vào giỏ hàng.![alt](http://~)
+4 .Khi lựa chọn được sản phẩm phù hợp thêm vào giỏ hàng.![alt](Screenshot_2019-05-06 Wolf Store.png)
 
-4 .Chọn vào mục Shopping Cart hoặc biểu tượng để xem sản phẩm có trong giỏ hàng nếu đã ưng ý thì chọn OK để thanh toán.![alt](http://~)
+5 .Chọn vào mục Shopping Cart hoặc biểu tượng để xem sản phẩm có trong giỏ hàng nếu đã ưng ý thì chọn OK để thanh toán.![alt](Screenshot_2019-05-06 Wolf Store(3).png)
  
 
 
