@@ -92,32 +92,32 @@ Sử dụng React để tận dụng khả năng tái sử dụng của các Com
 User
 |
 |----------Id_
-|			|------type: Object_id
+|            |------type: Object_id
 |
 |----------Email
-|			|-----type: String
-|			|-----unique: true
-|			|-----required: true
+|            |-----type: String
+|            |-----unique: true
+|            |-----required: true
 |
 |----------Password
-|			|-----type: String
-|			|-----required: true
+|            |-----type: String
+|            |-----required: true
 |
 |
 |----------Permission
-|			|-----type: String
-|			|-----enum: ['Client', 'Manager', 'Admin']
-|			|-----default: 'Clinet'
+|            |-----type: String
+|            |-----enum: ['Client', 'Manager', 'Admin']
+|            |-----default: 'Clinet'
 |
 |-----------Media
-|			|-------Avatar
-|			|		|------type: String
-|			|			
-|			|-------Image
-|					|------type: String
+|            |-------Avatar
+|            |            |------type: String
+|            |
+|            |-------Image
+|                        |------type: String
 |
 |-----------Tweet
-|			|------reference: Tweet_id
+|            |------reference: Tweet_id
 ```
 
 
@@ -125,16 +125,16 @@ User
 Tweet
 |
 |----------Id_
-|			|------type: Object_id
+|            |------type: Object_id
 |
 |----------Content
-|			|-----type: String
-|			|-----unique: true
-|			|-----required: true
+|            |-----type: String
+|            |-----unique: true
+|            |-----required: true
 |
 |----------Action
-|			|------Like
-			|------Dislike
+|            |------Like
+|            |------Dislike
 
 ```
 
@@ -162,8 +162,8 @@ scr-----Action
  |      |--------dashboard.js
  |      |--------Home.js
  |      |--------Menu.js
- |		|--------About.js
- |		|--------ForgotPassword
+ |      |--------About.js
+ |      |--------ForgotPassword
  |
  |------Reducers
  |      |--------loginReducer.js
@@ -204,18 +204,18 @@ scr-----Config
  |
  |------server
  |      |--------controller
- |		|			|
- |		|			|-------api
- |		|			|		|-----login.js
- |		|			|		|-----register.js
- |		|					
- |		|--------models
- |		|			|--------user.js
- |		|			|--------message.js
- |		|			|--------tweet.js
- |		|				
- |		|--------index.js
- |		
+ |      |            |
+ |      |            |-------api
+ |      |            |      |-----login.js
+ |      |            |      |-----register.js
+ |      |
+ |      |--------models
+ |      |            |--------user.js
+ |      |            |--------message.js
+ |      |            |--------tweet.js
+ |      |
+ |      |--------index.js
+ |
  |------index.js
  |
 ```
