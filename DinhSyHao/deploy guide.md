@@ -23,9 +23,14 @@ Sau đó tải CLI của heroku về máy tính
 	Kiểm tra lại trong project sẽ có một file Procfile có nội dung như sau
 	
 		web: vendor/bin/heroku-php-apache2 public/
+
+
+3. Tạo một app trên heroku
 	
+		$ heroku create oderonline
+
 	
-3. Chuyển thư thư mục project thành thư mục .git
+4. Chuyển thư thư mục project thành thư mục .git
 	Tạo thư mục git để deploy lên heroku
 
 		$ git init 
@@ -37,17 +42,7 @@ Sau đó tải CLI của heroku về máy tính
 		$ git push heroku master
 
 	
-4. Tạo một app trên heroku
-	
-		$ heroku create oderonline
-	
-	
-5. Cài đặt buildpacks cho heroku thành php
-	
-		$ heroku buildpacks:set heroku/php
-
-	
-6. Cấu hình và cài đặt key
+5. Cấu hình và cài đặt key
 	Tạo key ngẫu nhiên bởi php
 	
 		$ php artisan key:generate --show
@@ -55,6 +50,11 @@ Sau đó tải CLI của heroku về máy tính
 	Rồi sau đó cấu hình key cho app trên heroku.
 	
 		$ heroku config:set APP_KEY=<key_vừa_tạo>
+		
+
+6. Cài đặt buildpacks cho heroku thành php
+	
+		$ heroku buildpacks:set heroku/php
 
 	
 7. Chạy thử app
