@@ -2,7 +2,7 @@
 ## Mã sinh viên: 17020866
 ### Nhóm dự án: Nhóm 14
 ### Vai trò: Developer.
-
+*********************
 # Báo cáo cá nhân môn học Công nghệ phần mềm
 ====
 * Hoàn thành khóa học trên edx (Đã chụp ảnh màn hình)
