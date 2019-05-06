@@ -53,7 +53,7 @@
 -  **Công việc:**
    - Sử dụng Truy vấn QueryBuildedr để truy xuất sản phẩm.
    - Tiếp tục bổ sung dữ liệu vào database.
-   - 
+   - Tạo giao diện tìm kiếm, lọc sản phẩm.
 ## Tuần 14:
 -	**Kế hoạch:** Kiểm thử và hoàn thành 4 chức năng chính và viết báo cáo.
 -  **Công việc:**
