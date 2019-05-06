@@ -16,44 +16,44 @@
    ![home](home.png)
    # SCRUM
 ## Vai trò:
-###	Product Owner: Cả nhóm
+###	Product Owner: Ngọc
    - Định hình và đưa ra yêu cầu về tính năng sản phẩm.
-###	Scrum Master: Dương
+###	Scrum Master: Liêm
    - Đảm bảo sự vận hành của nhóm
 ###	Team Development: cả nhóm
    - Tạo ra sản phẩm dựa trên Product backlog.
 ## Product backlog:
--	Lịch thi đấu và kết quả các trận đấu gần đây: thời gian diễn ra, tỷ số , thống kê.
--	Thông tin về giải đấu: lịch thi đấu, bảng xếp hạng, kết quả.
--	Thông tin về đội bóng: huấn luyện viên, sân vận động, cầu thủ.
--	Highlights & một vài thông tin bên lề.
--	Hỗ trợ và tương tác với người dung ( có thể không làm ).
+   - Thiết kế giao diện trang chủ.
+   - Thiết kế giao diện login.
+   - Thiết kế giao diện admin.
+   - Thông tin sản phẩm.
 ## Tuần 1-4:
 -	**Kế hoạch:** Học bootstrap và hoàn thành giao diện trang chính.
 -  **Công việc:**
    - Tự học HTML, CSS, JS, và Bootstrap.
    - Sử dụng kiến thức học được tạo giao diện trang chính.
 ## Tuần 5-6:
--	**Kế hoạch:** Hoàn thành chức năng xem lịch thi đấu và kết quả các trận gần nhất, học và tìm hiểu về MySQL và NodeJS.
+-	**Kế hoạch:** Hoàn thành phần thiết kế giao diện các trang liên quan.
 -  **Công việc:**
-   - Tạo giao diện bảng thống kê trận đấu.
-   - Tìm kiếm dữ liệu sử dụng tạm thời để đưa vào bảng thống kê.
-   - Sửa lại giao diện chính: Thêm logo web, slogan.
-   - Tìm hiểu về ứng dụng của NodeJS và cách sử dụng. 
-   - Học trước về MySQL để chuẩn bị cho kế hoạch tiếp theo.
+    - Tạo giao diện giỏ hàng.
+    - Tạo class cart trong đó có các function như thêm giỏ hàng, xóa giỏ hàng,...
+    - Tạo Khung mô tả chi tiết sản phẩm.
+    - Học trước QueryBuilder để thực hiện các kế hoạch tiếp theo.
+   
 ## Tuần 7-9:
--	**Kế hoạch:** Tạo giao diện, tạo cơ cở dữ liệu các giải đấu và các đội bóng.
--  **Công việc:**
-   - Tạo giao diện giải đấu
-   - Tìm kiếm dữ liệu về các giải đấu và tạo cơ sở sữ liệu.
-   - Tạo giao diện trang thông tin đội bóng.
-   - Tìm kiếm dữ liệu về các đôi bóng và tạo cơ sở dữ liệu.
+-	**Kế hoạch:** Tạo giao diện, tạo cơ cở dữ liệu các sản phẩm.
+   - Tạo giao diện hiển thị sản phẩm.
+   - Tạo mô hình ER ban đầu của database.Cố gắng thống nhất database trong vòng 1 tuần.
+   - Ghi dữ liệu vào databse.
+   - Kết nối database.
+   - Tìm kiếm dữ liệu sản phẩm.
+   - Tạo giao diện trang admin và các chức năng admin.
 ## Tuần 10-13:
--	**Kế hoạch:** Hoàn thành chức năng xem thông tin đội bóng và chức năng tin tức & video
+-	**Kế hoạch:** Hoàn thành chức năng tìm kiếm, Lọc sản phẩm theo danh mục.
 -  **Công việc:**
-   - Sử dụng expressJS để kết nối với MySQL.
-   - Tạo giao diện tin tưc và giao diện video.
-   - Tiếp tục tạo cơ sở dữ liệu còn thiếu
+   - Sử dụng Truy vấn QueryBuildedr để truy xuất sản phẩm.
+   - Tiếp tục bổ sung dữ liệu vào database.
+   - 
 ## Tuần 14:
 -	**Kế hoạch:** Kiểm thử và hoàn thành 4 chức năng chính và viết báo cáo.
 -  **Công việc:**
@@ -61,6 +61,3 @@
    - Viết báo cáo cá nhân.
    - Tạo tài liệu kỹ thuật và quay video demo dự án.
    
-Link tài liệu kỹ thuật và hướng dẫn sử dụng: https://docs.google.com/document/d/1GEU0qN_Rtvowd0bZk9P5OzJ4PegQ4ROpVGZ8x7-XLa8/edit#
-
-Video demo projects: https://www.youtube.com/watch?v=7oEq6lCBq8w 
