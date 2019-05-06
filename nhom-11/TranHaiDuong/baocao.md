@@ -22,11 +22,11 @@
 - Kiểm thử: Sử dụng bảng quyết định (Decision Tables) - Kiểm thử hộp đen 	
 
 - Đánh giá mã nguồn:
-
-	1.Xem code có mã mùi có thể làm ảnh hưởng đến việc phát triển hay không. - (Code smells) 
-	
-	2.Phân tích source để phát hiện những lỗi sai, bug, vi phạm lỗi sai viết code. - (Phân tích tĩnh)  
-- Thử chạy ở chế độ điện thoại 
+	- Xem code có mã mùi có thể làm ảnh hưởng đến việc phát triển hay không. - (Code smells) 
+	- Phân tích source để phát hiện những lỗi sai, bug, vi phạm lỗi sai viết code. - (Phân tích tĩnh)  
+- Demo code
+	- Chạy thử chương trình và kiểm tra lỗi.
+	- Thử chạy ở chế độ điện thoại 
 
 ## Cách xem thông tin đội bóng (cách sử dụng)
 - Đầu tiên vào trang web theo hướng dẫn sử dụng.
@@ -53,5 +53,11 @@ tượng đội bóng muốn xem.
 	![alt](overview.png) 
    Cuối cùng là một số thống kê về phong độ sân nhà, sân khách và các thông số cơ bản như thẻ vàng, thẻ đỏ, số bàn thắng bàn thua.  
 	![alt](statictis.png) 
+	
+## Thu hoạch sau khi kết thúc môn học
+	- Học được các kiến thức về Công nghệ phần mềm qua khóa hộc SoftEng1x cũng như trên lớp.
+	- Biết thêm về các ngôn ngữ HTML, CSS, Javácript.
+	- Biết sử dụng các framework Bootstrap và ExpressJS.
+	- Hiểu được các quy trình tạo ra một phần mềm.
     
     
