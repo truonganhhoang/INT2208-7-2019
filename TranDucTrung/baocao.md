@@ -2,7 +2,7 @@
 
 ## Thông tin sinh viên. ##
   * Họ và tên: Trần Đức Trung
-  * Mã số sinh viên: 1021089
+  * Mã số sinh viên: 10721089
   * Nhóm: 9.
 
 ## Một số điều lưu ý. ##
