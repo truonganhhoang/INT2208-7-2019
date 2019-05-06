@@ -5,7 +5,7 @@
 
 # Báo cáo cá nhân môn học Công nghệ phần mềm
 ====
-* Bài tập nhóm: **Dự án web bán giày online** [website](), [Github](https://github.com/KhacNgoc/INT2208-7-2019)
+* Bài tập nhóm: **Dự án web bán giày online** [website](https://wolfshoes.000webhostapp.com/?fbclid=IwAR0LDgI2rd9H5pLcg6987GcpeCmCIfu4VtG5K-ilGNUKwsfSlQQRU2h-Fn0), [Github](https://github.com/KhacNgoc/INT2208-7-2019)
 * User story: Là người mua hàng, tôi muốn thêm vào giỏ hàng và nhớ giỏ hàng sau mỗi lần đăng nhập lại, phục vụ mục đích đặt hàng.
 	[chi tiết]():
 	1) Xác định yêu cầu, mong muốn: 
@@ -23,7 +23,7 @@
 * Hướng dẫn sử dụng:
 1. Mở trình duyệt của bạn lên. Google chrome, Cococ hoặc FireFox,... tùy trình duyệt bạn cài đặt.
 
-2. Gõ vào ô tìm kiếm địa chỉ sau: //
+2. Gõ vào ô tìm kiếm địa chỉ sau: [website](https://wolfshoes.000webhostapp.com)
 
 3. Sau khi trang web hiện ra bạn sẽ nhìn thấy trang web tổng quan, trên cùng góc phải là giỏ hàng của bạn, dưới mỗi sản phẩm có nút "Add to cart" ta nhấp chuột vào nếu muốn thêm sản phẩm vào giỏ hàng.
 ![home](home.png)
