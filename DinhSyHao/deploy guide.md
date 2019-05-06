@@ -105,6 +105,63 @@ Sử dụng một trang lưu cơ sở dữ liệu online là db4free.net
 	Chạy thử lại app
 	
 		$ heroku open
+		
+		
+#### SỬA LỖI 404 NOT FOUND NGINX
+1. Tạo một file nginx_app.conf với nội dung như sau:	
+		
+		location / {
+			# try to serve file directly, fallback to rewrite
+			try_files $uri @rewriteapp;
+		}
+
+		location @rewriteapp {
+			# rewrite all to app.php
+			rewrite ^(.*)$ /index.php/$1 last;
+		}
+		location ~ ^/(app|app_dev|config)\.php(/|$) {
+			try_files @heroku-fcgi @heroku-fcgi;
+			internal;
+		}
+		
+2. Sửa Procfile lại với nội dung như sau: 
+	
+		$ echo web: vendor/bin/heroku-php-nginx -C nginx_app.conf /public > Procfile
+		
+		
+#### ĐIỀU HƯỚNG TRANG WEB DƯỚI DẠNG HTTPS ĐỂ DÙNG CHỨC NĂNG ĐĂNG NHẬP BẰNG FACEBOOK
+1. Đi tới public/.httaccess thêm vào nội dung như sau:
+		
+		##Force SSL 
+
+		#Normal way (in case you need to deploy to NON-heroku)
+		RewriteCond %{HTTPS} !=on
+
+		#Heroku way
+		RewriteCond %{HTTP:X-Forwarded-Proto} !https 
+
+		#If neither above conditions are met, redirect to https
+		RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+		
+
+2. Kiểm tra lại xem trang web đã tự động điều hướng chưa
+		
+		$ heroku open
+		
+	Lỗi phát sinh: Khi hiển thị trang web dưới dạng https thì một số hình ảnh hiển thị bị lỗi do chưa cập nhật đường dẫn https
+
+
+3. Sửa lỗi hiển thị hình ảnh
+	
+	Đi tới app/Providers/AppServiceProvider thêm vào hàm boot:
+	
+		URL::forceScheme('https');
+			
+		if (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) || isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&  $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+             \URL::forceScheme('https');
+        }
+
+
 	 
 		
 **Tham khảo tại:** https://medium.com/@Oriechinedu/how-to-host-a-laravel-app-with-mysql-database-on-heroku-ab56b08be735
