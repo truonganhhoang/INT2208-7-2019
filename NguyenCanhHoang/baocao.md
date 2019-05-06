@@ -9,7 +9,7 @@
 - Bài tập nhóm: **Dự án web bán hàng online** [website](http://oderonline.herokuapp.com) [github](https://github.com/DaoDucKhiem/nhom-5/tree/master/nhom-5)
 - Quá trình xử lí chung cho các user story:
 
-    1.Xác định yêu cầu, mong muốn: xem chi tiết các mặt hàng.
+    1.Xác định yêu cầu, mong muốn.
     
     2.Chọn quy trình phát triển Scrum (Process).
     
