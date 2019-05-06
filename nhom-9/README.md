@@ -10,19 +10,24 @@
 ## Sản phẩm nhóm: Quiz App.
    ### Đối tượng.
    * Học sinh, sinh viên muốn ôn luyện chuẩn bị cho các bài thi trắc nghiệm.
+   ***
    ### Mô tả sản phẩm.
    * Một trang web cho phép người dùng đăng ký tài khoản, đăng nhập sau đó làm bài thi trắc nghiệm, sau đó có thể lưu lại và xem lại bài làm.
+   ***
    ### Một số hình ảnh của sản phẩm.
+   ***
    ### Demo các chức năng.
-   *[Chức năng đăng ký](https://drive.google.com/file/d/19xU-oboAR7bVYBR7COTZ8is5FYy0hxlv/view?usp=drivesdk)
-   *[Chức năng đăng nhập](https://drive.google.com/file/d/1awgfMLCc_WNo0CbWJuRdJL1m6Xr1AuK-/view?usp=drivesdk)
-   *[Xử lý sự kiện form rỗng](https://drive.google.com/file/d/1eRUoLFNWNhs9Xh-rzF1MiWwc5PK8KV2m/view?usp=drivesdk)
-   *[Chức năng đăng xuất](https://drive.google.com/file/d/1eIaeeekGP2MFh2g46E08id8eute1t7kB/view?usp=drivesdk)
-   *[Chức năng chọn bộ câu hỏi](https://drive.google.com/file/d/1mf0YP1KVYS0g23Q4AbCkswz1AhWVF5l5/view?usp=drivesdk)
-   *[Chức năng làm bài](https://drive.google.com/file/d/1GiNFIw5uDf6D1omq3eKcpDtWSDL8sziM/view?usp=drivesdk)
-   *[Chức năng xem lại bài làm](https://drive.google.com/file/d/1MbZYp9Dky5CdVWT9Kq2HpGZFcbTYTYBJ/view?usp=drivesdk)
+   * [Chức năng đăng ký](https://drive.google.com/file/d/19xU-oboAR7bVYBR7COTZ8is5FYy0hxlv/view?usp=drivesdk)
+   * [Chức năng đăng nhập](https://drive.google.com/file/d/1awgfMLCc_WNo0CbWJuRdJL1m6Xr1AuK-/view?usp=drivesdk)
+   * [Xử lý sự kiện form rỗng](https://drive.google.com/file/d/1eRUoLFNWNhs9Xh-rzF1MiWwc5PK8KV2m/view?usp=drivesdk)
+   * [Chức năng đăng xuất](https://drive.google.com/file/d/1eIaeeekGP2MFh2g46E08id8eute1t7kB/view?usp=drivesdk)
+   * [Chức năng chọn bộ câu hỏi](https://drive.google.com/file/d/1mf0YP1KVYS0g23Q4AbCkswz1AhWVF5l5/view?usp=drivesdk)
+   * [Chức năng làm bài](https://drive.google.com/file/d/1GiNFIw5uDf6D1omq3eKcpDtWSDL8sziM/view?usp=drivesdk)
+   * [Chức năng xem lại bài làm](https://drive.google.com/file/d/1MbZYp9Dky5CdVWT9Kq2HpGZFcbTYTYBJ/view?usp=drivesdk)
+   ***
    ### Tài liệu.
    * Xem tài liệu tại [đây](https://docs.google.com/document/d/1q-NVJi6FGQ59hZUpiOLeEjfwaHXWm7iTjnil1aTrfhQ/edit?usp=sharing)
+   ***
    ### Quá trình phát triển.
    #### Tuần 1
    * Tên ứng dụng: ....... (Do chưa thống nhất tên của phần mềm)
@@ -50,7 +55,7 @@
          * [JavaScript](https://developer.mozilla.org/vi/docs/Web/JavaScript)
          * [CSS](https://www.w3.org/standards/webdesign/htmlcss#whatcss)
          * [Materialize](https://materializecss.com/)
-    
+   ***
    #### Tuần 2:
    ##### Tìm hiểu về quy trình Scrum.
    * Phân chia công việc trong nhóm Scrum:
@@ -72,6 +77,7 @@
    * Thực hiện sprint 2.  
    * Tuần 8 - 11:
    * Thực hiện sprint 3.
+   ***
    #### Tuần 3:
    ##### Product backlog:
    * Xây dựng màn hình giao diện.
