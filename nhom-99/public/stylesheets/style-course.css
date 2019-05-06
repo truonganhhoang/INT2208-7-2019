@@ -1,0 +1,151 @@
+*{
+    margin: 0; padding: 0;
+}
+
+.one-frames-courses {
+    width: 95%;
+    background: white;
+    margin: 3%;
+    border-radius: 10px;
+}
+
+.col-sm-12.col-md-8.col-xs-12.one-part-courses {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.col-sm-12.col-md-8.col-xs-12.one-part-courses:before {
+    content: "Các khóa học của bạn";
+    display: block;
+    width: 50%;
+    height: 45px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #FFCB08;
+    padding-top: 6px;
+    font-size: 20px;
+    position: absolute;
+    top: -18px;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.main-part {
+    background-color: #eef2f8;
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
+img.img-fluid.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border: 3px solid white;
+    box-shadow: 0 0 10px 5px #d7d7d7;
+    box-sizing: border-box;
+    object-fit: cover;
+    object-position: center right;
+}
+
+a.nav-link.btn.btn-outline-secondary {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    margin-top: 11px;
+    border-radius: 20px;
+}
+
+a.nav-link.btn.btn-outline-secondary.support-menu {
+    color: white;
+    background-color: #2e2f8a;
+    border: 2px solid;
+    border-radius: 20px;
+    font-size: 10px;
+}
+
+a.nav-link.btn.btn-outline-secondary.support-menu:hover {
+    background: #7a7bbc;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top.nav-config {
+    background-color: transparent!important;
+}
+
+.dropdown-menu.dropdown-profile.show {
+    transform: translateX(-133px);
+}
+
+.part-top {
+    width: 100%;
+    height: 6.9%;
+}
+#top-rank h5.name-rank{
+    background-color: rgb(255, 90, 96);
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 90, 96);
+}
+.footer-contact {
+    background-color: #303945;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.autor-quote .text-author{
+    color: white;
+}
+ul.text-author li{
+    list-style: none;
+}
+
+ul.contact-media li a {
+    margin-left: 25px;
+    padding-right: 30px;
+}
+
+a.fas.fa-envelope-open.fa-2x.icon-mail {
+    color: #eb6259;
+}
+
+a.fas.fa-envelope-open.fa-2x.icon-mail:hover {
+    color: #e58882;
+}
+
+.icon-fb {
+    color: #4267b2;
+}
+.icon-github {
+    color : white;
+}
+.icon-instagram {
+    color: #ff4466;
+    /*background: #f09433; 
+    background: -webkit-linear-gradient(bottom left, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -o-linear-gradient(bottom left, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(to top right, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);   
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );*/
+}
+
+a.fab.fa-facebook.fa-2x.icon-fb:hover {color: #014c8c;}
+
+a.fab.fa-twitter.fa-2x.icon-twitter {
+    color: #1da1f2;
+}
+a.contact-me-fb {
+    margin-left: 10px;
+}
+img.img-fluid.author {
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-left: 100%;
+    box-shadow: 0 0 0 5px #e34b50;
+    margin-bottom: 20%;
+}
+
+h4.text-md-center.text-xs-center.pt-2.copyright {
+    font-size: 75%;
+    font-weight: unset;
+    margin-top: 5%;
+}

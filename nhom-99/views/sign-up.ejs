@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <link rel="icon" type="image/png" href="/images/favicon.ico"/>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/fonts/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="/stylesheets/sign-up.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap-ver4x/bootstrap.css">
+</head>
+<body>
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container-one">
+                <div class="signup-content">
+                    <% if(typeof errors != 'undefined'){ %>
+                       <% errors.forEach((item) => {%>
+                       <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <%= item.message %>
+                       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                       </button>
+                     </div>   
+                       <% }) %>
+                    <% }%>
+                    <form action="/users/sign-up" method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data">
+                        <h2 class="form-title">Create account</h2>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="name" id="name" placeholder="Your Name" value="<%= typeof name != 'undefined' ? name : '' %>"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" data-validate = "Email is reauired" name="email" id="email" placeholder="Your Email"  value="<%= typeof email != 'undefined' ? email : '' %>"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="password" id="password" placeholder="Password" data-validate="Password is required"
+                            value="<%= typeof password != 'undefined' ? password : '' %>"/>
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password"
+                            value="<%= typeof re_password != 'undefined' ? re_password : '' %>"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="file" class="form-input" name="images-profile" id="images-profile" placeholder = "Tải ảnh đại diện của bạn lên"
+                            accept="image/*"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="https://www.termsfeed.com/privacy-policy/419a411b0e82f87819fd03a17d33d8d4" class="term-service">Terms of service</a></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit"id="submit" class="form-submit" value="Sign up"/>
+                        </div>
+                    </form>
+                    <p class="loginhere">
+                        Have already an account ? <a href="/users/register" class="loginhere-link">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    
+    <!-- JS -->
+    <script src="/vendor/jquery.js"></script>
+    <script src="/vendor/bootstrap.js"></script>
+    <script src="/javascripts/sign-up.js"></script>
+    <!--check submit file-->
+    <script type="text/javascript">
+         $('#submit').bind("click",function() 
+        { 
+            var imgVal = $('#images-profile').val(); 
+            if(imgVal=='') 
+            { 
+                return false;
+
+            } 
+            else
+            {
+                return true;
+            }
+        }); 
+    </script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
