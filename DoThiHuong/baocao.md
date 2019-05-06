@@ -11,9 +11,6 @@
 - [x] Thiết lập mô hình MVC cho Tab "Một số khóa học gợi ý cho bạn".
 * Liên kết khóa học: [MVC](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.kehlqoeo6d9r)
 * Liên kết git: [Link](https://github.com/ThaoIE3/INT2208-7-2019/blob/master/nhom-19/DictionaryWeb/link.php)
-- [x] Tìm hiểu về API, cách thiết kế và sử dụng API.
-* Liên kết khóa học: [API](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.8wbcxnd04jqr)
-* Liên kết git: [Actions](https://github.com/ThaoIE3/INT2208-7-2019/blob/master/nhom-19/DictionaryWeb/link.php)
 - [x] Kiểm tra phần hiển thị nghĩa của từ trên giao diện tab "Một số khóa học gợi ý cho bạn".
 * Liên kết khóa học: [Black Box Testing](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.zhrswbsdiifd)
 * Liên kết git: [Functional interface](https://github.com/ThaoIE3/INT2208-7-2019/blob/master/nhom-19/DictionaryWeb/link.php)
