@@ -30,3 +30,7 @@
 4. Nếu khách không đăng nhập, giỏ hàng của bạn chỉ được sử dụng trong phiên làm việc hiện tại. Khách đã đăng nhập, phần giỏ hàng có thể lưu lại để làm việc ở phên đăng nhập sau.
 5. Chọn mặt hàng bạn muốn mua và nhấp nút "Add to cart".
 ![add](addtocadd.PNG)
+6. Sản phẩm của bạn đã được thêm vào giỏ hàng.
+![cart](cart.PNG)
+7. Nhấp chuột vào giỏ hàng sẽ chuyển hướng sang trang tính tiền sản phẩm.
+![total](total.PNG)
