@@ -4,25 +4,24 @@ const Courses = require('../models/EnglishCourses');
 const {ensureAuthenticated} = require('../config/ensureauth');
 
 
-router.get('/', ensureAuthenticated , (req, res, next) => {
-  let image = '';
-  if(req.user)
-  {
-    image = req.user.image_profile;
-  }
+router.get('/', ensureAuthenticated, (req, res, next) => {
+    let image = '';
+    if (req.user) {
+        image = req.user.image_profile;
+    }
     Courses.find({})
-    .then((doc,err) => {
-        if(err) throw err;
-        res.render("courses" , {doc : doc , image : image});
-    })
-    .catch(err => {
-        console.log(err);
-    })
+        .then((doc, err) => {
+            if (err) throw err;
+            res.render("courses", {doc: doc, image: image});
+        })
+        .catch(err => {
+            console.log(err);
+        })
 })
 
-router.get('/getApi'  , (req,res,next) => {
-      // Website you wish to allow to connect
-     // Website you wish to allow to connect
+router.get('/getApi', (req, res, next) => {
+    // Website you wish to allow to connect
+    // Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4000');
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -32,18 +31,17 @@ router.get('/getApi'  , (req,res,next) => {
     // to the API (e.g. in case you use sessions)
     res.setHeader('Access-Control-Allow-Credentials', true);
 
-  
 
-  Courses.find({})
-    .then((doc,err) => {
-        if(err) throw err;
-        res.send(doc);
-    })
-    .catch(err => {
-        console.log(err);
-    })
+    Courses.find({})
+        .then((doc, err) => {
+            if (err) throw err;
+            res.send(doc);
+        })
+        .catch(err => {
+            console.log(err);
+        })
 
-     
+
 })
 
 
