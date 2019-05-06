@@ -5,7 +5,7 @@
 
 # Báo cáo cá nhân môn học Công nghệ phần mềm
 ====
-* Bài tập nhóm: **Dự án web bán giày online** [website](), [Github]()
+* Bài tập nhóm: **Dự án web bán giày online** [website](), [Github](https://github.com/KhacNgoc/INT2208-7-2019)
 * User story: Là người mua hàng, tôi muốn thêm vào giỏ hàng và nhớ giỏ hàng sau mỗi lần đăng nhập lại, phục vụ mục đích đặt hàng.
 	[chi tiết]():
 	1) Xác định yêu cầu, mong muốn: 
@@ -13,7 +13,7 @@
 	2) Quy trình phát triển Scrum (process)
 	3) Thiết kế cấu trúc cơ sở dữ liệu và sơ đồ lớp (high level design)
 	4) Sử dụng mô hình MVC của framework Laravel (low level design)
-	5) Viết mã([chi tiết](https://github.com/DaoDucKhiem/nhom-5/blob/master/nhom-5/OderOnline/app/Http/Controllers/PageController.php))
+	5) Viết mã([chi tiết]())
 	6) Kiểm thử:
 		- Kiểm thử hộp trắng đảm bảo mã nguồn không bị lỗi, build và run được.
 		- Sử dụng localhost kiểm tra xem web có thêm vào giỏ hàng sau khi nhấp chuột vào thêm vào giỏ hàng hay không.
