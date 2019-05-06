@@ -15,6 +15,11 @@
    * Một trang web cho phép người dùng đăng ký tài khoản, đăng nhập sau đó làm bài thi trắc nghiệm, sau đó có thể lưu lại và xem lại bài làm.
    ***
    ### Một số hình ảnh của sản phẩm.
+   * <img src="/nhom-9/res/demo/dashboard.jpg">
+   * <img src="/nhom-9/res/demo/login.jpg">
+   * <img src="/nhom-9/res/demo/register.jpg">
+   * <img src="/nhom-9/res/demo/review.jpg">
+   * <img src="/nhom-9/res/demo/testing.jpg">
    ***
    ### Demo các chức năng.
    * [Chức năng đăng ký](https://drive.google.com/file/d/19xU-oboAR7bVYBR7COTZ8is5FYy0hxlv/view?usp=drivesdk)
@@ -42,13 +47,13 @@
     
    * Phác thảo các màn hình chính của ứng dụng.
       * Màn hình khởi đầu.
-      <img src="https://github.com/truonganhhoang/INT2208-7-2019/blob/master/nhom-9/res/img/1.png">
+      <img src="/nhom-9/res/img/1.png">
     
       * Màn hình khi đang làm bài thi.
-      <img src="https://github.com/truonganhhoang/INT2208-7-2019/blob/master/nhom-9/res/img/2.png">
+      <img src="/nhom-9/res/img/2.png">
     
       * Màn hình hiển thị kết quả.
-      <img src="https://github.com/truonganhhoang/INT2208-7-2019/blob/master/nhom-9/res/img/3.png">
+      <img src="/nhom-9/res/img/3.png">
     
       * Một số tài liệu về các công nghệ có thể dùng đến (do chưa thống nhất về kế hoạch phát triển).
          * [HTML](https://www.w3.org/html/)
