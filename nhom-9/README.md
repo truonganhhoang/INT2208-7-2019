@@ -33,7 +33,7 @@
    ### Tài liệu.
    * Xem tài liệu tại [đây](https://docs.google.com/document/d/1q-NVJi6FGQ59hZUpiOLeEjfwaHXWm7iTjnil1aTrfhQ/edit?usp=sharing)
    ***
-   ### Quá trình phát triển.
+   ### Các mục được xác định trong quá trình phát triển.
    #### Tuần 1
    * Tên ứng dụng: ....... (Do chưa thống nhất tên của phần mềm)
    * Các nhóm người dùng:
