@@ -31,7 +31,7 @@
 bạn hãy ấn vào sản phẩm mình cần xem sau đó sẽ có 1 thanh bình luận phía dưới mục chi tiết sản phẩm bạn có thể gõ bình luận của mình vào đó sau đó ấn SUBMIT![comment](comment.png).
 bình luận của bạn sẽ được hiển thị bên dưới có hiển thị cả thời gian ngày tháng năm mà bạn bình luận.
 
-4. Nếu bạn chưa nhập bình luận mà vẫn ấn SUBMIT thì sẽ hiện ra thông báo "Vui lòng điền vào trường này" [comment2](comment2.png).
+4. Nếu bạn chưa nhập bình luận mà vẫn ấn SUBMIT thì sẽ hiện ra thông báo "Vui lòng điền vào trường này" ![comment2](comment2.png).
 
 5. Bạn có thể đánh giá sự nổi bật của sản phẩm bằng cách ấn nút like hoặc dislike ở bên dưới sản phẩm chú ý mỗi tài khoản có thể viết nhiều bình luận nhưng
 chỉ có thể ấn một lượt like hoặc một lượt dislike tức là ví dụ nếu bạn ấn like rồi mà bạn muốn đổi lại ấn nút dislike thì thự động phần like của bạn sẽ mất đi thay vào đó là dislike.
