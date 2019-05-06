@@ -1,15 +1,13 @@
 
 nav{
-    padding: 10px;
-    background: linear-gradient(-180deg,#f53d2d,#753a88);
+    padding: 23px;
+    background: linear-gradient(90deg, rgb(0, 62, 82) 50%, rgb(13, 109, 133) 87%, rgb(26, 156, 183) 100%);
     color: white;
 
 }
 .navbar {
     font-family: Montserrat, sans-serif;
-
     margin-bottom: 0;
-
     border: 0;
     font-size: 11px ;
     letter-spacing: 3px;
@@ -20,7 +18,7 @@ nav{
 
 }
 .navbar-nav li a:hover {
-    color: #1b4b72 !important;
+    color: #f6993f !important;
 }
 .navbar-nav li.active a {
     color: #fff !important;
@@ -63,10 +61,7 @@ a:active {
     position: relative;
 
 }
-.info{
 
-
-}
 .carousel-inner img {
     -webkit-filter: grayscale(90%);
     filter: grayscale(90%); /* make all photos black and white */
@@ -90,12 +85,41 @@ a:active {
 
 }
 .newproduct{
-    height: 250px !important;
-    max-width: 250px !important;
+    height: 200px !important;
+    max-width: 200px !important;
 }
-.caption,.body{
+.user-logged{
+
 
 }
+
+@media only screen and (max-width: 700px) {
+
+
+    .product-price{
+        margin-left: 20%;
+    }
+    .products-sale{
+        margin-left: 20%;
+    }
+    #logo{
+        height: 80px;
+        width: 80px;
+
+
+    }
+
+}
+@media only screen and (max-width: 1200px) {
+    .col-sm-3 {width: 35%;}
+    .user-logged{
+
+    }
+}
+@media only screen and (max-width: 600px) {
+    .col-sm-3{width: 50% }
+}
+
 .giohang{
     float: right;
     margin-top: 1px;
@@ -117,4 +141,8 @@ a:active {
     position: absolute;
     left: 30%;
     top: 30%;
+}
+.list-in-cart{
+
+
 }

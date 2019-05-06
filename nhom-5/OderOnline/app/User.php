@@ -6,9 +6,12 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+use App\Notifications\ResetPassword as ResetPasswordNotification;
+
+class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
+
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +20,7 @@ class User extends Authenticatable
      */
     protected $table ='users';
     protected $fillable = [
-         'email', 'password','name',
+         'email', 'password','name','email_verified_at','phone',
     ];
 
     /**
@@ -28,4 +31,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordNotification($token));
+    }
 }
