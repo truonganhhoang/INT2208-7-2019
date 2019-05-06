@@ -26,3 +26,7 @@
 2. Gõ vào ô tìm kiếm địa chỉ sau: //
 
 3. Sau khi trang web hiện ra bạn sẽ nhìn thấy trang web tổng quan, trên cùng góc phải là giỏ hàng của bạn, dưới mỗi sản phẩm có nút "Add to cart" ta nhấp chuột vào nếu muốn thêm sản phẩm vào giỏ hàng.
+![home](home.png)
+4. Nếu khách không đăng nhập, giỏ hàng của bạn chỉ được sử dụng trong phiên làm việc hiện tại. Khách đã đăng nhập, phần giỏ hàng có thể lưu lại để làm việc ở phên đăng nhập sau.
+5. Chọn mặt hàng bạn muốn mua và nhấp nút "Add to cart".
+![add](addtocadd.png)
