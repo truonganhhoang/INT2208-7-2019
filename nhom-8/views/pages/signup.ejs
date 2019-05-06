@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang = "vi">
+<head>
+	<meta charset ="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign up</title>
+	<link rel="stylesheet" href="signin.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div id="Bar">
+  <div id="Frame">
+    <div id="logo"> <a href="/">Hoctot.vn</a> </div>
+    <div id="header-main-right">
+      <div id="header-main-right-nav">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- header ends here -->
+<div class="loginbox radius">
+  <h2 style="color:#141823; text-align:center;">Đăng kí</h2>
+  <div class="loginboxinner radius">
+    <div class="loginheader">
+      <h4 class="title">Điền đầy đủ thông tin vào các mục sau:</h4>
+    </div>
+    <!--loginheader-->
+    <div class="loginform">
+      <form id="login" action="/signup" method="POST">
+		<%if (data && data.error) {%>
+		<div id="signuperror" class="alert alert-danger">
+		<span> <%=data.error%> </span>
+		</div>
+		<%}%>
+        <p>
+          <input type="text" id="firstname" name="firstname" placeholder="First Name" value="" class="radius mini" />
+          <input type="text" id="lastname" name="lastname" placeholder="Last Name" value="" class="radius mini" />
+        </p>
+        <p>
+          <input type="text" name="username" placeholder="Your User Name" value="" class="radius" />
+        </p>
+        <p>
+          <input type="password" name="passwords" placeholder="New Password" class="radius" />
+        </p>
+        <p>
+          <input type="password" name="repasswords" placeholder="Re-Enter Password" class="radius" />
+        </p>
+        <p>
+          <button class="radius title" type="submit" name="signup">Đăng kí</button>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+	<script src="https://fb.me/react-15.1.0.js"></script>
+	<script src="https://fb.me/react-dom-15.1.0.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<script type="text/jsx" src="dangnhap.js"></script>
+</body>
+
+

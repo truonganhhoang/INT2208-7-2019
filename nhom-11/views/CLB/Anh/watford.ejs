@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+	<title> Watford </title>
+	<meta name="description" content="Kết quả 5 giải đấu hàng đầu châu Âu" />
+	<meta name="keyword" content="bong da, ket qua, lich thi dau" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="normalize.css" />
+	<link rel="stylesheet" href="score.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+	<script src="Chart.min.js"></script>
+	<script src="Chart.js"></script>
+	<!--Biểu đồ-->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load("current", {packages:["corechart"]});
+		google.charts.setOnLoadCallback(drawChart);
+		<%results[7].forEach(function(rows){%>
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+
+				['Trận đấu', 'Percentage'],
+				['Thắng', <%=rows.w%>],
+				['Hòa', <%=rows.d%>],
+				['Thua', <%=rows.l%>]
+			]);
+
+			var options = {
+				pieHole: 0.4,
+				pieSliceText: 'none',
+				pieStartAngle: 135,
+				tooltip: { trigger: 'none' },
+				slices: {
+					0: { color: '#66ff33' },
+					1: { color: '#ffff66' },
+					2: { color: '#ff3300' }
+				}
+			};
+
+			var chart = new google.visualization.PieChart(document.getElementById('sannha'));
+			chart.draw(data, options);
+		}
+		<%})%>
+	</script>
+	<!--Biểu đồ-->
+	<script type="text/javascript">
+			google.charts.load("current", {packages:["corechart"]});
+			google.charts.setOnLoadCallback(drawChart);
+			<%results[8].forEach(function(rows){%>
+			function drawChart() {
+				var data = google.visualization.arrayToDataTable([
+
+					['Trận đấu', 'Percentage'],
+					['Thắng', <%=rows.w%>],
+					['Hòa', <%=rows.d%>],
+					['Thua', <%=rows.l%>]
+				]);
+
+				var options = {
+					pieHole: 0.4,
+					pieSliceText: 'none',
+					pieStartAngle: 135,
+					tooltip: { trigger: 'none' },
+					slices: {
+						0: { color: '#66ff33' },
+						1: { color: '#ffff66' },
+						2: { color: '#ff3300' }
+					}
+				};
+
+				var chart = new google.visualization.PieChart(document.getElementById('sankhach'));
+				chart.draw(data, options);
+			}
+			<%})%>
+		</script>
+
+
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+					aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="score.html"><img src="Logoweb.png" alt="score+"></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">Các
+							giải đấu <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="anh.html">Premier League</a></li>
+							<li><a href="taybannha.html">La Liga</a></li>
+							<li><a href="italia.html">Series A</a></li>
+							<li><a href="phap.html">Ligue I</a></li>
+							<li><a href="duc.html">BundesLiga</a></li>
+						</ul>
+					</li>
+					<li><a href="tintuc.html">Tin tức</a></li>
+					<li><a href="video.html">Video</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+  <div>
+		<div class="row">
+      <div class="col-md-4">
+        <img src="LogoCLB\Premier League\watford.png" style="display: block; margin-left: auto; margin-right: auto;" width="100px" height="auto">
+      </div>
+      <div class="col-md-4">
+        <h2 style="text-align: center">Watford FC</h2>
+        <p style="text-align: center">Sân vận động :<strong> Vicarage Road Stadium </strong></p>
+        <p style="text-align: center">Huấn luyện viên trưởng :<strong> Javi Garcia </strong></p>
+      </div>
+      <div class="col-md-4">
+        <img src="AoDau/Premier League/watford.png" style="display: block; margin-left: auto; margin-right: auto;" width="100px" height="auto">
+      </div>
+    </div>
+    <!--/. header -->
+
+
+    <div>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs nav-justified " role="tablist">
+        <li role="presentation"><a href="#home" aria-controls="home" role="tab"
+            data-toggle="tab">Các cầu thủ</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+            data-toggle="tab">Kết quả và lịch thi đấu</a></li>
+				<li role="presentation"><a href="#overview" aria-controls="overview" role="tab"
+		            data-toggle="tab">Giới thiệu</a></li>
+				<li role="presentation"><a href="#statistics" aria-controls="statistics" role="tab"
+				            data-toggle="tab">Thống kê</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+
+					<div class="panel panel-default">
+						<div class="panel-heading" style="background: #996633; color: white;">
+							<p align="center"><strong>Thủ môn</strong></p>
+						</div>
+						<table class="table">
+							<tbody>
+								<tr>
+										<th style="width: 25%">
+												<p align="center">Số áo</p>
+										</th>
+										<th style="width: 50%">
+												<p align="center">Tên</p>
+										</th>
+										<th style="width: 25%">
+												<p align="center">Quốc tịch</p>
+										</th>
+								</tr>
+									<%results[0].forEach(function(rows){%>
+									<tr>
+										<td><p align="center"><%=rows.soao%></p></td>
+										<td><p align="center"><%=rows.ten%></p></td>
+										<td><p align="center"><%=rows.quoctich%></p></td>
+									</tr>
+									<%})%>
+							</tbody>
+						</table>
+					</div>
+					<!-- Thủ môn -->
+					<div class="panel panel-default">
+						<div class="panel-heading" style="background: #3333ff; color: white;">
+							<p align="center"><strong>Hậu vệ</strong></p>
+						</div>
+						<table class="table">
+							<tbody>
+								<tr>
+										<th style="width: 25%">
+												<p align="center">Số áo</p>
+										</th>
+										<th style="width: 50%">
+												<p align="center">Tên</p>
+										</th>
+										<th style="width: 25%">
+												<p align="center">Quốc tịch</p>
+										</th>
+								</tr>
+									<%results[1].forEach(function(rows){%>
+									<tr>
+										<td><p align="center"><%=rows.soao%></p></td>
+										<td><p align="center"><%=rows.ten%></p></td>
+										<td><p align="center"><%=rows.quoctich%></p></td>
+									</tr>
+									<%})%>
+							</tbody>
+						</table>
+					</div>
+					<!-- Hậu vệ -->
+					<div class="panel panel-default">
+						<div class="panel-heading" style="background: #00cc00; color: white;">
+							<p align="center"><strong>Tiền vệ</strong></p>
+						</div>
+						<table class="table">
+							<tbody>
+								<tr>
+										<th style="width: 25%">
+												<p align="center">Số áo</p>
+										</th>
+										<th style="width: 50%">
+												<p align="center">Tên</p>
+										</th>
+										<th style="width: 25%">
+												<p align="center">Quốc tịch</p>
+										</th>
+								</tr>
+									<%results[2].forEach(function(rows){%>
+									<tr>
+										<td><p align="center"><%=rows.soao%></p></td>
+										<td><p align="center"><%=rows.ten%></p></td>
+										<td><p align="center"><%=rows.quoctich%></p></td>
+									</tr>
+									<%})%>
+							</tbody>
+						</table>
+					</div>
+					<!-- Tiền vệ -->
+					<div class="panel panel-default">
+						<div class="panel-heading" style="background: #cc0000; color: white;">
+							<p align="center"><strong>Tiền đạo</strong></p>
+						</div>
+						<table class="table">
+							<tbody>
+									<tr>
+											<th style="width: 25%">
+													<p align="center">Số áo</p>
+											</th>
+											<th style="width: 50%">
+													<p align="center">Tên</p>
+											</th>
+											<th style="width: 25%">
+													<p align="center">Quốc tịch</p>
+											</th>
+									</tr>
+								<%results[3].forEach(function(rows){%>
+								<tr>
+									<td><p align="center"><%=rows.soao%></p></td>
+									<td><p align="center"><%=rows.ten%></p></td>
+									<td><p align="center"><%=rows.quoctich%></p></td>
+								</tr>
+								<%})%>
+							</tbody>
+						</table>
+					</div>
+					<!-- Tiền đạo -->
+
+        </div>
+
+				<div role="tabpanel" class="tab-pane" id="profile">
+          <table class="table table-striped">
+            <tr>
+              <th style="width: 25%"><p align="center">Vòng</p></th>
+              <th style="width: 50%"><p align="center">Kết quả</p></th>
+              <th style="width: 25%"><p align="center">Trạng thái</p></th>
+            </tr>
+						<%results[4].forEach(function(rows){%>
+						<tr>
+							<td><p align="center"><%=rows.vong%></p></td>
+							<td>
+								<p align="center">
+									<div class="row">
+									  <div class="col-md-4" align="center"><img src="<%=rows.logo_doibong%>" width="auto" height="20px">&nbsp&nbsp<%=rows.doibong%></div>
+									  <div class="col-md-4" align="center">&nbsp&nbsp<%=rows.banthang%>&nbsp-&nbsp<%=rows.banbai%>&nbsp&nbsp</div>
+									  <div class="col-md-4" align="center"><img src="<%=rows.logo_doithu%>" width="auto" height="20px">&nbsp&nbsp<%=rows.doithu%></div>
+									</div>
+								</p>
+							</td>
+							<td><p align="center">FT</p></td>
+						</tr>
+						<%})%>
+          </table>
+        </div>
+
+				<div role="tabpanel" class="tab-pane" id="overview">
+						<h2 align="center"> Watford F.C</h2>
+						<p class="lead"><strong>Câu lạc bộ bóng đá Watford</strong> (Tiếng Anh:Watford Football Club, Watford F.C. hay Watford) là câu lạc bộ bóng đá chuyên nghiệp của Anh đặt trụ sở tại Hertfordshire, Anh. Đội bóng còn được biết đến với biệt danh the Hornets. Thành lập năm 1881 với tên Watford Rovers, Câu lạc bộ tham gia FA Cup lần đầu tiên năm 1886, và giải Southern League một thập kỉ sau đó.
+
+Sau khi kết thúc mùa 1914-15 với chức vô địch giải Southern League dưới sự dẫn dắt của Harry Kent, Watford gia nhập giải Football League (năm 1920). Giai đoạn đầu mới thành lập, câu lạc bộ phải thi đấu ở nhiều địa điểm khác nhau trước khi chuyển đến trụ sở lâu dài tại Vicarage Road vào năm 1922; nơi này ngày nay vẫn là đại bản doanh của câu lạc bộ.[4] Phần lớn thời gian 50 năm sau đó, Watford chơi ở các hạng đấu thấp của Football League; trong giai đoạn này, câu lạc bộ cũng nhiều lần thay đổi thiết kế và màu sắc trang phục thi đấu.[</p>
+						<p class="lead"> Thông tin chi tiết có thể xem tại trang chủ đội bóng: <a href="https://www.watfordfc.com/"> https://www.watfordfc.com/ </a></p>
+						<p class="lead"> Theo dõi các hoạt động của đội bóng tại:</p>
+						<div class="row">
+						  <div class="col-xs-6 col-sm-3" align="center"><a href="https://www.facebook.com/watfordfc/"><img src="Icon/facebook.png" width="auto" height="50px"></a></div>
+						  <div class="col-xs-6 col-sm-3" align="center"><a href="https://twitter.com/watfordfc"><img src="Icon/twitter.png" width="auto" height="50px"></a></div>
+						  <div class="col-xs-6 col-sm-3" align="center"><a href="https://www.instagram.com/watfordfcofficial/"><img src="Icon/instagram.png" width="auto" height="50px"></a></div>
+						  <div class="col-xs-6 col-sm-3" align="center"><a href="https://www.youtube.com/user/WatfordFCofficial"><img src="Icon/youtube.png" width="auto" height="50px"></a></div>
+						</div>
+				</div>
+
+				<div role="tabpanel" class="tab-pane" id="statistics">
+					<div class="row">
+					  <div class="col-md-6" align="center">
+							<h3 align="center">Tỷ lệ thắng sân nhà</h3>
+							<div id="sannha"></div>
+						</div>
+					  <div class="col-md-6" align="center">
+							<h3 align="center">Tỷ lệ thắng sân khách</h3>
+							<div id="sankhach"></div>
+						</div>
+					</div>
+					<p>&nbsp&nbsp</p>
+					<div class="row">
+						<%results[6].forEach(function(rows){%>
+						  <div class="col-xs-6 col-sm-3" align="center">
+								<img src="Icon/goal.png" width="auto" height="100px">
+								<h3 align="center">Bàn thắng: <%=rows.bt%></h3>
+							</div>
+							<%})%>
+							<%results[5].forEach(function(rows){%>
+						  <div class="col-xs-6 col-sm-3" align="center">
+								<img src="Icon/yellow.png" width="auto" height="100px">
+								<h3 align="center">Thẻ vàng: <%=rows.tv%></h3>
+							</div>
+						  <div class="col-xs-6 col-sm-3" align="center">
+								<img src="Icon/red.png" width="auto" height="100px">
+								<h3 align="center">Thẻ đỏ: <%=rows.td%></h3>
+							</div>
+							<%})%>
+							<%results[6].forEach(function(rows){%>
+						  <div class="col-xs-6 col-sm-3" align="center">
+								<img src="Icon/goal.png" width="auto" height="100px">
+								<h3 align="center">Bàn thua: <%=rows.bb%></h3>
+							</div>
+							<%})%>
+					</div>
+       	</div>
+  </div>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	</body>
+
+</html>

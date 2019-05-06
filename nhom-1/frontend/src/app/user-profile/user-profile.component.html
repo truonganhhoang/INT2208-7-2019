@@ -1,0 +1,99 @@
+<mat-sidenav-container style="margin: 15px 80px 15px 80px;">
+    <mat-sidenav mode="side" opened style="width: 200px">
+        <mat-card>
+            <div class="profile-avatar" *ngIf="user.avatarUrl" mat-card-avatar [style.backgroundImage]="'url('+ user.avatarUrl +')'">
+                <button mat-flat-button color="primary" *ngIf="isMyProfile" style="margin: 100px 45px; visibility: hidden;"  (click)="updateAvatarDialog()">
+                    Update
+                </button>
+            </div>
+            <mat-card-title style="margin-top: 20px">{{user.name}}</mat-card-title>
+            <mat-card-subtitle>{{user.username}}</mat-card-subtitle>
+        </mat-card>
+
+        <mat-list *ngIf="!isMyProfile">
+            <mat-list-item *ngIf="relation==false">
+                <button mat-button class="profile-sideButton" (click)="addFriend()">
+                    Add Friend
+                </button>
+            </mat-list-item>
+            <mat-list-item *ngIf="relation=='friend'">
+                <button mat-button class="profile-sideButton" (click)="rejectFriend()">
+                    Unfriend
+                </button>
+            </mat-list-item>
+            <mat-list-item *ngIf="relation=='sent request'">
+                <button mat-button class="profile-sideButton" (click)="rejectFriend()">
+                    Cancel Friend Request
+                </button>
+            </mat-list-item>
+            <mat-list-item *ngIf="relation=='wait for accept'">
+                <button mat-button class="profile-sideButton" (click)="rejectFriend()">
+                    Reject Friend Request
+                </button>
+            </mat-list-item>
+            <mat-list-item *ngIf="relation=='wait for accept'">
+                <button mat-button class="profile-sideButton" (click)="acceptFriend()">
+                    Accept Friend Request
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="profile-sideButton" (click)="routeToMessage()">
+                    Message
+                </button>
+            </mat-list-item>
+        </mat-list>
+
+        <mat-list *ngIf="isMyProfile">
+            <mat-list-item>
+                <button mat-button class="profile-sideButton" (click)="editProfileDialog()">
+                    Edit Profile
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="profile-sideButton">
+                    Change Password
+                </button>
+            </mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content style="height: 880px">
+        <mat-tab-group dynamicHeight>
+            <mat-tab label="Posts"> <app-home></app-home> </mat-tab>
+            <mat-tab label="Info">
+                <mat-card>
+                    <mat-list>
+                        <mat-list-item>Full name: {{user.name}}</mat-list-item>
+                        <mat-divider></mat-divider>
+                        <mat-list-item>Birthday: {{getBirthday()}}</mat-list-item>
+                        <mat-divider></mat-divider>
+                        <mat-list-item>Gender: {{getGender()}}</mat-list-item>
+                    </mat-list>
+                </mat-card>
+            </mat-tab>
+            <mat-tab label="Friends" *ngIf="isMyProfile">
+                <mat-checkbox style="margin: 20px" color="primary" [(ngModel)]='showFriends["friend"]'>Friends</mat-checkbox>
+                <mat-checkbox style="margin: 20px" color="primary" [(ngModel)]='showFriends["wait for accept"]'>Other's Requests</mat-checkbox>
+                <mat-checkbox style="margin: 20px" color="primary" [(ngModel)]='showFriends["sent request"]'>My Requests</mat-checkbox>
+                <div style="margin: 10px" *ngFor="let friend of friends">
+                    <mat-card style="width: 90%; height: 90%;" *ngIf='showFriends[friend.relation]'>
+                        <a routerLink="../{{friend.user.username}}">
+                            <mat-card-header>
+                                <div mat-card-avatar [style.backgroundImage]="'url('+ friend.user.avatarUrl +')'" style="background-size: contain"></div>
+                                <mat-card-title>{{friend.user.name}}</mat-card-title>
+                                <mat-card-subtitle>{{friend.relation}}</mat-card-subtitle>
+                            </mat-card-header>
+                        </a>
+                        <mat-card-actions>
+                            <button mat-button *ngIf='friend.relation == "friend"' (click)='rejectFriend(friend.user.username)'>Unfriend</button>
+                            <button mat-button *ngIf='friend.relation == "wait for accept"' (click)='acceptFriend(friend.user.username)'>Accept</button>
+                            <button mat-button *ngIf='friend.relation == "wait for accept"' (click)='rejectFriend(friend.user.username)'>Reject</button>
+                            <button mat-button *ngIf='friend.relation == "sent request"' (click)='rejectFriend(friend.user.username)'>Cancel Request</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

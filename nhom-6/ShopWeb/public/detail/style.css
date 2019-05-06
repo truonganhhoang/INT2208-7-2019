@@ -1,0 +1,44 @@
+.left{
+	float: left;
+	width: 20%;
+	padding-top: 15px;
+}
+
+.right{
+	margin-left: 21%;
+	padding-top: 15px;
+}
+
+.contents{
+	padding: 15px 45px;
+	border: 2px solid red;
+	border-radius: 25px;
+}
+
+.head {
+	float: center;
+	text-align: center;
+}
+
+.head h3 {
+	font-family: 'ambleregular';
+	color:#383838;
+	text-transform: uppercase;
+}
+
+/**** Cart ****/
+.cart{
+	float:right;
+	position: relative;
+	padding-right:40px;
+	margin-top:20px;
+}
+.cart p{
+	font-size:0.9em;
+	color:#303030;
+	display:inline-block;
+}
+.cart p span{
+	font-size:1.5em;
+	color:#E4292F;
+}

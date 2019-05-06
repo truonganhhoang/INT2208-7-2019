@@ -1,0 +1,32 @@
+
+<!-- <div #chatbox style="overflow-y:scroll; height:500px;">
+  <app-message *ngFor="let message of messageShow" [message]="message"></app-message>
+</div>
+<div class="type_msg">
+  <div class="input_msg_write">
+    <input type="text" class="write_msg" placeholder="Type a message" #messText
+      (keydown.enter)="sendMessage($event,messText)" style="white-space: pre-line;"  maxlength="300"/>
+    <button class="msg_send_btn" type="button" (click)="sendMessageWithClick(messText)">
+      <i class="fas fa-angle-double-right"></i>
+    </button>
+  </div>
+</div> -->
+
+
+  <div class="contact-profile">
+    <img (click)="routeTo()" [src]="selectedMessageLoader.avatarUrl" style="width: 40px; height: 40px; cursor: pointer;" alt="" />
+    <p>{{selectedMessageLoader.name}}</p>
+  </div>
+  <div #chatbox class="messages">
+    <p style="text-align: center; color:blue; font-size:13px; cursor: pointer;" (click)="loadMoreChat()" *ngIf="messageLeft()">Load more message</p>
+    <ul style="padding-left: 0px;" >
+      <app-message *ngFor="let message of messageShow" [message]="message"></app-message>
+    </ul>
+  </div>
+  <div class="message-input">
+    <div class="wrap">
+    <input type="text" (keydown.enter)="sendMessage($event,messText)" #messText placeholder="Write your message..." style="border-radius: 10px; margin-left: 6px; width:90%; margin-top: 5px;"/>
+    <button (click)="sendMessageWithClick(messText)" class="submit"><i class="fas fa-angle-double-right"></i></button>
+    </div>
+  </div>
+
