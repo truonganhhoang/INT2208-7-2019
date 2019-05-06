@@ -28,7 +28,7 @@ Bài toán đặt ra là cần ứng dụng cho người dùng chia sẻ, kết 
 * Là một người dùng, tôi muốn thay đổi thông tin của mình để đáp ứng yêu cầu của mình.
 * Là một người dùng, tôi muốn kết bạn với mọi người để tiện biết được họ đang hoạt động như thế nào.
 * Là một người dùng, tôi muốn nhắn tin trực tiếp với bạn bè để có thể chia sẻ với họ về những điều đang diễn ra.
-* Là một người dùng, khi tôi quên mật khẩu thì tôi có quền lấy lại mật khẩu qua email.
+* Là một người dùng, khi tôi quên mật khẩu thì tôi muốn lấy lại mật khẩu qua email để tiếp tục sử dụng tài khoản của mình.
 
 
 
