@@ -19,7 +19,7 @@
 2.  Chọn quy trình phát triển Scrum (process).
 3.  Thiết kế cấu trúc cơ sở dữ liệu và sơ đồ lớp (high level design).
 4.  Sử dụng mô hình MVC trên framework Laravel (low level design).
-5.  Viết mã ([chi tiết](link)
+5.  Viết mã 
 6.  Kiểm thử hộp trắng rồi kiểm thử hộp đen từng phần và kiểm thử hệ thống đánh giá (testing)
    ### Hướng dẫn sử dụng :
 
@@ -27,9 +27,11 @@
 
 2 .Gõ vào ô tìm kiếm địa chỉ sau:  [link.com](https://link).
 
-3 .Chọn vào mục CONTACT US ![](Screenshot_2019-05-06 Wolf Store.png)
+3 .Chọn vào mục CONTACT US 
+![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store.png)
 
-rồi điền đầy đủ thông tin rồi submit.![](Screenshot_2019-05-06 Wolf Store(5).png)
+rồi điền đầy đủ thông tin rồi submit.
+![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store(5).png)
 
 
 
@@ -39,7 +41,7 @@ rồi điền đầy đủ thông tin rồi submit.![](Screenshot_2019-05-06 Wol
 2.  Chọn quy trình phát triển Scrum (process).
 3.  Thiết kế cấu trúc cơ sở dữ liệu và sơ đồ lớp (high level design).
 4.  Sử dụng mô hình MVC trên framework Laravel (low level design).
-5.  Viết mã ([chi tiết](link)
+5.  Viết mã 
 6.  Kiểm thử hộp trắng rồi kiểm thử hộp đen từng phần và kiểm thử hệ thống đánh giá (testing)
    ### Hướng dẫn sử dụng :
 
@@ -47,11 +49,14 @@ rồi điền đầy đủ thông tin rồi submit.![](Screenshot_2019-05-06 Wol
 
 2 .Gõ vào ô tìm kiếm địa chỉ sau:  [link.com](https://link).
 
-3 .Đăng nhập tài khoản nếu có, nếu không tài khoản thì bạn đăng ký tài khoản mới.![alt](Screenshot_2019-05-06 Wolf Store (2).png)
+3 .Đăng nhập tài khoản nếu có, nếu không tài khoản thì bạn đăng ký tài khoản mới.
+![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store%20(2).png)
+![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store(4).png)
+4 .Khi lựa chọn được sản phẩm phù hợp thêm vào giỏ hàng.
+![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store.png)
 
-4 .Khi lựa chọn được sản phẩm phù hợp thêm vào giỏ hàng.![alt](Screenshot_2019-05-06 Wolf Store.png)
-
-5 .Chọn vào mục Shopping Cart hoặc biểu tượng để xem sản phẩm có trong giỏ hàng nếu đã ưng ý thì chọn OK để thanh toán.![alt](Screenshot_2019-05-06 Wolf Store(3).png)
+5 .Chọn vào mục Shopping Cart hoặc biểu tượng để xem sản phẩm có trong giỏ hàng nếu đã ưng ý thì chọn OK để thanh toán.
+![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store(3).png)
  
 
 
