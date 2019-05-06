@@ -22,6 +22,7 @@
                             wordEV :     $('#wordEV').val(),
                             wordVE :     $('#wordVE').val(),
                             wordVV :     $('#wordVV').val(),
+                           
                             dictionary : $('#dictionary').val()
                         },
                         success : function (result){
@@ -34,11 +35,12 @@
 <body >
 <!-- Begin: HEADER -->
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark nav-justified nav-pills" role="navigation">
-<a class="navbar-brand" href="./index.php">Dictionary</a>
+<a class="navbar-brand" href="./index.php"><img src="./img/icon.png"></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
 </button>
-<div class="collapse navbar-collapse" id="navbarNavDropdown">
+<div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-left:130px">
+	<!-- 3 button trong menu -->
     <ul class="navbar-nav mr-auto nav-pills">
         <li class="nav-item">
             <a class="nav-link active" href="./index.php">Tra từ online</a>
@@ -60,34 +62,37 @@
 <!-- BODY -->
 <div class="container">
     <div align="center">
-        <div style="margin-top:5%"><img src="img/image.png" alt="Forest"></div>
-        <div class="input-group" id="input" style="margin-top:5%">                            
-            <input style="color: black;width:100% " type = "text" id = "wordEV" class="input_box"  placeholder=" Nhập từ cần tra" required/> 
-            <input style="color: black;width:100% " type = "text" id = "wordVE" class="input_box hidden"  placeholder=" Nhập từ cần tra" required/> 
-            <input style="color: black;width:100% " type = "text" id = "wordVV" class="input_box hidden"   placeholder=" Nhập từ cần tra" required/> 
-				<select id = "dictionary" name = "dictionary"  >
+		<!-- LOGO cho trang web -->
+        <div style="margin-top:2%"><img src="img/logo2.png" alt="Forest"></div>
+		<!-- Phần body của giao diện -->
+        <div class="input-group" id="input" style="margin-top:2%">                            
+            <input style="color: #DF7401;width:100% " type = "text" id = "wordEV" class="input_box"  placeholder=" Nhập từ cần tra" required/> 
+            <input style="color: #DF7401;width:100% " type = "text" id = "wordVE" class="input_box hidden"  placeholder=" Nhập từ cần tra" required/> 
+            <input style="color: #DF7401;width:100% " type = "text" id = "wordVV" class="input_box hidden"   placeholder=" Nhập từ cần tra" required/>
+            
+                <select id = "dictionary" name = "dictionary"  >
                     <option value="EV" >Anh-Việt</option>
                     <option value="VE" >Việt-Anh</option>
                     <option value="VV" >Việt-Việt</option>
-                </select>                                  
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search">Search</button>
-			
+                    
+                </select>                                      
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search">Search</button>                    
         </div>                                  
     </div>
     <!-- print result -->
-    <div style="margin-top:1.5cm;background-color:lightgreen" id="result">            
+    <div style="margin-top:1cm;background-color:powderblue" id="result">            
         <p id="result"></p>
     </div>        
-</div>   
-	 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>            
+</div>                  
+     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>            
 <script>
             $("#dictionary").change(function (){
                 var type = $(this).val();
                 $(".input_box:not(.hidden)").addClass("hidden");
-                $(" #word"+type).removeClass("hidden");
+                $("#word"+type).removeClass("hidden");
             });
             $.getJSON("./json/EV.json", function(tags1) {
-                $( " #wordEV" ).autocomplete({
+                $( "#wordEV" ).autocomplete({
                     delay: 100,
                     source: function( request, response ) {
                         var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
@@ -98,7 +103,7 @@
                 });
             });
             $.getJSON("./json/VE.json", function(tags2) {
-                    $( " #wordVE" ).autocomplete({
+                    $( "#wordVE" ).autocomplete({
                         delay: 100,
                         source: function( request, response ) {
                             var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
@@ -109,7 +114,7 @@
                     });
                 });
             $.getJSON("./json/VV.json", function(tags3) {
-                $( " #wordVV" ).autocomplete({
+                $( "#wordVV" ).autocomplete({
                     delay: 100,
                     source: function( request, response ) {
                         var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
@@ -119,19 +124,24 @@
                     }                    
                 });
             });        
+           
+
             $('.input_box').keypress(function(e){
             var p = e.which;
             if(p==13){
                     load_ajax();
                 };
             });
+
             $('#search').click(function (){
                 $('.loading').html(' <img src="img/ajax-loader.gif" ');
                 load_ajax();
             });
+
             $("#dictionary").change();
             // When the user scrolls down 20px from the top of the document, show the button
             window.onscroll = function() {scrollFunction()};
+
             function scrollFunction() {
                 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                     document.getElementById("myBtn").style.display = "block";
@@ -139,15 +149,16 @@
                     document.getElementById("myBtn").style.display = "none";
                 }
             }
+
             // When the user clicks on the button, scroll to the top of the document
             function topFunction() {
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
             }
-</script>
+</script>    
     <!-- END BODY -->
     <!--FOOTER-->
-    <footer class="container-fluid text-center starter-template" style="margin-top:250px">
+    <footer class="container-fluid text-center starter-template" style="margin-top:100px">
         <p style="color: #084B8A"><b>Contact Me</b></p>       
         <a href="https://github.com/ThaoIE3/INT2208-7-2019" class="fa fa-github fa-3x" title="Mã nguồn ứng dụng" target="_blank"></a>
         <p><span style="color: #084B8A">Copyright &copy; <a href="./index.php">Nhóm 19-CNPM 2209_7</a></span></p>
