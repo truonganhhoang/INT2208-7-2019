@@ -53,7 +53,6 @@ export class PostComponent implements OnInit {
           this.post.likes.push(notify.payload.sender);
         }
       }
-
     });
   }
 

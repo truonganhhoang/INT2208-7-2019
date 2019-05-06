@@ -26,6 +26,6 @@
   <textarea  *ngIf="commentShow" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
     placeholder="Your comment" style="overflow-y:hidden; border-radius: 5px; margin-left: 10px; width: 100%; border:none;"
     (keydown.enter)="submitComment($event)"></textarea>
-  <hr style="margin-top:0px" *ngIf="commentShow">
+  <hr style="margin-top:2px; margin-bottom:2px;" *ngIf="commentShow">
   <app-comment *ngFor="let comment of getComments()" [comment]="comment" [post]="post"></app-comment>
 </mat-card>

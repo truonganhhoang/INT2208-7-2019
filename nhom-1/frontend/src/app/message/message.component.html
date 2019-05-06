@@ -10,10 +10,7 @@
 <!-- <img [src]="avatarUrl" alt="sunil"> -->
 
 
-<li   [class.sent]="incoming" [class.replies]="outgoing">
+<li [class.sent]="incoming" [class.replies]="outgoing">
   <img [src]="avatarUrl" *ngIf="incoming" alt="" />
   <p>{{message.content}}</p>
 </li>
-<!-- <li class="replies">
-  <p>When you're backed against the wall, break the god damn thing down.</p>
-</li> -->

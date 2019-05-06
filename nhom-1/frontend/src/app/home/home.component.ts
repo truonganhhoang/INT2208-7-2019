@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
         if (this.route.snapshot.url[0]) {
             if (this.route.snapshot.url[0].path == 'users') {
-                this.http.get<any>(`${environment.apiUrl}/api/get-own-post`).subscribe((res)=>{
+                this.http.post<any>(`${environment.apiUrl}/api/get-post-from-user`, {userPost: this.route.snapshot.url[1].path}).subscribe((res)=>{
                     if (res.state) {
                         console.log(res);
                         for (let i = 0; i < res.posts.length; i++) {
