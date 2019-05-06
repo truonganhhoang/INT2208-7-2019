@@ -11,7 +11,7 @@
 - [x] Thiết lập mô hình MVC cho Tab "Dịch từ online".
 * Liên kết khóa học: [MVC](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.kehlqoeo6d9r)
 * Liên kết git: [Index](https://github.com/ThaoIE3/INT2208-7-2019/blob/master/nhom-19/DictionaryWeb/index.php)
-- [x] Làm việc với cơ sở dữ liệu, đọc và lấy dữ liệu từ cơ sở dữ liệu.
+- [x] Đọc và lấy dữ liệu từ cơ sở dữ liệu.
 * Liên kết khóa học: [Use algorithms](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.y0z4iaquxeaf)
 * Liên kết git: [Database](https://github.com/ThaoIE3/INT2208-7-2019/tree/master/nhom-19/DictionaryWeb/EV) và [Handle with database](https://github.com/ThaoIE3/INT2208-7-2019/blob/master/nhom-19/DictionaryWeb/actions.php)
 - [x] Kiểm tra phần hiển thị nghĩa của từ trên giao diện tab "tra từ online".
