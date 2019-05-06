@@ -6,6 +6,7 @@ import LoginPage from '../Login/Login';
 import RegisterPage from '../Signup/Reg';
 import DashboardPage from '../Components/dashBoard';
 import Page from '../Components/Home';
+import ForgotPassword from '../Components/ForgotPassword';
 
 
 function isLoggedIn() {
@@ -31,6 +32,7 @@ export default (
     <Route path="/home" component={Page}/>
     <Route path='login' component={LoginPage} />
     <Route path='register' component={RegisterPage} />
+    <Route path='forgot-password' component={ForgotPassword}/>
     <Route path='dashboard' component={DashboardPage} onEnter={requireAuth} />
   </Router>
 );

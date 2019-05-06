@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {browserHistory } from 'react-router';
+import {browserHistory, Link} from 'react-router';
 import { connect } from 'react-redux';
 
 import Menu from '../Components/Menu_';
@@ -53,11 +53,11 @@ class LoginPage extends Component {
           <Form.Item>
             <div className="login-button">
                 <Checkbox>Remember me</Checkbox> 
-                <a className="login-form-forgot" href="">Forgot password</a><br></br>
+                <Link className="login-form-forgot" to="forgot-password">Forgot password</Link><br></br>
                 <Button type="primary" htmlType="submit" className="login-form-button">
                     Log in
                 </Button><br></br>
-                Or <a href="/register">Signup now!</a>
+                Or <Link to="/register">Signup Now</Link>
             </div>
         </Form.Item>
 

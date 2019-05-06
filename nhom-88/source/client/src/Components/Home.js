@@ -7,6 +7,8 @@ import {
 import moment from 'moment';
 
 
+
+
 class Page extends React.Component {
   state = {
     likes: 0,

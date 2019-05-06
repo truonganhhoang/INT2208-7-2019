@@ -66,7 +66,7 @@ class RegisterPage extends Component {
           </Button>
 
           <br></br>
-          Or <a href="/login">Login now!</a>
+          Or <Link to="/login">Login</Link>
 
 
         </Form>

@@ -1,13 +1,16 @@
 import React from 'react';
 import { Menu, Icon, Input, Spin, Badge } from 'antd';
+import {Link} from 'react-router';
 
 const Search = Input.Search;
 const MenuItem = Menu.Item;
 
 class MenuBar extends React.Component {
+
+
   state = {
     current: 'mail',
-    isLogin: true
+    isLogin: false
   }
 
   handleClick = (e) => {
@@ -32,7 +35,7 @@ class MenuBar extends React.Component {
 
         <Menu.Item key="app">
           {this.state.isLogin ? <Badge dot><Icon type="message" /></Badge> :
-          <Icon type="message" />} Messgage
+          <Icon type="message"/>} Messgage
         </Menu.Item>
 
         <MenuItem key="search">
