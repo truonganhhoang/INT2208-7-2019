@@ -20,13 +20,22 @@
   - Kiểm tra lỗi hệ thống, đưa ra phương án khắc phục.
 * Hướng dẫn sử dụng:
 1. Phần đăng nhập, đăng xuất:
+    - Sử dụng Auth trong laravel để thực hiện chức năng này.
     - Khi chưa đăng nhập thì trên thanh header hiện button 'login'
-      ![Home](home.png)
     - Khi đăng nhập thành công thanh header hiện button 'logout' và tên của người đăng nhập.
+      ![Home](home.png)
     - Khi đăng nhập mới sử dụng được 1 số tính năng như đặt hàng để ghi đơn hàng vào database.
     ![login](login.png)
+    - Khi đăng nhập, sau khi thanh toán thì hệ thống sẽ lấy toàn bộ thông tin của khách hàng như tên, số điện thoại, địa chỉ khi khách hàng khai báo khi tạo tài khoản để gửi hàng cho khách hàng.
+    - Trong khi đăng nhập, chỉ cho đăng nhập tài khoản của khách hàng trong này và không cho đăng nhập tài khoản của admin.
+    - Khi đăng xuất thì thanh công cụ lại hiện lên chữ login như ban đầu.
+    - Các mặt hàng trong giỏ hàng trước đó sẽ tính lại từ đầu để không gây xung đột trong các tài khoản.
 2. Phần đăng kí:
     - Chức năng đăng kí gồm một số thông tin như tên, Email, Số điện thoại, địa chỉ.
     ![register](register.png)
     - Chức năng đăng kí khi ghi vào database sẽ dùng hàm Hash trước khi lưu do đó sẽ không lo về mất an toàn của tài khoản.
+    - Email người dùng nhập vào khi đăng kí sẽ chỉ nhận định dạng email, nếu không đúng định dạng sẽ yêu cầu nhập lại.
+    - Mật khẩu người dùng nhập vào phải có độ dài từ 6 đến 12 kí tự.
+    - Phần nhập lại mật khẩu phải giống với mật khẩu nhập trước đó nếu không sẽ không cho đăng kí và bắt người dùng nhập lại cho đúng.
+    - Ngoài ra tất cả các trường nhập vào trong khi đăng kí đều là bắt buộc phải không ghi thiếu thông tin nào thì mới đăng kí thành công tài khoản khách hàng.
  
