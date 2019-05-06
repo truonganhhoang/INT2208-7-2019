@@ -1,5 +1,5 @@
 ﻿### Tên ứng dụng: Trao đổi thông tin hàng hóa
- #### Tài liệu báo cáo bài tập lớn kỹ thuật phần mềm ([link](https://docs.google.com/document/d/1dPdDlYUKLQvqccmEBk3YseTtxiGjor2AmcRTCa4cwjU/edit))
+ #### Tài liệu báo cáo bài tập lớn kỹ thuật phần mềm ([link](https://drive.google.com/open?id=148LH1Xv8UDWyYW0mRfJcB1WBXyC5PyeR))
 ### Nhóm: 14
 #### Thành viên:
 >* Nguyễn Văn Tuấn
