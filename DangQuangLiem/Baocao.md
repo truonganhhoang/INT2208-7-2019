@@ -5,7 +5,7 @@
 
 # Báo cáo nhập môn học Công nghệ phần mềm
 
-* Hoàn thành khóa học trên edx
+* Hoàn thành khóa học trên edx ![](SoftEng1x.jpg)
 * Bài tập nhóm: **Dự án Web bán giày online**
 * User story:Là một quản trị viên, tôi muốn có một trang dành riêng cho người bán quản lý thông tin về sản phẩm đang được bán của họ để họ có thể cập nhập thông tin chính về các sán phẩm cho người mua.[chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/issues/9)
   1. Xây dựng giao diện:
@@ -27,3 +27,4 @@
     - Rà soát các lỗi mã nguồn.
     - đảm bảo các chức năng hoạt động một cách chính xác.
  * Hướng dẫn sử dụng:
+
