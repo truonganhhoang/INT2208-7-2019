@@ -1,0 +1,92 @@
+<!-- <mat-list-item *ngFor = "let chatRoom of roomList;" (click)="selectChatRoom(chatRoom)">{{chatRoom.sender}}</mat-list-item> -->
+
+
+<!-- <app-chatlist-item *ngFor = "let chatRoom of roomList" (click)="selectChatRoom(chatRoom)" [chatlistItem]="chatRoom" [selected]="checkIfRoomSelected(chatRoom)">
+
+</app-chatlist-item> -->
+
+
+    <div id="profile">
+        <div class="wrap">
+            <img id="profile-img" [src]="userInfo.avatarUrl" class="online" alt="" />
+            <p>{{userInfo.name}}</p>  
+        </div>
+    </div>
+    <div id="contacts">
+        <ul>
+            <app-chatlist-item *ngFor = "let chatRoom of roomList" (click)="selectChatRoom(chatRoom)" [chatlistItem]="chatRoom" [selected]="checkIfRoomSelected(chatRoom)"></app-chatlist-item>
+        </ul>
+    </div>
+
+    <!-- <li class="contact active">
+        <div class="wrap">
+            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+            <div class="meta">
+                <p class="name">Harvey Specter</p>
+            </div>
+        </div>
+    </li>
+    <li class="contact">
+        <div class="wrap">
+            <img src="http://emilcarlsson.se/assets/rachelzane.png" alt="" />
+            <div class="meta">
+                <p class="name">Rachel Zane</p>
+            </div>
+        </div>
+    </li>
+    <li class="contact">
+        <div class="wrap">
+            <img src="http://emilcarlsson.se/assets/donnapaulsen.png" alt="" />
+            <div class="meta">
+                <p class="name">Donna Paulsen</p>
+            </div>
+        </div>
+    </li>
+    <li class="contact">
+        <div class="wrap">
+            <img src="http://emilcarlsson.se/assets/jessicapearson.png" alt="" />
+            <div class="meta">
+                <p class="name">Jessica Pearson</p>
+            </div>
+        </div>
+    </li>
+    <li class="contact">
+        <div class="wrap">
+            <img src="http://emilcarlsson.se/assets/haroldgunderson.png" alt="" />
+            <div class="meta">
+                <p class="name">Harold Gunderson</p>
+            </div>
+        </div>
+    </li>
+    <li class="contact">
+        <div class="wrap">
+            <img src="http://emilcarlsson.se/assets/danielhardman.png" alt="" />
+            <div class="meta">
+                <p class="name">Daniel Hardman</p>
+            </div>
+        </div>
+    </li>
+    <li class="contact">
+        <div class="wrap">
+            <img src="http://emilcarlsson.se/assets/katrinabennett.png" alt="" />
+            <div class="meta">
+                <p class="name">Katrina Bennett</p>
+            </div>
+        </div>
+    </li>
+    <li class="contact">
+        <div class="wrap">
+            <img src="http://emilcarlsson.se/assets/charlesforstman.png" alt="" />
+            <div class="meta">
+                <p class="name">Charles Forstman</p>
+            </div>
+        </div>
+    </li>
+    <li class="contact">
+        <div class="wrap">
+            <img src="http://emilcarlsson.se/assets/jonathansidwell.png" alt="" />
+            <div class="meta">
+                <p class="name">Jonathan Sidwell</p>
+            </div>
+        </div>
+    </li> -->

@@ -1,0 +1,61 @@
+.card {
+    padding-top: 6%;
+}
+
+.btn-primary {
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 20%;
+}
+
+.navbar-custom {
+    background-color: #3c5fe7;
+    margin-bottom: 1%;
+}
+
+.navbar-custom .navbar-brand {
+    color: #ecf0f1;
+}
+.btn {
+  border-radius:0;
+}
+#a_1 {
+	font-size: 20px;
+	float: right;
+	color: #ffffff;
+	padding: 0 15px 0 0;
+}
+#a_1:hover {
+	color: #e6e6e6;
+	text-decoration: none;
+}
+#div12 {
+    padding-top: 100px;
+    background: #F1F1F1;
+    width: 30%;
+    margin-left: 35%;
+    border: 2px solid #bfbfbf;
+}
+#div12 h2 {
+    padding-bottom: 10%;
+    padding-left: 40%;
+}
+.col-sm-7 {
+    padding-top: 2%;
+    padding-left: 5% ;
+}
+.col-sm-5 {
+    padding-top: 2%;
+    padding-left: 0%;
+}
+.row a {
+    text-decoration: none;
+    color: #000000;
+}
+.row a:hover {
+    color: #737373;
+}
+.row {
+    padding-left: 5%;
+}

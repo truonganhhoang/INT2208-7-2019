@@ -1,0 +1,30 @@
+<mat-card style="margin: 15px 0px 15px 0px;">
+  <mat-card-header>
+    <div mat-card-avatar style="height: 45px; width: 45px; background-size: contain;"
+      [style.backgroundImage]="'url('+ userFromPost.avatarUrl +')'">
+      <mat-card-title style="margin-left: 60px; font-size: 15px;white-space: nowrap; cursor: pointer;"
+        (click)="routeToUserProfilePage()">{{userFromPost.name}}
+      </mat-card-title>
+      <mat-card-subtitle style="margin-left: 60px; font-size: 15px; white-space: nowrap ;">{{getDateOff()}}
+      </mat-card-subtitle>
+    </div>
+  </mat-card-header>
+  <span style="float: right; cursor: pointer;" *ngIf="deletePermission()" (click)="deletePost()"><i class="fas fa-trash-alt"></i></span>
+  <mat-card-content style="font-size:16px; margin-top: 20px; margin-bottom: 10px; margin-left:5px;">
+    <p style="white-space: pre-line;">
+      {{post.content}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions style="margin-top: 0px; margin-bottom: 0px;">
+    <hr style="margin: 0px; margin-bottom: 4px;">
+    <button mat-button [class.liked]="liked" [matBadge]="getLikes()" [matBadgeHidden]="post.likes.length == 0" matBadgeColor="accent" matBadgeSize="medium"
+      (click)="like()">Like</button>
+    <button mat-button (click)="showCommentTextArea()">Comment</button>
+    <hr style="margin: 0px; margin-top: 4px; margin-bottom: 2px;">
+  </mat-card-actions>
+  <textarea *ngIf="commentShow" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+    placeholder="Your comment" style="overflow-y:hidden; border-radius: 5px; margin-left: 10px;" (keydown.enter)="submitComment($event)" ></textarea>
+  <hr *ngIf="commentShow">
+  <app-comment *ngFor="let comment of getComments()" [comment] = "comment" [post]="post" ></app-comment>
+  <mat-card-footer *ngIf="!fullMode" style="color: blue; text-align: center;"><p (click)="activeFullMode()" style="cursor: pointer; width: 100%; font-size: 13px;">See all comments</p></mat-card-footer>
+</mat-card>
