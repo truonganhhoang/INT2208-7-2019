@@ -26,4 +26,13 @@
 *Sprint Backlog 1
 	* Tìm hiểu html, css, javasript, nodejs, mongoDB,...
 	* Tạo giao diện cơ bản
+* Hướng dẫn sử dụng : 
+	-Đăng nhập vào link sản phẩm [link]
+	-Click đăng nhập bằng tài khoản facebook cá nhân.
+	-Sau khi đăng nhập, cập nhật thêm thông tin, điền thêm thông tin độ tuổi và giới tính.
+	-Mỗi thông tin người dùng khác được hiển thị trên giao diện trang chủ với nút Dislike và Like.
+	-Nhấn Dislike đối với người bận không thích hoặc không muốn tương tác. Và người đó sẽ không còn xuất hiện trên màn hình của bạn nữa.
+	-Nhấn Like để bạn có cơ hội tương tác với người đó. Khi người đó cũng dành cho bạn nút Like thì xin chúc mừng, bạn sắp có cơ hội thoát kiếp FA.
+	-Và cuối cùng hãy chinh phục người đó bằng khả năng chém gió của bạn.
+	(Note: Ứng dụng phù hớp với hội Fa)
 	
