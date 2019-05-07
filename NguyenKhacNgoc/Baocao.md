@@ -8,16 +8,19 @@
 * Hoàn thành khóa học trên edx [chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenKhacNgoc/SoftEng1x%20edX_3.jpg)
 * Bài tập nhóm: **Dự án Web bán giày online**
 * User story:Là người mua hàng, tôi muốn có chức năng khách hàng có thể đăng nhập, đăng xuất, phục vụ bảo mật người dùng.[chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/issues/3).
+
 1.Phân tích, thiết kế:
   - Phân chia công việc của yêu cầu, xác định mức độ quan trọng của từng đầu việc.
   - Sử dụng bootstrap 3 để thiết kế giao diện.
   - Thiết kế giao diện login, logout.
+  
 2.Xử lí:
   - Ghi đầy đủ thông tin đăng kí gồm tên, email, mật khẩu, số điện thoại liên hệ, địa chỉ nhận hàng khi đặt mua hàng.
   - Kiểm tra tài khoản, mật khẩu lưu bên phía server khi khách hàng đăng kí sẽ được ẩn để bảo đảm bảo mật cho khách hàng.
   - Ghi thông tin đăng nhập chỉ lấy email và mật khẩu.
   - Tạo database lưu trữ tài khoản của khách hàng.
   - Cài đặt chức năng.
+  
 3.Kiểm tra:
   - Kiểm tra mật khẩu lưu bên phía server khi khách hàng đăng kí sẽ được ẩn đễ đảm bảo bảo mật cho khách hàng.
   - Kiểm tra tài khoản email bắt buộc phải là định dạng kiểu abc@gmail.com.
