@@ -5,8 +5,8 @@
 	* Nguyễn Ngọc Sơn
 	* Lê Hồng Phong 
 * Mô Tả:
-	* Đây là trang web bán điện thoại, laptop và các đồ công nghệ
-	* Có các thông tin về các sản phẩm công nghệ, mua bán giao dịch
+	* Đây là ứng dụng tương hợp, trò chuyện , hẹn hò.
+	* Ứng dúng tìm kiếm người dùng để tương tác, trò chuyện theo yêu cầu mong muốn phù hợp với bản thân. Mục đích là tìm kiếm nửa kia của mình . 
 * Mô tả quy trình thực hiện
 	* Tuần 1-3: Tìm hiểu các ngôn ngữ lập trình để tạo giao diện cần thiết(nguồn https://www.w3schools.com, https://developer.mozilla.org/vi, ...).
 	* Tuần 4: Làm giao diện cơ bản
