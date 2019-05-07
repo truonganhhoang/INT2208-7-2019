@@ -1,0 +1,19 @@
+<!-- <div [class.outgoing_msg]="outgoing" [class.incoming_msg]="incoming">
+  <div *ngIf="incoming" class="incoming_msg_img" [ngStyle]="{'background-image': 'url('+avatarUrl+')'}"></div>
+  <div style="cursor: pointer;" (click)="routeToUser()" *ngIf = "incoming" class="incoming_msg_img" mat-card-avatar [style.backgroundImage]="'url('+ avatarUrl +')'"></div>
+  <div [class.sent_msg]="outgoing" [class.received_msg]="incoming">
+    <p>{{message.content}}</p>
+  </div>
+</div> -->
+
+
+<!-- <img [src]="avatarUrl" alt="sunil"> -->
+
+
+<li   [class.sent]="incoming" [class.replies]="outgoing">
+  <img [src]="avatarUrl" *ngIf="incoming" alt="" />
+  <p>{{message.content}}</p>
+</li>
+<!-- <li class="replies">
+  <p>When you're backed against the wall, break the god damn thing down.</p>
+</li> -->

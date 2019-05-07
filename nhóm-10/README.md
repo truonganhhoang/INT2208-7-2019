@@ -15,6 +15,30 @@
   * Scrum Master: Đỗ Minh Anh
   * Development Team: 4 thành viên trong nhóm	
 ### Tóm tắt kế hoạch thực hiện:
-  * Tuần 1-4: Tìm hiểu các công nghệ cần dùng cho phần mềm, hoàn thành giao diện.
-  * Tuần 5-8: Hoàn thành phần chủ đề theo từ vựng và tra từ điển.
-  * Tuần 9-12: Hoàn thành phần kiểm tra từ, soát lỗi và hoàn thiện sản phẩm.
+  * Sprint 1 (2 tuần): Tìm hiểu các công nghệ cần dùng cho phần mềm, hoàn thành chức năng tra từ cơ bản.
+  * Sprint 2 (2 tuần): Hoàn thành phần học ngữ pháp, tra từ(gợi ý tìm kiếm).
+                       Thêm dịch văn bản, phát âm.
+                       Tạo game HangMan cơ bản.
+                       Tạo trang giới thiệu.
+  * Sprint 3 (2 tuần): Hoàn thành game HangMan.
+                       Thêm chức năng nhập dữ liệu băng giọng nói
+                       Tạo diễn đàn cơ bản cho trang
+### Công cụ sử dụng:
+ * HTML/CSS/Bootstrap
+ * JavaScript/Jquery
+ * PHP
+ * Pingendo
+ * MySQL,SQLite
+ ### Hướng dẫn cài đặt ứng dụng:
+ * clone hoặc dowload file zip về
+ * Tải thêm xampp để chạy 
+ * Nhét file đã clone hoặc dowload vào thư mục htdocs trong xampp (ổ C).
+ * import 2 file .sql lên phpmyadmin trong đường link: http://localhost/phpmyadmin .
+ * mở Google Chorme hoặc Cốc cốc để truy cập với link : http://localhost/homemoi.php để vào trang trủ.
+ ### Link sản phẩm: 
+ https://udict-10team.000webhostapp.com/homemoi.php
+ ### Báo cáo nhóm:
+ https://docs.google.com/document/d/1UZjnOihPkoEg6eQDRIeDhzl7e2hXcB3gq9xEthdaKds/edit?usp=sharing
+ ### Video demo sản phẩm:
+ https://drive.google.com/file/d/1JLC8ikzdxILCdU-BNxUQHeUpfvCmCjvD/view?usp=sharing
+ 

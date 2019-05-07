@@ -38,13 +38,13 @@
 	
 ### Product Backlog:
 	1. Cập nhật các đề thi thử của các trường Đại học và Trung học phổ thông.  
-	2. Cung cấp video, hình ảnh về các buổi livestream dạy học các môn của các thầy cô dậy online.  
-	3. Diễn đàn trao đổi trực tiếp giúp người dùng tương tác tốt hơn.  
-	4. Tính năng thi trắc nghiệm cho một số môn ( có thể không làm được còn tùy thuộc về sau ).  
+	2. Cập nhật tin tức tuyển sinh.
+	3. Diễn đàn trao đổi trực tiếp giúp người dùng tương tác tốt hơn.
 
 ### Kế hoạch thực hiện:
 -   Tuần 1-4: Tìm hiểu các công nghệ cần dùng cho phần mềm, hoàn thành giao diện.  
 -   Tuần 5-9: Thu thập tài liệu, cập nhật tài liệu, làm chức năng đăng nhập và bình luận, xây dựng trang web cơ bản.  
 -   Tuần 10-12: Hoàn thiện trang web, làm tính năng tìm kiếm, cho phép người dùng đóng góp tài liệu thông qua kiểm duyệt và tính năng thi trực tuyến ( có thể không làm).  
 	
-	
+### Link báo cáo sản phẩm: [tại đây](https://drive.google.com/file/d/1ZixoRdfkl8anaobpnzhubaOAS_mtPD3x/view?fbclid=IwAR0p44DRvTuuvbjcW5N-cUwXUNHtXiZSP4PZK6p2nhvpRVy4S7X_Ae7NPJM)
+### Video demo sản phẩm: [tại đây](https://l.facebook.com/l.php?u=https%3A%2F%2Fdrive.google.com%2Fopen%3Fid%3D1v4hT_9hTRzPEBsYFwDbocmNq_ZbIRDfo%26fbclid%3DIwAR0IaqzjBQAX3o9MTFxXL2KNkmpWd0_iOGIry-KHJ6-FXEoAlMaxjCt4kQY&h=AT2NulAzcSnn_-qwkyRS3HndZVJY1jHRV5IFPpUZVK0wOV0fYLsxTSY8pxKyI1eAlMVXHY9a3wruIEelT9QW73JhQ-m6G3qYxgYIekxgsS-UhNWqyaWnaFWtZMrXXydXa6Yr5g)

@@ -1,19 +1,70 @@
 @extends('page.master')
+@section('title')
+    Trang chủ
+@stop
+@section('sl')
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            @foreach($slide as $sl)
+                @if($sl->id == 1)
+                    <li data-target="#myCarousel" data-slide-to="{{$sl->id}}" class="active"></li>
+                @else
+                    <li data-target="#myCarousel" data-slide-to="{{$sl->id}}"></li>
+                @endif
+            @endforeach
 
+
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            @foreach($slide as $sl)
+                @if($sl->id == 1)
+                    <div class="item active">
+                        <img src="img/slide/{{$sl->image}}@yield('slide')" alt="New York" width="1200" height="300">
+                        <div class="carousel-caption">
+                            <h3>{{$sl->tenbanh}}</h3>
+                            <p>{{$sl->dacdiem}}</p>
+                        </div>
+                    </div>
+                @else
+                    <div class="item">
+                        <img src="img/slide/{{$sl->image}}" alt="New York" width="1200" height="300">
+                        <div class="carousel-caption">
+                            <h3>{{$sl->tenbanh}}</h3>
+                            <p>{{$sl->dacdiem}}</p>
+                        </div>
+                    </div>
+                @endif
+            @endforeach
+
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+    </div>
+@stop
 @section('content')
     <div class="container">
 
-        <div>
-            <h3>Sản phẩm mới</h3>
-            <p>Có {{count($product)}} sản phẩm</p>
-        </div>
         <div class="row">
-            <div class="">
-                @foreach($product as $pro)
-                    <div class="col-sm-3">
+            <div>
+                <h3>Sản phẩm mới</h3>
+                <p>Có {{count($product)}} sản phẩm</p>
+            </div>
+            @foreach($product as $pro)
+                @if(asset($pro))
+                    <div class="col-sm-3 product-price">
                         <div class="single-item">
-                            <div class="single-item-header">
-                                <a href="#"><img  class="img-fluid newproduct" src="img/product/{{$pro->image}}" alt=""></a>
+                            <div class="single-item-header" style="margin-top: 20px">
+                                <a href="{{route('details',[$pro->id_type,$pro->id])}}"><img  class="img-fluid newproduct" src="img/product/{{$pro->image}}" alt="{{$pro->name}}"></a>
                             </div>
                             <div class="body">
                                 <p class="single-item-title">{{$pro->name}}</p>
@@ -32,82 +83,120 @@
                             </div>
                             <div class="caption" style="margin-top: 10px">
                                 <a class="shopping shop"  href="{{route('cart',$pro->id)}}"><i class="fas fa-cart-plus"></i></a>
-
-                                <a class="shopping pay"   href="#">Details<i class="fa fa-chevron-right"></i></a>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-                <div class="row">
-                    {{$product->links()}}
-                </div>
-            </div>
-
-        </div>
-        <div class="row spkm">
-            <h3>Sản phẩm khuyến mãi</h3>
-            <p>Có {{count($spkm)}} sản phẩm</p>
-            <div class="col-sm-12">
-                @foreach($spkm as $sp)
-                    <div class="col-sm-3" style="margin-bottom: 35px">
-                        <div class="single-item">
-                            <div class="single-item-header">
-                                <a href="#"><img  class="img-fluid newproduct" src="img/product/{{$sp->image}}" alt=""></a>
-                            </div>
-                            <div class="body">
-                                <p class="single-item-title">{{$sp->name}}</p>
-                                @if($sp->promotion_price != 0)
-                                    <span style="text-decoration: line-through">{{number_format($sp->unit_price)}} đồng</span>
-                                    <span  style="color: orange;margin-bottom: 10px">{{number_format($sp->promotion_price)}} đồng</span>
-
-                                @else
-                                    <p class="price ">
-                                        <span class="form-inline">{{number_format($sp->unit_price)}} đồng</span>
-                                    </p>
+                                <a class="shopping pay"   href="{{route('details',[$pro->id_type,$pro->id])}}">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                @if(\Illuminate\Support\Facades\Auth::id() == 1)
+                                    <a class="dropItem" href="#"><i class="fas fa-trash fa-lg"></i></a>
+                                    <a href="{{route('update_product',$pro->id)}}"><i class="fas fa-cog fa-lg"></i></a>
                                 @endif
                             </div>
-                            <div class="caption" style="margin-top: 10px">
-                                <a class="shopping shop"  href="{{route('cart',$sp->id)}}"><i class="fas fa-cart-plus"></i></a>
-
-                                <a class="shopping pay"   href="#">Details<i class="fa fa-chevron-right"></i></a>
-                                <div class="clearfix"></div>
-                            </div>
                         </div>
                     </div>
-                @endforeach
-                <div class="row">
-                    {{$spkm->links()}}
-                </div>
+                @endif
+            @endforeach
+
+
+
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                {{$product->render()}}
             </div>
         </div>
+        <div class="row">
+            <h3>Sản phẩm khuyến mãi</h3>
+            <p>Có {{count($spkm)}} sản phẩm</p>
 
-    </div>
-   <div class="jumbotron" style="background: #13547a  ">
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-6 col-sm-offset-3" style="color: whitesmoke">
-                    <h2 class="text-center" style="letter-spacing: 5px">Contact</h2>
-                    <div>
-                        <p style="font-size: 11px;color: whitesmoke;"><i class="fas fa-sms" style="margin-right: 3px"></i>Phone:0947781266</p>
-                        <p style="font-size: 11px;color: whitesmoke"><i class="fas fa-envelope" style="margin-right: 3px"></i>Email:checkpassnch@gmail.com</p>
+            @foreach($spkm as $sp)
+                <div class="col-sm-3 products-sale" style="margin-bottom: 20px">
+                    <div class="single-item">
+                        <div class="single-item-header">
+                            <a href="{{route('details',[$sp->id_type,$sp->id])}}"><img  class="img-fluid newproduct" src="img/product/{{$sp->image}}" alt=""></a>
+                        </div>
+                        <div class="body">
+                            <p class="single-item-title">{{$sp->name}}</p>
+                            @if($sp->promotion_price != 0)
+                                <span style="text-decoration: line-through">{{number_format($sp->unit_price)}} đồng</span>
+                                <span  style="color: orange;margin-bottom: 10px">{{number_format($sp->promotion_price)}} đồng</span>
+
+                            @else
+                                <p class="price ">
+                                    <span class="form-inline">{{number_format($sp->unit_price)}} đồng</span>
+                                </p>
+                            @endif
+                        </div>
+                        <div class="caption" style="margin-top: 10px">
+                            <a class="shopping shop"  href="{{route('cart',$sp->id)}}"><i class="fas fa-cart-plus"></i></a>
+
+                            <a class="shopping pay"   href="{{route('details',[$sp->id_type,$sp->id])}}">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                            @if(\Illuminate\Support\Facades\Auth::id() == 1)
+                                <a class="dropItemKM" href="#"><i class="fas fa-trash fa-lg"></i></a>
+                                <a href="{{route('update_product',$sp->id)}}"><i class="fas fa-cog fa-lg"></i></a>
+
+                            @endif
+                        </div>
                     </div>
-                    <form>
-                        <input class="col-sm-6 form-control" type="text" placeholder="Name" name="name" style="margin-bottom: 10px">
-                        <input class="col-sm-6 form-control" type="email" placeholder="Email" name="email" style="margin-bottom: 10px">
-                        <input class="col-sm-6 form-control" type="text" placeholder="" name="text" style="height: 100px !important;margin-bottom: 10px">
-                        <input type="submit" class="btn btn-primary" name="submit" value="send" >
-
-                    </form>
                 </div>
+            @endforeach
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                {{$spkm->render()}}
             </div>
         </div>
-   </div>
+    </div>
+
 
 @stop
+
 @section('script')
     <script>
+        @if(session('empty'))
+        alert('Mặt hàng này hiện chưa có, vui lòng quay lại sau');
+        @endif
+        @if(session('sp'))
+        alert('Hiện tại chưa có sản phẩm nào trong đơn hàng');
+        @endif
+        @if(session('notAdmin'))
+        alert('Trang này chỉ dùng cho Admin');
+        @endif
+        @if(session('searchEmpty'))
+        alert('Hiện tại chưa có sản phẩm này');
+        @endif
+        @if(session('verify'))
+        alert('Vui lòng xác thực tài khoản để sử dụng dịch vụ này');
+        @endif
+        @if(session('order'))
+        alert('Đặt hàng thành công!!!');
+        @endif
+        @if(session('key'))
+        alert('Vui lòng nhập khóa để tìm kiếm');
+        @endif
+        @if(session('longText'))
+        alert('Từ khóa quá dài vui lòng nhập lại');
+        @endif
         $(document).ready(function(){
+
+            $(".dropItemKM").click(function () {
+                var data = confirm("Bạn có muốn xóa sản phẩm này không?");
+                if(data === true){
+
+                    $(this).attr("href", "{{route('dropsp',$sp->id)}}");
+                }
+                else{
+                    $(this).attr("href", "#");
+                }
+            });
+            $(".dropItem").click(function () {
+                var data = confirm("Bạn có muốn xóa sản phẩm này không?");
+                // var confirm = confirm("Bạn có muốn xóa sản phẩm này không?");
+                if(data === true){
+                    $(this).attr("href", "{{route('dropsp',$pro->id)}}");
+                }
+                else{
+                    $(this).attr("href", "#");
+                }
+            });
             $(".shop").click(function () {
 
             });
@@ -115,14 +204,14 @@
                 $(this).css('background','orange');
             });
             $(".shop").mouseleave(function () {
-                $(this).css('background','white')
+                $(this).css('background','')
             });
             $(".pay").mouseenter(function(){
 
                 $(this).css('background','#1b6d85');
             });
             $(".pay").mouseleave(function () {
-                $(this).css('background','white')
+                $(this).css('background','')
             });
 
 

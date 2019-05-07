@@ -1,6 +1,7 @@
 ## Nhóm 88
 
 
+
 ## Ứng dụng Tweet
 
 ### Thể loại
@@ -25,16 +26,20 @@
 * Ứng dụng giải trí cho người trẻ tuổi.
 
 
+
 ### Mô tả chức năng app
 
 - [x] Đăng ký
 - [x] Đăng nhập
 - [x] Đăng tweet
 - [x] Tìm kiếm tweet
+
 - [ ] Đăng ảnh
 
 
+
 ... update
+
 
 
 ### Hình ảnh
@@ -87,5 +92,4 @@
 
 - [x] 27/2/2019: Cập nhật thanh navigator
 - [ ] 27-2 - 4/3: Chức năng đăng ký tài khoản
-
 

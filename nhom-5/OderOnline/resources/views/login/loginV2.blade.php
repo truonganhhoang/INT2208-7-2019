@@ -28,7 +28,8 @@
     <!--===============================================================================================-->
 </head>
 <body>
-
+@extends('page.master')
+@section('content')
 <div class="limiter">
     <div class="container-login100" style="background-image: url('{{asset('img/bg-01.jpg')}}');">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
@@ -105,7 +106,7 @@
 
 
 <div id="dropDownSelect1"></div>
-
+@stop
 <!--===============================================================================================-->
 <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->

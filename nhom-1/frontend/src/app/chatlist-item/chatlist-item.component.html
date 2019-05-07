@@ -1,0 +1,17 @@
+<!-- <div class="chat_list" [class.active_chat]="selected">
+    <div class="chat_people">
+        <div class="chat_img"> <img [src]="userInfo.avatarUrl" alt="sunil">
+        </div>
+        <a style="margin-left: 12px; position: absolute; margin-top:6px;">{{userInfo.name}}</a>
+    </div>
+</div> -->
+
+<li class="contact" [class.active] = "selected">
+    <div class="wrap">
+        <span  [class.away]="!chatlistItem.read" *ngIf="!chatlistItem.read"></span>
+        <img [src]="userInfo.avatarUrl" alt="" />
+        <div class="meta">
+            <p class="name">{{userInfo.name}}</p>
+        </div>
+    </div>
+</li>
