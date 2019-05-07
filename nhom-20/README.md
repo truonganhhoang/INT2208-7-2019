@@ -23,7 +23,7 @@
 	* Thiết kế login/logout và tạo database lưu trữ thông tin khách hàng
 	* Nâng cấp giao diện, hiển thị các sản phẩm nổi bật,...
 	* Thanh toán và theo dõi đơn hàng
-*Sprint Backlog 1
+* Sprint Backlog 1
 	* Tìm hiểu html, css, javasript, nodejs, mongoDB,...
 	* Tạo giao diện cơ bản
 * Hướng dẫn sử dụng : 
@@ -34,5 +34,5 @@
 	* Nhấn Dislike đối với người bận không thích hoặc không muốn tương tác. Và người đó sẽ không còn xuất hiện trên màn hình của bạn nữa.
 	* Nhấn Like để bạn có cơ hội tương tác với người đó. Khi người đó cũng dành cho bạn nút Like thì xin chúc mừng, bạn sắp có cơ hội thoát kiếp FA.
 	* Và cuối cùng hãy chinh phục người đó bằng khả năng chém gió của bạn.
-	#(Note: Ứng dụng phù hớp với hội Fa)
+	(Note: Ứng dụng phù hớp với hội Fa)
 	
