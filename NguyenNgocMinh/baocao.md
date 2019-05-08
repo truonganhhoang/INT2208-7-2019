@@ -21,6 +21,13 @@
       - Bố cục sản phẩm bao gồm: hình ảnh hiển thị, tên sản phẩm, giá sản phẩm, mô tả chi tiết sản phẩm.
       - Kết nối với cơ sở dữ liệu lưu trữ thông tin sản phẩm để hiển thị thông tin.
       - kiểm thử hiển thị giao diện trên các thiết bị.
+ ### Phân tích câu chuyện
+ 1.  Xác định yêu cầu, mong muốn: gửi phản hồi về chủ shop (specifications).
+2.  Chọn quy trình phát triển Scrum (process).
+3.  Thiết kế cấu trúc cơ sở dữ liệu và sơ đồ lớp (high level design).
+4.  Sử dụng mô hình MVC trên framework Laravel (low level design).
+5.  Viết mã 
+6.  Kiểm thử hộp trắng rồi kiểm thử hộp đen từng phần và kiểm thử hệ thống đánh giá (testing)
 * Hướng dẫn sử dụng:
   1) Mở trình duyệt web lên.
   2) Nhập địa chỉ sau để mở trang web http://wolfshoes.000webhostapp.com.
