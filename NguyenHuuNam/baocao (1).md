@@ -54,9 +54,9 @@
 2 .Gõ vào ô tìm kiếm địa chỉ sau:  [wolfshoes.000webhostapp.com/](http://wolfshoes.000webhostapp.com/).
 
 3 .Chọn vào mục CONTACT US 
-![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store.png)
+![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store(2).png)
 
-rồi điền đầy đủ thông tin rồi submit.
+rồi điền đầy đủ thông tin: Your name (tên người gửi),Your Email Address(địa chỉ email người gửi), Type your subject here (nội dụng phản hồi) rồi submit.
 ![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store(5).png)
 
 
