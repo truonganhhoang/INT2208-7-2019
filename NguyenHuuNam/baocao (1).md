@@ -14,6 +14,32 @@
 **Câu chuyện người dùng (user story):**
 
  **User story 1:** Là người mua hàng, tôi muốn có thể phản hồi lại với chủ shop, phục vụ mục đích phát triển hơn của shop. ([chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/issues/5))
+ 
+ 1.Giao diện:
+
+   Sử dụng Bootstrap 3 để tạo giao diện cho thông tin sản phẩm ở trong giỏ hàng.
+
+   Giỏ hàng có thông tin về ảnh mặt hàng, số lượng mặt hàng đó, tổng tiền khách hàng phải thanh toán khi nhận hàng.
+
+2.Xử lí:
+
+   Sử dụng phương thức "post" cho form để gửi dữ liệu về phía server.
+
+   Database giỏ hàng.
+
+   Lấy dữ liệu từ bảng quan hệ, để hiển thị ở giỏ hàng.
+
+   Hiện thông báo khi giỏ hàng có sản phẩm nào.
+
+   Lưu thông tin đơn hàng vào database khi khách hàng nhấn vào "Hoàn thành đặt hàng.".
+
+   Xóa,sửa sản phẩm trong giỏ hàng.
+
+3.Kiểm tra:
+
+   Kiểm tra mỗi lần đăng nhập thì đơn hàng trước đó được lưu trong session trước đó phải được reset lại.
+
+   Kiểm thử về dữ liệu của sản phẩm khi hiển thị ở giỏ hàng phải đúng với só lượng mặt hàng và số lượng đặt của từng mặt hàng đó.
   ### Phân tích câu chuyện
  1.  Xác định yêu cầu, mong muốn: gửi phản hồi về chủ shop (specifications).
 2.  Chọn quy trình phát triển Scrum (process).
