@@ -13,9 +13,46 @@
 
 **Câu chuyện người dùng (user story):**
 
- **User story 1:** Là người mua hàng, tôi muốn có thể phản hồi lại với chủ shop, phục vụ mục đích phát triển hơn của shop. ([chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/issues/5))
+ **User story 1:** Là người mua hàng, tôi muốn có thể phản hồi lại với chủ shop, phục vụ mục đích phát triển hơn của shop. ([chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/issues/7))
  
  1.Giao diện:
+
+   Sử dụng Bootstrap 3 để tạo giao diện form phản hồi.
+
+2.Xử lí:
+   Lựa chọn phương thức gửi mail đến mail chủ là SMTP.
+   Cấu hình lại project để có thể kết nối được với gmail (Cụ thể là file .env trong laravel 5.x)
+.
+
+3.Kiểm tra:
+    Kiểm thử gửi mail bằng cách mô phỏng trên localhost.
+    Kiểm tra thông tin đến phải chính xác và không sai sót đối với dữ liệu người dùng đã nhập.
+
+
+  ### Phân tích câu chuyện
+ 1.  Xác định yêu cầu, mong muốn: gửi phản hồi về chủ shop (specifications).
+2.  Chọn quy trình phát triển Scrum (process).
+3.  Thiết kế cấu trúc cơ sở dữ liệu và sơ đồ lớp (high level design).
+4.  Sử dụng mô hình MVC trên framework Laravel (low level design).
+5.  Viết mã 
+6.  Kiểm thử hộp trắng rồi kiểm thử hộp đen từng phần và kiểm thử hệ thống đánh giá (testing)
+   ### Hướng dẫn sử dụng :
+
+1 .Mở trình duyệt của bạn lên: Chrome,Cốc Cốc,Firefox....
+
+2 .Gõ vào ô tìm kiếm địa chỉ sau:  [wolfshoes.000webhostapp.com/](http://wolfshoes.000webhostapp.com/).
+
+3 .Chọn vào mục CONTACT US 
+![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store(2).png)
+
+rồi điền đầy đủ thông tin: Your name (tên người gửi),Your Email Address(địa chỉ email người gửi), Type your subject here (nội dụng phản hồi) rồi submit.
+![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store(5).png)
+
+
+
+**2** Là người mua hàng, tôi muốn có trình đặt hàng, phục vụ mục đích đặt hàng. ([chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/issues/6))
+
+1.Giao diện:
 
    Sử dụng Bootstrap 3 để tạo giao diện cho thông tin sản phẩm ở trong giỏ hàng.
 
@@ -40,28 +77,7 @@
    Kiểm tra mỗi lần đăng nhập thì đơn hàng trước đó được lưu trong session trước đó phải được reset lại.
 
    Kiểm thử về dữ liệu của sản phẩm khi hiển thị ở giỏ hàng phải đúng với só lượng mặt hàng và số lượng đặt của từng mặt hàng đó.
-  ### Phân tích câu chuyện
- 1.  Xác định yêu cầu, mong muốn: gửi phản hồi về chủ shop (specifications).
-2.  Chọn quy trình phát triển Scrum (process).
-3.  Thiết kế cấu trúc cơ sở dữ liệu và sơ đồ lớp (high level design).
-4.  Sử dụng mô hình MVC trên framework Laravel (low level design).
-5.  Viết mã 
-6.  Kiểm thử hộp trắng rồi kiểm thử hộp đen từng phần và kiểm thử hệ thống đánh giá (testing)
-   ### Hướng dẫn sử dụng :
 
-1 .Mở trình duyệt của bạn lên: Chrome,Cốc Cốc,Firefox....
-
-2 .Gõ vào ô tìm kiếm địa chỉ sau:  [wolfshoes.000webhostapp.com/](http://wolfshoes.000webhostapp.com/).
-
-3 .Chọn vào mục CONTACT US 
-![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store(2).png)
-
-rồi điền đầy đủ thông tin: Your name (tên người gửi),Your Email Address(địa chỉ email người gửi), Type your subject here (nội dụng phản hồi) rồi submit.
-![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store(5).png)
-
-
-
-**2** Là người mua hàng, tôi muốn có trình đặt hàng, phục vụ mục đích đặt hàng. ([chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/issues/6))
 ### Phân tích câu chuyện
  1.  Xác định yêu cầu, mong muốn: trình đặt hàng (specifications).
 2.  Chọn quy trình phát triển Scrum (process).
