@@ -8,16 +8,29 @@
 * Hoàn thành khóa học trên edx [chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenKhacNgoc/SoftEng1x%20edX_3.jpg)
 * Bài tập nhóm: **Dự án Web bán giày online**
 * User story:Là người mua hàng, tôi muốn có chức năng khách hàng có thể đăng nhập, đăng xuất, phục vụ bảo mật người dùng.[chi tiết](https://github.com/KhacNgoc/INT2208-7-2019/issues/3).
-  - Thiết kế giao diện login, logout.
+
+1.Phân tích, thiết kế:
   - Phân chia công việc của yêu cầu, xác định mức độ quan trọng của từng đầu việc.
-  - Tạo database lưu trữ tài khoản của khách hàng.
-  - Cài đặt các chứ năng.
+  - Sử dụng bootstrap 3 để thiết kế giao diện.
+  - Thiết kế giao diện login, logout.
+  
+2.Xử lí:
+  - Ghi đầy đủ thông tin đăng kí gồm tên, email, mật khẩu, số điện thoại liên hệ, địa chỉ nhận hàng khi đặt mua hàng.
   - Kiểm tra tài khoản, mật khẩu lưu bên phía server khi khách hàng đăng kí sẽ được ẩn để bảo đảm bảo mật cho khách hàng.
-  - Kiểm thử tài khoản email đăng kí phải đúng định dạng abc@gmail.com.
-  - Check database lưu đầy đủ thông tin.
-  - Kiểm tra mức độ bao phủ nhánh. Từng trường hợp phải có cách xử lý để thông báo người dùng để giúp khách hàng dễ xử dụng hơn.
-  - Kiểm tra bao phủ từng hàm, nếu hàm nào chưa được gọi thì xóa bỏ.
-  - Kiểm tra lỗi hệ thống, đưa ra phương án khắc phục.
+  - Ghi thông tin đăng nhập chỉ lấy email và mật khẩu.
+  - Tạo database lưu trữ tài khoản của khách hàng.
+  - Cài đặt chức năng.
+  
+3.Kiểm tra:
+  - Kiểm tra mật khẩu lưu bên phía server khi khách hàng đăng kí sẽ được ẩn đễ đảm bảo bảo mật cho khách hàng.
+  - Kiểm tra tài khoản email bắt buộc phải là định dạng kiểu abc@gmail.com.
+  - Kiểm tra mật khẩu khi người dùng đăng kí phải có độ dài từ 6 đến 20 kí tự.
+  - Kiểm tra tính bắt buộc nhập của tất cả các trường khi người dùng đăng kí.
+  - Check database lưu đầy đủ kí tự người dùng đăng nhập.
+  - Kiểm tra đăng nhập thì người dùng mới có thể sử dụng tính năng đặt hàng.
+  - Kiểm tra khi chưa đăng nhập mà khách hàng đặt hàng thì khách hàng sẽ được dẫn đến trang đăng nhập để tiến hành đặt hàng.
+  - Kiểm tra bao phủ của từng hàm, nếu hàm nào chưa được gọi sử dụng thì xóa bỏ.
+  - Dự đoán nơi nào của hệ thống dễ bị ẩn chứa lỗi, kiểm tra kĩ đối với từng trường hợp ở đó.
 * Hướng dẫn sử dụng:
 1. Phần đăng nhập, đăng xuất:
     - Sử dụng Auth trong laravel để thực hiện chức năng này.
