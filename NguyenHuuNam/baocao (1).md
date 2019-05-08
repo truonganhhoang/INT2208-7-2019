@@ -91,9 +91,12 @@ rồi điền đầy đủ thông tin: Your name (tên người gửi),Your Emai
 
 2 .Gõ vào ô tìm kiếm địa chỉ sau:  [wolfshoes.000webhostapp.com/](http://wolfshoes.000webhostapp.com/).
 
-3 .Đăng nhập tài khoản nếu có, nếu không tài khoản thì bạn đăng ký tài khoản mới.
+3 .Đăng nhập vào  tài khoản của bạn nếu đã đăng kí tài khoản 
 ![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store%20(2).png)
+
+còn nếu không tài khoản thì bạn đăng ký tài khoản mới ở phần Register.
 ![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store(4).png)
+
 4 .Khi lựa chọn được sản phẩm phù hợp thêm vào giỏ hàng.
 ![alt](https://github.com/KhacNgoc/INT2208-7-2019/blob/master/NguyenHuuNam/Screenshot_2019-05-06%20Wolf%20Store.png)
 
