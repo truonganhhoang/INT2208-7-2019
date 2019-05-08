@@ -1,15 +1,13 @@
 ﻿<mat-toolbar color="primary" role="heading" style="position: sticky; top:0; z-index: 1000;">
-    <div style="position: absolute; right: 25%;">
+    <!-- <div style="position: absolute; left: 25%;">
             <form submit="search()">
                 <mat-form-field>
                     <input [(ngModel)]='searchKeyword' [ngModelOptions]="{standalone: true}" matInput/>
                 </mat-form-field>
-                <button mat-flat-button (click)='search()'>
-                    <mat-icon>search</mat-icon>
-                </button>
+                <i class="fas fa fa-search"></i>
             </form>
-    </div>
-    <div style="position: absolute; left: 25%;">
+    </div> -->
+    <div style="position: absolute; right: 25%;">
         <button mat-button routerLink="/" *ngIf="currentUser">
             <mat-icon style="margin-bottom: 5px">home</mat-icon>
             Home

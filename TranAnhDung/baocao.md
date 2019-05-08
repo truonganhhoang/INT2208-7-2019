@@ -5,7 +5,7 @@
 
 # Báo cáo cá nhân môn học Công nghệ phần mềm
 ====
-* Hoàn thành khóa học trên edx ([chi tiết](SoftEng1x.jpg))
+* Hoàn thành khóa học trên edx ([chi tiết](SoftEng1x.png))
 * Bài tập nhóm: **Dự án web mạng xã hội** [website](http://35.229.147.65:4200/)
 * Các user story đã tham gia làm:
 - https://github.com/sockyone/INT2208-7-2019/issues/27

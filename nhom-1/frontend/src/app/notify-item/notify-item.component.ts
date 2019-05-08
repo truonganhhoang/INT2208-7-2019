@@ -39,18 +39,21 @@ export class NotifyItemComponent implements OnInit {
     if (this.notify.type == 'friend request' || this.notify.type == 'friend accepted') {
       this.router.navigate(['users',this.notify.payload.sender]);
     }
+    if (this.notify.type == 'like post' || this.notify.type == 'comment to post') {
+      this.router.navigate(['post'], {queryParams:{id: this.notify.payload.postId}});
+    }
   }
 
   getNotifyContent() {
     if (this.notify.type=='like post') {
-      if (this.notify.payload.author == this.userService.currentUserValue.username) {
+      if (this.notify.payload.postAuthor == this.userService.currentUserValue.username) {
         return this.userInfo.name + ' liked your post.'
       } else {
         return this.userInfo.name + ' liked a post that you subcribed.'
       }
     }
     if (this.notify.type=='comment to post') {
-      if (this.notify.payload.author == this.userService.currentUserValue.username) {
+      if (this.notify.payload.postAuthor == this.userService.currentUserValue.username) {
         return this.userInfo.name + ' commented to your post.'
       } else {
         return this.userInfo.name + ' commented a post that you subcribed.'

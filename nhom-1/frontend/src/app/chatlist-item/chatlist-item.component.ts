@@ -12,6 +12,7 @@ export class ChatlistItemComponent implements OnInit {
 
   @Input() chatlistItem: ChatRoom;
   @Input() selected: boolean;
+
   userInfo: any = {};
 
   constructor(
