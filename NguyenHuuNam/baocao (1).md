@@ -17,16 +17,16 @@
  
  1.Giao diện:
 
-   Sử dụng Bootstrap 3 để tạo giao diện form phản hồi.
+   - Sử dụng Bootstrap 3 để tạo giao diện form phản hồi.
 
 2.Xử lí:
-   Lựa chọn phương thức gửi mail đến mail chủ là SMTP.
-   Cấu hình lại project để có thể kết nối được với gmail (Cụ thể là file .env trong laravel 5.x)
+   - Lựa chọn phương thức gửi mail đến mail chủ là SMTP.
+   - Cấu hình lại project để có thể kết nối được với gmail (Cụ thể là file .env trong laravel 5.x)
 .
 
 3.Kiểm tra:
-    Kiểm thử gửi mail bằng cách mô phỏng trên localhost.
-    Kiểm tra thông tin đến phải chính xác và không sai sót đối với dữ liệu người dùng đã nhập.
+   - Kiểm thử gửi mail bằng cách mô phỏng trên localhost.
+   - Kiểm tra thông tin đến phải chính xác và không sai sót đối với dữ liệu người dùng đã nhập.
 
 
   ### Phân tích câu chuyện
