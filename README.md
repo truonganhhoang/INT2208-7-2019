@@ -1,5 +1,5 @@
 # INT2208-7-2019
-## Nhóm 18 
+##Nhóm 18 
 ### Thành Viên:
 #### Nguyễn Khắc Ngọc
 #### Nguyễn Hữu Nam
@@ -31,30 +31,41 @@
 ## Tuần 1-4:
 -	**Kế hoạch:** Học bootstrap và hoàn thành giao diện trang chính.
 -  **Công việc:**
-   - Tự học HTML, CSS, JS, và Bootstrap.
+   1. Frontend:
+   - Tự học HTML, CSS, JS, Bootstrap 3.
    - Sử dụng kiến thức học được tạo giao diện trang chính.
+   2. Backend:
+   - Học PHP, framework Laravel.
+   - Tìm hiểu MVC.
+   - Cở sở dữ liệu MySQL.
+   - Ngôn ngữ truy vấn QueryBuilder.
 ## Tuần 5-6:
 -	**Kế hoạch:** Hoàn thành phần thiết kế giao diện các trang liên quan.
 -  **Công việc:**
-    - Tạo giao diện giỏ hàng.
+    - Tạo giao diện trang chủ, login, logout.
     - Tạo class cart trong đó có các function như thêm giỏ hàng, xóa giỏ hàng,...
     - Tạo Khung mô tả chi tiết sản phẩm.
-    - Học trước QueryBuilder để thực hiện các kế hoạch tiếp theo.
+    - Thiết kế mô hình ER để hình dung được cấu trúc của database cố gắng thống nhất mô hình trong vòng 1 tuần.
+    - Chuyển từ mô hình ER sang cài đặt vật lý trên nền tảng MySQL, phải đảm bảo database đạt chuẩn 3 trở lên.
    
 ## Tuần 7-9:
--	**Kế hoạch:** Tạo giao diện, tạo cơ cở dữ liệu các sản phẩm.
+-	**Kế hoạch:** Tạo giao diện, tạo cơ cở dữ liệu các sản phẩm, đăng nhập đăng xuất cho admin và khách hàng.
    - Tạo giao diện hiển thị sản phẩm.
-   - Tạo mô hình ER ban đầu của database.Cố gắng thống nhất database trong vòng 1 tuần.
    - Ghi dữ liệu vào databse.
    - Kết nối database.
+   - Đổ dữ liệu ra các giao diện từ dữ liệu ghi vào database.
+   - Tạo đăng kí, đăng nhập cho khách hàng ghi dữ liệu đăng kí vào databse.
    - Tìm kiếm dữ liệu sản phẩm.
-   - Tạo giao diện trang admin và các chức năng admin.
+   - Tạo giao diện trang admin và các chức năng admin (đăng kí, đăng bán sản phẩm, sửa thông tin sản phẩm, danh sách đơn hàng đang sử lí, ...)
 ## Tuần 10-13:
--	**Kế hoạch:** Hoàn thành chức năng tìm kiếm, Lọc sản phẩm theo danh mục.
+-	**Kế hoạch:** Hoàn thành chức năng tìm kiếm, Lọc sản phẩm theo danh mục, hoàn thành đặt hàng, liên hệ admin.
 -  **Công việc:**
    - Sử dụng Truy vấn QueryBuildedr để truy xuất sản phẩm.
    - Tiếp tục bổ sung dữ liệu vào database.
    - Tạo giao diện tìm kiếm, lọc sản phẩm.
+   - Tạo bước đặt hàng lưu lại thông tin khách hàng cũng như đơn hàng khi khách hàng thanh toán.
+   - Tạo giao diện liên hệ với admin.
+   -  Cài đặt phần liên hệ gửi qua email của admin.
 ## Tuần 14:
 -	**Kế hoạch:** Kiểm thử và hoàn thành 4 chức năng chính và viết báo cáo.
 -  **Công việc:**
