@@ -30,43 +30,43 @@
  1. Đăng nhập 
     - Vào trình duyệt web, gõ vào thanh địa chỉ https://wolfshoes.000webhostapp.com/admin
     [linklogin](https://wolfshoes.000webhostapp.com/admin)
-    Giao diện đăng nhập như sau: ![login](Screen Shot 2019-05-08 at 02.13.40.png)
+    Giao diện đăng nhập như sau: ![login](login.png)
     - Điền thông tin đăng nhập, nếu đăng nhập không thành công sẽ quay trở lại trang đăng nhập và hiển thị thông báo.
-    ![fail](Screen Shot 2019-05-08 at 02.22.45.png)
+    ![fail](fail.png)
     - Nếu đăng nhập thành công, sẽ chuyển hướng đến trang dành cho người quản lý.
-    ![success](Screen Shot 2019-05-08 at 02.26.40.png)
+    ![success](success.png)
     2. Đổi mật khẩu người dùng:
     - Click vào Settings ![settings](x1.png)
     Hiển thị ra trang đổi mật khẩu
-    ![settings](Screen Shot 2019-05-08 at 17.19.12.png)
+    ![settings](setting.png)
     nếu thông tin không hợp lệ sẽ hiển thị thông báo, nếu hợp lệ sẽ thông báo thành công.
     3. Upload sản phẩm:
     - Trên slidebar, click vào Products, chọn Upload Product hiện ra trang Upload sản phẩm
-    ![upload](Screen Shot 2019-05-08 at 02.33.30.png)
+    ![upload](upload.png)
     - Tất cả các trường đều phải điền thông tin, nếu trường thông tin trống sẽ hiển thị thông báo.
     - Điền thông tin, chọn ảnh cho sản phẩm và click Button Upload để hoàn thành
     4. Hiển thị danh sách sản phẩm, chỉnh sửa sản phẩm, và xoá sản phẩm:
     - Trên slidebar click vào Products, chọn List Prducts để hiển thị danh sách sản phẩm
-    ![listProduct](Screen Shot 2019-05-08 at 02.36.04.png)
+    ![listProduct](list.png)
     - Muốn xoá sản phẩm, click vào delete trong cột Action
     - Muốn chỉnh sửa sản phẩm, click vào edit trong cột Action
     ![edit](edit.png)
     Chuyển hướng sang trang chỉnh sửa sản phẩm.
-    ![ediProduct](Screen Shot 2019-05-08 at 02.38.43.png)
+    ![ediProduct](editP.png)
     Tiến hành cập nhật thông tin sản phẩm vào click button Edit để hoàn thành, để trở về click button Cancle
     5. Hiển thị danh sách khách hàng
     - Trên slidebar, click Customer, chọn List Customer, hiển thị trang danh sách khách hàng
-    ![customer](Screen Shot 2019-05-08 at 02.43.12.png)
+    ![customer](customer.png)
     6. Hiển thị thông tin danh sách các đơn hàng đã được gửi đi
     - Trên slidebar click Order, chọn Shipped, hiện thi ra danh sách thông tin các đơn hàng đã được gửi đi.
-    ![shipped](Screen Shot 2019-05-08 at 02.45.22.png)
+    ![shipped](shipped.png)
     7. Hiển thị danh sách đơn hàng đang chờ xử lý và xử lý đơn hàng.
     - Trên slidebar click Order, chọn Pending, hiển thị ra danh sách thông tin  các đơn hàng chưa được xử lý
     - Click processed trong cột action sau khi đã xử lý cá đơn hàng.
-    ![pending](Screen Shot 2019-05-08 at 02.46.51.png)
+    ![pending](pending.png)
     8. Đăng xuất tài khoản admin
     - Click vào Logout để đăng xuất tài khoản
-    ![logout](Screen Shot 2019-05-08 at 02.48.28.png)
+    ![logout](logout.png)
     
     
 
