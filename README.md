@@ -1,11 +1,11 @@
 # INT2208-7-2019
 ##Nhóm 18 
 ### Thành Viên:
-#### Nguyễn Khắc Ngọc
 #### Nguyễn Hữu Nam
 #### Nguyễn Văn Khải
-#### Đặng Quang Liêm
 #### Nguyễn Ngọc Minh
+#### Đặng Quang Liêm
+#### Nguyễn Khắc Ngọc
 
 ### Link sản phẩm: https://wolfshoes.000webhostapp.com/
 ### Tên sản phẩm: WolfShoes
