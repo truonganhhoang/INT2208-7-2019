@@ -8,6 +8,7 @@
 #### Nguyễn Khắc Ngọc
 
 ### Link sản phẩm: https://wolfshoes.000webhostapp.com/
+### Link mô tả sản phẩm: https://bit.ly/2VVLsXb
 ### Tên sản phẩm: WolfShoes
 **Người sử dụng:** những cửa hàng giày có nhu cầu bán sản phẩm trên mạng internet, những người có nhu cầu mua giày online giao hàng tận nhà.
 ### **Mô tả phần mềm:**
