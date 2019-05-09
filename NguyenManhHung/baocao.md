@@ -38,11 +38,11 @@
 
   - Tạo 1 phần nhỏ giao diện HTML, CSS cho trang đăng kí vào đăng nhập (có thể tham khảo một số template của bootstrap)
     - Đặc tả - Làm rõ yêu cầu => [Link](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.fvjpas4blmex)
-    - Comit
+    - Commit:
     
   - Tạo database bằng MongoDB, sử dụng mongoose để tạo model <thiết lập mô hình MVC> kết nối tương tác với cơ sở dữ liệu
     - Thiết kế ở mức thấp - MVC => [Link](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.kehlqoeo6d9r)
-    - Comit
+    - Commit:
     
   - Liên kết với database sử dụng module mongoose 
     - Đặc tả - Làm rõ yêu cầu => [Link](https://docs.google.com/document/d/1a4i_31R8WBUAnF91syr1FwBpKoAiTY6rEJt1xWjb74M/edit#heading=h.fvjpas4blmex)
