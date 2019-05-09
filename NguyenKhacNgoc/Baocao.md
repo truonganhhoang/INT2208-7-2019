@@ -47,6 +47,7 @@
     - Chức năng đăng kí gồm một số thông tin như tên, Email, Số điện thoại, địa chỉ.
     ![register](register.png)
     - Chức năng đăng kí khi ghi vào database sẽ dùng hàm Hash trước khi lưu do đó sẽ không lo về mất an toàn của tài khoản.
+    - Email chỉ được sử dụng  1 lần ,nếu đăng kí lại email đã đăng kí trước đó thì sẽ không được chấp nhận.
     - Email người dùng nhập vào khi đăng kí sẽ chỉ nhận định dạng email, nếu không đúng định dạng sẽ yêu cầu nhập lại.
     - Mật khẩu người dùng nhập vào phải có độ dài từ 6 đến 12 kí tự.
     - Phần nhập lại mật khẩu phải giống với mật khẩu nhập trước đó nếu không sẽ không cho đăng kí và bắt người dùng nhập lại cho đúng.
