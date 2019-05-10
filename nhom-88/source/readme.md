@@ -1,9 +1,23 @@
-## Tài liệu kỹ thuật ứng dụng
-### 1. Mở đầu
+M## Tài liệu kỹ thuật ứng dụng
+
+## Mục lục
+
+- [Mở đầu](#1mo-dau)
+- [Công nghệ sử dụng](#2cong-nghe-su-dunng)
+	- [Phía máy chủ](#21phia-may-chu)
+	- [Phía người dùng](#22phia-nguoi-dung)
+- [Phân tích yêu cầu bài toán](#3phan-tich-yeu-cau-bai-toan)
+- [Mô tả giải quyết bài toán](#4giai-quyet-bai-toan)
+- [Mô tả ứng dụng](#5trien-khai-phan-mem)
+- [Thiết kế ca sử dụng](#6thiet-ke-ca-su-dung)
+- [Giao diện người dùng](#7giao-dien-nguoi-dung)
+
+## 1. Mở đầu
 Ngày nay, công nghệ hiện đại và phát triển, con người cũng có nhu cầu về kết nối và giao tiếp với nhau ngày càng tăng. Các ứng dụng của người nước ngoài như Facebook, Tweeter đang dần trở thành một nơi truyền bá những tư tưởng xấu và gây ảnh hưởng không tốt đến trải nghiệm người dùng như lạm dụng thông tin người dùng cho mục đích quảng cáo, làm giảm sự tập trung khi quá phụ thuộc... Với tiêu chí tập trung vào giá trị cốt lõi là giúp kết nối những người bạn người thân với nhau, nhóm 88 đã tạo dựng và giới thiệu sản phẩm Twiteruet nhằm đáp ứng những điều trên.
+
 ## 2. Công nghệ sử dụng
 
-#### 2.1 Phía máy chủ
+### 2.1 Phía máy chủ
 
 * Nodejs: Nodejs là thư viện được viết bằng C++ và javascript, dựa trên Runtime engine của Google. Nó giúp ta sử dụng javascript bên ngoài môi trường trình duyệt
 
@@ -11,17 +25,17 @@ Ngày nay, công nghệ hiện đại và phát triển, con người cũng có 
 
 * Mongodb, Mongoose: Mongodb là chương trình cơ sở dữ liệu không cấu trúc, Moongoose giúp chúng ta định nghĩa các lược đồ.
 
-#### 2.2 Phía giao diện người dùng
+### 2.2 Phía người dùng
 
 * Reactjs: Thư viện xây dựng ứng dụng giao diện người dùng do Facebook phát triển
 
-### 3. Phân tích yêu cầu của ứng dụng
+## 3. Phân tích yêu cầu bài toán
 
-#### 3.1. Mô tả bài toán
+### 3.1. Mô tả bài toán
 
 Bài toán đặt ra là cần ứng dụng cho người dùng chia sẻ, kết nối với nhau thông qua các dòng trạng thái và nhắn tin trực tiếp.
 
-#### 3.2. Thu thập yêu cầu
+### 3.2. Thu thập yêu cầu
 
 * Là một người dùng, tôi muốn tạo tài khoản riêng của mình để có thể sử dụng nó.
 * Là một người dùng, tôi muốn tạo bài viết của mình để chia sẻ với người khác.
@@ -32,7 +46,7 @@ Bài toán đặt ra là cần ứng dụng cho người dùng chia sẻ, kết 
 
 
 
-#### 3.3. Phân tích yêu cầu
+### 3.3. Phân tích yêu cầu
 
 Thiết kế ca sử dụng
 
@@ -79,13 +93,13 @@ Người dùng ấn vào ô tin nhắn sẽ hiện ra danh sách tin nhắn vớ
 Người dùng ấn chọn sẽ hiện ra khung chat nhỏ.</br>
 Người dùng nhập tin nhắn và gửi thành công, hệ thống lưu trữ và gửi tin nhắn đén dối phương.
 
-### 4. Giải quyết bài toán
+## 4. Mô tả giải quyết bài toán
 
-#### 4.1. Thiết kế giao diện
+### 4.1. Thiết kế giao diện
 
 Sử dụng React để tận dụng khả năng tái sử dụng của các Component và sư đa dạng của các thư viện hỗ trợ như Bootstrap...vv
 
-#### 4.2. Thiết kế cơ sở dữ liệu
+### 4.2. Thiết kế cơ sở dữ liệu
 
 * Lượng đồ User
 ```
@@ -141,9 +155,9 @@ Tweet
 
 
 
-### 5. Triển khai phần mềm
+## 5. Mô tả ứng dụng
 
-#### 5.1 Xây dựng ứng dụng phía người dùng
+### 5.1 Xây dựng ứng dụng phía người dùng
 
 * Cấu trúc ứng dụng
 
@@ -194,7 +208,7 @@ scr-----Action
 * Login, Register...: là các thư mục chưa các tính năng của ứng dụng
 
 
-#### 5.2 Xây dựng ứng dụng phía server 
+### 5.2 Xây dựng ứng dụng phía server 
 
 
 ```
@@ -230,7 +244,7 @@ scr-----Config
 
 
 
-### 6. Kết quả
+## 6. Thiết kế ca sử dụng
 
 * Login 
 ....
