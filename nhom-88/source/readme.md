@@ -2,12 +2,12 @@ M## Tài liệu kỹ thuật ứng dụng
 
 ## Mục lục
 
-- [Mở đầu](#1mo-dau)
+- [Mở đầu](#1-mo-dau)
 - [Công nghệ sử dụng](#2-cong-nghe-su-dunng)
 	- [Phía máy chủ](#21-phia-may-chu)
-	- [Phía người dùng](#-22phia-nguoi-dung)
+	- [Phía người dùng](#22-phia-nguoi-dung)
 - [Phân tích yêu cầu bài toán](#3-phan-tich-yeu-cau-bai-toan)
-- [Mô tả giải quyết bài toán](#-4giai-quyet-bai-toan)
+- [Mô tả giải quyết bài toán](#4-giai-quyet-bai-toan)
 - [Mô tả ứng dụng](#5-trien-khai-phan-mem)
 - [Thiết kế ca sử dụng](#6-thiet-ke-ca-su-dung)
 - [Giao diện người dùng](#-7giao-dien-nguoi-dung)
@@ -31,11 +31,11 @@ Ngày nay, công nghệ hiện đại và phát triển, con người cũng có 
 
 ## 3. Phân tích yêu cầu bài toán
 
-### 3.1. Mô tả bài toán
+### 3.1 Mô tả bài toán
 
 Bài toán đặt ra là cần ứng dụng cho người dùng chia sẻ, kết nối với nhau thông qua các dòng trạng thái và nhắn tin trực tiếp.
 
-### 3.2. Thu thập yêu cầu
+### 3.2 Thu thập yêu cầu
 
 * Là một người dùng, tôi muốn tạo tài khoản riêng của mình để có thể sử dụng nó.
 * Là một người dùng, tôi muốn tạo bài viết của mình để chia sẻ với người khác.
@@ -46,11 +46,11 @@ Bài toán đặt ra là cần ứng dụng cho người dùng chia sẻ, kết 
 
 
 
-### 3.3. Phân tích yêu cầu
+### 3.3 Phân tích yêu cầu
 
 Thiết kế ca sử dụng
 
-#### 3.3.1. Đăng nhập:
+#### 3.3.1 Đăng nhập:
 
  * Trạng thái: Người dùng chưa đăng nhập.
  * Mục đích: Đăng nhập vào trang web để có thể sử dụng được các chức năng của trang.
@@ -61,7 +61,7 @@ Sau khi ấn đăng nhập, thành công trả về giao diện trang chủ.</br
 Nếu không thành công, trả về màn hình ban đầu, hiện ra thông báo lỗi.</br>
 
 
-#### 3.3.2. Đăng xuất:
+#### 3.3.2 Đăng xuất:
 
 Trạng thái: Người dùng đang trong phiên hoạt động.
 Mực đích: Người dùng thoát khỏi phiên hoạt động, đăng xuất khỏi ứng dụng.
@@ -69,7 +69,7 @@ Luồng sự kiện:</br>
 Người dùng chọn phần đăng xuất, màn hình trả về giao diện đăng nhập.</br>
 Hệ thống kết thúc phiên hoạt động của người dùng đó.
 
-#### 3.3.3. Đăng trạng thái:
+#### 3.3.3 Đăng trạng thái:
 * Trạng thái: Người dùng đang trong phiên hoạt động.
 * Mục đích: Người dùng viết và tạo các dòng trạng thái ở trên giao diện trang chủ.
 * Luồng sự kiện:</br>
@@ -77,7 +77,7 @@ Người dùng thao tác trên dòng trạng thái, khi ấn đăng bài thì hi
 Nếu bài đăng trống hoặc quá dài thì không cho phép đăng bài đăng.</br>
 Hệ thống lưu lại sữ liệu của bài đăng thành công.
 
-#### 3.3.4. Kết bạn: 
+#### 3.3.4 Kết bạn: 
 * Trạng thái: Người dùng đang trong phiên hoạt động, một người dùng khác không có trong danh sách bạn bè hiện tại.
 * Mục đích: Người dùng kết bạn với người dùng khác để tiện theo dõi và trò chuyện.
 * Luồng sự kiện:</br>
@@ -85,7 +85,7 @@ Tại trang cá nhân của người dùng khác, ấn vào kết bạn thì nú
 Hệ thống lưu trữ dữ liệu về lời mời kết bạn của người dùng, gửi nó đến hồ sơ của người dùng được gửi lời mời đó.</br>
 Nếu người dùng hủy yêu cầu kết bạn, hệ thóng xác nhận xóa danh sách người dùng đó khỏi danh sách bạn bè.
 
-#### 3.3.5. Gửi tin nhắn:
+#### 3.3.5 Gửi tin nhắn:
 * Trạng thái: Người dùng trong phiên hoạt động, người dùng khác đang là bạn bè của nhau.
 * Mục đích: Nhắn tin với bạn bè để tán gẫu và chia sẻ một cách nhanh chóng nhất.
 * Luồng sự kiện: 
@@ -95,11 +95,11 @@ Người dùng nhập tin nhắn và gửi thành công, hệ thống lưu trữ
 
 ## 4. Mô tả giải quyết bài toán
 
-### 4.1. Thiết kế giao diện
+### 4.1 Thiết kế giao diện
 
 Sử dụng React để tận dụng khả năng tái sử dụng của các Component và sư đa dạng của các thư viện hỗ trợ như Bootstrap...vv
 
-### 4.2. Thiết kế cơ sở dữ liệu
+### 4.2 Thiết kế cơ sở dữ liệu
 
 * Lượng đồ User
 ```
