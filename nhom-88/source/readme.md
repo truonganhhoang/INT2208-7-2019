@@ -1,4 +1,4 @@
-M## Tài liệu kỹ thuật ứng dụng
+# Tài liệu kỹ thuật ứng dụng
 
 ## Mục lục
 
@@ -7,8 +7,13 @@ M## Tài liệu kỹ thuật ứng dụng
 	- [Phía máy chủ](#21-phia-may-chu)
 	- [Phía người dùng](#22-phia-nguoi-dung)
 - [Phân tích đặc tả yêu cầu](#3-phan-tich-dac-ta-yeu-cau)
+	- [Mô tả bài toán](#31-mo-ta-bai-toan)
+	- [Thu thập yêu cầu](#32-thu-thap-yeu-cau)
+	- [Đặc tả yêu cầu chức năng](#32-dac-ta-yeu-cau-chuc-nang)
 - [Mô tả giải quyết bài toán](#4-giai-quyet-bai-toan)
 - [Mô tả cài đặt ứng dụng](#5-trien-khai-phan-mem)
+	- [Cài đặt phía server](#51-cai-dat-server)
+	- [Cài đặt client](#52-cai-dat-client)
 - [Thiết kế ca sử dụng ứng dụng](#6-thiet-ke-ca-su-dung)
 - [Giao diện người dùng](#-7giao-dien-nguoi-dung)
 - [Kiểm thử](#8-kiem-thu)
@@ -50,9 +55,8 @@ Bài toán đặt ra là cần ứng dụng cho người dùng chia sẻ, kết 
 
 
 
-### 3.3 Phân tích yêu cầu
+### 3.3 Đặc tả yêu cầu chức năng
 
-Thiết kế ca sử dụng
 
 #### 3.3.1 Đăng nhập:
 
@@ -98,65 +102,6 @@ Người dùng ấn chọn sẽ hiện ra khung chat nhỏ.</br>
 Người dùng nhập tin nhắn và gửi thành công, hệ thống lưu trữ và gửi tin nhắn đén dối phương.
 
 ## 4. Mô tả giải quyết bài toán
-
-### 4.1 Thiết kế giao diện
-
-Sử dụng React để tận dụng khả năng tái sử dụng của các Component và sư đa dạng của các thư viện hỗ trợ như Bootstrap...vv
-
-### 4.2 Thiết kế cơ sở dữ liệu
-
-* Lượng đồ User
-```
-User
-|
-|----------Id_
-|            |------type: Object_id
-|
-|----------Email
-|            |-----type: String
-|            |-----unique: true
-|            |-----required: true
-|
-|----------Password
-|            |-----type: String
-|            |-----required: true
-|
-|
-|----------Permission
-|            |-----type: String
-|            |-----enum: ['Client', 'Manager', 'Admin']
-|            |-----default: 'Clinet'
-|
-|-----------Media
-|            |-------Avatar
-|            |            |------type: String
-|            |
-|            |-------Image
-|                        |------type: String
-|
-|-----------Tweet
-|            |------reference: Tweet_id
-```
-
-
-```
-Tweet
-|
-|----------Id_
-|            |------type: Object_id
-|
-|----------Content
-|            |-----type: String
-|            |-----unique: true
-|            |-----required: true
-|
-|----------Action
-|            |------Like
-|            |------Dislike
-
-```
-
-
 
 
 ## 5. Mô tả cài đặt ứng dụng
@@ -244,10 +189,63 @@ scr-----Config
 
 * Server/Model: Xây dựng các lượng đồ cho các đối tượng trong cơ sở dữ liệu
 
-...
+
+	* Lượng đồ User
+```
+User
+|
+|----------Id_
+|            |------type: Object_id
+|
+|----------Email
+|            |-----type: String
+|            |-----unique: true
+|            |-----required: true
+|
+|----------Password
+|            |-----type: String
+|            |-----required: true
+|
+|
+|----------Permission
+|            |-----type: String
+|            |-----enum: ['Client', 'Manager', 'Admin']
+|            |-----default: 'Clinet'
+|
+|-----------Media
+|            |-------Avatar
+|            |            |------type: String
+|            |
+|            |-------Image
+|                        |------type: String
+|
+|-----------Tweet
+|            |------reference: Tweet_id
+```
+
+
+```
+Tweet
+|
+|----------Id_
+|            |------type: Object_id
+|
+|----------Content
+|            |-----type: String
+|            |-----unique: true
+|            |-----required: true
+|
+|----------Action
+|            |------Like
+|            |------Dislike
+
+```
+....
 
 
 ## 6. Thiết kế ca sử dụng ứng dụng
+
+
 
 ## 7. Giao diện người dùng
 
