@@ -19,6 +19,3 @@
 * Copy folder thietbi vào C:\xampp\htdocs
 * Vào phpmyadmin tạo cơ sở dữ liệu có tên quanlythietbi sau đó import file quanlythietbi.sql vào cơ sở dữ liệu trên
 * Truy cập đường dẫn http://localhost/thietbi/index.php
-=======
-## INT2208-7-2019
-CNPM
