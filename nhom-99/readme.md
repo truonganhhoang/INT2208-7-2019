@@ -1,13 +1,18 @@
 # INT2208-7-2019 
-- Tên ứng dụng: Learning English - Web học Tiếng Anh.
+- Tên ứng dụng: Learning English - Web học Tiếng Anh cơ bản.
 - Các nhóm người dùng: Những người có nhu cầu học Tiếng Anh cơ bản. 
 - Mô tả tóm tắt phần mềm: Phần mềm học Tiếng Anh cơ bản cho người mới bắt đầu.
 
-**Tài liệu hướng dẫn sử dụng**
-https://docs.google.com/document/d/1R9KKIZnqUqBSC1Nzxn2-WshKTOHEBIUMqsyG0OeucZ0/edit#heading=h.9jb67iadprxi
+## Phần mềm Learning English
 
-**Một vài hình ảnh:** 
-- Trang chủ, đăng nhập, đăng kí:                    
+**Tài liệu kĩ thuật phần mềm:** [Link Google Docs](https://docs.google.com/document/d/1R9KKIZnqUqBSC1Nzxn2-WshKTOHEBIUMqsyG0*OeucZ0/edit#)
+
+**Link triển khai sản phẩm:** 
+
+**Video giới thiệu sản phẩm:** 
+
+**Hướng dẫn sử dụng:** 
+- Trang chủ, đăng nhập, đăng kí:   
 ![web01](https://user-images.githubusercontent.com/41587478/53711061-e921a180-3e72-11e9-9c99-c859f3bf159f.png)
 ![image](https://user-images.githubusercontent.com/43178187/57211557-dfe7b900-700a-11e9-9e37-9d311bcd99a6.png)
 ![image](https://user-images.githubusercontent.com/43178187/57211631-289f7200-700b-11e9-8206-a2fc9000e51b.png)
