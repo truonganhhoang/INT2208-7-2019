@@ -3,14 +3,14 @@ M## Tài liệu kỹ thuật ứng dụng
 ## Mục lục
 
 - [Mở đầu](#1mo-dau)
-- [Công nghệ sử dụng](#2cong-nghe-su-dunng)
-	- [Phía máy chủ](#21phia-may-chu)
-	- [Phía người dùng](#22phia-nguoi-dung)
-- [Phân tích yêu cầu bài toán](#3phan-tich-yeu-cau-bai-toan)
-- [Mô tả giải quyết bài toán](#4giai-quyet-bai-toan)
-- [Mô tả ứng dụng](#5trien-khai-phan-mem)
-- [Thiết kế ca sử dụng](#6thiet-ke-ca-su-dung)
-- [Giao diện người dùng](#7giao-dien-nguoi-dung)
+- [Công nghệ sử dụng](#2-cong-nghe-su-dunng)
+	- [Phía máy chủ](#21-phia-may-chu)
+	- [Phía người dùng](#-22phia-nguoi-dung)
+- [Phân tích yêu cầu bài toán](#3-phan-tich-yeu-cau-bai-toan)
+- [Mô tả giải quyết bài toán](#-4giai-quyet-bai-toan)
+- [Mô tả ứng dụng](#5-trien-khai-phan-mem)
+- [Thiết kế ca sử dụng](#6-thiet-ke-ca-su-dung)
+- [Giao diện người dùng](#-7giao-dien-nguoi-dung)
 
 ## 1. Mở đầu
 Ngày nay, công nghệ hiện đại và phát triển, con người cũng có nhu cầu về kết nối và giao tiếp với nhau ngày càng tăng. Các ứng dụng của người nước ngoài như Facebook, Tweeter đang dần trở thành một nơi truyền bá những tư tưởng xấu và gây ảnh hưởng không tốt đến trải nghiệm người dùng như lạm dụng thông tin người dùng cho mục đích quảng cáo, làm giảm sự tập trung khi quá phụ thuộc... Với tiêu chí tập trung vào giá trị cốt lõi là giúp kết nối những người bạn người thân với nhau, nhóm 88 đã tạo dựng và giới thiệu sản phẩm Twiteruet nhằm đáp ứng những điều trên.
