@@ -6,11 +6,14 @@ M## Tài liệu kỹ thuật ứng dụng
 - [Công nghệ sử dụng](#2-cong-nghe-su-dunng)
 	- [Phía máy chủ](#21-phia-may-chu)
 	- [Phía người dùng](#22-phia-nguoi-dung)
-- [Phân tích yêu cầu bài toán](#3-phan-tich-yeu-cau-bai-toan)
+- [Phân tích đặc tả yêu cầu](#3-phan-tich-dac-ta-yeu-cau)
 - [Mô tả giải quyết bài toán](#4-giai-quyet-bai-toan)
-- [Mô tả ứng dụng](#5-trien-khai-phan-mem)
-- [Thiết kế ca sử dụng](#6-thiet-ke-ca-su-dung)
+- [Mô tả cài đặt ứng dụng](#5-trien-khai-phan-mem)
+- [Thiết kế ca sử dụng ứng dụng](#6-thiet-ke-ca-su-dung)
 - [Giao diện người dùng](#-7giao-dien-nguoi-dung)
+- [Kiểm thử](#8-kiem-thu)
+- [Kết luận](#9-ket-luan)
+
 
 ## 1. Mở đầu
 Ngày nay, công nghệ hiện đại và phát triển, con người cũng có nhu cầu về kết nối và giao tiếp với nhau ngày càng tăng. Các ứng dụng của người nước ngoài như Facebook, Tweeter đang dần trở thành một nơi truyền bá những tư tưởng xấu và gây ảnh hưởng không tốt đến trải nghiệm người dùng như lạm dụng thông tin người dùng cho mục đích quảng cáo, làm giảm sự tập trung khi quá phụ thuộc... Với tiêu chí tập trung vào giá trị cốt lõi là giúp kết nối những người bạn người thân với nhau, nhóm 88 đã tạo dựng và giới thiệu sản phẩm Twiteruet nhằm đáp ứng những điều trên.
@@ -29,7 +32,8 @@ Ngày nay, công nghệ hiện đại và phát triển, con người cũng có 
 
 * Reactjs: Thư viện xây dựng ứng dụng giao diện người dùng do Facebook phát triển
 
-## 3. Phân tích yêu cầu bài toán
+
+## 3. Phân tích đặc tả yêu cầu
 
 ### 3.1 Mô tả bài toán
 
@@ -155,7 +159,7 @@ Tweet
 
 
 
-## 5. Mô tả ứng dụng
+## 5. Mô tả cài đặt ứng dụng
 
 ### 5.1 Xây dựng ứng dụng phía người dùng
 
@@ -243,20 +247,23 @@ scr-----Config
 ...
 
 
+## 6. Thiết kế ca sử dụng ứng dụng
 
-## 6. Thiết kế ca sử dụng
+## 7. Giao diện người dùng
 
 * Login 
-....
 
 ![login](https://i.imgur.com/g0j65T7.png)
 
 * Register
-...
+
 ![dang ky](https://i.imgur.com/gVUnxWH.png)
 
 * Home
-....
 
 ![home](https://i.imgur.com/HcGzgLo.png)
+
+## 8. Kiểm thử
+## 9. Kết luận
+
 
