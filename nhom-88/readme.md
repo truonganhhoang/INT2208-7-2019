@@ -3,6 +3,8 @@
 
 ## Ứng dụng Tweet
 
+Source code và tài liệu kỹ thuật: https://github.com/vuggg/INT2208-7-2019/tree/master/nhom-88/source
+
 ### Thể loại
 
 * Mạng xã hội
