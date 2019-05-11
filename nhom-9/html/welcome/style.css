@@ -1,0 +1,44 @@
+.card {
+    padding-top: 6%;
+}
+
+.btn-primary {
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 20%;
+}
+
+.navbar-custom {
+    background-color: #3c5fe7;
+    margin-bottom: 1%;
+}
+
+.navbar-custom .navbar-brand {
+    color: #ecf0f1;
+}
+.btn {
+  border-radius:0;
+}
+#a_1 {
+	font-size: 20px;
+	float: right;
+	color: #ffffff;
+	padding: 0 15px 0 0;
+}
+#a_1:hover {
+	color: #e6e6e6;
+	text-decoration: none;
+}
+.card-body h1 {
+    font-size: 80px;
+}
+.card-body a {
+    align-items: center;
+    color: #ffffff;
+}
+.card-body a:hover {
+    text-decoration: none;
+    color: #e6e6e6;
+}
+

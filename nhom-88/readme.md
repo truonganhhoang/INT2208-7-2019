@@ -1,9 +1,8 @@
 ## Nhóm 88
 
 
-## Ứng dụng Tweet
 
-Source code và tài liệu kỹ thuật: https://github.com/vuggg/INT2208-7-2019/tree/master/nhom-88/source
+## Ứng dụng Tweet
 
 ### Thể loại
 
@@ -12,7 +11,7 @@ Source code và tài liệu kỹ thuật: https://github.com/vuggg/INT2208-7-201
 
 ### Phiên bản
 
-* Lastest: https://twituet.herokuapp.com
+* Lastest: https://uettor.herokuapp.com
 
 ### Thành viên trong nhóm
 
@@ -20,12 +19,12 @@ Source code và tài liệu kỹ thuật: https://github.com/vuggg/INT2208-7-201
 * Phùng Xuân Vượng
 * Hoàng Trần Long Nhật
 * Trương Việt Hoàng
-* Phan Huy Hoàng
 
 
 ### Nhóm người dùng
 
 * Ứng dụng giải trí cho người trẻ tuổi.
+
 
 
 ### Mô tả chức năng app
@@ -34,11 +33,13 @@ Source code và tài liệu kỹ thuật: https://github.com/vuggg/INT2208-7-201
 - [x] Đăng nhập
 - [x] Đăng tweet
 - [x] Tìm kiếm tweet
+
 - [ ] Đăng ảnh
-- [ ] Realtime tweet
+
 
 
 ... update
+
 
 
 ### Hình ảnh
@@ -63,7 +64,6 @@ Source code và tài liệu kỹ thuật: https://github.com/vuggg/INT2208-7-201
     * Phùng Xuân Vượng
     * Hoàng Trần Long Nhật
     * Trương Việt Hoàng
-    * Phan Huy Hoàng
 
 #### Product backlogs
 
@@ -73,7 +73,6 @@ Source code và tài liệu kỹ thuật: https://github.com/vuggg/INT2208-7-201
 - [x] Gửi và lưu dữ liệu từ client lên cơ sở dữ liệu(csdl) và gửi dữ liệu từ csdl về client.
 - [ ] Đăng ký, đăng nhập (xử lý phía backen)
 - [ ] Hoàn thiện giao diện: Đăng ký, đăng nhập, Màn hình chính
-- [ ] Giao diện trang cá nhân
 
 #### Sprint backlog
 
@@ -92,10 +91,5 @@ Source code và tài liệu kỹ thuật: https://github.com/vuggg/INT2208-7-201
 ##### V1.1
 
 - [x] 27/2/2019: Cập nhật thanh navigator
-- [x] 10-3 - 13/3: Chức năng đăng ký tài khoản
-
-
-
-
-
+- [ ] 27-2 - 4/3: Chức năng đăng ký tài khoản
 
