@@ -103,6 +103,12 @@
 - Sau khi đăng nhập thành công chọn khoá học bạn thích để học.
 ![image](https://user-images.githubusercontent.com/43178187/57585258-cfa27300-750f-11e9-9798-b9816739d42c.png)
 
+- Tiếp theo bạn chọn bài học và học thôi nào!
+![image](https://user-images.githubusercontent.com/43178187/57585478-f0b89300-7512-11e9-8340-0d17f7f4124b.png)
+
+- Chọn đáp án đúng sai qua hình ảnh, bạn tự khám phá thêm nhé!
+![image](https://user-images.githubusercontent.com/43178187/57585488-0e85f800-7513-11e9-8943-f84c4459d38e.png)
+
 - Trên thanh điều hướng của trang chủ có chức năng ngữ pháp. Chọn để mở giao diện ngữ pháp.
 ![image](https://user-images.githubusercontent.com/43178187/57585230-602c8380-750f-11e9-8b0b-3094b2ebe048.png)
 
