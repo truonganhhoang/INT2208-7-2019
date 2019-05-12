@@ -36,5 +36,6 @@
 	* Và cuối cùng hãy chinh phục người đó bằng khả năng chém gió của bạn.
 	(Note: Ứng dụng phù hớp với hội Fa)
 * Link demo sản phẩm : [Demo](https://drive.google.com/file/d/1wx5YfvjkGmiPhSGq85tLb6_VDJp797D-/view?fbclid=IwAR3b7CeD7l0cje2xTI14mWuWWAWzJIOwnUYI8T6G_sAgNCXjwQmuDzhvzFE)
+* Link tài liệu kĩ thuật phần mềm : [Chi tiết](https://docs.google.com/document/d/1_Cqh34CF6f2GCRrKmF-7prcwLh1k-YiWleW37GPVqm0/edit#)
 
 	
