@@ -35,6 +35,5 @@
 	* Nhấn Like để bạn có cơ hội tương tác với người đó. Khi người đó cũng dành cho bạn nút Like thì xin chúc mừng, bạn sắp có cơ hội thoát kiếp FA.
 	* Và cuối cùng hãy chinh phục người đó bằng khả năng chém gió của bạn.
 	(Note: Ứng dụng phù hớp với hội Fa)
-* Tài liệu kĩ thuật :
-	* 
+* Link demo sản phẩm : [link] https://drive.google.com/file/d/1wx5YfvjkGmiPhSGq85tLb6_VDJp797D-/view?fbclid=IwAR3b7CeD7l0cje2xTI14mWuWWAWzJIOwnUYI8T6G_sAgNCXjwQmuDzhvzFE
 	
