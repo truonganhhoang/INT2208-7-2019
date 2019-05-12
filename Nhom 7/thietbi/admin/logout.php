@@ -1,0 +1,10 @@
+<?php
+	if(!isset($_SESSION))
+		session_start();
+		unset($_SESSION["success"]);
+		unset($_SESSION["user"]);
+		unset($_SESSION["hotenadmin"]);
+		unset($_SESSION["capquyen"]);
+		header("location:login.php");
+		session_destroy();
+?>
