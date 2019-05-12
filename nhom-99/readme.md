@@ -18,12 +18,21 @@
 **Video giới thiệu sản phẩm:** 
 
 **Hướng dẫn sử dụng:** 
-- Trang chủ, đăng nhập, đăng kí:   
-![web01](https://user-images.githubusercontent.com/41587478/53711061-e921a180-3e72-11e9-9c99-c859f3bf159f.png)
-![image](https://user-images.githubusercontent.com/43178187/57211557-dfe7b900-700a-11e9-9e37-9d311bcd99a6.png)
-![image](https://user-images.githubusercontent.com/43178187/57211631-289f7200-700b-11e9-8206-a2fc9000e51b.png)
-- Giao diện học:                 
-![image](https://user-images.githubusercontent.com/43178187/57211546-d6f6e780-700a-11e9-9823-a2e3479c50b4.png)
+- Giao diện trang chủ của phần mềm.
+![image](https://user-images.githubusercontent.com/43178187/57585200-f57b4800-750e-11e9-8cb3-7b8d095e605e.png)
+
+- Trên thanh điều hướng của trang chủ chọn đăng kí. Bạn đăng kí tài khoản để bắt đầu học.
+![image](https://user-images.githubusercontent.com/43178187/57585216-1e9bd880-750f-11e9-9d22-2c6d1440c401.png)
+
+- Sau bước đăng kí tiếp theo là đến đăng nhập. Bạn có thể đăng nhập bằng Facebook hoặc Google.
+![image](https://user-images.githubusercontent.com/43178187/57585205-0461fa80-750f-11e9-82c3-b7234a7ae54d.png)
+
+- Sau khi đăng nhập thành công chọn khoá học bạn thích để học.
+![image](https://user-images.githubusercontent.com/43178187/57585258-cfa27300-750f-11e9-9798-b9816739d42c.png)
+
+- Trên thanh điều hướng của trang chủ có chức năng ngữ pháp. Chọn để mở giao diện ngữ pháp.
+![image](https://user-images.githubusercontent.com/43178187/57585230-602c8380-750f-11e9-8b0b-3094b2ebe048.png)
+
 **Các công nghệ bao gồm cả các Freamwork sẽ được dùng để triển khai dự án**
 - HTML.
 - CSS <Bootstrap>. 
