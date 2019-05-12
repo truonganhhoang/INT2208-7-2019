@@ -45,6 +45,30 @@
 	- Hoàn thành khóa học [Software Engineering Introduction](https://github.com/manhung99/INT2208-7-2019/blob/master/NguyenDucAnh/SoftEng1x.jpg).
 	- Tham gia viết báo cáo bài tập nhóm:https://docs.google.com/document/d/1R9KKIZnqUqBSC1Nzxn2-WshKTOHEBIUMqsyG0OeucZ0/edit?fbclid=IwAR1vZREk1uFJ1yh25uiHaqN5OqNavLnSwdBq0A2sxOCuRms4sAm4kvV1L34
 
+**Hướng dẫn sử dụng website:** 
+
+- Giao diện trang chủ của phần mềm.
+![image](https://user-images.githubusercontent.com/43178187/57585200-f57b4800-750e-11e9-8cb3-7b8d095e605e.png)
+
+- Trên thanh điều hướng của trang chủ chọn đăng kí. Bạn đăng kí tài khoản để bắt đầu học.
+![image](https://user-images.githubusercontent.com/43178187/57585216-1e9bd880-750f-11e9-9d22-2c6d1440c401.png)
+
+- Sau bước đăng kí tiếp theo là đến đăng nhập. Bạn có thể đăng nhập bằng Facebook hoặc Google.
+![image](https://user-images.githubusercontent.com/43178187/57585205-0461fa80-750f-11e9-82c3-b7234a7ae54d.png)
+
+- Sau khi đăng nhập thành công chọn khoá học bạn thích để học.
+![image](https://user-images.githubusercontent.com/43178187/57585258-cfa27300-750f-11e9-9798-b9816739d42c.png)
+
+- Tiếp theo bạn chọn bài học và học thôi nào!
+![image](https://user-images.githubusercontent.com/43178187/57585478-f0b89300-7512-11e9-8340-0d17f7f4124b.png)
+
+- Chọn đáp án đúng sai qua hình ảnh, bạn tự khám phá thêm nhé!
+![image](https://user-images.githubusercontent.com/43178187/57585488-0e85f800-7513-11e9-8943-f84c4459d38e.png)
+
+- Trên thanh điều hướng của trang chủ có chức năng ngữ pháp. Chọn để mở giao diện ngữ pháp.
+![image](https://user-images.githubusercontent.com/43178187/57585230-602c8380-750f-11e9-8b0b-3094b2ebe048.png)
+
+
 
 ### Kiến thức để xây dựng phần user story :
 * Để xây dựng User Story em đã học hỏi công nghệ và tham khảo các tài liệu:
