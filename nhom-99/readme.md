@@ -13,7 +13,7 @@
                   
 **Tài liệu kĩ thuật phần mềm:** [Link Google Docs](https://docs.google.com/document/d/1R9KKIZnqUqBSC1Nzxn2-WshKTOHEBIUMqsyG0*OeucZ0/edit#)
 
-**Link triển khai sản phẩm:** 
+**Link triển khai sản phẩm:** [https://english-dashboard-app.herokuapp.com](https://english-dashboard-app.herokuapp.com)
 
 **Video giới thiệu sản phẩm:** 
 
