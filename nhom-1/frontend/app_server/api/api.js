@@ -48,7 +48,7 @@ var saveAvatarHandlerMiddleware = multer({ storage: storageAvatar });
 var savePictureHandlerMiddleware = multer({ storage: storagePicture });
 
 
-router.post('mark-read', tokenCheck, (req,res)=>{
+router.post('/mark-read', tokenCheck, (req,res)=>{
     let roomId = req.body.roomId;
     let user = req.body.username;
 
@@ -63,10 +63,12 @@ router.post('mark-read', tokenCheck, (req,res)=>{
             for (let i = 0; i < doc.unread.length; i++) {
                 if (doc.unread[i] == user) {
                     pos = i;
+                    found = true;
                     break;
                 }
             }
-            doc.unread.splice(i,1);
+            if (found)
+            doc.unread.splice(pos,1);
             doc.save((err)=>{
                 if (err) {
                     res.json({state: false});
@@ -740,6 +742,16 @@ router.get('/acceptfriend', tokenCheck, (req,res)=> {
 
 });
 
+router.post('/get-post-from-user', tokenCheck, (req,res)=>{
+    let user = req.body.userPost;
+    Post.find({author: user}, (err,docs)=>{
+        if (err) {
+            res.json({state: false});
+            return;
+        }
+        res.json({state:true, posts: docs});
+    });
+});
 
 router.get('/requestfriend', tokenCheck, (req, res) => {
     let friendId = req.query.username;

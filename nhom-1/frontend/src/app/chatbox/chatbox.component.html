@@ -17,9 +17,9 @@
     <img (click)="routeTo()" [src]="selectedMessageLoader.avatarUrl" style="width: 40px; height: 40px; cursor: pointer;" alt="" />
     <p>{{selectedMessageLoader.name}}</p>
   </div>
-  <div #chatbox class="messages">
+  <div #chatbox class="messages" style="left:0px; position: absolute; width:100%;">
     <p style="text-align: center; color:blue; font-size:13px; cursor: pointer;" (click)="loadMoreChat()" *ngIf="messageLeft()">Load more message</p>
-    <ul style="padding-left: 0px;" >
+    <ul style="padding-left: 0px; position: relative;">
       <app-message *ngFor="let message of messageShow" [message]="message"></app-message>
     </ul>
   </div>

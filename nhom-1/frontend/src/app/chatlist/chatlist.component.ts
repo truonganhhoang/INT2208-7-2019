@@ -86,11 +86,17 @@ export class ChatlistComponent implements OnInit {
             this.selectedChatRoom = this.roomList[i].roomId;
             this.messageService.updateSelectedRoom(this.selectedChatRoom);
             this.roomList[i].read = true;
-            this.http.post<any>(`${environment.apiUrl}/api/mark-read`, {roomId: this.selectedChatRoom});
+            this.http.post<any>(`${environment.apiUrl}/api/mark-read`, {roomId: this.selectedChatRoom}).subscribe((res)=>{
+              console.log(res);
+            });
             break;
           }
         }
         if (!found) {
+          if (params.u == this.userService.currentUserValue.username) {
+            this.routeToFirstRoomChat();
+            return;
+          }
           this.http.get<any>(`${environment.apiUrl}/api/createroom`, {params: {'username': paramValue}}).subscribe((res)=>{
             console.log(res);
             if (res.state) {
@@ -116,6 +122,9 @@ export class ChatlistComponent implements OnInit {
                 this.roomList.push(newRoom);
                 this.sortRoomList();
                 this.selectedChatRoom = newRoom.roomId;
+                this.http.post<any>(`${environment.apiUrl}/api/mark-read`, {roomId: this.selectedChatRoom}).subscribe((res)=>{
+                  console.log(res);
+                });
                 this.messageService.updateSelectedRoom(this.selectedChatRoom);
               } else {
                 this.routeToFirstRoomChat();
@@ -142,21 +151,25 @@ export class ChatlistComponent implements OnInit {
           this.roomList[i].read = false;
           if (this.roomList[i].roomId == this.selectedChatRoom) {
             this.roomList[i].read = true;
-            this.http.post<any>(`${environment.apiUrl}/api/mark-read`, {roomId: this.selectedChatRoom});
+            this.http.post<any>(`${environment.apiUrl}/api/mark-read`, {roomId: this.selectedChatRoom}).subscribe((res)=>{
+              console.log(res);
+            });
           }
           this.sortRoomList();
           console.log(this.roomList);
           break;
         }
       }
-      console.log(this.roomList);
+      this.sortRoomList();
       if (!found) {
         this.http.get<any>(`${environment.apiUrl}/api/get-roomchat`, {params: {'roomid': newMessage.roomId.toString()}}).subscribe((res)=>{
           if (res.roomchat) {
             let newRoom = new ChatRoom();
             newRoom.lastMessage = new Date(res.roomChat.lastMessage);
             newRoom.read = true;
-            this.http.post<any>(`${environment.apiUrl}/api/mark-read`, {roomId: this.selectedChatRoom});
+            this.http.post<any>(`${environment.apiUrl}/api/mark-read`, {roomId: this.selectedChatRoom}).subscribe((res)=>{
+              console.log(res);
+            });
             newRoom.thread = res.roomChat.thread;
             newRoom.roomId = res.roomChat._id;
             for (let i = 0; i < res.roomChat.authors.length; i++) {
