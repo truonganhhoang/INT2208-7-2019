@@ -27,7 +27,7 @@
 	* Tìm hiểu html, css, javasript, nodejs, mongoDB,...
 	* Tạo giao diện cơ bản
 * Hướng dẫn sử dụng : 
-	* Đăng nhập vào link sản phẩm : https://uettinderfake.herokuapp.com/
+	* Đăng nhập vào link sản phẩm : [link](https://uettinderfake.herokuapp.com/)
 	* Click đăng nhập bằng tài khoản facebook cá nhân.
 	* Sau khi đăng nhập, cập nhật thêm thông tin, điền thêm thông tin độ tuổi và giới tính.
 	* Mỗi thông tin người dùng khác được hiển thị trên giao diện trang chủ với nút Dislike và Like.
@@ -36,4 +36,5 @@
 	* Và cuối cùng hãy chinh phục người đó bằng khả năng chém gió của bạn.
 	(Note: Ứng dụng phù hớp với hội Fa)
 * Link demo sản phẩm : [Demo](https://drive.google.com/file/d/1wx5YfvjkGmiPhSGq85tLb6_VDJp797D-/view?fbclid=IwAR3b7CeD7l0cje2xTI14mWuWWAWzJIOwnUYI8T6G_sAgNCXjwQmuDzhvzFE)
+
 	
