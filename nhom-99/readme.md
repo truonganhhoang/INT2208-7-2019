@@ -15,7 +15,7 @@
 
 **Link triển khai sản phẩm:** [Link Heroku](https://english-dashboard-app.herokuapp.com)
 
-**Video giới thiệu sản phẩm:** 
+**Video giới thiệu sản phẩm:** [Link Youtube](https://www.youtube.com/watch?v=PGqLfuEG-FY&feature=youtu.be)
 
 **Hướng dẫn sử dụng:** 
 
