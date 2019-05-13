@@ -8,6 +8,8 @@
 
 ## Tên ứng dụng:
  - Web quản lí bán hàng.
+ - Link sản phẩm: https://wolfshoes.000webhostapp.com/
+ - Link mô tả sản phẩm: https://bit.ly/2VVLsXb
 
 ## Chức năng:
 - Admin:
