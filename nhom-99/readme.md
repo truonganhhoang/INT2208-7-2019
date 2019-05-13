@@ -4,9 +4,9 @@
 - Các nhóm người dùng: Những người có nhu cầu học Tiếng Anh cơ bản. 
 - Mô tả tóm tắt phần mềm: Phần mềm học Tiếng Anh cơ bản cho người mới bắt đầu.
 - Thành viên gồm có :
-  - Nguyễn Đức Anh - [Link báo cáo](https://github.com/manhung99/INT2208-7-2019/blob/master/NguyenDucAnh/baocao.md)
-  - Nguyễn Mạnh Hùng - [Link báo cáo](https://github.com/manhung99/INT2208-7-2019/blob/master/NguyenManhHung/baocao.md)
-  - Nguyễn Xuân Hoàng - [Link báo cáo](https://github.com/manhung99/INT2208-7-2019/blob/master/NguyenXuanHoang/baocao.md)
+  - Nguyễn Đức Anh - 17020576 - [Link báo cáo](https://github.com/manhung99/INT2208-7-2019/blob/master/NguyenDucAnh/baocao.md)
+  - Nguyễn Mạnh Hùng - 17020788 - [Link báo cáo](https://github.com/manhung99/INT2208-7-2019/blob/master/NguyenManhHung/baocao.md)
+  - Nguyễn Xuân Hoàng - 17020772 - [Link báo cáo](https://github.com/manhung99/INT2208-7-2019/blob/master/NguyenXuanHoang/baocao.md)
 
 
 ## Phần mềm Learning English
