@@ -1,0 +1,194 @@
+<!DOCTYPE html> 
+<html lang="en"><head>
+	<title>Phát triển ứng dụng học Tiếng Anh </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">  
+	<link rel="stylesheet" href="/vendor/bootstrap.css">
+	<link rel="stylesheet" href="/icons/css/all.css">
+ 	<link rel="stylesheet" href="/stylesheets/index.css">
+	<link rel="icon" type="image/png" href="/images/logo.png"/>
+	<link rel="stylesheet" href="/stylesheets/nprogress.css">
+ 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+ 	<!-- font-family: 'Noto Sans', sans-serif; -->
+</head>
+<body >	
+	<div class="part-top">
+		<% include header %>
+
+
+		<div class="background-title pt-3">
+			<div class="background-images">
+			<!-- 	nothing -->
+			</div>
+		<div class="container">
+			<div class="row big-title ">
+				<div class="col-sm-5">
+					<p class="back-title"><b>Hãy đến với chúng tôi</b> để tận hưởng dịch vụ <b>tốt nhất!</b></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-8 button-discover">
+					<a href="/" class="btn btn-danger lookingfor">Bạn đang tìm kiếm một khóa học <i class="fas fa-arrow-circle-right"></i></a>
+					<a href="/users/register" class="btn btn-info get-started">Bắt đầu ngay <i class="fas fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+		</div>
+	
+
+		<div class="container quote-introduce hidden-xs-down">
+			<div class="row">
+				<div class="col-sm-4 text-md-center text-of-introduce">
+					<b>TỔNG HỢP KIẾN THỨC</b> VÀ MẸO HỌC TIẾNG ANH SIÊU <b>THÚ VỊ!</b>
+				</div>
+				<div class="col-sm-4 left-of-interested">
+					<img src="images/working-1.png" class="img-fluid">
+					<p class="text-md-center pt-1"><b>Phương pháp học "thụ động" hiệu quả</b></p>
+					<p class="text-md-center">Dễ nhớ, khó quên, vì mỗi lần lướt web bạn phải nhìn thấy từ vựng cả trăm lần!</p>
+				</div>
+
+				<div class="col-sm-4 left-of-interested">
+					<img src="images/working-3.png" class="img-fluid">
+					<p class="text-md-center pt-1"><b>Kiểm tra lại kiến thức mỗi ngày</b></p>
+					<p class="text-md-center">Các từ đã học sẽ không thể "bay" mất khi ngày nào bạn cũng sẽ được ôn luyện lại.</p>
+				</div>
+			</div>
+
+		</div>
+		
+		
+	</div> <!-- title -->
+</div><!--  end part top -->
+
+
+<div class="white-part hidden-xs-down">
+	<!-- nothing in area -->
+</div>
+
+
+
+<div class="main-part ">
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-sm-8 mt-3 mb-3 course-recent ">
+				<h3 class="main-title text-sm-center mt-3 pb-2" style="font-size: 20px; font-weight: 1000">CÁC KHÓA HỌC CỦA BẠN</h3>
+					<div class="row">
+						<div class="col-sm-5 mb-3 ml-2 one-card-course">
+						<p class="title-course text-sm-center pt-2" style="font-weight: 1000">Ngữ Pháp Cơ Bản</p>
+						<img src="images/avatar-course-1.png" class="img-fluid avatar-course">
+						<p class="text-md-center mt-2 small-text-course">Nắm vững các thì cơ bản, các loại từ và câu trong tiếng Anh</p>
+						<hr>
+						<% if(user){ %>
+						<a href="http://localhost:4000/" class="btn btn-warning mb-1 button-start">Bắt Đầu</a>
+						<% } else { %>
+						<small class="permition">Bạn cần đăng nhập để sử dụng tính năng này</small>
+						<% } %>
+					</div> <!-- end one-card-course -->
+					<!-- <div class="col-sm-5 mb-3 ml-2 one-card-course">
+						<p class="title-course text-sm-center pt-2" style="font-weight: 1000">1000 Từ Vựng Tiếng Anh Cơ Bản</p>
+						<img src="images/avatar-course-2.png" class="img-fluid avatar-course">
+						<p class="text-md-center mt-2 small-text-course">Ghi nhớ nhanh hơn 1000 từ vựng cơ bản thông qua các game tương tác</p>
+						<hr>
+						<a href="#" class="btn btn-warning mb-1 button-start">Bắt Đầu</a>
+					</div> end one-card-course -->
+
+					<!-- <div class="col-sm-5 mb-3 ml-2 one-card-course">
+						<p class="title-course text-sm-center pt-2" style="font-weight: 1000">1000 Từ Vựng Tiếng Anh Cơ Bản</p>
+						<img src="images/avatar-course-2.png" class="img-fluid avatar-course">
+						<p class="text-md-center mt-2 small-text-course">Ghi nhớ nhanh hơn 1000 từ vựng cơ bản thông qua các game tương tác</p>
+						<hr>
+						<a href="#" class="btn btn-warning mb-1 button-start">Bắt Đầu</a>
+					</div> end one-card-course -->
+				</div>	
+			</div>
+			
+			<div class="col-sm-3 mt-3 top-rank push-sm-1" id="top-rank">
+
+				<div class="row list-leaderboard">
+					<h5 class="name-rank text-sm-center text-xs-center">Bảng Xếp Hạng</h5>
+					<table class="table">
+						<thead class="thead-dark">
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">First</th>
+								<th scope="col">Last</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Mark</td>
+								<td>Otto</td>
+								
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Jacob</td>
+								<td>Thornton</td>
+							 
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td>Larry</td>
+								<td>the Bird</td>
+							</tr>
+
+							 <tr>
+								<th scope="row">4</th>
+								<td>Mark</td>
+								<td>Otto</td>
+								
+							</tr>
+
+							<tr>
+								<th scope="row">5</th>
+								<td>Mark</td>
+								<td>Otto</td>
+							</tr>
+
+							 <tr>
+								<th scope="row">6</th>
+								<td>Mark</td>
+								<td>Otto</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>	
+
+
+				
+			</div>
+		</div>
+
+		
+	</div>
+</div> <!-- end main part -->
+
+
+
+	<% include footer %>
+	<script type="text/javascript">
+    if (window.location.hash && window.location.hash == '#_=_') {
+        if (window.history && history.pushState) {
+            window.history.pushState("", document.title, window.location.pathname);
+        } else {
+            // Prevent scrolling by storing the page's current scroll offset
+            var scroll = {
+                top: document.body.scrollTop,
+                left: document.body.scrollLeft
+            };
+            window.location.hash = '';
+            // Restore the scroll offset, should be flicker free
+            document.body.scrollTop = scroll.top;
+            document.body.scrollLeft = scroll.left;
+        }
+    }
+	</script>
+	<script type="text/javascript" src="/vendor/jquery.js"></script>
+	<script type="text/javascript" src="/vendor/bootstrap.js"></script>
+	<script type="text/javascript" src="/javascripts/nprogress.js"></script>
+	<script type="text/javascript" src="/javascripts/animation.js"></script>
+	
+</body>
+	
+</html>
