@@ -1,5 +1,6 @@
-﻿### Tên ứng dụng: Trao đổi thông tin hàng hóa
- #### Tài liệu báo cáo bài tập lớn kỹ thuật phần mềm ([link](https://drive.google.com/open?id=148LH1Xv8UDWyYW0mRfJcB1WBXyC5PyeR))
+﻿## ﻿Tên ứng dụng: Trao đổi thông tin hàng hóa
+#### Tài liệu báo cáo bài tập lớn kỹ thuật phần mềm ([link](https://drive.google.com/open?id=148LH1Xv8UDWyYW0mRfJcB1WBXyC5PyeR))
+#### Video demo: {@youtube: https://www.youtube.com/watch?v=XhQ1gpBd7xQ&t=8s}
 ### Nhóm: 14
 #### Thành viên:
 >* Nguyễn Văn Tuấn
@@ -47,3 +48,4 @@
  * Mỗi tuần đều tổng kết công việc trong tuần cái gì đã hoàn thành và cái gì không ổn cần giải quyết ngay lập tức
  * Nhóm trưởng lên kế hoạch cho các công việc vào tuần sau
 #### 
+
